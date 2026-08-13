@@ -32,7 +32,12 @@ from backend.gis.estate_ags_matching.pool_geometry import (
     extract_pool_geometry,
     pool_geometry_similarity,
 )
-from backend.imagery.estate_tiles import PADDING_METRES, EstateTileIndex
+from backend.imagery.estate_tiles import (
+    PADDING_METRES,
+    EstateTileIndex,
+    cache_root_for,
+    crop_dir_for,
+)
 from backend.parsers.property24 import download_images, fetch_listing
 from backend.vision.clip_encoder import classify_scene, encode_image, mean_top_similarity
 
@@ -40,8 +45,8 @@ LISTING_URL = "https://www.property24.com/for-sale/carlswald-north-estate/midran
 LISTING_ID = "116978058"
 OUTPUT = ROOT / "data/investigations/carlswald_north_corrected" / LISTING_ID
 DATASET_JSON = ROOT / "data/gis" / f"{CORRECT_CARLSWALD_NORTH}.json"
-TILE_CACHE = ROOT / "data/cache/ags" / CORRECT_CARLSWALD_NORTH
-CROP_DIR = ROOT / "data/visual_index" / CORRECT_CARLSWALD_NORTH / "_imagery_cache"
+TILE_CACHE = cache_root_for(CORRECT_CARLSWALD_NORTH, "native15")
+CROP_DIR = crop_dir_for(CORRECT_CARLSWALD_NORTH, "native15")
 
 IDENT_SCENES = {
     "aerial",
@@ -208,7 +213,7 @@ def main() -> int:
     ]
     print("TASK 5 — AGS tile cache")
     print(f"  candidate parcels after GIS pass 1: {len(parcels)} (excluded non-residential / huge remainders)")
-    index = EstateTileIndex(TILE_CACHE, dataset["extent"], year=2023)
+    index = EstateTileIndex(TILE_CACHE, dataset["extent"], year=2023, profile_id="native15")
     stats = index.build()
     print(f"  tiles required: {stats.tiles_required}")
     print(f"  tiles downloaded: {stats.tiles_downloaded}")
