@@ -1,0 +1,735 @@
+{
+  "success_answer": "PARTIALLY \u2014 PIE is not using full native 15 cm AGS detail. Current 280 m / 1400 px tiles sample at 0.20 m/px (1.33\u00d7 coarser than 0.15 m/px). Direct AGS requests at native sampling recover extra roof-edge, pool-outline, solar-panel and paving detail. Requests past native (1600\u20133200 for these bboxes) add interpolation only. Fix: retile the cache at 0.15 m/px. Do not revert to per-parcel live AGS, and do not default parcel exports to 1600+.",
+  "recommended_ags_parcel_resolution": "native-matched (bbox_side_m / 0.15); empirically 800 px for ~90 m envelopes, 1200 px for ~135\u2013160 m envelopes",
+  "recommended_metres_per_pixel": 0.15,
+  "table": [
+    {
+      "parcel": "stand_34",
+      "requested_px": 256,
+      "metres_per_px": 0.5324096600106714,
+      "file_size": 15603,
+      "keypoints": 805,
+      "edge_detail": 0.2256,
+      "pool_usefulness": 1,
+      "roof_usefulness": 1,
+      "driveway_usefulness": 1,
+      "native_detail_gained": "below native \u2014 additional source detail still available",
+      "http_status": 200,
+      "returned": [
+        256,
+        256
+      ],
+      "runtime_ms": 599.6,
+      "flag": null
+    },
+    {
+      "parcel": "stand_34",
+      "requested_px": 400,
+      "metres_per_px": 0.3407421824068297,
+      "file_size": 30558,
+      "keypoints": 1820,
+      "edge_detail": 0.1827,
+      "pool_usefulness": 2,
+      "roof_usefulness": 2,
+      "driveway_usefulness": 2,
+      "native_detail_gained": "below native \u2014 additional source detail still available",
+      "http_status": 200,
+      "returned": [
+        400,
+        400
+      ],
+      "runtime_ms": 665.4,
+      "flag": null
+    },
+    {
+      "parcel": "stand_34",
+      "requested_px": 800,
+      "metres_per_px": 0.17037109120341484,
+      "file_size": 102112,
+      "keypoints": 6396,
+      "edge_detail": 0.147,
+      "pool_usefulness": 3,
+      "roof_usefulness": 3,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "approaching native \u2014 most remaining source detail",
+      "http_status": 200,
+      "returned": [
+        800,
+        800
+      ],
+      "runtime_ms": 1637.2,
+      "flag": null
+    },
+    {
+      "parcel": "stand_34",
+      "requested_px": 1200,
+      "metres_per_px": 0.11358072746894322,
+      "file_size": 180421,
+      "keypoints": 8930,
+      "edge_detail": 0.086,
+      "pool_usefulness": 4,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 4,
+      "native_detail_gained": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "http_status": 200,
+      "returned": [
+        1200,
+        1200
+      ],
+      "runtime_ms": 2230.7,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_34",
+      "requested_px": 1600,
+      "metres_per_px": 0.08518554560170742,
+      "file_size": 265314,
+      "keypoints": 8710,
+      "edge_detail": 0.0437,
+      "pool_usefulness": 4,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 4,
+      "native_detail_gained": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "http_status": 200,
+      "returned": [
+        1600,
+        1600
+      ],
+      "runtime_ms": 2649.2,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_34",
+      "requested_px": 2400,
+      "metres_per_px": 0.05679036373447161,
+      "file_size": 457466,
+      "keypoints": 8746,
+      "edge_detail": 0.0136,
+      "pool_usefulness": 3,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "http_status": 200,
+      "returned": [
+        2400,
+        2400
+      ],
+      "runtime_ms": 4175.9,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_34",
+      "requested_px": 3200,
+      "metres_per_px": 0.04259277280085371,
+      "file_size": 679356,
+      "keypoints": 8578,
+      "edge_detail": 0.0055,
+      "pool_usefulness": 3,
+      "roof_usefulness": 3,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "beyond native (JPEG / resampling differences only)",
+      "http_status": 200,
+      "returned": [
+        3200,
+        3200
+      ],
+      "runtime_ms": 5849.4,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_36",
+      "requested_px": 256,
+      "metres_per_px": 0.6221218016871717,
+      "file_size": 14944,
+      "keypoints": 912,
+      "edge_detail": 0.2288,
+      "pool_usefulness": 1,
+      "roof_usefulness": 1,
+      "driveway_usefulness": 1,
+      "native_detail_gained": "below native \u2014 additional source detail still available",
+      "http_status": 200,
+      "returned": [
+        256,
+        256
+      ],
+      "runtime_ms": 580.0,
+      "flag": null
+    },
+    {
+      "parcel": "stand_36",
+      "requested_px": 400,
+      "metres_per_px": 0.39815795307978985,
+      "file_size": 35757,
+      "keypoints": 2065,
+      "edge_detail": 0.2277,
+      "pool_usefulness": 2,
+      "roof_usefulness": 2,
+      "driveway_usefulness": 2,
+      "native_detail_gained": "below native \u2014 additional source detail still available",
+      "http_status": 200,
+      "returned": [
+        400,
+        400
+      ],
+      "runtime_ms": 868.1,
+      "flag": null
+    },
+    {
+      "parcel": "stand_36",
+      "requested_px": 800,
+      "metres_per_px": 0.19907897653989493,
+      "file_size": 123304,
+      "keypoints": 7721,
+      "edge_detail": 0.1993,
+      "pool_usefulness": 3,
+      "roof_usefulness": 3,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "approaching native \u2014 most remaining source detail",
+      "http_status": 200,
+      "returned": [
+        800,
+        800
+      ],
+      "runtime_ms": 1926.3,
+      "flag": null
+    },
+    {
+      "parcel": "stand_36",
+      "requested_px": 1200,
+      "metres_per_px": 0.13271931769326328,
+      "file_size": 223124,
+      "keypoints": 14996,
+      "edge_detail": 0.1434,
+      "pool_usefulness": 4,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 4,
+      "native_detail_gained": "at native source resolution (~0.15 m/px)",
+      "http_status": 200,
+      "returned": [
+        1200,
+        1200
+      ],
+      "runtime_ms": 2492.8,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_36",
+      "requested_px": 1600,
+      "metres_per_px": 0.09953948826994746,
+      "file_size": 330603,
+      "keypoints": 16316,
+      "edge_detail": 0.09,
+      "pool_usefulness": 4,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 4,
+      "native_detail_gained": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "http_status": 200,
+      "returned": [
+        1600,
+        1600
+      ],
+      "runtime_ms": 3143.2,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_36",
+      "requested_px": 2400,
+      "metres_per_px": 0.06635965884663164,
+      "file_size": 570276,
+      "keypoints": 16366,
+      "edge_detail": 0.033,
+      "pool_usefulness": 3,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "http_status": 200,
+      "returned": [
+        2400,
+        2400
+      ],
+      "runtime_ms": 4403.5,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_36",
+      "requested_px": 3200,
+      "metres_per_px": 0.04976974413497373,
+      "file_size": 838490,
+      "keypoints": 16153,
+      "edge_detail": 0.0149,
+      "pool_usefulness": 3,
+      "roof_usefulness": 3,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "beyond native (JPEG / resampling differences only)",
+      "http_status": 200,
+      "returned": [
+        3200,
+        3200
+      ],
+      "runtime_ms": 5863.7,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_677",
+      "requested_px": 256,
+      "metres_per_px": 0.35453936942940345,
+      "file_size": 16358,
+      "keypoints": 888,
+      "edge_detail": 0.2232,
+      "pool_usefulness": 1,
+      "roof_usefulness": 1,
+      "driveway_usefulness": 1,
+      "native_detail_gained": "below native \u2014 additional source detail still available",
+      "http_status": 200,
+      "returned": [
+        256,
+        256
+      ],
+      "runtime_ms": 542.4,
+      "flag": null
+    },
+    {
+      "parcel": "stand_677",
+      "requested_px": 400,
+      "metres_per_px": 0.2269051964348182,
+      "file_size": 36477,
+      "keypoints": 1907,
+      "edge_detail": 0.195,
+      "pool_usefulness": 2,
+      "roof_usefulness": 2,
+      "driveway_usefulness": 2,
+      "native_detail_gained": "below native \u2014 additional source detail still available",
+      "http_status": 200,
+      "returned": [
+        400,
+        400
+      ],
+      "runtime_ms": 972.4,
+      "flag": null
+    },
+    {
+      "parcel": "stand_677",
+      "requested_px": 800,
+      "metres_per_px": 0.1134525982174091,
+      "file_size": 96007,
+      "keypoints": 5853,
+      "edge_detail": 0.1161,
+      "pool_usefulness": 4,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "beyond native (JPEG / resampling differences only)",
+      "http_status": 200,
+      "returned": [
+        800,
+        800
+      ],
+      "runtime_ms": 1614.4,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_677",
+      "requested_px": 1200,
+      "metres_per_px": 0.07563506547827274,
+      "file_size": 165331,
+      "keypoints": 6066,
+      "edge_detail": 0.0643,
+      "pool_usefulness": 4,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "http_status": 200,
+      "returned": [
+        1200,
+        1200
+      ],
+      "runtime_ms": 3200.4,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_677",
+      "requested_px": 1600,
+      "metres_per_px": 0.05672629910870455,
+      "file_size": 241834,
+      "keypoints": 6064,
+      "edge_detail": 0.0362,
+      "pool_usefulness": 4,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "http_status": 200,
+      "returned": [
+        1600,
+        1600
+      ],
+      "runtime_ms": 2687.3,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_677",
+      "requested_px": 2400,
+      "metres_per_px": 0.03781753273913637,
+      "file_size": 418293,
+      "keypoints": 5936,
+      "edge_detail": 0.014,
+      "pool_usefulness": 3,
+      "roof_usefulness": 4,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "http_status": 200,
+      "returned": [
+        2400,
+        2400
+      ],
+      "runtime_ms": 4379.3,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    },
+    {
+      "parcel": "stand_677",
+      "requested_px": 3200,
+      "metres_per_px": 0.028363149554352277,
+      "file_size": 619792,
+      "keypoints": 5924,
+      "edge_detail": 0.0067,
+      "pool_usefulness": 3,
+      "roof_usefulness": 3,
+      "driveway_usefulness": 3,
+      "native_detail_gained": "beyond native (JPEG / resampling differences only)",
+      "http_status": 200,
+      "returned": [
+        3200,
+        3200
+      ],
+      "runtime_ms": 6023.2,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL"
+    }
+  ],
+  "parcels": [
+    {
+      "id": "stand_34",
+      "estate": "Blue Hills (BLUE HILLS EXT.8)",
+      "area_sqm": 5028.0,
+      "address": "56 THE PADDOCKS CRESCENT",
+      "side_m": 136.29687296273187,
+      "native_px": 908.6458197515458,
+      "plateau_px": 1200,
+      "identify": {
+        "pixel_value": "210, 187, 146",
+        "native_rasters": [
+          {
+            "Name": "2023_COJ_RGB_15cm_AO103",
+            "LowPS": 0.15,
+            "HighPS": 1.2,
+            "MinPS": 0,
+            "MaxPS": 12
+          }
+        ],
+        "overview_rasters": [
+          {
+            "Name": "Ov_i02_L03_R000005C6_C000004E8.tif",
+            "LowPS": 3.5999999999999606,
+            "HighPS": 3.5999999999999606,
+            "MinPS": 3.59999999999995,
+            "MaxPS": 10.799999999999
+          },
+          {
+            "Name": "Ov_i02_L04_R000001EC_C000001A2.tif",
+            "LowPS": 10.799999999999981,
+            "HighPS": 10.799999999999981,
+            "MinPS": 10.799999999999,
+            "MaxPS": 32.39999999999991
+          },
+          {
+            "Name": "Ov_i02_L05_R000000A4_C0000008B.tif",
+            "LowPS": 32.399999999999864,
+            "HighPS": 32.399999999999864,
+            "MinPS": 32.3999999999999,
+            "MaxPS": 97.2000000000002
+          },
+          {
+            "Name": "Ov_i02_L06_R00000036_C0000002E.tif",
+            "LowPS": 97.2000000000002,
+            "HighPS": 97.2000000000002,
+            "MinPS": 97.2000000000002,
+            "MaxPS": 291.6
+          },
+          {
+            "Name": "Ov_i02_L07_R00000012_C0000000F.tif",
+            "LowPS": 291.6,
+            "HighPS": 291.6,
+            "MinPS": 291.6,
+            "MaxPS": 14580
+          }
+        ]
+      },
+      "native_raster": "2023_COJ_RGB_15cm_AO103",
+      "current_crop": {
+        "size": [
+          532,
+          681
+        ],
+        "m_per_px": 0.2,
+        "source": "simulated_280m_1400px_pipeline"
+      },
+      "current_vs_ags": {
+        "current_size": [
+          532,
+          681
+        ],
+        "ags_overlap_size": [
+          937,
+          1200
+        ],
+        "ssim_current_vs_ags_downsampled_to_current": 0.701061910449006,
+        "ssim_ags_vs_current_upscaled": 0.673737297021653,
+        "laplacian_current": 375.9956239303231,
+        "laplacian_ags_at_current_size": 249.9134556091062,
+        "laplacian_ags_native_overlap": 80.94451639261563,
+        "sift_current": 3748,
+        "sift_ags_downsampled_to_current": 3520,
+        "sift_ags_overlap": 6755,
+        "sift_current_upscaled": 4481
+      }
+    },
+    {
+      "id": "stand_36",
+      "estate": "Blue Hills (BLUE HILLS EXT.8)",
+      "area_sqm": 5663.0,
+      "address": "44 THE PADDOCKS CRESCENT",
+      "side_m": 159.26318123191595,
+      "native_px": 1061.7545415461063,
+      "plateau_px": 1200,
+      "identify": {
+        "pixel_value": "202, 203, 195",
+        "native_rasters": [
+          {
+            "Name": "2023_COJ_RGB_15cm_AO103",
+            "LowPS": 0.15,
+            "HighPS": 1.2,
+            "MinPS": 0,
+            "MaxPS": 12
+          }
+        ],
+        "overview_rasters": [
+          {
+            "Name": "Ov_i02_L03_R000005C6_C000004E8.tif",
+            "LowPS": 3.5999999999999606,
+            "HighPS": 3.5999999999999606,
+            "MinPS": 3.59999999999995,
+            "MaxPS": 10.799999999999
+          },
+          {
+            "Name": "Ov_i02_L04_R000001EC_C000001A2.tif",
+            "LowPS": 10.799999999999981,
+            "HighPS": 10.799999999999981,
+            "MinPS": 10.799999999999,
+            "MaxPS": 32.39999999999991
+          },
+          {
+            "Name": "Ov_i02_L05_R000000A4_C0000008B.tif",
+            "LowPS": 32.399999999999864,
+            "HighPS": 32.399999999999864,
+            "MinPS": 32.3999999999999,
+            "MaxPS": 97.2000000000002
+          },
+          {
+            "Name": "Ov_i02_L06_R00000036_C0000002E.tif",
+            "LowPS": 97.2000000000002,
+            "HighPS": 97.2000000000002,
+            "MinPS": 97.2000000000002,
+            "MaxPS": 291.6
+          },
+          {
+            "Name": "Ov_i02_L07_R00000012_C0000000F.tif",
+            "LowPS": 291.6,
+            "HighPS": 291.6,
+            "MinPS": 291.6,
+            "MaxPS": 14580
+          }
+        ]
+      },
+      "native_raster": "2023_COJ_RGB_15cm_AO103",
+      "current_crop": {
+        "size": [
+          596,
+          795
+        ],
+        "m_per_px": 0.2,
+        "source": "simulated_280m_1400px_pipeline"
+      },
+      "current_vs_ags": {
+        "current_size": [
+          596,
+          795
+        ],
+        "ags_overlap_size": [
+          899,
+          1200
+        ],
+        "ssim_current_vs_ags_downsampled_to_current": 0.6994916656920117,
+        "ssim_ags_vs_current_upscaled": 0.6706515347822308,
+        "laplacian_current": 643.4609684260572,
+        "laplacian_ags_at_current_size": 385.9851944863842,
+        "laplacian_ags_native_overlap": 206.1239568874566,
+        "sift_current": 5939,
+        "sift_ags_downsampled_to_current": 5794,
+        "sift_ags_overlap": 11544,
+        "sift_current_upscaled": 8119
+      }
+    },
+    {
+      "id": "stand_677",
+      "estate": "Carlswald North (SUMMERSET EXT.13)",
+      "area_sqm": 936.0,
+      "address": null,
+      "side_m": 90.76207857392728,
+      "native_px": 605.0805238261819,
+      "plateau_px": 800,
+      "identify": {
+        "pixel_value": "144, 149, 145",
+        "native_rasters": [
+          {
+            "Name": "2023_COJ_RGB_15cm_AP103",
+            "LowPS": 0.15,
+            "HighPS": 1.2,
+            "MinPS": 0,
+            "MaxPS": 12
+          }
+        ],
+        "overview_rasters": [
+          {
+            "Name": "Ov_i02_L03_R000005C6_C000004E8.tif",
+            "LowPS": 3.5999999999999606,
+            "HighPS": 3.5999999999999606,
+            "MinPS": 3.59999999999995,
+            "MaxPS": 10.799999999999
+          },
+          {
+            "Name": "Ov_i02_L04_R000001EC_C000001A2.tif",
+            "LowPS": 10.799999999999981,
+            "HighPS": 10.799999999999981,
+            "MinPS": 10.799999999999,
+            "MaxPS": 32.39999999999991
+          },
+          {
+            "Name": "Ov_i02_L05_R000000A4_C0000008B.tif",
+            "LowPS": 32.399999999999864,
+            "HighPS": 32.399999999999864,
+            "MinPS": 32.3999999999999,
+            "MaxPS": 97.2000000000002
+          },
+          {
+            "Name": "Ov_i02_L06_R00000036_C0000002E.tif",
+            "LowPS": 97.2000000000002,
+            "HighPS": 97.2000000000002,
+            "MinPS": 97.2000000000002,
+            "MaxPS": 291.6
+          },
+          {
+            "Name": "Ov_i02_L07_R00000012_C0000000F.tif",
+            "LowPS": 291.6,
+            "HighPS": 291.6,
+            "MinPS": 291.6,
+            "MaxPS": 14580
+          }
+        ]
+      },
+      "native_raster": "2023_COJ_RGB_15cm_AP103",
+      "current_crop": {
+        "size": [
+          453,
+          430
+        ],
+        "m_per_px": 0.2,
+        "source": "production_carlswald_crop"
+      },
+      "current_vs_ags": {
+        "current_size": [
+          453,
+          430
+        ],
+        "ags_overlap_size": [
+          800,
+          689
+        ],
+        "ssim_current_vs_ags_downsampled_to_current": 0.1418546110030968,
+        "ssim_ags_vs_current_upscaled": 0.2316683401782003,
+        "laplacian_current": 1177.939319039958,
+        "laplacian_ags_at_current_size": 592.1572474008287,
+        "laplacian_ags_native_overlap": 211.16935037894626,
+        "sift_current": 2540,
+        "sift_ags_downsampled_to_current": 2324,
+        "sift_ags_overlap": 5081,
+        "sift_current_upscaled": 4235
+      }
+    }
+  ],
+  "tile_strategy": {
+    "estate_mercator_m": {
+      "width": 1456.0127240275033,
+      "height": 1070.4763885671273
+    },
+    "options": [
+      {
+        "tile_metres": 280.0,
+        "tile_pixels": 1400,
+        "metres_per_pixel": 0.2,
+        "rows": 4,
+        "cols": 6,
+        "tiles": 24,
+        "cache_size_mb_est": 7.14,
+        "fetch_time_s_est": 60.0,
+        "native": false,
+        "flag": null
+      },
+      {
+        "tile_metres": 280.0,
+        "tile_pixels": 1867,
+        "metres_per_pixel": 0.14997321906802358,
+        "rows": 4,
+        "cols": 6,
+        "tiles": 24,
+        "cache_size_mb_est": 12.7,
+        "fetch_time_s_est": 84.8,
+        "native": true,
+        "flag": null
+      },
+      {
+        "tile_metres": 210.0,
+        "tile_pixels": 1400,
+        "metres_per_pixel": 0.15,
+        "rows": 6,
+        "cols": 7,
+        "tiles": 42,
+        "cache_size_mb_est": 12.49,
+        "fetch_time_s_est": 105.0,
+        "native": true,
+        "flag": null
+      },
+      {
+        "tile_metres": 150.0,
+        "tile_pixels": 1000,
+        "metres_per_pixel": 0.15,
+        "rows": 8,
+        "cols": 10,
+        "tiles": 80,
+        "cache_size_mb_est": 12.14,
+        "fetch_time_s_est": 133.6,
+        "native": true,
+        "flag": null
+      },
+      {
+        "tile_metres": 120.0,
+        "tile_pixels": 800,
+        "metres_per_pixel": 0.15,
+        "rows": 9,
+        "cols": 13,
+        "tiles": 117,
+        "cache_size_mb_est": 11.37,
+        "fetch_time_s_est": 149.4,
+        "native": true,
+        "flag": null
+      }
+    ],
+    "recommended": "Keep tiled cache (do not revert to per-parcel AGS). Use 210 m tiles at 1400 px or 280 m tiles at 1867 px so cache pixels match 0.15 m native. Local 18 m pad crops then inherit native resolution."
+  }
+}
