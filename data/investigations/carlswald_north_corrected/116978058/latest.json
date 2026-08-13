@@ -1,0 +1,1209 @@
+{
+  "listing_id": "116978058",
+  "listing_url": "https://www.property24.com/for-sale/carlswald-north-estate/midrand/gauteng/12743/116978058",
+  "dataset_id": "carlswald_north_corrected_001",
+  "townships": [
+    "SUMMERSET EXT.6",
+    "SUMMERSET EXT.13"
+  ],
+  "excluded_wrong_mapping": "carlswald_north_001 / CARLSWALD ESTATE*",
+  "summerset_ext_2": "not_present_in_coj_gis",
+  "tile_stats": {
+    "tiles_required": 24,
+    "tiles_downloaded": 0,
+    "tiles_reused": 24,
+    "tiles_failed": 0,
+    "tile_fetch_time_ms": 0.32897200003390026
+  },
+  "parcel_crops": 337,
+  "imagery_failures": 0,
+  "candidate_parcels": 337,
+  "listing_pool": {
+    "present": true,
+    "unknown": false,
+    "shape_class": "irregular",
+    "aspect_ratio": 1.934,
+    "orientation_deg": 90.0,
+    "compactness": 0.158,
+    "rectangularity": 0.5664,
+    "convexity": 0.7591,
+    "curved_section_count": 1,
+    "relative_area": 0.1107,
+    "centroid_x": 0.5589,
+    "centroid_y": 0.5671,
+    "house_centroid_x": 0.4721,
+    "house_centroid_y": 0.4908,
+    "pool_to_house_dx": 0.1565,
+    "pool_to_house_dy": 0.1889,
+    "pool_to_house_dist": 0.4097,
+    "pool_to_house_angle_deg": 54.02,
+    "contour_normalized": [
+      [
+        0.5542,
+        0.3273
+      ],
+      [
+        0.6079,
+        0.2497
+      ],
+      [
+        0.6111,
+        0.1857
+      ],
+      [
+        0.6553,
+        0.1483
+      ],
+      [
+        0.673,
+        0.1037
+      ],
+      [
+        0.6647,
+        0.0798
+      ],
+      [
+        0.6652,
+        0.0531
+      ],
+      [
+        0.6929,
+        -0.0124
+      ],
+      [
+        0.7234,
+        -0.0849
+      ],
+      [
+        0.6816,
+        -0.1364
+      ],
+      [
+        0.6249,
+        -0.1666
+      ],
+      [
+        0.568,
+        -0.1731
+      ],
+      [
+        0.5043,
+        -0.1889
+      ],
+      [
+        0.4181,
+        -0.2018
+      ],
+      [
+        0.3387,
+        -0.2083
+      ],
+      [
+        0.2668,
+        -0.218
+      ],
+      [
+        0.215,
+        -0.2382
+      ],
+      [
+        0.1626,
+        -0.2584
+      ],
+      [
+        0.0912,
+        -0.291
+      ],
+      [
+        0.0234,
+        -0.298
+      ],
+      [
+        -0.0586,
+        -0.306
+      ],
+      [
+        -0.1498,
+        -0.2879
+      ],
+      [
+        -0.2168,
+        -0.2578
+      ],
+      [
+        -0.2874,
+        -0.21
+      ],
+      [
+        -0.3533,
+        -0.1671
+      ],
+      [
+        -0.3974,
+        -0.1146
+      ],
+      [
+        -0.419,
+        -0.0841
+      ],
+      [
+        -0.4563,
+        -0.053
+      ],
+      [
+        -0.4899,
+        -0.0371
+      ],
+      [
+        -0.5109,
+        -0.0418
+      ],
+      [
+        -0.5005,
+        -0.048
+      ],
+      [
+        -0.5178,
+        -0.0573
+      ],
+      [
+        -0.5535,
+        -0.0434
+      ],
+      [
+        -0.5754,
+        0.0056
+      ],
+      [
+        -0.5862,
+        0.0238
+      ],
+      [
+        -0.5471,
+        -0.0004
+      ],
+      [
+        -0.523,
+        0.0196
+      ],
+      [
+        -0.5016,
+        0.0259
+      ],
+      [
+        -0.4599,
+        0.0146
+      ],
+      [
+        -0.4129,
+        -0.0018
+      ],
+      [
+        -0.3963,
+        -0.013
+      ],
+      [
+        -0.3928,
+        -0.0185
+      ],
+      [
+        -0.3599,
+        -0.0339
+      ],
+      [
+        -0.3073,
+        -0.0051
+      ],
+      [
+        -0.281,
+        0.0391
+      ],
+      [
+        -0.2628,
+        0.072
+      ],
+      [
+        -0.2185,
+        0.0845
+      ],
+      [
+        -0.1757,
+        0.097
+      ],
+      [
+        -0.1712,
+        0.0904
+      ],
+      [
+        -0.1529,
+        0.0989
+      ],
+      [
+        -0.1412,
+        0.1563
+      ],
+      [
+        -0.1095,
+        0.1434
+      ],
+      [
+        -0.1008,
+        0.1386
+      ],
+      [
+        -0.0927,
+        0.1157
+      ],
+      [
+        -0.0886,
+        0.1145
+      ],
+      [
+        -0.0406,
+        0.1236
+      ],
+      [
+        0.037,
+        0.1475
+      ],
+      [
+        0.1304,
+        0.1553
+      ],
+      [
+        0.1869,
+        0.1731
+      ],
+      [
+        0.258,
+        0.1861
+      ],
+      [
+        0.3079,
+        0.2146
+      ],
+      [
+        0.3421,
+        0.267
+      ],
+      [
+        0.3637,
+        0.2918
+      ],
+      [
+        0.4408,
+        0.3098
+      ]
+    ],
+    "contour_image": [
+      [
+        0.7889,
+        0.7186
+      ],
+      [
+        0.7861,
+        0.7315
+      ],
+      [
+        0.7839,
+        0.7448
+      ],
+      [
+        0.7839,
+        0.7589
+      ],
+      [
+        0.781,
+        0.7718
+      ],
+      [
+        0.7677,
+        0.7739
+      ],
+      [
+        0.7588,
+        0.7791
+      ],
+      [
+        0.7588,
+        0.7932
+      ],
+      [
+        0.7588,
+        0.8074
+      ],
+      [
+        0.7588,
+        0.8215
+      ],
+      [
+        0.7538,
+        0.8335
+      ],
+      [
+        0.7538,
+        0.8477
+      ],
+      [
+        0.7538,
+        0.8618
+      ],
+      [
+        0.7588,
+        0.8738
+      ],
+      [
+        0.7588,
+        0.888
+      ],
+      [
+        0.7588,
+        0.9021
+      ],
+      [
+        0.7588,
+        0.9162
+      ],
+      [
+        0.7645,
+        0.9246
+      ],
+      [
+        0.7787,
+        0.9246
+      ],
+      [
+        0.7789,
+        0.9107
+      ],
+      [
+        0.7839,
+        0.8987
+      ],
+      [
+        0.7839,
+        0.8846
+      ],
+      [
+        0.7839,
+        0.8704
+      ],
+      [
+        0.7839,
+        0.8563
+      ],
+      [
+        0.7889,
+        0.8442
+      ],
+      [
+        0.7889,
+        0.8301
+      ],
+      [
+        0.7911,
+        0.8169
+      ],
+      [
+        0.794,
+        0.804
+      ],
+      [
+        0.799,
+        0.7919
+      ],
+      [
+        0.7998,
+        0.7781
+      ],
+      [
+        0.8062,
+        0.7666
+      ],
+      [
+        0.8171,
+        0.7588
+      ],
+      [
+        0.8312,
+        0.7588
+      ],
+      [
+        0.845,
+        0.7596
+      ],
+      [
+        0.8492,
+        0.772
+      ],
+      [
+        0.8514,
+        0.7839
+      ],
+      [
+        0.8593,
+        0.7931
+      ],
+      [
+        0.8593,
+        0.8073
+      ],
+      [
+        0.8593,
+        0.8214
+      ],
+      [
+        0.8703,
+        0.8251
+      ],
+      [
+        0.8744,
+        0.8375
+      ],
+      [
+        0.8861,
+        0.8409
+      ],
+      [
+        0.8894,
+        0.8536
+      ],
+      [
+        0.8894,
+        0.8678
+      ],
+      [
+        0.902,
+        0.8693
+      ],
+      [
+        0.9146,
+        0.8678
+      ],
+      [
+        0.9146,
+        0.8537
+      ],
+      [
+        0.9099,
+        0.8442
+      ],
+      [
+        0.9045,
+        0.8325
+      ],
+      [
+        0.904,
+        0.8186
+      ],
+      [
+        0.8995,
+        0.8063
+      ],
+      [
+        0.8945,
+        0.7943
+      ],
+      [
+        0.8894,
+        0.7823
+      ],
+      [
+        0.8854,
+        0.7698
+      ],
+      [
+        0.8844,
+        0.7561
+      ],
+      [
+        0.8794,
+        0.744
+      ],
+      [
+        0.8744,
+        0.732
+      ],
+      [
+        0.8636,
+        0.7286
+      ],
+      [
+        0.8543,
+        0.7335
+      ],
+      [
+        0.8424,
+        0.7387
+      ],
+      [
+        0.8283,
+        0.7387
+      ],
+      [
+        0.8156,
+        0.7352
+      ],
+      [
+        0.8141,
+        0.7217
+      ],
+      [
+        0.8031,
+        0.7186
+      ]
+    ],
+    "evidence_media_id": "116978058-002",
+    "notes": [
+      "consensus_from_10_pool_frames"
+    ]
+  },
+  "scene_counts": {
+    "contextual": 2,
+    "pool_garden": 8,
+    "front_elevation": 1,
+    "interior": 44,
+    "driveway_access": 6,
+    "rear_elevation": 1
+  },
+  "images_acquired": 62,
+  "video_downloaded": "NO",
+  "address_gps_erf_used_in_ranking": false,
+  "previous_stand_59_used": false,
+  "ground_truth_consulted": false,
+  "production_matcher_modified": false,
+  "runtime_s": 34.0,
+  "final_candidate_limit": 10,
+  "success_standard": {
+    "top_1": "excellent",
+    "top_3": "strong",
+    "top_5": "useful",
+    "top_10": "minimum acceptable identification",
+    "outside_top_10": "benchmark failure requiring further improvement"
+  },
+  "confidence": {
+    "level": "low",
+    "low_confidence": true,
+    "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+    "top1_to_top2_gap": 0.0083,
+    "top1_to_top10_gap": 0.0734,
+    "final_candidate_limit": 10,
+    "next_excluded_score": 0.6767,
+    "next_excluded_stand": "452"
+  },
+  "frozen_top10": [
+    {
+      "stand_number": "677",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 936.0,
+      "pool_geometry_similarity": 0.8379,
+      "pool_house_similarity": 0.8872,
+      "structural_layout_similarity": 0.5222,
+      "driveway_similarity": 0.5222,
+      "stand_size_contribution": 0.0459,
+      "size_score": 0.9176954732510288,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7575,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7443,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.838; pool-house 0.887; exterior 0.744",
+      "rank": 1,
+      "strongest_positive_evidence": "pool_geom 0.838; pool-house 0.887; exterior 0.744",
+      "strongest_contradiction": null,
+      "candidate_pool_shape": "irregular",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_677.jpg"
+    },
+    {
+      "stand_number": "612",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1053.0,
+      "pool_geometry_similarity": 0.8217,
+      "pool_house_similarity": 0.8721,
+      "structural_layout_similarity": 0.5483,
+      "driveway_similarity": 0.5483,
+      "stand_size_contribution": 0.0407,
+      "size_score": 0.8148148148148149,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7492,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.822; pool-house 0.872",
+      "rank": 2,
+      "strongest_positive_evidence": "pool_geom 0.822; pool-house 0.872",
+      "strongest_contradiction": null,
+      "candidate_pool_shape": "irregular",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_612.jpg"
+    },
+    {
+      "stand_number": "570",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1185.0,
+      "pool_geometry_similarity": 0.778,
+      "pool_house_similarity": 0.8671,
+      "structural_layout_similarity": 0.6855,
+      "driveway_similarity": 0.6855,
+      "stand_size_contribution": 0.0257,
+      "size_score": 0.5130315500685871,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7488,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.778; pool-house 0.867",
+      "rank": 3,
+      "strongest_positive_evidence": "pool_geom 0.778; pool-house 0.867",
+      "strongest_contradiction": null,
+      "candidate_pool_shape": "irregular",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_570.jpg"
+    },
+    {
+      "stand_number": "420",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 963.0,
+      "pool_geometry_similarity": 0.8379,
+      "pool_house_similarity": 0.7702,
+      "structural_layout_similarity": 0.522,
+      "driveway_similarity": 0.522,
+      "stand_size_contribution": 0.049,
+      "size_score": 0.9794238683127572,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7297,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.6722,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.838; pool-house 0.770; exterior 0.672",
+      "rank": 4,
+      "strongest_positive_evidence": "pool_geom 0.838; pool-house 0.770; exterior 0.672",
+      "strongest_contradiction": "listing_irregular_pool_vs_candidate_rectangular",
+      "candidate_pool_shape": "rectangular",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_420.jpg"
+    },
+    {
+      "stand_number": "585",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1213.0,
+      "pool_geometry_similarity": 0.7758,
+      "pool_house_similarity": 0.9001,
+      "structural_layout_similarity": 0.5199,
+      "driveway_similarity": 0.5199,
+      "stand_size_contribution": 0.0225,
+      "size_score": 0.4490169181527206,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7058,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.776; pool-house 0.900",
+      "rank": 5,
+      "strongest_positive_evidence": "pool_geom 0.776; pool-house 0.900",
+      "strongest_contradiction": null,
+      "candidate_pool_shape": "irregular",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_585.jpg"
+    },
+    {
+      "stand_number": "447",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 911.0,
+      "pool_geometry_similarity": 0.8587,
+      "pool_house_similarity": 0.5662,
+      "structural_layout_similarity": 0.5708,
+      "driveway_similarity": 0.5708,
+      "stand_size_contribution": 0.043,
+      "size_score": 0.8605395518975766,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7034,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7349,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.859; pool-house 0.566; exterior 0.735",
+      "rank": 6,
+      "strongest_positive_evidence": "pool_geom 0.859; pool-house 0.566; exterior 0.735",
+      "strongest_contradiction": null,
+      "candidate_pool_shape": "irregular",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_447.jpg"
+    },
+    {
+      "stand_number": "365",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 970.0,
+      "pool_geometry_similarity": 0.8786,
+      "pool_house_similarity": 0.3969,
+      "structural_layout_similarity": 0.6343,
+      "driveway_similarity": 0.6343,
+      "stand_size_contribution": 0.0498,
+      "size_score": 0.9954275262917238,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6975,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7279,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.879; pool-house 0.397; exterior 0.728",
+      "rank": 7,
+      "strongest_positive_evidence": "pool_geom 0.879; pool-house 0.397; exterior 0.728",
+      "strongest_contradiction": null,
+      "candidate_pool_shape": "irregular",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_365.jpg"
+    },
+    {
+      "stand_number": "517",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 1035.0,
+      "pool_geometry_similarity": 0.7477,
+      "pool_house_similarity": 0.7851,
+      "structural_layout_similarity": 0.53,
+      "driveway_similarity": 0.53,
+      "stand_size_contribution": 0.0428,
+      "size_score": 0.8559670781893004,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.697,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.748; pool-house 0.785",
+      "rank": 8,
+      "strongest_positive_evidence": "pool_geom 0.748; pool-house 0.785",
+      "strongest_contradiction": null,
+      "candidate_pool_shape": "irregular",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_517.jpg"
+    },
+    {
+      "stand_number": "491",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 977.0,
+      "pool_geometry_similarity": 0.8538,
+      "pool_house_similarity": 0.4593,
+      "structural_layout_similarity": 0.5872,
+      "driveway_similarity": 0.5872,
+      "stand_size_contribution": 0.0494,
+      "size_score": 0.9885688157293095,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6887,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7149,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.854; pool-house 0.459; exterior 0.715",
+      "rank": 9,
+      "strongest_positive_evidence": "pool_geom 0.854; pool-house 0.459; exterior 0.715",
+      "strongest_contradiction": null,
+      "candidate_pool_shape": "kidney_or_curved",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_491.jpg"
+    },
+    {
+      "stand_number": "370",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 1042.0,
+      "pool_geometry_similarity": 0.8622,
+      "pool_house_similarity": 0.6152,
+      "structural_layout_similarity": 0.4516,
+      "driveway_similarity": 0.4516,
+      "stand_size_contribution": 0.042,
+      "size_score": 0.8399634202103338,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6841,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7366,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.862; pool-house 0.615; exterior 0.737",
+      "rank": 10,
+      "strongest_positive_evidence": "pool_geom 0.862; pool-house 0.615; exterior 0.737",
+      "strongest_contradiction": null,
+      "candidate_pool_shape": "irregular",
+      "panel": "investigations/carlswald_north_corrected/116978058/top10_stand_370.jpg"
+    }
+  ],
+  "user_facing_result": "top_10_only",
+  "internal_ranked_audit": [
+    {
+      "stand_number": "677",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 936.0,
+      "pool_geometry_similarity": 0.8379,
+      "pool_house_similarity": 0.8872,
+      "structural_layout_similarity": 0.5222,
+      "driveway_similarity": 0.5222,
+      "stand_size_contribution": 0.0459,
+      "size_score": 0.9176954732510288,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7575,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7443,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.838; pool-house 0.887; exterior 0.744",
+      "rank": 1
+    },
+    {
+      "stand_number": "612",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1053.0,
+      "pool_geometry_similarity": 0.8217,
+      "pool_house_similarity": 0.8721,
+      "structural_layout_similarity": 0.5483,
+      "driveway_similarity": 0.5483,
+      "stand_size_contribution": 0.0407,
+      "size_score": 0.8148148148148149,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7492,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.822; pool-house 0.872",
+      "rank": 2
+    },
+    {
+      "stand_number": "570",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1185.0,
+      "pool_geometry_similarity": 0.778,
+      "pool_house_similarity": 0.8671,
+      "structural_layout_similarity": 0.6855,
+      "driveway_similarity": 0.6855,
+      "stand_size_contribution": 0.0257,
+      "size_score": 0.5130315500685871,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7488,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.778; pool-house 0.867",
+      "rank": 3
+    },
+    {
+      "stand_number": "420",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 963.0,
+      "pool_geometry_similarity": 0.8379,
+      "pool_house_similarity": 0.7702,
+      "structural_layout_similarity": 0.522,
+      "driveway_similarity": 0.522,
+      "stand_size_contribution": 0.049,
+      "size_score": 0.9794238683127572,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7297,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.6722,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.838; pool-house 0.770; exterior 0.672",
+      "rank": 4
+    },
+    {
+      "stand_number": "585",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1213.0,
+      "pool_geometry_similarity": 0.7758,
+      "pool_house_similarity": 0.9001,
+      "structural_layout_similarity": 0.5199,
+      "driveway_similarity": 0.5199,
+      "stand_size_contribution": 0.0225,
+      "size_score": 0.4490169181527206,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7058,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.776; pool-house 0.900",
+      "rank": 5
+    },
+    {
+      "stand_number": "447",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 911.0,
+      "pool_geometry_similarity": 0.8587,
+      "pool_house_similarity": 0.5662,
+      "structural_layout_similarity": 0.5708,
+      "driveway_similarity": 0.5708,
+      "stand_size_contribution": 0.043,
+      "size_score": 0.8605395518975766,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.7034,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7349,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.859; pool-house 0.566; exterior 0.735",
+      "rank": 6
+    },
+    {
+      "stand_number": "365",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 970.0,
+      "pool_geometry_similarity": 0.8786,
+      "pool_house_similarity": 0.3969,
+      "structural_layout_similarity": 0.6343,
+      "driveway_similarity": 0.6343,
+      "stand_size_contribution": 0.0498,
+      "size_score": 0.9954275262917238,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6975,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7279,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.879; pool-house 0.397; exterior 0.728",
+      "rank": 7
+    },
+    {
+      "stand_number": "517",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 1035.0,
+      "pool_geometry_similarity": 0.7477,
+      "pool_house_similarity": 0.7851,
+      "structural_layout_similarity": 0.53,
+      "driveway_similarity": 0.53,
+      "stand_size_contribution": 0.0428,
+      "size_score": 0.8559670781893004,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.697,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.748; pool-house 0.785",
+      "rank": 8
+    },
+    {
+      "stand_number": "491",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 977.0,
+      "pool_geometry_similarity": 0.8538,
+      "pool_house_similarity": 0.4593,
+      "structural_layout_similarity": 0.5872,
+      "driveway_similarity": 0.5872,
+      "stand_size_contribution": 0.0494,
+      "size_score": 0.9885688157293095,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6887,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7149,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.854; pool-house 0.459; exterior 0.715",
+      "rank": 9
+    },
+    {
+      "stand_number": "370",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 1042.0,
+      "pool_geometry_similarity": 0.8622,
+      "pool_house_similarity": 0.6152,
+      "structural_layout_similarity": 0.4516,
+      "driveway_similarity": 0.4516,
+      "stand_size_contribution": 0.042,
+      "size_score": 0.8399634202103338,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6841,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7366,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.862; pool-house 0.615; exterior 0.737",
+      "rank": 10
+    },
+    {
+      "stand_number": "452",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 975.0,
+      "pool_geometry_similarity": 0.8116,
+      "pool_house_similarity": 0.5634,
+      "structural_layout_similarity": 0.5225,
+      "driveway_similarity": 0.5225,
+      "stand_size_contribution": 0.0497,
+      "size_score": 0.9931412894375857,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6767,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.812; pool-house 0.563",
+      "rank": 11
+    },
+    {
+      "stand_number": "622",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 885.0,
+      "pool_geometry_similarity": 0.8597,
+      "pool_house_similarity": 0.4881,
+      "structural_layout_similarity": 0.5321,
+      "driveway_similarity": 0.5321,
+      "stand_size_contribution": 0.0401,
+      "size_score": 0.8010973936899863,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6745,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7466,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.860; pool-house 0.488; exterior 0.747",
+      "rank": 12
+    },
+    {
+      "stand_number": "608",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1092.0,
+      "pool_geometry_similarity": 0.8442,
+      "pool_house_similarity": 0.3692,
+      "structural_layout_similarity": 0.6629,
+      "driveway_similarity": 0.6629,
+      "stand_size_contribution": 0.0363,
+      "size_score": 0.7256515775034293,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6712,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7416,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.844; pool-house 0.369; exterior 0.742",
+      "rank": 13
+    },
+    {
+      "stand_number": "408",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 978.0,
+      "pool_geometry_similarity": 0.9025,
+      "pool_house_similarity": 0.5368,
+      "structural_layout_similarity": 0.3651,
+      "driveway_similarity": 0.3651,
+      "stand_size_contribution": 0.0493,
+      "size_score": 0.9862825788751715,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6693,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7449,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.902; pool-house 0.537; exterior 0.745",
+      "rank": 14
+    },
+    {
+      "stand_number": "353",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 1008.0,
+      "pool_geometry_similarity": 0.7482,
+      "pool_house_similarity": 0.5735,
+      "structural_layout_similarity": 0.592,
+      "driveway_similarity": 0.592,
+      "stand_size_contribution": 0.0459,
+      "size_score": 0.9176954732510288,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6683,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.748; pool-house 0.574",
+      "rank": 15
+    },
+    {
+      "stand_number": "361",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 960.0,
+      "pool_geometry_similarity": 0.8793,
+      "pool_house_similarity": 0.2712,
+      "structural_layout_similarity": 0.6226,
+      "driveway_similarity": 0.6226,
+      "stand_size_contribution": 0.0486,
+      "size_score": 0.9725651577503429,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6632,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.6927,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.879; pool-house 0.271; exterior 0.693",
+      "rank": 16
+    },
+    {
+      "stand_number": "577",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 884.0,
+      "pool_geometry_similarity": 0.7716,
+      "pool_house_similarity": 0.8228,
+      "structural_layout_similarity": 0.348,
+      "driveway_similarity": 0.348,
+      "stand_size_contribution": 0.0399,
+      "size_score": 0.7988111568358482,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6613,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.772; pool-house 0.823",
+      "rank": 17
+    },
+    {
+      "stand_number": "469",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 1020.0,
+      "pool_geometry_similarity": 0.8422,
+      "pool_house_similarity": 0.3061,
+      "structural_layout_similarity": 0.5957,
+      "driveway_similarity": 0.5957,
+      "stand_size_contribution": 0.0445,
+      "size_score": 0.8902606310013718,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6501,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.746,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.842; pool-house 0.306; exterior 0.746",
+      "rank": 18
+    },
+    {
+      "stand_number": "1/510",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 502.0,
+      "pool_geometry_similarity": 0.8218,
+      "pool_house_similarity": 0.7115,
+      "structural_layout_similarity": 0.5201,
+      "driveway_similarity": 0.5201,
+      "stand_size_contribution": 0.0,
+      "size_score": 0.0,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6498,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.822; pool-house 0.712",
+      "rank": 19
+    },
+    {
+      "stand_number": "547",
+      "township": "SUMMERSET EXT.6",
+      "area_sqm": 933.0,
+      "pool_geometry_similarity": 0.8049,
+      "pool_house_similarity": 0.5683,
+      "structural_layout_similarity": 0.435,
+      "driveway_similarity": 0.435,
+      "stand_size_contribution": 0.0455,
+      "size_score": 0.9108367626886146,
+      "contradiction": null,
+      "pool_present": true,
+      "total_score": 0.6456,
+      "aerial_similarity": null,
+      "exterior_similarity": null,
+      "video_similarity": null,
+      "strongest_match": "pool_geom 0.805; pool-house 0.568",
+      "rank": 20
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "version": "1.1.0",
+  "datasets": [
+    {
+      "dataset_id": "carlswald_north_001",
+      "status": "incorrect",
+      "deprecated": true,
+      "silent_selection_blocked": true,
+      "estate_names": [],
+      "do_not_use_for_estates": [
+        "Carlswald North Estate",
+        "Carlswald North",
+        "Carlswald North Lifestyle Estate"
+      ],
+      "townships": [
+        "CARLSWALD ESTATE",
+        "CARLSWALD ESTATE EXT.1",
+        "CARLSWALD ESTATE EXT.21",
+        "CARLSWALD ESTATE EXT.64"
+      ],
+      "reason": "Incorrect Carlswald North mapping. These CoJ townships are Carlswald Estate, not Carlswald North Estate. Imagery/cache retained but this dataset must not be selected for Carlswald North benchmarks.",
+      "replaced_by": "carlswald_north_corrected_001",
+      "keep_imagery_cache": true
+    },
+    {
+      "dataset_id": "carlswald_north_corrected_001",
+      "status": "active",
+      "deprecated": false,
+      "estate_names": [
+        "Carlswald North Estate",
+        "Carlswald North"
+      ],
+      "townships": [
+        "SUMMERSET EXT.6",
+        "SUMMERSET EXT.13"
+      ],
+      "requested_townships": [
+        "SUMMERSET EXT.2",
+        "SUMMERSET EXT.6",
+        "SUMMERSET EXT.13"
+      ],
+      "township_notes": "Official CoJ names use EXT. not EXTENSION. SUMMERSET EXT.2 does not exist in CoJ Property/Township layers. Dataset is EXT.6 + EXT.13 only. CARLSWALD ESTATE townships are excluded."
+    }
+  ]
+}
