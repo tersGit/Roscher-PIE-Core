@@ -1,0 +1,19 @@
+{
+  "current_size": [
+    596,
+    795
+  ],
+  "ags_overlap_size": [
+    899,
+    1200
+  ],
+  "ssim_current_vs_ags_downsampled_to_current": 0.6994916656920117,
+  "ssim_ags_vs_current_upscaled": 0.6706515347822308,
+  "laplacian_current": 643.4609684260572,
+  "laplacian_ags_at_current_size": 385.9851944863842,
+  "laplacian_ags_native_overlap": 206.1239568874566,
+  "sift_current": 5939,
+  "sift_ags_downsampled_to_current": 5794,
+  "sift_ags_overlap": 11544,
+  "sift_current_upscaled": 8119
+}

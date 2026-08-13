@@ -1,0 +1,500 @@
+{
+  "parcel": {
+    "id": "stand_677",
+    "stand": "677",
+    "estate": "Carlswald North (SUMMERSET EXT.13)",
+    "township": "SUMMERSET EXT.13",
+    "area_sqm": 936.0,
+    "existing_crop": "/workspace/data/visual_index/carlswald_north_corrected_001/_imagery_cache/677_ags_aerial.jpg",
+    "padded_rect": {
+      "min_lon": 28.095321181249336,
+      "min_lat": -25.965349037600642,
+      "max_lon": 28.09613651087335,
+      "max_lat": -25.964717223543467
+    },
+    "request_bbox": {
+      "min_lon": 28.095321181249336,
+      "min_lat": -25.96539964612643,
+      "max_lon": 28.096136510873347,
+      "max_lat": -25.964666614724138,
+      "xmin": 3127556.847570149,
+      "ymin": -2994796.172223242,
+      "xmax": 3127647.609648723,
+      "ymax": -2994705.410144668,
+      "side_m": 90.76207857392728
+    },
+    "native_px": 605.0805238261819,
+    "identify": {
+      "pixel_value": "144, 149, 145",
+      "native_rasters": [
+        {
+          "Name": "2023_COJ_RGB_15cm_AP103",
+          "LowPS": 0.15,
+          "HighPS": 1.2,
+          "MinPS": 0,
+          "MaxPS": 12
+        }
+      ],
+      "overview_rasters": [
+        {
+          "Name": "Ov_i02_L03_R000005C6_C000004E8.tif",
+          "LowPS": 3.5999999999999606,
+          "HighPS": 3.5999999999999606,
+          "MinPS": 3.59999999999995,
+          "MaxPS": 10.799999999999
+        },
+        {
+          "Name": "Ov_i02_L04_R000001EC_C000001A2.tif",
+          "LowPS": 10.799999999999981,
+          "HighPS": 10.799999999999981,
+          "MinPS": 10.799999999999,
+          "MaxPS": 32.39999999999991
+        },
+        {
+          "Name": "Ov_i02_L05_R000000A4_C0000008B.tif",
+          "LowPS": 32.399999999999864,
+          "HighPS": 32.399999999999864,
+          "MinPS": 32.3999999999999,
+          "MaxPS": 97.2000000000002
+        },
+        {
+          "Name": "Ov_i02_L06_R00000036_C0000002E.tif",
+          "LowPS": 97.2000000000002,
+          "HighPS": 97.2000000000002,
+          "MinPS": 97.2000000000002,
+          "MaxPS": 291.6
+        },
+        {
+          "Name": "Ov_i02_L07_R00000012_C0000000F.tif",
+          "LowPS": 291.6,
+          "HighPS": 291.6,
+          "MinPS": 291.6,
+          "MaxPS": 14580
+        }
+      ]
+    }
+  },
+  "padding_metres": 18.0,
+  "requests": [
+    {
+      "ok": true,
+      "skipped": false,
+      "bbox_wgs84": {
+        "min_lon": 28.095321181249336,
+        "min_lat": -25.96539964612643,
+        "max_lon": 28.096136510873347,
+        "max_lat": -25.964666614724138
+      },
+      "bbox_3857": {
+        "xmin": 3127556.847570149,
+        "ymin": -2994796.172223242,
+        "xmax": 3127647.609648723,
+        "ymax": -2994705.410144668,
+        "side_m": 90.76207857392728
+      },
+      "requested_dimensions": [
+        256,
+        256
+      ],
+      "returned_dimensions": [
+        256,
+        256
+      ],
+      "file_size_bytes": 16358,
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "runtime_ms_image": 542.4,
+      "runtime_ms_json": 1148.3,
+      "interpolation": "RSP_BilinearInterpolation",
+      "year": 2023,
+      "crs": "EPSG:3857",
+      "metres_per_output_pixel": 0.35453936942940345,
+      "native_pixel_size_m": 0.15,
+      "native_request_px": 605.0805238261819,
+      "flag": null,
+      "export_json": {
+        "http_status": 200,
+        "width": 256,
+        "height": 256,
+        "scale": 0,
+        "extent": {
+          "xmin": 3127556.848,
+          "ymin": -2994796.172,
+          "xmax": 3127647.61,
+          "ymax": -2994705.41,
+          "spatialReference": {
+            "wkid": 102100,
+            "latestWkid": 3857
+          }
+        },
+        "href": "https://ags.joburg.org.za/server/rest/directories/arcgisoutput/AerialPhotography/2023_ImageServer/_ags_01ed7244_6d9a_4f3e_bd52_a54a8bbcc6f4.jpg"
+      },
+      "returned_extent_m": {
+        "x": 90.76199999963865,
+        "y": 90.76199999963865
+      },
+      "server_resampling": "ImageServer defaultResamplingMethod=Bilinear; request interpolation=RSP_BilinearInterpolation; no per-response resampling field is advertised beyond export extent/size.",
+      "saved_as": "data/investigations/ags_resolution/stand_677/256.jpg"
+    },
+    {
+      "ok": true,
+      "skipped": false,
+      "bbox_wgs84": {
+        "min_lon": 28.095321181249336,
+        "min_lat": -25.96539964612643,
+        "max_lon": 28.096136510873347,
+        "max_lat": -25.964666614724138
+      },
+      "bbox_3857": {
+        "xmin": 3127556.847570149,
+        "ymin": -2994796.172223242,
+        "xmax": 3127647.609648723,
+        "ymax": -2994705.410144668,
+        "side_m": 90.76207857392728
+      },
+      "requested_dimensions": [
+        400,
+        400
+      ],
+      "returned_dimensions": [
+        400,
+        400
+      ],
+      "file_size_bytes": 36477,
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "runtime_ms_image": 972.4,
+      "runtime_ms_json": 1119.7,
+      "interpolation": "RSP_BilinearInterpolation",
+      "year": 2023,
+      "crs": "EPSG:3857",
+      "metres_per_output_pixel": 0.2269051964348182,
+      "native_pixel_size_m": 0.15,
+      "native_request_px": 605.0805238261819,
+      "flag": null,
+      "export_json": {
+        "http_status": 200,
+        "width": 400,
+        "height": 400,
+        "scale": 0,
+        "extent": {
+          "xmin": 3127556.848,
+          "ymin": -2994796.172,
+          "xmax": 3127647.61,
+          "ymax": -2994705.41,
+          "spatialReference": {
+            "wkid": 102100,
+            "latestWkid": 3857
+          }
+        },
+        "href": "https://ags.joburg.org.za/server/rest/directories/arcgisoutput/AerialPhotography/2023_ImageServer/_ags_277bd15f_da7d_4fb0_ab9f_ac5078674c43.jpg"
+      },
+      "returned_extent_m": {
+        "x": 90.76199999963865,
+        "y": 90.76199999963865
+      },
+      "server_resampling": "ImageServer defaultResamplingMethod=Bilinear; request interpolation=RSP_BilinearInterpolation; no per-response resampling field is advertised beyond export extent/size.",
+      "saved_as": "data/investigations/ags_resolution/stand_677/400.jpg"
+    },
+    {
+      "ok": true,
+      "skipped": false,
+      "bbox_wgs84": {
+        "min_lon": 28.095321181249336,
+        "min_lat": -25.96539964612643,
+        "max_lon": 28.096136510873347,
+        "max_lat": -25.964666614724138
+      },
+      "bbox_3857": {
+        "xmin": 3127556.847570149,
+        "ymin": -2994796.172223242,
+        "xmax": 3127647.609648723,
+        "ymax": -2994705.410144668,
+        "side_m": 90.76207857392728
+      },
+      "requested_dimensions": [
+        800,
+        800
+      ],
+      "returned_dimensions": [
+        800,
+        800
+      ],
+      "file_size_bytes": 96007,
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "runtime_ms_image": 1614.4,
+      "runtime_ms_json": 1188.5,
+      "interpolation": "RSP_BilinearInterpolation",
+      "year": 2023,
+      "crs": "EPSG:3857",
+      "metres_per_output_pixel": 0.1134525982174091,
+      "native_pixel_size_m": 0.15,
+      "native_request_px": 605.0805238261819,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "export_json": {
+        "http_status": 200,
+        "width": 800,
+        "height": 800,
+        "scale": 0,
+        "extent": {
+          "xmin": 3127556.848,
+          "ymin": -2994796.172,
+          "xmax": 3127647.61,
+          "ymax": -2994705.41,
+          "spatialReference": {
+            "wkid": 102100,
+            "latestWkid": 3857
+          }
+        },
+        "href": "https://ags.joburg.org.za/server/rest/directories/arcgisoutput/AerialPhotography/2023_ImageServer/_ags_8f72e833_399b_4117_862b_f093e791c7c0.jpg"
+      },
+      "returned_extent_m": {
+        "x": 90.76199999963865,
+        "y": 90.76199999963865
+      },
+      "server_resampling": "ImageServer defaultResamplingMethod=Bilinear; request interpolation=RSP_BilinearInterpolation; no per-response resampling field is advertised beyond export extent/size.",
+      "saved_as": "data/investigations/ags_resolution/stand_677/800.jpg"
+    },
+    {
+      "ok": true,
+      "skipped": false,
+      "bbox_wgs84": {
+        "min_lon": 28.095321181249336,
+        "min_lat": -25.96539964612643,
+        "max_lon": 28.096136510873347,
+        "max_lat": -25.964666614724138
+      },
+      "bbox_3857": {
+        "xmin": 3127556.847570149,
+        "ymin": -2994796.172223242,
+        "xmax": 3127647.609648723,
+        "ymax": -2994705.410144668,
+        "side_m": 90.76207857392728
+      },
+      "requested_dimensions": [
+        1200,
+        1200
+      ],
+      "returned_dimensions": [
+        1200,
+        1200
+      ],
+      "file_size_bytes": 165331,
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "runtime_ms_image": 3200.4,
+      "runtime_ms_json": 1327.4,
+      "interpolation": "RSP_BilinearInterpolation",
+      "year": 2023,
+      "crs": "EPSG:3857",
+      "metres_per_output_pixel": 0.07563506547827274,
+      "native_pixel_size_m": 0.15,
+      "native_request_px": 605.0805238261819,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "export_json": {
+        "http_status": 200,
+        "width": 1200,
+        "height": 1200,
+        "scale": 0,
+        "extent": {
+          "xmin": 3127556.848,
+          "ymin": -2994796.172,
+          "xmax": 3127647.61,
+          "ymax": -2994705.41,
+          "spatialReference": {
+            "wkid": 102100,
+            "latestWkid": 3857
+          }
+        },
+        "href": "https://ags.joburg.org.za/server/rest/directories/arcgisoutput/AerialPhotography/2023_ImageServer/_ags_6ce88500_9b09_443f_9ad1_9004ca09dcf1.jpg"
+      },
+      "returned_extent_m": {
+        "x": 90.76199999963865,
+        "y": 90.76199999963865
+      },
+      "server_resampling": "ImageServer defaultResamplingMethod=Bilinear; request interpolation=RSP_BilinearInterpolation; no per-response resampling field is advertised beyond export extent/size.",
+      "saved_as": "data/investigations/ags_resolution/stand_677/1200.jpg"
+    },
+    {
+      "ok": true,
+      "skipped": false,
+      "bbox_wgs84": {
+        "min_lon": 28.095321181249336,
+        "min_lat": -25.96539964612643,
+        "max_lon": 28.096136510873347,
+        "max_lat": -25.964666614724138
+      },
+      "bbox_3857": {
+        "xmin": 3127556.847570149,
+        "ymin": -2994796.172223242,
+        "xmax": 3127647.609648723,
+        "ymax": -2994705.410144668,
+        "side_m": 90.76207857392728
+      },
+      "requested_dimensions": [
+        1600,
+        1600
+      ],
+      "returned_dimensions": [
+        1600,
+        1600
+      ],
+      "file_size_bytes": 241834,
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "runtime_ms_image": 2687.3,
+      "runtime_ms_json": 1506.5,
+      "interpolation": "RSP_BilinearInterpolation",
+      "year": 2023,
+      "crs": "EPSG:3857",
+      "metres_per_output_pixel": 0.05672629910870455,
+      "native_pixel_size_m": 0.15,
+      "native_request_px": 605.0805238261819,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "export_json": {
+        "http_status": 200,
+        "width": 1600,
+        "height": 1600,
+        "scale": 0,
+        "extent": {
+          "xmin": 3127556.848,
+          "ymin": -2994796.172,
+          "xmax": 3127647.61,
+          "ymax": -2994705.41,
+          "spatialReference": {
+            "wkid": 102100,
+            "latestWkid": 3857
+          }
+        },
+        "href": "https://ags.joburg.org.za/server/rest/directories/arcgisoutput/AerialPhotography/2023_ImageServer/_ags_578b9da6_39e8_45ee_9ea4_eefc93b67ed2.jpg"
+      },
+      "returned_extent_m": {
+        "x": 90.76199999963865,
+        "y": 90.76199999963865
+      },
+      "server_resampling": "ImageServer defaultResamplingMethod=Bilinear; request interpolation=RSP_BilinearInterpolation; no per-response resampling field is advertised beyond export extent/size.",
+      "saved_as": "data/investigations/ags_resolution/stand_677/1600.jpg"
+    },
+    {
+      "ok": true,
+      "skipped": false,
+      "bbox_wgs84": {
+        "min_lon": 28.095321181249336,
+        "min_lat": -25.96539964612643,
+        "max_lon": 28.096136510873347,
+        "max_lat": -25.964666614724138
+      },
+      "bbox_3857": {
+        "xmin": 3127556.847570149,
+        "ymin": -2994796.172223242,
+        "xmax": 3127647.609648723,
+        "ymax": -2994705.410144668,
+        "side_m": 90.76207857392728
+      },
+      "requested_dimensions": [
+        2400,
+        2400
+      ],
+      "returned_dimensions": [
+        2400,
+        2400
+      ],
+      "file_size_bytes": 418293,
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "runtime_ms_image": 4379.3,
+      "runtime_ms_json": 2066.2,
+      "interpolation": "RSP_BilinearInterpolation",
+      "year": 2023,
+      "crs": "EPSG:3857",
+      "metres_per_output_pixel": 0.03781753273913637,
+      "native_pixel_size_m": 0.15,
+      "native_request_px": 605.0805238261819,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "export_json": {
+        "http_status": 200,
+        "width": 2400,
+        "height": 2400,
+        "scale": 0,
+        "extent": {
+          "xmin": 3127556.848,
+          "ymin": -2994796.172,
+          "xmax": 3127647.61,
+          "ymax": -2994705.41,
+          "spatialReference": {
+            "wkid": 102100,
+            "latestWkid": 3857
+          }
+        },
+        "href": "https://ags.joburg.org.za/server/rest/directories/arcgisoutput/AerialPhotography/2023_ImageServer/_ags_833023c4_499f_40dc_86db_adf4790f539b.jpg"
+      },
+      "returned_extent_m": {
+        "x": 90.76199999963865,
+        "y": 90.76199999963865
+      },
+      "server_resampling": "ImageServer defaultResamplingMethod=Bilinear; request interpolation=RSP_BilinearInterpolation; no per-response resampling field is advertised beyond export extent/size.",
+      "saved_as": "data/investigations/ags_resolution/stand_677/2400.jpg"
+    },
+    {
+      "ok": true,
+      "skipped": false,
+      "bbox_wgs84": {
+        "min_lon": 28.095321181249336,
+        "min_lat": -25.96539964612643,
+        "max_lon": 28.096136510873347,
+        "max_lat": -25.964666614724138
+      },
+      "bbox_3857": {
+        "xmin": 3127556.847570149,
+        "ymin": -2994796.172223242,
+        "xmax": 3127647.609648723,
+        "ymax": -2994705.410144668,
+        "side_m": 90.76207857392728
+      },
+      "requested_dimensions": [
+        3200,
+        3200
+      ],
+      "returned_dimensions": [
+        3200,
+        3200
+      ],
+      "file_size_bytes": 619792,
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "runtime_ms_image": 6023.2,
+      "runtime_ms_json": 2922.1,
+      "interpolation": "RSP_BilinearInterpolation",
+      "year": 2023,
+      "crs": "EPSG:3857",
+      "metres_per_output_pixel": 0.028363149554352277,
+      "native_pixel_size_m": 0.15,
+      "native_request_px": 605.0805238261819,
+      "flag": "UPSCALED \u2014 NO EXPECTED ADDITIONAL SOURCE DETAIL",
+      "export_json": {
+        "http_status": 200,
+        "width": 3200,
+        "height": 3200,
+        "scale": 0,
+        "extent": {
+          "xmin": 3127556.848,
+          "ymin": -2994796.172,
+          "xmax": 3127647.61,
+          "ymax": -2994705.41,
+          "spatialReference": {
+            "wkid": 102100,
+            "latestWkid": 3857
+          }
+        },
+        "href": "https://ags.joburg.org.za/server/rest/directories/arcgisoutput/AerialPhotography/2023_ImageServer/_ags_cd66f920_b25d_40ca_b5a4_63e7bf8ce81b.jpg"
+      },
+      "returned_extent_m": {
+        "x": 90.76199999963865,
+        "y": 90.76199999963865
+      },
+      "server_resampling": "ImageServer defaultResamplingMethod=Bilinear; request interpolation=RSP_BilinearInterpolation; no per-response resampling field is advertised beyond export extent/size.",
+      "saved_as": "data/investigations/ags_resolution/stand_677/3200.jpg"
+    }
+  ]
+}

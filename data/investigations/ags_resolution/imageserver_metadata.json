@@ -1,0 +1,191 @@
+{
+  "service": {
+    "name": "AerialPhotography/2023",
+    "description": "CoJ Aerial Photography 2023",
+    "pixelSizeX": 0.14999999999963293,
+    "pixelSizeY": 0.14999999999963257,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+    },
+    "maxImageHeight": 4100,
+    "maxImageWidth": 15000,
+    "defaultResamplingMethod": "Bilinear",
+    "defaultCompressionQuality": 75,
+    "minPixelSize": 0,
+    "maxPixelSize": 0,
+    "minScale": 0,
+    "maxScale": 0,
+    "currentVersion": 10.91,
+    "capabilities": "Catalog,Mensuration,Image,Metadata",
+    "allowedCompressions": null,
+    "rasterFunctionInfos": [
+      {
+        "name": "None",
+        "description": "A No-Op Function.",
+        "help": ""
+      }
+    ]
+  },
+  "keyProperties": {
+    "BandDefinitionKeyword": "NONE",
+    "_docversion_": 10,
+    "HighCellSize": 291.6,
+    "BandProperties": [],
+    "LowCellSize": 0.14999999999963262,
+    "MaxCellSize": 14580
+  },
+  "raster_catalog_sample": [
+    {
+      "OBJECTID": 1,
+      "Name": "2023_COJ_RGB_15cm_AA112",
+      "MinPS": 0,
+      "MaxPS": 1.499999999999941,
+      "LowPS": 0.14999999999999408,
+      "HighPS": 0.14999999999999408,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 2,
+      "Name": "2023_COJ_RGB_15cm_AA113",
+      "MinPS": 0,
+      "MaxPS": 2.9999999999999645,
+      "LowPS": 0.14999999999999822,
+      "HighPS": 0.29999999999999644,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 3,
+      "Name": "2023_COJ_RGB_15cm_AB110",
+      "MinPS": 0,
+      "MaxPS": 1.4999999999963263,
+      "LowPS": 0.14999999999963262,
+      "HighPS": 0.14999999999963262,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 4,
+      "Name": "2023_COJ_RGB_15cm_AB111",
+      "MinPS": 0,
+      "MaxPS": 12,
+      "LowPS": 0.15,
+      "HighPS": 1.2,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 5,
+      "Name": "2023_COJ_RGB_15cm_AB112",
+      "MinPS": 0,
+      "MaxPS": 12,
+      "LowPS": 0.15,
+      "HighPS": 1.2,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 6,
+      "Name": "2023_COJ_RGB_15cm_AB113",
+      "MinPS": 0,
+      "MaxPS": 12,
+      "LowPS": 0.15,
+      "HighPS": 1.2,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 7,
+      "Name": "2023_COJ_RGB_15cm_AB114",
+      "MinPS": 0,
+      "MaxPS": 12,
+      "LowPS": 0.15,
+      "HighPS": 1.2,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 8,
+      "Name": "2023_COJ_RGB_15cm_AB115",
+      "MinPS": 0,
+      "MaxPS": 5.999999999999975,
+      "LowPS": 0.14999999999999938,
+      "HighPS": 0.5999999999999975,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 9,
+      "Name": "2023_COJ_RGB_15cm_AB116",
+      "MinPS": 0,
+      "MaxPS": 1.4999999999999885,
+      "LowPS": 0.14999999999999886,
+      "HighPS": 0.14999999999999886,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 10,
+      "Name": "2023_COJ_RGB_15cm_AC110",
+      "MinPS": 0,
+      "MaxPS": 3,
+      "LowPS": 0.15,
+      "HighPS": 0.3,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 11,
+      "Name": "2023_COJ_RGB_15cm_AC111",
+      "MinPS": 0,
+      "MaxPS": 12,
+      "LowPS": 0.15,
+      "HighPS": 1.2,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    },
+    {
+      "OBJECTID": 12,
+      "Name": "2023_COJ_RGB_15cm_AC112",
+      "MinPS": 0,
+      "MaxPS": 12,
+      "LowPS": 0.15,
+      "HighPS": 1.2,
+      "Category": 1,
+      "Tag": "Dataset",
+      "ProductName": ""
+    }
+  ],
+  "raster_low_ps_values": [
+    0.15
+  ],
+  "raster_name_sample": [
+    "2023_COJ_RGB_15cm_AA112",
+    "2023_COJ_RGB_15cm_AA113",
+    "2023_COJ_RGB_15cm_AB110",
+    "2023_COJ_RGB_15cm_AB111",
+    "2023_COJ_RGB_15cm_AB112",
+    "2023_COJ_RGB_15cm_AB113",
+    "2023_COJ_RGB_15cm_AB114",
+    "2023_COJ_RGB_15cm_AB115",
+    "2023_COJ_RGB_15cm_AB116",
+    "2023_COJ_RGB_15cm_AC110",
+    "2023_COJ_RGB_15cm_AC111",
+    "2023_COJ_RGB_15cm_AC112"
+  ],
+  "native_pixel_size_m_3857": 0.15,
+  "pyramid_notes": "Catalog rasters advertise LowPS=HighPS\u22480.15 (15 cm) with MaxPS\u22481.5. keyProperties LowCellSize=0.15, HighCellSize=291.6, MaxCellSize=14580. No explicit LOD/tileInfo pyramid table is exposed on the ImageServer."
+}
