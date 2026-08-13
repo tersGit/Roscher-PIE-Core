@@ -236,7 +236,24 @@ def main() -> int:
         return 1
 
     print("\nTASK 6 — listing 116978058 acquire (blind, no GT)")
-    listing = fetch_listing(LISTING_URL, LISTING_ID)
+    listing = None
+    try:
+        listing = fetch_listing(LISTING_URL, LISTING_ID)
+        (OUTPUT / "listing_meta.json").write_text(
+            json.dumps(listing.__dict__, indent=2),
+            encoding="utf-8",
+        )
+    except Exception as exc:  # noqa: BLE001
+        meta_path = OUTPUT / "listing_meta.json"
+        if meta_path.is_file():
+            print(f"  live fetch failed ({exc}); using cached listing metadata")
+            raw = json.loads(meta_path.read_text(encoding="utf-8"))
+            listing = fetch_listing.__annotations__.get("return")
+            from backend.parsers.property24 import ListingData
+
+            listing = ListingData(**raw)
+        else:
+            raise
     print(f"  title: {listing.title}")
     print(f"  estate: {listing.estate}")
     print(f"  property_type: {listing.property_type}")
@@ -244,6 +261,10 @@ def main() -> int:
     print(f"  image urls found: {len(listing.image_urls)}")
     print(f"  video URLs: {listing.video_urls or None}")
     bodies = download_images(listing.image_urls, OUTPUT / "photos", LISTING_ID)
+    photo_dir = OUTPUT / "photos"
+    if photo_dir.is_dir():
+        for path in sorted(photo_dir.glob("*.jpg")):
+            bodies[path.stem] = path.read_bytes()
     print(f"  images acquired: {len(bodies)}")
     print(f"  video downloaded: NO")
     if not bodies:

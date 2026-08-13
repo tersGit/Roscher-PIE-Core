@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import time
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -31,7 +32,17 @@ class ListingData:
 
 
 def _stand_size(text: str) -> tuple[float | None, str | None]:
-    match = re.search(r"([\d\s]+)\s*m[²2]", text, re.I)
+    match = re.search(
+        r"p24_info\">\s*([\d\s]+)\s*m(?:²|&sup2;|&#xB2;|2)",
+        text,
+        re.I,
+    )
+    if not match:
+        match = re.search(
+            r"([\d\s]+)\s*m(?:²|&sup2;|&#xB2;)\b",
+            text,
+            re.I,
+        )
     if not match:
         return None, None
     raw = match.group(0)
@@ -39,17 +50,21 @@ def _stand_size(text: str) -> tuple[float | None, str | None]:
     return value, raw
 
 
+def _unique_image_urls(html: str) -> list[str]:
+    ids: dict[str, str] = {}
+    for match in re.finditer(r"https://images\.prop24\.com/(\d+)(/[^\"'\s>]*)?", html):
+        image_id = match.group(1)
+        suffix = match.group(2) or ""
+        full = f"https://images.prop24.com/{image_id}"
+        if image_id not in ids:
+            ids[image_id] = full
+        if not suffix:
+            ids[image_id] = full
+    return list(ids.values())
+
+
 def parse_listing_html(html: str, url: str, listing_id: str) -> ListingData:
-    images: list[str] = []
-    for match in re.finditer(r"https://images\.prop24\.com/[^\"'\s>]+", html):
-        images.append(match.group(0).split("?")[0])
-    # de-dupe preserving order
-    seen = set()
-    unique = []
-    for item in images:
-        if item not in seen and not item.endswith(".svg"):
-            seen.add(item)
-            unique.append(item)
+    unique = _unique_image_urls(html)
 
     videos = []
     for match in re.finditer(r"youtube(?:-nocookie)?\.com/embed/([A-Za-z0-9_-]{6,})", html, re.I):
@@ -86,10 +101,26 @@ def parse_listing_html(html: str, url: str, listing_id: str) -> ListingData:
 
 
 def fetch_listing(url: str, listing_id: str) -> ListingData:
-    with httpx.Client(timeout=40.0, follow_redirects=True, headers={"User-Agent": USER_AGENT}) as client:
-        response = client.get(url)
-        response.raise_for_status()
-        return parse_listing_html(response.text, url, listing_id)
+    last_error: Exception | None = None
+    for attempt in range(4):
+        try:
+            with httpx.Client(timeout=40.0, follow_redirects=True, headers={"User-Agent": USER_AGENT}) as client:
+                response = client.get(url)
+                if response.status_code >= 500:
+                    last_error = httpx.HTTPStatusError(
+                        f"HTTP {response.status_code}",
+                        request=response.request,
+                        response=response,
+                    )
+                    time.sleep(1.5 * (attempt + 1))
+                    continue
+                response.raise_for_status()
+                return parse_listing_html(response.text, url, listing_id)
+        except httpx.HTTPError as exc:
+            last_error = exc
+    if last_error:
+        raise last_error
+    raise RuntimeError("listing fetch failed")
 
 
 def download_images(urls: list[str], dest: Path, listing_id: str) -> dict[str, bytes]:

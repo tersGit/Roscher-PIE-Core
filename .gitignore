@@ -214,5 +214,9 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# Streamlit
-.streamlit/secrets.toml
+# PIE local caches and listing media
+data/cache/
+data/visual_index/
+data/investigations/**/photos/
+*.pyc
+

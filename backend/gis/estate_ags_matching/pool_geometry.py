@@ -148,7 +148,10 @@ def _curved_sections(contour: np.ndarray, hull: np.ndarray) -> int:
     cv2 = _cv2()
     if len(hull) < 3 or len(contour) < 5:
         return 0
-    defects = cv2.convexityDefects(contour, cv2.convexHull(contour, returnPoints=False))
+    try:
+        defects = cv2.convexityDefects(contour, cv2.convexHull(contour, returnPoints=False))
+    except cv2.error:
+        return 0
     if defects is None:
         return 0
     count = 0
