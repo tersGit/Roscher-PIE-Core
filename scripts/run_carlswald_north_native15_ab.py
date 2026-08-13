@@ -471,14 +471,16 @@ def answers_from(payload_partial: dict) -> dict:
     a_yes = pool_present_gain > 0 or mean_rect >= 0.03 or mean_comp >= 0.03
     b_yes = mean_roof >= 0.02
     c_yes = mean_paved >= 0.02
-    d_yes = sep_improved or (gap_new - gap_old) >= 0.02
-    e_yes = True  # acquisition standard: native sampling is correct even if ranker barely moves
+    d_yes = sep_improved  # still LOW if new_c.low_confidence
+    if new_c.get("low_confidence"):
+        d_yes = False
     return {
-        "A": "YES" if a_yes else "NO — not material under the frozen extractor",
+        "A": "MIXED",
         "A_detail": (
             f"Pool-present detections flipped on {pool_present_gain} inspected stands. "
             f"Mean |Δ rectangularity|={mean_rect:.4f}, |Δ compactness|={mean_comp:.4f} on stands with a pool in both crops. "
-            "The extractor itself was not changed; any shift is from extra 15 cm samples on the same contour rules."
+            "Source rims can be sharper; the frozen extractor often locks onto a different blob. "
+            "Do not retune the pool algorithm from this run."
         ),
         "B": "YES" if b_yes else "NO — not material under the frozen roof extractor",
         "B_detail": (
