@@ -22,6 +22,11 @@ from backend.gis.estate_ags_matching.aerial_geometric import (
     extract_structural_layout,
     structural_layout_similarity,
 )
+from backend.gis.estate_ags_matching.final_candidates import (
+    FINAL_CANDIDATE_LIMIT,
+    SUCCESS_STANDARD,
+    freeze_final_candidates,
+)
 from backend.gis.estate_ags_matching.pool_geometry import (
     consensus_pool_fingerprint,
     extract_pool_geometry,
@@ -408,36 +413,45 @@ def main() -> int:
     frozen = sorted(final_rows, key=lambda row: (-row["total_score"], row["stand_number"]))
     for index, row in enumerate(frozen, start=1):
         row["rank"] = index
-    top20 = frozen[:20]
-    print("\nFROZEN TOP 20 (SUMMERSET EXT.6 + EXT.13 only)")
+    top10, confidence = freeze_final_candidates(frozen, limit=FINAL_CANDIDATE_LIMIT)
+    print(f"\nFROZEN TOP {FINAL_CANDIDATE_LIMIT} (SUMMERSET EXT.6 + EXT.13 only)")
+    if confidence.get("low_confidence"):
+        print(f"  {confidence['message']}")
+        print(
+            f"  top1-top2 gap={confidence['top1_to_top2_gap']}  "
+            f"top1-top10 gap={confidence['top1_to_top10_gap']}  "
+            f"next excluded={confidence.get('next_excluded_stand')} "
+            f"({confidence.get('next_excluded_score')})"
+        )
     print(
         f"{'rk':>3} {'stand':>10} {'township':<18} {'area':>7} {'total':>7} "
-        f"{'pool':>7} {'p-hse':>7} {'roof':>7} {'ext':>7} {'size':>6}"
+        f"{'pool':>7} {'p-hse':>7} {'roof':>7} {'ext':>7} {'air':>7} {'vid':>7}"
     )
     def fmt(v):
         return "-" if v is None else f"{v:.3f}"
-    for row in top20:
+    for row in top10:
         print(
             f"{row['rank']:3d} {row['stand_number']:>10} {row['township']:<18} "
             f"{int(row['area_sqm'] or 0):7d} {row['total_score']:7.3f} "
             f"{fmt(row['pool_geometry_similarity']):>7} {fmt(row['pool_house_similarity']):>7} "
             f"{fmt(row['structural_layout_similarity']):>7} {fmt(row['exterior_similarity']):>7} "
-            f"{row['stand_size_contribution']:6.3f}  {row['strongest_match']}  {row['contradiction'] or ''}"
+            f"{fmt(row['aerial_similarity']):>7} {fmt(row['video_similarity']):>7}  "
+            f"{row['strongest_match']}  {row['contradiction'] or 'none'}"
         )
 
-    print("\nTOP 5 DETAIL")
-    for row in frozen[:5]:
+    print("\nTOP 10 DETAIL")
+    for row in top10:
         print(f"  #{row['rank']} {row['township']} stand {row['stand_number']} score={row['total_score']:.3f}")
         print(f"     GIS area {row['area_sqm']}  match: {row['strongest_match']}")
         print(f"     contradiction: {row['contradiction'] or 'none'}")
 
-    print("\nTASK 8 — visual proof")
+    print("\nTASK 8 — visual proof (all Top 10)")
     left_id = listing_pool.evidence_media_id if listing_pool.evidence_media_id in bodies else retained[0]
     left_body = bodies[left_id]
     left_fp = extract_pool_geometry(left_body, media_id="listing-panel")
-    for row in frozen[:5]:
+    for row in top10:
         stand = row["stand_number"]
-        dest = OUTPUT / f"top5_stand_{stand.replace('/', '_')}.jpg"
+        dest = OUTPUT / f"top10_stand_{stand.replace('/', '_')}.jpg"
         draw_panel(
             left_body,
             bytes_by[stand],
@@ -469,7 +483,10 @@ def main() -> int:
         "previous_stand_59_used": False,
         "ground_truth_consulted": False,
         "production_matcher_modified": False,
-        "frozen_top20": top20,
+        "final_candidate_limit": FINAL_CANDIDATE_LIMIT,
+        "success_standard": SUCCESS_STANDARD,
+        "confidence": confidence,
+        "frozen_top10": top10,
         "runtime_s": round(time.time() - started, 1),
     }
     out = OUTPUT / "latest.json"
