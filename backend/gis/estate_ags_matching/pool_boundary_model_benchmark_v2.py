@@ -23,7 +23,7 @@ from backend.gis.estate_ags_matching.pool_boundary_v1 import (
 )
 from backend.gis.estate_ags_matching.pool_geometry import _bgr_from_bytes
 
-CACHE = Path(__file__).resolve().parents[2] / "data/cache/models"
+CACHE = Path(__file__).resolve().parents[3] / "data/cache/models"
 YOLOE_S = CACHE / "yoloe-11s-seg.pt"
 YOLOE_M = CACHE / "yoloe-11m-seg.pt"
 SAM21_T = CACHE / "sam2.1_t.pt"
