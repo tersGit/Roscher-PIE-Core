@@ -1,0 +1,5504 @@
+{
+  "listing_id": "116273255",
+  "based_on": "frozen_pr8_listing_evidence_v2",
+  "production_ranking_modified": false,
+  "os_v1_modified": false,
+  "pr6_modified": false,
+  "pr8_viewpoint_rules_modified": false,
+  "water_colour_used_as_evidence": false,
+  "stand_used_in_extraction_or_scoring": false,
+  "listing_specific_rules": false,
+  "l_shape_special_case_in_scoring": false,
+  "acquisition": {
+    "image_urls": 51,
+    "images_acquired": 51,
+    "stand_size_sqm": 500.0,
+    "bedrooms": null,
+    "bathrooms": null
+  },
+  "viewpoint_counts": {
+    "unusable_ambiguous": 2,
+    "ground_level_exterior": 4,
+    "garden_only": 1,
+    "elevated_exterior": 4,
+    "interior": 36,
+    "pool_overview": 3,
+    "pool_closeup": 1
+  },
+  "viewpoint_audit": {
+    "interior_spatial_ids": [],
+    "unusable_ids": [
+      "116273255-001",
+      "116273255-002"
+    ],
+    "closeup_scale_ids": [],
+    "interiors_rejected": 36
+  },
+  "frozen_lev2_channels": {
+    "shape_eligible": true,
+    "shape_ids": [
+      "116273255-008"
+    ],
+    "spatial_eligible": true,
+    "spatial_ids": [
+      "116273255-008"
+    ],
+    "scale_eligible": true,
+    "aerial_eligible": false
+  },
+  "frozen_frames": [
+    {
+      "media_id": "116273255-001",
+      "viewpoint": "unusable_ambiguous",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0048,
+        "elevated_exterior": 0.0001,
+        "ground_level_exterior": 0.004,
+        "pool_overview": 0.0002,
+        "pool_closeup": 0.0004,
+        "interior": 0.0,
+        "garden_only": 0.1807,
+        "unusable_ambiguous": 0.8098
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=unusable_ambiguous"
+      ]
+    },
+    {
+      "media_id": "116273255-002",
+      "viewpoint": "unusable_ambiguous",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0008,
+        "elevated_exterior": 0.0,
+        "ground_level_exterior": 0.0019,
+        "pool_overview": 0.0026,
+        "pool_closeup": 0.0009,
+        "interior": 0.0001,
+        "garden_only": 0.0919,
+        "unusable_ambiguous": 0.9017
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=unusable_ambiguous"
+      ]
+    },
+    {
+      "media_id": "116273255-003",
+      "viewpoint": "ground_level_exterior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0013,
+        "elevated_exterior": 0.0653,
+        "ground_level_exterior": 0.8791,
+        "pool_overview": 0.0176,
+        "pool_closeup": 0.0001,
+        "interior": 0.0003,
+        "garden_only": 0.0364,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-004",
+      "viewpoint": "garden_only",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0268,
+        "elevated_exterior": 0.0109,
+        "ground_level_exterior": 0.355,
+        "pool_overview": 0.0004,
+        "pool_closeup": 0.0006,
+        "interior": 0.0011,
+        "garden_only": 0.5193,
+        "unusable_ambiguous": 0.0858
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-005",
+      "viewpoint": "ground_level_exterior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0028,
+        "elevated_exterior": 0.336,
+        "ground_level_exterior": 0.4155,
+        "pool_overview": 0.0906,
+        "pool_closeup": 0.0004,
+        "interior": 0.0002,
+        "garden_only": 0.1544,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-006",
+      "viewpoint": "ground_level_exterior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0063,
+        "elevated_exterior": 0.1833,
+        "ground_level_exterior": 0.6299,
+        "pool_overview": 0.0392,
+        "pool_closeup": 0.0004,
+        "interior": 0.0033,
+        "garden_only": 0.1376,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-007",
+      "viewpoint": "ground_level_exterior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0012,
+        "elevated_exterior": 0.0754,
+        "ground_level_exterior": 0.8487,
+        "pool_overview": 0.0153,
+        "pool_closeup": 0.0002,
+        "interior": 0.0013,
+        "garden_only": 0.0579,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-008",
+      "viewpoint": "elevated_exterior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.042,
+        "elevated_exterior": 0.2974,
+        "ground_level_exterior": 0.2105,
+        "pool_overview": 0.2953,
+        "pool_closeup": 0.0105,
+        "interior": 0.0015,
+        "garden_only": 0.1427,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": true,
+      "pool_overview_eligible": true,
+      "spatial_eligible": true,
+      "scale_eligible": true,
+      "aerial_eligible": false,
+      "contour_quality": 0.8793,
+      "n_components": 1,
+      "dominant": {
+        "compactness": 0.3873,
+        "convexity": 0.9157,
+        "relative_area": 0.022,
+        "centroid_xy": [
+          0.6353,
+          0.9388
+        ],
+        "aspect_ratio": 1.948,
+        "rectangularity": 0.6692,
+        "n_approx": 5,
+        "edge_clip": 0.008,
+        "water_confidence": 0.9989,
+        "grass_adjacency": 0.1785,
+        "cyan_frac": 0.9976,
+        "quality": 0.8793,
+        "shape_class": "irregular",
+        "circularity": 0.5569,
+        "solidity": 0.9401,
+        "elongation": 1.234,
+        "n_corners": 5,
+        "n_major_indents": 1,
+        "sharp_frac": 0.1875
+      },
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": 0.5769,
+      "pool_to_house_angle_deg": 69.15,
+      "pool_roof_ratio": 0.0854,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-009",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0012,
+        "elevated_exterior": 0.0135,
+        "ground_level_exterior": 0.0235,
+        "pool_overview": 0.0004,
+        "pool_closeup": 0.0001,
+        "interior": 0.9523,
+        "garden_only": 0.009,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-010",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0033,
+        "elevated_exterior": 0.0048,
+        "ground_level_exterior": 0.0103,
+        "pool_overview": 0.0,
+        "pool_closeup": 0.0001,
+        "interior": 0.9793,
+        "garden_only": 0.0021,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-011",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.043,
+        "elevated_exterior": 0.0341,
+        "ground_level_exterior": 0.0756,
+        "pool_overview": 0.0069,
+        "pool_closeup": 0.0027,
+        "interior": 0.7548,
+        "garden_only": 0.0826,
+        "unusable_ambiguous": 0.0003
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-012",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0376,
+        "elevated_exterior": 0.1053,
+        "ground_level_exterior": 0.1995,
+        "pool_overview": 0.0043,
+        "pool_closeup": 0.0022,
+        "interior": 0.5922,
+        "garden_only": 0.0589,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-013",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0282,
+        "elevated_exterior": 0.0594,
+        "ground_level_exterior": 0.1481,
+        "pool_overview": 0.0084,
+        "pool_closeup": 0.0055,
+        "interior": 0.6482,
+        "garden_only": 0.102,
+        "unusable_ambiguous": 0.0001
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-014",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0366,
+        "elevated_exterior": 0.0258,
+        "ground_level_exterior": 0.2499,
+        "pool_overview": 0.0026,
+        "pool_closeup": 0.0159,
+        "interior": 0.635,
+        "garden_only": 0.034,
+        "unusable_ambiguous": 0.0003
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-015",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0088,
+        "elevated_exterior": 0.0161,
+        "ground_level_exterior": 0.3031,
+        "pool_overview": 0.0024,
+        "pool_closeup": 0.056,
+        "interior": 0.3205,
+        "garden_only": 0.2906,
+        "unusable_ambiguous": 0.0025
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-016",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0005,
+        "elevated_exterior": 0.0079,
+        "ground_level_exterior": 0.0069,
+        "pool_overview": 0.0003,
+        "pool_closeup": 0.0001,
+        "interior": 0.9793,
+        "garden_only": 0.0049,
+        "unusable_ambiguous": 0.0001
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-017",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0043,
+        "elevated_exterior": 0.0042,
+        "ground_level_exterior": 0.2124,
+        "pool_overview": 0.0041,
+        "pool_closeup": 0.0416,
+        "interior": 0.5926,
+        "garden_only": 0.0791,
+        "unusable_ambiguous": 0.0617
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-018",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0039,
+        "elevated_exterior": 0.0504,
+        "ground_level_exterior": 0.0425,
+        "pool_overview": 0.0022,
+        "pool_closeup": 0.0009,
+        "interior": 0.875,
+        "garden_only": 0.0249,
+        "unusable_ambiguous": 0.0001
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-019",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0026,
+        "elevated_exterior": 0.1104,
+        "ground_level_exterior": 0.3049,
+        "pool_overview": 0.0002,
+        "pool_closeup": 0.0001,
+        "interior": 0.5713,
+        "garden_only": 0.0105,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-020",
+      "viewpoint": "pool_overview",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0737,
+        "elevated_exterior": 0.1587,
+        "ground_level_exterior": 0.1463,
+        "pool_overview": 0.3076,
+        "pool_closeup": 0.1092,
+        "interior": 0.1593,
+        "garden_only": 0.0453,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": true,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.7796,
+      "n_components": 1,
+      "dominant": {
+        "compactness": 0.2521,
+        "convexity": 0.8814,
+        "relative_area": 0.0061,
+        "centroid_xy": [
+          0.8713,
+          0.8855
+        ],
+        "aspect_ratio": 5.312,
+        "rectangularity": 0.7445,
+        "n_approx": 4,
+        "edge_clip": 0.0,
+        "water_confidence": 1.0,
+        "grass_adjacency": 0.0028,
+        "cyan_frac": 0.9739,
+        "quality": 0.7796,
+        "shape_class": "elongated_rectangular",
+        "circularity": 0.3879,
+        "solidity": 0.91,
+        "elongation": 4.1765,
+        "n_corners": 4,
+        "n_major_indents": 1,
+        "sharp_frac": 0.2188
+      },
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-021",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0162,
+        "elevated_exterior": 0.139,
+        "ground_level_exterior": 0.3587,
+        "pool_overview": 0.0111,
+        "pool_closeup": 0.0041,
+        "interior": 0.4091,
+        "garden_only": 0.0617,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-022",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0002,
+        "elevated_exterior": 0.0012,
+        "ground_level_exterior": 0.0047,
+        "pool_overview": 0.0001,
+        "pool_closeup": 0.0,
+        "interior": 0.9862,
+        "garden_only": 0.0075,
+        "unusable_ambiguous": 0.0001
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-023",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0009,
+        "elevated_exterior": 0.0025,
+        "ground_level_exterior": 0.0048,
+        "pool_overview": 0.0001,
+        "pool_closeup": 0.0004,
+        "interior": 0.9835,
+        "garden_only": 0.0077,
+        "unusable_ambiguous": 0.0001
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-024",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0184,
+        "elevated_exterior": 0.0042,
+        "ground_level_exterior": 0.0959,
+        "pool_overview": 0.0012,
+        "pool_closeup": 0.0508,
+        "interior": 0.7684,
+        "garden_only": 0.0608,
+        "unusable_ambiguous": 0.0003
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-025",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0121,
+        "elevated_exterior": 0.0059,
+        "ground_level_exterior": 0.2612,
+        "pool_overview": 0.0042,
+        "pool_closeup": 0.306,
+        "interior": 0.3007,
+        "garden_only": 0.1029,
+        "unusable_ambiguous": 0.0071
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-026",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.002,
+        "elevated_exterior": 0.0091,
+        "ground_level_exterior": 0.0065,
+        "pool_overview": 0.0013,
+        "pool_closeup": 0.0003,
+        "interior": 0.9689,
+        "garden_only": 0.012,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-027",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0004,
+        "elevated_exterior": 0.0055,
+        "ground_level_exterior": 0.0395,
+        "pool_overview": 0.0,
+        "pool_closeup": 0.0002,
+        "interior": 0.953,
+        "garden_only": 0.0012,
+        "unusable_ambiguous": 0.0003
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-028",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0227,
+        "elevated_exterior": 0.0028,
+        "ground_level_exterior": 0.2972,
+        "pool_overview": 0.0006,
+        "pool_closeup": 0.0418,
+        "interior": 0.5889,
+        "garden_only": 0.0445,
+        "unusable_ambiguous": 0.0015
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-029",
+      "viewpoint": "pool_closeup",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0321,
+        "elevated_exterior": 0.0041,
+        "ground_level_exterior": 0.14,
+        "pool_overview": 0.0053,
+        "pool_closeup": 0.5529,
+        "interior": 0.1692,
+        "garden_only": 0.0916,
+        "unusable_ambiguous": 0.0047
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-030",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0013,
+        "elevated_exterior": 0.0163,
+        "ground_level_exterior": 0.0557,
+        "pool_overview": 0.0006,
+        "pool_closeup": 0.0003,
+        "interior": 0.9137,
+        "garden_only": 0.0119,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-031",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0005,
+        "elevated_exterior": 0.002,
+        "ground_level_exterior": 0.0069,
+        "pool_overview": 0.0001,
+        "pool_closeup": 0.0001,
+        "interior": 0.9883,
+        "garden_only": 0.0021,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-032",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0021,
+        "elevated_exterior": 0.004,
+        "ground_level_exterior": 0.0182,
+        "pool_overview": 0.0004,
+        "pool_closeup": 0.0004,
+        "interior": 0.9696,
+        "garden_only": 0.0053,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-033",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0056,
+        "elevated_exterior": 0.0358,
+        "ground_level_exterior": 0.1725,
+        "pool_overview": 0.0012,
+        "pool_closeup": 0.0004,
+        "interior": 0.777,
+        "garden_only": 0.0074,
+        "unusable_ambiguous": 0.0002
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-034",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0219,
+        "elevated_exterior": 0.0446,
+        "ground_level_exterior": 0.2462,
+        "pool_overview": 0.0025,
+        "pool_closeup": 0.0046,
+        "interior": 0.6102,
+        "garden_only": 0.0697,
+        "unusable_ambiguous": 0.0003
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-035",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0012,
+        "elevated_exterior": 0.0064,
+        "ground_level_exterior": 0.0149,
+        "pool_overview": 0.0003,
+        "pool_closeup": 0.0002,
+        "interior": 0.9699,
+        "garden_only": 0.0066,
+        "unusable_ambiguous": 0.0004
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-036",
+      "viewpoint": "elevated_exterior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0074,
+        "elevated_exterior": 0.3334,
+        "ground_level_exterior": 0.2036,
+        "pool_overview": 0.1793,
+        "pool_closeup": 0.0075,
+        "interior": 0.1521,
+        "garden_only": 0.1166,
+        "unusable_ambiguous": 0.0002
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-037",
+      "viewpoint": "pool_overview",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0369,
+        "elevated_exterior": 0.0544,
+        "ground_level_exterior": 0.1288,
+        "pool_overview": 0.5518,
+        "pool_closeup": 0.043,
+        "interior": 0.0024,
+        "garden_only": 0.1827,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-038",
+      "viewpoint": "pool_overview",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0524,
+        "elevated_exterior": 0.106,
+        "ground_level_exterior": 0.1462,
+        "pool_overview": 0.575,
+        "pool_closeup": 0.0932,
+        "interior": 0.0042,
+        "garden_only": 0.0229,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-039",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0565,
+        "elevated_exterior": 0.1667,
+        "ground_level_exterior": 0.4659,
+        "pool_overview": 0.0113,
+        "pool_closeup": 0.0133,
+        "interior": 0.2675,
+        "garden_only": 0.0187,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-040",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0397,
+        "elevated_exterior": 0.0685,
+        "ground_level_exterior": 0.2371,
+        "pool_overview": 0.0029,
+        "pool_closeup": 0.0273,
+        "interior": 0.6026,
+        "garden_only": 0.0219,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-041",
+      "viewpoint": "elevated_exterior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0194,
+        "elevated_exterior": 0.3806,
+        "ground_level_exterior": 0.3442,
+        "pool_overview": 0.013,
+        "pool_closeup": 0.0033,
+        "interior": 0.1787,
+        "garden_only": 0.0606,
+        "unusable_ambiguous": 0.0001
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-042",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0055,
+        "elevated_exterior": 0.142,
+        "ground_level_exterior": 0.1244,
+        "pool_overview": 0.0031,
+        "pool_closeup": 0.0009,
+        "interior": 0.6706,
+        "garden_only": 0.0531,
+        "unusable_ambiguous": 0.0003
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-043",
+      "viewpoint": "elevated_exterior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.036,
+        "elevated_exterior": 0.6013,
+        "ground_level_exterior": 0.2126,
+        "pool_overview": 0.0493,
+        "pool_closeup": 0.0024,
+        "interior": 0.0432,
+        "garden_only": 0.0552,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": []
+    },
+    {
+      "media_id": "116273255-044",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0004,
+        "elevated_exterior": 0.0032,
+        "ground_level_exterior": 0.0085,
+        "pool_overview": 0.0003,
+        "pool_closeup": 0.0004,
+        "interior": 0.9808,
+        "garden_only": 0.0062,
+        "unusable_ambiguous": 0.0002
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-045",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0016,
+        "elevated_exterior": 0.016,
+        "ground_level_exterior": 0.0207,
+        "pool_overview": 0.0008,
+        "pool_closeup": 0.0003,
+        "interior": 0.9409,
+        "garden_only": 0.0196,
+        "unusable_ambiguous": 0.0002
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-046",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0001,
+        "elevated_exterior": 0.0174,
+        "ground_level_exterior": 0.0281,
+        "pool_overview": 0.0002,
+        "pool_closeup": 0.0001,
+        "interior": 0.9483,
+        "garden_only": 0.0057,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-047",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0029,
+        "elevated_exterior": 0.0075,
+        "ground_level_exterior": 0.0052,
+        "pool_overview": 0.0014,
+        "pool_closeup": 0.0006,
+        "interior": 0.9626,
+        "garden_only": 0.0198,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-048",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0002,
+        "elevated_exterior": 0.0002,
+        "ground_level_exterior": 0.0017,
+        "pool_overview": 0.0,
+        "pool_closeup": 0.0001,
+        "interior": 0.9942,
+        "garden_only": 0.0035,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-049",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0006,
+        "elevated_exterior": 0.0008,
+        "ground_level_exterior": 0.0034,
+        "pool_overview": 0.0001,
+        "pool_closeup": 0.0004,
+        "interior": 0.988,
+        "garden_only": 0.0067,
+        "unusable_ambiguous": 0.0
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-050",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0275,
+        "elevated_exterior": 0.0058,
+        "ground_level_exterior": 0.1752,
+        "pool_overview": 0.0068,
+        "pool_closeup": 0.2836,
+        "interior": 0.3581,
+        "garden_only": 0.1418,
+        "unusable_ambiguous": 0.0011
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-051",
+      "viewpoint": "interior",
+      "viewpoint_scores": {
+        "aerial_near_nadir": 0.0736,
+        "elevated_exterior": 0.009,
+        "ground_level_exterior": 0.1364,
+        "pool_overview": 0.0063,
+        "pool_closeup": 0.1962,
+        "interior": 0.4656,
+        "garden_only": 0.1118,
+        "unusable_ambiguous": 0.0011
+      },
+      "pool_detected": false,
+      "pool_overview_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "aerial_eligible": false,
+      "contour_quality": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "compound": null,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "pool_roof_ratio": null,
+      "notes": [
+        "skipped_extraction_viewpoint=interior"
+      ]
+    }
+  ],
+  "object_frames": [
+    {
+      "media_id": "116273255-001",
+      "viewpoint": "unusable_ambiguous",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=unusable_ambiguous"
+      ]
+    },
+    {
+      "media_id": "116273255-002",
+      "viewpoint": "unusable_ambiguous",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=unusable_ambiguous"
+      ]
+    },
+    {
+      "media_id": "116273255-003",
+      "viewpoint": "ground_level_exterior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "clip_pool_object_not_detected"
+      ]
+    },
+    {
+      "media_id": "116273255-004",
+      "viewpoint": "garden_only",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "clip_pool_object_not_detected"
+      ]
+    },
+    {
+      "media_id": "116273255-005",
+      "viewpoint": "ground_level_exterior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "clip_pool_object_not_detected"
+      ]
+    },
+    {
+      "media_id": "116273255-006",
+      "viewpoint": "ground_level_exterior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "clip_pool_object_not_detected"
+      ]
+    },
+    {
+      "media_id": "116273255-007",
+      "viewpoint": "ground_level_exterior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "clip_pool_object_not_detected"
+      ]
+    },
+    {
+      "media_id": "116273255-008",
+      "viewpoint": "elevated_exterior",
+      "pool_object_detected": true,
+      "geometry_class": "water_fragment",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 1,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0067,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": -90.0,
+      "pool_roof_ratio": null,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": true,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": false,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.5096,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 62.1,
+        "n_major_indents": 6,
+        "max_indent": 0.7336,
+        "sharp_frac": 0.75,
+        "consistent_with_l_planform": true
+      },
+      "dominant": {
+        "relative_area": 0.0756,
+        "compactness": 0.0156,
+        "convexity": 0.3247,
+        "rectangularity": 0.2641,
+        "aspect_ratio": 2.983,
+        "orientation_deg": -90.0,
+        "centroid_xy": [
+          0.2936,
+          0.8239
+        ],
+        "edge_clip": 0.0067,
+        "n_approx": 7,
+        "shape_class": "irregular",
+        "circularity": 0.0582,
+        "solidity": 0.3923,
+        "elongation": 2.018,
+        "n_corners": 8,
+        "n_major_indents": 4,
+        "max_indent": 0.7581,
+        "sharp_frac": 0.8125,
+        "turn_std": 0.8321
+      },
+      "notes": []
+    },
+    {
+      "media_id": "116273255-009",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-010",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-011",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-012",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-013",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-014",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-015",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-016",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-017",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-018",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-019",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-020",
+      "viewpoint": "pool_overview",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "clip_pool_object_not_detected"
+      ]
+    },
+    {
+      "media_id": "116273255-021",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-022",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-023",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-024",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-025",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-026",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-027",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-028",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-029",
+      "viewpoint": "pool_closeup",
+      "pool_object_detected": true,
+      "geometry_class": "partial_pool_boundary",
+      "full_boundary_recovered": false,
+      "partial_object": true,
+      "component_count": 2,
+      "contour_quality": 0.8979,
+      "edge_clip": 0.1429,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": -74.56,
+      "pool_roof_ratio": null,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": true,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": true,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.11,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 86.0,
+        "n_major_indents": 5,
+        "max_indent": 0.3188,
+        "sharp_frac": 0.6562,
+        "consistent_with_l_planform": true,
+        "component_count": 2,
+        "second_component_separation": 0.6204
+      },
+      "dominant": {
+        "relative_area": 0.1909,
+        "compactness": 0.2865,
+        "convexity": 0.6714,
+        "rectangularity": 0.5309,
+        "aspect_ratio": 2.631,
+        "orientation_deg": -74.56,
+        "centroid_xy": [
+          0.643,
+          0.6908
+        ],
+        "edge_clip": 0.1429,
+        "n_approx": 14,
+        "shape_class": "irregular",
+        "circularity": 0.3373,
+        "solidity": 0.6902,
+        "elongation": 1.9533,
+        "n_corners": 9,
+        "n_major_indents": 5,
+        "max_indent": 0.3186,
+        "sharp_frac": 0.5,
+        "turn_std": 0.6583
+      },
+      "notes": []
+    },
+    {
+      "media_id": "116273255-030",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-031",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-032",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-033",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-034",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-035",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-036",
+      "viewpoint": "elevated_exterior",
+      "pool_object_detected": true,
+      "geometry_class": "full_pool_planform",
+      "full_boundary_recovered": true,
+      "partial_object": false,
+      "component_count": 1,
+      "contour_quality": 0.778,
+      "edge_clip": 0.0146,
+      "shape_eligible": true,
+      "spatial_eligible": true,
+      "scale_eligible": true,
+      "house_visible": true,
+      "pool_to_house_dist": 0.2816,
+      "pool_to_house_angle_deg": 50.73,
+      "nearest_pool_building_edge": 0.0509,
+      "pool_orientation_deg": -71.73,
+      "pool_roof_ratio": 0.588,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": true,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": false,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.3804,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 71.9,
+        "n_major_indents": 5,
+        "max_indent": 0.3496,
+        "sharp_frac": 0.6875,
+        "consistent_with_l_planform": true
+      },
+      "dominant": {
+        "relative_area": 0.1282,
+        "compactness": 0.1068,
+        "convexity": 0.6332,
+        "rectangularity": 0.519,
+        "aspect_ratio": 2.572,
+        "orientation_deg": -71.73,
+        "centroid_xy": [
+          0.7131,
+          0.6633
+        ],
+        "edge_clip": 0.0146,
+        "n_approx": 7,
+        "shape_class": "irregular",
+        "circularity": 0.235,
+        "solidity": 0.6692,
+        "elongation": 1.9261,
+        "n_corners": 7,
+        "n_major_indents": 6,
+        "max_indent": 0.3781,
+        "sharp_frac": 0.5,
+        "turn_std": 0.8647
+      },
+      "notes": []
+    },
+    {
+      "media_id": "116273255-037",
+      "viewpoint": "pool_overview",
+      "pool_object_detected": true,
+      "geometry_class": "full_pool_planform",
+      "full_boundary_recovered": true,
+      "partial_object": false,
+      "component_count": 1,
+      "contour_quality": 0.8872,
+      "edge_clip": 0.1579,
+      "shape_eligible": true,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": -90.0,
+      "pool_roof_ratio": null,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": true,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": true,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.3273,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 88.7,
+        "n_major_indents": 3,
+        "max_indent": 0.2167,
+        "sharp_frac": 0.5,
+        "consistent_with_l_planform": true
+      },
+      "dominant": {
+        "relative_area": 0.2821,
+        "compactness": 0.4473,
+        "convexity": 0.8623,
+        "rectangularity": 0.6406,
+        "aspect_ratio": 2.008,
+        "orientation_deg": -90.0,
+        "centroid_xy": [
+          0.4529,
+          0.7957
+        ],
+        "edge_clip": 0.1579,
+        "n_approx": 8,
+        "shape_class": "kidney_or_curved",
+        "circularity": 0.5363,
+        "solidity": 0.8678,
+        "elongation": 1.337,
+        "n_corners": 6,
+        "n_major_indents": 2,
+        "max_indent": 0.2382,
+        "sharp_frac": 0.3125,
+        "turn_std": 0.5183
+      },
+      "notes": []
+    },
+    {
+      "media_id": "116273255-038",
+      "viewpoint": "pool_overview",
+      "pool_object_detected": true,
+      "geometry_class": "water_fragment",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 1,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0007,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": -90.0,
+      "pool_roof_ratio": null,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": false,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": false,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.5056,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 50.3,
+        "n_major_indents": 7,
+        "max_indent": 0.4865,
+        "sharp_frac": 0.75,
+        "consistent_with_l_planform": false
+      },
+      "dominant": {
+        "relative_area": 0.1071,
+        "compactness": 0.0214,
+        "convexity": 0.4647,
+        "rectangularity": 0.3465,
+        "aspect_ratio": 2.761,
+        "orientation_deg": -90.0,
+        "centroid_xy": [
+          0.4079,
+          0.5739
+        ],
+        "edge_clip": 0.0007,
+        "n_approx": 4,
+        "shape_class": "irregular",
+        "circularity": 0.084,
+        "solidity": 0.5723,
+        "elongation": 1.8702,
+        "n_corners": 6,
+        "n_major_indents": 5,
+        "max_indent": 0.5317,
+        "sharp_frac": 0.7812,
+        "turn_std": 0.839
+      },
+      "notes": []
+    },
+    {
+      "media_id": "116273255-039",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-040",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-041",
+      "viewpoint": "elevated_exterior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "clip_pool_object_not_detected"
+      ]
+    },
+    {
+      "media_id": "116273255-042",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-043",
+      "viewpoint": "elevated_exterior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": true,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "clip_pool_object_not_detected"
+      ]
+    },
+    {
+      "media_id": "116273255-044",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-045",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-046",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-047",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-048",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-049",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-050",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    },
+    {
+      "media_id": "116273255-051",
+      "viewpoint": "interior",
+      "pool_object_detected": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary_recovered": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "house_visible": false,
+      "pool_to_house_dist": null,
+      "pool_to_house_angle_deg": null,
+      "nearest_pool_building_edge": null,
+      "pool_orientation_deg": null,
+      "pool_roof_ratio": null,
+      "l_geometry": {},
+      "dominant": null,
+      "notes": [
+        "skipped_object_extraction_viewpoint=interior"
+      ]
+    }
+  ],
+  "frame_table": [
+    {
+      "media_id": "116273255-001",
+      "viewpoint": "unusable_ambiguous",
+      "frozen_pool": false,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {}
+    },
+    {
+      "media_id": "116273255-002",
+      "viewpoint": "unusable_ambiguous",
+      "frozen_pool": false,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {}
+    },
+    {
+      "media_id": "116273255-003",
+      "viewpoint": "ground_level_exterior",
+      "frozen_pool": false,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {}
+    },
+    {
+      "media_id": "116273255-004",
+      "viewpoint": "garden_only",
+      "frozen_pool": false,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {}
+    },
+    {
+      "media_id": "116273255-005",
+      "viewpoint": "ground_level_exterior",
+      "frozen_pool": false,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {}
+    },
+    {
+      "media_id": "116273255-006",
+      "viewpoint": "ground_level_exterior",
+      "frozen_pool": false,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {}
+    },
+    {
+      "media_id": "116273255-007",
+      "viewpoint": "ground_level_exterior",
+      "frozen_pool": false,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {}
+    },
+    {
+      "media_id": "116273255-008",
+      "viewpoint": "elevated_exterior",
+      "frozen_pool": true,
+      "object_pool": true,
+      "geometry_class": "water_fragment",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 1,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0067,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.8793,
+      "frozen_n": 1,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": true,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": false,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.5096,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 62.1,
+        "n_major_indents": 6,
+        "max_indent": 0.7336,
+        "sharp_frac": 0.75,
+        "consistent_with_l_planform": true
+      }
+    },
+    {
+      "media_id": "116273255-020",
+      "viewpoint": "pool_overview",
+      "frozen_pool": true,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.7796,
+      "frozen_n": 1,
+      "l_geometry": {}
+    },
+    {
+      "media_id": "116273255-029",
+      "viewpoint": "pool_closeup",
+      "frozen_pool": false,
+      "object_pool": true,
+      "geometry_class": "partial_pool_boundary",
+      "full_boundary": false,
+      "partial_object": true,
+      "component_count": 2,
+      "contour_quality": 0.8979,
+      "edge_clip": 0.1429,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": true,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": true,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.11,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 86.0,
+        "n_major_indents": 5,
+        "max_indent": 0.3188,
+        "sharp_frac": 0.6562,
+        "consistent_with_l_planform": true,
+        "component_count": 2,
+        "second_component_separation": 0.6204
+      }
+    },
+    {
+      "media_id": "116273255-036",
+      "viewpoint": "elevated_exterior",
+      "frozen_pool": false,
+      "object_pool": true,
+      "geometry_class": "full_pool_planform",
+      "full_boundary": true,
+      "partial_object": false,
+      "component_count": 1,
+      "contour_quality": 0.778,
+      "edge_clip": 0.0146,
+      "shape_eligible": true,
+      "spatial_eligible": true,
+      "scale_eligible": true,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": true,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": false,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.3804,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 71.9,
+        "n_major_indents": 5,
+        "max_indent": 0.3496,
+        "sharp_frac": 0.6875,
+        "consistent_with_l_planform": true
+      }
+    },
+    {
+      "media_id": "116273255-037",
+      "viewpoint": "pool_overview",
+      "frozen_pool": false,
+      "object_pool": true,
+      "geometry_class": "full_pool_planform",
+      "full_boundary": true,
+      "partial_object": false,
+      "component_count": 1,
+      "contour_quality": 0.8872,
+      "edge_clip": 0.1579,
+      "shape_eligible": true,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": true,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": true,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.3273,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 88.7,
+        "n_major_indents": 3,
+        "max_indent": 0.2167,
+        "sharp_frac": 0.5,
+        "consistent_with_l_planform": true
+      }
+    },
+    {
+      "media_id": "116273255-038",
+      "viewpoint": "pool_overview",
+      "frozen_pool": false,
+      "object_pool": true,
+      "geometry_class": "water_fragment",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 1,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0007,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {
+        "two_dominant_arms": true,
+        "arms_approximately_perpendicular": false,
+        "strong_concave_inner_corner": true,
+        "predominantly_straight_outer": false,
+        "rectilinear_not_kidney": true,
+        "arm_length_ratio": 0.5056,
+        "arm_width_ratio": null,
+        "principal_angle_delta_deg": 50.3,
+        "n_major_indents": 7,
+        "max_indent": 0.4865,
+        "sharp_frac": 0.75,
+        "consistent_with_l_planform": false
+      }
+    },
+    {
+      "media_id": "116273255-041",
+      "viewpoint": "elevated_exterior",
+      "frozen_pool": false,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {}
+    },
+    {
+      "media_id": "116273255-043",
+      "viewpoint": "elevated_exterior",
+      "frozen_pool": false,
+      "object_pool": false,
+      "geometry_class": "no_usable_pool_geometry",
+      "full_boundary": false,
+      "partial_object": false,
+      "component_count": 0,
+      "contour_quality": 0.0,
+      "edge_clip": 0.0,
+      "shape_eligible": false,
+      "spatial_eligible": false,
+      "scale_eligible": false,
+      "frozen_quality": 0.0,
+      "frozen_n": 0,
+      "l_geometry": {}
+    }
+  ],
+  "l_consistency": {
+    "n_comparable": 2,
+    "stable_across_views": true,
+    "consistent_with_l_ids": [
+      "116273255-036",
+      "116273255-037"
+    ],
+    "two_arm_ids": [
+      "116273255-036",
+      "116273255-037"
+    ],
+    "ids": [
+      "116273255-036",
+      "116273255-037"
+    ]
+  },
+  "quality_gate": {
+    "passed": true,
+    "reason": "usable_pool_boundary",
+    "n_usable": 2,
+    "n_full_planform": 2,
+    "chosen_id": "116273255-037",
+    "chosen_class": "full_pool_planform",
+    "chosen_quality": 0.8872,
+    "usable_ids": [
+      "116273255-036",
+      "116273255-037"
+    ],
+    "visual_passed": false,
+    "official_passed": false
+  },
+  "contact_sheet": "panels/contact_sheet.jpg",
+  "contact_sheet_ids": [
+    "116273255-003",
+    "116273255-005",
+    "116273255-006",
+    "116273255-007",
+    "116273255-008",
+    "116273255-020",
+    "116273255-029",
+    "116273255-036",
+    "116273255-037",
+    "116273255-038",
+    "116273255-041",
+    "116273255-043"
+  ],
+  "rerank": {
+    "baseline": {
+      "name": "frozen_production_combined_score",
+      "n": 330,
+      "top1": {
+        "stand": "1/357",
+        "score": 0.9269
+      },
+      "top2": {
+        "stand": "1/516",
+        "score": 0.8975
+      },
+      "margin_1_2": 0.0294,
+      "confidence": {
+        "level": "low",
+        "low_confidence": true,
+        "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+        "top1_to_top2_gap": 0.0294,
+        "top1_to_top10_gap": 0.1672,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand_number": "1/357",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 510.0,
+          "score": 0.9269,
+          "os_pool_status": "REJECTED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.0669
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9555555555555556,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 2,
+          "stand_number": "1/516",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 501.0,
+          "score": 0.8975,
+          "os_pool_status": "UNKNOWN",
+          "os_pool_shape": null,
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.0697
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9955555555555555,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 3,
+          "stand_number": "1/334",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 520.0,
+          "score": 0.892,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.255
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.0638
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9111111111111111,
+          "shape_v2": 0.7083,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 4,
+          "stand_number": "1/335",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 500.0,
+          "score": 0.8569,
+          "os_pool_status": "UNKNOWN",
+          "os_pool_shape": null,
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.07
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 1.0,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 5,
+          "stand_number": "1/484",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 500.0,
+          "score": 0.856,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2399
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.07
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 1.0,
+          "shape_v2": 0.6665,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        }
+      ],
+      "top20": [
+        {
+          "rank": 1,
+          "stand_number": "1/357",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 510.0,
+          "score": 0.9269,
+          "os_pool_status": "REJECTED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.0669
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9555555555555556,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 2,
+          "stand_number": "1/516",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 501.0,
+          "score": 0.8975,
+          "os_pool_status": "UNKNOWN",
+          "os_pool_shape": null,
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.0697
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9955555555555555,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 3,
+          "stand_number": "1/334",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 520.0,
+          "score": 0.892,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.255
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.0638
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9111111111111111,
+          "shape_v2": 0.7083,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 4,
+          "stand_number": "1/335",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 500.0,
+          "score": 0.8569,
+          "os_pool_status": "UNKNOWN",
+          "os_pool_shape": null,
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.07
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 1.0,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 5,
+          "stand_number": "1/484",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 500.0,
+          "score": 0.856,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2399
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.07
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 1.0,
+          "shape_v2": 0.6665,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 6,
+          "stand_number": "2/541",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 509.0,
+          "score": 0.8533,
+          "os_pool_status": "REJECTED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.0672
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.96,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 7,
+          "stand_number": "1/477",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 507.0,
+          "score": 0.848,
+          "os_pool_status": "REJECTED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.0678
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9688888888888889,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 8,
+          "stand_number": "636",
+          "township": "SUMMERSET EXT.13",
+          "area_sqm": 939.0,
+          "score": 0.7941,
+          "os_pool_status": "REJECTED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 9,
+          "stand_number": "352",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 886.0,
+          "score": 0.7734,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2921
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.8113,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 10,
+          "stand_number": "566",
+          "township": "SUMMERSET EXT.13",
+          "area_sqm": 1151.0,
+          "score": 0.7597,
+          "os_pool_status": "REJECTED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 11,
+          "stand_number": "401",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 919.0,
+          "score": 0.7545,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2786
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.7738,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 12,
+          "stand_number": "350",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 992.0,
+          "score": 0.7517,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2402
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.6672,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 13,
+          "stand_number": "365",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 970.0,
+          "score": 0.7459,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2554
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.7095,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 14,
+          "stand_number": "1/510",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 502.0,
+          "score": 0.7413,
+          "os_pool_status": "REJECTED",
+          "os_pool_shape": "elongated_rectangular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.0694
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9911111111111112,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 15,
+          "stand_number": "545",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 918.0,
+          "score": 0.7358,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "elongated_rectangular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2869
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.797,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 16,
+          "stand_number": "567",
+          "township": "SUMMERSET EXT.13",
+          "area_sqm": 1106.0,
+          "score": 0.7345,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2713
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.7535,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 17,
+          "stand_number": "1/466",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 500.0,
+          "score": 0.732,
+          "os_pool_status": "REJECTED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.07
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 1.0,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 18,
+          "stand_number": "1/417",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 524.0,
+          "score": 0.7302,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2581
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.0625
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.8933333333333333,
+          "shape_v2": 0.717,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 19,
+          "stand_number": "1/478",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 502.0,
+          "score": 0.7265,
+          "os_pool_status": "REJECTED",
+          "os_pool_shape": "elongated_rectangular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.18
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "pool_presence",
+              0.07
+            ],
+            [
+              "stand_size",
+              0.0694
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9911111111111112,
+          "shape_v2": null,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 20,
+          "stand_number": "582",
+          "township": "SUMMERSET EXT.13",
+          "area_sqm": 1002.0,
+          "score": 0.725,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2581
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.717,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        }
+      ]
+    },
+    "scoring_v2": {
+      "name": "pr6_scoring_v2_unchanged",
+      "n": 330,
+      "top1": {
+        "stand": "1/389",
+        "score": 0.6916
+      },
+      "top2": {
+        "stand": "1/450",
+        "score": 0.6829
+      },
+      "margin_1_2": 0.0087,
+      "confidence": {
+        "level": "low",
+        "low_confidence": true,
+        "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+        "top1_to_top2_gap": 0.0087,
+        "top1_to_top10_gap": 0.0324,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand_number": "1/389",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 514.0,
+          "score": 0.6916,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.271
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.0656
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9377777777777778,
+          "shape_v2": 0.7527,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 2,
+          "stand_number": "1/450",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 529.0,
+          "score": 0.6829,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "rectangular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2669
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.061
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.8711111111111112,
+          "shape_v2": 0.7415,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 3,
+          "stand_number": "1/343",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 565.0,
+          "score": 0.6777,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2729
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "stand_size",
+              0.0498
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.711111111111111,
+          "shape_v2": 0.758,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 4,
+          "stand_number": "1/417",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 524.0,
+          "score": 0.6757,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2581
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.0625
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.8933333333333333,
+          "shape_v2": 0.717,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 5,
+          "stand_number": "1/334",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 520.0,
+          "score": 0.6738,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.255
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.0638
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9111111111111111,
+          "shape_v2": 0.7083,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        }
+      ],
+      "top20": [
+        {
+          "rank": 1,
+          "stand_number": "1/389",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 514.0,
+          "score": 0.6916,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.271
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.0656
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9377777777777778,
+          "shape_v2": 0.7527,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 2,
+          "stand_number": "1/450",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 529.0,
+          "score": 0.6829,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "rectangular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2669
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.061
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.8711111111111112,
+          "shape_v2": 0.7415,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 3,
+          "stand_number": "1/343",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 565.0,
+          "score": 0.6777,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2729
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "stand_size",
+              0.0498
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.711111111111111,
+          "shape_v2": 0.758,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 4,
+          "stand_number": "1/417",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 524.0,
+          "score": 0.6757,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2581
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.0625
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.8933333333333333,
+          "shape_v2": 0.717,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 5,
+          "stand_number": "1/334",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 520.0,
+          "score": 0.6738,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.255
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.0638
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.9111111111111111,
+          "shape_v2": 0.7083,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 6,
+          "stand_number": "1/449",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 594.0,
+          "score": 0.6732,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2775
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "stand_size",
+              0.0408
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.5822222222222222,
+          "shape_v2": 0.7708,
+          "spatial_v2": null,
+          "blob_pool_present": false
+        },
+        {
+          "rank": 7,
+          "stand_number": "482",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 1007.0,
+          "score": 0.6721,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.3171
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.8807,
+          "spatial_v2": null,
+          "blob_pool_present": false
+        },
+        {
+          "rank": 8,
+          "stand_number": "1/484",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 500.0,
+          "score": 0.6649,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2399
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.07
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 1.0,
+          "shape_v2": 0.6665,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 9,
+          "stand_number": "1/603",
+          "township": "SUMMERSET EXT.13",
+          "area_sqm": 600.0,
+          "score": 0.66,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "rectangular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2661
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "stand_size",
+              0.0389
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.5555555555555556,
+          "shape_v2": 0.7392,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 10,
+          "stand_number": "1/373",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 500.0,
+          "score": 0.6592,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2342
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "stand_size",
+              0.07
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 1.0,
+          "shape_v2": 0.6505,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 11,
+          "stand_number": "423",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 950.0,
+          "score": 0.6515,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2965
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.8237,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 12,
+          "stand_number": "568",
+          "township": "SUMMERSET EXT.13",
+          "area_sqm": 998.0,
+          "score": 0.6502,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2952
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.8201,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 13,
+          "stand_number": "382",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 1251.0,
+          "score": 0.648,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.293
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.814,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 14,
+          "stand_number": "352",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 886.0,
+          "score": 0.6471,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2921
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.8113,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 15,
+          "stand_number": "667",
+          "township": "SUMMERSET EXT.13",
+          "area_sqm": 944.0,
+          "score": 0.6466,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2916
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.8099,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 16,
+          "stand_number": "1/691",
+          "township": "SUMMERSET EXT.13",
+          "area_sqm": 552.0,
+          "score": 0.6451,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2362
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "stand_size",
+              0.0538
+            ],
+            [
+              "exterior",
+              0.03
+            ]
+          ],
+          "size_score": 0.768888888888889,
+          "shape_v2": 0.6562,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 17,
+          "stand_number": "446",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 993.0,
+          "score": 0.645,
+          "os_pool_status": "PROBABLE",
+          "os_pool_shape": "irregular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.29
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.8055,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 18,
+          "stand_number": "444",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 1044.0,
+          "score": 0.6435,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "kidney_or_curved",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2885
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.8015,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 19,
+          "stand_number": "672",
+          "township": "SUMMERSET EXT.13",
+          "area_sqm": 975.0,
+          "score": 0.6434,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "rectangular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2884
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.801,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        },
+        {
+          "rank": 20,
+          "stand_number": "545",
+          "township": "SUMMERSET EXT.6",
+          "area_sqm": 918.0,
+          "score": 0.6419,
+          "os_pool_status": "CONFIRMED",
+          "os_pool_shape": "elongated_rectangular",
+          "contrib_top": [
+            [
+              "shape_v2",
+              0.2869
+            ],
+            [
+              "pool_presence",
+              0.14
+            ],
+            [
+              "spatial_v2",
+              0.11
+            ],
+            [
+              "aerial",
+              0.06
+            ],
+            [
+              "exterior",
+              0.03
+            ],
+            [
+              "gis",
+              0.015
+            ]
+          ],
+          "size_score": 0.0,
+          "shape_v2": 0.797,
+          "spatial_v2": null,
+          "blob_pool_present": true
+        }
+      ]
+    },
+    "n_candidates": 330,
+    "weights": "V2_WEIGHTS_NO_BUILDING unchanged",
+    "colour_used_in_score": false
+  },
+  "elapsed_s": 36.5,
+  "visual_inspection": {
+    "automated_gate_passed": true,
+    "visual_gate_passed": false,
+    "official_rerank_valid": false,
+    "reason": "Chosen 037/036 contours do not follow the pool coping. 037 climbs trees/wall; 036 covers patio furniture. 008/038 are the true L-pool views and were correctly rejected as water_fragment smears. Bathtub 029 is not a pool.",
+    "frames": {
+      "008": "true L-pool; object detected; contour is a water_fragment smear into trees",
+      "036": "pool visible (cover/net); labelled full_planform but mask is furniture/railing/wall",
+      "037": "true L-pool overview; labelled full_planform but contour follows patio then trees",
+      "038": "true L-pool wrapping pillar; water_fragment climbing the house wall",
+      "029": "bathroom bathtub labelled pool_closeup",
+      "020": "interior landing labelled pool_overview; no pool object",
+      "001": "agent headshot correctly unusable_ambiguous",
+      "002": "agent headshot correctly unusable_ambiguous"
+    }
+  },
+  "rerank_note": "Ranking was computed because the automated gate passed. Visual inspection rejects the contours, so the ranking is not a valid 330-candidate result."
+}
