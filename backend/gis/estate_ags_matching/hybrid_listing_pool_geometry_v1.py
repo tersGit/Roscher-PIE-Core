@@ -407,7 +407,9 @@ def recall_ladder(bgr: np.ndarray, segments: np.ndarray) -> tuple[list[PoolCompo
         comps = collect_yoloe(bgr, segments, which=which, prompt=prompt, conf=conf, imgsz=imgsz)
         if comps:
             found.extend(comps)
-            if any(c.relative_area >= 0.015 for c in comps):
+            # Stop only on a detector-confident, dominant-sized pool — a low-conf
+            # large blob must not block later prompt/resolution steps.
+            if any(c.relative_area >= 0.015 and c.confidence >= 0.18 for c in comps):
                 return found, tried
     return found, tried
 
