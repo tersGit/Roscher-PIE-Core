@@ -63,8 +63,10 @@ MAX_FRAME_COVERAGE = 0.40
 MAX_EDGE_CLIP = 0.12
 MAX_COMPLEXITY_INDENTS = 3
 MIN_WATER_CONFIDENCE = 0.22
-MIN_COMPONENT_AREA_FRAC = 0.0018
+MIN_COMPONENT_AREA_FRAC = 0.006
 MAX_COMPONENT_AREA_FRAC = 0.38
+MIN_OVERVIEW_AREA_FRAC = 0.008
+EDGE_MARGIN = 0.04
 
 
 def _cv2():
@@ -141,9 +143,7 @@ def classify_viewpoint(
 
     if scores.get("unusable_ambiguous", 0.0) >= 0.45:
         label = "unusable_ambiguous"
-    elif scores.get("interior", 0.0) >= 0.40 and gfrac < 0.10:
-        label = "interior"
-    elif scores.get("interior", 0.0) >= 0.28 and gfrac < 0.06 and scores.get("pool_overview", 0.0) < 0.20:
+    elif scores.get("interior", 0.0) >= 0.25 and gfrac < 0.08 and scores.get("pool_overview", 0.0) < 0.20:
         label = "interior"
     elif label == "garden_only" and scores.get("unusable_ambiguous", 0.0) >= 0.12 and gfrac < 0.20:
         # Green graphic behind a headshot is not a garden photograph.
@@ -361,6 +361,10 @@ def _passes_component_filters(comp: WaterComponent, *, viewpoint_hint: str | Non
         return False
     if cy < 0.18:
         return False
+    if min(cx, 1.0 - cx, cy, 1.0 - cy) < EDGE_MARGIN and comp.relative_area < 0.015:
+        return False
+    if comp.relative_area < MIN_COMPONENT_AREA_FRAC:
+        return False
     if comp.quality <= 0:
         return False
     if comp.edge_clip > MAX_EDGE_CLIP:
@@ -503,6 +507,7 @@ def _compound_stats(comps: list[WaterComponent]) -> dict[str, Any] | None:
     inter_h = max(0, min(ay + ah, by + bh) - max(ay, by))
     overlap = inter_w > 2 and inter_h > 2
     touch = sep < 0.04 or overlap
+    large_enough = primary.relative_area >= MIN_OVERVIEW_AREA_FRAC and secondary.relative_area >= MIN_COMPONENT_AREA_FRAC
     return {
         "n_components": len(comps),
         "size_ratio": round(float(size_ratio), 4),
@@ -510,7 +515,12 @@ def _compound_stats(comps: list[WaterComponent]) -> dict[str, Any] | None:
         "touch_or_overlap": bool(touch),
         "dominant_shape_class": primary.shape_class,
         "secondary_shape_class": secondary.shape_class,
-        "separable": bool((not touch) and 0.04 <= size_ratio <= 0.85 and sep >= 0.08),
+        "separable": bool(
+            (not touch)
+            and large_enough
+            and 0.04 <= size_ratio <= 0.85
+            and sep >= 0.08
+        ),
     }
 
 
@@ -590,14 +600,23 @@ def observe_listing_frame(
         house = _roof_centroid(bgr, union)
 
     pool_detected = bool(comps)
-    overview_ok = viewpoint in SHAPE_VIEWPOINTS and pool_detected and (dominant.quality if dominant else 0) >= 0.35
+    overview_ok = (
+        viewpoint in SHAPE_VIEWPOINTS
+        and pool_detected
+        and dominant is not None
+        and dominant.quality >= 0.35
+        and dominant.relative_area >= MIN_OVERVIEW_AREA_FRAC
+        and dominant.grass_adjacency >= 0.04
+    )
     spatial_ok = (
         viewpoint in SPATIAL_VIEWPOINTS
         and pool_detected
         and house is not None
         and dominant is not None
         and dominant.relative_area <= 0.22
+        and dominant.relative_area >= MIN_OVERVIEW_AREA_FRAC
         and dominant.quality >= 0.35
+        and dominant.grass_adjacency >= 0.04
     )
     scale_ok = (
         viewpoint in SCALE_VIEWPOINTS

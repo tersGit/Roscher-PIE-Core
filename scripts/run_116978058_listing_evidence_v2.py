@@ -94,7 +94,8 @@ def cleaner_than_pr7(best: dict | None, smear: dict) -> dict:
         return {"passed": False, "reason": "no_overview_contour"}
     compact = float(best.get("compactness") or 0)
     circularity = float(best.get("circularity") or 0)
-    indents = int(best.get("n_major_indents") or 99)
+    indents_raw = best.get("n_major_indents")
+    indents = 99 if indents_raw is None else int(indents_raw)
     solidity = float(best.get("solidity") or 0)
     smear_c = float(smear.get("compactness") or 0.15)
     smear_circ = float(smear.get("circularity") or 0.26)
@@ -398,7 +399,7 @@ def main() -> None:
         "eval_stand_note": "Stand 365 is evaluation-only and was not an input to extraction.",
     }
     (OUT / "latest.json").write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
-    write_report(payload, OUT / "report.md")
+    write_report(payload, OUT / "gate_summary.md")
     print("gate", json.dumps(gate["checks"], indent=2))
     print("passed", gate["passed"])
     print("wrote", OUT)

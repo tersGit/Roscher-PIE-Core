@@ -98,6 +98,14 @@ def test_two_separate_water_components_are_retained():
     assert sep >= 0.08
 
 
+def test_tiny_edge_cyan_scrap_is_not_a_pool_component():
+    image = Image.new("RGB", (240, 180), (46, 150, 62))
+    draw = ImageDraw.Draw(image)
+    draw.ellipse([2, 150, 28, 178], fill=(40, 160, 200))
+    comps = extract_water_components(_png(image))
+    assert all(c.relative_area >= 0.006 for c in comps)
+
+
 def test_low_compactness_contour_is_rejected_or_downweighted():
     comps = extract_water_components(_smear_blob())
     for comp in comps:
@@ -145,6 +153,19 @@ def test_channels_are_not_collapsed_into_one_geometry():
     assert "shape" in channels and "spatial" in channels and "scale" in channels and "aerial" in channels
     assert interior.spatial_eligible is False
     assert channels["scale"]["nadir_compatible"] is False or channels["scale"]["source_ids"] == []
+
+
+def test_covered_space_with_interior_clip_second_is_interior():
+    scores = {k: 0.05 for k in (
+        "aerial_near_nadir", "elevated_exterior", "ground_level_exterior",
+        "pool_overview", "pool_closeup", "interior", "garden_only", "unusable_ambiguous",
+    )}
+    scores["ground_level_exterior"] = 0.46
+    scores["interior"] = 0.38
+    dummy = np.zeros((80, 100, 3), dtype=np.uint8)
+    dummy[:] = (190, 185, 175)
+    label, _ = classify_viewpoint(dummy, clip_scores=scores, grass_frac=0.01)
+    assert label == "interior"
 
 
 def test_viewpoint_interior_from_clip_scores_without_image_id():
