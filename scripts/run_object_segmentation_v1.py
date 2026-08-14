@@ -41,13 +41,20 @@ CROP_DIR = Path("data/visual_index") / DATASET / "_imagery_cache_native15"
 OUT_ROOT = Path("data/investigations/object_segmentation_v1/carlswald_north")
 
 
+def _safe_stand(stand: str) -> str:
+    return str(stand).replace("/", "_")
+
+
 def _load_parcels_last_wins() -> dict[str, dict]:
-    """Match crop overwrite order: later GIS parcels win for duplicate stands."""
+    """Match crop overwrite order: later GIS parcels win for duplicate stands.
+
+    Crop filenames replace '/' with '_', so index by the safe name.
+    """
     gis = json.loads(GIS_PATH.read_text(encoding="utf-8"))
-    by_stand: dict[str, dict] = {}
+    by_safe: dict[str, dict] = {}
     for p in gis["parcels"]:
-        by_stand[str(p["stand_number"])] = p
-    return by_stand
+        by_safe[_safe_stand(p["stand_number"])] = p
+    return by_safe
 
 
 def _old_extractors(image_bytes: bytes, parcel_mask: np.ndarray) -> dict:
@@ -201,7 +208,9 @@ def _process_one(stand: str, parcel: dict, crop_path: Path, out_dir: Path, write
     geom = parcel["geometry"]
     h, w = crop.shape[:2]
     t0 = time.perf_counter()
-    objects = segment_parcel_bgr(crop, stand_number=stand, geometry=geom)
+    objects = segment_parcel_bgr(
+        crop, stand_number=str(parcel.get("stand_number") or stand), geometry=geom
+    )
     elapsed = time.perf_counter() - t0
     pmask = parcel_mask_from_geometry((w, h), geom)
     old = _old_extractors(crop_path.read_bytes(), pmask)
@@ -244,7 +253,9 @@ def main() -> int:
     stands = DIAGNOSTIC_STANDS
     write_panel = True
     if args.estate_wide:
-        stands = sorted({p.stem.split("_")[0] for p in CROP_DIR.glob("*_ags_aerial.jpg")})
+        stands = sorted(
+            {p.name.replace("_ags_aerial.jpg", "") for p in CROP_DIR.glob("*_ags_aerial.jpg")}
+        )
         write_panel = False
 
     print(f"{SEGMENTATION_VERSION} n={len(stands)} crops={CROP_DIR} panels={write_panel}", flush=True)
