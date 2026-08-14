@@ -218,5 +218,6 @@ __marimo__/
 data/cache/
 data/visual_index/
 data/investigations/**/photos/
+mobileclip_blt.ts
 *.pyc
 
