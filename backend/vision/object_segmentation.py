@@ -357,8 +357,10 @@ def select_pool(
         area_m2 = float(geom.get("area_m2") or 0)
         compact = float(geom.get("compactness") or 0)
         rectangularity = float(geom.get("rectangularity") or 0)
+        if clip["shadow"] >= 0.40 and clip["pool"] < clip["shadow"]:
+            continue
         typical = 1.0 if 10.0 <= area_m2 <= 80.0 else (0.35 if area_m2 <= 110.0 else 0.05)
-        water_shape = water >= 0.55 and compact >= 0.32 and rectangularity >= 0.50
+        water_shape = water >= 0.55 and compact >= 0.28 and rectangularity >= 0.50
         if clip["pool"] < 0.18 and not water_shape:
             continue
         if clip["roof"] > clip["pool"] and water < 0.25:
@@ -397,7 +399,7 @@ def select_pool(
         for item in ranked
         if (item[2]["pool"] >= 0.45 and item[3]["gap"] >= 0.05)
         or item[3]["water_shape"]
-        or (item[3]["water"] >= 0.45 and item[2]["pool"] >= 0.28)
+        or (item[3]["water"] >= 0.45 and item[2]["pool"] >= 0.40)
     ]
     if not keep:
         best = ranked[0]
