@@ -99,7 +99,7 @@ def load_parcels_last_wins() -> list[dict]:
 
 
 def acquire_photos() -> tuple[list[tuple[str, bytes]], object]:
-    listing = fetch_listing(LISTING_URL)
+    listing = fetch_listing(LISTING_URL, LISTING_ID)
     PHOTOS.mkdir(parents=True, exist_ok=True)
     existing = {p.name: p for p in PHOTOS.glob(f"{LISTING_ID}-*.jpg")}
     if len(existing) >= len(listing.image_urls):
