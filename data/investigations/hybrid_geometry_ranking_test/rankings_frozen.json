@@ -1,0 +1,10 @@
+{
+  "rankings_frozen_at_unix": 1786715976.4407487,
+  "files": [
+    "data/investigations/hybrid_geometry_ranking_test/116978058/rankings.json",
+    "data/investigations/hybrid_geometry_ranking_test/116978058/all_candidates.json",
+    "data/investigations/hybrid_geometry_ranking_test/116273255/rankings.json",
+    "data/investigations/hybrid_geometry_ranking_test/116273255/all_candidates.json"
+  ],
+  "ground_truth_applied": false
+}

@@ -1,0 +1,1578 @@
+{
+  "experiment": "hybrid_geometry_ranking_test",
+  "production_ranking_modified": false,
+  "hybrid_v1_modified": false,
+  "scoring_v2_weights_modified": false,
+  "os_v1_modified": false,
+  "native15_modified": false,
+  "colour_used_in_hybrid_score": false,
+  "n_candidates": 330,
+  "runtime_s": 20.74,
+  "listing_116978058": {
+    "ground_truth_known": true,
+    "ground_truth": {
+      "stand": "365",
+      "basis": "Independent visual match of listing rear pool vs native15, frozen since PR #5. Not used in ranking."
+    },
+    "variants": {
+      "baseline": {
+        "rank": 17,
+        "score": 0.6659,
+        "top1_stand": "611",
+        "top1_score": 0.7813,
+        "diff_from_top1": -0.1154,
+        "in_top20": true,
+        "confidence": {
+          "level": "low",
+          "low_confidence": true,
+          "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+          "top1_to_top2_gap": 0.0334,
+          "top1_to_top10_gap": 0.0994,
+          "final_candidate_limit": 10
+        },
+        "margin_1_2": 0.0334
+      },
+      "pr5_neutral": {
+        "rank": 2,
+        "score": 0.7814,
+        "top1_stand": "404",
+        "top1_score": 0.782,
+        "diff_from_top1": -0.0006,
+        "in_top20": true,
+        "confidence": {
+          "level": "low",
+          "low_confidence": true,
+          "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+          "top1_to_top2_gap": 0.0006,
+          "top1_to_top10_gap": 0.0567,
+          "final_candidate_limit": 10
+        },
+        "margin_1_2": 0.0006
+      },
+      "pr6_previous": {
+        "rank": 3,
+        "score": 0.7575,
+        "top1_stand": "583",
+        "top1_score": 0.7641,
+        "diff_from_top1": -0.0066,
+        "in_top20": true,
+        "confidence": {
+          "level": "low",
+          "low_confidence": true,
+          "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+          "top1_to_top2_gap": 0.0051,
+          "top1_to_top10_gap": 0.0414,
+          "final_candidate_limit": 10
+        },
+        "margin_1_2": 0.0051
+      },
+      "hybrid_v2": {
+        "rank": 4,
+        "score": 0.7044,
+        "top1_stand": "351",
+        "top1_score": 0.7346,
+        "diff_from_top1": -0.0302,
+        "in_top20": true,
+        "confidence": {
+          "level": "low",
+          "low_confidence": true,
+          "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+          "top1_to_top2_gap": 0.0275,
+          "top1_to_top10_gap": 0.0413,
+          "final_candidate_limit": 10
+        },
+        "margin_1_2": 0.0275
+      }
+    },
+    "hybrid_shape_v2": 0.7769,
+    "hybrid_spatial_v2": null,
+    "pr6_shape_v2": 0.7301,
+    "pr6_spatial_v2": 0.8182,
+    "pr7_multi_image_rank": 9,
+    "pr7_multi_image_score": 0.6702,
+    "nearest_highconf_competitors": [
+      {
+        "stand_number": "351",
+        "hybrid_rank": 1,
+        "hybrid_score": 0.7346,
+        "shape_v2": 0.8223,
+        "spatial_v2": null,
+        "os_pool_status": "CONFIRMED"
+      },
+      {
+        "stand_number": "463",
+        "hybrid_rank": 2,
+        "hybrid_score": 0.7071,
+        "shape_v2": 0.789,
+        "spatial_v2": null,
+        "os_pool_status": "CONFIRMED"
+      },
+      {
+        "stand_number": "380",
+        "hybrid_rank": 3,
+        "hybrid_score": 0.7069,
+        "shape_v2": 0.8007,
+        "spatial_v2": null,
+        "os_pool_status": "CONFIRMED"
+      },
+      {
+        "stand_number": "461",
+        "hybrid_rank": 5,
+        "hybrid_score": 0.7031,
+        "shape_v2": 0.7747,
+        "spatial_v2": null,
+        "os_pool_status": "CONFIRMED"
+      },
+      {
+        "stand_number": "468",
+        "hybrid_rank": 6,
+        "hybrid_score": 0.6999,
+        "shape_v2": 0.7697,
+        "spatial_v2": null,
+        "os_pool_status": "CONFIRMED"
+      }
+    ],
+    "diagnostic_secondary_rank": 14,
+    "diagnostic_secondary_score": 0.6894
+  },
+  "listing_116273255": {
+    "ground_truth_known": false,
+    "ground_truth": null,
+    "note": "No independent ground-truth stand is available. Shortlist quality only; definitive rank accuracy cannot be measured.",
+    "hybrid_top5": [
+      {
+        "rank": 1,
+        "stand_number": "1/334",
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 520.0,
+        "score": 0.7096,
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": true,
+        "blob_pool_present": true,
+        "coverage": 0.6667,
+        "contrib": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2908,
+          "spatial_v2": 0.11,
+          "aerial": 0.06,
+          "exterior": 0.03,
+          "gis": 0.015,
+          "stand_size": 0.0638
+        },
+        "shape_v2": 0.8078,
+        "spatial_v2": null,
+        "shape_parts": {
+          "elongation": 0.8624191535232044,
+          "solidity": 0.9771111111111112,
+          "circularity": 0.8794545454545454,
+          "n_corners": 1.0,
+          "n_indents": 0.75,
+          "max_indent": 0.8202,
+          "sharp_frac": 0.514,
+          "radial_cv": 0.809,
+          "hu": 0.7587369457677796,
+          "chamfer": 0.6544770425747116
+        },
+        "baseline_rank": 158,
+        "pr5_neutral_rank": 43,
+        "pr6_previous_rank": 1,
+        "aerial_similarity": null,
+        "exterior_similarity": null
+      },
+      {
+        "rank": 2,
+        "stand_number": "1/373",
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 500.0,
+        "score": 0.7016,
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "blob_pool_present": true,
+        "coverage": 0.6667,
+        "contrib": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2766,
+          "spatial_v2": 0.11,
+          "aerial": 0.06,
+          "exterior": 0.03,
+          "gis": 0.015,
+          "stand_size": 0.07
+        },
+        "shape_v2": 0.7683,
+        "spatial_v2": null,
+        "shape_parts": {
+          "elongation": 0.8347477139661864,
+          "solidity": 0.9573333333333334,
+          "circularity": 0.9738181818181819,
+          "n_corners": 0.75,
+          "n_indents": 0.75,
+          "max_indent": 0.8118,
+          "sharp_frac": 0.23622222222222222,
+          "radial_cv": 0.81725,
+          "hu": 0.6289877827881353,
+          "chamfer": 0.7291035363720866
+        },
+        "baseline_rank": 8,
+        "pr5_neutral_rank": 1,
+        "pr6_previous_rank": 6,
+        "aerial_similarity": null,
+        "exterior_similarity": null
+      },
+      {
+        "rank": 3,
+        "stand_number": "1/691",
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 552.0,
+        "score": 0.6767,
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "blob_pool_present": true,
+        "coverage": 0.6667,
+        "contrib": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2678,
+          "spatial_v2": 0.11,
+          "aerial": 0.06,
+          "exterior": 0.03,
+          "gis": 0.015,
+          "stand_size": 0.0538
+        },
+        "shape_v2": 0.744,
+        "spatial_v2": null,
+        "shape_parts": {
+          "elongation": 0.6818630353266232,
+          "solidity": 0.7646666666666667,
+          "circularity": 0.8556363636363636,
+          "n_corners": 0.625,
+          "n_indents": 1.0,
+          "max_indent": 0.599,
+          "sharp_frac": 0.09733333333333338,
+          "radial_cv": 0.8925000000000001,
+          "hu": 0.9126765935128354,
+          "chamfer": 0.7223180870576893
+        },
+        "baseline_rank": 135,
+        "pr5_neutral_rank": 46,
+        "pr6_previous_rank": 33,
+        "aerial_similarity": null,
+        "exterior_similarity": null
+      },
+      {
+        "rank": 4,
+        "stand_number": "1/389",
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 514.0,
+        "score": 0.664,
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": true,
+        "blob_pool_present": true,
+        "coverage": 0.6667,
+        "contrib": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2434,
+          "spatial_v2": 0.11,
+          "aerial": 0.06,
+          "exterior": 0.03,
+          "gis": 0.015,
+          "stand_size": 0.0656
+        },
+        "shape_v2": 0.676,
+        "spatial_v2": null,
+        "shape_parts": {
+          "elongation": 0.872667776565819,
+          "solidity": 0.4655555555555555,
+          "circularity": 0.4410909090909091,
+          "n_corners": 0.75,
+          "n_indents": 0.5,
+          "max_indent": 0.6676,
+          "sharp_frac": 0.5835555555555556,
+          "radial_cv": 0.9219999999999999,
+          "hu": 0.6391980130310189,
+          "chamfer": 0.6876730830487926
+        },
+        "baseline_rank": 120,
+        "pr5_neutral_rank": 27,
+        "pr6_previous_rank": 2,
+        "aerial_similarity": null,
+        "exterior_similarity": null
+      },
+      {
+        "rank": 5,
+        "stand_number": "1/450",
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 529.0,
+        "score": 0.661,
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": true,
+        "blob_pool_present": true,
+        "coverage": 0.6667,
+        "contrib": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.245,
+          "spatial_v2": 0.11,
+          "aerial": 0.06,
+          "exterior": 0.03,
+          "gis": 0.015,
+          "stand_size": 0.061
+        },
+        "shape_v2": 0.6805,
+        "spatial_v2": null,
+        "shape_parts": {
+          "elongation": 0.6595080046856697,
+          "solidity": 0.925111111111111,
+          "circularity": 0.8967272727272728,
+          "n_corners": 0.75,
+          "n_indents": 1.0,
+          "max_indent": 0.8896,
+          "sharp_frac": 0.4444444444444444,
+          "radial_cv": 0.8694999999999999,
+          "hu": 0.23890289007789448,
+          "chamfer": 0.6553580158231027
+        },
+        "baseline_rank": 166,
+        "pr5_neutral_rank": 26,
+        "pr6_previous_rank": 3,
+        "aerial_similarity": null,
+        "exterior_similarity": null
+      }
+    ],
+    "hybrid_confidence": {
+      "level": "low",
+      "low_confidence": true,
+      "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+      "top1_to_top2_gap": 0.008,
+      "top1_to_top10_gap": 0.0558,
+      "final_candidate_limit": 10
+    },
+    "baseline_top5": [
+      {
+        "rank": 1,
+        "stand_number": "1/402",
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 500.0,
+        "score": 0.8372,
+        "os_pool_status": "REJECTED",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": false,
+        "blob_pool_present": true,
+        "coverage": null,
+        "contrib": null,
+        "shape_v2": null,
+        "spatial_v2": null,
+        "shape_parts": null,
+        "baseline_rank": 1,
+        "pr5_neutral_rank": 53,
+        "pr6_previous_rank": 85,
+        "aerial_similarity": null,
+        "exterior_similarity": 0.7099
+      },
+      {
+        "rank": 2,
+        "stand_number": "1/483",
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 500.0,
+        "score": 0.7866,
+        "os_pool_status": "REJECTED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": false,
+        "blob_pool_present": true,
+        "coverage": null,
+        "contrib": null,
+        "shape_v2": null,
+        "spatial_v2": null,
+        "shape_parts": null,
+        "baseline_rank": 2,
+        "pr5_neutral_rank": 61,
+        "pr6_previous_rank": 102,
+        "aerial_similarity": null,
+        "exterior_similarity": null
+      },
+      {
+        "rank": 3,
+        "stand_number": "1/481",
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 500.0,
+        "score": 0.7711,
+        "os_pool_status": "REJECTED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": false,
+        "blob_pool_present": true,
+        "coverage": null,
+        "contrib": null,
+        "shape_v2": null,
+        "spatial_v2": null,
+        "shape_parts": null,
+        "baseline_rank": 3,
+        "pr5_neutral_rank": 90,
+        "pr6_previous_rank": 101,
+        "aerial_similarity": null,
+        "exterior_similarity": null
+      },
+      {
+        "rank": 4,
+        "stand_number": "1/371",
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 503.0,
+        "score": 0.762,
+        "os_pool_status": "REJECTED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": false,
+        "blob_pool_present": true,
+        "coverage": null,
+        "contrib": null,
+        "shape_v2": null,
+        "spatial_v2": null,
+        "shape_parts": null,
+        "baseline_rank": 4,
+        "pr5_neutral_rank": 69,
+        "pr6_previous_rank": 83,
+        "aerial_similarity": null,
+        "exterior_similarity": 0.7535
+      },
+      {
+        "rank": 5,
+        "stand_number": "1/520",
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 598.0,
+        "score": 0.737,
+        "os_pool_status": "UNKNOWN",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": false,
+        "blob_pool_present": true,
+        "coverage": null,
+        "contrib": null,
+        "shape_v2": null,
+        "spatial_v2": null,
+        "shape_parts": null,
+        "baseline_rank": 5,
+        "pr5_neutral_rank": 82,
+        "pr6_previous_rank": 124,
+        "aerial_similarity": null,
+        "exterior_similarity": 0.7014
+      }
+    ],
+    "os_status_hybrid_top20": {
+      "PROBABLE": 6,
+      "CONFIRMED": 14
+    },
+    "diagnostic_frames": {
+      "diagnostic_frame_008": {
+        "top1": {
+          "stand": "1/484",
+          "score": 0.6778
+        },
+        "margin_1_2": 0.0142,
+        "confidence": {
+          "level": "low",
+          "low_confidence": true,
+          "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+          "top1_to_top2_gap": 0.0142,
+          "top1_to_top10_gap": 0.0414,
+          "final_candidate_limit": 10
+        },
+        "top5": [
+          {
+            "rank": 1,
+            "stand_number": "1/484",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 500.0,
+            "score": 0.6778,
+            "os_pool_status": "CONFIRMED",
+            "os_building_status": "PROBABLE",
+            "os_driveway_status": "PROBABLE",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2528,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.07
+            },
+            "shape_v2": 0.7021,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.7585669142692987,
+              "solidity": 0.7617777777777779,
+              "circularity": 0.7176363636363636,
+              "n_corners": 0.625,
+              "n_indents": 0.25,
+              "max_indent": 0.9974000000000001,
+              "sharp_frac": 0.5137777777777778,
+              "radial_cv": 0.867,
+              "hu": 0.6955051573346601,
+              "chamfer": 0.7186424084890549
+            },
+            "baseline_rank": 159,
+            "pr5_neutral_rank": 16,
+            "pr6_previous_rank": 27,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 2,
+            "stand_number": "1/417",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 524.0,
+            "score": 0.6636,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "CONFIRMED",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.246,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.0625
+            },
+            "shape_v2": 0.6834,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.9306420196310583,
+              "solidity": 0.6306666666666667,
+              "circularity": 0.6938181818181819,
+              "n_corners": 1.0,
+              "n_indents": 0.75,
+              "max_indent": 0.16600000000000004,
+              "sharp_frac": 0.8611111111111112,
+              "radial_cv": 0.7555000000000001,
+              "hu": 0.35048350506372095,
+              "chamfer": 0.725394175598376
+            },
+            "baseline_rank": 123,
+            "pr5_neutral_rank": 34,
+            "pr6_previous_rank": 11,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 3,
+            "stand_number": "1/450",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 529.0,
+            "score": 0.6632,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "CONFIRMED",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2472,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.061
+            },
+            "shape_v2": 0.6868,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.9459104526613863,
+              "solidity": 0.7506666666666668,
+              "circularity": 0.7009090909090909,
+              "n_corners": 0.875,
+              "n_indents": 1.0,
+              "max_indent": 0.28880000000000006,
+              "sharp_frac": 0.7915555555555556,
+              "radial_cv": 0.7090000000000001,
+              "hu": 0.18620479379165403,
+              "chamfer": 0.709682480931226
+            },
+            "baseline_rank": 166,
+            "pr5_neutral_rank": 26,
+            "pr6_previous_rank": 3,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 4,
+            "stand_number": "1/389",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 514.0,
+            "score": 0.6616,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "PROBABLE",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2409,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.0656
+            },
+            "shape_v2": 0.6693,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.7148602618295236,
+              "solidity": 0.7897777777777777,
+              "circularity": 0.8434545454545455,
+              "n_corners": 0.875,
+              "n_indents": 0.5,
+              "max_indent": 0.7316,
+              "sharp_frac": 0.9306666666666666,
+              "radial_cv": 0.6565,
+              "hu": 0.37060234265600145,
+              "chamfer": 0.67771873105375
+            },
+            "baseline_rank": 120,
+            "pr5_neutral_rank": 27,
+            "pr6_previous_rank": 2,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 5,
+            "stand_number": "1/343",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 565.0,
+            "score": 0.6575,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "CONFIRMED",
+            "os_driveway_status": "PROBABLE",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2528,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.0498
+            },
+            "shape_v2": 0.7021,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.9033939344195017,
+              "solidity": 0.7455555555555555,
+              "circularity": 0.6874545454545455,
+              "n_corners": 1.0,
+              "n_indents": 1.0,
+              "max_indent": 0.2932,
+              "sharp_frac": 1.0,
+              "radial_cv": 0.82125,
+              "hu": 0.23019920930262783,
+              "chamfer": 0.7094823296840672
+            },
+            "baseline_rank": 119,
+            "pr5_neutral_rank": 10,
+            "pr6_previous_rank": 25,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          }
+        ]
+      },
+      "diagnostic_frame_037": {
+        "top1": {
+          "stand": "1/334",
+          "score": 0.7046
+        },
+        "margin_1_2": 0.0113,
+        "confidence": {
+          "level": "low",
+          "low_confidence": true,
+          "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+          "top1_to_top2_gap": 0.0113,
+          "top1_to_top10_gap": 0.0601,
+          "final_candidate_limit": 10
+        },
+        "top5": [
+          {
+            "rank": 1,
+            "stand_number": "1/334",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 520.0,
+            "score": 0.7046,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "PROBABLE",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2858,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.0638
+            },
+            "shape_v2": 0.794,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.8932826506297515,
+              "solidity": 0.920888888888889,
+              "circularity": 0.9509090909090909,
+              "n_corners": 0.875,
+              "n_indents": 1.0,
+              "max_indent": 0.9242,
+              "sharp_frac": 0.514,
+              "radial_cv": 0.7095,
+              "hu": 0.5772160513079204,
+              "chamfer": 0.6220938601539628
+            },
+            "baseline_rank": 158,
+            "pr5_neutral_rank": 43,
+            "pr6_previous_rank": 1,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 2,
+            "stand_number": "1/373",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 500.0,
+            "score": 0.6933,
+            "os_pool_status": "CONFIRMED",
+            "os_building_status": "CONFIRMED",
+            "os_driveway_status": "PROBABLE",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2683,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.07
+            },
+            "shape_v2": 0.7452,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.8059066370276278,
+              "solidity": 0.8553333333333335,
+              "circularity": 0.9023636363636365,
+              "n_corners": 0.875,
+              "n_indents": 1.0,
+              "max_indent": 0.9326,
+              "sharp_frac": 0.23622222222222222,
+              "radial_cv": 0.71775,
+              "hu": 0.47087135022737725,
+              "chamfer": 0.6435233353955886
+            },
+            "baseline_rank": 8,
+            "pr5_neutral_rank": 1,
+            "pr6_previous_rank": 6,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 3,
+            "stand_number": "1/417",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 524.0,
+            "score": 0.6887,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "CONFIRMED",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2712,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.0625
+            },
+            "shape_v2": 0.7533,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.6013443837604553,
+              "solidity": 0.9431111111111112,
+              "circularity": 0.9752727272727272,
+              "n_corners": 0.75,
+              "n_indents": 1.0,
+              "max_indent": 0.9776,
+              "sharp_frac": 0.7917777777777778,
+              "radial_cv": 0.9224999999999999,
+              "hu": 0.5529205670752386,
+              "chamfer": 0.7170004812983735
+            },
+            "baseline_rank": 123,
+            "pr5_neutral_rank": 34,
+            "pr6_previous_rank": 11,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 4,
+            "stand_number": "1/450",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 529.0,
+            "score": 0.6619,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "CONFIRMED",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2459,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.061
+            },
+            "shape_v2": 0.6831,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.6831098963078659,
+              "solidity": 0.8231111111111111,
+              "circularity": 0.9681818181818183,
+              "n_corners": 0.875,
+              "n_indents": 0.75,
+              "max_indent": 0.8548,
+              "sharp_frac": 0.4444444444444444,
+              "radial_cv": 0.969,
+              "hu": 0.2348146708193021,
+              "chamfer": 0.7411851597870596
+            },
+            "baseline_rank": 166,
+            "pr5_neutral_rank": 26,
+            "pr6_previous_rank": 3,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 5,
+            "stand_number": "1/389",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 514.0,
+            "score": 0.6587,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "PROBABLE",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2381,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.0656
+            },
+            "shape_v2": 0.6614,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.9038980423675297,
+              "solidity": 0.36355555555555563,
+              "circularity": 0.5125454545454546,
+              "n_corners": 0.875,
+              "n_indents": 0.25,
+              "max_indent": 0.41200000000000003,
+              "sharp_frac": 0.5835555555555556,
+              "radial_cv": 0.9785,
+              "hu": 0.702355385795317,
+              "chamfer": 0.7120578324385327
+            },
+            "baseline_rank": 120,
+            "pr5_neutral_rank": 27,
+            "pr6_previous_rank": 2,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          }
+        ]
+      },
+      "diagnostic_frame_038": {
+        "top1": {
+          "stand": "1/334",
+          "score": 0.7096
+        },
+        "margin_1_2": 0.008,
+        "confidence": {
+          "level": "low",
+          "low_confidence": true,
+          "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+          "top1_to_top2_gap": 0.008,
+          "top1_to_top10_gap": 0.0558,
+          "final_candidate_limit": 10
+        },
+        "top5": [
+          {
+            "rank": 1,
+            "stand_number": "1/334",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 520.0,
+            "score": 0.7096,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "PROBABLE",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2908,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.0638
+            },
+            "shape_v2": 0.8078,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.8624191535232044,
+              "solidity": 0.9771111111111112,
+              "circularity": 0.8794545454545454,
+              "n_corners": 1.0,
+              "n_indents": 0.75,
+              "max_indent": 0.8202,
+              "sharp_frac": 0.514,
+              "radial_cv": 0.809,
+              "hu": 0.7587369457677796,
+              "chamfer": 0.6544770425747116
+            },
+            "baseline_rank": 158,
+            "pr5_neutral_rank": 43,
+            "pr6_previous_rank": 1,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 2,
+            "stand_number": "1/373",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 500.0,
+            "score": 0.7016,
+            "os_pool_status": "CONFIRMED",
+            "os_building_status": "CONFIRMED",
+            "os_driveway_status": "PROBABLE",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2766,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.07
+            },
+            "shape_v2": 0.7683,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.8347477139661864,
+              "solidity": 0.9573333333333334,
+              "circularity": 0.9738181818181819,
+              "n_corners": 0.75,
+              "n_indents": 0.75,
+              "max_indent": 0.8118,
+              "sharp_frac": 0.23622222222222222,
+              "radial_cv": 0.81725,
+              "hu": 0.6289877827881353,
+              "chamfer": 0.7291035363720866
+            },
+            "baseline_rank": 8,
+            "pr5_neutral_rank": 1,
+            "pr6_previous_rank": 6,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 3,
+            "stand_number": "1/691",
+            "township": "SUMMERSET EXT.13",
+            "area_sqm": 552.0,
+            "score": 0.6767,
+            "os_pool_status": "CONFIRMED",
+            "os_building_status": "PROBABLE",
+            "os_driveway_status": "PROBABLE",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2678,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.0538
+            },
+            "shape_v2": 0.744,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.6818630353266232,
+              "solidity": 0.7646666666666667,
+              "circularity": 0.8556363636363636,
+              "n_corners": 0.625,
+              "n_indents": 1.0,
+              "max_indent": 0.599,
+              "sharp_frac": 0.09733333333333338,
+              "radial_cv": 0.8925000000000001,
+              "hu": 0.9126765935128354,
+              "chamfer": 0.7223180870576893
+            },
+            "baseline_rank": 135,
+            "pr5_neutral_rank": 46,
+            "pr6_previous_rank": 33,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 4,
+            "stand_number": "1/389",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 514.0,
+            "score": 0.664,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "PROBABLE",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.2434,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.0656
+            },
+            "shape_v2": 0.676,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.872667776565819,
+              "solidity": 0.4655555555555555,
+              "circularity": 0.4410909090909091,
+              "n_corners": 0.75,
+              "n_indents": 0.5,
+              "max_indent": 0.6676,
+              "sharp_frac": 0.5835555555555556,
+              "radial_cv": 0.9219999999999999,
+              "hu": 0.6391980130310189,
+              "chamfer": 0.6876730830487926
+            },
+            "baseline_rank": 120,
+            "pr5_neutral_rank": 27,
+            "pr6_previous_rank": 2,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          },
+          {
+            "rank": 5,
+            "stand_number": "1/450",
+            "township": "SUMMERSET EXT.6",
+            "area_sqm": 529.0,
+            "score": 0.661,
+            "os_pool_status": "PROBABLE",
+            "os_building_status": "CONFIRMED",
+            "os_driveway_status": "UNKNOWN",
+            "os_high_conf_pool": true,
+            "blob_pool_present": true,
+            "coverage": 0.6667,
+            "contrib": {
+              "pool_presence": 0.14,
+              "shape_v2": 0.245,
+              "spatial_v2": 0.11,
+              "aerial": 0.06,
+              "exterior": 0.03,
+              "gis": 0.015,
+              "stand_size": 0.061
+            },
+            "shape_v2": 0.6805,
+            "spatial_v2": null,
+            "shape_parts": {
+              "elongation": 0.6595080046856697,
+              "solidity": 0.925111111111111,
+              "circularity": 0.8967272727272728,
+              "n_corners": 0.75,
+              "n_indents": 1.0,
+              "max_indent": 0.8896,
+              "sharp_frac": 0.4444444444444444,
+              "radial_cv": 0.8694999999999999,
+              "hu": 0.23890289007789448,
+              "chamfer": 0.6553580158231027
+            },
+            "baseline_rank": 166,
+            "pr5_neutral_rank": 26,
+            "pr6_previous_rank": 3,
+            "aerial_similarity": null,
+            "exterior_similarity": null
+          }
+        ]
+      }
+    }
+  },
+  "variants_116978058": {
+    "baseline": {
+      "top1": {
+        "stand": "611",
+        "score": 0.7813
+      },
+      "top2": {
+        "stand": "457",
+        "score": 0.7479
+      },
+      "margin_1_2": 0.0334,
+      "confidence": {
+        "level": "low",
+        "low_confidence": true,
+        "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+        "top1_to_top2_gap": 0.0334,
+        "top1_to_top10_gap": 0.0994,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand": "611",
+          "score": 0.7813,
+          "os": "REJECTED"
+        },
+        {
+          "rank": 2,
+          "stand": "457",
+          "score": 0.7479,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 3,
+          "stand": "585",
+          "score": 0.7261,
+          "os": "PROBABLE"
+        },
+        {
+          "rank": 4,
+          "stand": "587",
+          "score": 0.7063,
+          "os": "REJECTED"
+        },
+        {
+          "rank": 5,
+          "stand": "638",
+          "score": 0.698,
+          "os": "REJECTED"
+        }
+      ],
+      "n_rejected_or_unknown_top20": 13
+    },
+    "pr5_neutral": {
+      "top1": {
+        "stand": "404",
+        "score": 0.782
+      },
+      "top2": {
+        "stand": "365",
+        "score": 0.7814
+      },
+      "margin_1_2": 0.0006,
+      "confidence": {
+        "level": "low",
+        "low_confidence": true,
+        "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+        "top1_to_top2_gap": 0.0006,
+        "top1_to_top10_gap": 0.0567,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand": "404",
+          "score": 0.782,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 2,
+          "stand": "365",
+          "score": 0.7814,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 3,
+          "stand": "348",
+          "score": 0.765,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 4,
+          "stand": "623",
+          "score": 0.7538,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 5,
+          "stand": "582",
+          "score": 0.7536,
+          "os": "PROBABLE"
+        }
+      ],
+      "n_rejected_or_unknown_top20": 0
+    },
+    "pr6_previous": {
+      "top1": {
+        "stand": "583",
+        "score": 0.7641
+      },
+      "top2": {
+        "stand": "428",
+        "score": 0.759
+      },
+      "margin_1_2": 0.0051,
+      "confidence": {
+        "level": "low",
+        "low_confidence": true,
+        "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+        "top1_to_top2_gap": 0.0051,
+        "top1_to_top10_gap": 0.0414,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand": "583",
+          "score": 0.7641,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 2,
+          "stand": "428",
+          "score": 0.759,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 3,
+          "stand": "365",
+          "score": 0.7575,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 4,
+          "stand": "568",
+          "score": 0.7344,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 5,
+          "stand": "451",
+          "score": 0.7331,
+          "os": "CONFIRMED"
+        }
+      ],
+      "n_rejected_or_unknown_top20": 0
+    },
+    "hybrid_v2": {
+      "top1": {
+        "stand": "351",
+        "score": 0.7346
+      },
+      "top2": {
+        "stand": "463",
+        "score": 0.7071
+      },
+      "margin_1_2": 0.0275,
+      "confidence": {
+        "level": "low",
+        "low_confidence": true,
+        "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+        "top1_to_top2_gap": 0.0275,
+        "top1_to_top10_gap": 0.0413,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand": "351",
+          "score": 0.7346,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 2,
+          "stand": "463",
+          "score": 0.7071,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 3,
+          "stand": "380",
+          "score": 0.7069,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 4,
+          "stand": "365",
+          "score": 0.7044,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 5,
+          "stand": "461",
+          "score": 0.7031,
+          "os": "CONFIRMED"
+        }
+      ],
+      "n_rejected_or_unknown_top20": 0
+    }
+  },
+  "variants_116273255": {
+    "baseline": {
+      "top1": {
+        "stand": "1/402",
+        "score": 0.8372
+      },
+      "top2": {
+        "stand": "1/483",
+        "score": 0.7866
+      },
+      "margin_1_2": 0.0506,
+      "confidence": {
+        "level": "moderate",
+        "low_confidence": false,
+        "message": null,
+        "top1_to_top2_gap": 0.0506,
+        "top1_to_top10_gap": 0.1185,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand": "1/402",
+          "score": 0.8372,
+          "os": "REJECTED"
+        },
+        {
+          "rank": 2,
+          "stand": "1/483",
+          "score": 0.7866,
+          "os": "REJECTED"
+        },
+        {
+          "rank": 3,
+          "stand": "1/481",
+          "score": 0.7711,
+          "os": "REJECTED"
+        },
+        {
+          "rank": 4,
+          "stand": "1/371",
+          "score": 0.762,
+          "os": "REJECTED"
+        },
+        {
+          "rank": 5,
+          "stand": "1/520",
+          "score": 0.737,
+          "os": "UNKNOWN"
+        }
+      ],
+      "n_rejected_or_unknown_top20": 16
+    },
+    "pr5_neutral": {
+      "top1": {
+        "stand": "1/373",
+        "score": 0.7082
+      },
+      "top2": {
+        "stand": "446",
+        "score": 0.6697
+      },
+      "margin_1_2": 0.0385,
+      "confidence": {
+        "level": "low",
+        "low_confidence": true,
+        "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+        "top1_to_top2_gap": 0.0385,
+        "top1_to_top10_gap": 0.0666,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand": "1/373",
+          "score": 0.7082,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 2,
+          "stand": "446",
+          "score": 0.6697,
+          "os": "PROBABLE"
+        },
+        {
+          "rank": 3,
+          "stand": "623",
+          "score": 0.6683,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 4,
+          "stand": "470",
+          "score": 0.6657,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 5,
+          "stand": "401",
+          "score": 0.6613,
+          "os": "CONFIRMED"
+        }
+      ],
+      "n_rejected_or_unknown_top20": 0
+    },
+    "pr6_previous": {
+      "top1": {
+        "stand": "1/334",
+        "score": 0.7709
+      },
+      "top2": {
+        "stand": "1/389",
+        "score": 0.764
+      },
+      "margin_1_2": 0.0069,
+      "confidence": {
+        "level": "low",
+        "low_confidence": true,
+        "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+        "top1_to_top2_gap": 0.0069,
+        "top1_to_top10_gap": 0.1146,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand": "1/334",
+          "score": 0.7709,
+          "os": "PROBABLE"
+        },
+        {
+          "rank": 2,
+          "stand": "1/389",
+          "score": 0.764,
+          "os": "PROBABLE"
+        },
+        {
+          "rank": 3,
+          "stand": "1/450",
+          "score": 0.7445,
+          "os": "PROBABLE"
+        },
+        {
+          "rank": 4,
+          "stand": "365",
+          "score": 0.6767,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 5,
+          "stand": "582",
+          "score": 0.6744,
+          "os": "PROBABLE"
+        }
+      ],
+      "n_rejected_or_unknown_top20": 0
+    },
+    "hybrid_v2": {
+      "top1": {
+        "stand": "1/334",
+        "score": 0.7096
+      },
+      "top2": {
+        "stand": "1/373",
+        "score": 0.7016
+      },
+      "margin_1_2": 0.008,
+      "confidence": {
+        "level": "low",
+        "low_confidence": true,
+        "message": "LOW CONFIDENCE \u2014 candidates insufficiently separated.",
+        "top1_to_top2_gap": 0.008,
+        "top1_to_top10_gap": 0.0558,
+        "final_candidate_limit": 10
+      },
+      "top5": [
+        {
+          "rank": 1,
+          "stand": "1/334",
+          "score": 0.7096,
+          "os": "PROBABLE"
+        },
+        {
+          "rank": 2,
+          "stand": "1/373",
+          "score": 0.7016,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 3,
+          "stand": "1/691",
+          "score": 0.6767,
+          "os": "CONFIRMED"
+        },
+        {
+          "rank": 4,
+          "stand": "1/389",
+          "score": 0.664,
+          "os": "PROBABLE"
+        },
+        {
+          "rank": 5,
+          "stand": "1/450",
+          "score": 0.661,
+          "os": "PROBABLE"
+        }
+      ],
+      "n_rejected_or_unknown_top20": 0
+    }
+  },
+  "official": {
+    "verdict": "MIXED",
+    "A": "116978058 stand 365 baseline #17 \u2192 Hybrid #4 (PR5 #2, PR6 #3, PR7 #9)",
+    "B": "LOW CONFIDENCE; #1-#2 gap 0.0275; 365 is 0.030 below #1 (351)",
+    "C": "116273255 Top 5: 1/334, 1/373, 1/691, 1/389, 1/450 (no GT)",
+    "D": "LOW CONFIDENCE; gap 0.008",
+    "E": "038 concavity is in descriptors; 037 vs 038 diagnostics do not materially change Top 5",
+    "F": "Secondary spa as listing contour drops 365 to #14; official main-pool contour is better, still not PR6",
+    "G": "Yes. Hybrid Top 20 has 0 REJECTED/UNKNOWN on both listings (baseline 13 and 16)",
+    "H": "Missing spatial 0.5-fill; 500 m2 stand-size cluster; PCA elongated-pool neighbours; no colour",
+    "I": "MIXED",
+    "J": "Viewpoint-invariant comparison first (no listing spatial); Scoring v2 0.5-fill and stand-size second",
+    "K": "Recover viewpoint-compatible pool-house spatial from Hybrid frames; do not change weights; no production integration",
+    "production_ranking_modified": false,
+    "rerank_production": false
+  }
+}
