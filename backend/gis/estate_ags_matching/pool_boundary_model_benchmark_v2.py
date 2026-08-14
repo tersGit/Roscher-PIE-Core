@@ -71,6 +71,15 @@ def _resize_mask(mask: np.ndarray, width: int, height: int) -> np.ndarray:
     return cv2.resize(mask.astype(np.uint8), (width, height), interpolation=cv2.INTER_NEAREST).astype(bool)
 
 
+def _class_name(names, idx: int) -> str:
+    i = int(idx)
+    if isinstance(names, dict):
+        return str(names.get(i, i))
+    if isinstance(names, (list, tuple)) and 0 <= i < len(names):
+        return str(names[i])
+    return str(i)
+
+
 def _yoloe_masks(result, width: int, height: int) -> list[tuple[np.ndarray, float, str, list[float]]]:
     out = []
     if result.masks is None or result.boxes is None:
@@ -82,7 +91,7 @@ def _yoloe_masks(result, width: int, height: int) -> list[tuple[np.ndarray, floa
     xyxy = result.boxes.xyxy.cpu().numpy()
     for i, raw in enumerate(data):
         mask = _resize_mask(raw > 0.5, width, height)
-        label = names.get(int(clss[i]), str(int(clss[i])))
+        label = _class_name(names, clss[i])
         out.append((mask, float(confs[i]), str(label), [float(v) for v in xyxy[i]]))
     return out
 
@@ -206,7 +215,7 @@ def set_yoloe_classes(model, names: list[str]) -> None:
     _yoloe_class_key[key] = frozen
 
 
-def predict_yoloe(model, bgr: np.ndarray, names: list[str], conf: float = 0.15):
+def predict_yoloe(model, bgr: np.ndarray, names: list[str], conf: float = 0.08):
     set_yoloe_classes(model, names)
     rgb = bgr[:, :, ::-1]
     image = Image.fromarray(rgb)
