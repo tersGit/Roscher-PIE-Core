@@ -31,7 +31,9 @@ from backend.gis.estate_ags_matching.final_candidates import (
     freeze_final_candidates,
 )
 from backend.gis.estate_ags_matching.os_v1_experimental_rank import (
+    experimental_hybrid_neutral_score,
     experimental_hybrid_score,
+    experimental_pure_os_neutral_score,
     experimental_pure_os_score,
     is_high_conf,
     os_object_features,
@@ -224,6 +226,7 @@ def main() -> int:
         row["os_pool_status"] = (seg.get("pool") or {}).get("status")
         row["os_building_status"] = (seg.get("building") or {}).get("status")
         row["os_driveway_status"] = (seg.get("driveway") or {}).get("status")
+        row["os_high_conf_pool"] = is_high_conf(seg.get("pool"))
         feats = os_object_features(
             listing_pool,
             seg,
@@ -240,25 +243,47 @@ def main() -> int:
             exterior=row["exterior_similarity"],
             stand_size=row["size_score"],
         )
+        hybrid_n, hybrid_n_c = experimental_hybrid_neutral_score(
+            feats,
+            aerial=row["aerial_similarity"],
+            video=row["video_similarity"],
+            exterior=row["exterior_similarity"],
+            stand_size=row["size_score"],
+        )
         pure, pure_c = experimental_pure_os_score(feats)
+        pure_n, pure_n_c = experimental_pure_os_neutral_score(feats)
         row["hybrid_score"] = hybrid
         row["hybrid_contrib"] = hybrid_c
+        row["hybrid_neutral_score"] = hybrid_n
+        row["hybrid_neutral_contrib"] = hybrid_n_c
         row["pure_os_score"] = pure
         row["pure_os_contrib"] = pure_c
+        row["pure_os_neutral_score"] = pure_n
+        row["pure_os_neutral_contrib"] = pure_n_c
 
     baseline = _rank_rows(scored, "total_score")
     hybrid_sorted = sorted(scored, key=lambda r: (-float(r["hybrid_score"]), str(r["stand_number"])))
     pure_sorted = sorted(scored, key=lambda r: (-float(r["pure_os_score"]), str(r["stand_number"])))
+    hybrid_neutral_sorted = sorted(scored, key=lambda r: (-float(r["hybrid_neutral_score"]), str(r["stand_number"])))
+    pure_neutral_sorted = sorted(scored, key=lambda r: (-float(r["pure_os_neutral_score"]), str(r["stand_number"])))
+    high_conf_pool = [row for row in scored if row.get("os_high_conf_pool")]
+    high_conf_sorted = sorted(high_conf_pool, key=lambda r: (-float(r["pure_os_score"]), str(r["stand_number"])))
     for row in scored:
         row["baseline_rank"] = row["rank"]
     for index, row in enumerate(hybrid_sorted, start=1):
         row["hybrid_rank"] = index
     for index, row in enumerate(pure_sorted, start=1):
         row["pure_os_rank"] = index
+    for index, row in enumerate(hybrid_neutral_sorted, start=1):
+        row["hybrid_neutral_rank"] = index
+    for index, row in enumerate(pure_neutral_sorted, start=1):
+        row["pure_os_neutral_rank"] = index
+    for index, row in enumerate(high_conf_sorted, start=1):
+        row["high_conf_pool_rank"] = index
 
     def compact(row, score_key, rank_key):
         return {
-            "rank": row[rank_key],
+            "rank": row.get(rank_key),
             "stand_number": row["stand_number"],
             "township": row["township"],
             "area_sqm": row["area_sqm"],
@@ -267,26 +292,40 @@ def main() -> int:
             "os_pool_status": row["os_pool_status"],
             "os_building_status": row["os_building_status"],
             "os_driveway_status": row["os_driveway_status"],
+            "os_high_conf_pool": row.get("os_high_conf_pool"),
             "pool_geometry_similarity": row["pool_geometry_similarity"],
             "os_features": row["os_features"],
             "hybrid_contrib": row.get("hybrid_contrib"),
+            "hybrid_neutral_contrib": row.get("hybrid_neutral_contrib"),
             "contradiction": row["contradiction"],
             "aerial_similarity": row["aerial_similarity"],
             "exterior_similarity": row["exterior_similarity"],
             "baseline_rank": row["baseline_rank"],
             "hybrid_rank": row["hybrid_rank"],
+            "hybrid_neutral_rank": row.get("hybrid_neutral_rank"),
             "pure_os_rank": row["pure_os_rank"],
+            "pure_os_neutral_rank": row.get("pure_os_neutral_rank"),
+            "high_conf_pool_rank": row.get("high_conf_pool_rank"),
         }
 
     base_top20 = [compact(row, "total_score", "baseline_rank") for row in baseline[:20]]
     hybrid_top20 = [compact(row, "hybrid_score", "hybrid_rank") for row in hybrid_sorted[:20]]
     pure_top20 = [compact(row, "pure_os_score", "pure_os_rank") for row in pure_sorted[:20]]
+    hybrid_neutral_top20 = [compact(row, "hybrid_neutral_score", "hybrid_neutral_rank") for row in hybrid_neutral_sorted[:20]]
+    pure_neutral_top20 = [compact(row, "pure_os_neutral_score", "pure_os_neutral_rank") for row in pure_neutral_sorted[:20]]
+    high_conf_top20 = [compact(row, "pure_os_score", "high_conf_pool_rank") for row in high_conf_sorted[:20]]
 
     by_stand = {row["stand_number"]: row for row in scored}
+    rank_lists = {
+        "hybrid_rank": hybrid_sorted,
+        "pure_os_rank": pure_sorted,
+        "hybrid_neutral_rank": hybrid_neutral_sorted,
+        "pure_os_neutral_rank": pure_neutral_sorted,
+    }
 
     def movement(n: int, rank_key: str) -> dict:
         base_ids = [row["stand_number"] for row in baseline[:n]]
-        new_ids = [row["stand_number"] for row in (hybrid_sorted if rank_key == "hybrid_rank" else pure_sorted)[:n]]
+        new_ids = [row["stand_number"] for row in rank_lists[rank_key][:n]]
         return {
             "entering": [s for s in new_ids if s not in base_ids],
             "leaving": [s for s in base_ids if s not in new_ids],
@@ -294,12 +333,13 @@ def main() -> int:
 
     fp_removed = []
     for row in baseline[:20]:
-        if row["pool_present"] and not is_high_conf(_load_seg(row["stand_number"]).get("pool")):
+        if row["pool_present"] and not row.get("os_high_conf_pool"):
             fp_removed.append(
                 {
                     "stand_number": row["stand_number"],
                     "baseline_rank": row["baseline_rank"],
                     "hybrid_rank": row["hybrid_rank"],
+                    "hybrid_neutral_rank": row.get("hybrid_neutral_rank"),
                     "os_pool_status": row["os_pool_status"],
                     "blob_pool_geom": row["pool_geometry_similarity"],
                 }
@@ -313,18 +353,24 @@ def main() -> int:
             "identification": "visual: listing rear pool is dark faceted octagon + circular jacuzzi + pavilion + powerlines; native15 365 matches. GIS area 970 vs listing 972 is corroboration only, not a ranking input.",
             "baseline_rank": eval_row["baseline_rank"],
             "hybrid_rank": eval_row["hybrid_rank"],
+            "hybrid_neutral_rank": eval_row.get("hybrid_neutral_rank"),
             "pure_os_rank": eval_row["pure_os_rank"],
+            "pure_os_neutral_rank": eval_row.get("pure_os_neutral_rank"),
+            "high_conf_pool_rank": eval_row.get("high_conf_pool_rank"),
+            "n_high_conf_pools": len(high_conf_sorted),
             "baseline_score": eval_row["total_score"],
             "hybrid_score": eval_row["hybrid_score"],
+            "hybrid_neutral_score": eval_row.get("hybrid_neutral_score"),
             "pure_os_score": eval_row["pure_os_score"],
             "os_features": eval_row["os_features"],
             "hybrid_contrib": eval_row["hybrid_contrib"],
+            "hybrid_neutral_contrib": eval_row.get("hybrid_neutral_contrib"),
             "blob_pool_geom": eval_row["pool_geometry_similarity"],
             "os_pool_status": eval_row["os_pool_status"],
         }
 
     def feature_movers(rank_key="hybrid_rank"):
-        rows = hybrid_sorted if rank_key == "hybrid_rank" else pure_sorted
+        rows = rank_lists.get(rank_key, hybrid_sorted)
         interesting = []
         seen = set()
         for row in rows[:20] + baseline[:20] + ([eval_row] if eval_row else []):
@@ -345,6 +391,7 @@ def main() -> int:
                     "blob_pool_present": row["pool_present"],
                     "os_features": row["os_features"],
                     "hybrid_contrib": row["hybrid_contrib"],
+                    "hybrid_neutral_contrib": row.get("hybrid_neutral_contrib"),
                     "pure_os_contrib": row["pure_os_contrib"],
                     "contradiction": row["contradiction"],
                 }
@@ -352,13 +399,45 @@ def main() -> int:
         interesting.sort(key=lambda item: -abs(item["delta"]))
         return interesting[:25]
 
+    all_candidates = [
+        {
+            "stand_number": row["stand_number"],
+            "township": row["township"],
+            "area_sqm": row["area_sqm"],
+            "baseline_score": row["total_score"],
+            "baseline_rank": row["baseline_rank"],
+            "hybrid_score": row["hybrid_score"],
+            "hybrid_rank": row["hybrid_rank"],
+            "hybrid_neutral_score": row["hybrid_neutral_score"],
+            "hybrid_neutral_rank": row["hybrid_neutral_rank"],
+            "pure_os_score": row["pure_os_score"],
+            "pure_os_rank": row["pure_os_rank"],
+            "pure_os_neutral_score": row["pure_os_neutral_score"],
+            "pure_os_neutral_rank": row["pure_os_neutral_rank"],
+            "high_conf_pool_rank": row.get("high_conf_pool_rank"),
+            "blob_pool_present": row["pool_present"],
+            "os_pool_status": row["os_pool_status"],
+            "os_building_status": row["os_building_status"],
+            "os_driveway_status": row["os_driveway_status"],
+            "os_high_conf_pool": row.get("os_high_conf_pool"),
+            "os_features": row["os_features"],
+            "contradiction": row["contradiction"],
+            "pool_geometry_similarity": row["pool_geometry_similarity"],
+            "aerial_similarity": row["aerial_similarity"],
+            "exterior_similarity": row["exterior_similarity"],
+        }
+        for row in baseline
+    ]
+
     hybrid_conf = assess_separation([row["hybrid_score"] for row in hybrid_sorted])
+    hybrid_neutral_conf = assess_separation([row["hybrid_neutral_score"] for row in hybrid_neutral_sorted])
     payload = {
         "listing_id": LISTING_ID,
         "os_version": "object_segmentation_v1",
         "production_ranking_modified": False,
         "ags_downloads": 0,
         "n_candidates": len(scored),
+        "n_high_conf_pools": len(high_conf_sorted),
         "evaluation_stand": EVAL_STAND,
         "evaluation": eval_payload,
         "baseline": {
@@ -375,26 +454,57 @@ def main() -> int:
             "movement_top10": movement(10, "hybrid_rank"),
             "movement_top20": movement(20, "hybrid_rank"),
         },
+        "experimental_hybrid_neutral": {
+            "note": "Diagnostic only: missing OS object terms imputed at 0.5 so skip-and-renormalize cannot reward segmentation failure. Still not a production ranking.",
+            "confidence": hybrid_neutral_conf,
+            "top20": hybrid_neutral_top20,
+            "eval_rank": None if eval_row is None else eval_row.get("hybrid_neutral_rank"),
+            "movement_top5": movement(5, "hybrid_neutral_rank"),
+            "movement_top10": movement(10, "hybrid_neutral_rank"),
+            "movement_top20": movement(20, "hybrid_neutral_rank"),
+        },
         "experimental_pure_os": {
-            "note": "OS v1 object features only (no CLIP). Diagnostic, not a production proposal.",
+            "note": "OS v1 object features only (no CLIP). Diagnostic, not a production proposal. Skip-None; REJECTED stands can rank on building/driveway alone.",
             "top20": pure_top20,
             "eval_rank": None if eval_row is None else eval_row["pure_os_rank"],
         },
+        "experimental_pure_os_neutral": {
+            "note": "Pure OS with missing object terms at 0.5.",
+            "top20": pure_neutral_top20,
+            "eval_rank": None if eval_row is None else eval_row.get("pure_os_neutral_rank"),
+        },
+        "among_high_conf_pools": {
+            "note": "Pure OS ranking restricted to CONFIRMED/PROBABLE pools. Tests whether the pool fingerprint discriminates when localisation succeeded.",
+            "n": len(high_conf_sorted),
+            "top20": high_conf_top20,
+            "eval_rank": None if eval_row is None else eval_row.get("high_conf_pool_rank"),
+        },
         "false_positives_removed_from_baseline_top20": fp_removed,
         "feature_movers": feature_movers(),
+        "feature_movers_neutral": feature_movers("hybrid_neutral_rank"),
         "runtime_s": round(time.time() - started, 1),
     }
     (OUT / "baseline_top20.json").write_text(json.dumps({"top20": base_top20, "confidence": base_conf, "n": len(scored)}, indent=2), encoding="utf-8")
+    (OUT / "all_candidates.json").write_text(json.dumps({"n": len(all_candidates), "rows": all_candidates}, indent=2), encoding="utf-8")
     (OUT / "latest.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
     print("\nBASELINE TOP 20")
     for row in baseline[:20]:
         print(f"  {row['baseline_rank']:2d} {row['stand_number']:>8} {row['total_score']:.3f} blob_pool={row['pool_present']} os={row['os_pool_status']}")
-    print("\nHYBRID TOP 20")
+    print("\nHYBRID TOP 20 (skip-None)")
     for row in hybrid_sorted[:20]:
         print(f"  {row['hybrid_rank']:2d} {row['stand_number']:>8} {row['hybrid_score']:.3f} os={row['os_pool_status']} Δ {row['baseline_rank']-row['hybrid_rank']:+d}")
+    print("\nHYBRID NEUTRAL TOP 20 (missing OS = 0.5)")
+    for row in hybrid_neutral_sorted[:20]:
+        print(f"  {row['hybrid_neutral_rank']:2d} {row['stand_number']:>8} {row['hybrid_neutral_score']:.3f} os={row['os_pool_status']} Δ {row['baseline_rank']-row['hybrid_neutral_rank']:+d}")
     if eval_row:
-        print(f"\nEVAL STAND {EVAL_STAND}: baseline #{eval_row['baseline_rank']} → hybrid #{eval_row['hybrid_rank']} → pure-OS #{eval_row['pure_os_rank']}")
+        print(
+            f"\nEVAL STAND {EVAL_STAND}: baseline #{eval_row['baseline_rank']} "
+            f"→ hybrid #{eval_row['hybrid_rank']} "
+            f"→ hybrid-neutral #{eval_row.get('hybrid_neutral_rank')} "
+            f"→ pure-OS #{eval_row['pure_os_rank']} "
+            f"→ among-high-conf-pools #{eval_row.get('high_conf_pool_rank')} / {len(high_conf_sorted)}"
+        )
     print(f"\nwrote {OUT / 'latest.json'}")
     return 0
 

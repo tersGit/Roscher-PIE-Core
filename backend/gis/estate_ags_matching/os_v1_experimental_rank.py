@@ -161,6 +161,28 @@ def weighted_score(values: dict[str, float | None], weights: dict[str, float]) -
     return round(float(sum(contrib.values())), 4), {key: round(val, 4) for key, val in contrib.items()}
 
 
+OS_OBJECT_KEYS = (
+    "pool_presence",
+    "pool_shape",
+    "pool_contour",
+    "pool_area",
+    "pool_house_dist",
+    "pool_house_position",
+    "building_footprint",
+    "driveway",
+)
+
+
+def fill_neutral(os_feats: dict[str, float | None], fill: float = 0.5) -> dict[str, float]:
+    """Missing object terms stay non-informative (0.5). Not a production rule.
+
+    Skip-and-renormalize rewards stands whose pool/building terms dropped out.
+    Neutral fill keeps those weights in play without treating REJECTED/UNKNOWN
+    as positive evidence or applying the 0.25 contradiction penalty.
+    """
+    return {key: fill if os_feats.get(key) is None else float(os_feats[key]) for key in OS_OBJECT_KEYS}
+
+
 def experimental_hybrid_score(
     os_feats: dict[str, float | None],
     *,
@@ -180,5 +202,28 @@ def experimental_hybrid_score(
     return weighted_score(values, OS_WEIGHTS)
 
 
+def experimental_hybrid_neutral_score(
+    os_feats: dict[str, float | None],
+    *,
+    aerial: float | None,
+    video: float | None,
+    exterior: float | None,
+    stand_size: float,
+) -> tuple[float, dict[str, float]]:
+    values = {
+        **fill_neutral(os_feats),
+        "aerial": aerial,
+        "video": video,
+        "exterior": exterior,
+        "gis": 0.5,
+        "stand_size": stand_size or 0.0,
+    }
+    return weighted_score(values, OS_WEIGHTS)
+
+
 def experimental_pure_os_score(os_feats: dict[str, float | None]) -> tuple[float, dict[str, float]]:
     return weighted_score(os_feats, PURE_OS_WEIGHTS)
+
+
+def experimental_pure_os_neutral_score(os_feats: dict[str, float | None]) -> tuple[float, dict[str, float]]:
+    return weighted_score(fill_neutral(os_feats), PURE_OS_WEIGHTS)
