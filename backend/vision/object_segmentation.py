@@ -306,6 +306,27 @@ def _parcel_frac(mask: np.ndarray, parcel: np.ndarray) -> float:
     return float(np.logical_and(mask, parcel > 0).sum() / max(mask.sum(), 1))
 
 
+def _in_parcel(mask: np.ndarray, parcel: np.ndarray) -> np.ndarray:
+    return np.logical_and(mask, parcel > 0)
+
+
+def water_seed_masks(bgr: np.ndarray, parcel: np.ndarray) -> list[np.ndarray]:
+    """Colour is a proposal prior only; CLIP/geometry still have to accept the blob."""
+    hsv = cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)
+    hue, sat, val = cv2.split(hsv)
+    cyan = (hue >= 70) & (hue <= 145) & (sat >= 25) & (val >= 35)
+    dark_water = (hue >= 80) & (hue <= 145) & (val < 110) & (sat >= 15)
+    water = ((cyan | dark_water) & (parcel > 0)).astype(np.uint8) * 255
+    water = cv2.morphologyEx(water, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+    water = cv2.morphologyEx(water, cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8))
+    seeds = []
+    for comp in _components(water > 0, min_area=36):
+        area_m2 = float(comp.sum()) * (NATIVE_M_PER_PX ** 2)
+        if 8.0 <= area_m2 <= 140.0:
+            seeds.append(comp)
+    return seeds
+
+
 def select_pool(
     bgr: np.ndarray,
     masks: list[np.ndarray],
@@ -313,33 +334,43 @@ def select_pool(
     building: np.ndarray | None,
 ) -> ObjectMask:
     height, width = bgr.shape[:2]
-    parcel_bool = parcel > 0
     scored: list[tuple[float, np.ndarray, dict, dict]] = []
-    for mask in masks:
-        area = float(mask.mean())
-        if area < 0.0012 or area > 0.14:
+    proposals = list(masks) + water_seed_masks(bgr, parcel)
+    for mask in proposals:
+        clipped = _in_parcel(mask, parcel)
+        if int(clipped.sum()) < 40:
+            continue
+        area_m2 = float(clipped.sum()) * (NATIVE_M_PER_PX ** 2)
+        if area_m2 < 8.0 or area_m2 > 140.0:
             continue
         inside = _parcel_frac(mask, parcel)
-        if inside < 0.55:
+        if inside < 0.40:
             continue
-        if building is not None and _overlap(mask, building) > 0.35:
+        water = water_fraction(bgr, clipped)
+        veg = vegetation_fraction(bgr, clipped)
+        if water < 0.08 and veg > 0.45:
             continue
-        water = water_fraction(bgr, mask)
-        veg = vegetation_fraction(bgr, mask)
-        if water < 0.10 and veg > 0.45:
-            continue
-        clip = clip_region(bgr, mask)
+        clip = clip_region(bgr, clipped)
         rival = max(clip["roof"], clip["shadow"], clip["road"], clip["driveway"], clip["lawn"])
         gap = clip["pool"] - rival
-        if clip["pool"] < 0.20:
+        if clip["pool"] < 0.18 and water < 0.35:
             continue
-        score = 0.55 * clip["pool"] + 0.25 * gap + 0.15 * water + 0.05 * inside
-        scored.append((score, mask, clip, {"water": water, "veg": veg, "inside": inside, "gap": gap}))
+        if clip["roof"] > clip["pool"] and water < 0.25:
+            continue
+        if clip["road"] > 0.35 and water < 0.30:
+            continue
+        score = 0.50 * clip["pool"] + 0.25 * gap + 0.20 * water + 0.05 * inside
+        scored.append((score, clipped, clip, {"water": water, "veg": veg, "inside": inside, "gap": gap}))
     empty = ObjectMask(kind="pool", mask=np.zeros((height, width), bool), status="UNKNOWN", notes=["no_pool_candidate"])
     if not scored:
         return empty
     scored.sort(key=lambda item: item[0], reverse=True)
-    keep = [item for item in scored if item[2]["pool"] >= 0.55 and item[3]["gap"] >= 0.15]
+    keep = [
+        item
+        for item in scored
+        if (item[2]["pool"] >= 0.50 and item[3]["gap"] >= 0.08)
+        or (item[3]["water"] >= 0.35 and item[2]["pool"] >= 0.28)
+    ]
     if not keep:
         best = scored[0]
         clip = best[2]
@@ -368,9 +399,9 @@ def select_pool(
     if building is not None and _overlap(mask, building) > 0.2:
         notes.append("touches_building")
     status = "PROBABLE"
-    if clip["pool"] >= 0.75 and water >= 0.18 and best_inside >= 0.65:
+    if clip["pool"] >= 0.70 and water >= 0.15 and best_inside >= 0.60:
         status = "CONFIRMED"
-    elif clip["pool"] < 0.45:
+    elif clip["pool"] < 0.28 and water < 0.30:
         status = "UNKNOWN"
     area_m2 = geom.get("area_m2") or 0
     if area_m2 < 8 or area_m2 > 220:
@@ -388,27 +419,29 @@ def select_buildings(
 ) -> tuple[ObjectMask, list[ObjectMask]]:
     height, width = bgr.shape[:2]
     prelim = []
+    parcel_area = max(int((parcel > 0).sum()), 1)
     for mask in masks:
-        area = float(mask.mean())
-        if area < 0.01 or area > 0.45:
+        clipped = _in_parcel(mask, parcel)
+        coverage = float(clipped.sum()) / parcel_area
+        if coverage < 0.025 or coverage > 0.60:
             continue
-        if _parcel_frac(mask, parcel) < 0.55:
+        if pool is not None and _overlap(clipped, pool) > 0.4:
             continue
-        if pool is not None and _overlap(mask, pool) > 0.4:
-            continue
-        veg = vegetation_fraction(bgr, mask)
+        veg = vegetation_fraction(bgr, clipped)
         if veg > 0.5:
             continue
-        prelim.append((area, 1.0 - veg, mask))
+        prelim.append((coverage, 1.0 - veg, clipped))
     prelim.sort(key=lambda item: item[0], reverse=True)
     roof_masks = []
-    for area, inv_veg, mask in prelim[:12]:
+    for coverage, inv_veg, mask in prelim[:14]:
         clip = clip_region(bgr, mask)
-        if clip["roof"] < 0.25 and clip["pool"] > clip["roof"]:
+        if clip["driveway"] > clip["roof"] and clip["roof"] < 0.35:
+            continue
+        if clip["pool"] > clip["roof"] and clip["roof"] < 0.30:
             continue
         if clip["lawn"] > 0.5:
             continue
-        roof_masks.append((clip["roof"] + 0.3 * inv_veg + 0.2 * area, mask, clip))
+        roof_masks.append((clip["roof"] + 0.35 * coverage + 0.15 * inv_veg, mask, clip))
     empty = ObjectMask(kind="building", mask=np.zeros((height, width), bool), status="UNKNOWN", notes=["no_building"])
     if not roof_masks:
         return empty, []
@@ -455,7 +488,9 @@ def select_driveway(
     height, width = bgr.shape[:2]
     hsv = cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)
     hue, sat, val = cv2.split(hsv)
-    paved = ((sat <= 60) & (val >= 55) & (val <= 210) & ((hue <= 45) | (hue >= 155))).astype(np.uint8)
+    beige = (hue >= 5) & (hue <= 40) & (sat >= 15) & (sat <= 110) & (val >= 70) & (val <= 220)
+    grey = (sat <= 55) & (val >= 45) & (val <= 190) & ((hue <= 50) | (hue >= 150))
+    paved = (beige | grey).astype(np.uint8)
     veg = ((hue >= 35) & (hue <= 85) & (sat >= 40)).astype(np.uint8)
     paved[veg > 0] = 0
     if building is not None:
@@ -665,10 +700,10 @@ def segment_parcel_bgr(
         else np.full((height, width), 255, np.uint8)
     )
     masks = fastsam_masks(bgr)
-    building, outbuildings = select_buildings(bgr, masks, parcel, pool=None)
-    pool = select_pool(bgr, masks, parcel, building.mask if building.geometry.get("present") else None)
-    if pool.status in {"CONFIRMED", "PROBABLE"}:
-        building, outbuildings = select_buildings(bgr, masks, parcel, pool=pool.mask)
+    pool = select_pool(bgr, masks, parcel, building=None)
+    building, outbuildings = select_buildings(
+        bgr, masks, parcel, pool=pool.mask if pool.status in {"CONFIRMED", "PROBABLE"} else None
+    )
     driveway = select_driveway(
         bgr,
         masks,
