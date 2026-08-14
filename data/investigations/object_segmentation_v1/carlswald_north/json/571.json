@@ -1,0 +1,96 @@
+{
+  "stand_number": "571",
+  "version": "object_segmentation_v1",
+  "runtime_s": 0.388,
+  "pool": {
+    "kind": "pool",
+    "status": "UNKNOWN",
+    "score": 0.0,
+    "clip": {},
+    "notes": [
+      "no_pool_candidate"
+    ],
+    "geometry": {
+      "contour_n": 0
+    },
+    "contour": null
+  },
+  "building": {
+    "kind": "building",
+    "status": "UNKNOWN",
+    "score": 0.0,
+    "clip": {},
+    "notes": [
+      "no_building"
+    ],
+    "geometry": {
+      "contour_n": 0
+    },
+    "contour": null
+  },
+  "outbuildings": [],
+  "driveway": {
+    "kind": "driveway",
+    "status": "UNKNOWN",
+    "score": 0.0,
+    "clip": {},
+    "notes": [
+      "no_access"
+    ],
+    "geometry": {
+      "contour_n": 0
+    },
+    "contour": null
+  },
+  "spatial": {
+    "parcel": {
+      "present": true
+    },
+    "house": {
+      "present": false,
+      "status": "UNKNOWN"
+    },
+    "pool": {
+      "present": false,
+      "status": "UNKNOWN"
+    },
+    "driveway": {
+      "present": false,
+      "status": "UNKNOWN",
+      "entry": null
+    },
+    "outbuildings": [],
+    "n_outbuildings": 0,
+    "n_building_masses": 0,
+    "relationships": {
+      "pool_house": null,
+      "driveway_house": null,
+      "pool_outbuilding": null,
+      "house_parcel": {
+        "centroid_parcel": null
+      },
+      "pool_parcel": {
+        "centroid_parcel": null
+      }
+    }
+  },
+  "township": "SUMMERSET EXT.13",
+  "elapsed_s": 0.388,
+  "old_extractor": {
+    "old_pool_present": false,
+    "old_pool_shape": "unknown",
+    "old_pool_aspect": null,
+    "old_pool_rectangularity": null,
+    "old_pool_compactness": null,
+    "old_pool_centroid": null,
+    "old_pool_to_house_dist": null,
+    "old_roof_area_frac": 0.07045827184784391,
+    "old_roof_orientation_deg": 116.5650520324707,
+    "old_paved_frac": 0.19084002841995956
+  },
+  "crop_path": "data/visual_index/carlswald_north_corrected_001/_imagery_cache_native15/571_ags_aerial.jpg",
+  "crop_wh": [
+    642,
+    570
+  ]
+}
