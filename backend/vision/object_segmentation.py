@@ -432,6 +432,26 @@ def select_pool(
     return ObjectMask(kind="pool", mask=mask, status=status, score=float(clip.get("pool") or keep[0][0]), clip=clip, notes=notes, geometry=geom)
 
 
+def roof_seed_masks(bgr: np.ndarray, parcel: np.ndarray, pool: np.ndarray | None) -> list[np.ndarray]:
+    gray = cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
+    hsv = cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)
+    hue, sat, val = cv2.split(hsv)
+    thr = float(np.percentile(gray[parcel > 0], 68)) if np.any(parcel) else 180
+    roof = ((gray >= thr) & (parcel > 0) & (sat < 90)).astype(np.uint8)
+    veg = ((hue >= 35) & (hue <= 85) & (sat >= 40)).astype(np.uint8)
+    roof[veg > 0] = 0
+    if pool is not None:
+        roof[pool] = 0
+    roof = cv2.morphologyEx(roof, cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+    roof = cv2.morphologyEx(roof, cv2.MORPH_CLOSE, np.ones((9, 9), np.uint8))
+    seeds = []
+    parcel_area = max(int((parcel > 0).sum()), 1)
+    for comp in _components(roof > 0, min_area=80):
+        if float(comp.sum()) / parcel_area >= 0.02:
+            seeds.append(comp)
+    return seeds
+
+
 def select_buildings(
     bgr: np.ndarray,
     masks: list[np.ndarray],
@@ -441,7 +461,7 @@ def select_buildings(
     height, width = bgr.shape[:2]
     prelim = []
     parcel_area = max(int((parcel > 0).sum()), 1)
-    for mask in masks:
+    for mask in list(masks) + roof_seed_masks(bgr, parcel, pool):
         clipped = _in_parcel(mask, parcel)
         coverage = float(clipped.sum()) / parcel_area
         if coverage < 0.025 or coverage > 0.60:
@@ -474,13 +494,13 @@ def select_buildings(
         return empty, []
     main = comps[0]
     # absorb touching smaller masses into main
-    kernel = np.ones((9, 9), np.uint8)
+    kernel = np.ones((21, 21), np.uint8)
     main_d = cv2.dilate(main.astype(np.uint8), kernel, 1).astype(bool)
     outbuildings = []
     for comp in comps[1:]:
         if np.logical_and(comp, main_d).any():
             main = np.logical_or(main, comp)
-            main_d = cv2.dilate(main.astype(np.uint8), kernel, 1).astype(bool)
+            main_d = cv2.dilate(main.astype(np.uint8), np.ones((21, 21), np.uint8), 1).astype(bool)
         else:
             geom = contour_geometry(comp)
             outbuildings.append(
