@@ -397,9 +397,7 @@ def select_pool(
     keep = [
         item
         for item in ranked
-        if (item[2]["pool"] >= 0.45 and item[3]["gap"] >= 0.05)
-        or item[3]["water_shape"]
-        or (item[3]["water"] >= 0.45 and item[2]["pool"] >= 0.40)
+        if item[2]["pool"] >= 0.40 and item[3]["water"] >= 0.12
     ]
     if not keep:
         best = ranked[0]
