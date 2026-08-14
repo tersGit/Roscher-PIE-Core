@@ -353,26 +353,54 @@ def select_pool(
         clip = clip_region(bgr, clipped)
         rival = max(clip["roof"], clip["shadow"], clip["road"], clip["driveway"], clip["lawn"])
         gap = clip["pool"] - rival
-        if clip["pool"] < 0.18 and water < 0.35:
+        geom = contour_geometry(clipped)
+        area_m2 = float(geom.get("area_m2") or 0)
+        compact = float(geom.get("compactness") or 0)
+        rectangularity = float(geom.get("rectangularity") or 0)
+        typical = 1.0 if 10.0 <= area_m2 <= 80.0 else (0.35 if area_m2 <= 110.0 else 0.05)
+        water_shape = water >= 0.55 and compact >= 0.32 and rectangularity >= 0.50
+        if clip["pool"] < 0.18 and not water_shape:
             continue
         if clip["roof"] > clip["pool"] and water < 0.25:
             continue
         if clip["road"] > 0.35 and water < 0.30:
             continue
-        score = 0.50 * clip["pool"] + 0.25 * gap + 0.20 * water + 0.05 * inside
-        scored.append((score, clipped, clip, {"water": water, "veg": veg, "inside": inside, "gap": gap}))
+        score = (
+            0.40 * clip["pool"]
+            + 0.20 * max(gap, 0.0)
+            + 0.25 * water
+            + 0.15 * typical
+        )
+        scored.append(
+            (
+                score,
+                clipped,
+                clip,
+                {
+                    "water": water,
+                    "veg": veg,
+                    "inside": inside,
+                    "gap": gap,
+                    "area_m2": area_m2,
+                    "water_shape": water_shape,
+                },
+            )
+        )
     empty = ObjectMask(kind="pool", mask=np.zeros((height, width), bool), status="UNKNOWN", notes=["no_pool_candidate"])
     if not scored:
         return empty
     scored.sort(key=lambda item: item[0], reverse=True)
+    typical_first = [item for item in scored if 10.0 <= item[3]["area_m2"] <= 80.0]
+    ranked = typical_first or scored
     keep = [
         item
-        for item in scored
-        if (item[2]["pool"] >= 0.50 and item[3]["gap"] >= 0.08)
-        or (item[3]["water"] >= 0.35 and item[2]["pool"] >= 0.28)
+        for item in ranked
+        if (item[2]["pool"] >= 0.45 and item[3]["gap"] >= 0.05)
+        or item[3]["water_shape"]
+        or (item[3]["water"] >= 0.45 and item[2]["pool"] >= 0.28)
     ]
     if not keep:
-        best = scored[0]
+        best = ranked[0]
         clip = best[2]
         status = "REJECTED"
         notes = ["low_pool_evidence"]
@@ -380,20 +408,13 @@ def select_pool(
             notes = ["rejected_as_road_shadow_or_roof"]
         geom = contour_geometry(best[1])
         return ObjectMask(kind="pool", mask=best[1], status=status, score=best[0], clip=clip, notes=notes, geometry=geom)
-    merged = _merge_bool([item[1] for item in keep[:4]])
-    # keep only the component mostly inside the parcel
-    best_comp = None
-    best_inside = -1.0
-    for comp in _components(merged, min_area=40):
-        inside = _parcel_frac(comp, parcel)
-        if inside > best_inside:
-            best_inside = inside
-            best_comp = comp
-    mask = best_comp if best_comp is not None else merged
-    clip = clip_region(bgr, mask)
-    water = water_fraction(bgr, mask)
+    # Do not merge distant FastSAM fragments — that bloated 677/491 onto paving.
+    mask = keep[0][1]
+    best_inside = keep[0][3]["inside"]
+    clip = keep[0][2]
+    water = keep[0][3]["water"]
     geom = contour_geometry(mask)
-    notes = ["fastsam+clip"]
+    notes = ["fastsam+clip"] if clip["pool"] >= 0.45 else ["water-geometry"]
     if best_inside < 0.7:
         notes.append("partially_outside_parcel")
     if building is not None and _overlap(mask, building) > 0.2:
@@ -401,14 +422,14 @@ def select_pool(
     status = "PROBABLE"
     if clip["pool"] >= 0.70 and water >= 0.15 and best_inside >= 0.60:
         status = "CONFIRMED"
-    elif clip["pool"] < 0.28 and water < 0.30:
+    elif clip["pool"] < 0.22 and water < 0.50:
         status = "UNKNOWN"
     area_m2 = geom.get("area_m2") or 0
-    if area_m2 < 8 or area_m2 > 220:
+    if area_m2 < 8 or area_m2 > 140:
         notes.append(f"unusual_area_m2={area_m2:.1f}")
         if status == "CONFIRMED":
             status = "PROBABLE"
-    return ObjectMask(kind="pool", mask=mask, status=status, score=float(clip["pool"]), clip=clip, notes=notes, geometry=geom)
+    return ObjectMask(kind="pool", mask=mask, status=status, score=float(clip.get("pool") or keep[0][0]), clip=clip, notes=notes, geometry=geom)
 
 
 def select_buildings(
@@ -550,8 +571,10 @@ def select_driveway(
     geom["circular_evidence"] = bool(
         hole_hier is not None and len(hole_hier) and any(int(h[3]) >= 0 for h in hole_hier[0])
     )
-    status = "PROBABLE" if entry else "UNKNOWN"
-    if entry and geom.get("relative_area", 0) >= 0.02:
+    status = "UNKNOWN"
+    if geom.get("present") and float(geom.get("relative_area") or 0) >= 0.006:
+        status = "PROBABLE"
+    if entry and float(geom.get("relative_area") or 0) >= 0.012:
         status = "CONFIRMED"
     return ObjectMask(kind="driveway", mask=mask, status=status, geometry=geom, notes=["paved+boundary+fastsam"])
 
