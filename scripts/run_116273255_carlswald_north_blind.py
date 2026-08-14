@@ -77,6 +77,10 @@ IDENT_SCENES = frozenset(
 )
 
 
+def _safe(stand: str) -> str:
+    return str(stand).replace("/", "_")
+
+
 def load_parcels_last_wins() -> list[dict]:
     gis = json.loads(GIS_PATH.read_text(encoding="utf-8"))
     by_safe: dict[str, dict] = {}
@@ -120,15 +124,19 @@ def extra_listing_text(url: str) -> dict:
     html = httpx.get(url, headers={"User-Agent": USER_AGENT}, follow_redirects=True, timeout=40).text
     desc_m = re.search(r"p24_description[^>]*>(.*?)</div>", html, re.I | re.S)
     description = _clean(desc_m.group(1)) if desc_m else None
+    # Full page text: og:description is truncated; pool wording lives in later paragraphs.
+    page_text = _clean(html)
     pool_mentions = []
-    if description:
-        for sent in re.split(r"(?<=[.!?])\s+", description):
-            if re.search(r"\bpool\b|jacuzzi|spa", sent, re.I):
+    source = description or page_text
+    for sent in re.split(r"(?<=[.!?])\s+", page_text):
+        if re.search(r"\bpool\b|jacuzzi|spa|L[- ]shaped", sent, re.I) and len(sent) < 400:
+            if "sparkling" in sent.lower() or "l-shaped" in sent.lower() or "swimming pool" in sent.lower():
                 pool_mentions.append(sent)
-    l_shaped = bool(re.search(r"\bL[- ]shaped\b", description or "", re.I))
-    cover_net = bool(re.search(r"\b(cover|net)\b", " ".join(pool_mentions), re.I))
+    pool_mentions = list(dict.fromkeys(pool_mentions))[:8]
+    l_shaped = bool(re.search(r"\bL[- ]shaped\b", page_text, re.I))
+    cover_net = bool(re.search(r"L[- ]shaped pool with a cover and net|pool with a cover and net", page_text, re.I))
     bedrooms = None
-    m = re.search(r"(\d+)\s*Bedroom", html, re.I)
+    m = re.search(r"(\d+)\s*Bedroom House", html, re.I)
     if m:
         bedrooms = int(m.group(1))
     bathrooms = None
