@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "expected": {
+    "baseline": 17,
+    "pr5_neutral": 2,
+    "scoring_v2": 3
+  },
+  "saved_pr6_latest": {
+    "baseline": 17,
+    "pr5_neutral": 2,
+    "scoring_v2": 3
+  },
+  "recomputed": {
+    "baseline": 17,
+    "pr5_neutral": 2,
+    "scoring_v2": 3
+  },
+  "eval_stand": "365",
+  "note": "Recompute uses frozen listing fingerprint + frozen OS v1 JSON + PR #5 CLIP/stand-size. Does not rewrite PR #6 artefacts."
+}
