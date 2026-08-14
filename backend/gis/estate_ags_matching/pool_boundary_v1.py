@@ -659,18 +659,26 @@ def extract_frame_boundary(
 
 
 def _select_best(proposals: list[BoundaryProposal]) -> BoundaryProposal:
-    """Prefer accepted structural perimeters over object-mask contours."""
+    """Prefer accepted structural perimeters over object-mask contours.
+
+    When every proposal fails the gate, display the most plausible-area
+    structural attempt rather than a tiny LSD fragment with a high
+    support score.
+    """
     accepted = [p for p in proposals if p.accepted]
-    pool = accepted or proposals
-    return max(
-        pool,
-        key=lambda p: (
-            int(p.accepted),
-            0 if p.method == "fastsam_contour" else 1,
-            p.structural_support,
-            p.confidence,
-        ),
-    )
+    if accepted:
+        return max(
+            accepted,
+            key=lambda p: (p.structural_support, p.confidence),
+        )
+
+    def _rank(p: BoundaryProposal) -> tuple:
+        area = float(p.relative_area or 0.0)
+        plausible = 1 if 0.015 <= area <= 0.38 else 0
+        structural = 0 if p.method == "fastsam_contour" else 1
+        return (plausible, structural, p.structural_support, p.confidence)
+
+    return max(proposals, key=_rank)
 
 
 def corroborate_axes(frames: list[FrameBoundary]) -> dict[str, bool]:
