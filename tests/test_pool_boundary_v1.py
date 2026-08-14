@@ -29,6 +29,40 @@ def test_module_has_no_listing_hardcodes_or_colour_thresholds():
     assert "l_shaped" not in text.lower()
 
 
+def test_object_mask_method_cannot_pass_gate():
+    geom = {"relative_area": 0.18, "compactness": 0.55, "solidity": 0.88, "aspect_ratio": 1.6}
+    clip = {"pool": 0.70, "wall": 0.05, "vegetation": 0.05, "furniture": 0.02, "bathtub": 0.0, "interior": 0.0}
+    accepted, reason, *_ = score_and_gate(
+        viewpoint="pool_overview",
+        geom=geom,
+        clip=clip,
+        structural_support=0.70,
+        edge_clip=0.02,
+        climb=0.0,
+        corroborated=True,
+        method="fastsam_contour",
+    )
+    assert accepted is False
+    assert reason == "object_mask_is_not_perimeter"
+
+
+def test_corroboration_cannot_promote_weak_structure():
+    geom = {"relative_area": 0.18, "compactness": 0.55, "solidity": 0.88, "aspect_ratio": 1.6}
+    clip = {"pool": 0.55, "wall": 0.05, "vegetation": 0.05, "furniture": 0.02, "bathtub": 0.0, "interior": 0.0}
+    accepted, reason, _conf, notes = score_and_gate(
+        viewpoint="pool_overview",
+        geom=geom,
+        clip=clip,
+        structural_support=0.40,
+        edge_clip=0.02,
+        climb=0.0,
+        corroborated=True,
+        method="local_ridge_snap",
+    )
+    assert accepted is False
+    assert "needs_stronger_structure" in notes
+
+
 def test_closed_polygon_without_structure_cannot_pass_gate():
     geom = {
         "relative_area": 0.18,

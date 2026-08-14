@@ -59,27 +59,37 @@ def load_photos(listing_id: str, folder: Path) -> list[tuple[str, bytes]]:
     return [(p.stem, p.read_bytes()) for p in files]
 
 
-def draw_overlay(body: bytes, frame, dest: Path) -> None:
+def _draw_segments(draw, segments, color, width=2) -> None:
+    if segments is None:
+        return
+    for row in segments:
+        if len(row) < 4:
+            continue
+        x1, y1, x2, y2 = [float(v) for v in row[:4]]
+        draw.line([(x1, y1), (x2, y2)], fill=color, width=width)
 
-    image = Image.open(io.BytesIO(body)).convert("RGB")
-    draw = ImageDraw.Draw(image)
-    w, h = image.size
+
+def draw_overlay(body: bytes, frame, dest: Path) -> None:
+    original = Image.open(io.BytesIO(body)).convert("RGB")
+    overlay = original.copy()
+    draw = ImageDraw.Draw(overlay)
+    w, h = overlay.size
     font = _font(13)
+    _draw_segments(draw, frame.accepted_segments, (40, 140, 255), 2)
+    _draw_segments(draw, frame.rejected_segments, (255, 140, 40), 2)
     if frame.best is not None:
-        # rejected structural edges: wall-climb is already filtered; draw kept contour
         xy = (frame.best.descriptors or {}).get("contour_image") or []
         if len(xy) >= 3:
             pts = [(float(x) * (w - 1), float(y) * (h - 1)) for x, y in xy]
             color = (0, 220, 80) if frame.best.accepted else (255, 90, 70)
             draw.line(pts + [pts[0]], fill=color, width=3)
-        # method contours in thinner overlays
         for prop in frame.proposals:
             if prop.method == (frame.best.method if frame.best else ""):
                 continue
             cxy = (prop.descriptors or {}).get("contour_image") or []
             if len(cxy) >= 3:
                 pts = [(float(x) * (w - 1), float(y) * (h - 1)) for x, y in cxy]
-                draw.line(pts + [pts[0]], fill=(80, 160, 255), width=1)
+                draw.line(pts + [pts[0]], fill=(180, 80, 220), width=1)
     status = "ACCEPT" if frame.scoring_ready else "REJECT"
     reason = ""
     if frame.best is not None:
@@ -91,10 +101,18 @@ def draw_overlay(body: bytes, frame, dest: Path) -> None:
         f"struct={0 if frame.best is None else frame.best.structural_support:.2f} "
         f"{reason}"
     )
-    draw.rectangle([4, 4, min(w - 4, 8 + 7 * len(label)), 28], fill=(0, 0, 0))
-    draw.text((8, 8), label, fill=(250, 250, 250), font=font)
+    legend = "green=accepted perimeter  red=rejected perimeter  blue=kept LSD  orange=dropped wall-climb"
+    for image, painter in ((original, ImageDraw.Draw(original)), (overlay, draw)):
+        painter.rectangle([4, 4, min(w - 4, 8 + 7 * len(label)), 28], fill=(0, 0, 0))
+        painter.text((8, 8), label, fill=(250, 250, 250), font=font)
+    draw.rectangle([4, h - 26, min(w - 4, 8 + 7 * len(legend)), h - 4], fill=(0, 0, 0))
+    draw.text((8, h - 22), legend, fill=(230, 230, 230), font=_font(11))
+    gap = 8
+    panel = Image.new("RGB", (w * 2 + gap, h), (12, 12, 12))
+    panel.paste(original, (0, 0))
+    panel.paste(overlay, (w + gap, 0))
     dest.parent.mkdir(parents=True, exist_ok=True)
-    image.save(dest, quality=82)
+    panel.save(dest, quality=82)
 
 
 def contact_sheet(photos: dict[str, bytes], frames, dest: Path, ids: tuple[str, ...]) -> None:

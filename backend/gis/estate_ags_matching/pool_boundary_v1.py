@@ -82,6 +82,8 @@ class FrameBoundary:
     best: BoundaryProposal | None
     scoring_ready: bool
     gate_reasons: list[str]
+    accepted_segments: np.ndarray | None = None
+    rejected_segments: np.ndarray | None = None
 
 
 def _resize_mask(mask: np.ndarray, width: int, height: int) -> np.ndarray:
@@ -439,8 +441,13 @@ def score_and_gate(
     edge_clip: float,
     climb: float,
     corroborated: bool,
+    method: str = "",
 ) -> tuple[bool, str | None, float, list[str]]:
-    """Stricter generic gate. A large closed polygon is never sufficient."""
+    """Stricter generic gate. A large closed polygon is never sufficient.
+
+    Multi-frame corroboration may raise confidence but must not promote a
+    contour that fails structural or object-mask tests.
+    """
     reasons = []
     pool = float(clip.get("pool") or 0.0)
     wall = float(clip.get("wall") or 0.0)
@@ -457,6 +464,9 @@ def score_and_gate(
         return False, "bathtub_or_bathroom", 0.0, ["bathtub_or_bathroom"]
     if interior >= 0.30 and pool < 0.25:
         return False, "interior_scene", 0.0, ["interior_scene"]
+    # Stage A object masks are not Stage B perimeters.
+    if method == "fastsam_contour":
+        reasons.append("object_mask_is_not_perimeter")
     if pool < 0.22:
         reasons.append("low_pool_object_confidence")
     if structural_support < 0.32:
@@ -473,8 +483,9 @@ def score_and_gate(
         reasons.append("frame_edge_clipping")
     if area < 0.015 or area > 0.38:
         reasons.append("implausible_perimeter_area")
-    if structural_support < 0.48 and not corroborated:
-        reasons.append("needs_stronger_structure_or_multiframe")
+    # Corroboration never waives the structure floor.
+    if structural_support < 0.48:
+        reasons.append("needs_stronger_structure")
     # Large closed polygon with only CLIP/area: fail.
     if structural_support < 0.32:
         reasons.append("closed_polygon_without_structure")
@@ -488,7 +499,10 @@ def score_and_gate(
     conf = round(float(max(0.0, min(1.0, conf))), 4)
     accepted = not reasons and viewpoint in OVERVIEW_VIEWS and pool >= 0.22
     if accepted:
-        return True, None, conf, ["scoring_ready"]
+        notes = ["scoring_ready"]
+        if corroborated:
+            notes.append("multiframe_corroborated=True")
+        return True, None, conf, notes
     return False, reasons[0] if reasons else "failed_gate", conf, reasons
 
 
@@ -519,6 +533,7 @@ def _proposal(
         edge_clip=clip_frac,
         climb=climb,
         corroborated=corroborated,
+        method=method,
     )
     return BoundaryProposal(
         method=method,
@@ -629,9 +644,7 @@ def extract_frame_boundary(
     if not proposals:
         return FrameBoundary(media_id, viewpoint, present, [], None, False, ["no_perimeter_proposal"])
 
-    # Prefer structurally supported accepted proposals; else best confidence.
-    accepted = [p for p in proposals if p.accepted]
-    best = max(accepted or proposals, key=lambda p: (int(p.accepted), p.structural_support, p.confidence))
+    best = _select_best(proposals)
     return FrameBoundary(
         media_id=media_id,
         viewpoint=viewpoint,
@@ -640,6 +653,23 @@ def extract_frame_boundary(
         best=best,
         scoring_ready=bool(best.accepted),
         gate_reasons=best.notes,
+        accepted_segments=keep_seg,
+        rejected_segments=drop_seg,
+    )
+
+
+def _select_best(proposals: list[BoundaryProposal]) -> BoundaryProposal:
+    """Prefer accepted structural perimeters over object-mask contours."""
+    accepted = [p for p in proposals if p.accepted]
+    pool = accepted or proposals
+    return max(
+        pool,
+        key=lambda p: (
+            int(p.accepted),
+            0 if p.method == "fastsam_contour" else 1,
+            p.structural_support,
+            p.confidence,
+        ),
     )
 
 
@@ -689,15 +719,16 @@ def reapply_corroboration(frames: list[FrameBoundary], flags: dict[str, bool]) -
                 edge_clip=prop.edge_clip,
                 climb=0.12 if prop.wall_climb else 0.0,
                 corroborated=corr,
+                method=prop.method,
             )
             prop.accepted = accepted
             prop.reject_reason = reason
             prop.confidence = conf
-            prop.notes = notes + ([f"multiframe_corroborated={corr}"])
+            extra = [f"multiframe_corroborated={corr}"]
+            prop.notes = notes + [item for item in extra if item not in notes]
             updated.append(prop)
         frame.proposals = updated
-        accepted = [p for p in updated if p.accepted]
-        frame.best = max(accepted or updated, key=lambda p: (int(p.accepted), p.structural_support, p.confidence))
+        frame.best = _select_best(updated)
         frame.scoring_ready = bool(frame.best.accepted)
         frame.gate_reasons = frame.best.notes
 
