@@ -411,17 +411,16 @@ def pick_best(results: list[MaskResult]) -> MaskResult | None:
         return None
 
     def rank(r: MaskResult) -> tuple:
-        pool = float(r.clip.get("pool") or 0.0)
-        veg = float(r.clip.get("vegetation") or 0.0)
-        furn = float(r.clip.get("furniture") or 0.0)
-        bath = float(r.clip.get("bathtub") or 0.0)
         area = float((r.geometry or {}).get("relative_area") or 0.0)
         plausible = 1 if 0.01 <= area <= 0.45 else 0
+        bath = float(r.clip.get("bathtub") or 0.0)
+        furn = float(r.clip.get("furniture") or 0.0)
+        # Do not penalise CLIP "deck": that prompt includes coping stones.
         return (
             plausible,
-            pool - 0.4 * veg - 0.4 * furn - 0.6 * bath,
+            r.confidence - 0.5 * bath - 0.3 * furn,
             r.structural_support,
-            r.confidence,
+            area,
         )
 
     return max(usable, key=rank)

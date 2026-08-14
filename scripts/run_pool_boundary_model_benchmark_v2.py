@@ -148,10 +148,11 @@ def run_listing(spec: dict, pr11_frames: dict) -> dict:
             yoloe_text_multi(bgr, "s", segments),
             yoloe_text_multi(bgr, "m", segments),
         ]
-        seed = next((r for r in results if r.mask is not None and r.box is not None), None)
-        if suffix in spec["sam_frames"] and seed is not None and SAM21_T.is_file():
+        seed = pick_best(results)
+        if suffix in spec["sam_frames"] and seed is not None and seed.box is not None and SAM21_T.is_file():
             results.append(sam_from_box(bgr, seed.box, segments, seed.confidence))
-            results.append(sam_from_point(bgr, seed.mask, seed.confidence, segments))
+            if seed.mask is not None:
+                results.append(sam_from_point(bgr, seed.mask, seed.confidence, segments))
         best = pick_best(results)
         dt = time.perf_counter() - t_frame
         print(
