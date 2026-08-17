@@ -454,11 +454,43 @@ def sam2_geometry_collapsed(seed: PoolComponent, refined: PoolComponent) -> str 
     r_max = float(r.get("max_indent") or 0.0)
     if s_ind >= 1 and r_ind == 0 and (r_sol - s_sol) >= 0.02:
         return "sam2_collapsed_major_indents"
-    if s_sol <= 0.92 and r_sol >= 0.96 and s_ind > r_ind:
+    if s_sol <= 0.94 and r_sol >= 0.98:
         return "sam2_collapsed_to_convex"
-    if s_max >= 0.08 and r_max < 0.04:
+    if s_max >= 0.05 and r_max < 0.03:
         return "sam2_lost_concavities"
+    if r_sol >= 0.995 and s_sol <= 0.97:
+        return "sam2_collapsed_to_convex"
     return None
+
+
+def detach_secondary_from_dominant(dominant: PoolComponent, secondary: PoolComponent | None) -> PoolComponent:
+    """Keep spa/secondary water out of the main-pool contour when they are separable."""
+    if dominant is None or secondary is None or dominant.mask is None or secondary.mask is None:
+        return dominant
+    if dominant.mask.shape != secondary.mask.shape:
+        return dominant
+    cv2 = _cv2()
+    dilated = cv2.dilate(secondary.mask.astype(np.uint8), np.ones((9, 9), np.uint8))
+    new_mask = np.logical_and(dominant.mask, dilated == 0)
+    if float(new_mask.mean()) < 0.45 * max(float(dominant.mask.mean()), 1e-6):
+        return dominant
+    if float(new_mask.mean()) < min_area_for_viewpoint("pool_overview"):
+        return dominant
+    dominant.mask = new_mask
+    return apply_hybrid_geometry(dominant)
+
+
+def fastsam_may_be_scoring_ready(viewpoint: str, clip: dict[str, float] | None) -> bool:
+    """FastSAM planform is only scoring-ready from aerial/near-nadir frames.
+
+    Elevated/oblique FastSAM is retained as presence evidence but is not
+    promoted: balcony turf and similar high-solidity objects otherwise pass.
+    """
+    if viewpoint not in AERIAL_VIEWS:
+        return False
+    if semantic_reject_reason(clip, mode="fastsam_candidate"):
+        return False
+    return float((clip or {}).get("pool") or 0.0) >= 0.22
 
 
 def spa_relationship_from(
@@ -996,14 +1028,18 @@ def fastsam_presence_and_fallback(
             chosen_notes.append("smear_compactness")
             continue
         pool_clip = float((comp.clip or {}).get("pool") or 0.0)
-        if viewpoint in OVERVIEW_VIEWS and pool_clip >= 0.22:
+        if fastsam_may_be_scoring_ready(viewpoint, comp.clip) and pool_clip >= 0.22:
             comp.eligibility_reason = f"{method}_scoring_ready"
             comp.detector = method
             _trace(stages, "scoring_ready_decision", "accepted", comp.eligibility_reason, clip_pool=pool_clip)
             return "fastsam_fallback", comp, True, notes + ["fastsam_box_sam2_accepted", method], presence_comp or comp
-        comp.eligibility_reason = "viewpoint gate rejection" if viewpoint not in OVERVIEW_VIEWS else "semantic_confidence_below_scoring_ready"
+        if viewpoint not in AERIAL_VIEWS:
+            comp.eligibility_reason = "viewpoint gate rejection: fastsam_not_aerial_planform"
+        else:
+            comp.eligibility_reason = "semantic_confidence_below_scoring_ready"
         _trace(stages, "scoring_ready_decision", "rejected", comp.eligibility_reason)
         chosen_comp = comp
+        chosen_notes.append(comp.eligibility_reason)
         break
     keep = chosen_comp or presence_comp
     reason = chosen_notes[0] if chosen_notes else "fastsam_presence_without_valid_boundary"
@@ -1050,11 +1086,14 @@ def extraction_quality(frame: FrameGeometry) -> float:
     ready = 20.0 if frame.scoring_ready else 0.0
     deck_pen = 2.0 * max(0.0, deck - pool) if deck >= pool + 0.12 else 0.0
     geom = frame.dominant.get("geometry") or {}
+    n_indents = int(geom.get("n_major_indents") or 0)
+    solidity = float(geom.get("solidity") or 1.0)
+    max_indent = float(geom.get("max_indent") or 0.0)
     collapse = 0.0
-    if int(geom.get("n_major_indents") or 0) == 0 and float(geom.get("solidity") or 1.0) >= 0.97:
-        # slight penalty for generic high-solidity rectangles vs structured masks
-        collapse = 0.15
-    return ready + 8.0 * view + src + 3.0 * pool - veg - deck_pen - collapse + float(
+    if n_indents == 0 and solidity >= 0.97:
+        collapse = 1.6
+    structure = min(2.4, 0.7 * n_indents + 1.2 * max(0.0, 0.96 - solidity) + 0.8 * max(0.0, max_indent - 0.04))
+    return ready + 8.0 * view + src + 3.0 * pool - veg - deck_pen - collapse + structure + float(
         frame.dominant.get("structural_support") or 0.0
     )
 
@@ -1137,6 +1176,8 @@ def extract_frame_geometry(media_id: str, image_bytes: bytes, *, viewpoint: str 
                 reason = "yoloe_valid_sam2_rejected_or_unhelpful"
                 chosen = dominant
                 _trace(stages, "contour_cleanup", "rejected", sam_reason, kept="yoloe_mask")
+            if chosen is not None and secondary is not None:
+                chosen = detach_secondary_from_dominant(chosen, secondary)
         elif viewpoint == "pool_closeup":
             source = "yoloe"
             reason = "closeup_recorded_not_overview"
@@ -1191,6 +1232,10 @@ def extract_frame_geometry(media_id: str, image_bytes: bytes, *, viewpoint: str 
     )
     if source == "presence_only":
         scoring_ready = False
+    if source == "fastsam_fallback" and not fastsam_may_be_scoring_ready(viewpoint, None if chosen is None else chosen.clip):
+        scoring_ready = False
+        if reason in {"no_valid_yoloe_fastsam_selected", "ok"}:
+            reason = "viewpoint gate rejection: fastsam_not_aerial_planform"
     if scoring_ready:
         scoring_reason = reason
         _trace(stages, "scoring_ready_decision", "accepted", scoring_reason)
@@ -1269,8 +1314,8 @@ def combine_listing_frames(frames: list[FrameGeometry]) -> dict[str, Any]:
             pool,
             key=lambda f: (
                 VIEW_GEOMETRY_RANK.get(f.viewpoint, 0),
-                SOURCE_RANK.get(f.source, -1),
                 extraction_quality(f),
+                SOURCE_RANK.get(f.source, -1),
                 float(f.dominant.get("structural_support") or 0.0) if f.dominant else 0.0,
                 float(f.yoloe_conf or 0.0),
             ),

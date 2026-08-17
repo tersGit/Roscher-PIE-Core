@@ -198,6 +198,17 @@ def test_dominant_is_largest_plausible_not_tiny_secondary():
     assert rel["relative_size"] < 0.55
 
 
+def test_fastsam_scoring_ready_is_aerial_only():
+    from backend.gis.estate_ags_matching.hybrid_listing_pool_geometry_v1 import fastsam_may_be_scoring_ready
+
+    water = _clip(pool=0.55, vegetation=0.02, deck=0.18)
+    turf_dom = _clip(pool=0.22, vegetation=0.11, deck=0.62)
+    assert fastsam_may_be_scoring_ready("aerial_near_nadir", water) is True
+    assert fastsam_may_be_scoring_ready("elevated_exterior", water) is False
+    assert fastsam_may_be_scoring_ready("pool_overview", water) is False
+    assert fastsam_may_be_scoring_ready("aerial_near_nadir", turf_dom) is False
+
+
 def test_fastsam_prefers_pool_clip_over_deck_turf():
     turf = _clip(pool=0.22, vegetation=0.11, deck=0.62)
     water = _clip(pool=0.55, vegetation=0.02, deck=0.18)
