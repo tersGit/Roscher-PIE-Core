@@ -1,0 +1,100 @@
+{
+  "confirmed_stand": "338",
+  "confidence": "HIGH CONFIDENCE",
+  "determinable": true,
+  "identity": {
+    "listing_id": "117262832",
+    "published_street_text": "1 Carlswald North Estate, 1 Soetdoring",
+    "cadastral_street_if_text_taken_literally": "1 SOETDORING CLOSE",
+    "text_literal_stand": "344",
+    "property24_coordinates": {"latitude": -25.967137, "longitude": 28.098919},
+    "pin_inside_parcel": "338",
+    "pin_street": "14 SOETDORING CLOSE",
+    "township": "SUMMERSET EXT.6",
+    "coj_area_sqm_338": 869.0,
+    "listing_erf_sqm": 869.0,
+    "note": "Published street text and map pin disagree. Pin + visual + erf corroboration identify 338. Text-literal stand 344 is rejected."
+  },
+  "street_text_conflict": {
+    "property24_title": "1 Carlswald North Estate, 1 Soetdoring",
+    "private_property_url": "https://www.privateproperty.co.za/for-sale/gauteng/johannesburg/midrand/carlswald-north-estate/1-carlswald-north-estate/1-soetdoring/T5502075",
+    "coj_street_no_1_soetdoring": {
+      "stand_number": "344",
+      "street_address": "1 SOETDORING CLOSE",
+      "area_sqm": 1060.0,
+      "inventory_pool_status": "NO",
+      "frozen_rank": null,
+      "pool_gated_out": true,
+      "native15_visual": "older terracotta house, no pool, eastern estate perimeter; does not match 2026 listing night aerial"
+    },
+    "resolution": "Treat '1 Soetdoring' as a copied portal address error. Do not use unique 869 m2 as identity. Use P24 coordinates, which fall uniquely inside stand 338."
+  },
+  "evidence": [
+    {
+      "type": "property24_title_and_schema_street",
+      "value": "1 Carlswald North Estate, 1 Soetdoring",
+      "url": "https://www.property24.com/for-sale/carlswald-north-estate/midrand/gauteng/12743/117262832",
+      "used_as_sole_truth": false
+    },
+    {
+      "type": "private_property_cross_listing",
+      "listing_number": "T5502075",
+      "address": "1 carlswald north estate, 1 soetdoring",
+      "land_size_sqm": 869,
+      "floor_size_sqm": 510,
+      "beds": 4,
+      "baths": 3.5,
+      "listed": "28 May 2026",
+      "url": "https://www.privateproperty.co.za/for-sale/gauteng/johannesburg/midrand/carlswald-north-estate/1-carlswald-north-estate/1-soetdoring/T5502075"
+    },
+    {
+      "type": "property24_map_coordinates",
+      "latitude": -25.967137,
+      "longitude": 28.098919,
+      "inside_gis_parcel": "338",
+      "distance_to_338_centroid_m": 9.3,
+      "distance_to_344_centroid_m": 163.2,
+      "distance_to_estate_centroid_m": 328.3,
+      "not_a_suburb_centroid_drop": true
+    },
+    {
+      "type": "coj_registered_stand",
+      "stand_number": "338",
+      "township": "SUMMERSET EXT.6",
+      "street_address": "14 SOETDORING CLOSE",
+      "area_sqm": 869.0,
+      "property_id": 1490365
+    },
+    {
+      "type": "listing_erf_corroboration_only",
+      "listing_erf_sqm": 869.0,
+      "gis_338_sqm": 869.0,
+      "gis_344_sqm": 1060.0,
+      "used_as_identity": false,
+      "note": "Exact 869 m2 match is corroboration after the pin, not the identity rule."
+    },
+    {
+      "type": "native15_visual_compatibility",
+      "stand_338": "dark gabled roof, elongated rectangular backyard pool, internal close near The Boulevard junction",
+      "stand_344": "rejected: terracotta house, no pool, cul-de-sac backing onto perimeter road",
+      "listing_photos": "modern dark dual-gable house, long rectangular glowing pool, STOP/junction context, internal estate"
+    },
+    {
+      "type": "top5_not_used_as_truth",
+      "frozen_top5_visually_false": ["654", "467", "405", "644", "456"],
+      "inferred_from_pie_rank": false
+    }
+  ],
+  "visual": {
+    "stand_in_complete_gis": true,
+    "inventory_pool_status": "UNKNOWN",
+    "os_pool_status": "REJECTED",
+    "township": "SUMMERSET EXT.6",
+    "area_sqm": 869.0,
+    "street_address": "14 SOETDORING CLOSE",
+    "proof": "data/investigations/blind_117262832_complete_estate/true_stand_338_geometry_proof.png"
+  },
+  "inferred_from_pie_rank": false,
+  "ground_truth_applied_to_ranking": false,
+  "freeze_modified": false
+}

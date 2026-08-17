@@ -1,0 +1,28 @@
+{
+  "determinable": true,
+  "confidence": "HIGH CONFIDENCE",
+  "true_stand": "338",
+  "township": "SUMMERSET EXT.6",
+  "street_address": "14 SOETDORING CLOSE",
+  "frozen_rank_of_332": 122,
+  "frozen_score": 0.5847,
+  "inventory_pool_status": "UNKNOWN",
+  "os_pool_status": "REJECTED",
+  "os_high_conf_pool": false,
+  "shape_v2": null,
+  "components": {
+    "pool_presence": 0.07,
+    "shape_v2": 0.18,
+    "spatial_v2": 0.11,
+    "aerial": 0.0953,
+    "exterior": 0.0444,
+    "gis": 0.015,
+    "stand_size": 0.07
+  },
+  "shape_v2_value": null,
+  "top5_manually_false": ["654", "467", "405", "644", "456"],
+  "outcome": "MISS_OUTSIDE_TOP20",
+  "freeze_sha256": "32ecd4b526d4a299e143c869761664a9ed7a4b2d9ae65aba6ed300583a1dd10a",
+  "ranking_modified": false,
+  "note": "Forensic only. Frozen ranking was not recomputed. Rank was not used as identity."
+}
