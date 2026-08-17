@@ -1,0 +1,41 @@
+{
+  "confirmed_stand": null,
+  "confidence": "NOT DETERMINABLE",
+  "determinable": false,
+  "identity": {
+    "title": "5 Bedroom House for sale in Carlswald North Estate - P24-116889694",
+    "stand_mentions": [],
+    "street": null,
+    "street_withheld_contact_agent": true,
+    "address_locality": "Carlswald North Estate",
+    "coordinates_present": false
+  },
+  "gis_street_matches": [],
+  "coj_matches": [],
+    "evidence": [
+      {
+        "type": "public_listing_identity_withheld",
+        "street_withheld_contact_agent": true,
+        "coordinates_present": false,
+        "note": "Public Property24 page does not publish street or stand. Rank was not used as truth."
+      },
+      {
+        "type": "independent_public_search_after_freeze",
+        "sources": [
+          "https://www.property24.com/for-sale/carlswald-north-estate/midrand/gauteng/12743/116889694",
+          "https://www.privateproperty.co.za/for-sale/gauteng/johannesburg/midrand/carlswald-north-estate/T5378240",
+          "https://www.sothebysrealty.co.za/results/residential/for-sale/midrand/carlswald-north-estate/house/3046424/"
+        ],
+        "agent": "Chris Stewart",
+        "street_published": false,
+        "stand_published": false,
+        "gis_exact_920_sqm_stands": ["345", "397", "648", "438"],
+        "gis_exact_used_as_truth": false,
+        "top1_used_as_truth": false,
+        "note": "920 m² is not unique in GIS 002. Rank was not used as identity."
+      }
+    ],
+  "visual": null,
+  "inferred_from_pie_rank": false,
+  "previous_001_hybrid_ranking_also_had_no_independent_gt": true
+}
