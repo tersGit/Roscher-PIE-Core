@@ -1,0 +1,41 @@
+{
+  "ground_truth": {
+    "confirmed_stand": null,
+    "confidence": "NOT DETERMINABLE",
+    "determinable": false
+  },
+  "evaluation": {
+    "determinable": false,
+    "outcome": null,
+    "official_class": "UNLABELLED — GROUND TRUTH UNAVAILABLE",
+    "note": "Ground truth could not be established independently. Frozen ranking was not used as truth. Unique GIS erf-size match (stand 508) was recorded and rejected."
+  },
+  "detector": null,
+  "comparison_vs_116273255": {
+    "previous_freeze_found": true,
+    "previous_listing_id": "116273255",
+    "previous_path": "data/investigations/blind_116273255_complete_estate/freeze.json",
+    "previous_sha256": "227a67c7100639300916d3a405da6030ff90b5d1dff54209c0160290c24ba500",
+    "overlap_top5": [],
+    "overlap_top20": [],
+    "n_overlap_top20": 0,
+    "watch_families": {
+      "334_family": {
+        "current_ranks": [115],
+        "previous_ranks": [1],
+        "current_score": 0.5687,
+        "note": "PR #18 Top 1 is rank 115 on this unrelated listing."
+      },
+      "373_family": {
+        "current_ranks": [119],
+        "previous_ranks": [2],
+        "current_score": 0.5591,
+        "note": "PR #18 Top 2 is rank 119 on this unrelated listing."
+      }
+    },
+    "possible_candidate_ranking_bias": false,
+    "listing_specific": true,
+    "caveat": "Top 20 is listing-specific versus 116273255, but #1-#5 scores are nearly tied (gap 0.0042) among many inventory-YES pools. Specificity of the shortlist is not the same as identification of one erf.",
+    "note": "Overlap across unrelated listings is a bias flag, not proof of a match."
+  }
+}

@@ -55,6 +55,8 @@ from backend.gis.estate_ags_matching.hybrid_geometry_ranking_test import (
     score_one_candidate,
 )
 from backend.gis.estate_ags_matching.listing_pool_gate_v1 import apply_listing_pool_gate
+from backend.gis.estate_ags_matching.os_scoring_v2 import V2_WEIGHTS_NO_BUILDING
+from backend.gis.estate_ags_matching.pool_geometry import PoolGeometryFingerprint
 from backend.gis.estate_ags_matching.listing_pool_object import (
     observation_public,
     observe_pool_object,
@@ -89,12 +91,28 @@ FROZEN_001_INVENTORY_SHA256 = "3bc02c09c293d011b8f2d866b2075e3e9863cc9af9db5c054
 STAND_LEAK_RE = re.compile(
     r"(?i)\bstand\s*(?:no\.?|number|#)?\s*[:.]?\s*[0-9]+(?:/[0-9]+)?[A-Z]?\b"
 )
+ERF_LEAK_RE = re.compile(
+    r"(?i)\berf\s*(?:no\.?|number|#)?\s*[:.]?\s*[0-9]+(?:/[0-9]+)?[A-Z]?\b"
+)
 STREET_RE = re.compile(
     r"(?i)\b\d{1,5}[A-Za-z]?\s+[A-Za-z][A-Za-z0-9'\-]*(?:\s+[A-Za-z][A-Za-z0-9'\-]*){0,4}"
     r"\s+(?:street|st\.?|road|rd\.?|drive|dr\.?|close|avenue|ave\.?|way|crescent|cres\.?)\b"
 )
 POOL_TEXT_RE = re.compile(
     r"(?i)\b(?:private\s+pool|l-?shaped\s+pool|swimming\s+pool|pool)\b"
+)
+NO_POOL_TEXT_RE = re.compile(
+    r"(?i)\b(?:no\s+(?:private\s+|swimming\s+)?pool|without\s+(?:a\s+)?(?:swimming\s+)?pool|pool-?less)\b"
+)
+HYBRID_INTERESTING = frozenset(
+    {
+        "pool_overview",
+        "elevated_exterior",
+        "ground_level_exterior",
+        "aerial_near_nadir",
+        "pool_closeup",
+        "garden_only",
+    }
 )
 FEATURE_TERMS = (
     "private pool",
@@ -135,6 +153,7 @@ def redact_identity(text: str | None) -> str:
     if not text:
         return ""
     cleaned = STAND_LEAK_RE.sub("[STAND_REDACTED]", text)
+    cleaned = ERF_LEAK_RE.sub("[ERF_REDACTED]", cleaned)
     cleaned = STREET_RE.sub("[STREET_REDACTED]", cleaned)
     cleaned = re.sub(r"(?is)<title>.*?</title>", "<title>[TITLE_REDACTED]</title>", cleaned)
     return cleaned
@@ -159,6 +178,70 @@ def load_hybrid_block(listing_id: str = LISTING_ID) -> dict[str, Any]:
         if block["listing_id"] == listing_id:
             return block
     raise KeyError(listing_id)
+
+
+def extract_hybrid_block(
+    listing_id: str,
+    photos: Mapping[str, bytes],
+    *,
+    dest: Path | None = None,
+) -> dict[str, Any]:
+    """Run frozen Hybrid Pool Geometry v1 on this listing. Does not retune Hybrid."""
+    from backend.gis.estate_ags_matching.hybrid_listing_pool_geometry_v1 import (
+        combine_listing_frames,
+        extract_frame_geometry,
+        frame_public,
+    )
+    from backend.gis.estate_ags_matching.listing_evidence_v2 import (
+        clip_viewpoint_scores,
+        observe_listing_frame,
+    )
+    from backend.gis.estate_ags_matching.pool_boundary_v1 import SKIP_VIEWS
+
+    frozen = []
+    frames = []
+    for media_id, body in sorted(photos.items()):
+        image = Image.open(io.BytesIO(body)).convert("RGB")
+        scores = clip_viewpoint_scores(image)
+        observed = observe_listing_frame(media_id, body, clip_scores=scores)
+        frozen.append(observed)
+        if observed.viewpoint in SKIP_VIEWS:
+            continue
+        if observed.viewpoint not in HYBRID_INTERESTING:
+            continue
+        frames.append(extract_frame_geometry(media_id, body, viewpoint=observed.viewpoint))
+    listing = combine_listing_frames(frames)
+    block = {
+        "listing_id": listing_id,
+        "n_photos": len(photos),
+        "viewpoint_counts": dict(Counter(item.viewpoint for item in frozen)),
+        "n_extracted": len(frames),
+        "source_counts": dict(Counter(item.source for item in frames)),
+        "listing": listing,
+        "dark_overview_probe": [],
+        "frames": [frame_public(item) for item in frames],
+        "extracted_fresh_with_frozen_hybrid_v1": True,
+        "hybrid_v1_modified": False,
+        "listing_specific_control_suffixes": False,
+    }
+    if dest is not None:
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(json.dumps(block, indent=2) + "\n", encoding="utf-8")
+    return block
+
+
+def load_or_extract_hybrid_block(
+    listing_id: str,
+    photos: Mapping[str, bytes] | None = None,
+    *,
+    dest: Path | None = None,
+) -> dict[str, Any]:
+    try:
+        return load_hybrid_block(listing_id)
+    except KeyError:
+        if not photos:
+            raise
+        return extract_hybrid_block(listing_id, photos, dest=dest)
 
 
 def load_os_payload(stand: str) -> dict[str, Any]:
@@ -237,7 +320,8 @@ def acquire_listing(
         "video_available": bool(listing.video_urls),
         "video_count": len(listing.video_urls),
         "feature_hits": hits,
-        "pool_text_present": bool(POOL_TEXT_RE.search(redacted)),
+        "pool_text_present": bool(POOL_TEXT_RE.search(redacted)) and not bool(NO_POOL_TEXT_RE.search(redacted)),
+        "no_pool_text_present": bool(NO_POOL_TEXT_RE.search(redacted)),
         "identity_redacted": True,
         "title_omitted": True,
         "street_omitted": True,
@@ -310,6 +394,8 @@ def classify_listing_pool_status(
 ) -> dict[str, Any]:
     evidence: list[str] = []
     text_yes = bool(acquisition.get("pool_text_present") or "private pool" in acquisition.get("feature_hits") or [])
+    text_blob = " ".join(str(item) for item in (acquisition.get("feature_hits") or []))
+    text_no = bool(NO_POOL_TEXT_RE.search(text_blob)) or bool(acquisition.get("no_pool_text_present"))
     if text_yes:
         evidence.append("listing_text_mentions_pool")
     if "l-shaped pool" in (acquisition.get("feature_hits") or []) or "l shaped pool" in (
@@ -339,6 +425,9 @@ def classify_listing_pool_status(
     elif text_yes:
         status = "YES"
         reason = "listing_text_pool_without_media_confirmation"
+    elif text_no and not media_yes:
+        status = "NO"
+        reason = "listing_text_denies_pool_and_media_do_not_support_pool"
     else:
         status = "UNKNOWN"
         reason = "insufficient_listing_pool_evidence"
@@ -347,6 +436,7 @@ def classify_listing_pool_status(
         "reason": reason,
         "evidence": evidence,
         "text_yes": text_yes,
+        "text_no": text_no,
         "media_yes": media_yes,
         "colour_used": False,
         "ground_truth_used": False,
@@ -389,6 +479,26 @@ def listing_fingerprint(hybrid_block: Mapping[str, Any], photo_classes: Mapping[
         "colour_used_in_ranking": False,
         "photo_scene_counts": photo_classes.get("scene_counts"),
         "hybrid_viewpoint_counts": hybrid_block.get("viewpoint_counts"),
+        "available": {
+            "pool_geometry": bool(evidence.get("fingerprint") and evidence["fingerprint"].present),
+            "pool_to_house_spatial": False,
+            "listing_aerial": bool((photo_classes.get("scene_counts") or {}).get("aerial")),
+            "listing_exterior": bool(photo_classes.get("exterior_photo_count")),
+            "driveway_views": bool(photo_classes.get("driveway_photo_count")),
+            "garden_views": bool(photo_classes.get("garden_photo_count")),
+            "hybrid_scoring_ready": bool(evidence.get("scoring_ready_ids")),
+        },
+        "unavailable": [
+            key
+            for key, ok in {
+                "pool_geometry": bool(evidence.get("fingerprint") and evidence["fingerprint"].present),
+                "pool_to_house_spatial": False,
+                "nadir_relative_area": False,
+                "roof_footprint_as_scoring_term": False,
+                "driveway_as_scoring_v2_spatial": False,
+            }.items()
+            if not ok
+        ],
     }
     return {
         "hybrid_evidence": {
@@ -401,7 +511,8 @@ def listing_fingerprint(hybrid_block: Mapping[str, Any], photo_classes: Mapping[
             "listing_shape": public_shape(evidence["listing_shape"]),
         },
         "qualitative": qualitative,
-        "fingerprint_obj": evidence["fingerprint"],
+        "fingerprint_obj": evidence["fingerprint"]
+        or PoolGeometryFingerprint(present=False, unknown=True, notes=["no_scoring_ready_hybrid_frame"]),
         "listing_shape_obj": evidence["listing_shape"],
         "evidence_obj": evidence,
     }
@@ -555,6 +666,7 @@ def top_n(rows: Sequence[Mapping[str, Any]], n: int) -> list[dict[str, Any]]:
             {
                 "rank": row["hybrid_v2_rank"],
                 "stand_number": row["stand_number"],
+                "property_id": row.get("property_id"),
                 "township": row.get("township"),
                 "area_sqm": row.get("area_sqm"),
                 "score": row["hybrid_v2"],
@@ -576,9 +688,62 @@ def top_n(rows: Sequence[Mapping[str, Any]], n: int) -> list[dict[str, Any]]:
                     key=lambda item: -float(item[1]),
                 )[:5],
                 "spatial_record": row.get("spatial_record"),
+                "neutral_components": _neutral_components(row),
             }
         )
     return slim
+
+
+def _neutral_components(row: Mapping[str, Any]) -> list[str]:
+    notes = []
+    if row.get("aerial_similarity") is None:
+        notes.append("aerial=0.5_neutral_missing_listing_aerial")
+    if row.get("exterior_similarity") is None:
+        notes.append("exterior=0.5_neutral_missing_listing_exterior")
+    if row.get("hybrid_v2_spatial_v2") is None:
+        notes.append("spatial_v2=0.5_neutral_hybrid_omits_pool_house")
+    if row.get("hybrid_v2_shape_v2") is None:
+        notes.append("shape_v2=0.5_neutral_no_listing_or_candidate_contour")
+    if not row.get("os_high_conf_pool"):
+        notes.append("pool_presence=0.5_neutral_no_high_conf_os_pool_or_listing_geometry")
+    return notes
+
+
+def ranking_separation(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+    ordered = sorted(rows, key=lambda row: int(row["hybrid_v2_rank"]))
+    if len(ordered) < 2:
+        return {"n": len(ordered)}
+    s1 = float(ordered[0]["hybrid_v2"])
+    s2 = float(ordered[1]["hybrid_v2"])
+    s5 = float(ordered[min(4, len(ordered) - 1)]["hybrid_v2"])
+    top1 = ordered[0]
+    contrib = dict(top1.get("hybrid_v2_contrib") or {})
+    weights = dict(V2_WEIGHTS_NO_BUILDING)
+    genuine = []
+    padding = []
+    for key, weight in weights.items():
+        value = contrib.get(key)
+        if value is None:
+            continue
+        expected_neutral = 0.5 * weight
+        if abs(float(value) - expected_neutral) <= 0.0015:
+            padding.append({"term": key, "contrib": value, "weight": weight})
+        else:
+            genuine.append({"term": key, "contrib": value, "weight": weight})
+    genuine.sort(key=lambda item: -float(item["contrib"]))
+    return {
+        "top1_score": s1,
+        "top2_score": s2,
+        "top5_score": s5,
+        "top5_score_range": [s5, s1],
+        "gap_1_2": round(s1 - s2, 4),
+        "gap_1_5": round(s1 - s5, 4),
+        "top1_stand": top1.get("stand_number"),
+        "top1_genuine_drivers": genuine,
+        "top1_neutral_padding": padding,
+        "top1_neutral_notes": _neutral_components(top1),
+        "weights": weights,
+    }
 
 
 def gate_public(result) -> dict[str, Any]:
@@ -603,6 +768,8 @@ def freeze_payload(
     fingerprint: Mapping[str, Any],
     rows: Sequence[Mapping[str, Any]],
     crop_stats: Mapping[str, Any],
+    listing_id: str = LISTING_ID,
+    experiment: str | None = None,
 ) -> dict[str, Any]:
     acq = {
         key: val
@@ -623,9 +790,9 @@ def freeze_payload(
     )
     ranked = sorted(rows, key=lambda row: int(row["hybrid_v2_rank"]))
     body = {
-        "experiment": "blind_116273255_complete_estate",
+        "experiment": experiment or f"blind_{listing_id}_complete_estate",
         "dataset_id": DATASET_ID,
-        "listing_id": LISTING_ID,
+        "listing_id": listing_id,
         "rankings_frozen": True,
         "ground_truth_applied": False,
         "production_ranking_modified": False,
@@ -650,10 +817,25 @@ def freeze_payload(
         "crop_stats": crop_stats,
         "ranking": {
             "n_candidates": len(ranked),
+            "separation": ranking_separation(ranked),
             "top20": top_n(ranked, 20),
             "top10": top_n(ranked, 10),
             "top5": top_n(ranked, 5),
             "top1": None if not ranked else top_n(ranked, 1)[0],
+        },
+        "ranking_configuration": {
+            "official_score": "hybrid_v2",
+            "scoring_v2_weights": dict(V2_WEIGHTS_NO_BUILDING),
+            "os_keys": ["pool_presence", "shape_v2", "spatial_v2"],
+            "hybrid_pool_geometry": "v1",
+            "os_v1": "object_segmentation_v1",
+            "fastsam_imgsz": 512,
+            "native15": True,
+            "clip": "ViT-B-32 openai",
+            "pool_gate": "listing_pool_gate_v1",
+            "inventory": "estate_property_inventory_v1",
+            "dataset_id": DATASET_ID,
+            "colour_used_in_ranking": False,
         },
         "frozen_001_untouched": {
             "gis_sha256_expected": FROZEN_001_GIS_SHA256,
@@ -667,7 +849,12 @@ def freeze_payload(
     return body
 
 
-def write_freeze(payload: Mapping[str, Any], rows: Sequence[Mapping[str, Any]], dest: Path = FREEZE_PATH) -> str:
+def write_freeze(
+    payload: Mapping[str, Any],
+    rows: Sequence[Mapping[str, Any]],
+    dest: Path = FREEZE_PATH,
+    all_candidates: Path | None = None,
+) -> str:
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     slim = []
@@ -676,6 +863,7 @@ def write_freeze(payload: Mapping[str, Any], rows: Sequence[Mapping[str, Any]], 
             {
                 "rank": row["hybrid_v2_rank"],
                 "stand_number": row["stand_number"],
+                "property_id": row.get("property_id"),
                 "township": row.get("township"),
                 "area_sqm": row.get("area_sqm"),
                 "score": row["hybrid_v2"],
@@ -690,7 +878,8 @@ def write_freeze(payload: Mapping[str, Any], rows: Sequence[Mapping[str, Any]], 
                 "contrib": row.get("hybrid_v2_contrib"),
             }
         )
-    ALL_CANDIDATES_PATH.write_text(
+    candidates_path = all_candidates or dest.with_name("all_candidates.json")
+    candidates_path.write_text(
         json.dumps({"n": len(slim), "rows": slim}, indent=2) + "\n",
         encoding="utf-8",
     )
@@ -829,19 +1018,33 @@ def draw_top5_panels(
     return written
 
 
-def run_freeze(*, observe_objects: bool = True) -> dict[str, Any]:
+def run_freeze(
+    *,
+    observe_objects: bool = True,
+    listing_id: str = LISTING_ID,
+    listing_url: str = LISTING_URL,
+    out_dir: Path | None = None,
+    write_panels: bool = True,
+) -> dict[str, Any]:
     started = time.time()
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    dest = Path(out_dir) if out_dir is not None else REPO_ROOT / "data/investigations" / f"blind_{listing_id}_complete_estate"
+    photos_dir = dest / "photos"
+    freeze_path = dest / "freeze.json"
+    dest.mkdir(parents=True, exist_ok=True)
     dataset = load_gis_002()
     parcels = pass1_parcels(dataset)
     inventory = load_inventory_002()
     if len(parcels) != 400:
         raise RuntimeError(f"expected 400 unique erven, got {len(parcels)}")
 
-    acquisition = acquire_listing()
+    acquisition = acquire_listing(url=listing_url, listing_id=listing_id, photos_dir=photos_dir)
     photos = acquisition["photos"]
     photo_classes = classify_listing_photos(photos)
-    hybrid_block = load_hybrid_block()
+    hybrid_block = load_or_extract_hybrid_block(
+        listing_id,
+        photos,
+        dest=dest / "hybrid_block.json",
+    )
     object_obs = observe_pool_media(photos, photo_classes["scenes"]) if observe_objects else None
     listing_pool = classify_listing_pool_status(acquisition, hybrid_block, photo_classes, object_obs)
     if object_obs is not None:
@@ -882,12 +1085,15 @@ def run_freeze(*, observe_objects: bool = True) -> dict[str, Any]:
         fingerprint=fingerprint,
         rows=rows,
         crop_stats=crop_stats,
+        listing_id=listing_id,
     )
     marker_runtime = round(time.time() - started, 2)
-    digest = write_freeze(payload, rows)
-    panels = draw_top5_panels(rows, photos, photo_classes, dataset)
+    digest = write_freeze(payload, rows, dest=freeze_path)
+    panels = []
+    if write_panels:
+        panels = draw_top5_panels(rows, photos, photo_classes, dataset, dest=dest / "panels")
     marker = {
-        "freeze_path": str(FREEZE_PATH.relative_to(REPO_ROOT)),
+        "freeze_path": str(freeze_path.relative_to(REPO_ROOT)),
         "sha256": digest,
         "ground_truth_applied": False,
         "panels": panels,
@@ -896,8 +1102,8 @@ def run_freeze(*, observe_objects: bool = True) -> dict[str, Any]:
         "final_survivor_count": gate.total_survivors,
         "runtime_s_freeze": marker_runtime,
     }
-    (OUT_DIR / "rankings_frozen.json").write_text(json.dumps(marker, indent=2) + "\n", encoding="utf-8")
-    return {"payload": payload, "rows": rows, "marker": marker, "photos": photos, "dataset": dataset}
+    (dest / "rankings_frozen.json").write_text(json.dumps(marker, indent=2) + "\n", encoding="utf-8")
+    return {"payload": payload, "rows": rows, "marker": marker, "photos": photos, "dataset": dataset, "out_dir": dest}
 
 
 def extract_identity_from_html(html: str) -> dict[str, Any]:
@@ -1244,14 +1450,27 @@ def evaluate_true_property(freeze: Mapping[str, Any], gt: Mapping[str, Any], row
     }
 
 
-def write_report(freeze: Mapping[str, Any], gt: Mapping[str, Any] | None, evaluation: Mapping[str, Any] | None, detector: Mapping[str, Any] | None, panels: Sequence[str]) -> None:
+def write_report(
+    freeze: Mapping[str, Any],
+    gt: Mapping[str, Any] | None,
+    evaluation: Mapping[str, Any] | None,
+    detector: Mapping[str, Any] | None,
+    panels: Sequence[str],
+    dest: Path | None = None,
+) -> None:
     acq = freeze.get("acquisition") or {}
     listing_pool = freeze.get("listing_pool_gate") or {}
     gate = freeze.get("estate_pool_gate") or {}
     ranking = freeze.get("ranking") or {}
     fp = ((freeze.get("listing_fingerprint") or {}).get("qualitative") or {})
+    listing_id = freeze.get("listing_id") or LISTING_ID
+    freeze_rel = (dest or REPORT_PATH).parent / "freeze.json"
+    try:
+        freeze_rel = freeze_rel.relative_to(REPO_ROOT)
+    except ValueError:
+        freeze_rel = freeze_rel
     lines = [
-        "# Blind PIE benchmark — listing 116273255 on carlswald_north_corrected_002",
+        f"# Blind PIE benchmark — listing {listing_id} on carlswald_north_corrected_002",
         "",
         "Detector parameters, Scoring v2 weights, Hybrid v1, OS v1, FastSAM, native15, and inventory labels were not changed.",
         "",
@@ -1271,7 +1490,7 @@ def write_report(freeze: Mapping[str, Any], gt: Mapping[str, Any] | None, evalua
         json.dumps(ranking.get("top20"), indent=2),
         "",
         "## F. Frozen artifact",
-        f"- path: `{FREEZE_PATH.relative_to(REPO_ROOT)}`",
+        f"- path: `{freeze_rel}`",
         f"- sha256: `{freeze.get('sha256')}`",
         "",
         "## G. Top-5 proof panels",
@@ -1296,15 +1515,65 @@ def write_report(freeze: Mapping[str, Any], gt: Mapping[str, Any] | None, evalua
         )
     else:
         lines.append("Ground truth was not independently confirmed; frozen ranking is preserved as a blind result.")
-    REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    path = dest or REPORT_PATH
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def run_after_freeze() -> dict[str, Any]:
-    if not FREEZE_PATH.is_file():
+def compare_repeat_candidates(
+    current_top20: Sequence[Mapping[str, Any]],
+    previous_freeze_path: Path,
+) -> dict[str, Any]:
+    if not previous_freeze_path.is_file():
+        return {"previous_freeze_found": False}
+    previous = json.loads(previous_freeze_path.read_text(encoding="utf-8"))
+    prev_rows = (previous.get("ranking") or {}).get("top20") or []
+    cur_ids = [str(row.get("stand_number")) for row in current_top20]
+    prev_ids = [str(row.get("stand_number")) for row in prev_rows]
+
+    def _family(stand: str) -> str:
+        return str(stand).replace("RE/", "").replace("1/", "")
+
+    overlap_top20 = [stand for stand in cur_ids if stand in prev_ids]
+    overlap_top5 = [stand for stand in cur_ids[:5] if stand in prev_ids[:5]]
+    watch = {
+        "334_family": {
+            "current_ranks": [i + 1 for i, stand in enumerate(cur_ids) if _family(stand) == "334"],
+            "previous_ranks": [i + 1 for i, stand in enumerate(prev_ids) if _family(stand) == "334"],
+        },
+        "373_family": {
+            "current_ranks": [i + 1 for i, stand in enumerate(cur_ids) if _family(stand) == "373"],
+            "previous_ranks": [i + 1 for i, stand in enumerate(prev_ids) if _family(stand) == "373"],
+        },
+    }
+    bias = bool(overlap_top5) or (len(overlap_top20) >= 8)
+    return {
+        "previous_freeze_found": True,
+        "previous_listing_id": previous.get("listing_id"),
+        "previous_path": str(previous_freeze_path.relative_to(REPO_ROOT)),
+        "overlap_top5": overlap_top5,
+        "overlap_top20": overlap_top20,
+        "n_overlap_top20": len(overlap_top20),
+        "watch_families": watch,
+        "possible_candidate_ranking_bias": bias,
+        "note": "Overlap across unrelated listings is a bias flag, not proof of a match.",
+    }
+
+
+def run_after_freeze(
+    *,
+    listing_id: str = LISTING_ID,
+    listing_url: str = LISTING_URL,
+    out_dir: Path | None = None,
+    compare_previous: Path | None = None,
+) -> dict[str, Any]:
+    dest = Path(out_dir) if out_dir is not None else REPO_ROOT / "data/investigations" / f"blind_{listing_id}_complete_estate"
+    freeze_path = dest / "freeze.json"
+    all_path = dest / "all_candidates.json"
+    if not freeze_path.is_file():
         raise FileNotFoundError("freeze.json missing; refuse to look up ground truth")
-    freeze = json.loads(FREEZE_PATH.read_text(encoding="utf-8"))
-    rows = json.loads(ALL_CANDIDATES_PATH.read_text(encoding="utf-8"))["rows"]
-    # Rebuild hybrid_v2_rank key expected by evaluate
+    freeze = json.loads(freeze_path.read_text(encoding="utf-8"))
+    rows = json.loads(all_path.read_text(encoding="utf-8"))["rows"]
     for row in rows:
         row["hybrid_v2"] = row.get("score")
         row["hybrid_v2_rank"] = row.get("rank")
@@ -1314,26 +1583,40 @@ def run_after_freeze() -> dict[str, Any]:
     import httpx
 
     with httpx.Client(timeout=40.0, follow_redirects=True, headers={"User-Agent": USER_AGENT}) as client:
-        html = client.get(LISTING_URL).text
+        html = client.get(listing_url).text
     dataset = load_gis_002()
     inventory = load_inventory_002()
     gt = confirm_ground_truth(html, dataset, inventory)
-    GT_PATH.write_text(json.dumps(gt, indent=2) + "\n", encoding="utf-8")
+    (dest / "ground_truth.json").write_text(json.dumps(gt, indent=2) + "\n", encoding="utf-8")
     evaluation = evaluate_true_property(freeze, gt, rows)
     detector = None
     if gt.get("confirmed_stand"):
         detector = detector_on_true_erf(str(gt["confirmed_stand"]), dataset, inventory)
-        DETECTOR_PATH.write_text(json.dumps(detector, indent=2) + "\n", encoding="utf-8")
-    marker = json.loads((OUT_DIR / "rankings_frozen.json").read_text(encoding="utf-8"))
+        (dest / "detector_true_erf.json").write_text(json.dumps(detector, indent=2) + "\n", encoding="utf-8")
+    previous_path = compare_previous or (
+        REPO_ROOT / "data/investigations/blind_116273255_complete_estate/freeze.json"
+        if listing_id != "116273255"
+        else None
+    )
+    comparison = None
+    if previous_path is not None:
+        comparison = compare_repeat_candidates((freeze.get("ranking") or {}).get("top20") or [], Path(previous_path))
+    marker = json.loads((dest / "rankings_frozen.json").read_text(encoding="utf-8"))
+    report_path = dest / "REPORT.md"
     handwritten = None
-    if REPORT_PATH.is_file() and REPORT_PATH.read_text(encoding="utf-8").lstrip().startswith("# Blind PIE benchmark"):
-        handwritten = REPORT_PATH.read_text(encoding="utf-8")
-    write_report(freeze, gt, evaluation, detector, marker.get("panels") or [])
-    (OUT_DIR / "REPORT.auto.md").write_text(REPORT_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+    if report_path.is_file() and report_path.read_text(encoding="utf-8").lstrip().startswith("# Blind PIE benchmark"):
+        handwritten = report_path.read_text(encoding="utf-8")
+    write_report(freeze, gt, evaluation, detector, marker.get("panels") or [], dest=dest / "REPORT.auto.md")
     if handwritten:
-        REPORT_PATH.write_text(handwritten, encoding="utf-8")
-    (OUT_DIR / "evaluation.json").write_text(
-        json.dumps({"ground_truth": gt, "evaluation": evaluation, "detector": detector}, indent=2) + "\n",
+        report_path.write_text(handwritten, encoding="utf-8")
+    elif not report_path.is_file():
+        report_path.write_text((dest / "REPORT.auto.md").read_text(encoding="utf-8"), encoding="utf-8")
+    (dest / "evaluation.json").write_text(
+        json.dumps(
+            {"ground_truth": gt, "evaluation": evaluation, "detector": detector, "comparison_vs_116273255": comparison},
+            indent=2,
+        )
+        + "\n",
         encoding="utf-8",
     )
-    return {"ground_truth": gt, "evaluation": evaluation, "detector": detector}
+    return {"ground_truth": gt, "evaluation": evaluation, "detector": detector, "comparison": comparison}
