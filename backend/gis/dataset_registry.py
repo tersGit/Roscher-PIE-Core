@@ -10,6 +10,10 @@ DEFAULT_REGISTRY = ROOT / "data" / "gis" / "registry.json"
 
 DEPRECATED_CARLSWALD_NORTH_001 = "carlswald_north_001"
 CORRECT_CARLSWALD_NORTH = "carlswald_north_corrected_001"
+# Frozen EXT.6 + EXT.13 universe used by PR #15 / PR #16. Do not overwrite.
+FROZEN_CARLSWALD_NORTH_001 = CORRECT_CARLSWALD_NORTH
+# Complete intended Carlswald North: Summerset EXT.3 + EXT.6 + EXT.13.
+COMPLETE_CARLSWALD_NORTH = "carlswald_north_corrected_002"
 
 
 class DeprecatedDatasetError(RuntimeError):

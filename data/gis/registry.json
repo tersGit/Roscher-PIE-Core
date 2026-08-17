@@ -39,7 +39,32 @@
         "SUMMERSET EXT.6",
         "SUMMERSET EXT.13"
       ],
-      "township_notes": "Official CoJ names use EXT. not EXTENSION. SUMMERSET EXT.2 does not exist in CoJ Property/Township layers. Dataset is EXT.6 + EXT.13 only. CARLSWALD ESTATE townships are excluded."
+      "township_notes": "Official CoJ names use EXT. not EXTENSION. SUMMERSET EXT.2 does not exist in CoJ Property/Township layers. Dataset is EXT.6 + EXT.13 only. Frozen for PR #15/#16 reproducibility. Complete intended universe is carlswald_north_corrected_002 (adds SUMMERSET EXT.3). CARLSWALD ESTATE townships are excluded.",
+      "frozen_for": "PR #15 Estate Property Inventory v1 and PR #16 UNKNOWN diagnostic",
+      "complete_universe": "carlswald_north_corrected_002"
+    },
+    {
+      "dataset_id": "carlswald_north_corrected_002",
+      "status": "active",
+      "deprecated": false,
+      "preferred_for_new_work": true,
+      "estate_names": [
+        "Carlswald North Estate",
+        "Carlswald North"
+      ],
+      "townships": [
+        "SUMMERSET EXT.3",
+        "SUMMERSET EXT.6",
+        "SUMMERSET EXT.13"
+      ],
+      "requested_townships": [
+        "SUMMERSET EXT.3",
+        "SUMMERSET EXT.6",
+        "SUMMERSET EXT.13"
+      ],
+      "township_notes": "Complete intended Carlswald North estate universe. Official CoJ names via Property MapServer layer 8 REGISTERED_STANDS. EXT.3 is proclaimed Summerset, not inferred from spatial proximity. Frozen 001 (EXT.6+EXT.13, 330 unique erven) is kept intact for PR #15/#16.",
+      "supersedes_for_new_work": "carlswald_north_corrected_001",
+      "does_not_replace_frozen_001": true
     }
   ]
 }
