@@ -1,0 +1,70 @@
+{
+  "listing_corner": "YES",
+  "classification": "YES",
+  "confidence": 0.86,
+  "evidence_source": "aerial",
+  "frame_ids": [
+    "117262832-003"
+  ],
+  "text_evidence": [],
+  "aerial_evidence": true,
+  "video_evidence": false,
+  "visual_reason": "night_aerial_roads_along_front_and_side_boundaries",
+  "contradiction_flags": [],
+  "high_confidence": true,
+  "exceptional_non_corner": false,
+  "positive_non_corner_evidence": false,
+  "frames": [
+    {
+      "media_id": "117262832-003",
+      "viewpoint": "aerial_near_nadir",
+      "night": true,
+      "side_scores": {
+        "top": 0.4385,
+        "bottom": 0.383,
+        "left": 0.5187,
+        "right": 0.4333
+      },
+      "strong_sides": [
+        "top",
+        "left",
+        "right"
+      ],
+      "adjacent_strong_pairs": [
+        [
+          "top",
+          "left"
+        ],
+        [
+          "top",
+          "right"
+        ]
+      ],
+      "two_heading_axes": false,
+      "heading_separation_deg": null,
+      "visual_yes": true,
+      "visual_confidence": 0.86,
+      "reason": "night_aerial_roads_along_front_and_side_boundaries"
+    },
+    {
+      "media_id": "117262832-039",
+      "viewpoint": "aerial_near_nadir",
+      "night": true,
+      "side_scores": {
+        "top": 0.3425,
+        "bottom": 0.4935,
+        "left": 0.3337,
+        "right": 0.3424
+      },
+      "strong_sides": [
+        "bottom"
+      ],
+      "adjacent_strong_pairs": [],
+      "two_heading_axes": true,
+      "heading_separation_deg": 89.99,
+      "visual_yes": false,
+      "visual_confidence": 0.0,
+      "reason": "only_one_visible_road_border_unknown_not_no"
+    }
+  ]
+}

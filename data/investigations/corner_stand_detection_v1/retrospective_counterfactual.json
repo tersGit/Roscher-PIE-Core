@@ -1,0 +1,251 @@
+{
+  "experiment": "corner_stand_detection_v1",
+  "not_a_new_blind_test": true,
+  "historical_freeze_untouched": true,
+  "historical_freeze_sha256": "32ecd4b526d4a299e143c869761664a9ed7a4b2d9ae65aba6ed300583a1dd10a",
+  "scoring_v2_weights": {
+    "pool_presence": 0.14,
+    "shape_v2": 0.36,
+    "spatial_v2": 0.22,
+    "aerial": 0.12,
+    "exterior": 0.06,
+    "gis": 0.03,
+    "stand_size": 0.07
+  },
+  "scoring_v2_unchanged": true,
+  "pipeline": "listing acquisition \u2192 Pool Gate \u2192 Corner Gate \u2192 Hybrid / Scoring v2",
+  "estate_counts": {
+    "parcels": 400,
+    "YES": 64,
+    "NO": 279,
+    "UNKNOWN": 57,
+    "roads": 43,
+    "intersections": 42
+  },
+  "curved_road_rule": "A property on the outside or inside of a curved road is not a corner. A cul-de-sac frontage is not a corner. Consecutive road-facing edges that follow one road through a gentle heading change are clustered into a single side. Cul-de-sac bulbs (short consecutive facets) are not treated as intersections. Corner=YES requires two distinct road-facing sides (heading separation >= 35 deg) plus an actual intersection or sharp same-road corner bend.",
+  "listing_117262832": {
+    "listing_corner": "YES",
+    "classification": "YES",
+    "confidence": 0.86,
+    "evidence_source": "aerial",
+    "frame_ids": [
+      "117262832-003"
+    ],
+    "text_evidence": [],
+    "aerial_evidence": true,
+    "video_evidence": false,
+    "visual_reason": "night_aerial_roads_along_front_and_side_boundaries",
+    "contradiction_flags": [],
+    "high_confidence": true,
+    "exceptional_non_corner": false,
+    "positive_non_corner_evidence": false,
+    "frames": [
+      {
+        "media_id": "117262832-003",
+        "viewpoint": "aerial_near_nadir",
+        "night": true,
+        "side_scores": {
+          "top": 0.4385,
+          "bottom": 0.383,
+          "left": 0.5187,
+          "right": 0.4333
+        },
+        "strong_sides": [
+          "top",
+          "left",
+          "right"
+        ],
+        "adjacent_strong_pairs": [
+          [
+            "top",
+            "left"
+          ],
+          [
+            "top",
+            "right"
+          ]
+        ],
+        "two_heading_axes": false,
+        "heading_separation_deg": null,
+        "visual_yes": true,
+        "visual_confidence": 0.86,
+        "reason": "night_aerial_roads_along_front_and_side_boundaries"
+      },
+      {
+        "media_id": "117262832-039",
+        "viewpoint": "aerial_near_nadir",
+        "night": true,
+        "side_scores": {
+          "top": 0.3425,
+          "bottom": 0.4935,
+          "left": 0.3337,
+          "right": 0.3424
+        },
+        "strong_sides": [
+          "bottom"
+        ],
+        "adjacent_strong_pairs": [],
+        "two_heading_axes": true,
+        "heading_separation_deg": 89.99,
+        "visual_yes": false,
+        "visual_confidence": 0.0,
+        "reason": "only_one_visible_road_border_unknown_not_no"
+      }
+    ]
+  },
+  "gate_reduction": {
+    "estate_parcels": 400,
+    "pool_gate": 332,
+    "corner_gate": 98,
+    "pool_gate_detail": {
+      "starting": 400,
+      "survivors": 332,
+      "removed_confident_no": 68
+    },
+    "corner_gate_detail": {
+      "listing_corner": "YES",
+      "listing_confidence": 0.86,
+      "listing_high_confidence": true,
+      "starting_count": 332,
+      "parcels_removed_confident_no": 234,
+      "parcels_removed_confident_yes": 0,
+      "yes_survivors": 56,
+      "no_survivors": 0,
+      "unknown_survivors": 42,
+      "unresolved_count": 42,
+      "total_survivors": 98,
+      "pct_reduction": 70.48,
+      "n_survivors": 98,
+      "n_removed": 234,
+      "n_unresolved": 42
+    },
+    "summary": "400 \u2192 Pool Gate: 332 \u2192 Corner Gate: 98 \u2192 Scoring v2 ranking"
+  },
+  "frozen_top5_counterfactual": [
+    {
+      "stand_number": "654",
+      "parcel_corner": "NO",
+      "confidence": 0.88,
+      "reason": "single_road_frontage_not_corner",
+      "distinct_road_names": [
+        "CAMELS FOOT DRIVE"
+      ],
+      "would_remove": true,
+      "known_false_status_used": false
+    },
+    {
+      "stand_number": "467",
+      "parcel_corner": "NO",
+      "confidence": 0.9,
+      "reason": "cul_de_sac_single_frontage_not_corner",
+      "distinct_road_names": [
+        "BAOBAB CLOSE"
+      ],
+      "would_remove": true,
+      "known_false_status_used": false
+    },
+    {
+      "stand_number": "405",
+      "parcel_corner": "NO",
+      "confidence": 0.9,
+      "reason": "cul_de_sac_single_frontage_not_corner",
+      "distinct_road_names": [
+        "BAOBAB CLOSE"
+      ],
+      "would_remove": true,
+      "known_false_status_used": false
+    },
+    {
+      "stand_number": "644",
+      "parcel_corner": "UNKNOWN",
+      "confidence": 0.4,
+      "reason": "dual_frontage_nearly_parallel_not_confirmed_corner",
+      "distinct_road_names": [
+        "VENUS AVENUE",
+        "GALPINI DRIVE"
+      ],
+      "would_remove": false,
+      "known_false_status_used": false
+    },
+    {
+      "stand_number": "456",
+      "parcel_corner": "NO",
+      "confidence": 0.78,
+      "reason": "two_sides_same_road_without_intersection_or_corner_bend",
+      "distinct_road_names": [
+        "WILD OLIVE CLOSE"
+      ],
+      "would_remove": true,
+      "known_false_status_used": false
+    }
+  ],
+  "true_stand_diagnostic": {
+    "stand_number": "338",
+    "parcel_corner": "YES",
+    "confidence": 0.96,
+    "reason": "two_distinct_road_facing_sides_at_intersection",
+    "distinct_road_names": [
+      "HARDEKOOL VIEW",
+      "SOETDORING CLOSE"
+    ],
+    "retained": true,
+    "identity_used_in_classification": false,
+    "identity_source": "after_freeze_ground_truth_json"
+  },
+  "proof_panels": {
+    "yes": [
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_01_stand_866.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_02_stand_363.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_03_stand_615.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_04_stand_578.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_05_stand_501.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_06_stand_626.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_07_stand_627.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_08_stand_502.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_09_stand_1_450.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_10_stand_682.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_11_stand_1_524.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/yes_12_stand_1_403.jpg"
+    ],
+    "no": [
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_01_stand_538.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_02_stand_875.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_03_stand_392.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_04_stand_658.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_05_stand_1_357.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_06_stand_608.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_07_stand_613.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_08_stand_409.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_09_stand_345.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_10_stand_499.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_11_stand_590.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/no_12_stand_901.jpg"
+    ],
+    "unknown": [
+      "data/investigations/corner_stand_detection_v1/proof_panels/unknown_01_stand_490.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/unknown_02_stand_1_484.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/unknown_03_stand_1_342.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/unknown_04_stand_1_477.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/unknown_05_stand_1_335.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/unknown_06_stand_4_870.jpg"
+    ],
+    "cul_de_sac": [
+      "data/investigations/corner_stand_detection_v1/proof_panels/cul_de_sac_01_stand_613.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/cul_de_sac_02_stand_409.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/cul_de_sac_03_stand_345.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/cul_de_sac_04_stand_499.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/cul_de_sac_05_stand_590.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/cul_de_sac_06_stand_901.jpg"
+    ],
+    "curved_road": [
+      "data/investigations/corner_stand_detection_v1/proof_panels/curved_road_01_stand_396.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/curved_road_02_stand_1_371.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/curved_road_03_stand_434.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/curved_road_04_stand_535.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/curved_road_05_stand_518.jpg",
+      "data/investigations/corner_stand_detection_v1/proof_panels/curved_road_06_stand_632.jpg"
+    ]
+  },
+  "listing_proof": "data/investigations/corner_stand_detection_v1/proof_panels/listing_corner_evidence.jpg",
+  "estate_layer": "data/investigations/corner_stand_detection_v1/proof_panels/estate_corner_layer.png"
+}

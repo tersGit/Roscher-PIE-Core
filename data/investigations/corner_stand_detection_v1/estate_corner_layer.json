@@ -1,0 +1,15 @@
+{
+  "n_parcels": 400,
+  "n_yes": 64,
+  "n_no": 279,
+  "n_unknown": 57,
+  "n_roads": 43,
+  "n_intersections": 42,
+  "missing_road_data": false,
+  "curved_road_rule": "A property on the outside or inside of a curved road is not a corner. A cul-de-sac frontage is not a corner. Consecutive road-facing edges that follow one road through a gentle heading change are clustered into a single side. Cul-de-sac bulbs (short consecutive facets) are not treated as intersections. Corner=YES requires two distinct road-facing sides (heading separation >= 35 deg) plus an actual intersection or sharp same-road corner bend.",
+  "counts": {
+    "YES": 64,
+    "NO": 279,
+    "UNKNOWN": 57
+  }
+}
