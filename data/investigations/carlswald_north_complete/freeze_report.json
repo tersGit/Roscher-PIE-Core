@@ -1,0 +1,722 @@
+{
+  "class_counts": {
+    "non_residential": 37,
+    "residential": 398,
+    "township_remainder": 49,
+    "vacant": 10
+  },
+  "compare_to_frozen_001": {
+    "frozen_001_bytes_untouched": true,
+    "frozen_001_present": true,
+    "frozen_001_unique": 330,
+    "geometry_changed_stands": [],
+    "only_in_complete_002": [
+      "1/867",
+      "1/870",
+      "1/889",
+      "1/908",
+      "10/908",
+      "11/908",
+      "12/908",
+      "13/908",
+      "14/908",
+      "15/908",
+      "16/908",
+      "17/908",
+      "18/908",
+      "2/867",
+      "2/870",
+      "2/908",
+      "3/867",
+      "3/870",
+      "3/908",
+      "4/867",
+      "4/870",
+      "4/908",
+      "5/867",
+      "5/870",
+      "5/908",
+      "6/870",
+      "6/908",
+      "7/870",
+      "7/908",
+      "8/870",
+      "8/908",
+      "866",
+      "868",
+      "871",
+      "872",
+      "873",
+      "874",
+      "875",
+      "876",
+      "877",
+      "878",
+      "879",
+      "880",
+      "881",
+      "882",
+      "883",
+      "884",
+      "885",
+      "886",
+      "887",
+      "888",
+      "890",
+      "891",
+      "892",
+      "893",
+      "894",
+      "895",
+      "896",
+      "897",
+      "898",
+      "899",
+      "9/908",
+      "900",
+      "901",
+      "902",
+      "903",
+      "904",
+      "905",
+      "906",
+      "907"
+    ],
+    "only_in_frozen_001": [],
+    "shared_property_ids": 330,
+    "township_changed_stands": []
+  },
+  "dataset_id": "carlswald_north_corrected_002",
+  "exclusion_row_counts": {
+    "SUMMERSET EXT.13": 18,
+    "SUMMERSET EXT.3": 8,
+    "SUMMERSET EXT.6": 61
+  },
+  "extent": {
+    "max_latitude": -25.963765,
+    "max_longitude": 28.102243,
+    "min_latitude": -25.971732,
+    "min_longitude": 28.089918
+  },
+  "frozen_001_sha256": "1bab3126fdfa9d397857f67f2d0cb65ddc410fc5d82afaf1a823c63018f56608",
+  "frozen_001_untouched": true,
+  "gated_extent": {
+    "max_latitude": -25.963785,
+    "max_longitude": 28.102245,
+    "min_latitude": -25.971944,
+    "min_longitude": 28.089924
+  },
+  "geometry_quality": {
+    "centroids_outside_own_township_extent": [],
+    "cross_township_stand_numbers": [],
+    "duplicate_property_ids_after_pass1": [],
+    "missing_geometry": 0,
+    "overlapping_bbox_pair_count": 544,
+    "overlapping_bbox_pairs_iou_ge_0_02": [
+      {
+        "bbox_iou": 0.1558,
+        "property_id_a": 1213744,
+        "property_id_b": 1393647,
+        "stand_a": "630",
+        "stand_b": "629",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.0959,
+        "property_id_a": 1213744,
+        "property_id_b": 1864315,
+        "stand_a": "630",
+        "stand_b": "633",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.1121,
+        "property_id_a": 1213744,
+        "property_id_b": 1897849,
+        "stand_a": "630",
+        "stand_b": "1/631",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.245,
+        "property_id_a": 1215365,
+        "property_id_b": 1392185,
+        "stand_a": "675",
+        "stand_b": "674",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.0571,
+        "property_id_a": 1215365,
+        "property_id_b": 1714460,
+        "stand_a": "675",
+        "stand_b": "676",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.1455,
+        "property_id_a": 1217580,
+        "property_id_b": 1376234,
+        "stand_a": "538",
+        "stand_b": "539",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.1004,
+        "property_id_a": 1217580,
+        "property_id_b": 1684937,
+        "stand_a": "538",
+        "stand_b": "537",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.1314,
+        "property_id_a": 1217580,
+        "property_id_b": 1872190,
+        "stand_a": "538",
+        "stand_b": "531",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.1744,
+        "property_id_a": 1226728,
+        "property_id_b": 1406616,
+        "stand_a": "613",
+        "stand_b": "612",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.0331,
+        "property_id_a": 1226728,
+        "property_id_b": 1440499,
+        "stand_a": "613",
+        "stand_b": "604",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.1849,
+        "property_id_a": 1226728,
+        "property_id_b": 1723349,
+        "stand_a": "613",
+        "stand_b": "614",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.0918,
+        "property_id_a": 1226728,
+        "property_id_b": 1771381,
+        "stand_a": "613",
+        "stand_b": "618",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.0854,
+        "property_id_a": 1228496,
+        "property_id_b": 1263058,
+        "stand_a": "409",
+        "stand_b": "396",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.2883,
+        "property_id_a": 1228496,
+        "property_id_b": 1387481,
+        "stand_a": "409",
+        "stand_b": "410",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.0733,
+        "property_id_a": 1228496,
+        "property_id_b": 1719922,
+        "stand_a": "409",
+        "stand_b": "408",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.1138,
+        "property_id_a": 1228756,
+        "property_id_b": 1405665,
+        "stand_a": "345",
+        "stand_b": "346",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.1193,
+        "property_id_a": 1228756,
+        "property_id_b": 1461367,
+        "stand_a": "345",
+        "stand_b": "354",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.0802,
+        "property_id_a": 1228756,
+        "property_id_b": 1717537,
+        "stand_a": "345",
+        "stand_b": "344",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.0659,
+        "property_id_a": 1229421,
+        "property_id_b": 1409152,
+        "stand_a": "499",
+        "stand_b": "500",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.0274,
+        "property_id_a": 1229421,
+        "property_id_b": 1457191,
+        "stand_a": "499",
+        "stand_b": "504",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.0246,
+        "property_id_a": 1230388,
+        "property_id_b": 1456095,
+        "stand_a": "1/373",
+        "stand_b": "374",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.1889,
+        "property_id_a": 1231796,
+        "property_id_b": 1411411,
+        "stand_a": "875",
+        "stand_b": "876",
+        "township_a": "SUMMERSET EXT.3",
+        "township_b": "SUMMERSET EXT.3"
+      },
+      {
+        "bbox_iou": 0.201,
+        "property_id_a": 1231796,
+        "property_id_b": 1723241,
+        "stand_a": "875",
+        "stand_b": "874",
+        "township_a": "SUMMERSET EXT.3",
+        "township_b": "SUMMERSET EXT.3"
+      },
+      {
+        "bbox_iou": 0.1071,
+        "property_id_a": 1231796,
+        "property_id_b": 1798522,
+        "stand_a": "875",
+        "stand_b": "882",
+        "township_a": "SUMMERSET EXT.3",
+        "township_b": "SUMMERSET EXT.3"
+      },
+      {
+        "bbox_iou": 0.2117,
+        "property_id_a": 1233542,
+        "property_id_b": 1410665,
+        "stand_a": "590",
+        "stand_b": "589",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.0653,
+        "property_id_a": 1233542,
+        "property_id_b": 1457563,
+        "stand_a": "590",
+        "stand_b": "593",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.2094,
+        "property_id_a": 1233542,
+        "property_id_b": 1721843,
+        "stand_a": "590",
+        "stand_b": "591",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.1311,
+        "property_id_a": 1235944,
+        "property_id_b": 1415381,
+        "stand_a": "901",
+        "stand_b": "902",
+        "township_a": "SUMMERSET EXT.3",
+        "township_b": "SUMMERSET EXT.3"
+      },
+      {
+        "bbox_iou": 0.114,
+        "property_id_a": 1235944,
+        "property_id_b": 1676628,
+        "stand_a": "901",
+        "stand_b": "894",
+        "township_a": "SUMMERSET EXT.3",
+        "township_b": "SUMMERSET EXT.3"
+      },
+      {
+        "bbox_iou": 0.1961,
+        "property_id_a": 1235944,
+        "property_id_b": 1727191,
+        "stand_a": "901",
+        "stand_b": "900",
+        "township_a": "SUMMERSET EXT.3",
+        "township_b": "SUMMERSET EXT.3"
+      },
+      {
+        "bbox_iou": 0.1212,
+        "property_id_a": 1236434,
+        "property_id_b": 1416052,
+        "stand_a": "392",
+        "stand_b": "393",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.1976,
+        "property_id_a": 1236434,
+        "property_id_b": 1857022,
+        "stand_a": "392",
+        "stand_b": "391",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.1228,
+        "property_id_a": 1239146,
+        "property_id_b": 1413635,
+        "stand_a": "658",
+        "stand_b": "657",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.0956,
+        "property_id_a": 1240662,
+        "property_id_b": 1420347,
+        "stand_a": "453",
+        "stand_b": "454",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.2055,
+        "property_id_a": 1240662,
+        "property_id_b": 1502368,
+        "stand_a": "453",
+        "stand_b": "446",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.131,
+        "property_id_a": 1240662,
+        "property_id_b": 1753102,
+        "stand_a": "453",
+        "stand_b": "452",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      },
+      {
+        "bbox_iou": 0.0965,
+        "property_id_a": 1240954,
+        "property_id_b": 1382441,
+        "stand_a": "576",
+        "stand_b": "579",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.1434,
+        "property_id_a": 1240954,
+        "property_id_b": 1501868,
+        "stand_a": "576",
+        "stand_b": "575",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.2148,
+        "property_id_a": 1240954,
+        "property_id_b": 1740356,
+        "stand_a": "576",
+        "stand_b": "577",
+        "township_a": "SUMMERSET EXT.13",
+        "township_b": "SUMMERSET EXT.13"
+      },
+      {
+        "bbox_iou": 0.1425,
+        "property_id_a": 1241193,
+        "property_id_b": 1362366,
+        "stand_a": "1/460",
+        "stand_b": "461",
+        "township_a": "SUMMERSET EXT.6",
+        "township_b": "SUMMERSET EXT.6"
+      }
+    ],
+    "pass1_unique": 400
+  },
+  "gis_json": "/workspace/data/gis/carlswald_north_corrected_002.json",
+  "membership_basis": "authoritative CoJ TOWN_NAME_DESC on Property/MapServer layer 8 REGISTERED_STANDS",
+  "native15_coverage_plan": {
+    "all_pass1_have_tile_intersection": true,
+    "cache_dir": "/workspace/data/cache/ags_native15/carlswald_north_corrected_002",
+    "crop_dir": "/workspace/data/visual_index/carlswald_north_corrected_002/_imagery_cache_native15",
+    "grid_tiles": 35,
+    "metres_per_pixel": 0.15,
+    "pass1_parcels_with_no_intersecting_tile": 0,
+    "profile": "native15",
+    "tile_metres": 210.0,
+    "tiles_intersecting_by_township": {
+      "SUMMERSET EXT.13": 13,
+      "SUMMERSET EXT.3": 8,
+      "SUMMERSET EXT.6": 18
+    },
+    "tiles_on_disk": 0
+  },
+  "not_inferred_from_proximity": true,
+  "overview": "/workspace/data/investigations/carlswald_north_complete/estate_overview_ext3_6_13.jpg",
+  "source_layer": 8,
+  "source_layer_name": "REGISTERED_STANDS",
+  "source_mapserver": "https://ags.joburg.org.za/server/rest/services/Property/MapServer",
+  "table": [
+    {
+      "extension": "EXT.3",
+      "included_unique_properties": 70,
+      "official_name": "SUMMERSET EXT.3",
+      "source_parcels": 78
+    },
+    {
+      "extension": "EXT.6",
+      "included_unique_properties": 212,
+      "official_name": "SUMMERSET EXT.6",
+      "source_parcels": 280
+    },
+    {
+      "extension": "EXT.13",
+      "included_unique_properties": 118,
+      "official_name": "SUMMERSET EXT.13",
+      "source_parcels": 136
+    },
+    {
+      "extension": "TOTAL",
+      "included_unique_properties": 400,
+      "official_name": "SUMMERSET EXT.3+6+13",
+      "source_parcels": 494
+    }
+  ],
+  "township_reports": [
+    {
+      "class_counts": {
+        "non_residential": 6,
+        "residential": 69,
+        "township_remainder": 2,
+        "vacant": 1
+      },
+      "duplicate_handling": {
+        "duplicate_gis_rows_collapsed": 0,
+        "duplicate_property_id_groups": {},
+        "method": "GIS pass 1 then unique property_id last-wins (same as frozen 001 / production ranking)"
+      },
+      "exclusions": {
+        "count": 8,
+        "reason_counts": {
+          "RE_remainder": 2,
+          "non_residential": 4,
+          "non_residential|RE_remainder": 1,
+          "non_residential|area_sqm>=8000": 1
+        }
+      },
+      "extent": {
+        "max_latitude": -25.964573,
+        "max_longitude": 28.098754,
+        "min_latitude": -25.967887,
+        "min_longitude": 28.094336
+      },
+      "final_unique_property_count": 70,
+      "gis_geometry_coverage": {
+        "extent": {
+          "max_latitude": -25.964573,
+          "max_longitude": 28.098754,
+          "min_latitude": -25.967887,
+          "min_longitude": 28.094336
+        },
+        "source_parcel_count": 78,
+        "source_parcels_with_rings": 78
+      },
+      "membership_basis": "authoritative_coj_town_name_desc",
+      "not_inferred_from_proximity": true,
+      "official_name": "SUMMERSET EXT.3",
+      "pass1_rows_before_dedup": 70,
+      "requested": "SUMMERSET EXTENSION 3",
+      "residential_erven_identified": 70,
+      "source_layer": 8,
+      "source_layer_name": "REGISTERED_STANDS",
+      "source_mapserver": "https://ags.joburg.org.za/server/rest/services/Property/MapServer",
+      "source_parcel_count": 78,
+      "source_parcels": 78,
+      "source_stand_count_all_land_types": 78,
+      "township_area_sqm": 87450.02411765,
+      "township_found": true,
+      "township_status": "PROCLAIMED"
+    },
+    {
+      "class_counts": {
+        "non_residential": 19,
+        "residential": 213,
+        "township_remainder": 41,
+        "vacant": 7
+      },
+      "duplicate_handling": {
+        "duplicate_gis_rows_collapsed": 7,
+        "duplicate_property_id_groups": {
+          "1255379": [
+            "413",
+            "413"
+          ],
+          "1450554": [
+            "545",
+            "545"
+          ],
+          "1505667": [
+            "536",
+            "536"
+          ],
+          "1548193": [
+            "388",
+            "388"
+          ],
+          "1622113": [
+            "398",
+            "398"
+          ],
+          "1658286": [
+            "533",
+            "533"
+          ],
+          "1875580": [
+            "407",
+            "407"
+          ]
+        },
+        "method": "GIS pass 1 then unique property_id last-wins (same as frozen 001 / production ranking)"
+      },
+      "exclusions": {
+        "count": 61,
+        "reason_counts": {
+          "RE_remainder": 41,
+          "area_sqm>=8000": 1,
+          "non_residential": 16,
+          "non_residential|RE_remainder": 1,
+          "non_residential|area_sqm>=8000": 2
+        }
+      },
+      "extent": {
+        "max_latitude": -25.965381,
+        "max_longitude": 28.102243,
+        "min_latitude": -25.971732,
+        "min_longitude": 28.092456
+      },
+      "final_unique_property_count": 212,
+      "gis_geometry_coverage": {
+        "extent": {
+          "max_latitude": -25.965381,
+          "max_longitude": 28.102243,
+          "min_latitude": -25.971732,
+          "min_longitude": 28.092456
+        },
+        "source_parcel_count": 280,
+        "source_parcels_with_rings": 280
+      },
+      "membership_basis": "authoritative_coj_town_name_desc",
+      "not_inferred_from_proximity": true,
+      "official_name": "SUMMERSET EXT.6",
+      "pass1_rows_before_dedup": 219,
+      "requested": "SUMMERSET EXTENSION 6",
+      "residential_erven_identified": 220,
+      "source_layer": 8,
+      "source_layer_name": "REGISTERED_STANDS",
+      "source_mapserver": "https://ags.joburg.org.za/server/rest/services/Property/MapServer",
+      "source_parcel_count": 280,
+      "source_parcels": 280,
+      "source_stand_count_all_land_types": 280,
+      "township_area_sqm": 342633.4882213,
+      "township_found": true,
+      "township_status": "PROCLAIMED"
+    },
+    {
+      "class_counts": {
+        "non_residential": 12,
+        "residential": 116,
+        "township_remainder": 6,
+        "vacant": 2
+      },
+      "duplicate_handling": {
+        "duplicate_gis_rows_collapsed": 0,
+        "duplicate_property_id_groups": {},
+        "method": "GIS pass 1 then unique property_id last-wins (same as frozen 001 / production ranking)"
+      },
+      "exclusions": {
+        "count": 18,
+        "reason_counts": {
+          "RE_remainder": 6,
+          "non_residential": 10,
+          "non_residential|RE_remainder": 1,
+          "non_residential|area_sqm>=8000": 1
+        }
+      },
+      "extent": {
+        "max_latitude": -25.963765,
+        "max_longitude": 28.096216,
+        "min_latitude": -25.969585,
+        "min_longitude": 28.089918
+      },
+      "final_unique_property_count": 118,
+      "gis_geometry_coverage": {
+        "extent": {
+          "max_latitude": -25.963765,
+          "max_longitude": 28.096216,
+          "min_latitude": -25.969585,
+          "min_longitude": 28.089918
+        },
+        "source_parcel_count": 136,
+        "source_parcels_with_rings": 136
+      },
+      "membership_basis": "authoritative_coj_town_name_desc",
+      "not_inferred_from_proximity": true,
+      "official_name": "SUMMERSET EXT.13",
+      "pass1_rows_before_dedup": 118,
+      "requested": "SUMMERSET EXTENSION 13",
+      "residential_erven_identified": 118,
+      "source_layer": 8,
+      "source_layer_name": "REGISTERED_STANDS",
+      "source_mapserver": "https://ags.joburg.org.za/server/rest/services/Property/MapServer",
+      "source_parcel_count": 136,
+      "source_parcels": 136,
+      "source_stand_count_all_land_types": 136,
+      "township_area_sqm": 174880.95661941,
+      "township_found": true,
+      "township_status": "PROCLAIMED"
+    }
+  ]
+}

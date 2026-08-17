@@ -1,0 +1,794 @@
+{
+  "production_ranking_modified": false,
+  "os_v1_modified": false,
+  "fastsam_config_modified": false,
+  "native15_modified": false,
+  "fastsam_available": true,
+  "reference": "677",
+  "misses": [
+    "339",
+    "408",
+    "1/437",
+    "1/520",
+    "1/631",
+    "459",
+    "462",
+    "543",
+    "675"
+  ],
+  "comparison_table": [
+    {
+      "stand": "677",
+      "pool_px_size": "49x47",
+      "fastsam_pool_mask": true,
+      "clip": 0.9921,
+      "geometry": true,
+      "parcel_gate": "pass",
+      "final_os_result": "CONFIRMED",
+      "failure_stage": "fastsam_proposed_and_os_would_keep",
+      "n_fastsam": 71,
+      "crop_wh": [
+        605,
+        402
+      ]
+    },
+    {
+      "stand": "339",
+      "pool_px_size": "17x22",
+      "fastsam_pool_mask": false,
+      "clip": null,
+      "geometry": null,
+      "parcel_gate": "pass",
+      "final_os_result": "UNKNOWN",
+      "failure_stage": "fastsam_did_not_propose_pool",
+      "n_fastsam": 32,
+      "crop_wh": [
+        286,
+        311
+      ]
+    },
+    {
+      "stand": "408",
+      "pool_px_size": "94x153",
+      "fastsam_pool_mask": true,
+      "clip": 0.1052,
+      "geometry": false,
+      "parcel_gate": "pass",
+      "final_os_result": "UNKNOWN",
+      "failure_stage": "fastsam_proposed_discarded_at_clip_or_geometry_gate",
+      "n_fastsam": 38,
+      "crop_wh": [
+        318,
+        569
+      ]
+    },
+    {
+      "stand": "1/437",
+      "pool_px_size": "17x20",
+      "fastsam_pool_mask": true,
+      "clip": null,
+      "geometry": null,
+      "parcel_gate": "pass",
+      "final_os_result": "UNKNOWN",
+      "failure_stage": "fastsam_proposed_discarded_before_clip",
+      "n_fastsam": 27,
+      "crop_wh": [
+        251,
+        378
+      ]
+    },
+    {
+      "stand": "1/520",
+      "pool_px_size": "121x52",
+      "fastsam_pool_mask": true,
+      "clip": 0.0399,
+      "geometry": false,
+      "parcel_gate": "pass",
+      "final_os_result": "UNKNOWN",
+      "failure_stage": "fastsam_proposed_discarded_at_clip_or_geometry_gate",
+      "n_fastsam": 45,
+      "crop_wh": [
+        537,
+        316
+      ]
+    },
+    {
+      "stand": "1/631",
+      "pool_px_size": "33x36",
+      "fastsam_pool_mask": true,
+      "clip": null,
+      "geometry": null,
+      "parcel_gate": "pass",
+      "final_os_result": "UNKNOWN",
+      "failure_stage": "fastsam_proposed_discarded_before_clip",
+      "n_fastsam": 50,
+      "crop_wh": [
+        557,
+        299
+      ]
+    },
+    {
+      "stand": "459",
+      "pool_px_size": "45x58",
+      "fastsam_pool_mask": true,
+      "clip": 0.0168,
+      "geometry": false,
+      "parcel_gate": "pass",
+      "final_os_result": "UNKNOWN",
+      "failure_stage": "fastsam_proposed_discarded_before_clip",
+      "n_fastsam": 35,
+      "crop_wh": [
+        355,
+        551
+      ]
+    },
+    {
+      "stand": "462",
+      "pool_px_size": "32x31",
+      "fastsam_pool_mask": true,
+      "clip": 0.0876,
+      "geometry": false,
+      "parcel_gate": "pass",
+      "final_os_result": "UNKNOWN",
+      "failure_stage": "fastsam_proposed_discarded_at_clip_or_geometry_gate",
+      "n_fastsam": 62,
+      "crop_wh": [
+        581,
+        303
+      ]
+    },
+    {
+      "stand": "543",
+      "pool_px_size": "47x62",
+      "fastsam_pool_mask": true,
+      "clip": 0.0394,
+      "geometry": false,
+      "parcel_gate": "pass",
+      "final_os_result": "UNKNOWN",
+      "failure_stage": "fastsam_proposed_discarded_before_clip",
+      "n_fastsam": 84,
+      "crop_wh": [
+        427,
+        612
+      ]
+    },
+    {
+      "stand": "675",
+      "pool_px_size": "85x81",
+      "fastsam_pool_mask": true,
+      "clip": 0.0185,
+      "geometry": false,
+      "parcel_gate": "pass",
+      "final_os_result": "UNKNOWN",
+      "failure_stage": "fastsam_proposed_discarded_at_clip_or_geometry_gate",
+      "n_fastsam": 35,
+      "crop_wh": [
+        291,
+        568
+      ]
+    }
+  ],
+  "hypothesis": {
+    "n_misses": 9,
+    "failure_stage_counts": {
+      "fastsam_did_not_propose_pool": 1,
+      "fastsam_proposed_discarded_at_clip_or_geometry_gate": 4,
+      "fastsam_proposed_discarded_before_clip": 4
+    },
+    "fastsam_did_not_propose_n": 1,
+    "fastsam_proposed_then_rejected_n": 8,
+    "smaller_pixel_area_than_677": 2,
+    "narrower_min_dimension_than_677": 2,
+    "low_local_contrast_n": 0,
+    "shadowy_neighbourhood_n": 0,
+    "touches_building_n": 3,
+    "touches_parcel_boundary_n": 8,
+    "reference_crop_wh": [
+      605,
+      402
+    ],
+    "mean_miss_crop_area_px": 166584.6,
+    "reference_crop_area_px": 243210,
+    "pct_of_n": {
+      "fastsam_did_not_propose_pool": 11.1,
+      "fastsam_proposed_discarded_at_clip_or_geometry_gate": 44.4,
+      "fastsam_proposed_discarded_before_clip": 44.4
+    }
+  },
+  "recommended_experiment": {
+    "experiment_id": "fastsam_imgsz_proposal_ab",
+    "implement_now": false,
+    "rationale": "Stand 677 is detected because FastSAM isolates a compact in-parcel pool mask that CLIP scores 0.99. Re-running frozen OS v1 on native15 crops that match OS crop_wh reproduces no_pool_candidate on all nine misses. On those crops FastSAM still proposes 27\u201384 masks, but the masks that reach CLIP are roof/shadow-like (max CLIP pool 0.19, then roof_gate). Water-seed priors exist on 5/9 and have high HSV water fraction, yet CLIP pool is 0.004\u20130.039 because those seeds are irregular (fail water_shape). 339 never reaches CLIP (29/32 masks <40 px). The measured gap vs 677 is proposal isolation at imgsz=512, not a missing CLIP class for turquoise water. A single controlled A/B of FastSAM imgsz (512 vs 768/1024) on the same native15 crops, with CLIP/geometry/parcel gates frozen, is the evidence-supported next experiment.",
+    "controlled_knobs": [
+      "FastSAM predict imgsz 512 (frozen) vs 768 and/or 1024",
+      "same native15 crops",
+      "CLIP, geometry, parcel, water_seed thresholds unchanged"
+    ],
+    "frozen_baseline": "OS v1 + FastSAM-s imgsz=512 retina_masks=True CPU + native15",
+    "success_criterion": "Recover materially more of the nine known false-negative pools without materially increasing false YES on known negative/shadow/neighbour cases (Stand 570 shadow/object, neighbour-pool 1/335 1/379 395 547, confirmed NO 1/355).",
+    "negative_controls": [
+      "570",
+      "1/335",
+      "1/379",
+      "395",
+      "547",
+      "1/355"
+    ],
+    "alternative_if_imgsz_fails": "water-seed morphology / compactness recovery A/B (do not combine with imgsz in the same experiment)"
+  },
+  "why_text": "Stand 677 is OS CONFIRMED because FastSAM produced an in-parcel mask that CLIP scored as pool (frozen CLIP 0.99, ~41x27 px). Of the nine documented misses, 1 have no FastSAM mask covering the visually identified pool, so OS v1 never saw a candidate (`no_pool_candidate`). 8 had a proposal that downstream filters discarded. Colour is not assumed to be the cause; this is measured proposal vs filter behaviour.",
+  "stands": [
+    {
+      "stand_number": "677",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/677_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/677_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_proposed_and_os_would_keep",
+      "crop_wh": [
+        605,
+        402
+      ],
+      "pool_px_size": {
+        "width_px": 49,
+        "height_px": 47,
+        "min_px": 47,
+        "max_px": 49,
+        "area_px": 2303,
+        "width_m": 7.35,
+        "height_m": 7.05,
+        "vs_677_41x27": {
+          "area_ratio": 2.08,
+          "min_dim_ratio": 1.741,
+          "max_dim_ratio": 1.195
+        }
+      },
+      "n_fastsam_at_pool": 4
+    },
+    {
+      "stand_number": "339",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/339_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/339_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_did_not_propose_pool",
+      "crop_wh": [
+        286,
+        311
+      ],
+      "pool_px_size": {
+        "width_px": 17,
+        "height_px": 22,
+        "min_px": 17,
+        "max_px": 22,
+        "area_px": 374,
+        "width_m": 2.55,
+        "height_m": 3.3,
+        "vs_677_41x27": {
+          "area_ratio": 0.338,
+          "min_dim_ratio": 0.63,
+          "max_dim_ratio": 0.537
+        }
+      },
+      "n_fastsam_at_pool": 0
+    },
+    {
+      "stand_number": "408",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/408_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/408_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_proposed_discarded_at_clip_or_geometry_gate",
+      "crop_wh": [
+        318,
+        569
+      ],
+      "pool_px_size": {
+        "width_px": 94,
+        "height_px": 153,
+        "min_px": 94,
+        "max_px": 153,
+        "area_px": 14382,
+        "width_m": 14.1,
+        "height_m": 22.95,
+        "vs_677_41x27": {
+          "area_ratio": 12.992,
+          "min_dim_ratio": 3.481,
+          "max_dim_ratio": 3.732
+        }
+      },
+      "n_fastsam_at_pool": 6
+    },
+    {
+      "stand_number": "1/437",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/1_437_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/1_437_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_proposed_discarded_before_clip",
+      "crop_wh": [
+        251,
+        378
+      ],
+      "pool_px_size": {
+        "width_px": 17,
+        "height_px": 20,
+        "min_px": 17,
+        "max_px": 20,
+        "area_px": 340,
+        "width_m": 2.55,
+        "height_m": 3.0,
+        "vs_677_41x27": {
+          "area_ratio": 0.307,
+          "min_dim_ratio": 0.63,
+          "max_dim_ratio": 0.488
+        }
+      },
+      "n_fastsam_at_pool": 1
+    },
+    {
+      "stand_number": "1/520",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/1_520_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/1_520_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_proposed_discarded_at_clip_or_geometry_gate",
+      "crop_wh": [
+        537,
+        316
+      ],
+      "pool_px_size": {
+        "width_px": 121,
+        "height_px": 52,
+        "min_px": 52,
+        "max_px": 121,
+        "area_px": 6292,
+        "width_m": 18.15,
+        "height_m": 7.8,
+        "vs_677_41x27": {
+          "area_ratio": 5.684,
+          "min_dim_ratio": 1.926,
+          "max_dim_ratio": 2.951
+        }
+      },
+      "n_fastsam_at_pool": 4
+    },
+    {
+      "stand_number": "1/631",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/1_631_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/1_631_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_proposed_discarded_before_clip",
+      "crop_wh": [
+        557,
+        299
+      ],
+      "pool_px_size": {
+        "width_px": 33,
+        "height_px": 36,
+        "min_px": 33,
+        "max_px": 36,
+        "area_px": 1188,
+        "width_m": 4.95,
+        "height_m": 5.4,
+        "vs_677_41x27": {
+          "area_ratio": 1.073,
+          "min_dim_ratio": 1.222,
+          "max_dim_ratio": 0.878
+        }
+      },
+      "n_fastsam_at_pool": 1
+    },
+    {
+      "stand_number": "459",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/459_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/459_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_proposed_discarded_before_clip",
+      "crop_wh": [
+        355,
+        551
+      ],
+      "pool_px_size": {
+        "width_px": 45,
+        "height_px": 58,
+        "min_px": 45,
+        "max_px": 58,
+        "area_px": 2610,
+        "width_m": 6.75,
+        "height_m": 8.7,
+        "vs_677_41x27": {
+          "area_ratio": 2.358,
+          "min_dim_ratio": 1.667,
+          "max_dim_ratio": 1.415
+        }
+      },
+      "n_fastsam_at_pool": 1
+    },
+    {
+      "stand_number": "462",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/462_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/462_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_proposed_discarded_at_clip_or_geometry_gate",
+      "crop_wh": [
+        581,
+        303
+      ],
+      "pool_px_size": {
+        "width_px": 32,
+        "height_px": 31,
+        "min_px": 31,
+        "max_px": 32,
+        "area_px": 992,
+        "width_m": 4.8,
+        "height_m": 4.65,
+        "vs_677_41x27": {
+          "area_ratio": 0.896,
+          "min_dim_ratio": 1.148,
+          "max_dim_ratio": 0.78
+        }
+      },
+      "n_fastsam_at_pool": 3
+    },
+    {
+      "stand_number": "543",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/543_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/543_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_proposed_discarded_before_clip",
+      "crop_wh": [
+        427,
+        612
+      ],
+      "pool_px_size": {
+        "width_px": 47,
+        "height_px": 62,
+        "min_px": 47,
+        "max_px": 62,
+        "area_px": 2914,
+        "width_m": 7.05,
+        "height_m": 9.3,
+        "vs_677_41x27": {
+          "area_ratio": 2.632,
+          "min_dim_ratio": 1.741,
+          "max_dim_ratio": 1.512
+        }
+      },
+      "n_fastsam_at_pool": 3
+    },
+    {
+      "stand_number": "675",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/675_native15.jpg",
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/675_fastsam_miss_panel.jpg",
+      "failure_stage": "fastsam_proposed_discarded_at_clip_or_geometry_gate",
+      "crop_wh": [
+        291,
+        568
+      ],
+      "pool_px_size": {
+        "width_px": 85,
+        "height_px": 81,
+        "min_px": 81,
+        "max_px": 85,
+        "area_px": 6885,
+        "width_m": 12.75,
+        "height_m": 12.15,
+        "vs_677_41x27": {
+          "area_ratio": 6.22,
+          "min_dim_ratio": 3.0,
+          "max_dim_ratio": 2.073
+        }
+      },
+      "n_fastsam_at_pool": 7
+    }
+  ],
+  "panel_dir": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels",
+  "clip_max_any_proposal": [
+    {
+      "stand": "677",
+      "crop_wh": [
+        605,
+        402
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 71,
+      "n_water_seeds": 3,
+      "n_fastsam_presented_to_clip": 11,
+      "max_clip_pool_any_proposal": 0.9921,
+      "max_clip_source": "water_seed",
+      "max_clip_rival": 0.0072,
+      "max_clip_water": 1.0,
+      "max_clip_discard": null,
+      "final_select_pool": "CONFIRMED",
+      "final_notes": [
+        "fastsam+clip"
+      ],
+      "frozen_os": {
+        "pool_status": "CONFIRMED",
+        "notes": [
+          "fastsam+clip"
+        ],
+        "clip_pool": 0.9921295046806335,
+        "building_status": "CONFIRMED",
+        "building_area_m2": 437.79
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/677_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/677_native15.jpg"
+    },
+    {
+      "stand": "339",
+      "crop_wh": [
+        286,
+        311
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 32,
+      "n_water_seeds": 0,
+      "n_fastsam_presented_to_clip": 0,
+      "max_clip_pool_any_proposal": null,
+      "max_clip_source": null,
+      "max_clip_rival": null,
+      "max_clip_water": null,
+      "max_clip_discard": null,
+      "final_select_pool": "UNKNOWN",
+      "final_notes": [
+        "no_pool_candidate"
+      ],
+      "frozen_os": {
+        "pool_status": "UNKNOWN",
+        "notes": [
+          "no_pool_candidate"
+        ],
+        "clip_pool": null,
+        "building_status": "CONFIRMED",
+        "building_area_m2": 140.95
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/339_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/339_native15.jpg"
+    },
+    {
+      "stand": "408",
+      "crop_wh": [
+        318,
+        569
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 38,
+      "n_water_seeds": 1,
+      "n_fastsam_presented_to_clip": 4,
+      "max_clip_pool_any_proposal": 0.1052,
+      "max_clip_source": "fastsam",
+      "max_clip_rival": 0.3729,
+      "max_clip_water": 0.0,
+      "max_clip_discard": "clip_pool_lt_0.18",
+      "final_select_pool": "UNKNOWN",
+      "final_notes": [
+        "no_pool_candidate"
+      ],
+      "frozen_os": {
+        "pool_status": "UNKNOWN",
+        "notes": [
+          "no_pool_candidate"
+        ],
+        "clip_pool": null,
+        "building_status": "CONFIRMED",
+        "building_area_m2": 133.65
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/408_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/408_native15.jpg"
+    },
+    {
+      "stand": "1/437",
+      "crop_wh": [
+        251,
+        378
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 27,
+      "n_water_seeds": 0,
+      "n_fastsam_presented_to_clip": 1,
+      "max_clip_pool_any_proposal": 0.0061,
+      "max_clip_source": "fastsam",
+      "max_clip_rival": 0.6034,
+      "max_clip_water": 0.0,
+      "max_clip_discard": "clip_pool_lt_0.18",
+      "final_select_pool": "UNKNOWN",
+      "final_notes": [
+        "no_pool_candidate"
+      ],
+      "frozen_os": {
+        "pool_status": "UNKNOWN",
+        "notes": [
+          "no_pool_candidate"
+        ],
+        "clip_pool": null,
+        "building_status": "PROBABLE",
+        "building_area_m2": 49.03
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/1_437_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/1_437_native15.jpg"
+    },
+    {
+      "stand": "1/520",
+      "crop_wh": [
+        537,
+        316
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 45,
+      "n_water_seeds": 1,
+      "n_fastsam_presented_to_clip": 3,
+      "max_clip_pool_any_proposal": 0.0399,
+      "max_clip_source": "fastsam",
+      "max_clip_rival": 0.5956,
+      "max_clip_water": 0.438,
+      "max_clip_discard": "clip_pool_lt_0.18",
+      "final_select_pool": "UNKNOWN",
+      "final_notes": [
+        "no_pool_candidate"
+      ],
+      "frozen_os": {
+        "pool_status": "UNKNOWN",
+        "notes": [
+          "no_pool_candidate"
+        ],
+        "clip_pool": null,
+        "building_status": "CONFIRMED",
+        "building_area_m2": 148.45
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/1_520_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/1_520_native15.jpg"
+    },
+    {
+      "stand": "1/631",
+      "crop_wh": [
+        557,
+        299
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 50,
+      "n_water_seeds": 0,
+      "n_fastsam_presented_to_clip": 3,
+      "max_clip_pool_any_proposal": 0.0155,
+      "max_clip_source": "fastsam",
+      "max_clip_rival": 0.5094,
+      "max_clip_water": 0.0,
+      "max_clip_discard": "shadow_gate",
+      "final_select_pool": "UNKNOWN",
+      "final_notes": [
+        "no_pool_candidate"
+      ],
+      "frozen_os": {
+        "pool_status": "UNKNOWN",
+        "notes": [
+          "no_pool_candidate"
+        ],
+        "clip_pool": null,
+        "building_status": "CONFIRMED",
+        "building_area_m2": 133.22
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/1_631_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/1_631_native15.jpg"
+    },
+    {
+      "stand": "459",
+      "crop_wh": [
+        355,
+        551
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 35,
+      "n_water_seeds": 1,
+      "n_fastsam_presented_to_clip": 2,
+      "max_clip_pool_any_proposal": 0.1182,
+      "max_clip_source": "fastsam",
+      "max_clip_rival": 0.5914,
+      "max_clip_water": 0.0,
+      "max_clip_discard": "clip_pool_lt_0.18",
+      "final_select_pool": "UNKNOWN",
+      "final_notes": [
+        "no_pool_candidate"
+      ],
+      "frozen_os": {
+        "pool_status": "UNKNOWN",
+        "notes": [
+          "no_pool_candidate"
+        ],
+        "clip_pool": null,
+        "building_status": "PROBABLE",
+        "building_area_m2": 64.29
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/459_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/459_native15.jpg"
+    },
+    {
+      "stand": "462",
+      "crop_wh": [
+        581,
+        303
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 62,
+      "n_water_seeds": 0,
+      "n_fastsam_presented_to_clip": 7,
+      "max_clip_pool_any_proposal": 0.1906,
+      "max_clip_source": "fastsam",
+      "max_clip_rival": 0.2743,
+      "max_clip_water": 0.003,
+      "max_clip_discard": "roof_gate",
+      "final_select_pool": "UNKNOWN",
+      "final_notes": [
+        "no_pool_candidate"
+      ],
+      "frozen_os": {
+        "pool_status": "UNKNOWN",
+        "notes": [
+          "no_pool_candidate"
+        ],
+        "clip_pool": null,
+        "building_status": "CONFIRMED",
+        "building_area_m2": 122.56
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/462_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/462_native15.jpg"
+    },
+    {
+      "stand": "543",
+      "crop_wh": [
+        427,
+        612
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 84,
+      "n_water_seeds": 2,
+      "n_fastsam_presented_to_clip": 13,
+      "max_clip_pool_any_proposal": 0.1755,
+      "max_clip_source": "fastsam",
+      "max_clip_rival": 0.6261,
+      "max_clip_water": 0.0,
+      "max_clip_discard": "clip_pool_lt_0.18",
+      "final_select_pool": "UNKNOWN",
+      "final_notes": [
+        "no_pool_candidate"
+      ],
+      "frozen_os": {
+        "pool_status": "UNKNOWN",
+        "notes": [
+          "no_pool_candidate"
+        ],
+        "clip_pool": null,
+        "building_status": "CONFIRMED",
+        "building_area_m2": 443.37
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/543_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/543_native15.jpg"
+    },
+    {
+      "stand": "675",
+      "crop_wh": [
+        291,
+        568
+      ],
+      "crop_matches_os_v1_wh": true,
+      "n_fastsam": 35,
+      "n_water_seeds": 1,
+      "n_fastsam_presented_to_clip": 2,
+      "max_clip_pool_any_proposal": 0.0185,
+      "max_clip_source": "fastsam",
+      "max_clip_rival": 0.4771,
+      "max_clip_water": 0.582,
+      "max_clip_discard": "shadow_gate",
+      "final_select_pool": "UNKNOWN",
+      "final_notes": [
+        "no_pool_candidate"
+      ],
+      "frozen_os": {
+        "pool_status": "UNKNOWN",
+        "notes": [
+          "no_pool_candidate"
+        ],
+        "clip_pool": null,
+        "building_status": "CONFIRMED",
+        "building_area_m2": 174.6
+      },
+      "panel_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/panels/675_fastsam_miss_panel.jpg",
+      "crop_path": "/workspace/data/investigations/estate_property_inventory_v1/fastsam_miss/crops/675_native15.jpg"
+    }
+  ],
+  "measured_bottleneck": {
+    "677_clip_pool": 0.9921,
+    "misses_max_clip_pool": 0.1906,
+    "misses_reaching_clip": 8,
+    "misses_no_clip_at_all": [
+      "339"
+    ],
+    "all_nine_reproduced_no_pool_candidate": true
+  }
+}

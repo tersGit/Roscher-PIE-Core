@@ -1,0 +1,115 @@
+{
+  "classification_semantics_unchanged": true,
+  "estate_id": "carlswald_north_corrected_002",
+  "extension_table": [
+    {
+      "extension": "EXT.3",
+      "included_unique_properties": 70,
+      "official_name": "SUMMERSET EXT.3",
+      "source_parcels": 78
+    },
+    {
+      "extension": "EXT.6",
+      "included_unique_properties": 212,
+      "official_name": "SUMMERSET EXT.6",
+      "source_parcels": 280
+    },
+    {
+      "extension": "EXT.13",
+      "included_unique_properties": 118,
+      "official_name": "SUMMERSET EXT.13",
+      "source_parcels": 136
+    },
+    {
+      "extension": "TOTAL",
+      "included_unique_properties": 400,
+      "official_name": "SUMMERSET EXT.3+6+13",
+      "source_parcels": 494
+    }
+  ],
+  "frozen_001": "carlswald_north_corrected_001",
+  "frozen_001_inventory_untouched": true,
+  "gate_listing_no": {
+    "listing_pool_status": "NO",
+    "no_survivors": 68,
+    "parcels_removed_confident_no": 0,
+    "parcels_removed_confident_yes": 118,
+    "pct_reduction": 29.5,
+    "starting_count": 400,
+    "total_survivors": 282,
+    "unknown_survivors": 214,
+    "yes_survivors": 0
+  },
+  "gate_listing_unknown": {
+    "listing_pool_status": "UNKNOWN",
+    "no_survivors": 68,
+    "parcels_removed_confident_no": 0,
+    "parcels_removed_confident_yes": 0,
+    "pct_reduction": 0.0,
+    "starting_count": 400,
+    "total_survivors": 400,
+    "unknown_survivors": 214,
+    "yes_survivors": 118
+  },
+  "gate_listing_yes": {
+    "listing_pool_status": "YES",
+    "no_survivors": 0,
+    "parcels_removed_confident_no": 68,
+    "parcels_removed_confident_yes": 0,
+    "pct_reduction": 17.0,
+    "starting_count": 400,
+    "total_survivors": 332,
+    "unknown_survivors": 214,
+    "yes_survivors": 118
+  },
+  "inventory_counts": {
+    "NO": 68,
+    "UNKNOWN": 214,
+    "YES": 118,
+    "no_pct": 17.0,
+    "total": 400,
+    "unknown_pct": 53.5,
+    "yes_pct": 29.5
+  },
+  "n_written": 400,
+  "os_status_tally": {
+    "CONFIRMED": 102,
+    "PROBABLE": 20,
+    "REJECTED": 157,
+    "UNKNOWN": 121
+  },
+  "production_ranking_modified": false,
+  "scan": {
+    "algorithm_version": "estate_property_inventory_v1.1.0.0+object_segmentation_v1",
+    "classification_semantics_unchanged": true,
+    "crop_stats": {
+      "crop_dir": "/workspace/data/visual_index/carlswald_north_corrected_002/_imagery_cache_native15",
+      "crops_failed": 0,
+      "crops_reused": 0,
+      "crops_written": 70,
+      "parcels": 70
+    },
+    "estate_id": "carlswald_north_corrected_002",
+    "fastsam_available": true,
+    "fastsam_runs": 70,
+    "geometry_changed_vs_001": [],
+    "missing_os_or_crop": 0,
+    "newly_processed": 70,
+    "no": 68,
+    "os_json_reused_for_new": 0,
+    "parcels_reused": 330,
+    "parcels_total": 400,
+    "rescanned": 70,
+    "runtime_s": 95.453,
+    "tile_stats": {
+      "cache_dir": "/workspace/data/cache/ags_native15/carlswald_north_corrected_002",
+      "failed_ids": [],
+      "tiles_downloaded": 8,
+      "tiles_failed": 0,
+      "tiles_required": 8,
+      "tiles_reused": 0
+    },
+    "unknown": 214,
+    "yes": 118
+  }
+}
