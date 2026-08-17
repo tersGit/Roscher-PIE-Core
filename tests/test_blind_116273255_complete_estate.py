@@ -124,5 +124,14 @@ def test_freeze_must_exist_before_gt_lookup():
     assert freeze_fn < after_fn
     assert "if not FREEZE_PATH.is_file()" in source[after_fn:]
     assert "refuse to look up ground truth" in source[after_fn:]
-    # Identity extraction lives after freeze helpers and is only called from after-freeze.
     assert confirm_fn > freeze_fn
+
+
+def test_extract_identity_records_withheld_street():
+    from backend.gis.estate_ags_matching.blind_116273255_complete_estate import extract_identity_from_html
+
+    html = "<title>3 Bedroom House for sale in Carlswald North Estate</title> p24_address\">Contact agent for street address"
+    ident = extract_identity_from_html(html)
+    assert ident["street"] is None
+    assert ident["street_withheld_contact_agent"] is True
+    assert ident["stand_mentions"] == []

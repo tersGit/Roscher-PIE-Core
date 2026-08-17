@@ -905,7 +905,6 @@ def extract_identity_from_html(html: str) -> dict[str, Any]:
     match = re.search(r"<title>([^<]+)</title>", html, re.I)
     if match:
         title = re.sub(r"\s+", " ", match.group(1)).strip()
-    stands = [item.group(0) for item in re.finditer(r"(?i)\bstand\s*(?:no\.?|number|#)?\s*[:.]?\s*([0-9]+(?:/[0-9]+)?[A-Z]?)\b", html)]
     stand_numbers = []
     for item in re.finditer(
         r"(?i)\bstand\s*(?:no\.?|number|#)?\s*[:.]?\s*([0-9]+(?:/[0-9]+)?[A-Z]?)\b",
@@ -920,10 +919,18 @@ def extract_identity_from_html(html: str) -> dict[str, Any]:
         street_match = STREET_RE.search(title)
         if street_match:
             street = street_match.group(0)
+    withheld = bool(re.search(r"(?i)contact agent for street address", html))
+    locality = None
+    loc = re.search(r'"addressLocality"\s*:\s*"([^"]+)"', html)
+    if loc:
+        locality = loc.group(1)
     return {
         "title": title,
         "stand_mentions": stand_numbers,
         "street": street,
+        "street_withheld_contact_agent": withheld,
+        "address_locality": locality,
+        "coordinates_present": bool(re.search(r'"(?:latitude|longitude)"\s*:', html)),
     }
 
 
@@ -1055,6 +1062,14 @@ def confirm_ground_truth(html: str, dataset: Mapping[str, Any], inventory: Seque
         evidence.append({"type": "gis_inventory_presence", "visual": visual})
     if confirmed is None:
         confidence = "LOW"
+        evidence.append(
+            {
+                "type": "public_listing_identity_withheld",
+                "street_withheld_contact_agent": identity.get("street_withheld_contact_agent"),
+                "coordinates_present": identity.get("coordinates_present"),
+                "note": "Public Property24 page does not publish street or stand. Rank was not used as truth.",
+            }
+        )
     return {
         "confirmed_stand": confirmed,
         "confidence": confidence if confirmed else "LOW",
@@ -1065,6 +1080,7 @@ def confirm_ground_truth(html: str, dataset: Mapping[str, Any], inventory: Seque
         "evidence": evidence,
         "visual": visual,
         "inferred_from_pie_rank": False,
+        "previous_001_hybrid_ranking_also_had_no_independent_gt": True,
     }
 
 
@@ -1309,7 +1325,13 @@ def run_after_freeze() -> dict[str, Any]:
         detector = detector_on_true_erf(str(gt["confirmed_stand"]), dataset, inventory)
         DETECTOR_PATH.write_text(json.dumps(detector, indent=2) + "\n", encoding="utf-8")
     marker = json.loads((OUT_DIR / "rankings_frozen.json").read_text(encoding="utf-8"))
+    handwritten = None
+    if REPORT_PATH.is_file() and REPORT_PATH.read_text(encoding="utf-8").lstrip().startswith("# Blind PIE benchmark"):
+        handwritten = REPORT_PATH.read_text(encoding="utf-8")
     write_report(freeze, gt, evaluation, detector, marker.get("panels") or [])
+    (OUT_DIR / "REPORT.auto.md").write_text(REPORT_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+    if handwritten:
+        REPORT_PATH.write_text(handwritten, encoding="utf-8")
     (OUT_DIR / "evaluation.json").write_text(
         json.dumps({"ground_truth": gt, "evaluation": evaluation, "detector": detector}, indent=2) + "\n",
         encoding="utf-8",
