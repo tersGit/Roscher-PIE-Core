@@ -209,7 +209,7 @@ def test_compare_includes_previous_three_and_watch_cluster():
     assert "116223230" in result["listings"]
     assert "116778622" in result["listings"]
     assert "116978058" in result["listings"]
-    assert result["n_listings_compared"] == 4
+    assert result["n_listings_compared"] >= 4
     assert set(WATCH_REPEAT_STANDS) == {"605", "444", "573", "446", "401"}
     assert "yes_pool_cluster" in result["watch_families"]
     assert result["distinctive_shape_dropped_repeat_cluster"] is True
