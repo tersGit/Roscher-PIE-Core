@@ -1,8 +1,12 @@
 """Hybrid Pool Geometry v1 × frozen Scoring v2 ranking adapter.
 
-Loads frozen Hybrid v1 listing evidence and scores native15 OS v1 candidates
-with frozen Scoring v2 weights. Does not modify Hybrid extraction, Scoring v2,
-OS v1, native15 crops, viewpoint gates, FastSAM, or production ranking.
+Loads Hybrid listing evidence and scores native15 OS v1 candidates with frozen
+Scoring v2 weights. Adapter eligibility follows Hybrid ``scoring_ready`` plus
+existing contour integrity. Detector/source is provenance only and is not a
+scoring feature.
+
+Does not modify Hybrid extraction, Scoring v2 weights/formula, OS v1, native15,
+viewpoint gates, FastSAM extraction, or production ranking.
 
 Water colour is not a scoring feature. Oblique listing area is not treated as
 nadir pool area. Missing viewpoint-incompatible terms stay Scoring v2 0.5-neutral.
@@ -25,12 +29,17 @@ from backend.gis.estate_ags_matching.os_scoring_v2 import (
 from backend.gis.estate_ags_matching.os_v1_experimental_rank import is_high_conf
 from backend.gis.estate_ags_matching.pool_geometry import PoolGeometryFingerprint
 
-SCORING_SOURCES = frozenset({"yoloe", "yoloe_sam2"})
-BLOCKED_SOURCES = frozenset({"fastsam_fallback", "presence_only", "no_usable_geometry"})
+SCORING_SOURCES = frozenset({"yoloe", "yoloe_sam2", "fastsam_fallback"})
+BLOCKED_SOURCES = frozenset({"presence_only", "no_usable_geometry"})
 
 
 def scoring_ready_frames(frames: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Only YOLOE / YOLOE+SAM2 frames marked scoring-ready, with a contour."""
+    """Hybrid scoring-ready frames with a scorable contour.
+
+    Detector identity is not an eligibility filter. ``presence_only`` and
+    ``no_usable_geometry`` remain blocked. ``scoring_ready`` does not override
+    missing or malformed geometry.
+    """
     ready = []
     for frame in frames:
         if not frame.get("scoring_ready"):
@@ -39,10 +48,21 @@ def scoring_ready_frames(frames: list[dict[str, Any]]) -> list[dict[str, Any]]:
         if source in BLOCKED_SOURCES or source not in SCORING_SOURCES:
             continue
         contour = _frame_contour(frame)
-        if contour is None:
+        if not _contour_passes_integrity(contour):
             continue
         ready.append(frame)
     return ready
+
+
+def _contour_passes_integrity(contour: list[list[float]] | None) -> bool:
+    """Existing Scoring v2 contour integrity. Does not change descriptor math."""
+    if not contour or len(contour) < 5:
+        return False
+    try:
+        desc = contour_descriptors(contour)
+    except (TypeError, ValueError, ArithmeticError):
+        return False
+    return desc is not None
 
 
 def _frame_contour(frame: dict[str, Any], *, secondary: bool = False) -> list[list[float]] | None:
@@ -89,14 +109,14 @@ def fingerprint_from_hybrid_frame(
     if not frame.get("scoring_ready") and not use_secondary:
         raise ValueError("frame is not scoring-ready")
     source = str(frame.get("source") or "")
-    if source not in SCORING_SOURCES:
+    if source not in SCORING_SOURCES or source in BLOCKED_SOURCES:
         raise ValueError(f"source {source} cannot supply scoring geometry")
     blob = frame.get("secondary") if use_secondary else frame.get("dominant")
     if not isinstance(blob, dict):
         raise ValueError("requested component is missing")
     contour = _frame_contour(frame, secondary=use_secondary)
-    if contour is None:
-        raise ValueError("component has no contour")
+    if not _contour_passes_integrity(contour):
+        raise ValueError("component contour failed existing integrity requirements")
     geom = blob.get("geometry") or {}
     cx, cy = (blob.get("centroid_xy") or [None, None])[:2]
     role = "secondary" if use_secondary else "dominant"
@@ -161,7 +181,7 @@ def listing_evidence_from_hybrid_block(block: dict[str, Any]) -> dict[str, Any]:
                     "media_id": frame.get("media_id"),
                     "source": source,
                     "scoring_ready": bool(frame.get("scoring_ready")),
-                    "reason": "fastsam_or_presence_or_rejected"
+                    "reason": "presence_only_or_no_usable_geometry"
                     if source in BLOCKED_SOURCES
                     else "not_scoring_ready",
                 }
@@ -182,7 +202,7 @@ def listing_evidence_from_hybrid_block(block: dict[str, Any]) -> dict[str, Any]:
             "scale_from": None,
             "relative_area_used": False,
             "colour_used": False,
-            "fastsam_used": False,
+            "fastsam_used": bool(chosen is not None and chosen.get("source") == "fastsam_fallback"),
             "secondary_recorded": bool(secondary),
             "secondary_in_official_contour": False,
         },
