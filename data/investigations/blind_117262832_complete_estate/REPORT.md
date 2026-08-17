@@ -5,6 +5,7 @@ First clean blind validation after **PR #23** (Hybrid extraction) + **PR #24** (
 - **Freeze path:** `data/investigations/blind_117262832_complete_estate/freeze.json`
 - **On-disk SHA256** (matches `freeze.sha256`, verified after write): `32ecd4b526d4a299e143c869761664a9ed7a4b2d9ae65aba6ed300583a1dd10a`
 - **Harness commit:** `5b15e39`
+- **Freeze commit:** `4f24f3f`
 - **PR:** #25
 - **Stack:** PR #23 extraction + PR #24 adapter; Scoring v2 frozen
 - **Official score:** `hybrid_v2`
@@ -237,5 +238,6 @@ Listing contour proof: `data/investigations/blind_117262832_complete_estate/list
 2. Computed SHA256
 3. Wrote `freeze.sha256`
 4. Verified on-disk file matches recorded hash: **yes** (`32ecd4b526d4a299e143c869761664a9ed7a4b2d9ae65aba6ed300583a1dd10a`)
-5. Ground-truth lookup before this freeze commit: **none**
-6. STOP. No after-freeze identity recovery in this test.
+5. Freeze commit: `4f24f3f` (`4f24f3fb405b758f0b247e850253a6d00052b6e0`)
+6. Ground-truth lookup before this freeze commit: **none**
+7. STOP. No after-freeze identity recovery in this test.
