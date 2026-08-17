@@ -201,7 +201,40 @@ Reliable for hard filter today: **inventory YES** (listing-NO gate) and
 **inventory NO** (listing-YES gate) as already defined. Everything else stays
 UNKNOWN. UNKNOWN is preferable to a dangerous hard class.
 
-## K. Recommended single next experiment
+## K. Raw Council GIS imagery proof sample
+
+Stand **677** (inventory YES, OS v1 pool CONFIRMED, CLIP 0.992). House, pool,
+driveway and garden are all visible. Source is City of Johannesburg AGS
+`AerialPhotography/2023` — not Google/Bing.
+
+Open the labelled panel:
+
+`data/investigations/estate_property_inventory_v1/unknown_diagnostic/ags_raw_proof/677_ags_native15_raw_proof.jpg`
+
+Raw crop (no overlays):
+
+`data/investigations/estate_property_inventory_v1/unknown_diagnostic/ags_raw_proof/677_ags_native15_raw_crop.jpg`
+
+| Item | Value |
+|---|---|
+| Estate / township | Carlswald North / SUMMERSET EXT.13 |
+| Imagery source | `https://ags.joburg.org.za/server/rest/services/AerialPhotography/2023/ImageServer` |
+| Imagery date/version | CoJ Aerial Photography 2023 (service has no timeInfo) |
+| Native GSD | **0.15 × 0.15 m/px** (`pixelSizeX/Y` on the ImageServer) |
+| Cache profile | native15 (210 m tile × 1400 px = 0.15 m/px) |
+| Source tile ID | `tile_2023_native15_04_03` |
+| Primary mosaic raster | `2023_COJ_RGB_15cm_AP103` (Category=Primary, LowPS=0.15) |
+| Resampled? | **No.** Requested GSD equals native 0.15 m/px. AGS still applies `RSP_BilinearInterpolation` / default Bilinear. |
+| How the crop was made | Live `exportImage` of that native15 tile, then **integer pixel crop** (`crop_parcel`, JPEG quality 90). Production estate cache is gitignored and was not present in this VM. |
+| Crop pixels | **605 × 402** (matches OS v1 `crop_wh`) |
+| Approx ground | 90.8 × 70.3 m (erf 936 m² plus 18 m pad) |
+| Pool | ≈ 41.2 × 26.6 px (6.18 × 3.99 m); OS area 928.5 px / 20.89 m² |
+| House/roof | ≈ 197.1 × 128.8 px (29.56 × 19.32 m); OS area 19 457.5 px / 437.79 m² |
+| Driveway | width ≈ 50.5 px (7.57 m) by min-area-rect of the OS paved mask; length ≈ 98.2 px; 1 650.5 px / 37.14 m² |
+
+Panel 1 is the actual analysis pixels at 1:1. No contrast stretch, sharpen, or satellite substitute.
+
+## L. Recommended single next experiment
 
 **Add SUMMERSET EXT.3 to the Carlswald North GIS dataset as an explicit,
 reviewed boundary change** (do not silently edit `carlswald_north_corrected_001`
