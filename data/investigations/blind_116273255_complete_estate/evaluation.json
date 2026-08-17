@@ -1,0 +1,34 @@
+{
+  "ground_truth": {
+    "confirmed_stand": null,
+    "confidence": "LOW",
+    "determinable": false,
+    "identity": {
+      "title": "3 Bedroom House for sale in Carlswald North Estate - P24-116273255",
+      "stand_mentions": [],
+      "street": null,
+      "street_withheld_contact_agent": true,
+      "address_locality": "Carlswald North Estate",
+      "coordinates_present": false
+    },
+    "gis_street_matches": [],
+    "coj_matches": [],
+    "evidence": [
+      {
+        "type": "public_listing_identity_withheld",
+        "street_withheld_contact_agent": true,
+        "coordinates_present": false,
+        "note": "Public Property24 page does not publish street or stand. Rank was not used as truth."
+      }
+    ],
+    "visual": null,
+    "inferred_from_pie_rank": false,
+    "previous_001_hybrid_ranking_also_had_no_independent_gt": true
+  },
+  "evaluation": {
+    "determinable": false,
+    "outcome": null,
+    "note": "Ground truth could not be established independently. Frozen ranking was not used as truth."
+  },
+  "detector": null
+}
