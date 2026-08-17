@@ -241,3 +241,13 @@ Listing contour proof: `data/investigations/blind_117262832_complete_estate/list
 5. Freeze commit: `4f24f3f` (`4f24f3fb405b758f0b247e850253a6d00052b6e0`)
 6. Ground-truth lookup before this freeze commit: **none**
 7. STOP. No after-freeze identity recovery in this test.
+
+## N. After-freeze forensic (ranking not recomputed)
+
+Ground-truth recovery was performed **after** freeze commit `4f24f3f`. `freeze.json` / `freeze.sha256` were not modified.
+
+- Identity: **HIGH CONFIDENCE stand 338** (14 Soetdoring Close, EXT.6). Frozen rank **122 / 332**.
+- Write-up: `data/investigations/blind_117262832_complete_estate/AFTER_FREEZE.md`
+- Proof: `data/investigations/blind_117262832_complete_estate/true_stand_338_geometry_proof.png`
+
+Section K.1 freeze-time answer (PR #23 extracted usable geometry) is **qualified after GT**: FastSAM `039` did enter Scoring v2, but the official contour is not the listing’s own rectangular pool. That does not change the freeze.

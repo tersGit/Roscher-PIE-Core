@@ -1,0 +1,53 @@
+{
+  "true_stand": "338",
+  "frozen_rank_of_332": 122,
+  "frozen_score": 0.5847,
+  "n_survivors": 332,
+  "n_with_shape_v2": 122,
+  "shape_only_rank": 124,
+  "shape_only_note": "shape_v2 is null; ranked after all measured-shape survivors",
+  "rank_excluding_stand_size_contribution": 183,
+  "score_excluding_stand_size": 0.5147,
+  "rank_excluding_neutral_padding": 124,
+  "score_excluding_neutral_padding": 0.2097,
+  "rank_using_only_non_neutral_evidence": 124,
+  "true_genuine_terms": [
+    {
+      "term": "aerial",
+      "contrib": 0.0953,
+      "weight": 0.12
+    },
+    {
+      "term": "exterior",
+      "contrib": 0.0444,
+      "weight": 0.06
+    },
+    {
+      "term": "stand_size",
+      "contrib": 0.07,
+      "weight": 0.07
+    }
+  ],
+  "true_neutral_terms": [
+    {
+      "term": "pool_presence",
+      "contrib": 0.07,
+      "weight": 0.14
+    },
+    {
+      "term": "shape_v2",
+      "contrib": 0.18,
+      "weight": 0.36
+    },
+    {
+      "term": "spatial_v2",
+      "contrib": 0.11,
+      "weight": 0.22
+    },
+    {
+      "term": "gis",
+      "contrib": 0.015,
+      "weight": 0.03
+    }
+  ]
+}
