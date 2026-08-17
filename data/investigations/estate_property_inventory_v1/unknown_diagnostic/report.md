@@ -1,76 +1,115 @@
-# Estate Property Inventory v1 — UNKNOWN diagnostic (read-only)
+# Estate Property Inventory v1.1 — UNKNOWN diagnostic (read-only)
 
 Does **not** modify `current.jsonl`, OS v1, FastSAM, Scoring v2, Hybrid Pool
 Geometry, native15, production ranking, or Listing Pool Gate semantics.
 Colour is not used in scoring. No inventory statuses were converted.
 
-**Stop optimisation:** SUMMERSET EXT.3 is a proclaimed CoJ township inside the
-Carlswald North gated-community bbox and is absent from the frozen GIS dataset.
-Classification-rate conclusions below are for the current EXT.6+EXT.13 subset
-only.
+**Dataset stop:** `carlswald_north_corrected_001` is **not** the complete
+intended Carlswald North / Summerset EXT.3+6+13 search area. UNKNOWN counts
+below are for the frozen EXT.6+EXT.13 subset of **330** unique erven only.
+Estate boundaries were not silently changed.
 
-## A. Carlswald dataset completeness
+## A. Dataset completeness
 
 | Item | Value |
 |---|---|
 | GIS source | `carlswald_north_corrected_001` |
-| Source parcels | **416** (all Erven) |
+| Source GIS parcels | **416** Erven |
 | Unique stand / property_id in source | **407** / **407** |
-| Townships in frozen dataset | SUMMERSET **EXT.6** (280) + **EXT.13** (136) |
-| Requested at dataset build | EXT.**2** (not in CoJ), EXT.6, EXT.13 |
-| EXT.3 in frozen dataset | **No** |
-| Live CoJ probe EXT.3 | **PROCLAIMED**, 78 erven, ~69 residential pass-1, extent inside gated bbox |
-| Gated community extent | 28.089924–28.102245 E, −25.971944–−25.963785 |
-| Search extent used | union of EXT.6+EXT.13 parcels (almost the gated bbox) |
-| Excluded wrong-estate townships | CARLSWALD ESTATE* (previous incorrect mapping) |
-| OS v1 fingerprints | **330/330** pass-1 unique erven |
-| Native15 crops on disk this run | diagnostic AGS sample only (19); estate cache still gitignored |
-| Inventory rows | **330** |
+| Selection method | CoJ township pull of requested Summerset extensions; GIS pass 1 = Erven, not non-residential, not `RE/`, area &lt; 8000 m² (same as production ranking) |
+| Extensions in frozen dataset | SUMMERSET **EXT.6** (280) + **EXT.13** (136) |
+| EXT.3 | **Absent.** Live CoJ: PROCLAIMED, 78 erven, ~69 residential pass-1, extent inside gated bbox |
+| Requested at dataset build | EXT.**2** (not in CoJ), EXT.6, EXT.13. EXT.3 was never requested |
+| Wrong-estate exclusions | CARLSWALD ESTATE* (deprecated incorrect mapping) |
+| Pass-1 exclusions | **79** of 416: 47 `RE/` remainders, 31 non-residential, 1 huge remainder (stand 372, 27 924 m²) |
+| Duplicates removed | **7** extra GIS rows in EXT.6 (same stand + same property_id). **Zero** cross-township collisions |
+| Final unique residential erven | **330** |
+| OS v1 fingerprints | **330/330** |
+| Native15 | All 330 OS crops exist (`crop_wh` min ≥ 249 px, 0.15 m/px). Estate tile cache is gitignored; this run used live AGS `exportImage` for visual review |
 
-Excluded from GIS pass 1 (79 of 416): 47 RE/ remainders, 31 non-residential
-(6 of those also huge/RE), 1 residential remainder stand 372 at 27 924 m².
+Why 330: 416 source → 337 pass-1 rows → 330 unique `property_id`.
 
-Estate boundaries were **not** silently changed.
+330 is complete for frozen EXT.6+EXT.13. It is **incomplete** for the intended
+estate (EXT.3+6+13). Classification-rate claims are not estate-wide.
 
-## B. Why the inventory contains 330 unique erven
+## B. UNKNOWN distribution (179 / 179)
 
-Previous “larger” numbers are not a missing-crop bug:
+Primary reason from frozen OS v1 evidence. Secondary flags allowed.
 
-1. **416** = every CoJ Erven in EXT.6+EXT.13, including parks, infrastructure, RE/.
-2. **337** = GIS pass 1 (same filter as production ranking): Erven, not
-   non-residential, not `RE/`, area &lt; 8000 m².
-3. **330** = unique `property_id` after collapsing **7 duplicate GIS rows**
-   (same stand + same property_id, all in EXT.6). There are **zero**
-   cross-township stand collisions. The OS v1 note that “7 stands collide
-   across EXT.6/EXT.13” is incorrect; they are duplicate records in EXT.6.
-
-330 is **complete for the frozen EXT.6+EXT.13 residential/vacant search set**.
-It is **incomplete for Carlswald North / Summerset EXT.3+6+13**: EXT.3 exists
-and was never requested (EXT.2 was requested instead and does not exist).
-
-Because EXT.3 is missing, UNKNOWN-rate optimisation is **stopped**. The
-179/330 analysis below describes the current subset only.
-
-## C. UNKNOWN reason distribution (179)
-
-All 179 have usable native15-sized OS crops (`crop_wh` min ≥ 249 px).
-
-| Primary reason | n | % of UNKNOWN |
+| Primary reason | n | % |
 |---|---:|---:|
-| OS `REJECTED` (not absence) | 116 | 64.8% |
-| no pool candidate + inadequate building mask | 43 | 24.0% |
-| pool candidate, confidence insufficient | 16 | 8.9% |
-| `partially_outside_parcel` / neighbour-bleed | 4 | 2.2% |
+| OS `REJECTED` | 116 | 64.80% |
+| good imagery + no pool candidate (also inadequate building segmentation) | 43 | 24.02% |
+| weak / ambiguous pool candidate | 16 | 8.94% |
+| `partially_outside_parcel` | 4 | 2.23% |
+| inadequate parcel mask | 0 | 0% |
+| poor imagery / coverage | 0 | 0% |
 | **Total** | **179** | **100%** |
 
-Imagery-quality UNKNOWNs: **0**. Ambiguous-object / other: folded into REJECTED
-subtypes.
+Secondary flags (not additive to 179): neighbour-bleed on the 4
+`partially_outside` rows; roof/shadow/vegetation/object confusion folded into
+REJECTED subtypes (see E); inadequate building segmentation on all 43
+no-candidate rows.
 
-## D. REJECTED analysis (132 = 116 + 16)
+## C. Safe-NO findings
 
-OS notes: 90 `rejected_as_road_shadow_or_roof`, 42 `low_pool_evidence`.
+Current v1 NO = `no_pool_candidate` **and** adequate building segmentation
+(60 parcels). That rule was **not** changed.
 
-CLIP rival among REJECTED: roof 108, shadow 14, road 5, lawn 3, driveway 2.
+A Stand 677–scale pool is ≈ **41 × 27 px** (6.2 × 4.0 m) at 0.15 m/px.
+
+Of every UNKNOWN (179):
+
+| Question | Result |
+|---|---|
+| Entire GIS erf bbox visible on a native15 crop? | **179/179** yes (`crop_wh` min ≥ 249 px) |
+| Imagery GSD sufficient to see a 677-scale pool if unobstructed? | **179/179** yes |
+| Any OS in-parcel pool candidate? | **136** yes (116 REJECTED + 16 weak + 4 partial). **43** OS `no_pool_candidate` |
+| UNKNOWN solely because building segmentation failed the v1 NO gate? | **43** |
+| Does a failed roof mask prevent seeing a pool elsewhere on the erf? | **No.** A pool does not require a roof. The building gate is not a theory of absence |
+
+Visual review of **all 43** no-candidate AGS crops with GIS boundary:
+
+| Visual class | n | Stands |
+|---|---:|---|
+| Missed bright in-parcel pool | 9 | 339, 408, 1/437, 1/520, 1/631, 459, 462, 543, 675 |
+| Dark possible in-parcel pool | 1 | 448 |
+| Canopy / vegetation — cannot certify absence | 2 | 406, 497 |
+| No credible in-parcel pool (vacant, construction, or empty yard) | **31** | remaining of the 43 |
+
+**Answer to the main question:** 31 of 179 UNKNOWN erven have complete usable
+0.15 m/px imagery and no credible visual evidence of an in-parcel pool. They
+are the only *potential* high-confidence NO set.
+
+They are **not** safe to convert with an automated rule. The other 12 of the
+43 share the same OS signature (`no_pool_candidate` + poor building) and
+include obvious 677-scale pools (339, 408, 1/437, 1/520, 1/631, 459, 462,
+543, 675). Stand **408** was previously read as neighbour-only; the GIS
+boundary on the AGS crop shows the bright rectangle **inside** the erf.
+
+Failed to detect ≠ evidence of absence. Conservative automated extra NO = **0**.
+
+## D. Safe-YES findings
+
+No UNKNOWN is promoted to YES.
+
+| Class | n | Notes |
+|---|---:|---|
+| Likely genuine missed pool (no OS candidate) | 9 | listed in C; stay UNKNOWN |
+| Dark / teal | 2 | **370** (REJECTED roof blob; real turquoise pool). **448** (dark rectangle, no candidate) |
+| Weak / unusual / small candidate | 16 | e.g. 411 CLIP 0.54 backyard rectangle — cover/spa/true pool possible |
+| Partially outside (subject pool clipped by GIS) | 4 | 658 CONFIRMED; 633, 1105, 1/334 PROBABLE. Not safe hard-YES |
+| Neighbour correctly excluded | several of the 31 | e.g. **1/335**, 1/379, 395, 547 — neighbour pool outside yellow line |
+| Obvious false positive / shadow object | REJECTED majority | see E |
+| Genuinely ambiguous | 447, 612, 411 | stay UNKNOWN |
+
+Known stands: **677** remains the confirmed YES reference. **370** likely YES
+visually, UNKNOWN for the gate. **408** is a missed in-parcel pool, not a
+neighbour exclusion. **447 / 570 / 612** stay UNKNOWN.
+
+## E. OS REJECTED findings (132 = 116 primary + 16 weak)
+
+REJECTED is **not** absence. It is “a blob was proposed and refused.”
 
 | Subtype | n |
 |---|---:|
@@ -83,164 +122,84 @@ CLIP rival among REJECTED: roof 108, shadow 14, road 5, lawn 3, driveway 2.
 | vegetation | 2 |
 | driveway | 1 |
 
-Known examples (inventory **not** changed):
+REJECTED mostly protects against false-positive YES (roof/shadow). It also
+**hides at least one genuine YES** (Stand 370). Converting REJECTED → NO is
+**UNSAFE FOR HARD GATE**. Converting the 16 low-confidence candidates → YES
+is **UNSAFE FOR HARD GATE**.
 
-| Stand | OS | Visual (this diagnostic) | Hard-filter |
-|---|---|---|---|
-| **370** | REJECTED roof CLIP 0.029 | **Real turquoise in-parcel pool**; OS masked a dark roof rectangle | Must stay UNKNOWN. REJECTED→NO would discard the correct property |
-| **447** | REJECTED, CLIP 0.32 | Dark irregular tree-shadow candidate; neighbours have bright pools | UNKNOWN |
-| **570** | REJECTED shadow CLIP 0.017 | Driveway/house shadow; no in-parcel pool | Visually empty, but REJECTED cannot become NO (370 class) |
-| **612** | REJECTED CLIP 0.25 kidney | Neighbour dark kidney in the crop; in-parcel candidate weak | UNKNOWN (not YES) |
-| **408** | no_candidate + poor building | Neighbour bright pool **outside** yellow boundary | Not YES. See §E |
+## F. Visual proof-panel paths
 
-REJECTED is **not** converted to NO.
+Directory: `data/investigations/estate_property_inventory_v1/unknown_diagnostic/stratified_eight/`
 
-## E. Safe-NO analysis
+| # | Stand | File | Inventory | Diagnostic interpretation |
+|---|---|---|---|---|
+| 1 | 677 | `677_confirmed_pool_reference.jpg` | YES | likely YES |
+| 2 | 392 | `392_likely_safe_no_good_imagery.jpg` | UNKNOWN | likely NO (vacant); remain UNKNOWN for gate |
+| 3 | 2/379 | `2_379_unknown_only_poor_building.jpg` | UNKNOWN | likely NO visually; remain UNKNOWN (same OS signature as 339) |
+| 4 | 411 | `411_genuine_ambiguous_candidate.jpg` | UNKNOWN | remain UNKNOWN |
+| 5 | 370 | `370_dark_teal_potential_pool.jpg` | UNKNOWN | likely YES visually; remain UNKNOWN |
+| 6 | 1/335 | `1_335_neighbour_pool_correctly_excluded.jpg` | UNKNOWN | likely NO visually; neighbour pools outside GIS line |
+| 7 | 570 | `570_shadow_object_false_candidate.jpg` | UNKNOWN | likely NO visually; REJECTED ≠ absence |
+| 8 | 406 | `406_observability_failure.jpg` | UNKNOWN | remain UNKNOWN — canopy could hide a 677-scale pool |
 
-Current v1 NO = `no_pool_candidate` **and** adequate building segmentation (60).
+Contact sheets of all 43 no-candidate reviews:
+`data/investigations/estate_property_inventory_v1/unknown_diagnostic/safe_no_review/review_sheet_{1-6}.jpg`
 
-Of the 179 UNKNOWN:
-
-- good full-parcel imagery: **179/179**
-- no in-parcel OS candidate: **43** (all of these are UNKNOWN *only* because the building mask failed the v1 quality gate)
-- UNKNOWN solely because building segmentation was inadequate: **43**
-
-**Building quality should not be the theory of “no pool”.** A pool does not
-require a successful roof mask.
-
-**But dropping that gate is unsafe with OS v1.** Stand **339**: bright blue
-**in-parcel** pool, OS `no_pool_candidate`, UNKNOWN only because the building
-mask is fragmented/undersized (~141 m², 3 masses). Promoting the 43 to NO
-would hard-discard 339 when a listing has a pool.
-
-High-confidence NO needs parcel-wide evidence that the detector actually
-looked at the water body class and found none — not “FastSAM returned no blob”
-and not “roof mask looks OK”. OS v1 does not provide that.
-
-So: **“failed to detect” ≠ “sufficient evidence of absence.”** Keep the 43 as
-UNKNOWN.
-
-## F. Safe-YES opportunities
-
-Current YES (91) are OS CONFIRMED/PROBABLE fully in-parcel. Visual control
-(Stand 677) matches: CLIP 0.99 on the backyard rectangle.
-
-Possible extra YES (diagnostic only, **not applied**):
-
-- 4 `partially_outside_parcel` (658 CONFIRMED, 633/1105/1/334 PROBABLE). 658 and
-  1/334 look like **subject** pools clipped by the GIS line, not neighbour
-  theft. Still not safe hard-YES until GIS/mask policy is reviewed.
-- 16 “genuine-looking” REJECTED (e.g. 411 CLIP 0.54 on a backyard rectangle).
-  Could be covers, spas, or true pools. Not safe hard-YES.
-
-No UNKNOWN is recommended for hard YES in v1.1.
-
-## G. Representative visual findings
-
-Panels: `data/investigations/estate_property_inventory_v1/unknown_diagnostic/panels/`
-(19 AGS native15 diagnostic crops; **not** written into the frozen tile cache).
-
-| Stand | Inventory | Visual proposed (diagnostic only) |
-|---|---|---|
-| 677 | YES | likely YES — gold-standard in-parcel pool |
-| 420 | YES | likely YES |
-| 1/355 | NO | likely NO — trampoline, neighbour pool outside |
-| 370 | UNKNOWN | **likely YES visually**, UNKNOWN for hard filter — detector missed the pool |
-| 339 | UNKNOWN | **likely YES visually**, UNKNOWN for hard filter — `no_pool_candidate` miss |
-| 411 | UNKNOWN | likely YES visually / genuinely UNKNOWN for gate |
-| 658, 1/334 | UNKNOWN | subject pool clipped by GIS — genuinely UNKNOWN for hard YES |
-| 408 | UNKNOWN | likely NO visually (neighbour pool outside) — keep UNKNOWN |
-| 570, 337 | UNKNOWN | likely NO visually — keep UNKNOWN (REJECTED ≠ absence) |
-| 447, 612 | UNKNOWN | genuinely UNKNOWN / neighbour context |
-
-## H. Estimated conservative v1.1 coverage
-
-On the **current 330 only** (EXT.3 still missing):
-
-| | YES | NO | UNKNOWN | (YES+NO)/N |
-|---|---:|---:|---:|---:|
-| **Current v1** | 91 | 60 | 179 | **45.8%** |
-| **Conservative v1.1 (recommended)** | 91 | 60 | 179 | **45.8%** |
-| Unsafe upper bound if 43 → NO | 91 | 103 | 136 | 58.8% |
-
-**80–90% is not safely reachable** with frozen OS v1. The 132 REJECTED plus
-detector misses (370, 339) dominate UNKNOWN. Safety beats the percentage
-target. Do not force classifications.
-
-## I. Pool Gate reduction comparison
-
-Gate semantics unchanged. Simulation only.
-
-| | Start | Removed | YES | NO | UNKNOWN | Survivors | Reduction |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| PR #15 listing YES | 330 | 60 NO | 91 | 0 | 179 | **270** | 18.18% |
-| Conservative v1.1 listing YES | 330 | 60 NO | 91 | 0 | 179 | **270** | 18.18% |
-| Unsafe 43→NO listing YES | 330 | 103 NO | 91 | 0 | 136 | 227 | 31.21% |
-| PR #15 listing NO | 330 | 91 YES | 0 | 60 | 179 | **239** | 27.58% |
-| Conservative v1.1 listing NO | 330 | 91 YES | 0 | 60 | 179 | **239** | 27.58% |
-
-Recommended: **keep PR #15 reductions**. The unsafe 43→NO path would discard
-Stand 339.
-
-## J. False-exclusion risks (hard filter)
-
-Ranked:
-
-1. **REJECTED → NO** — Stand 370: real pool, OS rejected a roof blob. Listing-YES
-   gate would drop the correct erf. **Unsafe.**
-2. **`no_pool_candidate` → NO** — Stand 339: real bright pool, zero OS
-   candidate. Building-gate currently saves it. **Unsafe to drop that protection
-   as an absence rule; also unsafe to treat no-candidate as absence.**
-3. **`partially_outside` → YES** — neighbour-pool YES, then listing-NO gate
-   drops a no-pool listing’s true house. 408 shows the neighbour pattern.
-   **Unsafe YES.**
-4. **OS CONFIRMED false-positive YES** — inherited by the current 91. Lower
-   than (1)–(3); do not add weaker YES.
-
-Reliable for hard filter today: **inventory YES** (listing-NO gate) and
-**inventory NO** (listing-YES gate) as already defined. Everything else stays
-UNKNOWN. UNKNOWN is preferable to a dangerous hard class.
-
-## K. Raw Council GIS imagery proof sample
-
-Stand **677** (inventory YES, OS v1 pool CONFIRMED, CLIP 0.992). House, pool,
-driveway and garden are all visible. Source is City of Johannesburg AGS
-`AerialPhotography/2023` — not Google/Bing.
-
-Open the labelled panel:
-
+Stand 677 native15 source proof (unchanged):
 `data/investigations/estate_property_inventory_v1/unknown_diagnostic/ags_raw_proof/677_ags_native15_raw_proof.jpg`
 
-Raw crop (no overlays):
+## G. Current vs simulated inventory
 
-`data/investigations/estate_property_inventory_v1/unknown_diagnostic/ags_raw_proof/677_ags_native15_raw_crop.jpg`
+Simulation only. `current.jsonl` unchanged.
 
-| Item | Value |
-|---|---|
-| Estate / township | Carlswald North / SUMMERSET EXT.13 |
-| Imagery source | `https://ags.joburg.org.za/server/rest/services/AerialPhotography/2023/ImageServer` |
-| Imagery date/version | CoJ Aerial Photography 2023 (service has no timeInfo) |
-| Native GSD | **0.15 × 0.15 m/px** (`pixelSizeX/Y` on the ImageServer) |
-| Cache profile | native15 (210 m tile × 1400 px = 0.15 m/px) |
-| Source tile ID | `tile_2023_native15_04_03` |
-| Primary mosaic raster | `2023_COJ_RGB_15cm_AP103` (Category=Primary, LowPS=0.15) |
-| Resampled? | **No.** Requested GSD equals native 0.15 m/px. AGS still applies `RSP_BilinearInterpolation` / default Bilinear. |
-| How the crop was made | Live `exportImage` of that native15 tile, then **integer pixel crop** (`crop_parcel`, JPEG quality 90). Production estate cache is gitignored and was not present in this VM. |
-| Crop pixels | **605 × 402** (matches OS v1 `crop_wh`) |
-| Approx ground | 90.8 × 70.3 m (erf 936 m² plus 18 m pad) |
-| Pool | ≈ 41.2 × 26.6 px (6.18 × 3.99 m); OS area 928.5 px / 20.89 m² |
-| House/roof | ≈ 197.1 × 128.8 px (29.56 × 19.32 m); OS area 19 457.5 px / 437.79 m² |
-| Driveway | width ≈ 50.5 px (7.57 m) by min-area-rect of the OS paved mask; length ≈ 98.2 px; 1 650.5 px / 37.14 m² |
+| | YES | NO | UNKNOWN | (YES+NO)/330 |
+|---|---:|---:|---:|---:|
+| **Current v1 / conservative v1.1** | 91 | 60 | 179 | **45.76%** |
+| Unsafe: drop building gate (43 → NO) | 91 | 103 | 136 | 58.79% |
+| Unsafe: convert 31 visual-empty → NO | 91 | 91 | 148 | 55.15% |
 
-Panel 1 is the actual analysis pixels at 1:1. No contrast stretch, sharpen, or satellite substitute.
+Conservative v1.1 **does not add YES or NO**. 80–90% is not safely reachable
+with frozen OS v1.
 
-## L. Recommended single next experiment
+## H. Current vs simulated Pool Gate reduction
 
-**Add SUMMERSET EXT.3 to the Carlswald North GIS dataset as an explicit,
-reviewed boundary change** (do not silently edit `carlswald_north_corrected_001`
-in this diagnostic). Rebuild native15 crops + OS v1 for those ~69 residential
-erven, then rebuild the inventory.
+| | Start | Removed | YES | UNKNOWN | Survivors | Reduction |
+|---|---:|---:|---:|---:|---:|---:|
+| PR #15 listing YES | 330 | 60 NO | 91 | 179 | **270** | 18.18% |
+| Conservative v1.1 listing YES | 330 | 60 NO | 91 | 179 | **270** | 18.18% |
+| Unsafe 43→NO listing YES | 330 | 103 NO | 91 | 136 | 227 | 31.21% |
+| Unsafe 31 visual-empty listing YES | 330 | 91 NO | 91 | 148 | 239 | 27.58% |
+| PR #15 listing NO | 330 | 91 YES | 0 | 179 | **239** | 27.58% |
+| Conservative v1.1 listing NO | 330 | 91 YES | 0 | 179 | **239** | 27.58% |
 
-Do **not** convert UNKNOWN/REJECTED to NO first. Detector recall — not the
-building-quality gate — is the coverage blocker, and EXT.3 means the 330-parcel
-UNKNOWN rate is not an estate-wide number.
+Recommended: **keep PR #15** (330→270 / 330→239). The 43→NO path would
+hard-discard 339, 408, 1/437, 1/520, 1/631, 459, 462, 543 and 675 when a
+listing has a pool.
+
+## I. False-exclusion risks
+
+| Proposed rule | Could it mark a genuine pool as NO? | Could it mark a non-pool as YES? | Rank |
+|---|---|---|---|
+| REJECTED → NO | Yes — 370 | — | **UNSAFE FOR HARD GATE** |
+| `no_pool_candidate` → NO (drop building gate) | Yes — 339, 408, 1/437, 1/520, 1/631, 459, 462, 543, 675 | — | **UNSAFE FOR HARD GATE** |
+| Visual-empty subset of the 43 → NO | Residual: canopy (406, 497), dark water (448 class), GIS-line error | — | **PROBABLY SAFE BUT NEEDS TESTING** — not automated |
+| Current v1 NO (no candidate + adequate building) | Residual OS miss on a well-segmented roof is possible but not observed in the 43 (those misses had *poor* building) | — | **SAFE FOR HARD GATE** (keep) |
+| Weak REJECTED → YES | — | Yes — covers/spas/shadow rectangles | **UNSAFE FOR HARD GATE** |
+| `partially_outside` → YES | — | Yes — 408-style neighbour if GIS clips the wrong way | **UNSAFE FOR HARD GATE** |
+| Current v1 YES (OS CONFIRMED/PROBABLE in-parcel) | — | Inherited OS false-positive risk on the 91 | **SAFE FOR HARD GATE** (keep; do not weaken) |
+
+UNKNOWN remains preferable to a dangerous hard class.
+
+## J. Single recommended next experiment
+
+**Investigate the OS v1 / FastSAM miss mode on the documented
+`no_pool_candidate` stands that nevertheless contain a 677-scale in-parcel
+pool (339, 408, 1/437, 1/520, 1/631, 459, 462, 543, 675), without changing
+the detector, native15, scoring, or the inventory.**
+
+Until that miss class is understood, no UNKNOWN→NO rule is safe for the
+Listing Pool Gate. Do not drop the building-quality gate, and do not convert
+REJECTED to NO.
+
+EXT.3 remains a separate dataset-completeness fix and should not be mixed
+into this recall diagnostic. Do not silently edit `carlswald_north_corrected_001`.

@@ -84,6 +84,8 @@ def test_simulation_does_not_change_current_inventory_bytes():
     assert sim["current_v1"]["gate_listing_no"]["total_survivors"] == 239
     assert sim["upper_bound_if_building_gate_dropped_for_no"]["counts"]["NO"] == 103
     assert sim["upper_bound_if_building_gate_dropped_for_no"]["classified_pct"] < 80
+    assert sim["unsafe_visual_empty_as_no"]["counts"]["NO"] == 91
+    assert sim["conservative_v1_1_no_rule_change"]["counts"] == sim["current_v1"]["counts"]
 
 
 def test_gate_semantics_unchanged():
@@ -96,6 +98,35 @@ def test_gate_semantics_unchanged():
     no = apply_listing_pool_gate(records, records, "NO")
     assert {r["parcel_id"] for r in yes.survivors} == {"1", "3"}
     assert {r["parcel_id"] for r in no.survivors} == {"2", "3"}
+
+
+def test_safe_no_visual_review_covers_all_43_and_does_not_auto_convert():
+    rows = load_inventory_rows()
+    analysis = analyse_unknowns(rows)
+    safe = analysis["safe_no"]
+    assert safe["good_full_parcel_imagery_n"] == 179
+    assert safe["good_imagery_and_os_zero_candidate_n"] == 43
+    assert safe["visual_no_credible_in_parcel_pool_n"] == 31
+    assert safe["visual_missed_or_dark_pool_n"] == 10
+    assert safe["visual_occlusion_cannot_certify_n"] == 2
+    assert safe["visual_no_credible_in_parcel_pool_n"] + safe["visual_missed_or_dark_pool_n"] + safe["visual_occlusion_cannot_certify_n"] == 43
+    assert safe["automated_safe_no_from_the_43"] == 0
+    assert "339" in safe["missed_pool_stands"]
+    assert "408" in safe["missed_pool_stands"]
+    assert "370" not in safe["potential_visual_no_stands"]
+
+
+def test_report_reasons_sum_to_179():
+    rows = load_inventory_rows()
+    analysis = analyse_unknowns(rows)
+    assert analysis["unknown_n"] == 179
+    assert sum(analysis["report_reason_counts"].values()) == 179
+    assert analysis["report_reason_counts"]["os_rejected"] == 116
+    assert analysis["report_reason_counts"]["good_imagery_no_pool_candidate"] == 43
+    assert analysis["report_reason_counts"]["weak_ambiguous_pool_candidate"] == 16
+    assert analysis["report_reason_counts"]["partially_outside_parcel"] == 4
+    assert analysis["poor_imagery_coverage_n"] == 0
+    assert analysis["inadequate_parcel_mask_n"] == 0
 
 
 def test_stand_339_no_candidate_is_not_safe_no():

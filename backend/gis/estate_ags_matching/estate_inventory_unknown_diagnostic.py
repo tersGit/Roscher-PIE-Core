@@ -35,6 +35,44 @@ PRIMARY_REASONS = (
     "other",
 )
 
+REPORT_REASON = {
+    "os_rejected": "os_rejected",
+    "pool_candidate_confidence_insufficient": "weak_ambiguous_pool_candidate",
+    "partially_outside_parcel": "partially_outside_parcel",
+    "no_candidate_poor_building": "good_imagery_no_pool_candidate",
+    "other": "other",
+}
+
+VISUAL_REVIEW_PATH = (
+    REPO_ROOT
+    / "data"
+    / "investigations"
+    / "estate_property_inventory_v1"
+    / "unknown_diagnostic"
+    / "safe_no_visual_review.json"
+)
+
+MIN_CROP_PX_FOR_677_POOL = 200
+NO_CREDIBLE_POOL_LABELS = frozenset({"no_in_parcel_pool", "vacant_no_pool", "construction_no_pool"})
+CREDIBLE_POOL_LABELS = frozenset({"missed_in_parcel_pool", "dark_possible_in_parcel_pool"})
+
+
+_VISUAL_REVIEW_CACHE: dict[str, Any] | None = None
+
+
+def load_safe_no_visual_review(path: Path | None = None) -> dict[str, Any]:
+    global _VISUAL_REVIEW_CACHE
+    review_path = path or VISUAL_REVIEW_PATH
+    if path is None and _VISUAL_REVIEW_CACHE is not None:
+        return _VISUAL_REVIEW_CACHE
+    if not review_path.is_file():
+        payload = {"labels": {}, "notes": {}}
+    else:
+        payload = json.loads(review_path.read_text(encoding="utf-8"))
+    if path is None:
+        _VISUAL_REVIEW_CACHE = payload
+    return payload
+
 
 def load_gis(path: Path | None = None) -> dict[str, Any]:
     return json.loads((path or GIS_PATH).read_text(encoding="utf-8"))
@@ -198,17 +236,33 @@ def diagnose_unknown_os(os_payload: Mapping[str, Any] | None, inventory_row: Map
     extra = []
     if "partially_outside_parcel" in notes:
         extra.append("neighbour_contamination_risk")
+        extra.append("neighbour_pool")
     if os_status == "REJECTED" and clip["pool"] < 0.08 and geom.get("present"):
         extra.append("dark_or_low_contrast_risk")
     if not good_imagery:
         extra.append("imagery_quality_or_coverage_issue")
+        extra.append("poor_imagery_coverage")
     if masses >= 3:
         extra.append("poor_incomplete_building_mask")
+        extra.append("inadequate_building_segmentation")
     if building_area and building_area < 180:
         extra.append("undersized_building_mask")
+        extra.append("inadequate_building_segmentation")
     if building.get("status") not in {"CONFIRMED", "PROBABLE"}:
         extra.append("building_status_weak")
+        extra.append("inadequate_building_segmentation")
+    if rejected_subtype and any(key in str(rejected_subtype) for key in ("shadow", "roof", "vegetation", "driveway")):
+        extra.append("shadow_vegetation_object_confusion")
+    parcel_present = bool((spatial.get("parcel") or {}).get("present", True))
+    if not parcel_present:
+        extra.append("inadequate_parcel_mask")
 
+    visual_label = (load_safe_no_visual_review().get("labels") or {}).get(str(inventory_row.get("stand_number")))
+    if visual_label:
+        extra.append(f"visual_{visual_label}")
+
+    sufficient_for_677 = bool(good_imagery and crop_wh and min(crop_wh) >= MIN_CROP_PX_FOR_677_POOL)
+    os_has_candidate = "no_pool_candidate" not in notes
     return {
         "stand_number": inventory_row.get("stand_number"),
         "parcel_id": inventory_row.get("parcel_id"),
@@ -217,6 +271,7 @@ def diagnose_unknown_os(os_payload: Mapping[str, Any] | None, inventory_row: Map
         "os_pool_status": os_status,
         "os_notes": notes,
         "primary_reason": primary,
+        "report_reason": REPORT_REASON.get(primary, primary),
         "rejected_subtype": rejected_subtype,
         "diagnostic_flags": sorted(set(flags + extra)),
         "clip_pool": round(clip["pool"], 4),
@@ -230,8 +285,14 @@ def diagnose_unknown_os(os_payload: Mapping[str, Any] | None, inventory_row: Map
         "n_building_masses": masses,
         "crop_wh": crop_wh,
         "good_full_parcel_imagery": good_imagery,
+        "erf_bbox_adequately_visible": good_imagery,
+        "imagery_sufficient_for_677_scale_pool": sufficient_for_677,
+        "os_credible_in_parcel_candidate": os_has_candidate,
+        "roof_segmentation_required_to_see_pool": False,
         "no_in_parcel_pool_candidate": "no_pool_candidate" in notes,
         "unknown_solely_because_building_inadequate": primary == "no_candidate_poor_building",
+        "visual_safe_no_label": visual_label,
+        "parcel_mask_present": parcel_present,
     }
 
 
@@ -251,15 +312,57 @@ def analyse_unknowns(
     building_only = [item for item in diagnosed if item["unknown_solely_because_building_inadequate"]]
     good_imagery = [item for item in diagnosed if item["good_full_parcel_imagery"]]
     rejected = [item for item in diagnosed if item["os_pool_status"] == "REJECTED"]
+    report_counts = Counter(item["report_reason"] for item in diagnosed)
+    visual_counts = Counter(
+        item.get("visual_safe_no_label") or "not_in_no_candidate_set" for item in building_only
+    )
+    visual_no_credible = [
+        item
+        for item in building_only
+        if item.get("visual_safe_no_label") in NO_CREDIBLE_POOL_LABELS
+    ]
+    visual_missed = [
+        item for item in building_only if item.get("visual_safe_no_label") in CREDIBLE_POOL_LABELS
+    ]
+    visual_ambiguous = [
+        item
+        for item in building_only
+        if item.get("visual_safe_no_label") == "occlusion_cannot_certify"
+    ]
     return {
         "unknown_n": len(diagnosed),
         "primary_reason_counts": dict(primary_counts),
         "primary_reason_pct": {key: round(100.0 * val / n, 2) for key, val in primary_counts.items()},
+        "report_reason_counts": dict(report_counts),
+        "report_reason_pct": {key: round(100.0 * val / n, 2) for key, val in report_counts.items()},
         "rejected_subtype_counts": dict(subtype_counts),
         "good_full_parcel_imagery_n": len(good_imagery),
+        "imagery_sufficient_for_677_scale_pool_n": sum(
+            1 for item in diagnosed if item.get("imagery_sufficient_for_677_scale_pool")
+        ),
+        "poor_imagery_coverage_n": sum(
+            1 for item in diagnosed if "poor_imagery_coverage" in item["diagnostic_flags"]
+        ),
+        "inadequate_parcel_mask_n": sum(
+            1 for item in diagnosed if "inadequate_parcel_mask" in item["diagnostic_flags"]
+        ),
         "no_in_parcel_candidate_n": len(no_candidate),
         "unknown_solely_building_inadequate_n": len(building_only),
         "rejected_n": len(rejected),
+        "safe_no": {
+            "good_full_parcel_imagery_n": len(good_imagery),
+            "good_imagery_and_os_zero_candidate_n": len(building_only),
+            "visual_no_credible_in_parcel_pool_n": len(visual_no_credible),
+            "visual_missed_or_dark_pool_n": len(visual_missed),
+            "visual_occlusion_cannot_certify_n": len(visual_ambiguous),
+            "visual_label_counts": dict(visual_counts),
+            "missed_pool_stands": [item["stand_number"] for item in visual_missed],
+            "potential_visual_no_stands": [item["stand_number"] for item in visual_no_credible],
+            "occlusion_stands": [item["stand_number"] for item in visual_ambiguous],
+            "roof_fail_prevents_seeing_a_pool": False,
+            "automated_safe_no_from_the_43": 0,
+            "potential_visual_no_not_safe_for_hard_gate": len(visual_no_credible),
+        },
         "rows": diagnosed,
     }
 
@@ -281,6 +384,13 @@ def conservative_v11_simulation(inventory_rows: Sequence[Mapping[str, Any]], unk
         "NO": current["NO"] + building_only,
         "UNKNOWN": current["UNKNOWN"] - building_only,
     }
+    visual_no_n = int(unknown_analysis.get("safe_no", {}).get("visual_no_credible_in_parcel_pool_n") or 0)
+    visual_stands = set(unknown_analysis.get("safe_no", {}).get("potential_visual_no_stands") or [])
+    visual_upper = {
+        "YES": current["YES"],
+        "NO": current["NO"] + visual_no_n,
+        "UNKNOWN": current["UNKNOWN"] - visual_no_n,
+    }
     total = max(sum(current.values()), 1)
 
     def pack(counts: Mapping[str, int], label: str) -> dict[str, Any]:
@@ -293,6 +403,8 @@ def conservative_v11_simulation(inventory_rows: Sequence[Mapping[str, Any]], unk
                 and status == "UNKNOWN"
                 and "no_candidate_with_poor_segmentation" in {row.get("unknown_reason")}
             ):
+                status = "NO"
+            if label == "visual_upper" and status == "UNKNOWN" and str(row.get("stand_number")) in visual_stands:
                 status = "NO"
             rows.append({**dict(row), "sim_pool_status": status})
         gate_yes = apply_listing_pool_gate(
@@ -317,6 +429,7 @@ def conservative_v11_simulation(inventory_rows: Sequence[Mapping[str, Any]], unk
         "current_v1": pack(safe, "safe"),
         "conservative_v1_1_no_rule_change": pack(safe, "safe"),
         "upper_bound_if_building_gate_dropped_for_no": pack(upper_no, "upper_no"),
+        "unsafe_visual_empty_as_no": pack(visual_upper, "visual_upper"),
         "pr15_listing_yes_survivors": 270,
         "pr15_listing_no_survivors": 239,
     }
@@ -334,6 +447,17 @@ def _gate_brief(result) -> dict[str, Any]:
         "pct_reduction": result.pct_reduction,
     }
 
+
+STRATIFIED_EIGHT = (
+    ("677", "confirmed_pool_reference", "likely YES"),
+    ("392", "likely_safe_no_good_imagery", "likely NO — vacant erf; remain UNKNOWN for hard gate"),
+    ("2/379", "unknown_only_poor_building", "likely NO visually — remain UNKNOWN; same OS signature as 339"),
+    ("411", "genuine_ambiguous_candidate", "remain UNKNOWN — low-confidence backyard rectangle"),
+    ("370", "dark_teal_potential_pool", "likely YES visually — remain UNKNOWN; OS REJECTED a roof blob"),
+    ("1/335", "neighbour_pool_correctly_excluded", "likely NO visually — neighbour pools outside GIS line"),
+    ("570", "shadow_object_false_candidate", "likely NO visually — remain UNKNOWN; REJECTED ≠ absence"),
+    ("406", "observability_failure", "remain UNKNOWN — canopy could hide a 677-scale pool"),
+)
 
 KNOWN_DIAGNOSTIC_STANDS = ("370", "447", "570", "612", "408")
 
