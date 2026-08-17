@@ -1,0 +1,16 @@
+{
+  "freeze_path": "data/investigations/blind_116889694_complete_estate/freeze.json",
+  "sha256": "69b8ea31f1ecdb77311937b2e3db829ef14ecea33b8534d2730a5ed57d331465",
+  "ground_truth_applied": false,
+  "panels": [
+    "data/investigations/blind_116889694_complete_estate/panels/top1_435.jpg",
+    "data/investigations/blind_116889694_complete_estate/panels/top2_626.jpg",
+    "data/investigations/blind_116889694_complete_estate/panels/top3_451.jpg",
+    "data/investigations/blind_116889694_complete_estate/panels/top4_583.jpg",
+    "data/investigations/blind_116889694_complete_estate/panels/top5_545.jpg"
+  ],
+  "n_candidates": 332,
+  "listing_pool_status": "YES",
+  "final_survivor_count": 332,
+  "runtime_s_freeze": 125.91
+}

@@ -1,0 +1,456 @@
+{
+  "diagnostic": "distinctive_contour_v2",
+  "used_in_ranking": false,
+  "ranking_modified": false,
+  "official_chosen_id": null,
+  "n_useful_frames": 4,
+  "frames": [
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "116889694-002",
+      "clip_scene": "aerial",
+      "hybrid_viewpoint": "aerial_near_nadir",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_116889694_complete_estate/distinctive_contour_v2/116889694-002.jpg"
+    },
+    {
+      "image_wh": [
+        1560,
+        1040
+      ],
+      "n_mask_components": 1,
+      "n_secondary_components": 0,
+      "pool_spa_relationship": {
+        "secondary_present": false,
+        "same_mask_extra_blobs": 0,
+        "hybrid_secondary_mask": false,
+        "merged_into_official_scoring_contour": false,
+        "note": "Official scoring uses the dominant component only."
+      },
+      "raw_contour": {
+        "n_points_in": 2482,
+        "n_major_indents": 0,
+        "max_indent": 0.0354,
+        "solidity": 0.9773,
+        "circularity": 0.4489,
+        "elongation": 1.4854,
+        "n_corners": 4,
+        "sharp_frac": 0.1562,
+        "n_major_directional_changes": 421,
+        "limb_extents": {
+          "plus_x": 0.8992,
+          "minus_x": 0.9974,
+          "plus_y": 0.6337,
+          "minus_y": 0.6945
+        },
+        "n_raw_vertices": 2482
+      },
+      "simplified_contour": {
+        "n_points_in": 5,
+        "n_major_indents": 0,
+        "max_indent": 0.0,
+        "solidity": 1.0,
+        "circularity": 0.784,
+        "elongation": 1.4728,
+        "n_corners": 5,
+        "sharp_frac": 0.25,
+        "n_major_directional_changes": 4,
+        "limb_extents": {
+          "plus_x": 0.9288,
+          "minus_x": 0.9995,
+          "plus_y": 0.5527,
+          "minus_y": 0.7225
+        },
+        "n_simplified_vertices": 5
+      },
+      "resampled_64": {
+        "n_points_in": 64,
+        "n_major_indents": 0,
+        "max_indent": 0.0267,
+        "solidity": 0.9897,
+        "circularity": 0.8078,
+        "elongation": 1.4815,
+        "n_corners": 5,
+        "sharp_frac": 0.125,
+        "n_major_directional_changes": 4,
+        "limb_extents": {
+          "plus_x": 0.9246,
+          "minus_x": 0.9998,
+          "plus_y": 0.6178,
+          "minus_y": 0.6893
+        }
+      },
+      "official_scoring_contour": {
+        "n_points_in": 64,
+        "n_major_indents": 0,
+        "max_indent": 0.0267,
+        "solidity": 0.9897,
+        "circularity": 0.8078,
+        "elongation": 1.4815,
+        "n_corners": 5,
+        "sharp_frac": 0.125,
+        "n_major_directional_changes": 4,
+        "limb_extents": {
+          "plus_x": 0.9246,
+          "minus_x": 0.9998,
+          "plus_y": 0.6178,
+          "minus_y": 0.6891
+        },
+        "normalized_contour": [
+          [
+            -0.4322,
+            0.4327
+          ],
+          [
+            -0.4872,
+            0.3899
+          ],
+          [
+            -0.5455,
+            0.3514
+          ],
+          [
+            -0.5988,
+            0.3065
+          ],
+          [
+            -0.6403,
+            0.2565
+          ],
+          [
+            -0.6963,
+            0.2279
+          ],
+          [
+            -0.7572,
+            0.1983
+          ],
+          [
+            -0.8182,
+            0.1696
+          ],
+          [
+            -0.88,
+            0.1351
+          ],
+          [
+            -0.9328,
+            0.0897
+          ],
+          [
+            -0.9778,
+            0.034
+          ],
+          [
+            -0.9998,
+            -0.0194
+          ],
+          [
+            -0.9354,
+            -0.0807
+          ],
+          [
+            -0.8644,
+            -0.1375
+          ],
+          [
+            -0.7938,
+            -0.1974
+          ],
+          [
+            -0.7215,
+            -0.2483
+          ],
+          [
+            -0.6493,
+            -0.306
+          ],
+          [
+            -0.5807,
+            -0.3644
+          ],
+          [
+            -0.5091,
+            -0.4184
+          ],
+          [
+            -0.436,
+            -0.4747
+          ],
+          [
+            -0.3631,
+            -0.5293
+          ],
+          [
+            -0.2905,
+            -0.5837
+          ],
+          [
+            -0.2203,
+            -0.64
+          ],
+          [
+            -0.1485,
+            -0.6891
+          ],
+          [
+            -0.0836,
+            -0.6695
+          ],
+          [
+            -0.0169,
+            -0.6412
+          ],
+          [
+            0.0498,
+            -0.6129
+          ],
+          [
+            0.1162,
+            -0.5847
+          ],
+          [
+            0.1829,
+            -0.5564
+          ],
+          [
+            0.2495,
+            -0.5281
+          ],
+          [
+            0.3159,
+            -0.4999
+          ],
+          [
+            0.3826,
+            -0.4716
+          ],
+          [
+            0.4493,
+            -0.4433
+          ],
+          [
+            0.5157,
+            -0.4151
+          ],
+          [
+            0.5823,
+            -0.3868
+          ],
+          [
+            0.649,
+            -0.3585
+          ],
+          [
+            0.7154,
+            -0.3303
+          ],
+          [
+            0.7603,
+            -0.2938
+          ],
+          [
+            0.8189,
+            -0.2667
+          ],
+          [
+            0.8799,
+            -0.2385
+          ],
+          [
+            0.9246,
+            -0.1949
+          ],
+          [
+            0.8863,
+            -0.1047
+          ],
+          [
+            0.8554,
+            -0.0192
+          ],
+          [
+            0.8202,
+            0.0469
+          ],
+          [
+            0.7831,
+            0.1384
+          ],
+          [
+            0.7418,
+            0.231
+          ],
+          [
+            0.7027,
+            0.3231
+          ],
+          [
+            0.6771,
+            0.4095
+          ],
+          [
+            0.6307,
+            0.4926
+          ],
+          [
+            0.5804,
+            0.5768
+          ],
+          [
+            0.5227,
+            0.6178
+          ],
+          [
+            0.4531,
+            0.6111
+          ],
+          [
+            0.385,
+            0.5951
+          ],
+          [
+            0.316,
+            0.585
+          ],
+          [
+            0.2478,
+            0.5697
+          ],
+          [
+            0.1817,
+            0.5583
+          ],
+          [
+            0.113,
+            0.5457
+          ],
+          [
+            0.0451,
+            0.5277
+          ],
+          [
+            -0.0214,
+            0.5078
+          ],
+          [
+            -0.0887,
+            0.4958
+          ],
+          [
+            -0.158,
+            0.4885
+          ],
+          [
+            -0.2264,
+            0.4731
+          ],
+          [
+            -0.2956,
+            0.4641
+          ],
+          [
+            -0.3646,
+            0.4557
+          ]
+        ],
+        "normalized_contour_point_count": 64
+      },
+      "loss": {
+        "verdict": "PARTIALLY LOST",
+        "features_lost": [
+          "directional_changes"
+        ],
+        "notes": [],
+        "raw_vs_scoring": {
+          "n_major_indents": [
+            0,
+            0
+          ],
+          "max_indent": [
+            0.0354,
+            0.0267
+          ],
+          "solidity": [
+            0.9773,
+            0.9897
+          ],
+          "n_major_directional_changes": [
+            421,
+            4
+          ],
+          "elongation": [
+            1.4854,
+            1.4815
+          ]
+        }
+      },
+      "verdict": "PARTIALLY LOST",
+      "used_in_ranking": false,
+      "media_id": "116889694-026",
+      "clip_scene": "contextual",
+      "hybrid_viewpoint": "elevated_exterior",
+      "hybrid_source": "fastsam_fallback",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_116889694_complete_estate/distinctive_contour_v2/116889694-026.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "116889694-027",
+      "clip_scene": "contextual",
+      "hybrid_viewpoint": "pool_overview",
+      "hybrid_source": "no_usable_geometry",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_116889694_complete_estate/distinctive_contour_v2/116889694-027.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "116889694-028",
+      "clip_scene": "contextual",
+      "hybrid_viewpoint": "elevated_exterior",
+      "hybrid_source": "no_usable_geometry",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_116889694_complete_estate/distinctive_contour_v2/116889694-028.jpg"
+    }
+  ],
+  "overall": {
+    "overall_verdict": "COLLAPSED",
+    "official_frame_id": null,
+    "official_frame_verdict": null,
+    "reason": "no_official_frame_and_extracted_contours_collapsed",
+    "n_frames": 4,
+    "verdict_counts": {
+      "GEOMETRY PRESERVED": 0,
+      "PARTIALLY LOST": 1,
+      "COLLAPSED": 3
+    },
+    "used_in_ranking": false
+  },
+  "panels": [
+    "data/investigations/blind_116889694_complete_estate/distinctive_contour_v2/116889694-002.jpg",
+    "data/investigations/blind_116889694_complete_estate/distinctive_contour_v2/116889694-026.jpg",
+    "data/investigations/blind_116889694_complete_estate/distinctive_contour_v2/116889694-027.jpg",
+    "data/investigations/blind_116889694_complete_estate/distinctive_contour_v2/116889694-028.jpg"
+  ],
+  "note": "Diagnostic only. Official Hybrid v1 contour used for ranking was not replaced."
+}
