@@ -122,8 +122,8 @@ def test_freeze_must_exist_before_gt_lookup():
     after_fn = source.index("def run_after_freeze")
     confirm_fn = source.index("def confirm_ground_truth")
     assert freeze_fn < after_fn
-    assert "if not FREEZE_PATH.is_file()" in source[after_fn:]
     assert "refuse to look up ground truth" in source[after_fn:]
+    assert "if not freeze_path.is_file()" in source[after_fn:] or "if not FREEZE_PATH.is_file()" in source[after_fn:]
     assert confirm_fn > freeze_fn
 
 
