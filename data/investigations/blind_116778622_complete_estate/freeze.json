@@ -1,0 +1,3381 @@
+{
+  "experiment": "blind_116778622_complete_estate",
+  "dataset_id": "carlswald_north_corrected_002",
+  "listing_id": "116778622",
+  "rankings_frozen": true,
+  "ground_truth_applied": false,
+  "production_ranking_modified": false,
+  "scoring_v2_weights_modified": false,
+  "hybrid_v1_modified": false,
+  "os_v1_modified": false,
+  "fastsam_modified": false,
+  "native15_modified": false,
+  "pool_gate_semantics_modified": false,
+  "inventory_classifications_modified": false,
+  "colour_used_in_ranking": false,
+  "stand_size_used_as_hard_filter": false,
+  "clip_computed_on": "all_pool_gate_survivors_with_native15_crops",
+  "official_score": "hybrid_v2",
+  "acquisition": {
+    "listing_id": "116778622",
+    "listing_url": "https://www.property24.com/for-sale/carlswald-north-estate/midrand/gauteng/12743/116778622",
+    "property_type": "House",
+    "estate": "Carlswald North Estate",
+    "erf_size_sqm": 1226.0,
+    "floor_size_sqm": 427.0,
+    "bedrooms": 5,
+    "bathrooms": 3.0,
+    "listing_photo_count": 72,
+    "photos_downloaded": 71,
+    "photos_downloaded_fresh": 71,
+    "photos_reused_from_disk": 0,
+    "photos_failed": 1,
+    "acquisition_fresh": true,
+    "force_fresh_photos": true,
+    "media_source": "fresh_download",
+    "video_available": true,
+    "video_count": 1,
+    "feature_hits": [
+      "swimming pool",
+      "covered patio",
+      "double garage",
+      "landscaped"
+    ],
+    "pool_text_present": true,
+    "no_pool_text_present": false,
+    "identity_redacted": true,
+    "title_omitted": true,
+    "street_omitted": true,
+    "stand_omitted": true,
+    "exterior_photo_count": 14,
+    "pool_photo_count": 13,
+    "driveway_photo_count": 6,
+    "garden_photo_count": 20,
+    "interior_photo_count": 41,
+    "useful_driveway_garage_views": [
+      "116778622-008",
+      "116778622-025",
+      "116778622-037",
+      "116778622-040",
+      "116778622-068",
+      "116778622-069"
+    ],
+    "useful_garden_patio_views": [
+      "116778622-001",
+      "116778622-002",
+      "116778622-005",
+      "116778622-006",
+      "116778622-045",
+      "116778622-049",
+      "116778622-050",
+      "116778622-051",
+      "116778622-057",
+      "116778622-058",
+      "116778622-059",
+      "116778622-060",
+      "116778622-061",
+      "116778622-062",
+      "116778622-063",
+      "116778622-064",
+      "116778622-065",
+      "116778622-066",
+      "116778622-067",
+      "116778622-072"
+    ],
+    "useful_pool_views": [
+      "116778622-002",
+      "116778622-005",
+      "116778622-049",
+      "116778622-050",
+      "116778622-051",
+      "116778622-060",
+      "116778622-061",
+      "116778622-062",
+      "116778622-063",
+      "116778622-064",
+      "116778622-066",
+      "116778622-067",
+      "116778622-072"
+    ],
+    "scene_counts": {
+      "contextual": 7,
+      "pool_garden": 13,
+      "front_elevation": 1,
+      "aerial": 3,
+      "driveway_access": 6,
+      "interior": 41
+    }
+  },
+  "listing_pool_gate": {
+    "listing_pool_status": "YES",
+    "reason": "text_and_media_independently_support_private_pool",
+    "evidence": [
+      "listing_text_mentions_pool",
+      "hybrid_v1_scoring_ready_frames=7",
+      "hybrid_v1_pool_viewpoints=10",
+      "clip_scene_pool_garden_photos=13",
+      "listing_pool_object_detected=4"
+    ],
+    "text_yes": true,
+    "text_no": false,
+    "media_yes": true,
+    "colour_used": false,
+    "ground_truth_used": false,
+    "listing_pool_object": {
+      "n_observed": 8,
+      "n_pool_object_detected": 4,
+      "detected_ids": [
+        "116778622-002",
+        "116778622-005",
+        "116778622-050",
+        "116778622-051"
+      ],
+      "n_l_geometry": 4
+    }
+  },
+  "estate_pool_gate": {
+    "listing_pool_status": "YES",
+    "starting_count": 400,
+    "parcels_removed_confident_no": 68,
+    "parcels_removed_confident_yes": 0,
+    "yes_survivors": 118,
+    "no_survivors": 0,
+    "unknown_survivors": 214,
+    "total_survivors": 332,
+    "pct_reduction": 17.0,
+    "no_removed": 68,
+    "final_survivor_count": 332,
+    "percentage_reduction": 17.0,
+    "starting_candidates": 400
+  },
+  "listing_fingerprint": {
+    "hybrid_evidence": {
+      "chosen_id": "116778622-051",
+      "chosen_source": "yoloe_sam2",
+      "chosen_viewpoint": "elevated_exterior",
+      "scoring_ready_ids": [
+        "116778622-002",
+        "116778622-005",
+        "116778622-050",
+        "116778622-051",
+        "116778622-062",
+        "116778622-064",
+        "116778622-072"
+      ],
+      "feature_sources": {
+        "shape_from": "116778622-051",
+        "spatial_from": null,
+        "scale_from": null,
+        "relative_area_used": false,
+        "colour_used": false,
+        "fastsam_used": false,
+        "secondary_recorded": true,
+        "secondary_in_official_contour": false
+      },
+      "excluded_frames": [
+        {
+          "media_id": "116778622-003",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-004",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-006",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-007",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-038",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-045",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-049",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-057",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-058",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-059",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-060",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-061",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-063",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-065",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-066",
+          "source": "fastsam_fallback",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-067",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-068",
+          "source": "fastsam_fallback",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-069",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        },
+        {
+          "media_id": "116778622-071",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "reason": "fastsam_or_presence_or_rejected"
+        }
+      ],
+      "oblique": true,
+      "nadir_area_manufactured": false,
+      "component_relation": {
+        "component_count": 8,
+        "dominant_index": 0,
+        "secondary_index": 3,
+        "relative_size": 0.527,
+        "centroid_separation": 0.1407,
+        "adjacent": true,
+        "dominant_confidence": 0.1314,
+        "secondary_confidence": 0.0404
+      },
+      "descriptors": {
+        "component_count": 2,
+        "straight_edge_proportion": 0.275,
+        "curved_edge_proportion": 0.725,
+        "major_corners": 5,
+        "concavity": 1,
+        "visible_rectilinear_structure": true,
+        "solidity": 0.8024,
+        "compactness": 0.203,
+        "aspect_ratio": 7.756,
+        "orientation_deg": -90.0,
+        "relative_area": 0.0459,
+        "viewpoint": "elevated_exterior",
+        "viewpoint_confidence": 1.0,
+        "oblique": true,
+        "nadir_area_manufactured": false,
+        "relative_component_geometry": {
+          "size_ratio": 0.527,
+          "centroid_separation": 0.1407,
+          "adjacent": true
+        }
+      },
+      "fingerprint": {
+        "present": true,
+        "unknown": false,
+        "shape_class": "irregular",
+        "aspect_ratio": 7.756,
+        "orientation_deg": null,
+        "compactness": 0.203,
+        "rectangularity": 0.8024,
+        "convexity": 0.8024,
+        "curved_section_count": 1,
+        "relative_area": null,
+        "centroid_x": 0.3161,
+        "centroid_y": 0.9563,
+        "house_centroid_x": null,
+        "house_centroid_y": null,
+        "pool_to_house_dx": null,
+        "pool_to_house_dy": null,
+        "pool_to_house_dist": null,
+        "pool_to_house_angle_deg": null,
+        "evidence_media_id": "116778622-051",
+        "notes": [
+          "hybrid_pool_geometry_v1",
+          "source=yoloe_sam2",
+          "media=116778622-051",
+          "role=dominant",
+          "oblique",
+          "relative_area_omitted_not_nadir",
+          "pool_house_spatial_omitted_not_viewpoint_compatible",
+          "colour_not_used"
+        ]
+      },
+      "listing_shape": {
+        "circularity": 0.3145,
+        "solidity": 0.8054,
+        "elongation": 5.0623,
+        "n_corners": 5,
+        "n_major_indents": 1,
+        "max_indent": 0.3656,
+        "sharp_frac": 0.125,
+        "turn_std": 0.4875,
+        "radial_cv": 0.5433,
+        "symmetry": 0.8102,
+        "hu_log": [
+          -0.2333,
+          -0.5227,
+          -2.2815,
+          -2.395
+        ]
+      }
+    },
+    "qualitative": {
+      "pool_geometry_priority": [
+        "pool geometry",
+        "pool-to-house relationship",
+        "patio/deck relationship",
+        "roof footprint/layout",
+        "driveway orientation",
+        "garage location/orientation",
+        "garden/open-ground configuration",
+        "exterior building massing"
+      ],
+      "hybrid_chosen_id": "116778622-051",
+      "hybrid_chosen_source": "yoloe_sam2",
+      "hybrid_chosen_viewpoint": "elevated_exterior",
+      "l_shape_or_bends": true,
+      "n_major_indents": 1,
+      "aspect_ratio": 7.756,
+      "orientation_deg_oblique": -90.0,
+      "compactness": 0.203,
+      "solidity": 0.8024,
+      "component_count": 8,
+      "adjacent_second_arm": true,
+      "pool_to_house_vector": "omitted_not_viewpoint_compatible_in_frozen_hybrid_v1",
+      "pool_distance_from_building": "omitted_not_viewpoint_compatible_in_frozen_hybrid_v1",
+      "patio_deck_alignment": "hybrid_clip_deck_on_chosen_frame_not_used_as_colour_rank_signal",
+      "roof_layout": "not_a_hybrid_v1_scoring_term",
+      "driveway_orientation": "CLIP exterior/driveway scenes only; not a Scoring v2 spatial term",
+      "colour_used_in_ranking": false,
+      "photo_scene_counts": {
+        "contextual": 7,
+        "pool_garden": 13,
+        "front_elevation": 1,
+        "aerial": 3,
+        "driveway_access": 6,
+        "interior": 41
+      },
+      "hybrid_viewpoint_counts": {
+        "unusable_ambiguous": 1,
+        "pool_overview": 10,
+        "ground_level_exterior": 5,
+        "elevated_exterior": 7,
+        "interior": 44,
+        "garden_only": 4
+      },
+      "available": {
+        "pool_geometry": true,
+        "pool_to_house_spatial": false,
+        "listing_aerial": true,
+        "listing_exterior": true,
+        "driveway_views": true,
+        "garden_views": true,
+        "hybrid_scoring_ready": true
+      },
+      "unavailable": [
+        "pool_to_house_spatial",
+        "nadir_relative_area",
+        "roof_footprint_as_scoring_term",
+        "driveway_as_scoring_v2_spatial"
+      ],
+      "signal_classes": {
+        "measured": [
+          "pool_geometry",
+          "listing_exterior",
+          "driveway_views",
+          "garden_views",
+          "hybrid_scoring_ready"
+        ],
+        "unavailable": [
+          "pool_to_house_spatial",
+          "nadir_relative_area",
+          "roof_footprint_as_scoring_term",
+          "driveway_as_scoring_v2_spatial"
+        ],
+        "neutral_default_in_ranking_not_fingerprint": [
+          "spatial_v2=0.5_when_hybrid_omits_pool_house",
+          "aerial=0.5_when_no_listing_aerial",
+          "gis=0.5_constant"
+        ]
+      }
+    }
+  },
+  "crop_stats": {
+    "tiles": {
+      "tiles_required": 28,
+      "tiles_reused": 28,
+      "tiles_downloaded": 0,
+      "tiles_failed": 0,
+      "failed_ids": [],
+      "cache_dir": "/workspace/data/cache/ags_native15/carlswald_north_corrected_002"
+    },
+    "crops": {
+      "parcels": 400,
+      "crops_written": 0,
+      "crops_reused": 400,
+      "crops_failed": 0,
+      "crop_dir": "/workspace/data/visual_index/carlswald_north_corrected_002/_imagery_cache_native15"
+    }
+  },
+  "ranking": {
+    "n_candidates": 332,
+    "separation": {
+      "top1_score": 0.7087,
+      "top2_score": 0.6941,
+      "top5_score": 0.684,
+      "top10_score": 0.6636,
+      "top20_score": 0.652,
+      "top5_score_range": [
+        0.684,
+        0.7087
+      ],
+      "gap_1_2": 0.0146,
+      "gap_1_5": 0.0247,
+      "gap_1_10": 0.0451,
+      "gap_1_20": 0.0567,
+      "top1_stand": "605",
+      "top1_genuine_drivers": [
+        {
+          "term": "shape_v2",
+          "contrib": 0.2487,
+          "weight": 0.36
+        },
+        {
+          "term": "pool_presence",
+          "contrib": 0.14,
+          "weight": 0.14
+        },
+        {
+          "term": "aerial",
+          "contrib": 0.0947,
+          "weight": 0.12
+        },
+        {
+          "term": "stand_size",
+          "contrib": 0.0541,
+          "weight": 0.07
+        },
+        {
+          "term": "exterior",
+          "contrib": 0.0462,
+          "weight": 0.06
+        }
+      ],
+      "top1_neutral_padding": [
+        {
+          "term": "spatial_v2",
+          "contrib": 0.11,
+          "weight": 0.22
+        },
+        {
+          "term": "gis",
+          "contrib": 0.015,
+          "weight": 0.03
+        }
+      ],
+      "top1_genuine_sum": 0.5837,
+      "top1_neutral_padding_sum": 0.125,
+      "top1_padding_share_of_score": 0.1764,
+      "top1_neutral_notes": [
+        "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+      ],
+      "top5_composition": [
+        {
+          "rank": 1,
+          "stand_number": "605",
+          "score": 0.7087,
+          "genuine_drivers": [
+            {
+              "term": "shape_v2",
+              "contrib": 0.2487,
+              "weight": 0.36
+            },
+            {
+              "term": "pool_presence",
+              "contrib": 0.14,
+              "weight": 0.14
+            },
+            {
+              "term": "aerial",
+              "contrib": 0.0947,
+              "weight": 0.12
+            },
+            {
+              "term": "stand_size",
+              "contrib": 0.0541,
+              "weight": 0.07
+            },
+            {
+              "term": "exterior",
+              "contrib": 0.0462,
+              "weight": 0.06
+            }
+          ],
+          "neutral_padding": [
+            {
+              "term": "spatial_v2",
+              "contrib": 0.11,
+              "weight": 0.22
+            },
+            {
+              "term": "gis",
+              "contrib": 0.015,
+              "weight": 0.03
+            }
+          ],
+          "genuine_sum": 0.5837,
+          "neutral_sum": 0.125
+        },
+        {
+          "rank": 2,
+          "stand_number": "444",
+          "score": 0.6941,
+          "genuine_drivers": [
+            {
+              "term": "shape_v2",
+              "contrib": 0.2472,
+              "weight": 0.36
+            },
+            {
+              "term": "pool_presence",
+              "contrib": 0.14,
+              "weight": 0.14
+            },
+            {
+              "term": "aerial",
+              "contrib": 0.0899,
+              "weight": 0.12
+            },
+            {
+              "term": "stand_size",
+              "contrib": 0.0469,
+              "weight": 0.07
+            },
+            {
+              "term": "exterior",
+              "contrib": 0.0451,
+              "weight": 0.06
+            }
+          ],
+          "neutral_padding": [
+            {
+              "term": "spatial_v2",
+              "contrib": 0.11,
+              "weight": 0.22
+            },
+            {
+              "term": "gis",
+              "contrib": 0.015,
+              "weight": 0.03
+            }
+          ],
+          "genuine_sum": 0.5691,
+          "neutral_sum": 0.125
+        },
+        {
+          "rank": 3,
+          "stand_number": "572",
+          "score": 0.6915,
+          "genuine_drivers": [
+            {
+              "term": "shape_v2",
+              "contrib": 0.2411,
+              "weight": 0.36
+            },
+            {
+              "term": "pool_presence",
+              "contrib": 0.14,
+              "weight": 0.14
+            },
+            {
+              "term": "aerial",
+              "contrib": 0.0868,
+              "weight": 0.12
+            },
+            {
+              "term": "stand_size",
+              "contrib": 0.0536,
+              "weight": 0.07
+            },
+            {
+              "term": "exterior",
+              "contrib": 0.045,
+              "weight": 0.06
+            }
+          ],
+          "neutral_padding": [
+            {
+              "term": "spatial_v2",
+              "contrib": 0.11,
+              "weight": 0.22
+            },
+            {
+              "term": "gis",
+              "contrib": 0.015,
+              "weight": 0.03
+            }
+          ],
+          "genuine_sum": 0.5665,
+          "neutral_sum": 0.125
+        },
+        {
+          "rank": 4,
+          "stand_number": "382",
+          "score": 0.6909,
+          "genuine_drivers": [
+            {
+              "term": "shape_v2",
+              "contrib": 0.2255,
+              "weight": 0.36
+            },
+            {
+              "term": "pool_presence",
+              "contrib": 0.14,
+              "weight": 0.14
+            },
+            {
+              "term": "aerial",
+              "contrib": 0.0877,
+              "weight": 0.12
+            },
+            {
+              "term": "stand_size",
+              "contrib": 0.0668,
+              "weight": 0.07
+            },
+            {
+              "term": "exterior",
+              "contrib": 0.0458,
+              "weight": 0.06
+            }
+          ],
+          "neutral_padding": [
+            {
+              "term": "spatial_v2",
+              "contrib": 0.11,
+              "weight": 0.22
+            },
+            {
+              "term": "gis",
+              "contrib": 0.015,
+              "weight": 0.03
+            }
+          ],
+          "genuine_sum": 0.5658,
+          "neutral_sum": 0.125
+        },
+        {
+          "rank": 5,
+          "stand_number": "573",
+          "score": 0.684,
+          "genuine_drivers": [
+            {
+              "term": "shape_v2",
+              "contrib": 0.2656,
+              "weight": 0.36
+            },
+            {
+              "term": "pool_presence",
+              "contrib": 0.14,
+              "weight": 0.14
+            },
+            {
+              "term": "aerial",
+              "contrib": 0.0803,
+              "weight": 0.12
+            },
+            {
+              "term": "exterior",
+              "contrib": 0.043,
+              "weight": 0.06
+            },
+            {
+              "term": "stand_size",
+              "contrib": 0.03,
+              "weight": 0.07
+            }
+          ],
+          "neutral_padding": [
+            {
+              "term": "spatial_v2",
+              "contrib": 0.11,
+              "weight": 0.22
+            },
+            {
+              "term": "gis",
+              "contrib": 0.015,
+              "weight": 0.03
+            }
+          ],
+          "genuine_sum": 0.5589,
+          "neutral_sum": 0.125
+        }
+      ],
+      "weights": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.36,
+        "spatial_v2": 0.22,
+        "aerial": 0.12,
+        "exterior": 0.06,
+        "gis": 0.03,
+        "stand_size": 0.07
+      }
+    },
+    "top20": [
+      {
+        "rank": 1,
+        "stand_number": "605",
+        "property_id": 1260637,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1101.0,
+        "score": 0.7087,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6909,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7892,
+        "exterior_similarity": 0.7697,
+        "size_score": 0.7734,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2487,
+          "spatial_v2": 0.11,
+          "aerial": 0.0947,
+          "exterior": 0.0462,
+          "gis": 0.015,
+          "stand_size": 0.0541
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2487
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0947
+          ],
+          [
+            "stand_size",
+            0.0541
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -108.95,
+          "parcel_dist": 0.2005,
+          "distance_m": 10.3,
+          "dist_over_building": 0.6331,
+          "area_ratio": 0.0827,
+          "axis_rel": 0.2952,
+          "nearest_edge_norm": 0.009,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 2,
+        "stand_number": "444",
+        "property_id": 1834528,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 1044.0,
+        "score": 0.6941,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6866,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7491,
+        "exterior_similarity": 0.7519,
+        "size_score": 0.6701,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2472,
+          "spatial_v2": 0.11,
+          "aerial": 0.0899,
+          "exterior": 0.0451,
+          "gis": 0.015,
+          "stand_size": 0.0469
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2472
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0899
+          ],
+          [
+            "stand_size",
+            0.0469
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "NE",
+          "angle_deg": -30.59,
+          "parcel_dist": 0.3376,
+          "distance_m": 15.61,
+          "dist_over_building": 0.5962,
+          "area_ratio": 0.0369,
+          "axis_rel": 1.0,
+          "nearest_edge_norm": 0.0488,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 3,
+        "stand_number": "572",
+        "property_id": 1362003,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1097.0,
+        "score": 0.6915,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6697,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7237,
+        "exterior_similarity": 0.7496,
+        "size_score": 0.7662,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2411,
+          "spatial_v2": 0.11,
+          "aerial": 0.0868,
+          "exterior": 0.045,
+          "gis": 0.015,
+          "stand_size": 0.0536
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2411
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0868
+          ],
+          [
+            "stand_size",
+            0.0536
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "PROBABLE",
+          "driveway_status": "PROBABLE",
+          "direction": "NE",
+          "angle_deg": -30.91,
+          "parcel_dist": 0.2469,
+          "distance_m": 13.02,
+          "dist_over_building": 0.9985,
+          "area_ratio": 0.1995,
+          "axis_rel": 0.6967,
+          "nearest_edge_norm": 0.0778,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 4,
+        "stand_number": "382",
+        "property_id": 1285084,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 1251.0,
+        "score": 0.6909,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6265,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7311,
+        "exterior_similarity": 0.7629,
+        "size_score": 0.9547,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2255,
+          "spatial_v2": 0.11,
+          "aerial": 0.0877,
+          "exterior": 0.0458,
+          "gis": 0.015,
+          "stand_size": 0.0668
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2255
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0877
+          ],
+          [
+            "stand_size",
+            0.0668
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "PROBABLE",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -112.22,
+          "parcel_dist": 0.2343,
+          "distance_m": 9.86,
+          "dist_over_building": 0.8101,
+          "area_ratio": 0.2091,
+          "axis_rel": 0.968,
+          "nearest_edge_norm": 0.1102,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 5,
+        "stand_number": "573",
+        "property_id": 1861271,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 911.0,
+        "score": 0.684,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.7378,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.6691,
+        "exterior_similarity": 0.7173,
+        "size_score": 0.429,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2656,
+          "spatial_v2": 0.11,
+          "aerial": 0.0803,
+          "exterior": 0.043,
+          "gis": 0.015,
+          "stand_size": 0.03
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2656
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0803
+          ],
+          [
+            "exterior",
+            0.043
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "S",
+          "angle_deg": 89.43,
+          "parcel_dist": 0.4513,
+          "distance_m": 13.74,
+          "dist_over_building": 0.9445,
+          "area_ratio": 0.0632,
+          "axis_rel": 0.9977,
+          "nearest_edge_norm": 0.5317,
+          "driveway_side": "south",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 6,
+        "stand_number": "446",
+        "property_id": 1502368,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 993.0,
+        "score": 0.674,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6528,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7381,
+        "exterior_similarity": 0.7501,
+        "size_score": 0.5777,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.235,
+          "spatial_v2": 0.11,
+          "aerial": 0.0886,
+          "exterior": 0.045,
+          "gis": 0.015,
+          "stand_size": 0.0404
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.235
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0886
+          ],
+          [
+            "exterior",
+            0.045
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "CONFIRMED",
+          "driveway_status": "UNKNOWN",
+          "direction": "SW",
+          "angle_deg": 135.92,
+          "parcel_dist": 0.3561,
+          "distance_m": 12.64,
+          "dist_over_building": 0.673,
+          "area_ratio": 0.0492,
+          "axis_rel": 0.7018,
+          "nearest_edge_norm": 0.0088,
+          "driveway_side": null,
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": false
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 7,
+        "stand_number": "583",
+        "property_id": 1799728,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 917.0,
+        "score": 0.6738,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6598,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7886,
+        "exterior_similarity": 0.7642,
+        "size_score": 0.4399,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2375,
+          "spatial_v2": 0.11,
+          "aerial": 0.0946,
+          "exterior": 0.0459,
+          "gis": 0.015,
+          "stand_size": 0.0308
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2375
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0946
+          ],
+          [
+            "exterior",
+            0.0459
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "E",
+          "angle_deg": -8.28,
+          "parcel_dist": 0.3541,
+          "distance_m": 15.18,
+          "dist_over_building": 0.7007,
+          "area_ratio": 0.0493,
+          "axis_rel": 0.9037,
+          "nearest_edge_norm": 0.0082,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 8,
+        "stand_number": "568",
+        "property_id": 1313979,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 998.0,
+        "score": 0.6703,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6414,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7331,
+        "exterior_similarity": 0.7551,
+        "size_score": 0.5867,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2309,
+          "spatial_v2": 0.11,
+          "aerial": 0.088,
+          "exterior": 0.0453,
+          "gis": 0.015,
+          "stand_size": 0.0411
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2309
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.088
+          ],
+          [
+            "exterior",
+            0.0453
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "E",
+          "angle_deg": -12.09,
+          "parcel_dist": 0.2465,
+          "distance_m": 10.36,
+          "dist_over_building": 0.583,
+          "area_ratio": 0.1699,
+          "axis_rel": 0.4444,
+          "nearest_edge_norm": 0.0085,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 9,
+        "stand_number": "678",
+        "property_id": 1865788,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1113.0,
+        "score": 0.6703,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6037,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7363,
+        "exterior_similarity": 0.7329,
+        "size_score": 0.7952,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2173,
+          "spatial_v2": 0.11,
+          "aerial": 0.0884,
+          "exterior": 0.044,
+          "gis": 0.015,
+          "stand_size": 0.0557
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2173
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0884
+          ],
+          [
+            "stand_size",
+            0.0557
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -101.3,
+          "parcel_dist": 0.3358,
+          "distance_m": 12.17,
+          "dist_over_building": 0.8298,
+          "area_ratio": 0.0835,
+          "axis_rel": 1.0,
+          "nearest_edge_norm": 0.0733,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 10,
+        "stand_number": "567",
+        "property_id": 1496401,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1106.0,
+        "score": 0.6636,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.5706,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7662,
+        "exterior_similarity": 0.7739,
+        "size_score": 0.7825,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2054,
+          "spatial_v2": 0.11,
+          "aerial": 0.0919,
+          "exterior": 0.0464,
+          "gis": 0.015,
+          "stand_size": 0.0548
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2054
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0919
+          ],
+          [
+            "stand_size",
+            0.0548
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "UNKNOWN",
+          "direction": "N",
+          "angle_deg": -74.81,
+          "parcel_dist": 0.3144,
+          "distance_m": 13.77,
+          "dist_over_building": 0.5706,
+          "area_ratio": 0.0654,
+          "axis_rel": 0.8872,
+          "nearest_edge_norm": 0.011,
+          "driveway_side": null,
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": false
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 11,
+        "stand_number": "401",
+        "property_id": 1490051,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 919.0,
+        "score": 0.6619,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6523,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7242,
+        "exterior_similarity": 0.735,
+        "size_score": 0.4435,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2348,
+          "spatial_v2": 0.11,
+          "aerial": 0.0869,
+          "exterior": 0.0441,
+          "gis": 0.015,
+          "stand_size": 0.031
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2348
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0869
+          ],
+          [
+            "exterior",
+            0.0441
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -90.4,
+          "parcel_dist": 0.318,
+          "distance_m": 12.69,
+          "dist_over_building": 0.6122,
+          "area_ratio": 0.0525,
+          "axis_rel": 0.8916,
+          "nearest_edge_norm": 0.0302,
+          "driveway_side": "south",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 12,
+        "stand_number": "690",
+        "property_id": 1806191,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1226.0,
+        "score": 0.6619,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.5511,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7074,
+        "exterior_similarity": 0.7272,
+        "size_score": 1.0,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.1984,
+          "spatial_v2": 0.11,
+          "aerial": 0.0849,
+          "exterior": 0.0436,
+          "gis": 0.015,
+          "stand_size": 0.07
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.1984
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0849
+          ],
+          [
+            "stand_size",
+            0.07
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "S",
+          "angle_deg": 86.56,
+          "parcel_dist": 0.3798,
+          "distance_m": 18.78,
+          "dist_over_building": 0.9675,
+          "area_ratio": 0.054,
+          "axis_rel": 0.3481,
+          "nearest_edge_norm": 0.1932,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 13,
+        "stand_number": "624",
+        "property_id": 1761236,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 886.0,
+        "score": 0.6603,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6351,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7835,
+        "exterior_similarity": 0.7631,
+        "size_score": 0.3837,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2286,
+          "spatial_v2": 0.11,
+          "aerial": 0.094,
+          "exterior": 0.0458,
+          "gis": 0.015,
+          "stand_size": 0.0269
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2286
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.094
+          ],
+          [
+            "exterior",
+            0.0458
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -82.18,
+          "parcel_dist": 0.2572,
+          "distance_m": 10.99,
+          "dist_over_building": 0.5745,
+          "area_ratio": 0.2204,
+          "axis_rel": 0.9278,
+          "nearest_edge_norm": 0.0096,
+          "driveway_side": "south",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 14,
+        "stand_number": "868",
+        "property_id": 1673945,
+        "township": "SUMMERSET EXT.3",
+        "area_sqm": 958.0,
+        "score": 0.6579,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6581,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.6558,
+        "exterior_similarity": 0.6889,
+        "size_score": 0.5142,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2369,
+          "spatial_v2": 0.11,
+          "aerial": 0.0787,
+          "exterior": 0.0413,
+          "gis": 0.015,
+          "stand_size": 0.036
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2369
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0787
+          ],
+          [
+            "exterior",
+            0.0413
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "NW",
+          "angle_deg": -116.93,
+          "parcel_dist": 0.2998,
+          "distance_m": 10.16,
+          "dist_over_building": 0.5637,
+          "area_ratio": 0.0761,
+          "axis_rel": 0.591,
+          "nearest_edge_norm": 0.0599,
+          "driveway_side": "north",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 15,
+        "stand_number": "582",
+        "property_id": 1306520,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1002.0,
+        "score": 0.6572,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6027,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7393,
+        "exterior_similarity": 0.7497,
+        "size_score": 0.594,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.217,
+          "spatial_v2": 0.11,
+          "aerial": 0.0887,
+          "exterior": 0.045,
+          "gis": 0.015,
+          "stand_size": 0.0416
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.217
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0887
+          ],
+          [
+            "exterior",
+            0.045
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "CONFIRMED",
+          "driveway_status": "UNKNOWN",
+          "direction": "S",
+          "angle_deg": 108.17,
+          "parcel_dist": 0.3512,
+          "distance_m": 15.68,
+          "dist_over_building": 1.2862,
+          "area_ratio": 0.1312,
+          "axis_rel": 0.9524,
+          "nearest_edge_norm": 0.4536,
+          "driveway_side": null,
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": false
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 16,
+        "stand_number": "604",
+        "property_id": 1440499,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1226.0,
+        "score": 0.6572,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.5008,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7917,
+        "exterior_similarity": 0.7815,
+        "size_score": 1.0,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.1803,
+          "spatial_v2": 0.11,
+          "aerial": 0.095,
+          "exterior": 0.0469,
+          "gis": 0.015,
+          "stand_size": 0.07
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.1803
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.095
+          ],
+          [
+            "stand_size",
+            0.07
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "NE",
+          "angle_deg": -47.06,
+          "parcel_dist": 0.2893,
+          "distance_m": 15.51,
+          "dist_over_building": 0.7367,
+          "area_ratio": 0.0422,
+          "axis_rel": 0.6469,
+          "nearest_edge_norm": 0.2355,
+          "driveway_side": "north",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 17,
+        "stand_number": "470",
+        "property_id": 1280451,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 1111.0,
+        "score": 0.6546,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.5479,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7649,
+        "exterior_similarity": 0.7526,
+        "size_score": 0.7916,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.1972,
+          "spatial_v2": 0.11,
+          "aerial": 0.0918,
+          "exterior": 0.0452,
+          "gis": 0.015,
+          "stand_size": 0.0554
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.1972
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0918
+          ],
+          [
+            "stand_size",
+            0.0554
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "NE",
+          "angle_deg": -50.84,
+          "parcel_dist": 0.4597,
+          "distance_m": 21.91,
+          "dist_over_building": 0.8505,
+          "area_ratio": 0.0532,
+          "axis_rel": 0.9704,
+          "nearest_edge_norm": 0.0559,
+          "driveway_side": "south",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 18,
+        "stand_number": "688",
+        "property_id": 1540220,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1511.0,
+        "score": 0.6545,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6224,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7206,
+        "exterior_similarity": 0.7526,
+        "size_score": 0.4834,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2241,
+          "spatial_v2": 0.11,
+          "aerial": 0.0865,
+          "exterior": 0.0452,
+          "gis": 0.015,
+          "stand_size": 0.0338
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2241
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0865
+          ],
+          [
+            "exterior",
+            0.0452
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "E",
+          "angle_deg": -5.56,
+          "parcel_dist": 0.2828,
+          "distance_m": 13.82,
+          "dist_over_building": 0.7302,
+          "area_ratio": 0.0905,
+          "axis_rel": 0.9241,
+          "nearest_edge_norm": 0.0098,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 19,
+        "stand_number": "482",
+        "property_id": 1367114,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 1007.0,
+        "score": 0.6534,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.5848,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7562,
+        "exterior_similarity": 0.7493,
+        "size_score": 0.603,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2105,
+          "spatial_v2": 0.11,
+          "aerial": 0.0907,
+          "exterior": 0.045,
+          "gis": 0.015,
+          "stand_size": 0.0422
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2105
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0907
+          ],
+          [
+            "exterior",
+            0.045
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "UNKNOWN",
+          "direction": "NW",
+          "angle_deg": -153.14,
+          "parcel_dist": 0.2822,
+          "distance_m": 14.68,
+          "dist_over_building": 0.5603,
+          "area_ratio": 0.029,
+          "axis_rel": 0.9784,
+          "nearest_edge_norm": 0.0173,
+          "driveway_side": null,
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": false
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 20,
+        "stand_number": "428",
+        "property_id": 1559038,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 961.0,
+        "score": 0.652,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6013,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7365,
+        "exterior_similarity": 0.7631,
+        "size_score": 0.5197,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2165,
+          "spatial_v2": 0.11,
+          "aerial": 0.0884,
+          "exterior": 0.0458,
+          "gis": 0.015,
+          "stand_size": 0.0364
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2165
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0884
+          ],
+          [
+            "exterior",
+            0.0458
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "E",
+          "angle_deg": -15.35,
+          "parcel_dist": 0.3203,
+          "distance_m": 16.47,
+          "dist_over_building": 0.794,
+          "area_ratio": 0.0526,
+          "axis_rel": 0.9843,
+          "nearest_edge_norm": 0.0075,
+          "driveway_side": "south",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      }
+    ],
+    "top10": [
+      {
+        "rank": 1,
+        "stand_number": "605",
+        "property_id": 1260637,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1101.0,
+        "score": 0.7087,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6909,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7892,
+        "exterior_similarity": 0.7697,
+        "size_score": 0.7734,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2487,
+          "spatial_v2": 0.11,
+          "aerial": 0.0947,
+          "exterior": 0.0462,
+          "gis": 0.015,
+          "stand_size": 0.0541
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2487
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0947
+          ],
+          [
+            "stand_size",
+            0.0541
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -108.95,
+          "parcel_dist": 0.2005,
+          "distance_m": 10.3,
+          "dist_over_building": 0.6331,
+          "area_ratio": 0.0827,
+          "axis_rel": 0.2952,
+          "nearest_edge_norm": 0.009,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 2,
+        "stand_number": "444",
+        "property_id": 1834528,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 1044.0,
+        "score": 0.6941,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6866,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7491,
+        "exterior_similarity": 0.7519,
+        "size_score": 0.6701,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2472,
+          "spatial_v2": 0.11,
+          "aerial": 0.0899,
+          "exterior": 0.0451,
+          "gis": 0.015,
+          "stand_size": 0.0469
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2472
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0899
+          ],
+          [
+            "stand_size",
+            0.0469
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "NE",
+          "angle_deg": -30.59,
+          "parcel_dist": 0.3376,
+          "distance_m": 15.61,
+          "dist_over_building": 0.5962,
+          "area_ratio": 0.0369,
+          "axis_rel": 1.0,
+          "nearest_edge_norm": 0.0488,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 3,
+        "stand_number": "572",
+        "property_id": 1362003,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1097.0,
+        "score": 0.6915,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6697,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7237,
+        "exterior_similarity": 0.7496,
+        "size_score": 0.7662,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2411,
+          "spatial_v2": 0.11,
+          "aerial": 0.0868,
+          "exterior": 0.045,
+          "gis": 0.015,
+          "stand_size": 0.0536
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2411
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0868
+          ],
+          [
+            "stand_size",
+            0.0536
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "PROBABLE",
+          "driveway_status": "PROBABLE",
+          "direction": "NE",
+          "angle_deg": -30.91,
+          "parcel_dist": 0.2469,
+          "distance_m": 13.02,
+          "dist_over_building": 0.9985,
+          "area_ratio": 0.1995,
+          "axis_rel": 0.6967,
+          "nearest_edge_norm": 0.0778,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 4,
+        "stand_number": "382",
+        "property_id": 1285084,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 1251.0,
+        "score": 0.6909,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6265,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7311,
+        "exterior_similarity": 0.7629,
+        "size_score": 0.9547,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2255,
+          "spatial_v2": 0.11,
+          "aerial": 0.0877,
+          "exterior": 0.0458,
+          "gis": 0.015,
+          "stand_size": 0.0668
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2255
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0877
+          ],
+          [
+            "stand_size",
+            0.0668
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "PROBABLE",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -112.22,
+          "parcel_dist": 0.2343,
+          "distance_m": 9.86,
+          "dist_over_building": 0.8101,
+          "area_ratio": 0.2091,
+          "axis_rel": 0.968,
+          "nearest_edge_norm": 0.1102,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 5,
+        "stand_number": "573",
+        "property_id": 1861271,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 911.0,
+        "score": 0.684,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.7378,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.6691,
+        "exterior_similarity": 0.7173,
+        "size_score": 0.429,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2656,
+          "spatial_v2": 0.11,
+          "aerial": 0.0803,
+          "exterior": 0.043,
+          "gis": 0.015,
+          "stand_size": 0.03
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2656
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0803
+          ],
+          [
+            "exterior",
+            0.043
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "S",
+          "angle_deg": 89.43,
+          "parcel_dist": 0.4513,
+          "distance_m": 13.74,
+          "dist_over_building": 0.9445,
+          "area_ratio": 0.0632,
+          "axis_rel": 0.9977,
+          "nearest_edge_norm": 0.5317,
+          "driveway_side": "south",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 6,
+        "stand_number": "446",
+        "property_id": 1502368,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 993.0,
+        "score": 0.674,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6528,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7381,
+        "exterior_similarity": 0.7501,
+        "size_score": 0.5777,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.235,
+          "spatial_v2": 0.11,
+          "aerial": 0.0886,
+          "exterior": 0.045,
+          "gis": 0.015,
+          "stand_size": 0.0404
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.235
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0886
+          ],
+          [
+            "exterior",
+            0.045
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "CONFIRMED",
+          "driveway_status": "UNKNOWN",
+          "direction": "SW",
+          "angle_deg": 135.92,
+          "parcel_dist": 0.3561,
+          "distance_m": 12.64,
+          "dist_over_building": 0.673,
+          "area_ratio": 0.0492,
+          "axis_rel": 0.7018,
+          "nearest_edge_norm": 0.0088,
+          "driveway_side": null,
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": false
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 7,
+        "stand_number": "583",
+        "property_id": 1799728,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 917.0,
+        "score": 0.6738,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6598,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7886,
+        "exterior_similarity": 0.7642,
+        "size_score": 0.4399,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2375,
+          "spatial_v2": 0.11,
+          "aerial": 0.0946,
+          "exterior": 0.0459,
+          "gis": 0.015,
+          "stand_size": 0.0308
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2375
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0946
+          ],
+          [
+            "exterior",
+            0.0459
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "E",
+          "angle_deg": -8.28,
+          "parcel_dist": 0.3541,
+          "distance_m": 15.18,
+          "dist_over_building": 0.7007,
+          "area_ratio": 0.0493,
+          "axis_rel": 0.9037,
+          "nearest_edge_norm": 0.0082,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 8,
+        "stand_number": "568",
+        "property_id": 1313979,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 998.0,
+        "score": 0.6703,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6414,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7331,
+        "exterior_similarity": 0.7551,
+        "size_score": 0.5867,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2309,
+          "spatial_v2": 0.11,
+          "aerial": 0.088,
+          "exterior": 0.0453,
+          "gis": 0.015,
+          "stand_size": 0.0411
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2309
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.088
+          ],
+          [
+            "exterior",
+            0.0453
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "E",
+          "angle_deg": -12.09,
+          "parcel_dist": 0.2465,
+          "distance_m": 10.36,
+          "dist_over_building": 0.583,
+          "area_ratio": 0.1699,
+          "axis_rel": 0.4444,
+          "nearest_edge_norm": 0.0085,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 9,
+        "stand_number": "678",
+        "property_id": 1865788,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1113.0,
+        "score": 0.6703,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6037,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7363,
+        "exterior_similarity": 0.7329,
+        "size_score": 0.7952,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2173,
+          "spatial_v2": 0.11,
+          "aerial": 0.0884,
+          "exterior": 0.044,
+          "gis": 0.015,
+          "stand_size": 0.0557
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2173
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0884
+          ],
+          [
+            "stand_size",
+            0.0557
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -101.3,
+          "parcel_dist": 0.3358,
+          "distance_m": 12.17,
+          "dist_over_building": 0.8298,
+          "area_ratio": 0.0835,
+          "axis_rel": 1.0,
+          "nearest_edge_norm": 0.0733,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 10,
+        "stand_number": "567",
+        "property_id": 1496401,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1106.0,
+        "score": 0.6636,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "UNKNOWN",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.5706,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7662,
+        "exterior_similarity": 0.7739,
+        "size_score": 0.7825,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2054,
+          "spatial_v2": 0.11,
+          "aerial": 0.0919,
+          "exterior": 0.0464,
+          "gis": 0.015,
+          "stand_size": 0.0548
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2054
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0919
+          ],
+          [
+            "stand_size",
+            0.0548
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "UNKNOWN",
+          "direction": "N",
+          "angle_deg": -74.81,
+          "parcel_dist": 0.3144,
+          "distance_m": 13.77,
+          "dist_over_building": 0.5706,
+          "area_ratio": 0.0654,
+          "axis_rel": 0.8872,
+          "nearest_edge_norm": 0.011,
+          "driveway_side": null,
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": false
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      }
+    ],
+    "top5": [
+      {
+        "rank": 1,
+        "stand_number": "605",
+        "property_id": 1260637,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1101.0,
+        "score": 0.7087,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6909,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7892,
+        "exterior_similarity": 0.7697,
+        "size_score": 0.7734,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2487,
+          "spatial_v2": 0.11,
+          "aerial": 0.0947,
+          "exterior": 0.0462,
+          "gis": 0.015,
+          "stand_size": 0.0541
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2487
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0947
+          ],
+          [
+            "stand_size",
+            0.0541
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -108.95,
+          "parcel_dist": 0.2005,
+          "distance_m": 10.3,
+          "dist_over_building": 0.6331,
+          "area_ratio": 0.0827,
+          "axis_rel": 0.2952,
+          "nearest_edge_norm": 0.009,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 2,
+        "stand_number": "444",
+        "property_id": 1834528,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 1044.0,
+        "score": 0.6941,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6866,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7491,
+        "exterior_similarity": 0.7519,
+        "size_score": 0.6701,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2472,
+          "spatial_v2": 0.11,
+          "aerial": 0.0899,
+          "exterior": 0.0451,
+          "gis": 0.015,
+          "stand_size": 0.0469
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2472
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0899
+          ],
+          [
+            "stand_size",
+            0.0469
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "NE",
+          "angle_deg": -30.59,
+          "parcel_dist": 0.3376,
+          "distance_m": 15.61,
+          "dist_over_building": 0.5962,
+          "area_ratio": 0.0369,
+          "axis_rel": 1.0,
+          "nearest_edge_norm": 0.0488,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 3,
+        "stand_number": "572",
+        "property_id": 1362003,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 1097.0,
+        "score": 0.6915,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6697,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7237,
+        "exterior_similarity": 0.7496,
+        "size_score": 0.7662,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2411,
+          "spatial_v2": 0.11,
+          "aerial": 0.0868,
+          "exterior": 0.045,
+          "gis": 0.015,
+          "stand_size": 0.0536
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2411
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0868
+          ],
+          [
+            "stand_size",
+            0.0536
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "PROBABLE",
+          "driveway_status": "PROBABLE",
+          "direction": "NE",
+          "angle_deg": -30.91,
+          "parcel_dist": 0.2469,
+          "distance_m": 13.02,
+          "dist_over_building": 0.9985,
+          "area_ratio": 0.1995,
+          "axis_rel": 0.6967,
+          "nearest_edge_norm": 0.0778,
+          "driveway_side": "west",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 4,
+        "stand_number": "382",
+        "property_id": 1285084,
+        "township": "SUMMERSET EXT.6",
+        "area_sqm": 1251.0,
+        "score": 0.6909,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "os_building_status": "PROBABLE",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.6265,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.7311,
+        "exterior_similarity": 0.7629,
+        "size_score": 0.9547,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2255,
+          "spatial_v2": 0.11,
+          "aerial": 0.0877,
+          "exterior": 0.0458,
+          "gis": 0.015,
+          "stand_size": 0.0668
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2255
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0877
+          ],
+          [
+            "stand_size",
+            0.0668
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "CONFIRMED",
+          "building_status": "PROBABLE",
+          "driveway_status": "PROBABLE",
+          "direction": "N",
+          "angle_deg": -112.22,
+          "parcel_dist": 0.2343,
+          "distance_m": 9.86,
+          "dist_over_building": 0.8101,
+          "area_ratio": 0.2091,
+          "axis_rel": 0.968,
+          "nearest_edge_norm": 0.1102,
+          "driveway_side": "east",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      },
+      {
+        "rank": 5,
+        "stand_number": "573",
+        "property_id": 1861271,
+        "township": "SUMMERSET EXT.13",
+        "area_sqm": 911.0,
+        "score": 0.684,
+        "inventory_pool_status": "YES",
+        "os_pool_status": "PROBABLE",
+        "os_building_status": "CONFIRMED",
+        "os_driveway_status": "PROBABLE",
+        "os_high_conf_pool": true,
+        "pool_geometry_support": true,
+        "shape_v2": 0.7378,
+        "spatial_v2": null,
+        "coverage": 0.6667,
+        "aerial_similarity": 0.6691,
+        "exterior_similarity": 0.7173,
+        "size_score": 0.429,
+        "evidence_contributors": {
+          "pool_presence": 0.14,
+          "shape_v2": 0.2656,
+          "spatial_v2": 0.11,
+          "aerial": 0.0803,
+          "exterior": 0.043,
+          "gis": 0.015,
+          "stand_size": 0.03
+        },
+        "top_contributors": [
+          [
+            "shape_v2",
+            0.2656
+          ],
+          [
+            "pool_presence",
+            0.14
+          ],
+          [
+            "spatial_v2",
+            0.11
+          ],
+          [
+            "aerial",
+            0.0803
+          ],
+          [
+            "exterior",
+            0.043
+          ]
+        ],
+        "spatial_record": {
+          "pool_status": "PROBABLE",
+          "building_status": "CONFIRMED",
+          "driveway_status": "PROBABLE",
+          "direction": "S",
+          "angle_deg": 89.43,
+          "parcel_dist": 0.4513,
+          "distance_m": 13.74,
+          "dist_over_building": 0.9445,
+          "area_ratio": 0.0632,
+          "axis_rel": 0.9977,
+          "nearest_edge_norm": 0.5317,
+          "driveway_side": "south",
+          "high_conf_pool": true,
+          "high_conf_building": true,
+          "high_conf_driveway": true
+        },
+        "neutral_components": [
+          "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+        ]
+      }
+    ],
+    "top1": {
+      "rank": 1,
+      "stand_number": "605",
+      "property_id": 1260637,
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1101.0,
+      "score": 0.7087,
+      "inventory_pool_status": "YES",
+      "os_pool_status": "CONFIRMED",
+      "os_building_status": "CONFIRMED",
+      "os_driveway_status": "PROBABLE",
+      "os_high_conf_pool": true,
+      "pool_geometry_support": true,
+      "shape_v2": 0.6909,
+      "spatial_v2": null,
+      "coverage": 0.6667,
+      "aerial_similarity": 0.7892,
+      "exterior_similarity": 0.7697,
+      "size_score": 0.7734,
+      "evidence_contributors": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.2487,
+        "spatial_v2": 0.11,
+        "aerial": 0.0947,
+        "exterior": 0.0462,
+        "gis": 0.015,
+        "stand_size": 0.0541
+      },
+      "top_contributors": [
+        [
+          "shape_v2",
+          0.2487
+        ],
+        [
+          "pool_presence",
+          0.14
+        ],
+        [
+          "spatial_v2",
+          0.11
+        ],
+        [
+          "aerial",
+          0.0947
+        ],
+        [
+          "stand_size",
+          0.0541
+        ]
+      ],
+      "spatial_record": {
+        "pool_status": "CONFIRMED",
+        "building_status": "CONFIRMED",
+        "driveway_status": "PROBABLE",
+        "direction": "N",
+        "angle_deg": -108.95,
+        "parcel_dist": 0.2005,
+        "distance_m": 10.3,
+        "dist_over_building": 0.6331,
+        "area_ratio": 0.0827,
+        "axis_rel": 0.2952,
+        "nearest_edge_norm": 0.009,
+        "driveway_side": "west",
+        "high_conf_pool": true,
+        "high_conf_building": true,
+        "high_conf_driveway": true
+      },
+      "neutral_components": [
+        "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+      ]
+    }
+  },
+  "ranking_configuration": {
+    "official_score": "hybrid_v2",
+    "scoring_v2_weights": {
+      "pool_presence": 0.14,
+      "shape_v2": 0.36,
+      "spatial_v2": 0.22,
+      "aerial": 0.12,
+      "exterior": 0.06,
+      "gis": 0.03,
+      "stand_size": 0.07
+    },
+    "os_keys": [
+      "pool_presence",
+      "shape_v2",
+      "spatial_v2"
+    ],
+    "hybrid_pool_geometry": "v1",
+    "os_v1": "object_segmentation_v1",
+    "fastsam_imgsz": 512,
+    "native15": true,
+    "clip": "ViT-B-32 openai",
+    "pool_gate": "listing_pool_gate_v1",
+    "inventory": "estate_property_inventory_v1",
+    "dataset_id": "carlswald_north_corrected_002",
+    "colour_used_in_ranking": false
+  },
+  "frozen_001_untouched": {
+    "gis_sha256_expected": "1bab3126fdfa9d397857f67f2d0cb65ddc410fc5d82afaf1a823c63018f56608",
+    "inventory_sha256_expected": "3bc02c09c293d011b8f2d866b2075e3e9863cc9af9db5c054faa0dc722aca861",
+    "gis_sha256": "1bab3126fdfa9d397857f67f2d0cb65ddc410fc5d82afaf1a823c63018f56608",
+    "inventory_sha256": "3bc02c09c293d011b8f2d866b2075e3e9863cc9af9db5c054faa0dc722aca861"
+  },
+  "prior_listing_artifacts": {
+    "listing_id": "116778622",
+    "workspace_path_hits_excluded": [],
+    "frozen_hybrid_json_contains_listing": false,
+    "frozen_hybrid_json_used_as_ranking_input": false,
+    "hybrid_source": "extract_frame_geometry_frozen_hybrid_v1_fresh",
+    "excluded_from_ranking_input": true
+  },
+  "on_disk_sha256_recorded_in": "freeze.sha256"
+}

@@ -1,0 +1,33 @@
+{
+  "ground_truth": {
+    "confirmed_stand": null,
+    "confidence": "NOT DETERMINABLE",
+    "determinable": false
+  },
+  "evaluation": {
+    "determinable": false,
+    "outcome": null,
+    "official_class": "UNLABELLED — GROUND TRUTH UNAVAILABLE",
+    "note": "Ground truth could not be established independently. Frozen ranking was not used as truth. Two exact GIS 1226 m2 matches (690, 604) were recorded and rejected."
+  },
+  "detector": null,
+  "comparison_three_blind_tests": {
+    "listings": ["116273255", "116223230", "116778622"],
+    "overlap_top5": {
+      "vs_116273255": [],
+      "vs_116223230": ["605", "444", "573"]
+    },
+    "overlap_top20": {
+      "vs_116273255": ["567", "688"],
+      "vs_116223230": ["605", "444", "572", "573", "446", "583", "568", "678", "401", "624", "868", "582", "482", "428"]
+    },
+    "n_overlap_top20_vs_116223230": 14,
+    "intersection_top5_all_three": [],
+    "watch_334": {"116273255": 1, "116223230": 115, "116778622": 130},
+    "watch_373": {"116273255": 2, "116223230": 119, "116778622": 121},
+    "possible_candidate_ranking_bias": true,
+    "bias_pattern": "14/20 overlap with listing 116223230 (~1000 m2 YES-pool cluster). No 334/373 repeat. No three-listing Top-5 intersection.",
+    "listing_specific_vs_500sqm_listing": true,
+    "note": "Listing-specificity versus the 500 m2 listing is not proof of accuracy."
+  }
+}
