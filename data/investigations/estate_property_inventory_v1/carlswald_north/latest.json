@@ -1,0 +1,310 @@
+{
+  "algorithm_version": "estate_property_inventory_v1.1.0.0+object_segmentation_v1",
+  "confirmations": {
+    "dark_teal_370_unknown": true,
+    "fastsam_not_required_for_bootstrap": true,
+    "frozen_baseline_rank": 17,
+    "frozen_baseline_score": 0.6659,
+    "neighbour_pools_not_yes": true,
+    "production_ranking_untouched": true,
+    "unknown_never_hard_discarded": true
+  },
+  "test_results": {
+    "pytest_tests": 91,
+    "pytest_passed": 91,
+    "pytest_failed": 0,
+    "command": "python3 -m pytest tests/ -q"
+  },
+  "diagnostic_stands": [
+    {
+      "diagnostic_flags": [
+        "in_parcel_pool_detected",
+        "reused_os_v1_json"
+      ],
+      "os_pool_status": "CONFIRMED",
+      "pool_area_m2": 20.89,
+      "pool_status": "YES",
+      "stand_number": "677",
+      "unknown_reason": null
+    },
+    {
+      "diagnostic_flags": [
+        "low_pool_evidence",
+        "os_rejected",
+        "rejected_is_not_absence",
+        "reused_os_v1_json"
+      ],
+      "os_pool_status": "REJECTED",
+      "pool_area_m2": null,
+      "pool_status": "UNKNOWN",
+      "stand_number": "612",
+      "unknown_reason": "os_rejected_weak_evidence_not_absence"
+    },
+    {
+      "diagnostic_flags": [
+        "os_rejected",
+        "rejected_as_road_shadow_or_roof",
+        "rejected_is_not_absence",
+        "reused_os_v1_json"
+      ],
+      "os_pool_status": "REJECTED",
+      "pool_area_m2": null,
+      "pool_status": "UNKNOWN",
+      "stand_number": "570",
+      "unknown_reason": "os_rejected_weak_evidence_not_absence"
+    },
+    {
+      "diagnostic_flags": [
+        "in_parcel_pool_detected",
+        "reused_os_v1_json"
+      ],
+      "os_pool_status": "CONFIRMED",
+      "pool_area_m2": 37.91,
+      "pool_status": "YES",
+      "stand_number": "420",
+      "unknown_reason": null
+    },
+    {
+      "diagnostic_flags": [
+        "in_parcel_pool_detected",
+        "os_probable_not_confirmed",
+        "reused_os_v1_json"
+      ],
+      "os_pool_status": "PROBABLE",
+      "pool_area_m2": 31.48,
+      "pool_status": "YES",
+      "stand_number": "585",
+      "unknown_reason": null
+    },
+    {
+      "diagnostic_flags": [
+        "fragmented_building",
+        "no_pool_candidate",
+        "poor_segmentation",
+        "reused_os_v1_json",
+        "undersized_building"
+      ],
+      "os_pool_status": "UNKNOWN",
+      "pool_area_m2": null,
+      "pool_status": "UNKNOWN",
+      "stand_number": "408",
+      "unknown_reason": "no_candidate_with_poor_segmentation"
+    },
+    {
+      "diagnostic_flags": [
+        "in_parcel_pool_detected",
+        "reused_os_v1_json"
+      ],
+      "os_pool_status": "CONFIRMED",
+      "pool_area_m2": 32.47,
+      "pool_status": "YES",
+      "stand_number": "365",
+      "unknown_reason": null
+    },
+    {
+      "diagnostic_flags": [
+        "in_parcel_pool_detected",
+        "reused_os_v1_json"
+      ],
+      "os_pool_status": "CONFIRMED",
+      "pool_area_m2": 45.09,
+      "pool_status": "YES",
+      "stand_number": "491",
+      "unknown_reason": null
+    },
+    {
+      "diagnostic_flags": [
+        "os_rejected",
+        "rejected_as_road_shadow_or_roof",
+        "rejected_is_not_absence",
+        "reused_os_v1_json"
+      ],
+      "os_pool_status": "REJECTED",
+      "pool_area_m2": null,
+      "pool_status": "UNKNOWN",
+      "stand_number": "447",
+      "unknown_reason": "os_rejected_weak_evidence_not_absence"
+    },
+    {
+      "diagnostic_flags": [
+        "os_rejected",
+        "rejected_as_road_shadow_or_roof",
+        "rejected_is_not_absence",
+        "reused_os_v1_json"
+      ],
+      "os_pool_status": "REJECTED",
+      "pool_area_m2": null,
+      "pool_status": "UNKNOWN",
+      "stand_number": "370",
+      "unknown_reason": "os_rejected_weak_evidence_not_absence"
+    }
+  ],
+  "estate_id": "carlswald_north_corrected_001",
+  "first_scan": {
+    "changed_tiles": [],
+    "fastsam_runs": 0,
+    "no": 60,
+    "no_pct": 18.18,
+    "parcels_reclassified": 0,
+    "parcels_rescanned": 330,
+    "parcels_reused": 0,
+    "parcels_total": 330,
+    "runtime_s": 0.12,
+    "unchanged_tiles": [
+      "tile_2023_native15_00_00",
+      "tile_2023_native15_00_01",
+      "tile_2023_native15_00_02",
+      "tile_2023_native15_00_03",
+      "tile_2023_native15_00_04",
+      "tile_2023_native15_00_05",
+      "tile_2023_native15_00_06",
+      "tile_2023_native15_01_00",
+      "tile_2023_native15_01_01",
+      "tile_2023_native15_01_02",
+      "tile_2023_native15_01_03",
+      "tile_2023_native15_01_04",
+      "tile_2023_native15_01_05",
+      "tile_2023_native15_01_06",
+      "tile_2023_native15_02_00",
+      "tile_2023_native15_02_01",
+      "tile_2023_native15_02_02",
+      "tile_2023_native15_02_03",
+      "tile_2023_native15_02_04",
+      "tile_2023_native15_02_05",
+      "tile_2023_native15_02_06",
+      "tile_2023_native15_03_00",
+      "tile_2023_native15_03_01",
+      "tile_2023_native15_03_02",
+      "tile_2023_native15_03_03",
+      "tile_2023_native15_03_04",
+      "tile_2023_native15_03_05",
+      "tile_2023_native15_03_06",
+      "tile_2023_native15_04_00",
+      "tile_2023_native15_04_01",
+      "tile_2023_native15_04_02",
+      "tile_2023_native15_04_03",
+      "tile_2023_native15_04_04",
+      "tile_2023_native15_04_05",
+      "tile_2023_native15_04_06"
+    ],
+    "unknown": 179,
+    "unknown_pct": 54.24,
+    "yes": 91,
+    "yes_pct": 27.58
+  },
+  "gate_listing_no": {
+    "listing_pool_status": "NO",
+    "no_survivors": 60,
+    "parcels_removed_confident_no": 0,
+    "parcels_removed_confident_yes": 91,
+    "pct_reduction": 27.58,
+    "starting_count": 330,
+    "total_survivors": 239,
+    "unknown_survivors": 179,
+    "yes_survivors": 0
+  },
+  "gate_listing_unknown": {
+    "listing_pool_status": "UNKNOWN",
+    "no_survivors": 60,
+    "parcels_removed_confident_no": 0,
+    "parcels_removed_confident_yes": 0,
+    "pct_reduction": 0.0,
+    "starting_count": 330,
+    "total_survivors": 330,
+    "unknown_survivors": 179,
+    "yes_survivors": 91
+  },
+  "gate_listing_yes": {
+    "listing_pool_status": "YES",
+    "no_survivors": 0,
+    "parcels_removed_confident_no": 60,
+    "parcels_removed_confident_yes": 0,
+    "pct_reduction": 18.18,
+    "starting_count": 330,
+    "total_survivors": 270,
+    "unknown_survivors": 179,
+    "yes_survivors": 91
+  },
+  "gis_pass1_rows": 337,
+  "imagery_coverage": {
+    "coverage_basis": "frozen object_segmentation_v1 native15 fingerprints",
+    "imagery_profile": "native15",
+    "native15_crops_on_disk": 0,
+    "native15_tiles_on_disk": 0,
+    "os_v1_fingerprints": 330,
+    "records_with_crop_hash": 0,
+    "tile_hash_hits": 0,
+    "tile_hash_misses": 624,
+    "unique_erven": 330
+  },
+  "inventory_counts": {
+    "NO": 60,
+    "UNKNOWN": 179,
+    "YES": 91,
+    "no_pct": 18.18,
+    "total": 330,
+    "unknown_pct": 54.24,
+    "yes_pct": 27.58
+  },
+  "n_first_records": 330,
+  "n_reuse_records": 330,
+  "os_status_tally": {
+    "CONFIRMED": 78,
+    "PROBABLE": 17,
+    "REJECTED": 132,
+    "UNKNOWN": 103
+  },
+  "reuse_scan": {
+    "changed_tiles": [],
+    "fastsam_runs": 0,
+    "no": 60,
+    "no_pct": 18.18,
+    "parcels_reclassified": 0,
+    "parcels_rescanned": 0,
+    "parcels_reused": 330,
+    "parcels_total": 330,
+    "runtime_s": 0.091,
+    "unchanged_tiles": [
+      "tile_2023_native15_00_00",
+      "tile_2023_native15_00_01",
+      "tile_2023_native15_00_02",
+      "tile_2023_native15_00_03",
+      "tile_2023_native15_00_04",
+      "tile_2023_native15_00_05",
+      "tile_2023_native15_00_06",
+      "tile_2023_native15_01_00",
+      "tile_2023_native15_01_01",
+      "tile_2023_native15_01_02",
+      "tile_2023_native15_01_03",
+      "tile_2023_native15_01_04",
+      "tile_2023_native15_01_05",
+      "tile_2023_native15_01_06",
+      "tile_2023_native15_02_00",
+      "tile_2023_native15_02_01",
+      "tile_2023_native15_02_02",
+      "tile_2023_native15_02_03",
+      "tile_2023_native15_02_04",
+      "tile_2023_native15_02_05",
+      "tile_2023_native15_02_06",
+      "tile_2023_native15_03_00",
+      "tile_2023_native15_03_01",
+      "tile_2023_native15_03_02",
+      "tile_2023_native15_03_03",
+      "tile_2023_native15_03_04",
+      "tile_2023_native15_03_05",
+      "tile_2023_native15_03_06",
+      "tile_2023_native15_04_00",
+      "tile_2023_native15_04_01",
+      "tile_2023_native15_04_02",
+      "tile_2023_native15_04_03",
+      "tile_2023_native15_04_04",
+      "tile_2023_native15_04_05",
+      "tile_2023_native15_04_06"
+    ],
+    "unknown": 179,
+    "unknown_pct": 54.24,
+    "yes": 91,
+    "yes_pct": 27.58
+  },
+  "schema_version": "estate_property_inventory_v1.1.0.0"
+}

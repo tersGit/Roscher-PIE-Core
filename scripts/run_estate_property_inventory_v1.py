@@ -8,6 +8,7 @@ ranking. Colour is not used.
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from collections import Counter
@@ -203,6 +204,13 @@ def _write_report(payload: dict) -> str:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--fresh",
+        action="store_true",
+        help="Wipe current.jsonl and history.jsonl before rebuilding (benchmark only).",
+    )
+    args = parser.parse_args()
     require_active_dataset(ESTATE_ID)
     dataset = json.loads(GIS_PATH.read_text(encoding="utf-8"))
     gis_pass1_rows = sum(
@@ -216,10 +224,11 @@ def main() -> int:
         and not str(item["stand_number"]).startswith("RE/")
     )
     store = EstateInventoryStore(ESTATE_ID)
-    if store.current_path.is_file():
-        store.current_path.unlink()
-    if store.history_path.is_file():
-        store.history_path.unlink()
+    if args.fresh:
+        if store.current_path.is_file():
+            store.current_path.unlink()
+        if store.history_path.is_file():
+            store.history_path.unlink()
 
     first_records, first_stats = scan_estate_inventory(
         estate_id=ESTATE_ID,
