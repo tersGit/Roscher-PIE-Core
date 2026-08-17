@@ -1,0 +1,80 @@
+{
+  "confirmed_stand": null,
+  "confidence": "NOT DETERMINABLE",
+  "determinable": false,
+  "identity": {
+    "title": "6 Bedroom House for sale in Carlswald North Estate - P24-116223230",
+    "stand_mentions": [],
+    "street": null,
+    "street_withheld_contact_agent": true,
+    "address_locality": "Carlswald North Estate",
+    "coordinates_present": false
+  },
+  "gis_street_matches": [],
+  "coj_matches": [],
+  "syndicated_copies_checked": [
+    {
+      "source": "property24",
+      "url": "https://www.property24.com/for-sale/carlswald-north-estate/midrand/gauteng/12743/116223230",
+      "street": null,
+      "note": "Public page withholds street: Contact agent for street address. No stand or coordinates in listing payload."
+    },
+    {
+      "source": "privateproperty",
+      "url": "https://www.privateproperty.co.za/for-sale/gauteng/johannesburg/midrand/carlswald-north-estate/T5167463",
+      "listing_number": "T5167463",
+      "street": "Contact agent for street address",
+      "erf_size_sqm": 1009,
+      "floor_size_sqm": 820,
+      "bedrooms": 6,
+      "bathrooms": 6.5,
+      "agents": ["Julie Mcdonald", "Cameron Else"],
+      "note": "Same 6-bed / 820 m2 / 1009 m2 / pool / fish-pond copy. Street withheld."
+    },
+    {
+      "source": "mail_and_guardian_property24_syndication",
+      "url": "https://property.mg.co.za/6-bedroom-house-for-sale-in-carlswald-north-estate-116223230",
+      "street": null,
+      "erf_size_sqm": 1009,
+      "floor_size_sqm": 820
+    },
+    {
+      "source": "platinum_residential",
+      "url": "https://www.platinum.co.za/results/residential/for-sale/midrand/carlswald-north-estate/freehold/2747059/",
+      "note": "Agent card for the 6-bed 820 m2 sole mandate. URL slug has no street (unlike Platinum listings that publish an address)."
+    }
+  ],
+  "rejected_size_only_hypothesis": {
+    "accepted_as_ground_truth": false,
+    "reason": "Listing erf 1009 m2 is the unique exact GIS area in carlswald_north_corrected_002, but listing sizes are rounded and 18 parcels sit within +/-5 m2. No published street, stand, or prior listing confirms the match.",
+    "gis_exact_1009_stand": "508",
+    "gis_street_address": "6 YELLOWOOD CLOSE",
+    "township": "SUMMERSET EXT.6",
+    "inventory_pool_status": "UNKNOWN",
+    "os_pool_status": "REJECTED",
+    "frozen_rank": 128,
+    "frozen_score": 0.5491,
+    "pool_gate_retained": true,
+    "in_frozen_top20": false,
+    "independent_listing_at_that_address": "none found; nearby Yellowood listings are unrelated (e.g. 371/1 Yellowood Close is a 2-bed rental)"
+  },
+  "evidence": [
+    {
+      "type": "public_listing_identity_withheld",
+      "street_withheld_contact_agent": true,
+      "coordinates_present": false,
+      "note": "Property24, Private Property T5167463, MG syndication, and Platinum 2747059 all withhold street and stand."
+    },
+    {
+      "type": "cadastral_size_not_unique_enough",
+      "listing_erf_sqm": 1009,
+      "gis_exact_1009_count": 1,
+      "gis_within_1_sqm_count": 5,
+      "gis_within_5_sqm_count": 18,
+      "note": "Exact GIS 1009 m2 is stand 508 only. That is a size clue, not identity. Rank was not used as truth."
+    }
+  ],
+  "visual": null,
+  "inferred_from_pie_rank": false,
+  "top1_not_declared_correct_from_visual_plausibility": true
+}
