@@ -1,8 +1,8 @@
-"""Ranking/scoring isolation after Hybrid extraction-only changes.
+"""Ranking/scoring isolation after Hybrid adapter eligibility change.
 
-Extraction may change listing contours. Production ranking weights, Scoring v2,
-Pool Gate, OS v1, GIS inventory, stand-size contribution, and the Hybrid ranking
-adapter's YOLOE-only scoring-source rule must stay frozen.
+Adapter eligibility may now accept Hybrid scoring_ready FastSAM contours.
+Production ranking weights, Scoring v2 formula, Pool Gate, OS v1, GIS inventory,
+and stand-size contribution must stay frozen. Historical blind rankings are not rerun.
 """
 
 from __future__ import annotations
@@ -67,19 +67,22 @@ def test_score_v2_formula_still_uses_frozen_weights():
     assert abs(contrib["aerial"] - 0.12 * 0.5) < 1e-6
 
 
-def test_pool_gate_and_ranking_adapter_unchanged():
+def test_pool_gate_unchanged_and_adapter_accepts_scoring_ready_fastsam():
     assert survives_listing_pool_gate("NO", "YES") is False
     assert survives_listing_pool_gate("YES", "YES") is True
     assert survives_listing_pool_gate("UNKNOWN", "YES") is True
     assert survives_listing_pool_gate("YES", "UNKNOWN") is True
-    assert SCORING_SOURCES == frozenset({"yoloe", "yoloe_sam2"})
-    assert BLOCKED_SOURCES == frozenset({"fastsam_fallback", "presence_only", "no_usable_geometry"})
+    assert SCORING_SOURCES == frozenset({"yoloe", "yoloe_sam2", "fastsam_fallback"})
+    assert BLOCKED_SOURCES == frozenset({"presence_only", "no_usable_geometry"})
+    contour = [[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]
     frames = [
-        {"media_id": "ok", "source": "yoloe_sam2", "scoring_ready": True, "dominant": {"contour_image": [[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]}},
-        {"media_id": "fb", "source": "fastsam_fallback", "scoring_ready": True, "dominant": {"contour_image": [[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]}},
+        {"media_id": "ok", "source": "yoloe_sam2", "scoring_ready": True, "dominant": {"contour_image": contour}},
+        {"media_id": "fb", "source": "fastsam_fallback", "scoring_ready": True, "dominant": {"contour_image": contour}},
+        {"media_id": "pr", "source": "presence_only", "scoring_ready": True, "dominant": {"contour_image": contour}},
+        {"media_id": "no", "source": "fastsam_fallback", "scoring_ready": False, "dominant": {"contour_image": contour}},
     ]
     ready = scoring_ready_frames(frames)
-    assert [f["media_id"] for f in ready] == ["ok"]
+    assert [f["media_id"] for f in ready] == ["ok", "fb"]
 
 
 def test_gis_inventory_and_os_v1_bytes_untouched():
@@ -99,7 +102,11 @@ def test_hybrid_extraction_has_no_listing_or_gt_exceptions():
     for token in ("116978058", "116889694", "ground_truth", "expected_stand", "carlswald"):
         assert token not in text.lower() if token == "carlswald" else token not in text
     rank_src = (ROOT / "backend/gis/estate_ags_matching/hybrid_geometry_ranking_test.py").read_text(encoding="utf-8")
-    assert "SCORING_SOURCES = frozenset({\"yoloe\", \"yoloe_sam2\"})" in rank_src.replace("'", '"')
+    assert "fastsam_fallback" in rank_src
+    assert "V2_WEIGHTS_NO_BUILDING" in rank_src
+    assert "presence_only" in rank_src
+    assert "116889694" not in rank_src
+    assert "116978058" not in rank_src
 
 
 def test_os_v1_control_stands_remain_frozen():
