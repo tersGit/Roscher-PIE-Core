@@ -666,23 +666,20 @@ def hypothesis_report(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
 
 
 def recommended_experiment(hyp: Mapping[str, Any]) -> dict[str, Any]:
-    no_prop = int(hyp.get("fastsam_did_not_propose_n") or 0)
-    rejected = int(hyp.get("fastsam_proposed_then_rejected_n") or 0)
-    if no_prop >= rejected:
-        name = "fastsam_proposal_density_ab"
-        rationale = (
-            "Most documented misses have no FastSAM mask covering the visually identified pool. "
-            "A narrowly controlled proposal-setting A/B (imgsz and/or retina/conf without changing CLIP, "
-            "geometry gates, native15, or ranking) is the evidence-supported next experiment."
-        )
-        knobs = ["FastSAM imgsz 512→768 or 1024 on the same native15 crop", "leave CLIP/geometry/parcel gates frozen"]
-    else:
-        name = "downstream_mask_recovery_ab"
-        rationale = (
-            "FastSAM often proposed a mask at the pool but OS v1 discarded it at CLIP/geometry. "
-            "Recover those proposals without loosening neighbour/shadow/roof gates."
-        )
-        knobs = ["inspect CLIP threshold 0.18 / keep 0.40 on proposed in-parcel masks only"]
+    """Single next experiment. Prefer imgsz A/B: 677 CLIP 0.99 requires an isolated pool mask."""
+    name = "fastsam_imgsz_proposal_ab"
+    rationale = (
+        "Stand 677 is detected because FastSAM isolates a compact in-parcel pool mask that CLIP "
+        "scores 0.99. The nine misses reproduce no_pool_candidate on the same native15 crops: "
+        "FastSAM still proposes 27–84 masks, but CLIP-evaluated masks are roof/shadow-like "
+        f"(visual-ROI stages {hyp.get('failure_stage_counts')}). 339 never reaches CLIP. "
+        "A single imgsz 512 vs 768/1024 A/B, with CLIP/geometry/parcel frozen, is the "
+        "evidence-supported next experiment. Do not loosen CLIP in the same run."
+    )
+    knobs = [
+        "FastSAM predict imgsz 512 (frozen) vs 768 and/or 1024 on the same native15 crop",
+        "CLIP, geometry, parcel, and water_seed thresholds unchanged",
+    ]
     return {
         "experiment_id": name,
         "implement_now": False,
@@ -695,6 +692,7 @@ def recommended_experiment(hyp: Mapping[str, Any]) -> dict[str, Any]:
             "(Stand 570 shadow/object, neighbour-pool 1/335 1/379 395 547, confirmed NO 1/355)."
         ),
         "negative_controls": NEGATIVE_CONTROLS,
+        "alternative_if_imgsz_fails": "water-seed morphology / compactness recovery A/B (separate experiment)",
         "do_not_change": [
             "frozen OS v1 code path used in production",
             "native15",

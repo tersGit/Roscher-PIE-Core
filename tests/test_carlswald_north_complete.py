@@ -121,7 +121,25 @@ def test_complete_inventory_reuses_330_when_present():
     gate_no = apply_listing_pool_gate(rows, rows, "NO")
     assert gate_yes.unknown_survivors == counts["UNKNOWN"]
     assert gate_no.unknown_survivors == counts["UNKNOWN"]
-    assert gate_yes.parcels_removed_confident_no == counts["NO"]
-    assert gate_no.parcels_removed_confident_yes == counts["YES"]
+    assert gate_yes.removed_confident_no == counts["NO"]
+    assert gate_no.removed_confident_yes == counts["YES"]
     # Frozen 001 inventory still the original bytes.
     assert _sha(INV_001) == FROZEN_001_INV_SHA
+    assert sum(1 for row in ext3 if row.get("fastsam_invoked")) == 70
+
+
+def test_miss_diagnostic_crop_wh_matches_os_when_present():
+    miss_dir = ROOT / "data/investigations/estate_property_inventory_v1/fastsam_miss"
+    latest = miss_dir / "latest.json"
+    if not latest.is_file():
+        return
+    payload = json.loads(latest.read_text(encoding="utf-8"))
+    assert payload["os_v1_modified"] is False
+    assert payload["fastsam_config_modified"] is False
+    os_dir = ROOT / "data/investigations/object_segmentation_v1/carlswald_north/json"
+    for stand in ["677", "339", "408", "1_437", "1_520", "1_631", "459", "462", "543", "675"]:
+        rec = json.loads((miss_dir / f"{stand}.json").read_text(encoding="utf-8"))
+        os_payload = json.loads((os_dir / f"{stand}.json").read_text(encoding="utf-8"))
+        assert rec["crop_wh"] == os_payload["crop_wh"]
+        assert rec["crop_matches_os_v1_wh"] is True
+    assert payload["recommended_experiment"]["implement_now"] is False

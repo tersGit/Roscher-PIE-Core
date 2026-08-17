@@ -1,0 +1,59 @@
+{
+  "algorithm_version": "estate_property_inventory_v1.1.0.0+object_segmentation_v1",
+  "complete_summary": {
+    "algorithm_version": "estate_property_inventory_v1.1.0.0+object_segmentation_v1",
+    "classification_semantics_unchanged": true,
+    "crop_stats": {
+      "crop_dir": "/workspace/data/visual_index/carlswald_north_corrected_002/_imagery_cache_native15",
+      "crops_failed": 0,
+      "crops_reused": 0,
+      "crops_written": 70,
+      "parcels": 70
+    },
+    "estate_id": "carlswald_north_corrected_002",
+    "fastsam_available": true,
+    "fastsam_runs": 70,
+    "geometry_changed_vs_001": [],
+    "missing_os_or_crop": 0,
+    "newly_processed": 70,
+    "no": 68,
+    "os_json_reused_for_new": 0,
+    "parcels_reused": 330,
+    "parcels_total": 400,
+    "rescanned": 70,
+    "runtime_s": 95.453,
+    "tile_stats": {
+      "cache_dir": "/workspace/data/cache/ags_native15/carlswald_north_corrected_002",
+      "failed_ids": [],
+      "tiles_downloaded": 8,
+      "tiles_failed": 0,
+      "tiles_required": 8,
+      "tiles_reused": 0
+    },
+    "unknown": 214,
+    "yes": 118
+  },
+  "estate_id": "carlswald_north_corrected_002",
+  "frozen_001_reused": 330,
+  "imagery_profile": "native15",
+  "parcel_count": 400,
+  "scan_timestamp": "2026-08-17T08:26:44Z",
+  "schema_version": "estate_property_inventory_v1.1.0.0+object_segmentation_v1",
+  "segmentation_source": "object_segmentation_v1",
+  "stats": {
+    "changed_tiles": [],
+    "fastsam_runs": 70,
+    "no": 68,
+    "no_pct": 17.0,
+    "parcels_reclassified": 0,
+    "parcels_rescanned": 70,
+    "parcels_reused": 330,
+    "parcels_total": 400,
+    "runtime_s": 95.453,
+    "unchanged_tiles": [],
+    "unknown": 214,
+    "unknown_pct": 53.5,
+    "yes": 118,
+    "yes_pct": 29.5
+  }
+}
