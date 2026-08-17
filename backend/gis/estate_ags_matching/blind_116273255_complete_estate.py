@@ -230,18 +230,51 @@ def extract_hybrid_block(
     return block
 
 
+def scan_prior_listing_artifacts(listing_id: str) -> dict[str, Any]:
+    """Path inventory only. Does not read prior ranking/GT payloads for this listing."""
+    hits: list[str] = []
+    current_token = f"blind_{listing_id}_complete_estate"
+    roots = [REPO_ROOT / "data"]
+    for root in roots:
+        if not root.is_dir():
+            continue
+        for path in root.rglob(f"*{listing_id}*"):
+            try:
+                rel = str(path.relative_to(REPO_ROOT))
+            except ValueError:
+                continue
+            if current_token in rel:
+                continue
+            hits.append(rel)
+    hybrid_has = False
+    if HYBRID_JSON.is_file():
+        payload = json.loads(HYBRID_JSON.read_text(encoding="utf-8"))
+        hybrid_has = any(str(block.get("listing_id")) == listing_id for block in payload.get("listings") or [])
+    return {
+        "listing_id": listing_id,
+        "workspace_path_hits_excluded": hits,
+        "frozen_hybrid_json_contains_listing": hybrid_has,
+        "frozen_hybrid_json_used_as_ranking_input": False,
+        "hybrid_source": "extract_frame_geometry_frozen_hybrid_v1_fresh",
+        "excluded_from_ranking_input": True,
+    }
+
+
 def load_or_extract_hybrid_block(
     listing_id: str,
     photos: Mapping[str, bytes] | None = None,
     *,
     dest: Path | None = None,
+    ignore_frozen_hybrid_json: bool = False,
 ) -> dict[str, Any]:
-    try:
-        return load_hybrid_block(listing_id)
-    except KeyError:
-        if not photos:
-            raise
-        return extract_hybrid_block(listing_id, photos, dest=dest)
+    if not ignore_frozen_hybrid_json:
+        try:
+            return load_hybrid_block(listing_id)
+        except KeyError:
+            pass
+    if not photos:
+        raise KeyError(listing_id)
+    return extract_hybrid_block(listing_id, photos, dest=dest)
 
 
 def load_os_payload(stand: str) -> dict[str, Any]:
@@ -289,6 +322,7 @@ def acquire_listing(
     listing_id: str = LISTING_ID,
     photos_dir: Path = PHOTOS_DIR,
     html: str | None = None,
+    force_fresh_photos: bool = False,
 ) -> dict[str, Any]:
     if html is None:
         import httpx
@@ -302,7 +336,18 @@ def acquire_listing(
         listing = parse_listing_html(html, url, listing_id)
         raw_html = html
     redacted = redact_identity(raw_html)
+    photos_dir.mkdir(parents=True, exist_ok=True)
+    if force_fresh_photos:
+        for path in photos_dir.glob(f"{listing_id}-*.jpg"):
+            path.unlink()
+    existing_before = {
+        path.name
+        for path in photos_dir.glob(f"{listing_id}-*.jpg")
+        if path.is_file() and path.stat().st_size > 2000
+    }
     bodies = download_images(listing.image_urls, photos_dir, listing_id)
+    reused = sum(1 for media_id in bodies if f"{media_id}.jpg" in existing_before)
+    downloaded_fresh = len(bodies) - reused
     floor = parse_floor_size(raw_html)
     beds = parse_bed_bath(raw_html)
     hits = feature_hits(" ".join(filter(None, [listing.description, redacted])))
@@ -317,6 +362,12 @@ def acquire_listing(
         "bathrooms": beds["bathrooms"],
         "listing_photo_count": len(listing.image_urls),
         "photos_downloaded": len(bodies),
+        "photos_downloaded_fresh": downloaded_fresh,
+        "photos_reused_from_disk": reused,
+        "photos_failed": max(0, len(listing.image_urls) - len(bodies)),
+        "acquisition_fresh": reused == 0 and downloaded_fresh > 0,
+        "force_fresh_photos": force_fresh_photos,
+        "media_source": "fresh_download" if reused == 0 else "mixed_disk_reuse",
         "video_available": bool(listing.video_urls),
         "video_count": len(listing.video_urls),
         "feature_hits": hits,
@@ -499,6 +550,35 @@ def listing_fingerprint(hybrid_block: Mapping[str, Any], photo_classes: Mapping[
             }.items()
             if not ok
         ],
+        "signal_classes": {
+            "measured": [
+                key
+                for key, ok in {
+                    "pool_geometry": bool(evidence.get("fingerprint") and evidence["fingerprint"].present),
+                    "listing_exterior": bool(photo_classes.get("exterior_photo_count")),
+                    "driveway_views": bool(photo_classes.get("driveway_photo_count")),
+                    "garden_views": bool(photo_classes.get("garden_photo_count")),
+                    "hybrid_scoring_ready": bool(evidence.get("scoring_ready_ids")),
+                }.items()
+                if ok
+            ],
+            "unavailable": [
+                "pool_to_house_spatial",
+                "nadir_relative_area",
+                "roof_footprint_as_scoring_term",
+                "driveway_as_scoring_v2_spatial",
+            ]
+            + (
+                []
+                if (photo_classes.get("scene_counts") or {}).get("aerial")
+                else ["listing_aerial"]
+            ),
+            "neutral_default_in_ranking_not_fingerprint": [
+                "spatial_v2=0.5_when_hybrid_omits_pool_house",
+                "aerial=0.5_when_no_listing_aerial",
+                "gis=0.5_constant",
+            ],
+        },
     }
     return {
         "hybrid_evidence": {
@@ -709,15 +789,8 @@ def _neutral_components(row: Mapping[str, Any]) -> list[str]:
     return notes
 
 
-def ranking_separation(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
-    ordered = sorted(rows, key=lambda row: int(row["hybrid_v2_rank"]))
-    if len(ordered) < 2:
-        return {"n": len(ordered)}
-    s1 = float(ordered[0]["hybrid_v2"])
-    s2 = float(ordered[1]["hybrid_v2"])
-    s5 = float(ordered[min(4, len(ordered) - 1)]["hybrid_v2"])
-    top1 = ordered[0]
-    contrib = dict(top1.get("hybrid_v2_contrib") or {})
+def _contrib_split(row: Mapping[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    contrib = dict(row.get("hybrid_v2_contrib") or row.get("contrib") or {})
     weights = dict(V2_WEIGHTS_NO_BUILDING)
     genuine = []
     padding = []
@@ -731,18 +804,60 @@ def ranking_separation(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
         else:
             genuine.append({"term": key, "contrib": value, "weight": weight})
     genuine.sort(key=lambda item: -float(item["contrib"]))
+    return genuine, padding
+
+
+def ranking_separation(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+    ordered = sorted(rows, key=lambda row: int(row.get("hybrid_v2_rank") or row.get("rank") or 0))
+    if len(ordered) < 2:
+        return {"n": len(ordered)}
+
+    def _score(row: Mapping[str, Any]) -> float:
+        return float(row["hybrid_v2"] if "hybrid_v2" in row else row["score"])
+
+    s1 = _score(ordered[0])
+    s2 = _score(ordered[1])
+    s5 = _score(ordered[min(4, len(ordered) - 1)])
+    s10 = _score(ordered[min(9, len(ordered) - 1)])
+    s20 = _score(ordered[min(19, len(ordered) - 1)])
+    top1 = ordered[0]
+    genuine, padding = _contrib_split(top1)
+    padding_sum = round(sum(float(item["contrib"]) for item in padding), 4)
+    genuine_sum = round(sum(float(item["contrib"]) for item in genuine), 4)
+    top5 = []
+    for row in ordered[:5]:
+        g, p = _contrib_split(row)
+        top5.append(
+            {
+                "rank": row.get("hybrid_v2_rank") or row.get("rank"),
+                "stand_number": row.get("stand_number"),
+                "score": _score(row),
+                "genuine_drivers": g,
+                "neutral_padding": p,
+                "genuine_sum": round(sum(float(item["contrib"]) for item in g), 4),
+                "neutral_sum": round(sum(float(item["contrib"]) for item in p), 4),
+            }
+        )
     return {
         "top1_score": s1,
         "top2_score": s2,
         "top5_score": s5,
+        "top10_score": s10,
+        "top20_score": s20,
         "top5_score_range": [s5, s1],
         "gap_1_2": round(s1 - s2, 4),
         "gap_1_5": round(s1 - s5, 4),
+        "gap_1_10": round(s1 - s10, 4),
+        "gap_1_20": round(s1 - s20, 4),
         "top1_stand": top1.get("stand_number"),
         "top1_genuine_drivers": genuine,
         "top1_neutral_padding": padding,
+        "top1_genuine_sum": genuine_sum,
+        "top1_neutral_padding_sum": padding_sum,
+        "top1_padding_share_of_score": None if not s1 else round(padding_sum / s1, 4),
         "top1_neutral_notes": _neutral_components(top1),
-        "weights": weights,
+        "top5_composition": top5,
+        "weights": dict(V2_WEIGHTS_NO_BUILDING),
     }
 
 
@@ -770,6 +885,7 @@ def freeze_payload(
     crop_stats: Mapping[str, Any],
     listing_id: str = LISTING_ID,
     experiment: str | None = None,
+    prior_artifacts: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     acq = {
         key: val
@@ -785,6 +901,7 @@ def freeze_payload(
             "interior_photo_count": photo_classes.get("interior_photo_count"),
             "useful_driveway_garage_views": photo_classes.get("useful_driveway_garage_views"),
             "useful_garden_patio_views": photo_classes.get("useful_garden_patio_views"),
+            "useful_pool_views": photo_classes.get("useful_pool_views"),
             "scene_counts": photo_classes.get("scene_counts"),
         }
     )
@@ -843,9 +960,9 @@ def freeze_payload(
             "gis_sha256": sha256_file(FROZEN_001_GIS) if FROZEN_001_GIS.is_file() else None,
             "inventory_sha256": sha256_file(FROZEN_001_INVENTORY) if FROZEN_001_INVENTORY.is_file() else None,
         },
+        "prior_listing_artifacts": prior_artifacts or scan_prior_listing_artifacts(listing_id),
+        "on_disk_sha256_recorded_in": "freeze.sha256",
     }
-    digest = sha256_text(canonical_dumps(body))
-    body["sha256"] = digest
     return body
 
 
@@ -856,7 +973,17 @@ def write_freeze(
     all_candidates: Path | None = None,
 ) -> str:
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    body = {key: val for key, val in payload.items() if key != "sha256"}
+    dest.write_text(json.dumps(body, indent=2) + "\n", encoding="utf-8")
+    digest = sha256_file(dest)
+    recorded_path = dest.parent / "freeze.sha256"
+    recorded_path.write_text(digest + "\n", encoding="utf-8")
+    on_disk = sha256_file(dest)
+    recorded = recorded_path.read_text(encoding="utf-8").strip()
+    if on_disk != digest or recorded != on_disk:
+        raise RuntimeError(
+            f"freeze hash mismatch on_disk={on_disk} computed={digest} recorded={recorded}"
+        )
     slim = []
     for row in sorted(rows, key=lambda item: int(item["hybrid_v2_rank"])):
         slim.append(
@@ -883,8 +1010,10 @@ def write_freeze(
         json.dumps({"n": len(slim), "rows": slim}, indent=2) + "\n",
         encoding="utf-8",
     )
-    (dest.parent / "freeze.sha256").write_text(str(payload["sha256"]) + "\n", encoding="utf-8")
-    return str(payload["sha256"])
+    (dest.parent / "freeze.sha256").write_text(digest + "\n", encoding="utf-8")
+    if sha256_file(dest) != digest:
+        raise RuntimeError("freeze.json changed after hash recording")
+    return digest
 
 
 def _listing_strip(photos: Mapping[str, bytes], media_ids: Sequence[str], fallback_scenes: Mapping[str, str], wanted: Sequence[str]) -> Image.Image:
@@ -1025,25 +1154,34 @@ def run_freeze(
     listing_url: str = LISTING_URL,
     out_dir: Path | None = None,
     write_panels: bool = True,
+    force_fresh_photos: bool = False,
+    ignore_frozen_hybrid_json: bool = False,
 ) -> dict[str, Any]:
     started = time.time()
     dest = Path(out_dir) if out_dir is not None else REPO_ROOT / "data/investigations" / f"blind_{listing_id}_complete_estate"
     photos_dir = dest / "photos"
     freeze_path = dest / "freeze.json"
     dest.mkdir(parents=True, exist_ok=True)
+    prior_artifacts = scan_prior_listing_artifacts(listing_id)
     dataset = load_gis_002()
     parcels = pass1_parcels(dataset)
     inventory = load_inventory_002()
     if len(parcels) != 400:
         raise RuntimeError(f"expected 400 unique erven, got {len(parcels)}")
 
-    acquisition = acquire_listing(url=listing_url, listing_id=listing_id, photos_dir=photos_dir)
+    acquisition = acquire_listing(
+        url=listing_url,
+        listing_id=listing_id,
+        photos_dir=photos_dir,
+        force_fresh_photos=force_fresh_photos,
+    )
     photos = acquisition["photos"]
     photo_classes = classify_listing_photos(photos)
     hybrid_block = load_or_extract_hybrid_block(
         listing_id,
         photos,
         dest=dest / "hybrid_block.json",
+        ignore_frozen_hybrid_json=ignore_frozen_hybrid_json or bool(prior_artifacts.get("frozen_hybrid_json_contains_listing")),
     )
     object_obs = observe_pool_media(photos, photo_classes["scenes"]) if observe_objects else None
     listing_pool = classify_listing_pool_status(acquisition, hybrid_block, photo_classes, object_obs)
@@ -1086,9 +1224,12 @@ def run_freeze(
         rows=rows,
         crop_stats=crop_stats,
         listing_id=listing_id,
+        prior_artifacts=prior_artifacts,
     )
     marker_runtime = round(time.time() - started, 2)
     digest = write_freeze(payload, rows, dest=freeze_path)
+    if sha256_file(freeze_path) != digest:
+        raise RuntimeError("on-disk freeze.json hash does not match recorded SHA256")
     panels = []
     if write_panels:
         panels = draw_top5_panels(rows, photos, photo_classes, dataset, dest=dest / "panels")
@@ -1560,6 +1701,71 @@ def compare_repeat_candidates(
     }
 
 
+BLIND_COMPLETE_ESTATE_FREEZES = [
+    REPO_ROOT / "data/investigations/blind_116273255_complete_estate/freeze.json",
+    REPO_ROOT / "data/investigations/blind_116223230_complete_estate/freeze.json",
+    REPO_ROOT / "data/investigations/blind_116778622_complete_estate/freeze.json",
+]
+
+
+def compare_three_complete_estate_blinds(
+    current_top20: Sequence[Mapping[str, Any]],
+    current_listing_id: str,
+) -> dict[str, Any]:
+    current_ids = [str(row.get("stand_number")) for row in current_top20]
+    sets_top5: dict[str, list[str]] = {current_listing_id: current_ids[:5]}
+    sets_top20: dict[str, list[str]] = {current_listing_id: current_ids[:20]}
+    pairwise = {}
+    for path in BLIND_COMPLETE_ESTATE_FREEZES:
+        if not path.is_file():
+            continue
+        previous = json.loads(path.read_text(encoding="utf-8"))
+        lid = str(previous.get("listing_id") or "")
+        if lid == current_listing_id:
+            continue
+        pairwise[lid] = compare_repeat_candidates(current_top20, path)
+        prev_rows = (previous.get("ranking") or {}).get("top20") or []
+        prev_ids = [str(row.get("stand_number")) for row in prev_rows]
+        sets_top5[lid] = prev_ids[:5]
+        sets_top20[lid] = prev_ids[:20]
+    from collections import Counter
+
+    top20_counts = Counter()
+    top5_counts = Counter()
+    for stands in sets_top20.values():
+        top20_counts.update(stands)
+    for stands in sets_top5.values():
+        top5_counts.update(stands)
+    repeated_top20 = {stand: count for stand, count in top20_counts.items() if count >= 2}
+    repeated_top5 = {stand: count for stand, count in top5_counts.items() if count >= 2}
+    all_top5 = [set(v) for v in sets_top5.values()]
+    intersection_top5_all = sorted(set.intersection(*all_top5)) if len(all_top5) >= 3 else []
+    watch = {
+        "334_family": {
+            lid: [i + 1 for i, stand in enumerate(ids) if str(stand).replace("RE/", "").replace("1/", "") == "334"]
+            for lid, ids in sets_top20.items()
+        },
+        "373_family": {
+            lid: [i + 1 for i, stand in enumerate(ids) if str(stand).replace("RE/", "").replace("1/", "") == "373"]
+            for lid, ids in sets_top20.items()
+        },
+    }
+    bias = bool(repeated_top5) or any(item.get("possible_candidate_ranking_bias") for item in pairwise.values())
+    return {
+        "listings": sorted(sets_top20.keys()),
+        "pairwise": pairwise,
+        "top5_by_listing": sets_top5,
+        "top20_by_listing": {lid: ids[:20] for lid, ids in sets_top20.items()},
+        "intersection_top5_all_three": intersection_top5_all,
+        "repeated_top5_stands": repeated_top5,
+        "repeated_top20_stands": repeated_top20,
+        "watch_families": watch,
+        "possible_candidate_ranking_bias": bias,
+        "listing_specific": not bool(intersection_top5_all),
+        "note": "Listing-specificity is not proof of accuracy. Repeated high ranks across unrelated listings are a bias flag.",
+    }
+
+
 def run_after_freeze(
     *,
     listing_id: str = LISTING_ID,
@@ -1601,6 +1807,7 @@ def run_after_freeze(
     comparison = None
     if previous_path is not None:
         comparison = compare_repeat_candidates((freeze.get("ranking") or {}).get("top20") or [], Path(previous_path))
+    three_way = compare_three_complete_estate_blinds((freeze.get("ranking") or {}).get("top20") or [], listing_id)
     marker = json.loads((dest / "rankings_frozen.json").read_text(encoding="utf-8"))
     report_path = dest / "REPORT.md"
     handwritten = None
@@ -1613,10 +1820,16 @@ def run_after_freeze(
         report_path.write_text((dest / "REPORT.auto.md").read_text(encoding="utf-8"), encoding="utf-8")
     (dest / "evaluation.json").write_text(
         json.dumps(
-            {"ground_truth": gt, "evaluation": evaluation, "detector": detector, "comparison_vs_116273255": comparison},
+            {
+                "ground_truth": gt,
+                "evaluation": evaluation,
+                "detector": detector,
+                "comparison_vs_116273255": comparison,
+                "comparison_three_blind_tests": three_way,
+            },
             indent=2,
         )
         + "\n",
         encoding="utf-8",
     )
-    return {"ground_truth": gt, "evaluation": evaluation, "detector": detector, "comparison": comparison}
+    return {"ground_truth": gt, "evaluation": evaluation, "detector": detector, "comparison": comparison, "comparison_three": three_way}
