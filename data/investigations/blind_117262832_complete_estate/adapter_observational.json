@@ -1,0 +1,91 @@
+{
+  "frames": [
+    {
+      "media_id": "117262832-003",
+      "source": "fastsam_fallback",
+      "source_label": "FastSAM fallback",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    },
+    {
+      "media_id": "117262832-004",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117262832-005",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117262832-006",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117262832-007",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117262832-008",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117262832-014",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117262832-017",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117262832-037",
+      "source": "yoloe_sam2",
+      "source_label": "YOLOE/SAM2",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    },
+    {
+      "media_id": "117262832-038",
+      "source": "yoloe_sam2",
+      "source_label": "YOLOE/SAM2",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    },
+    {
+      "media_id": "117262832-039",
+      "source": "fastsam_fallback",
+      "source_label": "FastSAM fallback",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    }
+  ],
+  "scoring_ready_ids": [
+    "117262832-003",
+    "117262832-037",
+    "117262832-038",
+    "117262832-039"
+  ],
+  "chosen_id": "117262832-039",
+  "chosen_source": "fastsam_fallback",
+  "fastsam_used": true,
+  "n_scoring_ready_accepted": 4
+}
