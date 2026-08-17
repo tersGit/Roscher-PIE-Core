@@ -598,6 +598,299 @@ def listing_fingerprint(hybrid_block: Mapping[str, Any], photo_classes: Mapping[
     }
 
 
+WATCH_REPEAT_STANDS = ("605", "444", "573", "446", "401")
+SIMILAR_SHAPE_V2 = 0.80
+WEAK_SHAPE_V2 = 0.60
+
+
+def _relative_limb_lengths(norm_xy: Sequence[Sequence[float]] | None) -> dict[str, Any] | None:
+    if not norm_xy:
+        return None
+    pts = np.asarray(norm_xy, dtype=np.float64)
+    if pts.ndim != 2 or len(pts) < 5:
+        return None
+    plus_x = float(max(pts[:, 0].max(), 0.0))
+    minus_x = float(max(-pts[:, 0].min(), 0.0))
+    plus_y = float(max(pts[:, 1].max(), 0.0))
+    minus_y = float(max(-pts[:, 1].min(), 0.0))
+    arms = {
+        "plus_x": round(plus_x, 4),
+        "minus_x": round(minus_x, 4),
+        "plus_y": round(plus_y, 4),
+        "minus_y": round(minus_y, 4),
+    }
+    ordered = sorted(arms.values(), reverse=True)
+    longest = ordered[0] or 1e-6
+    return {
+        "extents": arms,
+        "longest_to_second": round(ordered[0] / max(ordered[1], 1e-6), 3),
+        "relative_to_longest": {key: round(val / longest, 3) for key, val in arms.items()},
+    }
+
+
+def _n_major_directional_changes(norm_xy: Sequence[Sequence[float]] | None, threshold_deg: float = 40.0) -> int:
+    if not norm_xy:
+        return 0
+    pts = np.asarray(norm_xy, dtype=np.float64)
+    if pts.ndim != 2 or len(pts) < 5:
+        return 0
+    prev = np.roll(pts, 1, axis=0)
+    nxt = np.roll(pts, -1, axis=0)
+    v1 = pts - prev
+    v2 = nxt - pts
+    ang1 = np.arctan2(v1[:, 1], v1[:, 0])
+    ang2 = np.arctan2(v2[:, 1], v2[:, 0])
+    turn = (ang2 - ang1 + math.pi) % (2.0 * math.pi) - math.pi
+    return int(np.sum(np.abs(turn) > math.radians(threshold_deg)))
+
+
+def _planform_characteristics(desc: Mapping[str, Any] | None, geom: Mapping[str, Any] | None) -> dict[str, Any]:
+    desc = dict(desc or {})
+    geom = dict(geom or {})
+    n_indents = int(desc.get("n_major_indents") or geom.get("n_major_indents") or 0)
+    solidity = float(desc.get("solidity") or geom.get("solidity") or 1.0)
+    elongation = float(desc.get("elongation") or geom.get("aspect_ratio") or 1.0)
+    circularity = float(desc.get("circularity") or 0.0)
+    compactness = float(geom.get("compactness") or circularity)
+    labels = []
+    if n_indents >= 2 and solidity < 0.88:
+        labels.append("T_or_multi_indent")
+    if n_indents == 1 and solidity < 0.90 and elongation < 3.8:
+        labels.append("L_or_indented")
+    if elongation >= 2.2 and solidity >= 0.85:
+        labels.append("elongated")
+    if circularity >= 0.55 and solidity >= 0.90:
+        labels.append("compact_rounded")
+    if compactness >= 0.55 and solidity < 0.90 and n_indents == 0:
+        labels.append("kidney_or_curved")
+    if solidity < 0.86 or (n_indents >= 1 and circularity < 0.45):
+        labels.append("freeform")
+    if not labels:
+        labels.append("simple")
+    return {
+        "labels": labels,
+        "primary": labels[0],
+        "l_shaped": "L_or_indented" in labels,
+        "t_shaped": "T_or_multi_indent" in labels,
+        "kidney": "kidney_or_curved" in labels,
+        "freeform": "freeform" in labels,
+        "elongated": "elongated" in labels,
+    }
+
+
+def distinctive_pool_fingerprint(fingerprint: Mapping[str, Any]) -> dict[str, Any]:
+    """Reporting-only distinctive pool contour metrics. Not a ranking input change."""
+    evidence = fingerprint.get("hybrid_evidence") or {}
+    qualitative = fingerprint.get("qualitative") or {}
+    listing_shape = fingerprint.get("listing_shape_obj") or {}
+    chosen = (fingerprint.get("evidence_obj") or {}).get("chosen_frame") or {}
+    geom = ((chosen.get("dominant") or {}).get("geometry") or {})
+    fp = evidence.get("fingerprint") or {}
+    norm_xy = list(listing_shape.get("norm_xy") or [])
+    n_changes = _n_major_directional_changes(norm_xy)
+    limbs = _relative_limb_lengths(norm_xy)
+    planform = _planform_characteristics(listing_shape, geom)
+    convexity = listing_shape.get("solidity")
+    if convexity is None:
+        convexity = geom.get("solidity") or fp.get("convexity")
+    return {
+        "present": bool(fp.get("present") and listing_shape),
+        "shape_class": fp.get("shape_class") or "unknown",
+        "aspect_ratio": listing_shape.get("elongation") or geom.get("aspect_ratio") or fp.get("aspect_ratio"),
+        "hybrid_aspect_ratio": geom.get("aspect_ratio"),
+        "major_bends_indents": listing_shape.get("n_major_indents"),
+        "max_indent": listing_shape.get("max_indent"),
+        "solidity": listing_shape.get("solidity"),
+        "convexity": convexity,
+        "concavity": listing_shape.get("n_major_indents"),
+        "circularity": listing_shape.get("circularity"),
+        "compactness": geom.get("compactness") or fp.get("compactness"),
+        "orientation_deg_oblique_image": geom.get("orientation_deg"),
+        "orientation_note": "hybrid_image_orientation_is_oblique_not_nadir_estate_bearing",
+        "n_corners": listing_shape.get("n_corners"),
+        "n_major_directional_changes": n_changes,
+        "sharp_frac": listing_shape.get("sharp_frac"),
+        "turn_std": listing_shape.get("turn_std"),
+        "radial_cv": listing_shape.get("radial_cv"),
+        "symmetry": listing_shape.get("symmetry"),
+        "relative_limb_lengths": limbs,
+        "l_t_kidney_freeform": planform,
+        "normalized_contour": [[round(float(x), 4), round(float(y), 4)] for x, y in norm_xy],
+        "normalized_contour_point_count": len(norm_xy),
+        "pool_to_house_relationship": "not_genuinely_measurable_in_frozen_hybrid_v1",
+        "chosen_id": qualitative.get("hybrid_chosen_id") or evidence.get("chosen_id"),
+        "chosen_source": qualitative.get("hybrid_chosen_source") or evidence.get("chosen_source"),
+        "chosen_viewpoint": qualitative.get("hybrid_chosen_viewpoint") or evidence.get("chosen_viewpoint"),
+        "colour_used": False,
+        "used_as_ranking_input_change": False,
+        "metrics_source": "frozen_hybrid_v1_chosen_frame_plus_scoring_v2_contour_descriptors",
+    }
+
+
+def shape_discrimination(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+    """Does shape_v2 isolate a small subset, or only re-cluster YES-pool stands?"""
+    ordered = sorted(rows, key=lambda row: int(row.get("hybrid_v2_rank") or row.get("rank") or 0))[:20]
+    scores = []
+    for row in ordered:
+        raw = row.get("hybrid_v2_shape_v2")
+        if raw is None:
+            raw = row.get("shape_v2")
+        scores.append(None if raw is None else float(raw))
+    measured = [val for val in scores if val is not None]
+    top1_shape = scores[0] if scores else None
+    top2_shape = scores[1] if len(scores) > 1 else None
+    top5_measured = [val for val in scores[:5] if val is not None]
+    similar = [
+        {
+            "rank": row.get("hybrid_v2_rank") or row.get("rank"),
+            "stand_number": row.get("stand_number"),
+            "shape_v2": score,
+        }
+        for row, score in zip(ordered, scores)
+        if score is not None and score >= SIMILAR_SHAPE_V2
+    ]
+    weak_high = [
+        {
+            "rank": row.get("hybrid_v2_rank") or row.get("rank"),
+            "stand_number": row.get("stand_number"),
+            "shape_v2": score,
+            "final_score": row.get("hybrid_v2") if "hybrid_v2" in row else row.get("score"),
+        }
+        for row, score in zip(ordered, scores)
+        if int(row.get("hybrid_v2_rank") or row.get("rank") or 99) <= 10
+        and (score is None or score < WEAK_SHAPE_V2)
+    ]
+    spread_top5 = None
+    if len(top5_measured) >= 2:
+        spread_top5 = round(max(top5_measured) - min(top5_measured), 4)
+    gap_1_2 = None
+    if top1_shape is not None and top2_shape is not None:
+        gap_1_2 = round(top1_shape - top2_shape, 4)
+    n_similar = len(similar)
+    if not measured:
+        mode = "NO_SHAPE_SIGNAL"
+    elif n_similar <= 3 and (spread_top5 or 0) >= 0.04 and (gap_1_2 or 0) >= 0.02:
+        mode = "SMALL_SUBSET"
+    elif n_similar >= 8 or (spread_top5 is not None and spread_top5 < 0.03):
+        mode = "BROAD_CLUSTER"
+    else:
+        mode = "PARTIAL_SEPARATION"
+    per_candidate = []
+    for row, score in zip(ordered, scores):
+        per_candidate.append(
+            {
+                "rank": row.get("hybrid_v2_rank") or row.get("rank"),
+                "stand_number": row.get("stand_number"),
+                "shape_v2": None if score is None else round(score, 4),
+                "final_score": row.get("hybrid_v2") if "hybrid_v2" in row else row.get("score"),
+                "inventory_pool_status": row.get("inventory_pool_status"),
+                "similar_geometry": bool(score is not None and score >= SIMILAR_SHAPE_V2),
+                "weak_geometry": score is None or score < WEAK_SHAPE_V2,
+            }
+        )
+    return {
+        "listing_vs_top20_shape_v2": per_candidate,
+        "top1_shape_v2": None if top1_shape is None else round(top1_shape, 4),
+        "top2_shape_v2": None if top2_shape is None else round(top2_shape, 4),
+        "top1_top2_shape_gap": gap_1_2,
+        "top1_top5_shape_spread": spread_top5,
+        "n_genuinely_similar_geometry": n_similar,
+        "similar_stands": similar,
+        "n_high_rank_despite_weak_geometry": len(weak_high),
+        "high_rank_weak_geometry": weak_high,
+        "discrimination_mode": mode,
+        "similar_threshold": SIMILAR_SHAPE_V2,
+        "weak_threshold": WEAK_SHAPE_V2,
+        "note": "Reporting only. Thresholds do not change Scoring v2.",
+    }
+
+
+def _draw_normalized_contour(
+    norm_xy: Sequence[Sequence[float]] | None,
+    *,
+    size: int = 280,
+    outline: tuple[int, int, int] = (80, 220, 255),
+    title: str = "",
+) -> Image.Image:
+    canvas = Image.new("RGB", (size, size), (16, 16, 16))
+    draw = ImageDraw.Draw(canvas)
+    draw.rectangle((8, 8, size - 9, size - 9), outline=(50, 50, 50))
+    if title:
+        draw.text((12, 10), title, fill=(220, 220, 220), font=_font(13))
+    if not norm_xy or len(norm_xy) < 3:
+        draw.text((20, size // 2), "no contour", fill=(160, 160, 160), font=_font(14))
+        return canvas
+    pts = np.asarray(norm_xy, dtype=np.float64)
+    margin = 28
+    usable = size - 2 * margin
+    xy = (pts + 1.05) / 2.10 * usable + margin
+    poly = [(int(x), int(y)) for x, y in xy]
+    draw.polygon(poly, outline=outline)
+    cx, cy = float(xy[:, 0].mean()), float(xy[:, 1].mean())
+    draw.ellipse((cx - 3, cy - 3, cx + 3, cy + 3), fill=outline)
+    return canvas
+
+
+def _overlay_norm_contour_on_image(
+    image: Image.Image,
+    contour: Sequence[Sequence[float]] | None,
+    *,
+    outline: tuple[int, int, int] = (80, 220, 255),
+) -> Image.Image:
+    out = image.convert("RGB")
+    if not contour or len(contour) < 3:
+        return out
+    draw = ImageDraw.Draw(out)
+    width, height = out.size
+    pts = []
+    arr = np.asarray(contour, dtype=np.float64)
+    if float(np.nanmax(np.abs(arr))) <= 1.5:
+        pts = [(int(float(x) * (width - 1)), int(float(y) * (height - 1))) for x, y in arr]
+    else:
+        pts = [(int(x), int(y)) for x, y in arr]
+    if len(pts) >= 3:
+        draw.line(pts + [pts[0]], fill=outline, width=3)
+    return out
+
+
+def draw_listing_contour_proof(
+    fingerprint: Mapping[str, Any],
+    photos: Mapping[str, bytes],
+    dest: Path,
+) -> str | None:
+    distinctive = fingerprint.get("distinctive") or distinctive_pool_fingerprint(fingerprint)
+    chosen_id = distinctive.get("chosen_id")
+    listing_shape = fingerprint.get("listing_shape_obj") or {}
+    chosen = (fingerprint.get("evidence_obj") or {}).get("chosen_frame") or {}
+    contour_image = (chosen.get("dominant") or {}).get("contour_image") or chosen.get("contour_image")
+    photo = None
+    if chosen_id and chosen_id in photos:
+        photo = Image.open(io.BytesIO(photos[chosen_id])).convert("RGB")
+        photo.thumbnail((480, 360))
+        photo = _overlay_norm_contour_on_image(photo, contour_image)
+    else:
+        photo = Image.new("RGB", (480, 360), (24, 24, 24))
+        ImageDraw.Draw(photo).text((20, 160), "chosen frame photo missing", fill=(180, 180, 180), font=_font(16))
+    norm = _draw_normalized_contour(
+        distinctive.get("normalized_contour") or listing_shape.get("norm_xy"),
+        title="listing normalized contour",
+    )
+    gap = 12
+    width = photo.size[0] + norm.size[0] + 36
+    height = max(photo.size[1], norm.size[1]) + 48
+    canvas = Image.new("RGB", (width, height), (10, 10, 10))
+    draw = ImageDraw.Draw(canvas)
+    draw.text((12, 8), "Listing pool contour proof (not used to rerank)", fill=(240, 240, 240), font=_font(16))
+    canvas.paste(photo, (12, 36))
+    canvas.paste(norm, (24 + photo.size[0], 36))
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    canvas.save(dest, quality=90)
+    try:
+        return str(dest.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(dest)
+
+
 def ensure_native15_crops(dataset: Mapping[str, Any], parcels: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
     tiles = download_tiles_for_parcels(
         estate_id=DATASET_ID,
@@ -906,6 +1199,7 @@ def freeze_payload(
         }
     )
     ranked = sorted(rows, key=lambda row: int(row["hybrid_v2_rank"]))
+    distinctive = fingerprint.get("distinctive") or distinctive_pool_fingerprint(fingerprint)
     body = {
         "experiment": experiment or f"blind_{listing_id}_complete_estate",
         "dataset_id": DATASET_ID,
@@ -930,11 +1224,14 @@ def freeze_payload(
         "listing_fingerprint": {
             "hybrid_evidence": fingerprint["hybrid_evidence"],
             "qualitative": fingerprint["qualitative"],
+            "distinctive_pool": distinctive,
         },
+        "pool_contour_metrics": distinctive,
         "crop_stats": crop_stats,
         "ranking": {
             "n_candidates": len(ranked),
             "separation": ranking_separation(ranked),
+            "shape_discrimination": shape_discrimination(ranked),
             "top20": top_n(ranked, 20),
             "top10": top_n(ranked, 10),
             "top5": top_n(ranked, 5),
@@ -1094,6 +1391,7 @@ def draw_top5_panels(
     photo_classes: Mapping[str, Any],
     dataset: Mapping[str, Any],
     dest: Path = PANELS_DIR,
+    fingerprint: Mapping[str, Any] | None = None,
 ) -> list[str]:
     dest.mkdir(parents=True, exist_ok=True)
     by_stand = {str(item["stand_number"]): item for item in pass1_parcels(dataset)}
@@ -1101,6 +1399,16 @@ def draw_top5_panels(
     pool_ids = list(photo_classes.get("useful_pool_views") or [])
     ext_ids = list(photo_classes.get("useful_exterior_views") or [])
     drive_ids = list(photo_classes.get("useful_driveway_garage_views") or [])
+    distinctive = {} if fingerprint is None else (fingerprint.get("distinctive") or distinctive_pool_fingerprint(fingerprint))
+    listing_norm = distinctive.get("normalized_contour")
+    chosen = {} if fingerprint is None else ((fingerprint.get("evidence_obj") or {}).get("chosen_frame") or {})
+    listing_contour_image = (chosen.get("dominant") or {}).get("contour_image") or chosen.get("contour_image")
+    chosen_id = distinctive.get("chosen_id")
+    listing_photo = None
+    if chosen_id and chosen_id in photos:
+        listing_photo = Image.open(io.BytesIO(photos[chosen_id])).convert("RGB")
+        listing_photo.thumbnail((360, 260))
+        listing_photo = _overlay_norm_contour_on_image(listing_photo, listing_contour_image)
     written = []
     ordered = sorted(rows, key=lambda row: int(row["hybrid_v2_rank"]))[:5]
     for row in ordered:
@@ -1127,15 +1435,51 @@ def draw_top5_panels(
         )
         listing = _listing_strip(photos, pool_ids + ext_ids + drive_ids, scenes, ["pool_garden", "rear_elevation", "driveway_access", "front_elevation"])
         geometry = _pool_house_overlay(raw, seg, parcel)
+        cand_desc = None
+        pool = seg.get("pool") or {}
+        if pool.get("contour"):
+            from backend.gis.estate_ags_matching.os_scoring_v2 import contour_descriptors
+
+            cand_desc = contour_descriptors(pool.get("contour") or (pool.get("geometry") or {}).get("contour_image"))
+        listing_norm_img = _draw_normalized_contour(listing_norm, title="listing contour")
+        cand_norm_img = _draw_normalized_contour(
+            None if cand_desc is None else cand_desc.get("norm_xy"),
+            outline=(255, 200, 80),
+            title=f"candidate {stand} contour",
+        )
+        raw_thumb = raw.copy()
+        raw_thumb.thumbnail((280, 220))
+        gis_mask = geometry.copy()
+        gis_mask.thumbnail((280, 220))
+        shape_cell = Image.new("RGB", (280, 220), (18, 18, 18))
+        sdraw = ImageDraw.Draw(shape_cell)
+        sdraw.text((12, 16), f"shape_v2={row.get('hybrid_v2_shape_v2')}", fill=(240, 240, 240), font=_font(16))
+        sdraw.text((12, 48), f"hybrid_v2={row.get('hybrid_v2')}", fill=(200, 200, 200), font=_font(14))
+        sdraw.text((12, 76), f"inventory={row.get('inventory_pool_status')}", fill=(200, 200, 200), font=_font(14))
+        sdraw.text((12, 104), f"OS pool={row.get('os_pool_status')}", fill=(200, 200, 200), font=_font(14))
+        sdraw.text((12, 140), "Do not rerank from this panel.", fill=(160, 160, 160), font=_font(13))
+        contour_row_imgs = [listing_photo or listing_norm_img, listing_norm_img, raw_thumb, gis_mask, cand_norm_img, shape_cell]
+        labels = ["listing pool+contour", "listing normalized", "raw native15", "GIS+OS masks", "candidate normalized", "shape similarity"]
         gap = 12
-        width = max(listing.size[0], analysis.size[0], geometry.size[0]) + 24
-        height = listing.size[1] + analysis.size[1] + geometry.size[1] + 80
+        row_w = sum(img.size[0] for img in contour_row_imgs) + gap * (len(contour_row_imgs) + 1)
+        row_h = max(img.size[1] for img in contour_row_imgs) + 28
+        contour_row = Image.new("RGB", (row_w, row_h), (14, 14, 14))
+        cdraw = ImageDraw.Draw(contour_row)
+        x = gap
+        for label, img in zip(labels, contour_row_imgs):
+            cdraw.text((x, 2), label, fill=(210, 210, 210), font=_font(12))
+            contour_row.paste(img, (x, 20))
+            x += img.size[0] + gap
+        width = max(listing.size[0], analysis.size[0], geometry.size[0], contour_row.size[0]) + 24
+        height = listing.size[1] + contour_row.size[1] + analysis.size[1] + geometry.size[1] + 110
         canvas = Image.new("RGB", (width, height), (12, 12, 12))
         draw = ImageDraw.Draw(canvas)
         draw.text((12, 8), f"Top-{row['hybrid_v2_rank']} proof  {stand}  hybrid_v2={row['hybrid_v2']}", fill=(240, 240, 240), font=_font(18))
         y = 36
         canvas.paste(listing, (12, y))
         y += listing.size[1] + gap
+        canvas.paste(contour_row, (12, y))
+        y += contour_row.size[1] + gap
         canvas.paste(analysis, (12, y))
         y += analysis.size[1] + gap
         draw.text((12, y), "Pool-to-house / driveway / building overlay on raw native15", fill=(210, 210, 210), font=_font(14))
@@ -1206,6 +1550,7 @@ def run_freeze(
     gate = apply_listing_pool_gate(candidates, inventory, listing_pool["listing_pool_status"])
     crop_stats = ensure_native15_crops(dataset, parcels)
     fingerprint = listing_fingerprint(hybrid_block, photo_classes)
+    fingerprint["distinctive"] = distinctive_pool_fingerprint(fingerprint)
     listing_vecs = clip_listing_vectors(photos, photo_classes["scenes"])
     clip_sims = clip_candidate_similarities(gate.survivors, listing_vecs)
     rows = rank_survivors(
@@ -1215,6 +1560,13 @@ def run_freeze(
         listing_erf_sqm=acquisition.get("erf_size_sqm"),
         clip_sims=clip_sims,
     )
+    contour_proof = draw_listing_contour_proof(
+        fingerprint,
+        photos,
+        dest=dest / "listing_pool_contour_proof.png",
+    )
+    if contour_proof:
+        fingerprint["distinctive"]["contour_proof_path"] = contour_proof
     payload = freeze_payload(
         acquisition=acquisition,
         photo_classes=photo_classes,
@@ -1232,7 +1584,14 @@ def run_freeze(
         raise RuntimeError("on-disk freeze.json hash does not match recorded SHA256")
     panels = []
     if write_panels:
-        panels = draw_top5_panels(rows, photos, photo_classes, dataset, dest=dest / "panels")
+        panels = draw_top5_panels(
+            rows,
+            photos,
+            photo_classes,
+            dataset,
+            dest=dest / "panels",
+            fingerprint=fingerprint,
+        )
     marker = {
         "freeze_path": str(freeze_path.relative_to(REPO_ROOT)),
         "sha256": digest,
@@ -1408,7 +1767,8 @@ def confirm_ground_truth(html: str, dataset: Mapping[str, Any], inventory: Seque
         }
         evidence.append({"type": "gis_inventory_presence", "visual": visual})
     if confirmed is None:
-        confidence = "LOW"
+        withheld = bool(identity.get("street_withheld_contact_agent")) and not identity.get("stand_mentions")
+        confidence = "NOT DETERMINABLE" if withheld else "LOW"
         evidence.append(
             {
                 "type": "public_listing_identity_withheld",
@@ -1419,7 +1779,7 @@ def confirm_ground_truth(html: str, dataset: Mapping[str, Any], inventory: Seque
         )
     return {
         "confirmed_stand": confirmed,
-        "confidence": confidence if confirmed else "LOW",
+        "confidence": confidence if confirmed else ("NOT DETERMINABLE" if confidence == "NOT DETERMINABLE" else "LOW"),
         "determinable": confirmed is not None,
         "identity": identity,
         "gis_street_matches": gis_hits,
@@ -1749,7 +2109,18 @@ def compare_three_complete_estate_blinds(
             lid: [i + 1 for i, stand in enumerate(ids) if str(stand).replace("RE/", "").replace("1/", "") == "373"]
             for lid, ids in sets_top20.items()
         },
+        "yes_pool_cluster": {
+            stand: {
+                lid: (ids.index(stand) + 1 if stand in ids else None)
+                for lid, ids in sets_top20.items()
+            }
+            for stand in WATCH_REPEAT_STANDS
+        },
     }
+    current_top5 = set(sets_top5.get(current_listing_id) or [])
+    current_top20 = set(sets_top20.get(current_listing_id) or [])
+    cluster_in_top5 = [stand for stand in WATCH_REPEAT_STANDS if stand in current_top5]
+    cluster_in_top20 = [stand for stand in WATCH_REPEAT_STANDS if stand in current_top20]
     bias = bool(repeated_top5) or any(item.get("possible_candidate_ranking_bias") for item in pairwise.values())
     return {
         "listings": sorted(sets_top20.keys()),
@@ -1760,7 +2131,11 @@ def compare_three_complete_estate_blinds(
         "repeated_top5_stands": repeated_top5,
         "repeated_top20_stands": repeated_top20,
         "watch_families": watch,
+        "watch_repeat_cluster_in_current_top5": cluster_in_top5,
+        "watch_repeat_cluster_in_current_top20": cluster_in_top20,
+        "distinctive_shape_dropped_repeat_cluster": not bool(cluster_in_top5),
         "possible_candidate_ranking_bias": bias,
+        "n_listings_compared": len(sets_top20),
         "listing_specific": not bool(intersection_top5_all),
         "note": "Listing-specificity is not proof of accuracy. Repeated high ranks across unrelated listings are a bias flag.",
     }
