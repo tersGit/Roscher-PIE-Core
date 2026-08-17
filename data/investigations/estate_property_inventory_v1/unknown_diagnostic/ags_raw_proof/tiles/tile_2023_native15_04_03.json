@@ -1,0 +1,26 @@
+{
+  "bbox": {
+    "min_lon": 28.095294416975456,
+    "min_lat": -25.9652024162971,
+    "max_lon": 28.09718087907211,
+    "max_lat": -25.9635063612384
+  },
+  "bbox_3857": {
+    "xmin": 3127553.8681848096,
+    "ymin": -2994771.7516732197,
+    "xmax": 3127763.8681848096,
+    "ymax": -2994561.7516732197
+  },
+  "width": 1400,
+  "height": 1400,
+  "effective_metres_per_pixel": {
+    "x": 0.15,
+    "y": 0.15
+  },
+  "ags_service": "AerialPhotography/2023",
+  "year": 2023,
+  "profile": "native15",
+  "interpolation": "RSP_BilinearInterpolation",
+  "source_url": "https://ags.joburg.org.za/server/rest/services/AerialPhotography/2023/ImageServer",
+  "reused_local_file": true
+}

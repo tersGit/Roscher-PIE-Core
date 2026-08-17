@@ -1,0 +1,269 @@
+{
+  "ags_interpolation": "RSP_BilinearInterpolation",
+  "ags_service": "AerialPhotography/2023",
+  "ags_service_metadata": {
+    "copyright": "CoJ Aerial Photography 2023",
+    "current_version": 10.91,
+    "default_compression_quality": 75,
+    "default_resampling_method": "Bilinear",
+    "description": "CoJ Aerial Photography 2023",
+    "imagery_date_or_version": "CoJ Aerial Photography 2023",
+    "max_image_height": 4100,
+    "max_image_width": 15000,
+    "name": "AerialPhotography/2023",
+    "pixel_size_x_m": 0.14999999999963293,
+    "pixel_size_y_m": 0.14999999999963257,
+    "spatial_reference": {
+      "latestWkid": 3857,
+      "wkid": 102100
+    },
+    "time_info": null,
+    "url": "https://ags.joburg.org.za/server/rest/services/AerialPhotography/2023/ImageServer"
+  },
+  "approx_ground_dimensions_m": [
+    90.8,
+    70.3
+  ],
+  "cache_profile": "native15",
+  "came_from_cached_production_tiles": false,
+  "came_from_live_ags_exportImage": true,
+  "covering_mosaic_rasters": {
+    "count": 6,
+    "error": null,
+    "rasters": [
+      {
+        "Category": 1,
+        "GroupName": "",
+        "HighPS": 1.2,
+        "LowPS": 0.15,
+        "MaxPS": 12,
+        "MinPS": 0,
+        "Name": "2023_COJ_RGB_15cm_AP103",
+        "OBJECTID": 299,
+        "ProductName": "",
+        "Tag": "Dataset"
+      },
+      {
+        "Category": 2,
+        "GroupName": "",
+        "HighPS": 3.5999999999999606,
+        "LowPS": 3.5999999999999606,
+        "MaxPS": 10.799999999999,
+        "MinPS": 3.59999999999995,
+        "Name": "Ov_i02_L03_R000005C6_C000004E8.tif",
+        "OBJECTID": 468,
+        "ProductName": "",
+        "Tag": "Dataset"
+      },
+      {
+        "Category": 2,
+        "GroupName": "",
+        "HighPS": 10.799999999999981,
+        "LowPS": 10.799999999999981,
+        "MaxPS": 32.39999999999991,
+        "MinPS": 10.799999999999,
+        "Name": "Ov_i02_L04_R000001EC_C000001A2.tif",
+        "OBJECTID": 470,
+        "ProductName": "",
+        "Tag": "Dataset"
+      },
+      {
+        "Category": 2,
+        "GroupName": "",
+        "HighPS": 32.399999999999864,
+        "LowPS": 32.399999999999864,
+        "MaxPS": 97.2000000000002,
+        "MinPS": 32.3999999999999,
+        "Name": "Ov_i02_L05_R000000A4_C0000008B.tif",
+        "OBJECTID": 475,
+        "ProductName": "",
+        "Tag": "Dataset"
+      },
+      {
+        "Category": 2,
+        "GroupName": "",
+        "HighPS": 97.2000000000002,
+        "LowPS": 97.2000000000002,
+        "MaxPS": 291.6,
+        "MinPS": 97.2000000000002,
+        "Name": "Ov_i02_L06_R00000036_C0000002E.tif",
+        "OBJECTID": 478,
+        "ProductName": "",
+        "Tag": "Dataset"
+      },
+      {
+        "Category": 2,
+        "GroupName": "",
+        "HighPS": 291.6,
+        "LowPS": 291.6,
+        "MaxPS": 14580,
+        "MinPS": 291.6,
+        "Name": "Ov_i02_L07_R00000012_C0000000F.tif",
+        "OBJECTID": 479,
+        "ProductName": "",
+        "Tag": "Dataset"
+      }
+    ]
+  },
+  "crop_is_integer_extract_from_ags_tile": true,
+  "crop_jpeg_quality": 90,
+  "crop_matches_os_v1_wh": true,
+  "crop_pixel_dimensions": [
+    605,
+    402
+  ],
+  "estate": "Carlswald North",
+  "gis_dataset": "carlswald_north_corrected_001",
+  "google_bing_or_other_satellite_used": false,
+  "imagery_date_or_version": "CoJ Aerial Photography 2023",
+  "imagery_source": "https://ags.joburg.org.za/server/rest/services/AerialPhotography/2023/ImageServer",
+  "inventory_current_modified": false,
+  "inventory_pool_status": "YES",
+  "native15_pipeline_modified": false,
+  "native_metres_per_pixel": {
+    "x": 0.14999999999963293,
+    "y": 0.14999999999963257
+  },
+  "object_pixel_dimensions": {
+    "building": {
+      "approx_length_m": 29.56,
+      "approx_length_px": 197.1,
+      "approx_width_m": 19.32,
+      "approx_width_px": 128.8,
+      "area_px": 19470.5,
+      "bbox_px": [
+        200.0,
+        158.0
+      ],
+      "centroid_xy_px": [
+        270.3,
+        212.8
+      ],
+      "min_area_rect_px": [
+        128.8,
+        197.1
+      ],
+      "os_area_m2": 437.79,
+      "os_area_px": 19457.5,
+      "os_status": "CONFIRMED",
+      "present": true
+    },
+    "driveway": {
+      "approx_length_m": 14.73,
+      "approx_length_px": 98.2,
+      "approx_width_m": 7.57,
+      "approx_width_px": 50.5,
+      "area_px": 1583.0,
+      "bbox_px": [
+        65.0,
+        89.0
+      ],
+      "centroid_xy_px": [
+        355.4,
+        182.5
+      ],
+      "min_area_rect_px": [
+        50.5,
+        98.2
+      ],
+      "os_area_m2": 37.14,
+      "os_area_px": 1650.5,
+      "os_status": "PROBABLE",
+      "present": true
+    },
+    "pool": {
+      "approx_length_m": 6.18,
+      "approx_length_px": 41.2,
+      "approx_width_m": 3.99,
+      "approx_width_px": 26.6,
+      "area_px": 923.5,
+      "bbox_px": [
+        40.0,
+        38.0
+      ],
+      "centroid_xy_px": [
+        294.6,
+        173.1
+      ],
+      "min_area_rect_px": [
+        26.6,
+        41.2
+      ],
+      "os_area_m2": 20.89,
+      "os_area_px": 928.5,
+      "os_status": "CONFIRMED",
+      "present": true
+    }
+  },
+  "os_pool_status": "CONFIRMED",
+  "os_v1_crop_wh": [
+    605,
+    402
+  ],
+  "os_v1_modified": false,
+  "production_ranking_modified": false,
+  "proof_panel_path": "/workspace/data/investigations/estate_property_inventory_v1/unknown_diagnostic/ags_raw_proof/677_ags_native15_raw_proof.jpg",
+  "raw_crop_path": "/workspace/data/investigations/estate_property_inventory_v1/unknown_diagnostic/ags_raw_proof/677_ags_native15_raw_crop.jpg",
+  "requested_metres_per_pixel": 0.15,
+  "requirements": [
+    "clearly visible house/roof",
+    "swimming pool",
+    "driveway",
+    "garden/open ground",
+    "OS v1 pool CONFIRMED (inventory YES)"
+  ],
+  "resampled_from_native": false,
+  "source_tile_id": "tile_2023_native15_04_03",
+  "source_tile_ids": [
+    "tile_2023_native15_04_03"
+  ],
+  "stand_number": "677",
+  "tile": {
+    "ags_service": "AerialPhotography/2023",
+    "col": 3,
+    "height": 1400,
+    "metres_per_pixel": 0.15,
+    "row": 4,
+    "stem": "tile_2023_native15_04_03",
+    "width": 1400
+  },
+  "tile_download": {
+    "actual_wh": [
+      1400,
+      1400
+    ],
+    "path": "/workspace/data/investigations/estate_property_inventory_v1/unknown_diagnostic/ags_raw_proof/tiles/tile_2023_native15_04_03.jpg",
+    "requested_wh": [
+      1400,
+      1400
+    ],
+    "reused_local_file": true,
+    "sidecar": {
+      "ags_service": "AerialPhotography/2023",
+      "bbox": {
+        "max_lat": -25.9635063612384,
+        "max_lon": 28.09718087907211,
+        "min_lat": -25.9652024162971,
+        "min_lon": 28.095294416975456
+      },
+      "bbox_3857": {
+        "xmax": 3127763.8681848096,
+        "xmin": 3127553.8681848096,
+        "ymax": -2994561.7516732197,
+        "ymin": -2994771.7516732197
+      },
+      "effective_metres_per_pixel": {
+        "x": 0.15,
+        "y": 0.15
+      },
+      "height": 1400,
+      "interpolation": "RSP_BilinearInterpolation",
+      "profile": "native15",
+      "reused_local_file": true,
+      "source_url": "https://ags.joburg.org.za/server/rest/services/AerialPhotography/2023/ImageServer",
+      "width": 1400,
+      "year": 2023
+    }
+  },
+  "township": "SUMMERSET EXT.13"
+}
