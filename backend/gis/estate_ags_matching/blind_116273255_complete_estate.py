@@ -223,10 +223,12 @@ def extract_hybrid_block(
         "extracted_fresh_with_frozen_hybrid_v1": True,
         "hybrid_v1_modified": False,
         "listing_specific_control_suffixes": False,
+        "_frame_objects": frames,
     }
     if dest is not None:
         dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_text(json.dumps(block, indent=2) + "\n", encoding="utf-8")
+        public = {key: val for key, val in block.items() if key != "_frame_objects"}
+        dest.write_text(json.dumps(public, indent=2) + "\n", encoding="utf-8")
     return block
 
 
@@ -769,12 +771,18 @@ def shape_discrimination(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
     n_similar = len(similar)
     if not measured:
         mode = "NO_SHAPE_SIGNAL"
+        dclass = "WEAK"
     elif n_similar <= 3 and (spread_top5 or 0) >= 0.04 and (gap_1_2 or 0) >= 0.02:
         mode = "SMALL_SUBSET"
+        dclass = "STRONG"
     elif n_similar >= 8 or (spread_top5 is not None and spread_top5 < 0.03):
         mode = "BROAD_CLUSTER"
+        dclass = "BROAD_CLUSTER"
     else:
         mode = "PARTIAL_SEPARATION"
+        dclass = "MODERATE"
+    if dclass != "BROAD_CLUSTER" and (gap_1_2 is None or gap_1_2 < 0.01) and (spread_top5 is None or spread_top5 < 0.02):
+        dclass = "WEAK"
     per_candidate = []
     for row, score in zip(ordered, scores):
         per_candidate.append(
@@ -799,6 +807,7 @@ def shape_discrimination(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
         "n_high_rank_despite_weak_geometry": len(weak_high),
         "high_rank_weak_geometry": weak_high,
         "discrimination_mode": mode,
+        "discrimination_class": dclass,
         "similar_threshold": SIMILAR_SHAPE_V2,
         "weak_threshold": WEAK_SHAPE_V2,
         "note": "Reporting only. Thresholds do not change Scoring v2.",
@@ -1179,6 +1188,7 @@ def freeze_payload(
     listing_id: str = LISTING_ID,
     experiment: str | None = None,
     prior_artifacts: Mapping[str, Any] | None = None,
+    distinctive_contour_v2: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     acq = {
         key: val
@@ -1258,6 +1268,25 @@ def freeze_payload(
             "inventory_sha256": sha256_file(FROZEN_001_INVENTORY) if FROZEN_001_INVENTORY.is_file() else None,
         },
         "prior_listing_artifacts": prior_artifacts or scan_prior_listing_artifacts(listing_id),
+        "distinctive_contour_v2": None
+        if distinctive_contour_v2 is None
+        else {
+            "used_in_ranking": False,
+            "ranking_modified": False,
+            "official_chosen_id": distinctive_contour_v2.get("official_chosen_id"),
+            "n_useful_frames": distinctive_contour_v2.get("n_useful_frames"),
+            "overall": distinctive_contour_v2.get("overall"),
+            "panels": distinctive_contour_v2.get("panels"),
+            "frames": [
+                {
+                    key: val
+                    for key, val in row.items()
+                    if key not in {"_draw"}
+                }
+                for row in (distinctive_contour_v2.get("frames") or [])
+            ],
+            "note": "Reporting/diagnostic only. Not a ranking input.",
+        },
         "on_disk_sha256_recorded_in": "freeze.sha256",
     }
     return body
@@ -1527,6 +1556,7 @@ def run_freeze(
         dest=dest / "hybrid_block.json",
         ignore_frozen_hybrid_json=ignore_frozen_hybrid_json or bool(prior_artifacts.get("frozen_hybrid_json_contains_listing")),
     )
+    frame_objects = list(hybrid_block.pop("_frame_objects", []) or [])
     object_obs = observe_pool_media(photos, photo_classes["scenes"]) if observe_objects else None
     listing_pool = classify_listing_pool_status(acquisition, hybrid_block, photo_classes, object_obs)
     if object_obs is not None:
@@ -1567,6 +1597,16 @@ def run_freeze(
     )
     if contour_proof:
         fingerprint["distinctive"]["contour_proof_path"] = contour_proof
+    from backend.gis.estate_ags_matching.distinctive_contour_v2 import run_distinctive_contour_v2
+
+    dcv2 = run_distinctive_contour_v2(
+        photos,
+        photo_classes,
+        frame_objects,
+        official_chosen_id=(fingerprint.get("qualitative") or {}).get("hybrid_chosen_id")
+        or (fingerprint.get("hybrid_evidence") or {}).get("chosen_id"),
+        dest=dest / "distinctive_contour_v2",
+    )
     payload = freeze_payload(
         acquisition=acquisition,
         photo_classes=photo_classes,
@@ -1577,6 +1617,7 @@ def run_freeze(
         crop_stats=crop_stats,
         listing_id=listing_id,
         prior_artifacts=prior_artifacts,
+        distinctive_contour_v2=dcv2,
     )
     marker_runtime = round(time.time() - started, 2)
     digest = write_freeze(payload, rows, dest=freeze_path)
@@ -2065,7 +2106,10 @@ BLIND_COMPLETE_ESTATE_FREEZES = [
     REPO_ROOT / "data/investigations/blind_116273255_complete_estate/freeze.json",
     REPO_ROOT / "data/investigations/blind_116223230_complete_estate/freeze.json",
     REPO_ROOT / "data/investigations/blind_116778622_complete_estate/freeze.json",
+    REPO_ROOT / "data/investigations/blind_116978058_complete_estate/freeze.json",
 ]
+
+WATCH_FALSE_POSITIVE_116978058 = ("351", "380", "468", "463", "461")
 
 
 def compare_three_complete_estate_blinds(
@@ -2116,11 +2160,20 @@ def compare_three_complete_estate_blinds(
             }
             for stand in WATCH_REPEAT_STANDS
         },
+        "false_positive_116978058_cluster": {
+            stand: {
+                lid: (ids.index(stand) + 1 if stand in ids else None)
+                for lid, ids in sets_top20.items()
+            }
+            for stand in WATCH_FALSE_POSITIVE_116978058
+        },
     }
     current_top5 = set(sets_top5.get(current_listing_id) or [])
     current_top20 = set(sets_top20.get(current_listing_id) or [])
     cluster_in_top5 = [stand for stand in WATCH_REPEAT_STANDS if stand in current_top5]
     cluster_in_top20 = [stand for stand in WATCH_REPEAT_STANDS if stand in current_top20]
+    fp_cluster_top5 = [stand for stand in WATCH_FALSE_POSITIVE_116978058 if stand in current_top5]
+    fp_cluster_top20 = [stand for stand in WATCH_FALSE_POSITIVE_116978058 if stand in current_top20]
     bias = bool(repeated_top5) or any(item.get("possible_candidate_ranking_bias") for item in pairwise.values())
     return {
         "listings": sorted(sets_top20.keys()),
@@ -2133,11 +2186,13 @@ def compare_three_complete_estate_blinds(
         "watch_families": watch,
         "watch_repeat_cluster_in_current_top5": cluster_in_top5,
         "watch_repeat_cluster_in_current_top20": cluster_in_top20,
+        "watch_116978058_false_positive_in_current_top5": fp_cluster_top5,
+        "watch_116978058_false_positive_in_current_top20": fp_cluster_top20,
         "distinctive_shape_dropped_repeat_cluster": not bool(cluster_in_top5),
         "possible_candidate_ranking_bias": bias,
         "n_listings_compared": len(sets_top20),
         "listing_specific": not bool(intersection_top5_all),
-        "note": "Listing-specificity is not proof of accuracy. Repeated high ranks across unrelated listings are a bias flag.",
+        "note": "Listing-specificity is not proof of accuracy. Repeated high ranks across unrelated listings are a bias flag. The 116978058 Top-5 cluster was later visually rejected; recurrence is a bias flag only and was not used to rerank.",
     }
 
 

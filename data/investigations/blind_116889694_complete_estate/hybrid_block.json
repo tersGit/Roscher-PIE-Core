@@ -1,0 +1,799 @@
+{
+  "listing_id": "116889694",
+  "n_photos": 28,
+  "viewpoint_counts": {
+    "unusable_ambiguous": 2,
+    "aerial_near_nadir": 1,
+    "interior": 22,
+    "elevated_exterior": 2,
+    "pool_overview": 1
+  },
+  "n_extracted": 4,
+  "source_counts": {
+    "presence_only": 1,
+    "fastsam_fallback": 1,
+    "no_usable_geometry": 2
+  },
+  "listing": {
+    "n_frames": 4,
+    "n_scoring_ready": 0,
+    "n_overview_ready": 0,
+    "chosen_id": null,
+    "chosen_source": null,
+    "chosen_reason": null,
+    "multiframe_axis_partners": 0,
+    "note": "Masks are not merged. One clean YOLOE/SAM2 frame outweighs several weak detections.",
+    "oblique": true,
+    "nadir_area_manufactured": false
+  },
+  "dark_overview_probe": [],
+  "frames": [
+    {
+      "media_id": "116889694-002",
+      "viewpoint": "aerial_near_nadir",
+      "source": "presence_only",
+      "source_reason": "fastsam_presence_without_valid_boundary",
+      "scoring_ready": false,
+      "pool_present": true,
+      "yoloe_conf": 0.0,
+      "n_components": 4,
+      "dominant": null,
+      "secondary": null,
+      "component_relation": {
+        "component_count": 4,
+        "dominant_index": null,
+        "secondary_index": null,
+        "relative_size": null,
+        "centroid_separation": null,
+        "adjacent": null,
+        "dominant_confidence": null,
+        "secondary_confidence": null,
+        "fallback_notes": [
+          "fastsam_pool_presence",
+          "implausible_perimeter_area",
+          "implausible_perimeter_area"
+        ]
+      },
+      "descriptors": {
+        "oblique": true,
+        "nadir_area_manufactured": false
+      },
+      "gate_notes": [
+        "fastsam_presence_without_valid_boundary"
+      ],
+      "recall_tried": [
+        "primary:11s+11m/swimming pool/imgsz=640/conf=0.08",
+        "11s/swimming pool/imgsz=640/conf=0.04",
+        "11m/swimming pool/imgsz=640/conf=0.04",
+        "11s/swimming pool/imgsz=1024/conf=0.08",
+        "11m/swimming pool/imgsz=1024/conf=0.08",
+        "11s/outdoor swimming pool/imgsz=640/conf=0.08",
+        "11m/outdoor swimming pool/imgsz=640/conf=0.08",
+        "11s/residential swimming pool/imgsz=640/conf=0.08",
+        "11m/residential swimming pool/imgsz=640/conf=0.08",
+        "11s/swimming pool/imgsz=1024/conf=0.04",
+        "11m/swimming pool/imgsz=1024/conf=0.04"
+      ],
+      "runtime_s": 13.375,
+      "oblique": true,
+      "contour_image": null
+    },
+    {
+      "media_id": "116889694-026",
+      "viewpoint": "elevated_exterior",
+      "source": "fastsam_fallback",
+      "source_reason": "no_valid_yoloe_fastsam_box_sam2",
+      "scoring_ready": false,
+      "pool_present": true,
+      "yoloe_conf": 0.5334,
+      "n_components": 0,
+      "dominant": {
+        "model": "fastsam+sam2.1_t",
+        "prompt": "fastsam_box",
+        "confidence": 0.5334,
+        "relative_area": 0.2235,
+        "centroid_xy": [
+          0.5396,
+          0.7846
+        ],
+        "clip": {
+          "pool": 0.2193,
+          "wall": 0.01,
+          "vegetation": 0.1106,
+          "furniture": 0.0286,
+          "bathtub": 0.002,
+          "interior": 0.0072,
+          "deck": 0.6222
+        },
+        "structural_support": 0.4547,
+        "geometry": {
+          "relative_area": 0.2235,
+          "compactness": 0.6068,
+          "solidity": 0.9833,
+          "aspect_ratio": 2.233,
+          "orientation_deg": -90.0,
+          "n_corners": 5,
+          "n_major_indents": 0,
+          "max_indent": 0.0267,
+          "sharp_frac": 0.125,
+          "circularity": 0.8078,
+          "straight_edge_proportion": 0.275,
+          "curved_edge_proportion": 0.725,
+          "n_approx": 5,
+          "closed": true
+        },
+        "contour_image": [
+          [
+            0.4496,
+            0.563
+          ],
+          [
+            0.424,
+            0.5698
+          ],
+          [
+            0.3979,
+            0.5746
+          ],
+          [
+            0.3726,
+            0.5824
+          ],
+          [
+            0.3507,
+            0.5937
+          ],
+          [
+            0.3269,
+            0.5954
+          ],
+          [
+            0.3012,
+            0.5967
+          ],
+          [
+            0.2756,
+            0.5977
+          ],
+          [
+            0.2489,
+            0.6006
+          ],
+          [
+            0.2237,
+            0.6086
+          ],
+          [
+            0.1997,
+            0.6214
+          ],
+          [
+            0.1841,
+            0.6368
+          ],
+          [
+            0.1975,
+            0.6678
+          ],
+          [
+            0.2139,
+            0.6982
+          ],
+          [
+            0.2297,
+            0.7296
+          ],
+          [
+            0.2474,
+            0.7581
+          ],
+          [
+            0.2641,
+            0.789
+          ],
+          [
+            0.2794,
+            0.8196
+          ],
+          [
+            0.2964,
+            0.8491
+          ],
+          [
+            0.3136,
+            0.8796
+          ],
+          [
+            0.331,
+            0.9095
+          ],
+          [
+            0.3483,
+            0.9393
+          ],
+          [
+            0.3645,
+            0.9694
+          ],
+          [
+            0.3823,
+            0.9972
+          ],
+          [
+            0.4079,
+            1.0
+          ],
+          [
+            0.4354,
+            1.0
+          ],
+          [
+            0.4629,
+            1.0
+          ],
+          [
+            0.4903,
+            1.0
+          ],
+          [
+            0.5178,
+            1.0
+          ],
+          [
+            0.5453,
+            1.0
+          ],
+          [
+            0.5727,
+            1.0
+          ],
+          [
+            0.6002,
+            1.0
+          ],
+          [
+            0.6277,
+            1.0
+          ],
+          [
+            0.6551,
+            1.0
+          ],
+          [
+            0.6826,
+            1.0
+          ],
+          [
+            0.7101,
+            1.0
+          ],
+          [
+            0.7375,
+            1.0
+          ],
+          [
+            0.7586,
+            0.9939
+          ],
+          [
+            0.7831,
+            0.9931
+          ],
+          [
+            0.8086,
+            0.9923
+          ],
+          [
+            0.8307,
+            0.9837
+          ],
+          [
+            0.8307,
+            0.9465
+          ],
+          [
+            0.8326,
+            0.912
+          ],
+          [
+            0.8301,
+            0.8837
+          ],
+          [
+            0.8307,
+            0.8462
+          ],
+          [
+            0.83,
+            0.8077
+          ],
+          [
+            0.83,
+            0.7697
+          ],
+          [
+            0.8339,
+            0.7357
+          ],
+          [
+            0.83,
+            0.6998
+          ],
+          [
+            0.8249,
+            0.6629
+          ],
+          [
+            0.8108,
+            0.64
+          ],
+          [
+            0.7855,
+            0.632
+          ],
+          [
+            0.7593,
+            0.6275
+          ],
+          [
+            0.7337,
+            0.6208
+          ],
+          [
+            0.7076,
+            0.616
+          ],
+          [
+            0.6828,
+            0.6102
+          ],
+          [
+            0.6569,
+            0.6044
+          ],
+          [
+            0.6305,
+            0.6006
+          ],
+          [
+            0.6043,
+            0.5977
+          ],
+          [
+            0.579,
+            0.5919
+          ],
+          [
+            0.5537,
+            0.5842
+          ],
+          [
+            0.5275,
+            0.5794
+          ],
+          [
+            0.502,
+            0.5723
+          ],
+          [
+            0.4766,
+            0.565
+          ]
+        ],
+        "box": [
+          269.0,
+          584.0,
+          1288.0,
+          1034.0
+        ]
+      },
+      "secondary": null,
+      "component_relation": {
+        "component_count": 0,
+        "dominant_index": null,
+        "secondary_index": null,
+        "relative_size": null,
+        "centroid_separation": null,
+        "adjacent": null,
+        "dominant_confidence": null,
+        "secondary_confidence": null,
+        "fallback_notes": [
+          "fastsam_pool_presence",
+          "fastsam_box_sam2_accepted"
+        ]
+      },
+      "descriptors": {
+        "component_count": 1,
+        "straight_edge_proportion": 0.275,
+        "curved_edge_proportion": 0.725,
+        "major_corners": 5,
+        "concavity": 0,
+        "visible_rectilinear_structure": true,
+        "solidity": 0.9833,
+        "compactness": 0.6068,
+        "aspect_ratio": 2.233,
+        "orientation_deg": -90.0,
+        "relative_area": 0.2235,
+        "viewpoint": "elevated_exterior",
+        "viewpoint_confidence": 1.0,
+        "oblique": true,
+        "nadir_area_manufactured": false
+      },
+      "gate_notes": [
+        "no_valid_yoloe_fastsam_box_sam2"
+      ],
+      "recall_tried": [
+        "primary:11s+11m/swimming pool/imgsz=640/conf=0.08",
+        "11s/swimming pool/imgsz=640/conf=0.04",
+        "11m/swimming pool/imgsz=640/conf=0.04",
+        "11s/swimming pool/imgsz=1024/conf=0.08",
+        "11m/swimming pool/imgsz=1024/conf=0.08",
+        "11s/outdoor swimming pool/imgsz=640/conf=0.08",
+        "11m/outdoor swimming pool/imgsz=640/conf=0.08",
+        "11s/residential swimming pool/imgsz=640/conf=0.08",
+        "11m/residential swimming pool/imgsz=640/conf=0.08",
+        "11s/swimming pool/imgsz=1024/conf=0.04",
+        "11m/swimming pool/imgsz=1024/conf=0.04"
+      ],
+      "runtime_s": 7.293,
+      "oblique": true,
+      "contour_image": [
+        [
+          0.4496,
+          0.563
+        ],
+        [
+          0.424,
+          0.5698
+        ],
+        [
+          0.3979,
+          0.5746
+        ],
+        [
+          0.3726,
+          0.5824
+        ],
+        [
+          0.3507,
+          0.5937
+        ],
+        [
+          0.3269,
+          0.5954
+        ],
+        [
+          0.3012,
+          0.5967
+        ],
+        [
+          0.2756,
+          0.5977
+        ],
+        [
+          0.2489,
+          0.6006
+        ],
+        [
+          0.2237,
+          0.6086
+        ],
+        [
+          0.1997,
+          0.6214
+        ],
+        [
+          0.1841,
+          0.6368
+        ],
+        [
+          0.1975,
+          0.6678
+        ],
+        [
+          0.2139,
+          0.6982
+        ],
+        [
+          0.2297,
+          0.7296
+        ],
+        [
+          0.2474,
+          0.7581
+        ],
+        [
+          0.2641,
+          0.789
+        ],
+        [
+          0.2794,
+          0.8196
+        ],
+        [
+          0.2964,
+          0.8491
+        ],
+        [
+          0.3136,
+          0.8796
+        ],
+        [
+          0.331,
+          0.9095
+        ],
+        [
+          0.3483,
+          0.9393
+        ],
+        [
+          0.3645,
+          0.9694
+        ],
+        [
+          0.3823,
+          0.9972
+        ],
+        [
+          0.4079,
+          1.0
+        ],
+        [
+          0.4354,
+          1.0
+        ],
+        [
+          0.4629,
+          1.0
+        ],
+        [
+          0.4903,
+          1.0
+        ],
+        [
+          0.5178,
+          1.0
+        ],
+        [
+          0.5453,
+          1.0
+        ],
+        [
+          0.5727,
+          1.0
+        ],
+        [
+          0.6002,
+          1.0
+        ],
+        [
+          0.6277,
+          1.0
+        ],
+        [
+          0.6551,
+          1.0
+        ],
+        [
+          0.6826,
+          1.0
+        ],
+        [
+          0.7101,
+          1.0
+        ],
+        [
+          0.7375,
+          1.0
+        ],
+        [
+          0.7586,
+          0.9939
+        ],
+        [
+          0.7831,
+          0.9931
+        ],
+        [
+          0.8086,
+          0.9923
+        ],
+        [
+          0.8307,
+          0.9837
+        ],
+        [
+          0.8307,
+          0.9465
+        ],
+        [
+          0.8326,
+          0.912
+        ],
+        [
+          0.8301,
+          0.8837
+        ],
+        [
+          0.8307,
+          0.8462
+        ],
+        [
+          0.83,
+          0.8077
+        ],
+        [
+          0.83,
+          0.7697
+        ],
+        [
+          0.8339,
+          0.7357
+        ],
+        [
+          0.83,
+          0.6998
+        ],
+        [
+          0.8249,
+          0.6629
+        ],
+        [
+          0.8108,
+          0.64
+        ],
+        [
+          0.7855,
+          0.632
+        ],
+        [
+          0.7593,
+          0.6275
+        ],
+        [
+          0.7337,
+          0.6208
+        ],
+        [
+          0.7076,
+          0.616
+        ],
+        [
+          0.6828,
+          0.6102
+        ],
+        [
+          0.6569,
+          0.6044
+        ],
+        [
+          0.6305,
+          0.6006
+        ],
+        [
+          0.6043,
+          0.5977
+        ],
+        [
+          0.579,
+          0.5919
+        ],
+        [
+          0.5537,
+          0.5842
+        ],
+        [
+          0.5275,
+          0.5794
+        ],
+        [
+          0.502,
+          0.5723
+        ],
+        [
+          0.4766,
+          0.565
+        ]
+      ]
+    },
+    {
+      "media_id": "116889694-027",
+      "viewpoint": "pool_overview",
+      "source": "no_usable_geometry",
+      "source_reason": "no_yoloe_no_fastsam",
+      "scoring_ready": false,
+      "pool_present": false,
+      "yoloe_conf": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "component_relation": {
+        "component_count": 0,
+        "dominant_index": null,
+        "secondary_index": null,
+        "relative_size": null,
+        "centroid_separation": null,
+        "adjacent": null,
+        "dominant_confidence": null,
+        "secondary_confidence": null,
+        "fallback_notes": [
+          "fastsam_no_pool_proposal"
+        ]
+      },
+      "descriptors": {
+        "oblique": true,
+        "nadir_area_manufactured": false
+      },
+      "gate_notes": [
+        "no_yoloe_no_fastsam"
+      ],
+      "recall_tried": [
+        "primary:11s+11m/swimming pool/imgsz=640/conf=0.08",
+        "11s/swimming pool/imgsz=640/conf=0.04",
+        "11m/swimming pool/imgsz=640/conf=0.04",
+        "11s/swimming pool/imgsz=1024/conf=0.08",
+        "11m/swimming pool/imgsz=1024/conf=0.08",
+        "11s/outdoor swimming pool/imgsz=640/conf=0.08",
+        "11m/outdoor swimming pool/imgsz=640/conf=0.08",
+        "11s/residential swimming pool/imgsz=640/conf=0.08",
+        "11m/residential swimming pool/imgsz=640/conf=0.08",
+        "11s/swimming pool/imgsz=1024/conf=0.04",
+        "11m/swimming pool/imgsz=1024/conf=0.04"
+      ],
+      "runtime_s": 4.923,
+      "oblique": true,
+      "contour_image": null
+    },
+    {
+      "media_id": "116889694-028",
+      "viewpoint": "elevated_exterior",
+      "source": "no_usable_geometry",
+      "source_reason": "no_yoloe_no_fastsam",
+      "scoring_ready": false,
+      "pool_present": false,
+      "yoloe_conf": 0.0,
+      "n_components": 0,
+      "dominant": null,
+      "secondary": null,
+      "component_relation": {
+        "component_count": 0,
+        "dominant_index": null,
+        "secondary_index": null,
+        "relative_size": null,
+        "centroid_separation": null,
+        "adjacent": null,
+        "dominant_confidence": null,
+        "secondary_confidence": null,
+        "fallback_notes": [
+          "fastsam_no_pool_proposal"
+        ]
+      },
+      "descriptors": {
+        "oblique": true,
+        "nadir_area_manufactured": false
+      },
+      "gate_notes": [
+        "no_yoloe_no_fastsam"
+      ],
+      "recall_tried": [
+        "primary:11s+11m/swimming pool/imgsz=640/conf=0.08",
+        "11s/swimming pool/imgsz=640/conf=0.04",
+        "11m/swimming pool/imgsz=640/conf=0.04",
+        "11s/swimming pool/imgsz=1024/conf=0.08",
+        "11m/swimming pool/imgsz=1024/conf=0.08",
+        "11s/outdoor swimming pool/imgsz=640/conf=0.08",
+        "11m/outdoor swimming pool/imgsz=640/conf=0.08",
+        "11s/residential swimming pool/imgsz=640/conf=0.08",
+        "11m/residential swimming pool/imgsz=640/conf=0.08",
+        "11s/swimming pool/imgsz=1024/conf=0.04",
+        "11m/swimming pool/imgsz=1024/conf=0.04"
+      ],
+      "runtime_s": 5.304,
+      "oblique": true,
+      "contour_image": null
+    }
+  ],
+  "extracted_fresh_with_frozen_hybrid_v1": true,
+  "hybrid_v1_modified": false,
+  "listing_specific_control_suffixes": false
+}

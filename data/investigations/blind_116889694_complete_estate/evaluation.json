@@ -1,0 +1,441 @@
+{
+  "ground_truth": {
+    "confirmed_stand": null,
+    "confidence": "NOT DETERMINABLE",
+    "determinable": false,
+    "identity": {
+      "title": "5 Bedroom House for sale in Carlswald North Estate - P24-116889694",
+      "stand_mentions": [],
+      "street": null,
+      "street_withheld_contact_agent": true,
+      "address_locality": "Carlswald North Estate",
+      "coordinates_present": false
+    },
+    "gis_street_matches": [],
+    "coj_matches": [],
+    "evidence": [
+      {
+        "type": "public_listing_identity_withheld",
+        "street_withheld_contact_agent": true,
+        "coordinates_present": false,
+        "note": "Public Property24 page does not publish street or stand. Rank was not used as truth."
+      }
+    ],
+    "visual": null,
+    "inferred_from_pie_rank": false,
+    "previous_001_hybrid_ranking_also_had_no_independent_gt": true
+  },
+  "evaluation": {
+    "determinable": false,
+    "outcome": null,
+    "note": "Ground truth could not be established independently. Frozen ranking was not used as truth."
+  },
+  "detector": null,
+  "comparison_vs_116273255": {
+    "previous_freeze_found": true,
+    "previous_listing_id": "116273255",
+    "previous_path": "data/investigations/blind_116273255_complete_estate/freeze.json",
+    "overlap_top5": [],
+    "overlap_top20": [],
+    "n_overlap_top20": 0,
+    "watch_families": {
+      "334_family": {
+        "current_ranks": [],
+        "previous_ranks": [
+          1
+        ]
+      },
+      "373_family": {
+        "current_ranks": [],
+        "previous_ranks": [
+          2
+        ]
+      }
+    },
+    "possible_candidate_ranking_bias": false,
+    "note": "Overlap across unrelated listings is a bias flag, not proof of a match."
+  },
+  "comparison_three_blind_tests": {
+    "listings": [
+      "116223230",
+      "116273255",
+      "116778622",
+      "116889694",
+      "116978058"
+    ],
+    "pairwise": {
+      "116273255": {
+        "previous_freeze_found": true,
+        "previous_listing_id": "116273255",
+        "previous_path": "data/investigations/blind_116273255_complete_estate/freeze.json",
+        "overlap_top5": [],
+        "overlap_top20": [],
+        "n_overlap_top20": 0,
+        "watch_families": {
+          "334_family": {
+            "current_ranks": [],
+            "previous_ranks": [
+              1
+            ]
+          },
+          "373_family": {
+            "current_ranks": [],
+            "previous_ranks": [
+              2
+            ]
+          }
+        },
+        "possible_candidate_ranking_bias": false,
+        "note": "Overlap across unrelated listings is a bias flag, not proof of a match."
+      },
+      "116223230": {
+        "previous_freeze_found": true,
+        "previous_listing_id": "116223230",
+        "previous_path": "data/investigations/blind_116223230_complete_estate/freeze.json",
+        "overlap_top5": [],
+        "overlap_top20": [
+          "583",
+          "545",
+          "624"
+        ],
+        "n_overlap_top20": 3,
+        "watch_families": {
+          "334_family": {
+            "current_ranks": [],
+            "previous_ranks": []
+          },
+          "373_family": {
+            "current_ranks": [],
+            "previous_ranks": []
+          }
+        },
+        "possible_candidate_ranking_bias": false,
+        "note": "Overlap across unrelated listings is a bias flag, not proof of a match."
+      },
+      "116778622": {
+        "previous_freeze_found": true,
+        "previous_listing_id": "116778622",
+        "previous_path": "data/investigations/blind_116778622_complete_estate/freeze.json",
+        "overlap_top5": [],
+        "overlap_top20": [
+          "583",
+          "624"
+        ],
+        "n_overlap_top20": 2,
+        "watch_families": {
+          "334_family": {
+            "current_ranks": [],
+            "previous_ranks": []
+          },
+          "373_family": {
+            "current_ranks": [],
+            "previous_ranks": []
+          }
+        },
+        "possible_candidate_ranking_bias": false,
+        "note": "Overlap across unrelated listings is a bias flag, not proof of a match."
+      },
+      "116978058": {
+        "previous_freeze_found": true,
+        "previous_listing_id": "116978058",
+        "previous_path": "data/investigations/blind_116978058_complete_estate/freeze.json",
+        "overlap_top5": [],
+        "overlap_top20": [
+          "545",
+          "624"
+        ],
+        "n_overlap_top20": 2,
+        "watch_families": {
+          "334_family": {
+            "current_ranks": [],
+            "previous_ranks": []
+          },
+          "373_family": {
+            "current_ranks": [],
+            "previous_ranks": []
+          }
+        },
+        "possible_candidate_ranking_bias": false,
+        "note": "Overlap across unrelated listings is a bias flag, not proof of a match."
+      }
+    },
+    "top5_by_listing": {
+      "116889694": [
+        "435",
+        "626",
+        "451",
+        "583",
+        "545"
+      ],
+      "116273255": [
+        "1/334",
+        "1/373",
+        "9/908",
+        "1/691",
+        "15/908"
+      ],
+      "116223230": [
+        "446",
+        "573",
+        "401",
+        "444",
+        "605"
+      ],
+      "116778622": [
+        "605",
+        "444",
+        "572",
+        "382",
+        "573"
+      ],
+      "116978058": [
+        "351",
+        "380",
+        "468",
+        "463",
+        "461"
+      ]
+    },
+    "top20_by_listing": {
+      "116889694": [
+        "435",
+        "626",
+        "451",
+        "583",
+        "545",
+        "400",
+        "590",
+        "404",
+        "407",
+        "345",
+        "611",
+        "607",
+        "547",
+        "636",
+        "895",
+        "360",
+        "896",
+        "584",
+        "624",
+        "462"
+      ],
+      "116273255": [
+        "1/334",
+        "1/373",
+        "9/908",
+        "1/691",
+        "15/908",
+        "8/870",
+        "1/389",
+        "567",
+        "1/450",
+        "17/908",
+        "1/343",
+        "1/417",
+        "1/449",
+        "1/603",
+        "540",
+        "1105",
+        "443",
+        "649",
+        "1/342",
+        "688"
+      ],
+      "116223230": [
+        "446",
+        "573",
+        "401",
+        "444",
+        "605",
+        "583",
+        "582",
+        "868",
+        "568",
+        "428",
+        "572",
+        "482",
+        "678",
+        "545",
+        "624",
+        "518",
+        "423",
+        "623",
+        "420",
+        "461"
+      ],
+      "116778622": [
+        "605",
+        "444",
+        "572",
+        "382",
+        "573",
+        "446",
+        "583",
+        "568",
+        "678",
+        "567",
+        "401",
+        "690",
+        "624",
+        "868",
+        "582",
+        "604",
+        "470",
+        "688",
+        "482",
+        "428"
+      ],
+      "116978058": [
+        "351",
+        "380",
+        "468",
+        "463",
+        "461",
+        "874",
+        "428",
+        "648",
+        "365",
+        "897",
+        "666",
+        "624",
+        "899",
+        "672",
+        "901",
+        "545",
+        "665",
+        "535",
+        "873",
+        "884"
+      ]
+    },
+    "intersection_top5_all_three": [],
+    "repeated_top5_stands": {
+      "573": 2,
+      "444": 2,
+      "605": 2
+    },
+    "repeated_top20_stands": {
+      "583": 3,
+      "545": 3,
+      "624": 4,
+      "567": 2,
+      "688": 2,
+      "446": 2,
+      "573": 2,
+      "401": 2,
+      "444": 2,
+      "605": 2,
+      "582": 2,
+      "868": 2,
+      "568": 2,
+      "428": 3,
+      "572": 2,
+      "482": 2,
+      "678": 2,
+      "461": 2
+    },
+    "watch_families": {
+      "334_family": {
+        "116889694": [],
+        "116273255": [
+          1
+        ],
+        "116223230": [],
+        "116778622": [],
+        "116978058": []
+      },
+      "373_family": {
+        "116889694": [],
+        "116273255": [
+          2
+        ],
+        "116223230": [],
+        "116778622": [],
+        "116978058": []
+      },
+      "yes_pool_cluster": {
+        "605": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": 5,
+          "116778622": 1,
+          "116978058": null
+        },
+        "444": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": 4,
+          "116778622": 2,
+          "116978058": null
+        },
+        "573": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": 2,
+          "116778622": 5,
+          "116978058": null
+        },
+        "446": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": 1,
+          "116778622": 6,
+          "116978058": null
+        },
+        "401": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": 3,
+          "116778622": 11,
+          "116978058": null
+        }
+      },
+      "false_positive_116978058_cluster": {
+        "351": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": null,
+          "116778622": null,
+          "116978058": 1
+        },
+        "380": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": null,
+          "116778622": null,
+          "116978058": 2
+        },
+        "468": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": null,
+          "116778622": null,
+          "116978058": 3
+        },
+        "463": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": null,
+          "116778622": null,
+          "116978058": 4
+        },
+        "461": {
+          "116889694": null,
+          "116273255": null,
+          "116223230": 20,
+          "116778622": null,
+          "116978058": 5
+        }
+      }
+    },
+    "watch_repeat_cluster_in_current_top5": [],
+    "watch_repeat_cluster_in_current_top20": [],
+    "watch_116978058_false_positive_in_current_top5": [],
+    "watch_116978058_false_positive_in_current_top20": [],
+    "distinctive_shape_dropped_repeat_cluster": true,
+    "possible_candidate_ranking_bias": true,
+    "n_listings_compared": 5,
+    "listing_specific": true,
+    "note": "Listing-specificity is not proof of accuracy. Repeated high ranks across unrelated listings are a bias flag. The 116978058 Top-5 cluster was later visually rejected; recurrence is a bias flag only and was not used to rerank."
+  }
+}
