@@ -5,6 +5,7 @@ Accuracy test on **PR #23** (Hybrid extraction) + **PR #24** (adapter) + **PR #2
 - **Freeze path:** `data/investigations/blind_117170887_complete_estate/freeze.json`
 - **On-disk SHA256** (matches `freeze.sha256`, verified after write): `96a66c8b240d8cab317d861d94582f1ba0bec84531c876fba4aaf090b4e82aa3`
 - **Harness commit:** `fa3b49f`
+- **Freeze commit:** `6c53661`
 - **PR:** #28
 - **Stack:** PR #23 extraction + PR #24 adapter + PR #26 Corner Gate + PR #27 POV; Scoring v2 frozen
 - **Official score:** `hybrid_v2`
