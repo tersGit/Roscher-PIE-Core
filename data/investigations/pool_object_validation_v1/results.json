@@ -1,0 +1,747 @@
+{
+  "version": "pool_object_validation_v1",
+  "ranking_weights_unchanged": true,
+  "historical_freeze_hashes_ok": {
+    "117262832": true,
+    "116978058": true,
+    "116889694": true,
+    "116778622": true,
+    "116273255": true,
+    "116223230": true
+  },
+  "candidates": [
+    {
+      "stand": "338",
+      "old_status": "REJECTED",
+      "old_notes": [
+        "rejected_as_road_shadow_or_roof"
+      ],
+      "old_clip": {
+        "pool": 0.018594350665807724,
+        "roof": 0.4978681206703186,
+        "shadow": 0.13189499080181122,
+        "road": 0.12451796978712082,
+        "driveway": 0.20603367686271667,
+        "lawn": 0.021090906113386154
+      },
+      "new": {
+        "version": "pool_object_validation_v1",
+        "final_status": "UNKNOWN",
+        "final_pool_object_confidence": 0.6901,
+        "object_role": "principal_pool",
+        "principal_pool_candidate": true,
+        "signals": {
+          "semantic_pool_confidence": 0.0186,
+          "water_confidence": null,
+          "roof_confidence": 0.4979,
+          "road_shadow_confidence": 0.206,
+          "parcel_containment": 1.0,
+          "parcel_edge_risk": 0.055,
+          "building_overlap": null,
+          "road_overlap": null,
+          "geometry_plausibility": 0.889,
+          "area_plausibility": 1.0,
+          "yard_context": 0.7788,
+          "neighbour_risk": 0.0,
+          "crop_containment": 1.0,
+          "deck_or_turf_confidence": 0.0211,
+          "border_contact": 0.055
+        },
+        "reason_codes": [
+          "semantic_conflict_geometry_and_parcel_support"
+        ],
+        "notes": [
+          "Weak or contradictory CLIP is not treated as an automatic veto."
+        ],
+        "contour_retained": true
+      }
+    },
+    {
+      "stand": "677",
+      "old_status": "CONFIRMED",
+      "old_notes": [
+        "fastsam+clip"
+      ],
+      "old_clip": {
+        "pool": 0.9921295046806335,
+        "roof": 0.007189631927758455,
+        "shadow": 0.000153757820953615,
+        "road": 1.3614336239697877e-05,
+        "driveway": 0.00015675363829359412,
+        "lawn": 0.00035687361378222704
+      },
+      "new": {
+        "version": "pool_object_validation_v1",
+        "final_status": "CONFIRMED",
+        "final_pool_object_confidence": 0.8653,
+        "object_role": "principal_pool",
+        "principal_pool_candidate": true,
+        "signals": {
+          "semantic_pool_confidence": 0.9921,
+          "water_confidence": null,
+          "roof_confidence": 0.0072,
+          "road_shadow_confidence": 0.0002,
+          "parcel_containment": 1.0,
+          "parcel_edge_risk": 0.0,
+          "building_overlap": null,
+          "road_overlap": 0.0,
+          "geometry_plausibility": 0.9984,
+          "area_plausibility": 1.0,
+          "yard_context": 0.798,
+          "neighbour_risk": 0.0,
+          "crop_containment": 1.0,
+          "deck_or_turf_confidence": 0.0004,
+          "border_contact": 0.0
+        },
+        "reason_codes": [
+          "semantics_and_geometry_and_true_parcel"
+        ],
+        "notes": [],
+        "contour_retained": true
+      }
+    },
+    {
+      "stand": "612",
+      "old_status": "REJECTED",
+      "old_notes": [
+        "low_pool_evidence"
+      ],
+      "old_clip": {
+        "pool": 0.24987968802452087,
+        "roof": 0.2511866092681885,
+        "shadow": 0.0734785720705986,
+        "road": 0.18777266144752502,
+        "driveway": 0.1265362799167633,
+        "lawn": 0.11114621162414551
+      },
+      "new": {
+        "version": "pool_object_validation_v1",
+        "final_status": "UNKNOWN",
+        "final_pool_object_confidence": 0.72,
+        "object_role": "principal_pool",
+        "principal_pool_candidate": true,
+        "signals": {
+          "semantic_pool_confidence": 0.2499,
+          "water_confidence": null,
+          "roof_confidence": 0.2512,
+          "road_shadow_confidence": 0.1878,
+          "parcel_containment": 1.0,
+          "parcel_edge_risk": 0.2376,
+          "building_overlap": null,
+          "road_overlap": null,
+          "geometry_plausibility": 0.9139,
+          "area_plausibility": 1.0,
+          "yard_context": 0.7506,
+          "neighbour_risk": 0.0,
+          "crop_containment": 1.0,
+          "deck_or_turf_confidence": 0.1111,
+          "border_contact": 0.2376
+        },
+        "reason_codes": [
+          "context_supports_pool_semantics_weak"
+        ],
+        "notes": [
+          "Moderate CLIP without water evidence is not enough to CONFIRMED."
+        ],
+        "contour_retained": true
+      }
+    },
+    {
+      "stand": "408",
+      "old_status": "UNKNOWN",
+      "old_notes": [
+        "no_pool_candidate"
+      ],
+      "old_clip": {},
+      "new": {
+        "version": "pool_object_validation_v1",
+        "final_status": "UNKNOWN",
+        "final_pool_object_confidence": 0.3439,
+        "object_role": "unknown",
+        "principal_pool_candidate": false,
+        "signals": {
+          "semantic_pool_confidence": 0.0,
+          "water_confidence": null,
+          "roof_confidence": 0.0,
+          "road_shadow_confidence": 0.0,
+          "parcel_containment": null,
+          "parcel_edge_risk": 0.0,
+          "building_overlap": null,
+          "road_overlap": null,
+          "geometry_plausibility": 0.112,
+          "area_plausibility": 0.5,
+          "yard_context": 0.45,
+          "neighbour_risk": 0.4,
+          "crop_containment": null,
+          "deck_or_turf_confidence": 0.0,
+          "border_contact": 0.0
+        },
+        "reason_codes": [
+          "missing_true_parcel_geometry"
+        ],
+        "notes": [
+          "Cannot confirm in-parcel identity without the GIS polygon."
+        ],
+        "contour_retained": true
+      }
+    },
+    {
+      "stand": "420",
+      "old_status": "CONFIRMED",
+      "old_notes": [
+        "fastsam+clip"
+      ],
+      "old_clip": {
+        "pool": 0.9640083909034729,
+        "roof": 0.013119042851030827,
+        "shadow": 0.017144987359642982,
+        "road": 5.7808039855444804e-05,
+        "driveway": 0.002720119198784232,
+        "lawn": 0.002949790796265006
+      },
+      "new": {
+        "version": "pool_object_validation_v1",
+        "final_status": "CONFIRMED",
+        "final_pool_object_confidence": 0.765,
+        "object_role": "principal_pool",
+        "principal_pool_candidate": true,
+        "signals": {
+          "semantic_pool_confidence": 0.964,
+          "water_confidence": null,
+          "roof_confidence": 0.0131,
+          "road_shadow_confidence": 0.0171,
+          "parcel_containment": 1.0,
+          "parcel_edge_risk": 0.3383,
+          "building_overlap": null,
+          "road_overlap": 0.0,
+          "geometry_plausibility": 0.4564,
+          "area_plausibility": 1.0,
+          "yard_context": 0.7073,
+          "neighbour_risk": 0.0,
+          "crop_containment": 1.0,
+          "deck_or_turf_confidence": 0.0029,
+          "border_contact": 0.3383
+        },
+        "reason_codes": [
+          "semantics_and_geometry_and_true_parcel"
+        ],
+        "notes": [],
+        "contour_retained": true
+      }
+    },
+    {
+      "stand": "570",
+      "old_status": "REJECTED",
+      "old_notes": [
+        "rejected_as_road_shadow_or_roof"
+      ],
+      "old_clip": {
+        "pool": 0.017048772424459457,
+        "roof": 0.1668621450662613,
+        "shadow": 0.3074607253074646,
+        "road": 0.20541509985923767,
+        "driveway": 0.24841436743736267,
+        "lawn": 0.05479896068572998
+      },
+      "new": {
+        "version": "pool_object_validation_v1",
+        "final_status": "REJECTED",
+        "final_pool_object_confidence": 0.34,
+        "object_role": "roof_or_shadow",
+        "principal_pool_candidate": false,
+        "signals": {
+          "semantic_pool_confidence": 0.017,
+          "water_confidence": null,
+          "roof_confidence": 0.1669,
+          "road_shadow_confidence": 0.3075,
+          "parcel_containment": 1.0,
+          "parcel_edge_risk": 0.2059,
+          "building_overlap": null,
+          "road_overlap": null,
+          "geometry_plausibility": 0.5986,
+          "area_plausibility": 0.4101,
+          "yard_context": 0.7476,
+          "neighbour_risk": 0.0,
+          "crop_containment": 1.0,
+          "deck_or_turf_confidence": 0.0548,
+          "border_contact": 0.2059
+        },
+        "reason_codes": [
+          "road_shadow_weak_pool_geometry"
+        ],
+        "notes": [],
+        "contour_retained": true
+      }
+    },
+    {
+      "stand": "370",
+      "old_status": "REJECTED",
+      "old_notes": [
+        "rejected_as_road_shadow_or_roof"
+      ],
+      "old_clip": {
+        "pool": 0.029418591409921646,
+        "roof": 0.32549768686294556,
+        "shadow": 0.09858548641204834,
+        "road": 0.2936798334121704,
+        "driveway": 0.18201982975006104,
+        "lawn": 0.07079857587814331
+      },
+      "new": {
+        "version": "pool_object_validation_v1",
+        "final_status": "UNKNOWN",
+        "final_pool_object_confidence": 0.6204,
+        "object_role": "principal_pool",
+        "principal_pool_candidate": true,
+        "signals": {
+          "semantic_pool_confidence": 0.0294,
+          "water_confidence": null,
+          "roof_confidence": 0.3255,
+          "road_shadow_confidence": 0.2937,
+          "parcel_containment": 1.0,
+          "parcel_edge_risk": 0.0644,
+          "building_overlap": null,
+          "road_overlap": null,
+          "geometry_plausibility": 0.4838,
+          "area_plausibility": 1.0,
+          "yard_context": 0.7131,
+          "neighbour_risk": 0.0,
+          "crop_containment": 1.0,
+          "deck_or_turf_confidence": 0.0708,
+          "border_contact": 0.0644
+        },
+        "reason_codes": [
+          "semantic_conflict_geometry_and_parcel_support"
+        ],
+        "notes": [
+          "Weak or contradictory CLIP is not treated as an automatic veto."
+        ],
+        "contour_retained": true
+      }
+    }
+  ],
+  "listings": {
+    "116978058": {
+      "old_chosen_id": "116978058-026",
+      "new_chosen_id": "116978058-026",
+      "new_viewpoint": "pool_overview",
+      "new_source": "yoloe_sam2",
+      "frame_selection_reason": "principal_pool_identity then cross-frame agreement then geometry then viewpoint; cluster_size=2; incompatible contours are not averaged viewpoint=pool_overview source=yoloe_sam2 identity=0.845 quality=43.355",
+      "n_principal_candidates": 3,
+      "clusters": {
+        "n_clusters": 2,
+        "clusters": [
+          {
+            "cluster_id": 0,
+            "size": 2,
+            "media_ids": [
+              "116978058-005",
+              "116978058-026"
+            ],
+            "viewpoints": [
+              "pool_overview",
+              "pool_overview"
+            ],
+            "principal_n": 2
+          },
+          {
+            "cluster_id": 1,
+            "size": 1,
+            "media_ids": [
+              "116978058-059"
+            ],
+            "viewpoints": [
+              "ground_level_exterior"
+            ],
+            "principal_n": 1
+          }
+        ],
+        "note": "Incompatible contours are not averaged. Viewpoint never outranks wrong-object identity."
+      },
+      "per_frame": [
+        {
+          "media_id": "116978058-003",
+          "viewpoint": "pool_overview",
+          "source": "fastsam_fallback",
+          "scoring_ready": false,
+          "extraction_quality": 20.0655,
+          "source_reason": "no_valid_yoloe_fastsam_box_sam2",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        },
+        {
+          "media_id": "116978058-004",
+          "viewpoint": "garden_only",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116978058-005",
+          "viewpoint": "pool_overview",
+          "source": "yoloe",
+          "scoring_ready": true,
+          "extraction_quality": 40.0962,
+          "source_reason": "yoloe_valid_sam2_rejected_or_unhelpful",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        },
+        {
+          "media_id": "116978058-006",
+          "viewpoint": "ground_level_exterior",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116978058-014",
+          "viewpoint": "ground_level_exterior",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116978058-016",
+          "viewpoint": "ground_level_exterior",
+          "source": "fastsam_fallback",
+          "scoring_ready": false,
+          "extraction_quality": 12.4814,
+          "source_reason": "no_valid_yoloe_fastsam_box_sam2",
+          "principal_pool_candidate": false,
+          "object_role": "turf_or_deck",
+          "pool_object_status": "REJECTED"
+        },
+        {
+          "media_id": "116978058-018",
+          "viewpoint": "pool_closeup",
+          "source": "yoloe",
+          "scoring_ready": false,
+          "extraction_quality": 4.2626,
+          "source_reason": "closeup_recorded_not_overview",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        },
+        {
+          "media_id": "116978058-019",
+          "viewpoint": "pool_overview",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116978058-026",
+          "viewpoint": "pool_overview",
+          "source": "yoloe_sam2",
+          "scoring_ready": true,
+          "extraction_quality": 43.3547,
+          "source_reason": "yoloe_valid_sam2_iou_ok",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        },
+        {
+          "media_id": "116978058-042",
+          "viewpoint": "ground_level_exterior",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116978058-056",
+          "viewpoint": "ground_level_exterior",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116978058-057",
+          "viewpoint": "ground_level_exterior",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116978058-058",
+          "viewpoint": "ground_level_exterior",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116978058-059",
+          "viewpoint": "ground_level_exterior",
+          "source": "yoloe_sam2",
+          "scoring_ready": true,
+          "extraction_quality": 34.7158,
+          "source_reason": "yoloe_valid_sam2_iou_ok",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        }
+      ]
+    },
+    "116889694": {
+      "old_chosen_id": null,
+      "new_chosen_id": null,
+      "new_viewpoint": null,
+      "new_source": null,
+      "frame_selection_reason": null,
+      "n_principal_candidates": 0,
+      "clusters": {
+        "n_clusters": 0,
+        "clusters": [],
+        "note": "Incompatible contours are not averaged. Viewpoint never outranks wrong-object identity."
+      },
+      "per_frame": [
+        {
+          "media_id": "116889694-002",
+          "viewpoint": "aerial_near_nadir",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "fastsam_presence_without_valid_boundary",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116889694-026",
+          "viewpoint": "elevated_exterior",
+          "source": "fastsam_fallback",
+          "scoring_ready": false,
+          "extraction_quality": 23.5962,
+          "source_reason": "no_valid_yoloe_fastsam_box_sam2",
+          "principal_pool_candidate": false,
+          "object_role": "turf_or_deck",
+          "pool_object_status": "REJECTED"
+        },
+        {
+          "media_id": "116889694-027",
+          "viewpoint": "pool_overview",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "116889694-028",
+          "viewpoint": "elevated_exterior",
+          "source": "no_usable_geometry",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "no_yoloe_no_fastsam",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        }
+      ]
+    },
+    "117262832": {
+      "old_chosen_id": "117262832-039",
+      "new_chosen_id": "117262832-038",
+      "new_viewpoint": "pool_overview",
+      "new_source": "yoloe_sam2",
+      "frame_selection_reason": "principal_pool_identity then cross-frame agreement then geometry then viewpoint; cluster_size=2; incompatible contours are not averaged viewpoint=pool_overview source=yoloe_sam2 identity=0.69 quality=44.654",
+      "n_principal_candidates": 2,
+      "clusters": {
+        "n_clusters": 1,
+        "clusters": [
+          {
+            "cluster_id": 0,
+            "size": 2,
+            "media_ids": [
+              "117262832-037",
+              "117262832-038"
+            ],
+            "viewpoints": [
+              "pool_overview",
+              "pool_overview"
+            ],
+            "principal_n": 2
+          }
+        ],
+        "note": "Incompatible contours are not averaged. Viewpoint never outranks wrong-object identity."
+      },
+      "per_frame": [
+        {
+          "media_id": "117262832-003",
+          "viewpoint": "aerial_near_nadir",
+          "source": "fastsam_fallback",
+          "scoring_ready": true,
+          "extraction_quality": 63.5348,
+          "source_reason": "no_valid_yoloe_fastsam_selected",
+          "principal_pool_candidate": false,
+          "object_role": "neighbouring_pool",
+          "pool_object_status": "REJECTED"
+        },
+        {
+          "media_id": "117262832-004",
+          "viewpoint": "ground_level_exterior",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "CLIP semantic rejection: contamination_exceeds_pool",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "117262832-005",
+          "viewpoint": "pool_overview",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "extraction_quality": 18.9408,
+          "source_reason": "viewpoint gate rejection: fastsam_not_aerial_planform",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        },
+        {
+          "media_id": "117262832-006",
+          "viewpoint": "ground_level_exterior",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "extraction_quality": 11.3347,
+          "source_reason": "wrong-object rejection: vegetation",
+          "principal_pool_candidate": false,
+          "object_role": "water_feature",
+          "pool_object_status": "UNKNOWN"
+        },
+        {
+          "media_id": "117262832-007",
+          "viewpoint": "ground_level_exterior",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "extraction_quality": 0.0,
+          "source_reason": "CLIP semantic rejection: bathtub_or_bathroom",
+          "principal_pool_candidate": false,
+          "object_role": "unknown",
+          "pool_object_status": null
+        },
+        {
+          "media_id": "117262832-008",
+          "viewpoint": "pool_overview",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "extraction_quality": 18.1147,
+          "source_reason": "candidate below minimum area",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        },
+        {
+          "media_id": "117262832-014",
+          "viewpoint": "ground_level_exterior",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "extraction_quality": 9.6781,
+          "source_reason": "candidate below minimum area",
+          "principal_pool_candidate": false,
+          "object_role": "water_feature",
+          "pool_object_status": "UNKNOWN"
+        },
+        {
+          "media_id": "117262832-017",
+          "viewpoint": "ground_level_exterior",
+          "source": "presence_only",
+          "scoring_ready": false,
+          "extraction_quality": 11.671,
+          "source_reason": "candidate below minimum area",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        },
+        {
+          "media_id": "117262832-037",
+          "viewpoint": "pool_overview",
+          "source": "yoloe_sam2",
+          "scoring_ready": true,
+          "extraction_quality": 42.8181,
+          "source_reason": "yoloe_valid_sam2_box",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        },
+        {
+          "media_id": "117262832-038",
+          "viewpoint": "pool_overview",
+          "source": "yoloe_sam2",
+          "scoring_ready": true,
+          "extraction_quality": 44.6537,
+          "source_reason": "yoloe_valid_sam2_box",
+          "principal_pool_candidate": true,
+          "object_role": "principal_pool",
+          "pool_object_status": "CONFIRMED"
+        },
+        {
+          "media_id": "117262832-039",
+          "viewpoint": "aerial_near_nadir",
+          "source": "fastsam_fallback",
+          "scoring_ready": true,
+          "extraction_quality": 64.0662,
+          "source_reason": "no_valid_yoloe_fastsam_selected",
+          "principal_pool_candidate": false,
+          "object_role": "neighbouring_pool",
+          "pool_object_status": "REJECTED"
+        }
+      ]
+    }
+  },
+  "verdicts": {
+    "stand_338_old": "REJECTED",
+    "stand_338_new": "UNKNOWN",
+    "stand_338_independent_signals": true,
+    "listing_117262832_principal_pool": "YES",
+    "regression_570_rejected": true,
+    "regression_612_not_confirmed": true,
+    "regression_408_not_confirmed": true
+  },
+  "panel_paths": [
+    "data/investigations/pool_object_validation_v1/panels/candidate_338.jpg",
+    "data/investigations/pool_object_validation_v1/panels/candidate_408.jpg",
+    "data/investigations/pool_object_validation_v1/panels/candidate_420.jpg",
+    "data/investigations/pool_object_validation_v1/panels/candidate_570.jpg",
+    "data/investigations/pool_object_validation_v1/panels/candidate_612.jpg",
+    "data/investigations/pool_object_validation_v1/panels/listing_117262832_frames.jpg",
+    "data/investigations/pool_object_validation_v1/panels/listing_117262832_old_vs_new.jpg"
+  ],
+  "note": "Diagnostic only. Frozen OS JSON and blind freeze trees were not rewritten."
+}

@@ -142,6 +142,9 @@ class FrameGeometry:
     spa_relationship: dict[str, Any] | None = None
     geometry_quality: float = 0.0
     scoring_ready_reason: str = ""
+    pool_object_validation: dict[str, Any] | None = None
+    principal_pool_candidate: bool = False
+    object_role: str = "unknown"
 
 
 def predict_yoloe_cfg(model, bgr: np.ndarray, names: list[str], *, conf: float, imgsz: int):
@@ -1281,7 +1284,57 @@ def extract_frame_geometry(media_id: str, image_bytes: bytes, *, viewpoint: str 
         spa_relationship=spa,
     )
     quality_frame.geometry_quality = round(extraction_quality(quality_frame), 4)
+    attach_listing_object_validation(quality_frame)
     return quality_frame
+
+
+def attach_listing_object_validation(frame: FrameGeometry) -> FrameGeometry:
+    """Annotate a frame with Pool Object Validation v1. scoring_ready is unchanged."""
+    from backend.gis.estate_ags_matching.pool_object_validation_v1 import validate_listing_pool_object
+
+    dominant = frame.dominant or {}
+    if not dominant:
+        frame.pool_object_validation = {
+            "final_status": "UNKNOWN",
+            "principal_pool_candidate": False,
+            "object_role": "unknown",
+            "reason_codes": ["no_dominant_candidate"],
+        }
+        frame.principal_pool_candidate = False
+        frame.object_role = "unknown"
+        return frame
+    geom = dominant.get("geometry") or {}
+    centroid = dominant.get("centroid_xy")
+    if isinstance(centroid, (list, tuple)) and len(centroid) >= 2:
+        cxy = (float(centroid[0]), float(centroid[1]))
+    else:
+        contour = dominant.get("contour_image") or frame.contour_image
+        cxy = None
+        if contour:
+            xs = [float(p[0]) for p in contour]
+            ys = [float(p[1]) for p in contour]
+            if xs:
+                cxy = (sum(xs) / len(xs), sum(ys) / len(ys))
+    secondary = frame.secondary or {}
+    spa = frame.spa_relationship or {}
+    val = validate_listing_pool_object(
+        viewpoint=frame.viewpoint,
+        source=frame.source,
+        clip=dominant.get("clip") or {},
+        geometry=geom,
+        relative_area=dominant.get("relative_area") or geom.get("relative_area"),
+        centroid_xy=cxy,
+        box=dominant.get("box"),
+        contour=dominant.get("contour_image") or frame.contour_image,
+        secondary_relative_area=secondary.get("relative_area") if secondary else None,
+        secondary_adjacent=spa.get("adjacent"),
+        scoring_ready=frame.scoring_ready,
+        yoloe_conf=frame.yoloe_conf,
+    )
+    frame.pool_object_validation = val.to_dict()
+    frame.principal_pool_candidate = val.principal_pool_candidate
+    frame.object_role = val.object_role
+    return frame
 
 
 def _frame_agreement(frames: list[FrameGeometry]) -> dict[str, Any]:
@@ -1304,22 +1357,17 @@ def _frame_agreement(frames: list[FrameGeometry]) -> dict[str, Any]:
 
 
 def combine_listing_frames(frames: list[FrameGeometry]) -> dict[str, Any]:
-    """Independent descriptors; do not merge image-space masks. Weak must not outweigh clean."""
+    """Independent descriptors; do not merge image-space masks.
+
+    Official pick order: object identity → cross-frame agreement → geometry
+    quality → viewpoint. Aerial never wins merely because it is aerial when the
+    segmented object is not the principal pool.
+    """
+    from backend.gis.estate_ags_matching.pool_object_validation_v1 import select_principal_listing_pool
+
+    chosen, principal_meta = select_principal_listing_pool(frames)
     ready = [f for f in frames if f.scoring_ready and f.dominant is not None]
     overviews = [f for f in ready if f.viewpoint in OVERVIEW_VIEWS]
-    pool = overviews or ready
-    chosen = None
-    if pool:
-        chosen = max(
-            pool,
-            key=lambda f: (
-                VIEW_GEOMETRY_RANK.get(f.viewpoint, 0),
-                extraction_quality(f),
-                SOURCE_RANK.get(f.source, -1),
-                float(f.dominant.get("structural_support") or 0.0) if f.dominant else 0.0,
-                float(f.yoloe_conf or 0.0),
-            ),
-        )
     axes = []
     for f in overviews:
         ang = (f.descriptors or {}).get("orientation_deg")
@@ -1343,9 +1391,15 @@ def combine_listing_frames(frames: list[FrameGeometry]) -> dict[str, Any]:
             "scoring_ready": f.scoring_ready,
             "extraction_quality": round(extraction_quality(f), 4),
             "source_reason": f.source_reason,
+            "principal_pool_candidate": bool(getattr(f, "principal_pool_candidate", False)),
+            "object_role": getattr(f, "object_role", "unknown"),
+            "pool_object_status": None
+            if not getattr(f, "pool_object_validation", None)
+            else (f.pool_object_validation or {}).get("final_status"),
         }
         for f in frames
     ]
+    chosen_val = None if chosen is None else (getattr(chosen, "pool_object_validation", None) or {})
     return {
         "n_frames": len(frames),
         "n_scoring_ready": len(ready),
@@ -1357,14 +1411,21 @@ def combine_listing_frames(frames: list[FrameGeometry]) -> dict[str, Any]:
         "frame_selection_reason": None
         if chosen is None
         else (
-            f"best_valid_geometry viewpoint={chosen.viewpoint} source={chosen.source} "
-            f"quality={round(extraction_quality(chosen), 3)}; aerial/near-nadir outranks oblique when both valid; "
-            "incompatible contours are not averaged"
+            f"{principal_meta.get('selection_reason')} viewpoint={chosen.viewpoint} "
+            f"source={chosen.source} identity={round(float((chosen_val or {}).get('final_pool_object_confidence') or 0), 3)} "
+            f"quality={round(extraction_quality(chosen), 3)}"
         ),
         "multiframe_axis_partners": partners,
         "multiframe_agreement": agreement,
+        "multiframe_clusters": principal_meta.get("multiframe_clusters"),
+        "n_principal_candidates": principal_meta.get("n_principal_candidates"),
+        "chosen_pool_object_validation": chosen_val or None,
         "per_frame_extraction_quality": qualities,
-        "note": "Masks are not merged. One clean YOLOE/SAM2 frame outweighs several weak detections. Near-nadir outranks oblique.",
+        "note": (
+            "Masks are not merged. Object identity outranks viewpoint. "
+            "Aerial does not win when it isolates the wrong object. "
+            "Incompatible contours are not averaged."
+        ),
         "oblique": True if chosen is None else chosen.oblique,
         "nadir_area_manufactured": False,
     }
@@ -1395,4 +1456,7 @@ def frame_public(frame: FrameGeometry) -> dict[str, Any]:
         "geometry_loss": frame.geometry_loss,
         "spa_relationship": frame.spa_relationship,
         "geometry_quality": frame.geometry_quality,
+        "pool_object_validation": frame.pool_object_validation,
+        "principal_pool_candidate": frame.principal_pool_candidate,
+        "object_role": frame.object_role,
     }

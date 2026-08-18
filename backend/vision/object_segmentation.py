@@ -52,6 +52,7 @@ class ObjectMask:
     clip: dict[str, float] = field(default_factory=dict)
     notes: list[str] = field(default_factory=list)
     geometry: dict[str, Any] = field(default_factory=dict)
+    validation: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -327,109 +328,152 @@ def water_seed_masks(bgr: np.ndarray, parcel: np.ndarray) -> list[np.ndarray]:
     return seeds
 
 
+def _independent_roof_mask(bgr: np.ndarray, parcel: np.ndarray, candidate: np.ndarray) -> np.ndarray | None:
+    seeds = roof_seed_masks(bgr, parcel, candidate)
+    if not seeds:
+        return None
+    merged = _merge_bool(seeds)
+    merged = np.logical_and(merged, np.logical_not(candidate))
+    return merged if merged.any() else None
+
+
+def _independent_paved_mask(bgr: np.ndarray, parcel: np.ndarray, candidate: np.ndarray) -> np.ndarray | None:
+    hsv = cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)
+    hue, sat, val = cv2.split(hsv)
+    paved = ((sat <= 55) & (val >= 50) & (val <= 200) & ((hue <= 40) | (hue >= 160))).astype(bool)
+    paved = np.logical_and(paved, parcel > 0)
+    paved = np.logical_and(paved, np.logical_not(candidate))
+    return paved if paved.any() else None
+
+
 def select_pool(
     bgr: np.ndarray,
     masks: list[np.ndarray],
     parcel: np.ndarray,
     building: np.ndarray | None,
 ) -> ObjectMask:
+    """Propose pool blobs, then Pool Object Validation v1 decides status.
+
+    CLIP is evidence, not a keep-stage veto. True-parcel containment uses the
+    GIS polygon raster (``parcel``), never crop-as-parcel padding.
+    """
+    from backend.gis.estate_ags_matching.pool_object_validation_v1 import validate_candidate_pool_object
+
     height, width = bgr.shape[:2]
-    scored: list[tuple[float, np.ndarray, dict, dict]] = []
+    true_parcel = np.asarray(parcel) > 0
+    scored: list[tuple[float, np.ndarray, dict, dict, Any, np.ndarray]] = []
     proposals = list(masks) + water_seed_masks(bgr, parcel)
     for mask in proposals:
-        clipped = _in_parcel(mask, parcel)
+        raw = np.asarray(mask).astype(bool)
+        clipped = _in_parcel(raw, parcel)
         if int(clipped.sum()) < 40:
             continue
         area_m2 = float(clipped.sum()) * (NATIVE_M_PER_PX ** 2)
         if area_m2 < 8.0 or area_m2 > 140.0:
             continue
-        inside = _parcel_frac(mask, parcel)
-        if inside < 0.40:
+        inside = _parcel_frac(raw, parcel)
+        if inside < 0.15:
             continue
         water = water_fraction(bgr, clipped)
         veg = vegetation_fraction(bgr, clipped)
         if water < 0.08 and veg > 0.45:
             continue
         clip = clip_region(bgr, clipped)
-        rival = max(clip["roof"], clip["shadow"], clip["road"], clip["driveway"], clip["lawn"])
-        gap = clip["pool"] - rival
         geom = contour_geometry(clipped)
-        area_m2 = float(geom.get("area_m2") or 0)
-        compact = float(geom.get("compactness") or 0)
-        rectangularity = float(geom.get("rectangularity") or 0)
-        if clip["shadow"] >= 0.40 and clip["pool"] < clip["shadow"]:
-            continue
-        typical = 1.0 if 10.0 <= area_m2 <= 80.0 else (0.35 if area_m2 <= 110.0 else 0.05)
-        water_shape = water >= 0.55 and compact >= 0.28 and rectangularity >= 0.50
-        if clip["pool"] < 0.18 and not water_shape:
-            continue
-        if clip["roof"] > clip["pool"] and water < 0.25:
-            continue
-        if clip["road"] > 0.35 and water < 0.30:
-            continue
-        score = (
-            0.40 * clip["pool"]
-            + 0.20 * max(gap, 0.0)
-            + 0.25 * water
-            + 0.15 * typical
+        area_m2 = float(geom.get("area_m2") or area_m2)
+        roof_est = _independent_roof_mask(bgr, parcel, clipped)
+        if building is not None:
+            roof_est = building if roof_est is None else np.logical_or(roof_est, building)
+            roof_est = np.logical_and(roof_est, np.logical_not(clipped))
+        paved_est = _independent_paved_mask(bgr, parcel, clipped)
+        bld_xy = None
+        if building is not None and np.any(building):
+            ys, xs = np.where(building)
+            bld_xy = (float(xs.mean() / max(width - 1, 1)), float(ys.mean() / max(height - 1, 1)))
+        validation = validate_candidate_pool_object(
+            clip=clip,
+            geometry=geom,
+            mask=raw,
+            true_parcel=true_parcel,
+            building_mask=roof_est,
+            road_mask=paved_est,
+            water_frac=water,
+            vegetation_frac=veg,
+            centroid_xy=(
+                None
+                if geom.get("centroid_x") is None
+                else (float(geom["centroid_x"]), float(geom.get("centroid_y") or 0.5))
+            ),
+            building_centroid=bld_xy,
+            crop_shape=(height, width),
         )
+        typical = 1.0 if 10.0 <= area_m2 <= 80.0 else (0.35 if area_m2 <= 110.0 else 0.05)
+        rank = (
+            0.30 * validation.final_pool_object_confidence
+            + 0.22 * water
+            + 0.18 * float(geom.get("compactness") or 0.0)
+            + 0.16 * typical
+            + 0.14 * float(clip.get("pool") or 0.0)
+        )
+        if validation.final_status == "REJECTED":
+            rank *= 0.20
+        elif validation.final_status == "CONFIRMED":
+            rank += 0.15
         scored.append(
             (
-                score,
+                rank,
                 clipped,
                 clip,
                 {
                     "water": water,
                     "veg": veg,
                     "inside": inside,
-                    "gap": gap,
                     "area_m2": area_m2,
-                    "water_shape": water_shape,
+                    "unclipped_containment": inside,
                 },
+                validation,
+                raw,
             )
         )
-    empty = ObjectMask(kind="pool", mask=np.zeros((height, width), bool), status="UNKNOWN", notes=["no_pool_candidate"])
+    empty = ObjectMask(
+        kind="pool",
+        mask=np.zeros((height, width), bool),
+        status="UNKNOWN",
+        notes=["no_pool_candidate"],
+        validation={"final_status": "UNKNOWN", "reason_codes": ["no_pool_candidate"], "contour_retained": False},
+    )
     if not scored:
         return empty
-    scored.sort(key=lambda item: item[0], reverse=True)
-    typical_first = [item for item in scored if 10.0 <= item[3]["area_m2"] <= 80.0]
-    ranked = typical_first or scored
-    keep = [
-        item
-        for item in ranked
-        if item[2]["pool"] >= 0.40 and item[3]["water"] >= 0.12
-    ]
-    if not keep:
-        best = ranked[0]
-        clip = best[2]
-        status = "REJECTED"
-        notes = ["low_pool_evidence"]
-        if clip["road"] > 0.2 or clip["shadow"] > 0.35 or clip["roof"] > 0.4:
-            notes = ["rejected_as_road_shadow_or_roof"]
-        geom = contour_geometry(best[1])
-        return ObjectMask(kind="pool", mask=best[1], status=status, score=best[0], clip=clip, notes=notes, geometry=geom)
-    # Do not merge distant FastSAM fragments — that bloated 677/491 onto paving.
-    mask = keep[0][1]
-    best_inside = keep[0][3]["inside"]
-    clip = keep[0][2]
-    water = keep[0][3]["water"]
+    scored.sort(
+        key=lambda item: (
+            0 if item[4].final_status == "REJECTED" else (2 if item[4].final_status == "CONFIRMED" else 1),
+            item[0],
+        ),
+        reverse=True,
+    )
+    typical_first = [item for item in scored if item[4].final_status != "REJECTED" and 10.0 <= item[3]["area_m2"] <= 80.0]
+    ranked = typical_first or [item for item in scored if item[4].final_status != "REJECTED"] or scored
+    best = ranked[0]
+    validation = best[4]
+    mask = best[1]
+    clip = best[2]
     geom = contour_geometry(mask)
-    notes = ["fastsam+clip"] if clip["pool"] >= 0.45 else ["water-geometry"]
-    if best_inside < 0.7:
-        notes.append("partially_outside_parcel")
+    notes = list(validation.reason_codes)
+    notes.extend(validation.notes)
+    if best[3]["inside"] < 0.70:
+        notes.append("partially_outside_true_parcel")
     if building is not None and _overlap(mask, building) > 0.2:
         notes.append("touches_building")
-    status = "PROBABLE"
-    if clip["pool"] >= 0.70 and water >= 0.15 and best_inside >= 0.60:
-        status = "CONFIRMED"
-    elif clip["pool"] < 0.22 and water < 0.50:
-        status = "UNKNOWN"
-    area_m2 = geom.get("area_m2") or 0
-    if area_m2 < 8 or area_m2 > 140:
-        notes.append(f"unusual_area_m2={area_m2:.1f}")
-        if status == "CONFIRMED":
-            status = "PROBABLE"
-    return ObjectMask(kind="pool", mask=mask, status=status, score=float(clip.get("pool") or keep[0][0]), clip=clip, notes=notes, geometry=geom)
+    return ObjectMask(
+        kind="pool",
+        mask=mask,
+        status=validation.final_status,
+        score=float(validation.final_pool_object_confidence),
+        clip=clip,
+        notes=notes,
+        geometry=geom,
+        validation=validation.to_dict(),
+    )
 
 
 def roof_seed_masks(bgr: np.ndarray, parcel: np.ndarray, pool: np.ndarray | None) -> list[np.ndarray]:
@@ -793,6 +837,7 @@ def objects_to_json(result: ParcelObjects) -> dict[str, Any]:
             "geometry": {k: v for k, v in obj.geometry.items() if k != "contour_image"}
             | {"contour_n": len(obj.geometry.get("contour_image") or [])},
             "contour": obj.geometry.get("contour_image"),
+            "validation": obj.validation or None,
         }
 
     return {
