@@ -105,6 +105,7 @@ def test_hybrid_extraction_has_no_listing_or_gt_exceptions():
     assert "fastsam_fallback" in rank_src
     assert "V2_WEIGHTS_NO_BUILDING" in rank_src
     assert "presence_only" in rank_src
+    assert "corner" not in V2_WEIGHTS_NO_BUILDING
     assert "116889694" not in rank_src
     assert "116978058" not in rank_src
 

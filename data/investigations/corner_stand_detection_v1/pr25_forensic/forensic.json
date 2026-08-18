@@ -1,0 +1,601 @@
+{
+  "experiment": "pr25_corner_gate_forensic",
+  "not_a_rerank": true,
+  "pie_modified": false,
+  "scores_recomputed": false,
+  "historical_freeze_sha256": "32ecd4b526d4a299e143c869761664a9ed7a4b2d9ae65aba6ed300583a1dd10a",
+  "historical_freeze_sha256_verified": true,
+  "historical_freeze_commit": "4f24f3f",
+  "historical_pr": 25,
+  "corner_gate_pr": 26,
+  "true_stand": "338",
+  "identity_used_in_classification_or_ranking": false,
+  "listing_corner": {
+    "classification": "YES",
+    "confidence": 0.86,
+    "high_confidence": true,
+    "source": "aerial",
+    "frame_ids": [
+      "117262832-003"
+    ]
+  },
+  "stand_338_frozen": {
+    "rank": 122,
+    "n": 332,
+    "extension": "SUMMERSET EXT.6",
+    "total_score": 0.5847,
+    "inventory_pool_status": "UNKNOWN",
+    "os_pool_status": "REJECTED",
+    "os_high_conf_pool": false,
+    "shape_v2": null,
+    "spatial_v2": null,
+    "coverage": 0.0,
+    "aerial_similarity": 0.7943,
+    "exterior_similarity": 0.7396,
+    "area_sqm": 869.0,
+    "contrib": {
+      "pool_presence": 0.07,
+      "shape_v2": 0.18,
+      "spatial_v2": 0.11,
+      "aerial": 0.0953,
+      "exterior": 0.0444,
+      "gis": 0.015,
+      "stand_size": 0.07
+    },
+    "weights": {
+      "pool_presence": 0.14,
+      "shape_v2": 0.36,
+      "spatial_v2": 0.22,
+      "aerial": 0.12,
+      "exterior": 0.06,
+      "gis": 0.03,
+      "stand_size": 0.07
+    },
+    "genuine_evidence_contrib": {
+      "aerial": 0.0953,
+      "exterior": 0.0444,
+      "stand_size": 0.07
+    },
+    "neutral_default_contrib": {
+      "pool_presence": 0.07,
+      "shape_v2": 0.18,
+      "spatial_v2": 0.11,
+      "gis": 0.015
+    },
+    "genuine_sum": 0.2097,
+    "neutral_sum": 0.375,
+    "pct_from_actual_evidence": 35.86,
+    "pct_from_padding_defaults": 64.14
+  },
+  "stand_338_os_frozen": {
+    "status": "REJECTED",
+    "method_notes": [
+      "rejected_as_road_shadow_or_roof"
+    ],
+    "clip": {
+      "pool": 0.018594350665807724,
+      "roof": 0.4978681206703186,
+      "shadow": 0.13189499080181122,
+      "road": 0.12451796978712082,
+      "driveway": 0.20603367686271667,
+      "lawn": 0.021090906113386154
+    },
+    "contour_available": true,
+    "contour_used_in_scoring": false,
+    "contour_n": 69,
+    "aspect_ratio": 1.49,
+    "convexity_solidity_proxy": 0.9234,
+    "compactness": 0.6313,
+    "rectangularity": 0.6223,
+    "shape_class": "kidney_or_curved",
+    "area_m2": 49.65,
+    "centroid_norm": [
+      0.415,
+      0.5019
+    ],
+    "centroid_xy_px": [
+      163.5,
+      231.4
+    ],
+    "n_major_indents": null,
+    "n_major_directional_changes": null,
+    "pool_house_relationship": null,
+    "old_pool_to_house_dist": 0.182,
+    "building_centroid_norm": [
+      0.5138,
+      0.4534
+    ],
+    "unknown_or_default_fields": [
+      "shape_v2 (null in freeze \u2014 0.5-neutral contrib 0.18)",
+      "spatial_v2 (null \u2014 0.5-neutral contrib 0.11)",
+      "n_major_indents (not stored on OS v1 payload)",
+      "n_major_directional_changes (not stored on OS v1 payload)",
+      "relationships.pool_house is null"
+    ]
+  },
+  "listing_official_fingerprint": {
+    "frame": "117262832-039",
+    "source": "fastsam_fallback",
+    "viewpoint": "aerial_near_nadir",
+    "aspect_ratio": 2.418,
+    "solidity": 0.9463,
+    "n_major_indents": 1,
+    "n_major_directional_changes": 5,
+    "shape_class": "irregular",
+    "centroid": [
+      0.6483,
+      0.0577
+    ],
+    "relative_area": 0.0027,
+    "note": "centroid_y=0.0577 is near the top of the frame; Distinctive Contour v2 is diagnostic only and was not a ranking input"
+  },
+  "geometry_quality_verdict": "MISSING",
+  "geometry_quality_why": "Native15 shows an elongated rectangular backyard pool, but frozen OS v1 REJECTED the in-parcel blob (CLIP pool=0.019 vs roof=0.498, note rejected_as_road_shadow_or_roof). That blob never entered Scoring v2, so shape_v2 is null and pool-presence is 0.5-neutral. A 69-pt kidney_or_curved 49.7 m\u00b2 object exists in the OS JSON but is not a scoring input.",
+  "false_top5_comparison": [
+    {
+      "stand_number": "654",
+      "frozen_rank": 1,
+      "frozen_score": 0.7725,
+      "township": "SUMMERSET EXT.13",
+      "inventory_pool_status": "YES",
+      "os_pool_status": "CONFIRMED",
+      "os_method": [
+        "fastsam+clip"
+      ],
+      "os_clip_pool": 0.7637449502944946,
+      "shape_v2": 0.8744,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.3148,
+        "spatial_v2": 0.11,
+        "aerial": 0.0958,
+        "exterior": 0.0434,
+        "gis": 0.015,
+        "stand_size": 0.0535
+      },
+      "aerial_similarity": 0.7982,
+      "exterior_similarity": 0.7236,
+      "os_aspect": 1.386,
+      "os_convexity": 0.8983,
+      "os_shape": "kidney_or_curved",
+      "os_contour_n": 43,
+      "parcel_corner": "NO",
+      "corner_gate_removes": true,
+      "known_false_status_used": false,
+      "vs_338": {
+        "components_that_outranked_338": [
+          "pool_presence",
+          "shape_v2",
+          "spatial_neutral_tie",
+          "aerial",
+          "exterior_near_tie",
+          "stand_size_hurt_false_candidate",
+          "gis_neutral_tie"
+        ],
+        "principal": [
+          "shape_v2 (accepted OS contour vs 338 null)",
+          "pool_presence (0.14 vs 338 0.5-neutral 0.07)"
+        ]
+      }
+    },
+    {
+      "stand_number": "467",
+      "frozen_rank": 2,
+      "frozen_score": 0.7479,
+      "township": "SUMMERSET EXT.6",
+      "inventory_pool_status": "YES",
+      "os_pool_status": "CONFIRMED",
+      "os_method": [
+        "fastsam+clip"
+      ],
+      "os_clip_pool": 0.9854199290275574,
+      "shape_v2": 0.7776,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.2799,
+        "spatial_v2": 0.11,
+        "aerial": 0.0925,
+        "exterior": 0.0427,
+        "gis": 0.015,
+        "stand_size": 0.0679
+      },
+      "aerial_similarity": 0.7706,
+      "exterior_similarity": 0.7113,
+      "os_aspect": 1.076,
+      "os_convexity": 0.9406,
+      "os_shape": "rectangular",
+      "os_contour_n": 59,
+      "parcel_corner": "NO",
+      "corner_gate_removes": true,
+      "known_false_status_used": false,
+      "vs_338": {
+        "components_that_outranked_338": [
+          "pool_presence",
+          "shape_v2",
+          "spatial_neutral_tie",
+          "aerial_near_tie",
+          "exterior_near_tie",
+          "stand_size_hurt_false_candidate",
+          "gis_neutral_tie"
+        ],
+        "principal": [
+          "shape_v2 (accepted OS contour vs 338 null)",
+          "pool_presence (0.14 vs 338 0.5-neutral 0.07)"
+        ]
+      }
+    },
+    {
+      "stand_number": "405",
+      "frozen_rank": 3,
+      "frozen_score": 0.7393,
+      "township": "SUMMERSET EXT.6",
+      "inventory_pool_status": "YES",
+      "os_pool_status": "CONFIRMED",
+      "os_method": [
+        "fastsam+clip"
+      ],
+      "os_clip_pool": 0.8811845183372498,
+      "shape_v2": 0.7623,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.2744,
+        "spatial_v2": 0.11,
+        "aerial": 0.0922,
+        "exterior": 0.0428,
+        "gis": 0.015,
+        "stand_size": 0.0648
+      },
+      "aerial_similarity": 0.7681,
+      "exterior_similarity": 0.7141,
+      "os_aspect": 1.558,
+      "os_convexity": 0.9367,
+      "os_shape": "rectangular",
+      "os_contour_n": 67,
+      "parcel_corner": "NO",
+      "corner_gate_removes": true,
+      "known_false_status_used": false,
+      "vs_338": {
+        "components_that_outranked_338": [
+          "pool_presence",
+          "shape_v2",
+          "spatial_neutral_tie",
+          "aerial_near_tie",
+          "exterior_near_tie",
+          "stand_size_hurt_false_candidate",
+          "gis_neutral_tie"
+        ],
+        "principal": [
+          "shape_v2 (accepted OS contour vs 338 null)",
+          "pool_presence (0.14 vs 338 0.5-neutral 0.07)"
+        ]
+      }
+    },
+    {
+      "stand_number": "644",
+      "frozen_rank": 4,
+      "frozen_score": 0.7388,
+      "township": "SUMMERSET EXT.13",
+      "inventory_pool_status": "YES",
+      "os_pool_status": "PROBABLE",
+      "os_method": [
+        "fastsam+clip"
+      ],
+      "os_clip_pool": 0.9278529286384583,
+      "shape_v2": 0.7691,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.2769,
+        "spatial_v2": 0.11,
+        "aerial": 0.0983,
+        "exterior": 0.0449,
+        "gis": 0.015,
+        "stand_size": 0.0537
+      },
+      "aerial_similarity": 0.8193,
+      "exterior_similarity": 0.7487,
+      "os_aspect": 1.146,
+      "os_convexity": 0.9566,
+      "os_shape": "rectangular",
+      "os_contour_n": 55,
+      "parcel_corner": "UNKNOWN",
+      "corner_gate_removes": false,
+      "known_false_status_used": false,
+      "vs_338": {
+        "components_that_outranked_338": [
+          "pool_presence",
+          "shape_v2",
+          "spatial_neutral_tie",
+          "aerial",
+          "exterior",
+          "stand_size_hurt_false_candidate",
+          "gis_neutral_tie"
+        ],
+        "principal": [
+          "shape_v2 (accepted OS contour vs 338 null)",
+          "pool_presence (0.14 vs 338 0.5-neutral 0.07)"
+        ]
+      }
+    },
+    {
+      "stand_number": "456",
+      "frozen_rank": 5,
+      "frozen_score": 0.7362,
+      "township": "SUMMERSET EXT.6",
+      "inventory_pool_status": "YES",
+      "os_pool_status": "CONFIRMED",
+      "os_method": [
+        "fastsam+clip"
+      ],
+      "os_clip_pool": 0.982040286064148,
+      "shape_v2": 0.7687,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.2767,
+        "spatial_v2": 0.11,
+        "aerial": 0.0923,
+        "exterior": 0.0418,
+        "gis": 0.015,
+        "stand_size": 0.0603
+      },
+      "aerial_similarity": 0.7689,
+      "exterior_similarity": 0.6971,
+      "os_aspect": 1.432,
+      "os_convexity": 0.8695,
+      "os_shape": "kidney_or_curved",
+      "os_contour_n": 94,
+      "parcel_corner": "NO",
+      "corner_gate_removes": true,
+      "known_false_status_used": false,
+      "vs_338": {
+        "components_that_outranked_338": [
+          "pool_presence",
+          "shape_v2",
+          "spatial_neutral_tie",
+          "aerial_near_tie",
+          "exterior_near_tie",
+          "stand_size_hurt_false_candidate",
+          "gis_neutral_tie"
+        ],
+        "principal": [
+          "shape_v2 (accepted OS contour vs 338 null)",
+          "pool_presence (0.14 vs 338 0.5-neutral 0.07)"
+        ]
+      }
+    }
+  ],
+  "shape_only_diagnostic": {
+    "note": "Diagnostic sort of frozen shape_v2 only. Formula not altered. Nulls placed after all measured shapes, original frozen order among nulls.",
+    "n_with_measured_shape_v2": 122,
+    "stand_338_shape_v2": null,
+    "stand_338_has_genuine_shape_evidence": false,
+    "stand_338_shape_only_rank": "124 / 332",
+    "stand_338_shape_only_rank_among_measured": "unranked / 122 (shape_v2 null)",
+    "after_corner_gate": {
+      "n_survivors": 98,
+      "n_with_measured_shape_v2": 30,
+      "stand_338_shape_only_plus_corner_gate_rank": "31 / 98"
+    }
+  },
+  "corner_gate_counterfactual": {
+    "label": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN",
+    "scores_recomputed": false,
+    "relative_order_preserved": true,
+    "candidates_before": 332,
+    "candidates_after": 98,
+    "removed": 234,
+    "pct_removed": 70.48,
+    "stand_338_original_rank": "122 / 332",
+    "stand_338_filtered_rank": "29 / 98",
+    "stand_338_frozen_score_unchanged": 0.5847,
+    "n_originally_above_338": 121,
+    "n_above_338_removed": 93,
+    "n_above_338_retained": 28,
+    "absolute_rank_improvement": 93,
+    "percentile_worse_than_338_before": 63.25,
+    "percentile_worse_than_338_after": 70.41,
+    "filtered_top10": [
+      {
+        "filtered_rank": 1,
+        "original_frozen_rank": 4,
+        "stand_number": "644",
+        "frozen_score": 0.7388,
+        "parcel_corner": "UNKNOWN",
+        "os_pool_status": "PROBABLE",
+        "shape_v2": 0.7691,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      },
+      {
+        "filtered_rank": 2,
+        "original_frozen_rank": 10,
+        "stand_number": "4/870",
+        "frozen_score": 0.7327,
+        "parcel_corner": "UNKNOWN",
+        "os_pool_status": "CONFIRMED",
+        "shape_v2": 0.7413,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      },
+      {
+        "filtered_rank": 3,
+        "original_frozen_rank": 23,
+        "stand_number": "1/870",
+        "frozen_score": 0.7165,
+        "parcel_corner": "UNKNOWN",
+        "os_pool_status": "CONFIRMED",
+        "shape_v2": 0.7349,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      },
+      {
+        "filtered_rank": 4,
+        "original_frozen_rank": 29,
+        "stand_number": "591",
+        "frozen_score": 0.7127,
+        "parcel_corner": "YES",
+        "os_pool_status": "CONFIRMED",
+        "shape_v2": 0.7595,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      },
+      {
+        "filtered_rank": 5,
+        "original_frozen_rank": 31,
+        "stand_number": "897",
+        "frozen_score": 0.7101,
+        "parcel_corner": "UNKNOWN",
+        "os_pool_status": "CONFIRMED",
+        "shape_v2": 0.7228,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      },
+      {
+        "filtered_rank": 6,
+        "original_frozen_rank": 33,
+        "stand_number": "665",
+        "frozen_score": 0.7094,
+        "parcel_corner": "UNKNOWN",
+        "os_pool_status": "CONFIRMED",
+        "shape_v2": 0.6682,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      },
+      {
+        "filtered_rank": 7,
+        "original_frozen_rank": 34,
+        "stand_number": "502",
+        "frozen_score": 0.7093,
+        "parcel_corner": "YES",
+        "os_pool_status": "CONFIRMED",
+        "shape_v2": 0.762,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      },
+      {
+        "filtered_rank": 8,
+        "original_frozen_rank": 36,
+        "stand_number": "545",
+        "frozen_score": 0.7078,
+        "parcel_corner": "YES",
+        "os_pool_status": "CONFIRMED",
+        "shape_v2": 0.658,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      },
+      {
+        "filtered_rank": 9,
+        "original_frozen_rank": 38,
+        "stand_number": "17/908",
+        "frozen_score": 0.7046,
+        "parcel_corner": "UNKNOWN",
+        "os_pool_status": "CONFIRMED",
+        "shape_v2": 0.8021,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      },
+      {
+        "filtered_rank": 10,
+        "original_frozen_rank": 42,
+        "stand_number": "350",
+        "frozen_score": 0.7022,
+        "parcel_corner": "YES",
+        "os_pool_status": "CONFIRMED",
+        "shape_v2": 0.7055,
+        "inventory_pool_status": "YES",
+        "note": "COUNTERFACTUAL FILTERED RANK \u2014 NOT A RERUN; frozen score unchanged"
+      }
+    ],
+    "false_top5_after_gate": [
+      {
+        "stand": "654",
+        "parcel_corner": "NO",
+        "removed": true,
+        "original_rank": 1
+      },
+      {
+        "stand": "467",
+        "parcel_corner": "NO",
+        "removed": true,
+        "original_rank": 2
+      },
+      {
+        "stand": "405",
+        "parcel_corner": "NO",
+        "removed": true,
+        "original_rank": 3
+      },
+      {
+        "stand": "644",
+        "parcel_corner": "UNKNOWN",
+        "removed": false,
+        "original_rank": 4
+      },
+      {
+        "stand": "456",
+        "parcel_corner": "NO",
+        "removed": true,
+        "original_rank": 5
+      }
+    ]
+  },
+  "root_causes_ranked": [
+    {
+      "cause": "CANDIDATE_GEOMETRY_FAILURE",
+      "supported": true,
+      "rank": 1,
+      "why": "Frozen OS v1 REJECTED stand 338 pool (CLIP roof 0.50 vs pool 0.019). shape_v2 never entered Scoring v2."
+    },
+    {
+      "cause": "POOL_PRESENCE_FAILURE",
+      "supported": true,
+      "rank": 2,
+      "why": "os_high_conf_pool false \u2192 pool_presence contrib 0.07 vs 0.14 for every frozen Top-5 stand."
+    },
+    {
+      "cause": "LISTING_GEOMETRY_FAILURE",
+      "supported": true,
+      "rank": 3,
+      "why": "Official Hybrid FastSAM 039 contour is a small high-frame object (rel_area 0.0027, cy=0.0577), not the listing courtyard rectangle. That fingerprint is what shape_v2 matched against."
+    },
+    {
+      "cause": "SHAPE_SIMILARITY_FAILURE",
+      "supported": true,
+      "rank": 4,
+      "why": "False Top 5 have measured shape_v2 0.76\u20130.87 against that official contour. 338 has null, so the shape model never compared the true stand. The false candidates were genuinely closer to the official (wrong) fingerprint."
+    },
+    {
+      "cause": "CONTEXT_FILTER_MISSING",
+      "supported": true,
+      "rank": 5,
+      "why": "Frozen PR #25 had no Corner Gate. High-confidence listing YES would have removed 4/5 false Top 5 (654/467/405/456). 644 UNKNOWN is retained by design."
+    },
+    {
+      "cause": "WEIGHTING_FAILURE",
+      "supported": false,
+      "why": "Weights are as designed. Missing shape at 0.36 is the mechanism, not a mis-tuned weight."
+    },
+    {
+      "cause": "AERIAL_VISUAL_FAILURE",
+      "supported": false,
+      "why": "338 aerial 0.7943 vs Top-5 mean ~0.785; not the miss."
+    },
+    {
+      "cause": "EXTERIOR_VISUAL_FAILURE",
+      "supported": false,
+      "why": "338 exterior 0.7396 vs Top-5 mean ~0.719; not the miss."
+    },
+    {
+      "cause": "GIS/STAND_SIZE_DISTORTION",
+      "supported": false,
+      "why": "Stand-size contrib 0.07 (perfect 869=869) helped 338. GIS is 0.5-neutral on all compared stands."
+    },
+    {
+      "cause": "INVENTORY/DATA_FAILURE",
+      "supported": false,
+      "why": "Inventory UNKNOWN; Pool Gate retained 338. Not why it lost to Top 5."
+    }
+  ],
+  "conclusion": "B",
+  "conclusion_label": "CORNER GATE HELPS, BUT SHAPE/GEOMETRY STILL FAILS",
+  "conclusion_why": "Corner Gate filters 332\u219298 and moves 338 from 122/332 to 29/98 using unchanged frozen scores, removing 93 of 121 originally-higher candidates including 4/5 false Top 5. 338 remains 29/98 because shape_v2 is still null and the 28 retained candidates above it all carry measured OS geometry. Candidate pool geometry was not reasonably represented in the frozen stack."
+}
