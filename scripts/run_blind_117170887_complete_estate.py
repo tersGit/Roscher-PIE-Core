@@ -282,6 +282,9 @@ def _write_report(freeze: dict, marker: dict, adapter: dict, digest: str) -> Pat
     path = OUT_DIR / "REPORT.md"
     path.write_text("\n".join(lines), encoding="utf-8")
     return path
+
+
+def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--freeze-only", action="store_true", default=True)
     parser.add_argument("--skip-listing-pool-object", action="store_true")
