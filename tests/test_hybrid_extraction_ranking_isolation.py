@@ -101,6 +101,12 @@ def test_hybrid_extraction_has_no_listing_or_gt_exceptions():
     text = (ROOT / "backend/gis/estate_ags_matching/hybrid_listing_pool_geometry_v1.py").read_text(encoding="utf-8")
     for token in ("116978058", "116889694", "ground_truth", "expected_stand", "carlswald"):
         assert token not in text.lower() if token == "carlswald" else token not in text
+    val_src = (ROOT / "backend/gis/estate_ags_matching/pool_object_validation_v1.py").read_text(encoding="utf-8")
+    for token in ("116978058", "116889694", "117262832", "ground_truth", "expected_stand", "carlswald"):
+        assert token not in val_src.lower() if token == "carlswald" else token not in val_src
+    os_src = (ROOT / "backend/vision/object_segmentation.py").read_text(encoding="utf-8")
+    assert "validate_candidate_pool_object" in os_src
+    assert 'item[2]["pool"] >= 0.40' not in os_src
     rank_src = (ROOT / "backend/gis/estate_ags_matching/hybrid_geometry_ranking_test.py").read_text(encoding="utf-8")
     assert "fastsam_fallback" in rank_src
     assert "V2_WEIGHTS_NO_BUILDING" in rank_src
