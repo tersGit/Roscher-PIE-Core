@@ -3,6 +3,7 @@
 Accuracy test on Hybrid extraction + FastSAM adapter + Corner Gate v1 + Pool Object Validation v1 + **Pool Inventory NO/UNKNOWN safety v1.1.0**. Scoring v2 weights unchanged. Water colour is not used in matching or scoring.
 
 - **Freeze path:** `data/investigations/blind_115503057_complete_estate/freeze.json`
+- **Freeze commit:** `5aa42ec266a0c515a75e9b7f4da623b0be84dc66`
 - **On-disk SHA256** (matches `freeze.sha256`, verified after write): `a6465002f681268391d4a87f3039532f47fd97e76d9a43217a8a45c841604ff6`
 - **Official score:** `hybrid_v2`
 - **Universe:** 400 unique erven
