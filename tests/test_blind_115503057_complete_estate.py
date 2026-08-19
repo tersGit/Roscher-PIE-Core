@@ -66,3 +66,29 @@ def test_run_freeze_defaults_do_not_enable_new_gates():
     freeze = source[source.index("def run_freeze") : source.index("def extract_identity_from_html")]
     assert "apply_corner_gate: bool = False" in freeze
     assert "apply_candidate_pov: bool = False" in freeze
+
+
+def test_freeze_hash_and_blindness():
+    import hashlib
+    import json
+
+    freeze_path = ROOT / "data/investigations/blind_115503057_complete_estate/freeze.json"
+    sha_path = ROOT / "data/investigations/blind_115503057_complete_estate/freeze.sha256"
+    recorded = sha_path.read_text(encoding="utf-8").strip()
+    on_disk = hashlib.sha256(freeze_path.read_bytes()).hexdigest()
+    assert recorded == on_disk
+    freeze = json.loads(freeze_path.read_text(encoding="utf-8"))
+    assert freeze["ground_truth_applied"] is False
+    assert freeze["colour_used_in_ranking"] is False
+    assert freeze["scoring_v2_weights_modified"] is False
+    assert freeze["listing_id"] == "115503057"
+    top5 = [row["stand_number"] for row in freeze["ranking"]["top5"]]
+    assert len(top5) == 5
+    assert freeze["estate_pool_gate"]["final_survivor_count"] == 367
+    assert freeze["estate_corner_gate"]["final_survivor_count"] == 367
+    assert freeze["listing_pool_gate"]["listing_pool_status"] == "YES"
+    assert freeze["listing_corner"]["listing_corner"] == "UNKNOWN"
+    assert freeze["ranking_configuration"]["inventory"] == "estate_property_inventory_v1.1.0_pool_obs"
+    panels = ROOT / "data/investigations/blind_115503057_complete_estate/panels"
+    assert (panels / "top1_868.jpg").is_file()
+
