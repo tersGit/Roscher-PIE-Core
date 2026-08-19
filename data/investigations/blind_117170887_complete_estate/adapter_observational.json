@@ -1,0 +1,192 @@
+{
+  "frames": [
+    {
+      "media_id": "117170887-003",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-004",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-005",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-006",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-007",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-047",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-048",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-049",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-051",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-053",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-054",
+      "source": "yoloe_sam2",
+      "source_label": "YOLOE/SAM2",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-055",
+      "source": "yoloe_sam2",
+      "source_label": "YOLOE/SAM2",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    },
+    {
+      "media_id": "117170887-057",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-063",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-067",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-068",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-069",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-070",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-071",
+      "source": "yoloe",
+      "source_label": "YOLOE",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    },
+    {
+      "media_id": "117170887-072",
+      "source": "yoloe",
+      "source_label": "YOLOE",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    },
+    {
+      "media_id": "117170887-073",
+      "source": "yoloe_sam2",
+      "source_label": "YOLOE/SAM2",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    },
+    {
+      "media_id": "117170887-074",
+      "source": "yoloe_sam2",
+      "source_label": "YOLOE/SAM2",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    },
+    {
+      "media_id": "117170887-075",
+      "source": "presence_only",
+      "source_label": "presence_only",
+      "scoring_ready": false,
+      "adapter": "NOT_SCORING_READY"
+    },
+    {
+      "media_id": "117170887-076",
+      "source": "yoloe_sam2",
+      "source_label": "YOLOE/SAM2",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    },
+    {
+      "media_id": "117170887-077",
+      "source": "yoloe_sam2",
+      "source_label": "YOLOE/SAM2",
+      "scoring_ready": true,
+      "adapter": "ACCEPTED"
+    }
+  ],
+  "scoring_ready_ids": [
+    "117170887-055",
+    "117170887-071",
+    "117170887-072",
+    "117170887-073",
+    "117170887-074",
+    "117170887-076",
+    "117170887-077"
+  ],
+  "chosen_id": "117170887-077",
+  "chosen_source": "yoloe_sam2",
+  "fastsam_used": false,
+  "n_scoring_ready_accepted": 7
+}

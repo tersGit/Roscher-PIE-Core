@@ -15,6 +15,7 @@ import math
 import re
 import time
 from collections import Counter
+from copy import deepcopy
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
@@ -78,6 +79,9 @@ PHOTOS_DIR = OUT_DIR / "photos"
 FREEZE_PATH = OUT_DIR / "freeze.json"
 ALL_CANDIDATES_PATH = OUT_DIR / "all_candidates.json"
 PANELS_DIR = OUT_DIR / "panels"
+PARCEL_CORNER_JSONL = (
+    REPO_ROOT / "data/investigations/corner_stand_detection_v1/parcel_corner_records.jsonl"
+)
 GT_PATH = OUT_DIR / "ground_truth.json"
 DETECTOR_PATH = OUT_DIR / "detector_true_erf.json"
 REPORT_PATH = OUT_DIR / "REPORT.md"
@@ -287,6 +291,222 @@ def load_os_payload(stand: str) -> dict[str, Any]:
     if frozen.is_file():
         return json.loads(frozen.read_text(encoding="utf-8"))
     return {}
+
+
+def load_parcel_corner_records(path: Path | None = None) -> list[dict[str, Any]]:
+    dest = Path(path) if path is not None else PARCEL_CORNER_JSONL
+    if not dest.is_file():
+        return []
+    rows: list[dict[str, Any]] = []
+    for line in dest.read_text(encoding="utf-8").splitlines():
+        text = line.strip()
+        if not text:
+            continue
+        rows.append(json.loads(text))
+    return rows
+
+
+def listing_text_for_gates(acquisition: Mapping[str, Any]) -> str:
+    """In-memory listing title/description only. Not written to freeze.json."""
+    listing = acquisition.get("listing")
+    if listing is None:
+        return ""
+    parts = [getattr(listing, "title", None), getattr(listing, "description", None)]
+    return " ".join(str(part) for part in parts if part)
+
+
+def listing_corner_viewpoints(
+    hybrid_block: Mapping[str, Any],
+    photo_classes: Mapping[str, Any],
+) -> dict[str, str]:
+    views = {str(mid): str(scene) for mid, scene in (photo_classes.get("scenes") or {}).items()}
+    for frame in hybrid_block.get("frames") or []:
+        media_id = str(frame.get("media_id") or "")
+        viewpoint = frame.get("viewpoint")
+        if media_id and viewpoint:
+            views[media_id] = str(viewpoint)
+    return views
+
+
+def overlay_os_payload_with_pov(
+    payload: Mapping[str, Any],
+    gis_geometry: Mapping[str, Any] | None,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Re-evaluate a copy of frozen OS JSON. Does not write OS files."""
+    from backend.gis.estate_ags_matching.pool_object_validation_v1 import validate_os_payload
+
+    copy = deepcopy(dict(payload))
+    validation = validate_os_payload(copy, gis_geometry=gis_geometry)
+    pov = validation.to_dict() if hasattr(validation, "to_dict") else dict(validation)
+    pool = dict(copy.get("pool") or {})
+    frozen_status = pool.get("status")
+    overlay_status = pov.get("final_status") or "UNKNOWN"
+    pool["status"] = overlay_status
+    copy["pool"] = pool
+    signals = pov.get("signals") or {}
+    if not isinstance(signals, Mapping):
+        signals = {}
+    summary = {
+        "frozen_os_status": frozen_status,
+        "pov_status": overlay_status,
+        "object_role": pov.get("object_role"),
+        "principal_pool_candidate": pov.get("principal_pool_candidate"),
+        "reason_codes": list(pov.get("reason_codes") or []),
+        "contour_retained": pov.get("contour_retained"),
+        "parcel_containment": signals.get("parcel_containment"),
+        "neighbour_risk": signals.get("neighbour_risk"),
+        "yard_context": signals.get("yard_context"),
+    }
+    return copy, summary
+
+
+def listing_pov_public(hybrid_block: Mapping[str, Any]) -> dict[str, Any]:
+    frames = list(hybrid_block.get("frames") or [])
+    listing_meta = hybrid_block.get("listing") or {}
+    per_frame = []
+    for frame in frames:
+        pov = frame.get("pool_object_validation") or {}
+        per_frame.append(
+            {
+                "media_id": frame.get("media_id"),
+                "viewpoint": frame.get("viewpoint"),
+                "source": frame.get("source"),
+                "scoring_ready": frame.get("scoring_ready"),
+                "principal_pool_candidate": frame.get("principal_pool_candidate"),
+                "object_role": frame.get("object_role"),
+                "pov_status": pov.get("final_status"),
+                "pov_confidence": pov.get("final_pool_object_confidence"),
+                "reason_codes": pov.get("reason_codes"),
+            }
+        )
+    chosen_id = listing_meta.get("chosen_id")
+    chosen = next((row for row in per_frame if row.get("media_id") == chosen_id), None)
+    fingerprint = "NO_SHAPE_SIGNAL"
+    if chosen_id and chosen is not None:
+        fingerprint = "official_hybrid_fingerprint"
+    return {
+        "official_fingerprint": fingerprint,
+        "official_pick_order": ["object_identity", "cross_frame_agreement", "geometry", "viewpoint"],
+        "chosen_id": chosen_id,
+        "chosen_source": listing_meta.get("chosen_source"),
+        "chosen_viewpoint": listing_meta.get("chosen_viewpoint"),
+        "chosen_reason": listing_meta.get("frame_selection_reason") or listing_meta.get("chosen_reason"),
+        "chosen_pov": None if chosen is None else chosen,
+        "n_principal_candidates": listing_meta.get("n_principal_candidates"),
+        "per_frame": per_frame,
+        "note": "Aerial does not win merely because it is aerial. Official pick is listing-side POV v1.",
+    }
+
+
+def listing_corner_public(evidence) -> dict[str, Any]:
+    payload = evidence.to_dict() if hasattr(evidence, "to_dict") else dict(evidence)
+    frames = []
+    for row in payload.get("frames") or []:
+        frames.append(
+            {
+                "media_id": row.get("media_id"),
+                "viewpoint": row.get("viewpoint"),
+                "visual_yes": row.get("visual_yes"),
+                "visual_confidence": row.get("visual_confidence"),
+                "reason": row.get("reason"),
+                "strong_sides": row.get("strong_sides"),
+                "two_heading_axes": row.get("two_heading_axes"),
+            }
+        )
+    return {
+        "listing_corner": payload.get("listing_corner") or payload.get("classification"),
+        "confidence": payload.get("confidence"),
+        "evidence_source": payload.get("evidence_source"),
+        "frame_ids": payload.get("frame_ids"),
+        "visual_reason": payload.get("visual_reason"),
+        "high_confidence": payload.get("high_confidence"),
+        "exceptional_non_corner": payload.get("exceptional_non_corner"),
+        "positive_non_corner_evidence": payload.get("positive_non_corner_evidence"),
+        "aerial_evidence": payload.get("aerial_evidence"),
+        "video_evidence": payload.get("video_evidence"),
+        "contradiction_flags": payload.get("contradiction_flags"),
+        "n_text_evidence": len(payload.get("text_evidence") or []),
+        "frames": frames,
+        "note": "Listing media/text only. Street and stand identity are not inputs.",
+    }
+
+
+def corner_gate_public(result) -> dict[str, Any]:
+    payload = result.to_dict()
+    payload.pop("survivor_parcel_ids", None)
+    payload.pop("removed_parcel_ids", None)
+    payload.pop("unresolved_parcel_ids", None)
+    payload["final_survivor_count"] = result.total_survivors
+    payload["starting_candidates"] = result.starting_count
+    payload["percentage_reduction"] = result.pct_reduction
+    payload["gate_action"] = (
+        "high_confidence_listing_yes_drop_confident_parcel_no"
+        if result.listing_high_confidence and result.listing_corner == "YES"
+        else "neutral_retain_pool_gate_survivors"
+    )
+    return payload
+
+
+def candidate_pov_counts(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+    counts = Counter(str(row.get("candidate_pov_status") or "missing") for row in rows)
+    return {
+        "CONFIRMED": int(counts.get("CONFIRMED", 0)),
+        "UNKNOWN": int(counts.get("UNKNOWN", 0)),
+        "REJECTED": int(counts.get("REJECTED", 0)),
+        "missing": int(counts.get("missing", 0)),
+        "n_ranked": len(rows),
+        "os_json_rewritten": False,
+    }
+
+
+def ranking_quality_report(
+    rows: Sequence[Mapping[str, Any]],
+    *,
+    listing_shape_available: bool,
+) -> dict[str, Any]:
+    ordered = sorted(rows, key=lambda row: int(row.get("hybrid_v2_rank") or row.get("rank") or 0))
+    sep = ranking_separation(ordered)
+    shape = shape_discrimination(ordered)
+    n_genuine_shape = sum(
+        1 for row in ordered if row.get("hybrid_v2_shape_v2") is not None or row.get("shape_v2") is not None
+    )
+    n_shape_ge_80 = 0
+    for row in ordered:
+        raw = row.get("hybrid_v2_shape_v2")
+        if raw is None:
+            raw = row.get("shape_v2")
+        if raw is not None and float(raw) >= 0.80:
+            n_shape_ge_80 += 1
+    top1 = ordered[0] if ordered else {}
+    genuine, padding = _contrib_split(top1) if top1 else ([], [])
+    genuine_sum = round(sum(float(item["contrib"]) for item in genuine), 4)
+    padding_sum = round(sum(float(item["contrib"]) for item in padding), 4)
+    total = genuine_sum + padding_sum
+    evidence_pct = None if not total else round(100.0 * genuine_sum / total, 2)
+    padding_pct = None if not total else round(100.0 * padding_sum / total, 2)
+    if not listing_shape_available or n_genuine_shape == 0:
+        quality_class = "NO_SHAPE_SIGNAL"
+    else:
+        quality_class = str(shape.get("discrimination_class") or "WEAK")
+    return {
+        "class": quality_class,
+        "listing_shape_available": listing_shape_available,
+        "n_genuine_shape": n_genuine_shape,
+        "n_shape_v2_ge_0_80": n_shape_ge_80,
+        "score_1": sep.get("top1_score"),
+        "score_2": sep.get("top2_score"),
+        "score_5": sep.get("top5_score"),
+        "score_10": sep.get("top10_score"),
+        "score_20": sep.get("top20_score"),
+        "gap_1_2": sep.get("gap_1_2"),
+        "gap_1_5": sep.get("gap_1_5"),
+        "gap_1_10": sep.get("gap_1_10"),
+        "gap_1_20": sep.get("gap_1_20"),
+        "top1_evidence_pct": evidence_pct,
+        "top1_padding_pct": padding_pct,
+        "discrimination_mode": shape.get("discrimination_mode"),
+        "note": "Reporting only. Does not change Scoring v2.",
+    }
 
 
 def parse_floor_size(html: str) -> float | None:
@@ -996,16 +1216,26 @@ def rank_survivors(
     *,
     listing_erf_sqm: float | None,
     clip_sims: Mapping[str, Mapping[str, float | None]],
+    apply_candidate_pov: bool = False,
+    gis_geometry_by_stand: Mapping[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
+    geom_lookup = dict(gis_geometry_by_stand or {})
     for parcel in survivors:
         stand = str(parcel["stand_number"])
         sims = clip_sims.get(stand) or {}
         size_score = stand_size_support(listing_erf_sqm, parcel.get("area_sqm"))
+        os_payload = load_os_payload(stand)
+        pov_summary = None
+        if apply_candidate_pov:
+            os_payload, pov_summary = overlay_os_payload_with_pov(
+                os_payload,
+                geom_lookup.get(stand) or parcel.get("geometry"),
+            )
         scored = score_one_candidate(
             fingerprint,
             listing_shape,
-            load_os_payload(stand),
+            os_payload,
             aerial=sims.get("aerial"),
             exterior=sims.get("exterior"),
             stand_size=float(size_score or 0.0),
@@ -1018,6 +1248,7 @@ def rank_survivors(
                 "property_id": parcel.get("property_id"),
                 "inventory_pool_status": parcel.get("inventory_pool_status"),
                 "inventory_unknown_reason": parcel.get("inventory_unknown_reason"),
+                "parcel_corner": parcel.get("parcel_corner"),
                 "size_score": round(float(size_score), 4),
                 "aerial_similarity": sims.get("aerial"),
                 "exterior_similarity": sims.get("exterior"),
@@ -1033,6 +1264,9 @@ def rank_survivors(
                 "os_high_conf_pool": scored["os_high_conf_pool"],
                 "spatial_record": scored["spatial_record"],
                 "pool_geometry_support": bool(scored["os_high_conf_pool"]),
+                "candidate_pov_status": None if pov_summary is None else pov_summary.get("pov_status"),
+                "frozen_os_pool_status": None if pov_summary is None else pov_summary.get("frozen_os_status"),
+                "candidate_pov": pov_summary,
             }
         )
     rank_rows(rows, "hybrid_v2")
@@ -1058,6 +1292,9 @@ def top_n(rows: Sequence[Mapping[str, Any]], n: int) -> list[dict[str, Any]]:
                 "os_driveway_status": row.get("os_driveway_status"),
                 "os_high_conf_pool": row.get("os_high_conf_pool"),
                 "pool_geometry_support": row.get("pool_geometry_support"),
+                "parcel_corner": row.get("parcel_corner"),
+                "candidate_pov_status": row.get("candidate_pov_status"),
+                "frozen_os_pool_status": row.get("frozen_os_pool_status"),
                 "shape_v2": row.get("hybrid_v2_shape_v2"),
                 "spatial_v2": row.get("hybrid_v2_spatial_v2"),
                 "coverage": row.get("hybrid_v2_coverage"),
@@ -1189,6 +1426,12 @@ def freeze_payload(
     experiment: str | None = None,
     prior_artifacts: Mapping[str, Any] | None = None,
     distinctive_contour_v2: Mapping[str, Any] | None = None,
+    listing_corner: Mapping[str, Any] | None = None,
+    corner_gate=None,
+    listing_pov: Mapping[str, Any] | None = None,
+    candidate_pov: Mapping[str, Any] | None = None,
+    ranking_quality: Mapping[str, Any] | None = None,
+    apply_candidate_pov: bool = False,
 ) -> dict[str, Any]:
     acq = {
         key: val
@@ -1205,6 +1448,12 @@ def freeze_payload(
             "useful_driveway_garage_views": photo_classes.get("useful_driveway_garage_views"),
             "useful_garden_patio_views": photo_classes.get("useful_garden_patio_views"),
             "useful_pool_views": photo_classes.get("useful_pool_views"),
+            "useful_exterior_views": photo_classes.get("useful_exterior_views"),
+            "useful_aerial_views": [
+                mid
+                for mid, scene in (photo_classes.get("scenes") or {}).items()
+                if scene in AERIAL_SCENES
+            ],
             "scene_counts": photo_classes.get("scene_counts"),
         }
     )
@@ -1226,11 +1475,19 @@ def freeze_payload(
         "inventory_classifications_modified": False,
         "colour_used_in_ranking": False,
         "stand_size_used_as_hard_filter": False,
-        "clip_computed_on": "all_pool_gate_survivors_with_native15_crops",
+        "clip_computed_on": (
+            "corner_gate_survivors_with_native15_crops"
+            if corner_gate is not None
+            else "all_pool_gate_survivors_with_native15_crops"
+        ),
         "official_score": "hybrid_v2",
         "acquisition": acq,
         "listing_pool_gate": listing_pool,
         "estate_pool_gate": gate_public(gate),
+        "listing_corner": listing_corner,
+        "estate_corner_gate": None if corner_gate is None else corner_gate_public(corner_gate),
+        "listing_pool_object_validation": listing_pov,
+        "candidate_pool_object_validation": candidate_pov,
         "listing_fingerprint": {
             "hybrid_evidence": fingerprint["hybrid_evidence"],
             "qualitative": fingerprint["qualitative"],
@@ -1242,6 +1499,7 @@ def freeze_payload(
             "n_candidates": len(ranked),
             "separation": ranking_separation(ranked),
             "shape_discrimination": shape_discrimination(ranked),
+            "quality": ranking_quality,
             "top20": top_n(ranked, 20),
             "top10": top_n(ranked, 10),
             "top5": top_n(ranked, 5),
@@ -1257,6 +1515,10 @@ def freeze_payload(
             "native15": True,
             "clip": "ViT-B-32 openai",
             "pool_gate": "listing_pool_gate_v1",
+            "corner_gate": None if corner_gate is None else "listing_corner_gate_v1",
+            "pool_object_validation": "pool_object_validation_v1",
+            "candidate_pov_overlay": bool(apply_candidate_pov),
+            "scoring_v2_weights_modified": False,
             "inventory": "estate_property_inventory_v1",
             "dataset_id": DATASET_ID,
             "colour_used_in_ranking": False,
@@ -1323,6 +1585,9 @@ def write_freeze(
                 "inventory_pool_status": row.get("inventory_pool_status"),
                 "os_pool_status": row.get("os_pool_status"),
                 "os_high_conf_pool": row.get("os_high_conf_pool"),
+                "parcel_corner": row.get("parcel_corner"),
+                "candidate_pov_status": row.get("candidate_pov_status"),
+                "frozen_os_pool_status": row.get("frozen_os_pool_status"),
                 "shape_v2": row.get("hybrid_v2_shape_v2"),
                 "spatial_v2": row.get("hybrid_v2_spatial_v2"),
                 "coverage": row.get("hybrid_v2_coverage"),
@@ -1529,6 +1794,8 @@ def run_freeze(
     write_panels: bool = True,
     force_fresh_photos: bool = False,
     ignore_frozen_hybrid_json: bool = False,
+    apply_corner_gate: bool = False,
+    apply_candidate_pov: bool = False,
 ) -> dict[str, Any]:
     started = time.time()
     dest = Path(out_dir) if out_dir is not None else REPO_ROOT / "data/investigations" / f"blind_{listing_id}_complete_estate"
@@ -1578,17 +1845,43 @@ def run_freeze(
         for parcel in parcels
     ]
     gate = apply_listing_pool_gate(candidates, inventory, listing_pool["listing_pool_status"])
+    ranking_candidates = list(gate.survivors)
+    listing_corner_obs = None
+    corner_gate = None
+    if apply_corner_gate:
+        from backend.gis.estate_ags_matching.listing_corner_evidence_v1 import observe_listing_corner
+        from backend.gis.estate_ags_matching.listing_corner_gate_v1 import apply_listing_corner_gate
+
+        listing_corner_obs = observe_listing_corner(
+            text=listing_text_for_gates(acquisition),
+            photos=photos,
+            viewpoints=listing_corner_viewpoints(hybrid_block, photo_classes),
+        )
+        corner_gate = apply_listing_corner_gate(
+            ranking_candidates,
+            load_parcel_corner_records(),
+            listing_corner_obs.classification,
+            listing_evidence=listing_corner_obs,
+        )
+        ranking_candidates = list(corner_gate.survivors)
     crop_stats = ensure_native15_crops(dataset, parcels)
     fingerprint = listing_fingerprint(hybrid_block, photo_classes)
     fingerprint["distinctive"] = distinctive_pool_fingerprint(fingerprint)
     listing_vecs = clip_listing_vectors(photos, photo_classes["scenes"])
-    clip_sims = clip_candidate_similarities(gate.survivors, listing_vecs)
+    clip_sims = clip_candidate_similarities(ranking_candidates, listing_vecs)
+    gis_geometry_by_stand = (
+        {str(parcel["stand_number"]): parcel.get("geometry") for parcel in parcels}
+        if apply_candidate_pov
+        else None
+    )
     rows = rank_survivors(
-        gate.survivors,
+        ranking_candidates,
         fingerprint["fingerprint_obj"],
         fingerprint["listing_shape_obj"],
         listing_erf_sqm=acquisition.get("erf_size_sqm"),
         clip_sims=clip_sims,
+        apply_candidate_pov=apply_candidate_pov,
+        gis_geometry_by_stand=gis_geometry_by_stand,
     )
     contour_proof = draw_listing_contour_proof(
         fingerprint,
@@ -1618,6 +1911,15 @@ def run_freeze(
         listing_id=listing_id,
         prior_artifacts=prior_artifacts,
         distinctive_contour_v2=dcv2,
+        listing_corner=None if listing_corner_obs is None else listing_corner_public(listing_corner_obs),
+        corner_gate=corner_gate,
+        listing_pov=listing_pov_public(hybrid_block),
+        candidate_pov=candidate_pov_counts(rows) if apply_candidate_pov else None,
+        ranking_quality=ranking_quality_report(
+            rows,
+            listing_shape_available=bool(fingerprint.get("listing_shape_obj")),
+        ),
+        apply_candidate_pov=apply_candidate_pov,
     )
     marker_runtime = round(time.time() - started, 2)
     digest = write_freeze(payload, rows, dest=freeze_path)
@@ -1640,7 +1942,14 @@ def run_freeze(
         "panels": panels,
         "n_candidates": len(rows),
         "listing_pool_status": listing_pool["listing_pool_status"],
-        "final_survivor_count": gate.total_survivors,
+        "final_survivor_count": len(rows),
+        "pool_gate_survivors": gate.total_survivors,
+        "corner_gate_survivors": None if corner_gate is None else corner_gate.total_survivors,
+        "listing_corner": None
+        if listing_corner_obs is None
+        else listing_corner_obs.classification,
+        "apply_corner_gate": apply_corner_gate,
+        "apply_candidate_pov": apply_candidate_pov,
         "runtime_s_freeze": marker_runtime,
     }
     (dest / "rankings_frozen.json").write_text(json.dumps(marker, indent=2) + "\n", encoding="utf-8")

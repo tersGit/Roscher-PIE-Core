@@ -1,0 +1,84 @@
+{
+  "confirmed_stand": "641",
+  "confidence": "HIGH CONFIDENCE",
+  "determinable": true,
+  "identity": {
+    "listing_id": "117170887",
+    "published_street_text": null,
+    "street_withheld_contact_agent": true,
+    "property24_coordinates": null,
+    "cadastral_stand": "641",
+    "street_address": "9 GALPINI DRIVE",
+    "township": "SUMMERSET EXT.13",
+    "property_id": 1601616,
+    "coj_area_sqm_641": 1024.0,
+    "listing_erf_sqm": 1024.0,
+    "listing_floor_sqm": 431.0,
+    "agency": "LuxLiv Property Group",
+    "agent": "Schalk Visser",
+    "note": "Public Property24, Private Property T5472094, and LuxLiv 2492408 all withhold street and coordinates. Identity is unique GIS 1024.0 m2 plus independent visual corroboration, not PIE rank."
+  },
+  "evidence": [
+    {
+      "type": "public_listing_identity_withheld",
+      "property24_url": "https://www.property24.com/for-sale/carlswald-north-estate/midrand/gauteng/12743/117170887",
+      "private_property_url": "https://www.privateproperty.co.za/for-sale/gauteng/johannesburg/midrand/carlswald-north-estate/T5472094",
+      "luxliv_url": "https://www.luxlivproperty.com/carlswald-north-estate-house-for-sale-2492408",
+      "street_published": false,
+      "stand_published": false,
+      "coordinates_present": false,
+      "note": "Contact agent for street address on Property24 and Private Property. LuxLiv map is estate-centroid only."
+    },
+    {
+      "type": "unique_cadastral_size",
+      "listing_erf_sqm": 1024.0,
+      "gis_exact_1024_count": 1,
+      "gis_exact_stand": "641",
+      "gis_within_1_sqm_count": 5,
+      "used_as_sole_truth": false,
+      "note": "Exact 1024.0 m2 is unique in the 400-erven universe. Size is the candidate key, not the sole identity rule."
+    },
+    {
+      "type": "coj_registered_stand",
+      "stand_number": "641",
+      "township": "SUMMERSET EXT.13",
+      "street_address": "9 GALPINI DRIVE",
+      "area_sqm": 1024.0,
+      "property_id": 1601616
+    },
+    {
+      "type": "native15_visual_compatibility",
+      "ags_year": 2023,
+      "stand_641": "modern multi-level flat/grey roof with skylights, rooftop terrace massing, heavy mature-tree canopy over the backyard, dual frontage onto a paved street and a dirt/gravel road, open field south of Galpini",
+      "listing_photos": "earthy-tan flat-roof house, rooftop garden and glass-roofed atrium in copy, pool nested in dense trees, double garage with balcony above",
+      "neighbours_rejected": "west: gabled grey roof + clearly visible small rectangular pool; east: terracotta tile roof + clearly visible rectangular pool. Neither matches the listing house or the tree-hidden pool."
+    },
+    {
+      "type": "listing_copy_corroboration_only",
+      "headline": "Architectural Masterpiece, 5 Bedrooms, Private Rooftop Garden",
+      "distinctive": ["glass-roofed atrium", "rooftop garden", "North African-inspired", "jacuzzi in upstairs entertainment lounge", "sparkling swimming pool"],
+      "used_as_identity": false
+    },
+    {
+      "type": "top5_not_used_as_truth",
+      "frozen_top5_manually_false": ["545", "868", "568", "572", "897"],
+      "inferred_from_pie_rank": false
+    }
+  ],
+  "visual": {
+    "stand_in_complete_gis": true,
+    "inventory_pool_status": "NO",
+    "os_pool_status": "UNKNOWN",
+    "os_notes": ["no_pool_candidate"],
+    "parcel_corner": "UNKNOWN",
+    "parcel_corner_reason": "dual_frontage_nearly_parallel_not_confirmed_corner",
+    "parcel_roads": ["VENUS AVENUE", "GALPINI DRIVE"],
+    "township": "SUMMERSET EXT.13",
+    "area_sqm": 1024.0,
+    "street_address": "9 GALPINI DRIVE",
+    "proof": "data/investigations/blind_117170887_complete_estate/panels/forensic_listing_641_top5.jpg"
+  },
+  "inferred_from_pie_rank": false,
+  "ground_truth_applied_to_ranking": false,
+  "freeze_modified": false
+}
