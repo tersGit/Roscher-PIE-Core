@@ -26,6 +26,7 @@ from backend.gis.estate_ags_matching.listing_pool_gate_v1 import (
     survives_listing_pool_gate,
 )
 from backend.gis.estate_ags_matching.os_scoring_v2 import V2_WEIGHTS_NO_BUILDING
+from backend.gis.estate_ags_matching.pool_observability_v1 import PoolObservability
 
 ROOT = Path(__file__).resolve().parents[1]
 OS_DIR = ROOT / "data/investigations/object_segmentation_v1/carlswald_north/json"
@@ -96,6 +97,26 @@ def _os(status, notes=None, present=True, area=40.0, clip_pool=0.9, masses=1, bl
 def _write_os(dir_path: Path, stand: str, payload: dict) -> None:
     dir_path.mkdir(parents=True, exist_ok=True)
     (dir_path / f"{stand}.json").write_text(json.dumps(payload), encoding="utf-8")
+
+
+def _adequate_obs():
+    return PoolObservability(
+        adequate_for_absence=True,
+        crop_present=True,
+        imagery_quality_ok=True,
+        backyard_observable=True,
+        canopy_occludes=False,
+        shadow_occludes=False,
+        roof_occludes=False,
+        visible_open_fraction=0.7,
+        canopy_fraction=0.05,
+        shadow_fraction=0.05,
+        roof_fraction=0.2,
+        yard_pixels=5000,
+        parcel_pixels=8000,
+        flags=["pool_observability_adequate"],
+        reason=None,
+    )
 
 
 def test_inventory_persistence_and_reload(tmp_path: Path):
@@ -230,8 +251,14 @@ def test_yes_no_unknown_semantics():
     rejected = classify_pool_from_os(_os("REJECTED", notes=["rejected_as_road_shadow_or_roof"], clip_pool=0.03))
     assert rejected.pool_status == "UNKNOWN"
     assert rejected.unknown_reason == "os_rejected_weak_evidence_not_absence"
-    no = classify_pool_from_os(_os("UNKNOWN", notes=["no_pool_candidate"], present=False, clip_pool=0.0))
+    no = classify_pool_from_os(
+        _os("UNKNOWN", notes=["no_pool_candidate"], present=False, clip_pool=0.0),
+        observability=_adequate_obs(),
+    )
     assert no.pool_status == "NO"
+    miss = classify_pool_from_os(_os("UNKNOWN", notes=["no_pool_candidate"], present=False, clip_pool=0.0))
+    assert miss.pool_status == "UNKNOWN"
+    assert miss.unknown_reason == "no_candidate_insufficient_observability"
     poor = classify_pool_from_os(
         _os("UNKNOWN", notes=["no_pool_candidate"], present=False, masses=3, bldg_area=130.0)
     )
@@ -294,7 +321,7 @@ def test_historical_observation_retained_after_update(tmp_path: Path):
         allow_fastsam=False,
         scan_timestamp="2026-01-01T00:00:00Z",
     )
-    assert store.load_current()[str(parcel["property_id"])]["pool_status"] == "NO"
+    assert store.load_current()[str(parcel["property_id"])]["pool_status"] == "UNKNOWN"
     crop.write_bytes(b"imagery-B")
     _write_os(os_dir, "100", _os("CONFIRMED"))
     scan_estate_inventory(
@@ -310,7 +337,7 @@ def test_historical_observation_retained_after_update(tmp_path: Path):
     assert current["pool_status"] == "YES"
     history = store.load_history(str(parcel["property_id"]))
     statuses = [row["pool_status"] for row in history]
-    assert "NO" in statuses
+    assert "UNKNOWN" in statuses
     assert "YES" in statuses
     versions = {row["imagery_version"] for row in history}
     assert len(versions) == 2

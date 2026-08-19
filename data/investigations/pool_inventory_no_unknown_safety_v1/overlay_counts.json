@@ -1,0 +1,84 @@
+{
+  "overlay_path": "data/estate_inventory/carlswald_north_corrected_002_pool_obs_v1_1_0/current.jsonl",
+  "n": 400,
+  "yes": 118,
+  "no": 33,
+  "unknown": 249,
+  "stand_641": {
+    "algorithm_version": "estate_property_inventory_v1.1.1.0+object_segmentation_v1",
+    "crop_hash": null,
+    "diagnostic_flags": [
+      "backyard_not_adequately_observable",
+      "no_pool_candidate",
+      "no_pool_candidate_insufficient_observability",
+      "pool_observability_inadequate",
+      "reused_from_frozen_001",
+      "reused_os_v1_json"
+    ],
+    "estate_id": "carlswald_north_corrected_002",
+    "extensible_attributes": {
+      "building_orientation": null,
+      "driveway": null,
+      "outbuildings": null,
+      "roof_footprint": null,
+      "solar": null
+    },
+    "fastsam_invoked": false,
+    "geometry_fingerprint": null,
+    "imagery_profile": "native15",
+    "imagery_version": "8e2d22cf42265c4f10449ac92de2cc0df0b702ca7f3ae63bdca4388bf0f9efca",
+    "normalized_pool_contour": null,
+    "os_pool_status": "UNKNOWN",
+    "os_source_hash": "2fbcb06200e7516adcdf2ff114a8d7e27364286486cf06d76f49b6bf53e2b119",
+    "parcel_geometry_ref": {
+      "dataset_id": "carlswald_north_corrected_002",
+      "geometry_sha256": "e9f9ca5e5e7039358ee7e48e082bea6389cd6f1c488635ae5cfe114305dd0f0d",
+      "property_id": 1601616,
+      "stand_number": "641",
+      "township": "SUMMERSET EXT.13"
+    },
+    "parcel_id": "1601616",
+    "pool_area_m2": null,
+    "pool_bbox": null,
+    "pool_centroid": null,
+    "pool_confidence": 0.0,
+    "pool_count": 0,
+    "pool_status": "UNKNOWN",
+    "property_id": 1601616,
+    "reused": true,
+    "reused_from_estate_id": "carlswald_north_corrected_001",
+    "scan_timestamp": "2026-08-17T07:24:01Z",
+    "schema_version": "estate_property_inventory_v1.1.1.0",
+    "segmentation_source": "object_segmentation_v1",
+    "stand_number": "641",
+    "tile_hashes": {},
+    "tile_ids": [
+      "tile_2023_native15_01_01"
+    ],
+    "township": "SUMMERSET EXT.13",
+    "unknown_reason": "backyard_not_adequately_observable",
+    "inventory_revision": "1.1.0",
+    "parent_algorithm_version": "estate_property_inventory_v1.1.0.0+object_segmentation_v1",
+    "pool_observability": {
+      "adequate_for_absence": false,
+      "crop_present": true,
+      "imagery_quality_ok": true,
+      "backyard_observable": false,
+      "canopy_occludes": false,
+      "shadow_occludes": false,
+      "roof_occludes": false,
+      "visible_open_fraction": 0.2146,
+      "canopy_fraction": 0.2991,
+      "shadow_fraction": 0.0601,
+      "roof_fraction": 0.3035,
+      "yard_pixels": 35328,
+      "parcel_pixels": 50719,
+      "flags": [
+        "backyard_not_adequately_observable",
+        "pool_observability_inadequate"
+      ],
+      "reason": "backyard_not_adequately_observable"
+    },
+    "overlay": "pool_inventory_no_unknown_safety_v1"
+  }
+}

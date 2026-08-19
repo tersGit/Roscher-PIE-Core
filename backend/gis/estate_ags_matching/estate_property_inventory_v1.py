@@ -6,6 +6,8 @@ gates, or production ranking.
 
 Pool colour is not used. Classification consumes frozen OS v1 statuses
 and parcel-mask notes only. UNKNOWN is never collapsed into NO.
+A raw FastSAM ``no_pool_candidate`` result is not by itself a confident NO;
+NO requires adequate backyard observability.
 """
 
 from __future__ import annotations
@@ -30,7 +32,7 @@ from backend.imagery.estate_tiles import (
 )
 
 INVENTORY_VERSION = "estate_property_inventory_v1"
-INVENTORY_REVISION = "1.0.0"
+INVENTORY_REVISION = "1.1.0"
 SEGMENTATION_SOURCE_VERSION = "object_segmentation_v1"
 ALGORITHM_VERSION = f"{INVENTORY_VERSION}.{INVENTORY_REVISION}+{SEGMENTATION_SOURCE_VERSION}"
 SCHEMA_VERSION = f"{INVENTORY_VERSION}.{INVENTORY_REVISION}"
@@ -326,6 +328,28 @@ def _contour_bbox(contour: Sequence[Sequence[float]]) -> list[float] | None:
     return [round(min(xs), 4), round(min(ys), 4), round(max(xs), 4), round(max(ys), 4)]
 
 
+def _observability_fields(observability: Any | None) -> tuple[list[str], bool, str | None]:
+    """Missing observability is insufficient: a detector miss is not a NO."""
+    if observability is None:
+        return (
+            ["pool_observability_inadequate", "crop_missing_or_unassessed"],
+            False,
+            "no_candidate_insufficient_observability",
+        )
+    adequate = bool(getattr(observability, "adequate_for_absence", None))
+    if isinstance(observability, Mapping):
+        adequate = bool(observability.get("adequate_for_absence"))
+        flags = [str(item) for item in (observability.get("flags") or [])]
+        reason = observability.get("reason") or observability.get("unknown_reason")
+    else:
+        flags = [str(item) for item in (getattr(observability, "flags", None) or [])]
+        reason = getattr(observability, "reason", None)
+    if not adequate and "pool_observability_inadequate" not in flags:
+        flags.append("pool_observability_inadequate")
+    reason_text = None if adequate else str(reason or "no_candidate_insufficient_observability")
+    return flags, adequate, reason_text
+
+
 def _centroid(pool: Mapping[str, Any], spatial: Mapping[str, Any]) -> list[float] | None:
     spatial_pool = spatial.get("pool") or {}
     parcel = spatial_pool.get("centroid_parcel")
@@ -338,13 +362,20 @@ def _centroid(pool: Mapping[str, Any], spatial: Mapping[str, Any]) -> list[float
     return [round(float(cx), 4), round(float(cy), 4)]
 
 
-def classify_pool_from_os(os_payload: Mapping[str, Any] | None) -> PoolClassification:
+def classify_pool_from_os(
+    os_payload: Mapping[str, Any] | None,
+    observability: Any | None = None,
+) -> PoolClassification:
     """Map frozen OS v1 pool output to inventory YES | NO | UNKNOWN.
 
     YES — OS CONFIRMED/PROBABLE in-parcel pool (not neighbour bleed).
-    NO  — no in-parcel candidate after adequate segmentation. Never used
-          for REJECTED (weak/confused OS evidence is not absence).
-    UNKNOWN — weak evidence, neighbour/mask issues, or poor segmentation.
+    NO  — no in-parcel candidate after adequate segmentation *and* the
+          backyard is adequately observable. Never used for REJECTED
+          (weak/confused OS evidence is not absence). A raw
+          ``no_pool_candidate`` miss is UNKNOWN unless observability
+          certifies that absence could have been seen.
+    UNKNOWN — weak evidence, neighbour/mask issues, poor segmentation,
+              or insufficient observability.
     """
     if not os_payload:
         return PoolClassification(
@@ -459,7 +490,25 @@ def classify_pool_from_os(os_payload: Mapping[str, Any] | None) -> PoolClassific
             flags.append("undersized_building")
 
     if os_status == "UNKNOWN" and "no_pool_candidate" in notes and not poor_segmentation:
+        obs_flags, obs_adequate, obs_reason = _observability_fields(observability)
+        flags.extend(obs_flags)
+        if not obs_adequate:
+            flags.append("no_pool_candidate_insufficient_observability")
+            return PoolClassification(
+                pool_status="UNKNOWN",
+                pool_confidence=0.0,
+                pool_count=0,
+                pool_centroid=None,
+                pool_area_m2=None,
+                pool_bbox=None,
+                normalized_pool_contour=None,
+                geometry_fingerprint=None,
+                diagnostic_flags=sorted(set(flags)),
+                unknown_reason=obs_reason or "no_candidate_insufficient_observability",
+                os_pool_status="UNKNOWN",
+            )
         flags.append("no_in_parcel_candidate_after_ok_os")
+        flags.append("pool_observability_adequate")
         return PoolClassification(
             pool_status="NO",
             pool_confidence=0.6,
@@ -633,6 +682,20 @@ class EstateInventoryStore:
         self.manifest_path.write_text(json.dumps(dict(payload), indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def _observability_for_scan(
+    crop: Path,
+    parcel: Mapping[str, Any],
+    os_payload: Mapping[str, Any] | None,
+):
+    from backend.gis.estate_ags_matching.pool_observability_v1 import observability_from_crop
+
+    return observability_from_crop(
+        crop if crop.is_file() else None,
+        geometry=parcel.get("geometry"),
+        os_payload=os_payload,
+    )
+
+
 def _load_os_payload(path: Path) -> dict[str, Any] | None:
     if not path.is_file():
         return None
@@ -801,7 +864,10 @@ def scan_estate_inventory(
         else:
             stats.parcels_rescanned += 1
 
-        classification = classify_pool_from_os(os_payload)
+        classification = classify_pool_from_os(
+            os_payload,
+            observability=_observability_for_scan(crop, parcel, os_payload),
+        )
         record = build_record(
             estate_id=estate_id,
             parcel=parcel,
