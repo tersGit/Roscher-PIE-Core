@@ -1,0 +1,1338 @@
+{
+  "diagnostic": "distinctive_contour_v2",
+  "used_in_ranking": false,
+  "ranking_modified": false,
+  "official_chosen_id": "115503057-043",
+  "n_useful_frames": 13,
+  "frames": [
+    {
+      "image_wh": [
+        1623,
+        1080
+      ],
+      "n_mask_components": 16,
+      "n_secondary_components": 0,
+      "pool_spa_relationship": {
+        "secondary_present": true,
+        "same_mask_extra_blobs": 15,
+        "hybrid_secondary_mask": false,
+        "merged_into_official_scoring_contour": false,
+        "note": "Official scoring uses the dominant component only."
+      },
+      "raw_contour": {
+        "n_points_in": 4932,
+        "n_major_indents": 2,
+        "max_indent": 0.2033,
+        "solidity": 0.8793,
+        "circularity": 0.1325,
+        "elongation": 2.4593,
+        "n_corners": 3,
+        "sharp_frac": 0.2812,
+        "n_major_directional_changes": 1086,
+        "limb_extents": {
+          "plus_x": 0.967,
+          "minus_x": 0.8468,
+          "plus_y": 0.2617,
+          "minus_y": 0.5317
+        },
+        "n_raw_vertices": 4932
+      },
+      "simplified_contour": {
+        "n_points_in": 4932,
+        "n_major_indents": 2,
+        "max_indent": 0.2033,
+        "solidity": 0.8793,
+        "circularity": 0.1325,
+        "elongation": 2.4593,
+        "n_corners": 3,
+        "sharp_frac": 0.2812,
+        "n_major_directional_changes": 1086,
+        "limb_extents": {
+          "plus_x": 0.967,
+          "minus_x": 0.8468,
+          "plus_y": 0.2617,
+          "minus_y": 0.5317
+        },
+        "n_simplified_vertices": 4932
+      },
+      "resampled_64": {
+        "n_points_in": 64,
+        "n_major_indents": 1,
+        "max_indent": 0.2008,
+        "solidity": 0.912,
+        "circularity": 0.368,
+        "elongation": 2.405,
+        "n_corners": 3,
+        "sharp_frac": 0.25,
+        "n_major_directional_changes": 22,
+        "limb_extents": {
+          "plus_x": 0.8573,
+          "minus_x": 0.9692,
+          "plus_y": 0.2825,
+          "minus_y": 0.5363
+        }
+      },
+      "official_scoring_contour": {
+        "n_points_in": 64,
+        "n_major_indents": 1,
+        "max_indent": 0.1955,
+        "solidity": 0.9175,
+        "circularity": 0.3963,
+        "elongation": 2.4825,
+        "n_corners": 5,
+        "sharp_frac": 0.2188,
+        "n_major_directional_changes": 12,
+        "limb_extents": {
+          "plus_x": 0.9566,
+          "minus_x": 0.9851,
+          "plus_y": 0.2914,
+          "minus_y": 0.5428
+        },
+        "normalized_contour": [
+          [
+            0.9566,
+            0.2914
+          ],
+          [
+            0.9067,
+            0.2138
+          ],
+          [
+            0.8568,
+            0.1359
+          ],
+          [
+            0.8067,
+            0.0582
+          ],
+          [
+            0.7568,
+            -0.0196
+          ],
+          [
+            0.7067,
+            -0.0973
+          ],
+          [
+            0.6568,
+            -0.1752
+          ],
+          [
+            0.6044,
+            -0.2483
+          ],
+          [
+            0.5407,
+            -0.3003
+          ],
+          [
+            0.4769,
+            -0.3523
+          ],
+          [
+            0.4132,
+            -0.4044
+          ],
+          [
+            0.3494,
+            -0.4564
+          ],
+          [
+            0.2857,
+            -0.5084
+          ],
+          [
+            0.2181,
+            -0.5428
+          ],
+          [
+            0.1431,
+            -0.5424
+          ],
+          [
+            0.068,
+            -0.542
+          ],
+          [
+            -0.007,
+            -0.5415
+          ],
+          [
+            -0.0755,
+            -0.4893
+          ],
+          [
+            -0.1432,
+            -0.4327
+          ],
+          [
+            -0.2109,
+            -0.3758
+          ],
+          [
+            -0.2786,
+            -0.3192
+          ],
+          [
+            -0.3464,
+            -0.2625
+          ],
+          [
+            -0.4141,
+            -0.2057
+          ],
+          [
+            -0.4818,
+            -0.149
+          ],
+          [
+            -0.5495,
+            -0.0923
+          ],
+          [
+            -0.6187,
+            -0.0412
+          ],
+          [
+            -0.6919,
+            -0.0069
+          ],
+          [
+            -0.7653,
+            0.0275
+          ],
+          [
+            -0.8385,
+            0.0618
+          ],
+          [
+            -0.9117,
+            0.0962
+          ],
+          [
+            -0.9851,
+            0.1306
+          ],
+          [
+            -0.9228,
+            0.1399
+          ],
+          [
+            -0.8484,
+            0.147
+          ],
+          [
+            -0.7738,
+            0.1541
+          ],
+          [
+            -0.6994,
+            0.1612
+          ],
+          [
+            -0.6247,
+            0.1683
+          ],
+          [
+            -0.5503,
+            0.1754
+          ],
+          [
+            -0.4757,
+            0.1825
+          ],
+          [
+            -0.4013,
+            0.1896
+          ],
+          [
+            -0.3269,
+            0.1967
+          ],
+          [
+            -0.2645,
+            0.1879
+          ],
+          [
+            -0.2785,
+            0.0795
+          ],
+          [
+            -0.2213,
+            0.0285
+          ],
+          [
+            -0.1758,
+            0.1023
+          ],
+          [
+            -0.1388,
+            0.0697
+          ],
+          [
+            -0.0788,
+            0.046
+          ],
+          [
+            -0.0119,
+            0.0712
+          ],
+          [
+            -0.0172,
+            0.1833
+          ],
+          [
+            -0.0654,
+            0.1124
+          ],
+          [
+            -0.1049,
+            0.1608
+          ],
+          [
+            -0.0889,
+            0.2187
+          ],
+          [
+            -0.0141,
+            0.2238
+          ],
+          [
+            0.0606,
+            0.2289
+          ],
+          [
+            0.1351,
+            0.2342
+          ],
+          [
+            0.21,
+            0.2394
+          ],
+          [
+            0.2846,
+            0.2445
+          ],
+          [
+            0.3592,
+            0.2498
+          ],
+          [
+            0.434,
+            0.255
+          ],
+          [
+            0.5086,
+            0.2603
+          ],
+          [
+            0.5832,
+            0.2654
+          ],
+          [
+            0.658,
+            0.2705
+          ],
+          [
+            0.7326,
+            0.2758
+          ],
+          [
+            0.8074,
+            0.281
+          ],
+          [
+            0.882,
+            0.2863
+          ]
+        ],
+        "normalized_contour_point_count": 64
+      },
+      "loss": {
+        "verdict": "PARTIALLY LOST",
+        "features_lost": [
+          "some_major_indents",
+          "directional_changes",
+          "spa_or_secondary_water_body_not_in_official_scoring_contour"
+        ],
+        "notes": [
+          "dominant-only scoring contour; secondary component preserved only in diagnostic"
+        ],
+        "raw_vs_scoring": {
+          "n_major_indents": [
+            2,
+            1
+          ],
+          "max_indent": [
+            0.2033,
+            0.1955
+          ],
+          "solidity": [
+            0.8793,
+            0.9175
+          ],
+          "n_major_directional_changes": [
+            1086,
+            12
+          ],
+          "elongation": [
+            2.4593,
+            2.4825
+          ]
+        }
+      },
+      "verdict": "PARTIALLY LOST",
+      "used_in_ranking": false,
+      "media_id": "115503057-043",
+      "clip_scene": "pool_garden",
+      "hybrid_viewpoint": "pool_overview",
+      "hybrid_source": "yoloe_sam2",
+      "scoring_ready": true,
+      "is_official_chosen_frame": true,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-043.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-044",
+      "clip_scene": "pool_garden",
+      "hybrid_viewpoint": "pool_overview",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-044.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-002",
+      "clip_scene": "contextual",
+      "hybrid_viewpoint": "elevated_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-002.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-003",
+      "clip_scene": "front_elevation",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-003.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-004",
+      "clip_scene": "driveway_access",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-004.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-005",
+      "clip_scene": "interior",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-005.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-008",
+      "clip_scene": "interior",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-008.jpg"
+    },
+    {
+      "image_wh": [
+        1623,
+        1080
+      ],
+      "n_mask_components": 1,
+      "n_secondary_components": 0,
+      "pool_spa_relationship": {
+        "secondary_present": false,
+        "same_mask_extra_blobs": 0,
+        "hybrid_secondary_mask": false,
+        "merged_into_official_scoring_contour": false,
+        "note": "Official scoring uses the dominant component only."
+      },
+      "raw_contour": {
+        "n_points_in": 1872,
+        "n_major_indents": 2,
+        "max_indent": 0.3956,
+        "solidity": 0.86,
+        "circularity": 0.2716,
+        "elongation": 1.8053,
+        "n_corners": 6,
+        "sharp_frac": 0.3438,
+        "n_major_directional_changes": 234,
+        "limb_extents": {
+          "plus_x": 0.9974,
+          "minus_x": 0.9085,
+          "plus_y": 0.3924,
+          "minus_y": 0.5432
+        },
+        "n_raw_vertices": 1872
+      },
+      "simplified_contour": {
+        "n_points_in": 9,
+        "n_major_indents": 2,
+        "max_indent": 0.3993,
+        "solidity": 0.8679,
+        "circularity": 0.4487,
+        "elongation": 1.7866,
+        "n_corners": 8,
+        "sharp_frac": 0.4688,
+        "n_major_directional_changes": 8,
+        "limb_extents": {
+          "plus_x": 0.9685,
+          "minus_x": 0.9987,
+          "plus_y": 0.2919,
+          "minus_y": 0.672
+        },
+        "n_simplified_vertices": 9
+      },
+      "resampled_64": {
+        "n_points_in": 64,
+        "n_major_indents": 2,
+        "max_indent": 0.3671,
+        "solidity": 0.8787,
+        "circularity": 0.4521,
+        "elongation": 1.8382,
+        "n_corners": 7,
+        "sharp_frac": 0.3125,
+        "n_major_directional_changes": 12,
+        "limb_extents": {
+          "plus_x": 0.9996,
+          "minus_x": 0.9426,
+          "plus_y": 0.3772,
+          "minus_y": 0.5502
+        }
+      },
+      "official_scoring_contour": {
+        "n_points_in": 64,
+        "n_major_indents": 2,
+        "max_indent": 0.3637,
+        "solidity": 0.89,
+        "circularity": 0.4533,
+        "elongation": 1.7819,
+        "n_corners": 7,
+        "sharp_frac": 0.2812,
+        "n_major_directional_changes": 9,
+        "limb_extents": {
+          "plus_x": 0.9966,
+          "minus_x": 0.931,
+          "plus_y": 0.3854,
+          "minus_y": 0.5317
+        },
+        "normalized_contour": [
+          [
+            0.9966,
+            -0.0823
+          ],
+          [
+            0.9478,
+            -0.0351
+          ],
+          [
+            0.899,
+            0.012
+          ],
+          [
+            0.8507,
+            0.0591
+          ],
+          [
+            0.8019,
+            0.1063
+          ],
+          [
+            0.7534,
+            0.1537
+          ],
+          [
+            0.6723,
+            0.1254
+          ],
+          [
+            0.5881,
+            0.0861
+          ],
+          [
+            0.6227,
+            0.1708
+          ],
+          [
+            0.6569,
+            0.2553
+          ],
+          [
+            0.6173,
+            0.3019
+          ],
+          [
+            0.5569,
+            0.3357
+          ],
+          [
+            0.4775,
+            0.3398
+          ],
+          [
+            0.3978,
+            0.3437
+          ],
+          [
+            0.3173,
+            0.3377
+          ],
+          [
+            0.2334,
+            0.2832
+          ],
+          [
+            0.1492,
+            0.2289
+          ],
+          [
+            0.0652,
+            0.1744
+          ],
+          [
+            -0.0187,
+            0.1199
+          ],
+          [
+            -0.1027,
+            0.0654
+          ],
+          [
+            -0.1869,
+            0.0112
+          ],
+          [
+            -0.1979,
+            0.0437
+          ],
+          [
+            -0.1659,
+            0.1285
+          ],
+          [
+            -0.1339,
+            0.2128
+          ],
+          [
+            -0.1019,
+            0.2977
+          ],
+          [
+            -0.167,
+            0.3041
+          ],
+          [
+            -0.2514,
+            0.295
+          ],
+          [
+            -0.3355,
+            0.2861
+          ],
+          [
+            -0.4024,
+            0.3078
+          ],
+          [
+            -0.4592,
+            0.3468
+          ],
+          [
+            -0.5158,
+            0.3854
+          ],
+          [
+            -0.5892,
+            0.3732
+          ],
+          [
+            -0.6745,
+            0.3229
+          ],
+          [
+            -0.76,
+            0.2722
+          ],
+          [
+            -0.8455,
+            0.2221
+          ],
+          [
+            -0.931,
+            0.1715
+          ],
+          [
+            -0.8994,
+            0.1214
+          ],
+          [
+            -0.854,
+            0.0712
+          ],
+          [
+            -0.8087,
+            0.0209
+          ],
+          [
+            -0.7634,
+            -0.0294
+          ],
+          [
+            -0.718,
+            -0.0796
+          ],
+          [
+            -0.6727,
+            -0.1299
+          ],
+          [
+            -0.6274,
+            -0.1802
+          ],
+          [
+            -0.5823,
+            -0.2302
+          ],
+          [
+            -0.5369,
+            -0.2804
+          ],
+          [
+            -0.4916,
+            -0.3307
+          ],
+          [
+            -0.4462,
+            -0.381
+          ],
+          [
+            -0.4009,
+            -0.4312
+          ],
+          [
+            -0.3556,
+            -0.4815
+          ],
+          [
+            -0.3102,
+            -0.5317
+          ],
+          [
+            -0.2365,
+            -0.5274
+          ],
+          [
+            -0.1484,
+            -0.4957
+          ],
+          [
+            -0.0605,
+            -0.4637
+          ],
+          [
+            0.0276,
+            -0.432
+          ],
+          [
+            0.1157,
+            -0.4003
+          ],
+          [
+            0.2038,
+            -0.3685
+          ],
+          [
+            0.292,
+            -0.3368
+          ],
+          [
+            0.3798,
+            -0.3048
+          ],
+          [
+            0.4679,
+            -0.2731
+          ],
+          [
+            0.556,
+            -0.2414
+          ],
+          [
+            0.6441,
+            -0.2097
+          ],
+          [
+            0.732,
+            -0.1777
+          ],
+          [
+            0.8204,
+            -0.1457
+          ],
+          [
+            0.9085,
+            -0.114
+          ]
+        ],
+        "normalized_contour_point_count": 64
+      },
+      "loss": {
+        "verdict": "PARTIALLY LOST",
+        "features_lost": [
+          "directional_changes"
+        ],
+        "notes": [],
+        "raw_vs_scoring": {
+          "n_major_indents": [
+            2,
+            2
+          ],
+          "max_indent": [
+            0.3956,
+            0.3637
+          ],
+          "solidity": [
+            0.86,
+            0.89
+          ],
+          "n_major_directional_changes": [
+            234,
+            9
+          ],
+          "elongation": [
+            1.8053,
+            1.7819
+          ]
+        }
+      },
+      "verdict": "PARTIALLY LOST",
+      "used_in_ranking": false,
+      "media_id": "115503057-012",
+      "clip_scene": "contextual",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-012.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-013",
+      "clip_scene": "contextual",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-013.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-017",
+      "clip_scene": "driveway_access",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-017.jpg"
+    },
+    {
+      "image_wh": [
+        1623,
+        1080
+      ],
+      "n_mask_components": 1,
+      "n_secondary_components": 0,
+      "pool_spa_relationship": {
+        "secondary_present": false,
+        "same_mask_extra_blobs": 0,
+        "hybrid_secondary_mask": false,
+        "merged_into_official_scoring_contour": false,
+        "note": "Official scoring uses the dominant component only."
+      },
+      "raw_contour": {
+        "n_points_in": 1083,
+        "n_major_indents": 1,
+        "max_indent": 0.2185,
+        "solidity": 0.8552,
+        "circularity": 0.2707,
+        "elongation": 4.3751,
+        "n_corners": 4,
+        "sharp_frac": 0.1875,
+        "n_major_directional_changes": 276,
+        "limb_extents": {
+          "plus_x": 0.9904,
+          "minus_x": 0.9999,
+          "plus_y": 0.1839,
+          "minus_y": 0.2752
+        },
+        "n_raw_vertices": 1083
+      },
+      "simplified_contour": {
+        "n_points_in": 5,
+        "n_major_indents": 1,
+        "max_indent": 0.2315,
+        "solidity": 0.8546,
+        "circularity": 0.2809,
+        "elongation": 4.4371,
+        "n_corners": 5,
+        "sharp_frac": 0.1875,
+        "n_major_directional_changes": 4,
+        "limb_extents": {
+          "plus_x": 0.999,
+          "minus_x": 0.8027,
+          "plus_y": 0.1919,
+          "minus_y": 0.2247
+        },
+        "n_simplified_vertices": 5
+      },
+      "resampled_64": {
+        "n_points_in": 64,
+        "n_major_indents": 1,
+        "max_indent": 0.1983,
+        "solidity": 0.8865,
+        "circularity": 0.3402,
+        "elongation": 4.361,
+        "n_corners": 3,
+        "sharp_frac": 0.1562,
+        "n_major_directional_changes": 7,
+        "limb_extents": {
+          "plus_x": 0.9962,
+          "minus_x": 0.9812,
+          "plus_y": 0.1869,
+          "minus_y": 0.2761
+        }
+      },
+      "official_scoring_contour": {
+        "n_points_in": 64,
+        "n_major_indents": 1,
+        "max_indent": 0.2065,
+        "solidity": 0.9033,
+        "circularity": 0.3167,
+        "elongation": 4.4474,
+        "n_corners": 4,
+        "sharp_frac": 0.0938,
+        "n_major_directional_changes": 4,
+        "limb_extents": {
+          "plus_x": 0.9876,
+          "minus_x": 0.9995,
+          "plus_y": 0.1896,
+          "minus_y": 0.2667
+        },
+        "normalized_contour": [
+          [
+            -0.9995,
+            0.0318
+          ],
+          [
+            -0.9383,
+            0.0017
+          ],
+          [
+            -0.8766,
+            -0.0284
+          ],
+          [
+            -0.8148,
+            -0.0591
+          ],
+          [
+            -0.7537,
+            -0.0891
+          ],
+          [
+            -0.6914,
+            -0.113
+          ],
+          [
+            -0.627,
+            -0.1096
+          ],
+          [
+            -0.5626,
+            -0.1061
+          ],
+          [
+            -0.4982,
+            -0.1033
+          ],
+          [
+            -0.4339,
+            -0.0999
+          ],
+          [
+            -0.3695,
+            -0.0965
+          ],
+          [
+            -0.3051,
+            -0.0936
+          ],
+          [
+            -0.2401,
+            -0.0902
+          ],
+          [
+            -0.1912,
+            -0.1328
+          ],
+          [
+            -0.1547,
+            -0.2135
+          ],
+          [
+            -0.1105,
+            -0.2667
+          ],
+          [
+            -0.047,
+            -0.2496
+          ],
+          [
+            0.0159,
+            -0.2326
+          ],
+          [
+            0.0795,
+            -0.2156
+          ],
+          [
+            0.1431,
+            -0.1991
+          ],
+          [
+            0.206,
+            -0.1821
+          ],
+          [
+            0.2695,
+            -0.1651
+          ],
+          [
+            0.3331,
+            -0.148
+          ],
+          [
+            0.396,
+            -0.131
+          ],
+          [
+            0.4596,
+            -0.1139
+          ],
+          [
+            0.5231,
+            -0.0975
+          ],
+          [
+            0.5867,
+            -0.0805
+          ],
+          [
+            0.6496,
+            -0.0634
+          ],
+          [
+            0.7132,
+            -0.0464
+          ],
+          [
+            0.7767,
+            -0.0294
+          ],
+          [
+            0.8397,
+            -0.0129
+          ],
+          [
+            0.9032,
+            0.0041
+          ],
+          [
+            0.9668,
+            0.0211
+          ],
+          [
+            0.9876,
+            0.0351
+          ],
+          [
+            0.9237,
+            0.0441
+          ],
+          [
+            0.8591,
+            0.0524
+          ],
+          [
+            0.7946,
+            0.0613
+          ],
+          [
+            0.7307,
+            0.0697
+          ],
+          [
+            0.6661,
+            0.078
+          ],
+          [
+            0.6022,
+            0.087
+          ],
+          [
+            0.5376,
+            0.0953
+          ],
+          [
+            0.4731,
+            0.1037
+          ],
+          [
+            0.4091,
+            0.1126
+          ],
+          [
+            0.3446,
+            0.121
+          ],
+          [
+            0.2807,
+            0.1299
+          ],
+          [
+            0.2161,
+            0.1383
+          ],
+          [
+            0.1516,
+            0.1466
+          ],
+          [
+            0.0876,
+            0.1556
+          ],
+          [
+            0.0231,
+            0.1639
+          ],
+          [
+            -0.0414,
+            0.1723
+          ],
+          [
+            -0.1054,
+            0.1812
+          ],
+          [
+            -0.1699,
+            0.1896
+          ],
+          [
+            -0.2336,
+            0.1843
+          ],
+          [
+            -0.2979,
+            0.1716
+          ],
+          [
+            -0.3615,
+            0.1589
+          ],
+          [
+            -0.4251,
+            0.1462
+          ],
+          [
+            -0.4893,
+            0.1334
+          ],
+          [
+            -0.553,
+            0.1207
+          ],
+          [
+            -0.6166,
+            0.108
+          ],
+          [
+            -0.6808,
+            0.0953
+          ],
+          [
+            -0.7444,
+            0.0826
+          ],
+          [
+            -0.808,
+            0.0699
+          ],
+          [
+            -0.8723,
+            0.0572
+          ],
+          [
+            -0.9359,
+            0.0445
+          ]
+        ],
+        "normalized_contour_point_count": 64
+      },
+      "loss": {
+        "verdict": "PARTIALLY LOST",
+        "features_lost": [
+          "directional_changes"
+        ],
+        "notes": [],
+        "raw_vs_scoring": {
+          "n_major_indents": [
+            1,
+            1
+          ],
+          "max_indent": [
+            0.2185,
+            0.2065
+          ],
+          "solidity": [
+            0.8552,
+            0.9033
+          ],
+          "n_major_directional_changes": [
+            276,
+            4
+          ],
+          "elongation": [
+            4.3751,
+            4.4474
+          ]
+        }
+      },
+      "verdict": "PARTIALLY LOST",
+      "used_in_ranking": false,
+      "media_id": "115503057-046",
+      "clip_scene": "driveway_access",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-046.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-048",
+      "clip_scene": "driveway_access",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-048.jpg"
+    },
+    {
+      "n_mask_components": 0,
+      "verdict": "COLLAPSED",
+      "features_lost": [
+        "no_raw_mask"
+      ],
+      "used_in_ranking": false,
+      "media_id": "115503057-049",
+      "clip_scene": "driveway_access",
+      "hybrid_viewpoint": "ground_level_exterior",
+      "hybrid_source": "presence_only",
+      "scoring_ready": false,
+      "is_official_chosen_frame": false,
+      "panel": "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-049.jpg"
+    }
+  ],
+  "overall": {
+    "overall_verdict": "PARTIALLY LOST",
+    "official_frame_id": "115503057-043",
+    "official_frame_verdict": "PARTIALLY LOST",
+    "reason": "official_scoring_contour_lost_some_distinctive_features",
+    "n_frames": 13,
+    "verdict_counts": {
+      "GEOMETRY PRESERVED": 0,
+      "PARTIALLY LOST": 3,
+      "COLLAPSED": 10
+    },
+    "used_in_ranking": false
+  },
+  "panels": [
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-043.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-044.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-002.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-003.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-004.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-005.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-008.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-012.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-013.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-017.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-046.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-048.jpg",
+    "data/investigations/blind_115503057_complete_estate/distinctive_contour_v2/115503057-049.jpg"
+  ],
+  "note": "Diagnostic only. Official Hybrid v1 contour used for ranking was not replaced."
+}

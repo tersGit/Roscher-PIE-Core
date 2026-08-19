@@ -47,6 +47,7 @@ from backend.gis.estate_ags_matching.estate_property_inventory_v1 import (
     os_json_path_for,
     pass1_parcels,
     safe_stand,
+    status_counts,
 )
 from backend.gis.estate_ags_matching.hybrid_geometry_ranking_test import (
     listing_evidence_from_hybrid_block,
@@ -174,6 +175,22 @@ def load_gis_002(path: Path | None = None) -> dict[str, Any]:
 
 def load_inventory_002(root: Path | None = None) -> list[dict[str, Any]]:
     return load_inventory_records(DATASET_ID, root=root)
+
+
+def load_inventory_pool_obs_v1_1_0() -> list[dict[str, Any]]:
+    """PR #29 overlay. Does not rewrite frozen 002 current.jsonl."""
+    from backend.gis.estate_ags_matching.pool_inventory_no_unknown_safety_v1 import (
+        OVERLAY_ROOT,
+        load_jsonl,
+    )
+
+    path = OVERLAY_ROOT / "current.jsonl"
+    if not path.is_file():
+        raise FileNotFoundError(path)
+    records = load_jsonl(path)
+    if len(records) != 400:
+        raise RuntimeError(f"expected 400 overlay inventory rows, got {len(records)}")
+    return records
 
 
 def load_hybrid_block(listing_id: str = LISTING_ID) -> dict[str, Any]:
@@ -1432,6 +1449,8 @@ def freeze_payload(
     candidate_pov: Mapping[str, Any] | None = None,
     ranking_quality: Mapping[str, Any] | None = None,
     apply_candidate_pov: bool = False,
+    inventory_label: str | None = None,
+    inventory_counts: Mapping[str, int] | None = None,
 ) -> dict[str, Any]:
     acq = {
         key: val
@@ -1519,7 +1538,8 @@ def freeze_payload(
             "pool_object_validation": "pool_object_validation_v1",
             "candidate_pov_overlay": bool(apply_candidate_pov),
             "scoring_v2_weights_modified": False,
-            "inventory": "estate_property_inventory_v1",
+            "inventory": inventory_label or "estate_property_inventory_v1",
+            "inventory_counts": None if inventory_counts is None else dict(inventory_counts),
             "dataset_id": DATASET_ID,
             "colour_used_in_ranking": False,
         },
@@ -1796,6 +1816,8 @@ def run_freeze(
     ignore_frozen_hybrid_json: bool = False,
     apply_corner_gate: bool = False,
     apply_candidate_pov: bool = False,
+    inventory_records: Sequence[Mapping[str, Any]] | None = None,
+    inventory_label: str | None = None,
 ) -> dict[str, Any]:
     started = time.time()
     dest = Path(out_dir) if out_dir is not None else REPO_ROOT / "data/investigations" / f"blind_{listing_id}_complete_estate"
@@ -1805,7 +1827,7 @@ def run_freeze(
     prior_artifacts = scan_prior_listing_artifacts(listing_id)
     dataset = load_gis_002()
     parcels = pass1_parcels(dataset)
-    inventory = load_inventory_002()
+    inventory = list(inventory_records) if inventory_records is not None else load_inventory_002()
     if len(parcels) != 400:
         raise RuntimeError(f"expected 400 unique erven, got {len(parcels)}")
 
@@ -1920,6 +1942,8 @@ def run_freeze(
             listing_shape_available=bool(fingerprint.get("listing_shape_obj")),
         ),
         apply_candidate_pov=apply_candidate_pov,
+        inventory_label=inventory_label,
+        inventory_counts=status_counts(inventory),
     )
     marker_runtime = round(time.time() - started, 2)
     digest = write_freeze(payload, rows, dest=freeze_path)
