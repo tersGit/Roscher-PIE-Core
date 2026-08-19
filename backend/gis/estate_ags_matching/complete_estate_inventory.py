@@ -30,6 +30,7 @@ from backend.gis.estate_ags_matching.estate_property_inventory_v1 import (
     _load_crop_bgr,
     _load_os_payload,
     _os_source_hash,
+    _observability_for_scan,
     build_record,
     classify_pool_from_os,
     compute_imagery_fingerprint,
@@ -332,7 +333,10 @@ def build_complete_inventory(
             stats.parcels_rescanned += 1
         else:
             stats.parcels_rescanned += 1
-        classification = classify_pool_from_os(os_payload)
+        classification = classify_pool_from_os(
+            os_payload,
+            observability=_observability_for_scan(crop, parcel, os_payload),
+        )
         record = build_record(
             estate_id=estate_id,
             parcel=parcel,

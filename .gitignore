@@ -218,6 +218,7 @@ __marimo__/
 data/cache/
 data/visual_index/
 data/investigations/**/photos/
+data/investigations/pool_inventory_no_unknown_safety_v1/ags_crops/
 mobileclip_blt.ts
 *.pyc
 

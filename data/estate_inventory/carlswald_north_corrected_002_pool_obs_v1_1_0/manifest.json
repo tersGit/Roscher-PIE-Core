@@ -1,0 +1,13 @@
+{
+  "algorithm_version": "estate_property_inventory_v1.1.1.0+object_segmentation_v1",
+  "counts": {
+    "NO": 33,
+    "UNKNOWN": 249,
+    "YES": 118
+  },
+  "frozen_inventories_modified": false,
+  "inventory_revision": "1.1.0",
+  "parcel_count": 400,
+  "parent_inventory": "data/estate_inventory/carlswald_north_corrected_002/current.jsonl",
+  "schema_version": "estate_property_inventory_v1.1.1.0"
+}

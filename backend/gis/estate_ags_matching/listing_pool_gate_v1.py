@@ -5,6 +5,9 @@ Geometry, viewpoint gates, or OS v1.
 
 UNKNOWN inventory rows always survive. Missing inventory is treated as
 UNKNOWN. Colour is not used.
+
+Inventory NO is a removal signal for listing YES only when that NO is
+observability-qualified. A raw detector miss is not a confident NO.
 """
 
 from __future__ import annotations
@@ -21,6 +24,45 @@ def normalize_pool_status(value: Any) -> PoolStatus:
     if status not in VALID_STATUSES:
         return "UNKNOWN"
     return status  # type: ignore[return-value]
+
+
+def is_confident_pool_no(record: Mapping[str, Any] | None, status: Any | None = None) -> bool:
+    """True only for a strengthened, observability-qualified inventory NO.
+
+    Explicit candidate ``inventory_pool_status=NO`` without an inventory
+    record keeps historic gate behaviour (tests and callers that already
+    asserted NO). Versioned 1.1.0 inventory rows require
+    ``pool_observability_adequate``. Inadequate-observability flags always
+    demote NO to not-confident.
+    """
+    parcel = normalize_pool_status(
+        status if status is not None else (None if record is None else record.get("pool_status"))
+    )
+    if parcel != "NO":
+        return False
+    flags = [str(item) for item in ((record or {}).get("diagnostic_flags") or (record or {}).get("flags") or [])]
+    if "pool_observability_inadequate" in flags or "no_pool_candidate_insufficient_observability" in flags:
+        return False
+    algorithm = str((record or {}).get("algorithm_version") or "")
+    if "1.1.0" in algorithm:
+        return "pool_observability_adequate" in flags
+    return True
+
+
+def gate_pool_status(record: Mapping[str, Any] | None, explicit: Any | None = None) -> PoolStatus:
+    if explicit in VALID_STATUSES:
+        status = normalize_pool_status(explicit)
+        if status != "NO":
+            return status
+        if record is None:
+            return status
+        return "NO" if is_confident_pool_no(record, status) else "UNKNOWN"
+    if record is None:
+        return "UNKNOWN"
+    status = normalize_pool_status(record.get("pool_status"))
+    if status != "NO":
+        return status
+    return "NO" if is_confident_pool_no(record, status) else "UNKNOWN"
 
 
 def survives_listing_pool_gate(
@@ -119,18 +161,30 @@ def apply_listing_pool_gate(
         candidate = dict(raw)
         record = _lookup(candidate, index)
         explicit = candidate.get("inventory_pool_status")
+        source_record: Mapping[str, Any] | None
         if explicit in VALID_STATUSES:
-            parcel_status = normalize_pool_status(explicit)
+            parcel_status = gate_pool_status(record, explicit)
             reason = candidate.get("unknown_reason")
+            source_record = record
         elif record is not None:
-            parcel_status = normalize_pool_status(record.get("pool_status"))
+            parcel_status = gate_pool_status(record)
             reason = record.get("unknown_reason")
+            source_record = record
         elif candidate.get("pool_status") in VALID_STATUSES:
-            parcel_status = normalize_pool_status(candidate.get("pool_status"))
+            parcel_status = gate_pool_status(candidate, candidate.get("pool_status"))
             reason = candidate.get("unknown_reason")
+            source_record = candidate
         else:
             parcel_status = "UNKNOWN"
             reason = "missing_inventory_record"
+            source_record = None
+        if (
+            parcel_status == "UNKNOWN"
+            and source_record is not None
+            and normalize_pool_status(source_record.get("pool_status")) == "NO"
+            and not is_confident_pool_no(source_record)
+        ):
+            reason = source_record.get("unknown_reason") or "pool_no_not_observability_qualified"
         candidate["inventory_pool_status"] = parcel_status
         candidate["inventory_unknown_reason"] = reason
 
