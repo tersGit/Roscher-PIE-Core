@@ -1,0 +1,97 @@
+{
+  "confirmed_stand": "401",
+  "confidence": "MEDIUM",
+  "determinable": true,
+  "identity": {
+    "listing_id": "115503057",
+    "published_street_text": null,
+    "street_withheld_contact_agent": true,
+    "property24_coordinates": null,
+    "cadastral_stand": "401",
+    "street_address": "6 BUFFALO THORN DRIVE",
+    "township": "SUMMERSET EXT.6",
+    "property_id": 1490051,
+    "coj_area_sqm_401": 919.0,
+    "listing_erf_sqm": 897.0,
+    "listing_floor_sqm": 672.0,
+    "agency": "LWP Properties",
+    "agent": "Kefilwe Double",
+    "duplicate_listing": "Private Property T4940696",
+    "note": "Public Property24 115503057 and Private Property T4940696 both withhold street and coordinates. Exact advertised 897.0 m2 is not unique in the 400-erven universe. Identity is independent visual plus neighbour configuration, not PIE rank and not unique-size."
+  },
+  "evidence": [
+    {
+      "type": "public_listing_identity_withheld",
+      "property24_url": "https://www.property24.com/for-sale/summerset/midrand/gauteng/11682/115503057",
+      "private_property_url": "https://www.privateproperty.co.za/for-sale/gauteng/johannesburg/midrand/summerset/T4940696",
+      "street_published": false,
+      "stand_published": false,
+      "coordinates_present": false,
+      "note": "Contact agent for street address on both portals. Same copy, 897 m2 / 672.22 m2, listed 30 Jan 2025."
+    },
+    {
+      "type": "advertised_size_not_unique",
+      "listing_erf_sqm": 897.0,
+      "gis_exact_897_count": 3,
+      "gis_exact_stands": ["539", "435", "1/867"],
+      "gis_401_sqm": 919.0,
+      "delta_sqm": 22.0,
+      "used_as_sole_truth": false,
+      "note": "Exact 897.0 m2 hits vacant 539, courtyard-no-pool 435, and 1/867 (inventory NO). Size corroborates 401 only as a 2.5% GIS offset, not as a unique key."
+    },
+    {
+      "type": "coj_registered_stand",
+      "stand_number": "401",
+      "township": "SUMMERSET EXT.6",
+      "street_address": "6 BUFFALO THORN DRIVE",
+      "area_sqm": 919.0,
+      "property_id": 1490051
+    },
+    {
+      "type": "native15_and_esri_visual",
+      "ags_year": 2023,
+      "stand_401": "dark-grey multi-plane roof, ~430 m2 footprint, elongated pool on the north side against the house/boundary, east driveway onto Buffalo Thorn Drive, internal (not corner) stand",
+      "south_neighbour_400": "8 Buffalo Thorn Drive, terracotta/red-brown tiled roof with large solar arrays — matches listing front-left reddish-brown neighbour when viewed from the street",
+      "right_of_front": "mature trees on the north-east, matching listing 004/048 trees on the right of the garage elevation",
+      "listing_photos": "cubist charcoal house, beige cantilever over double garage, rust-red accent wall, long rectangular side-yard lap pool with grey deck, internal courtyard/koi pond in copy and frames 012/013"
+    },
+    {
+      "type": "rejected_exact_897_alternatives",
+      "stand_539": "3 Buffalo Thorn Drive, 897.0 m2, 2023 AGS vacant grass lot, inventory UNKNOWN, frozen rank 135 — cannot be the 672 m2 house",
+      "stand_435": "19 Huilboerboon Drive, 897.0 m2, courtyard/C-shaped dark-grey roof is the better courtyard match, but 2023 OS pool REJECTED (11.08 m2) and ESRI World Imagery also shows no swimming pool; the visible lap pool belongs to south neighbour 434. Frozen rank 123, shape_v2 null",
+      "stand_1_867": "25 Coral Tree Drive, 897.0 m2, light-grey roof with a long solar array, no confirmed pool, inventory NO — removed by Pool Gate"
+    },
+    {
+      "type": "top5_not_used_as_truth",
+      "frozen_top5": ["868", "624", "648", "545", "401"],
+      "manual_inspection": {
+        "868": "RULED OUT",
+        "624": "RULED OUT",
+        "648": "RULED OUT",
+        "545": "RULED OUT",
+        "401": "INCONCLUSIVE / BASIC VISUAL MATCH"
+      },
+      "inferred_from_pie_rank": false,
+      "note": "401 is not accepted because it was the only remaining Top-5 possibility. Rank was not used as identity."
+    }
+  ],
+  "visual": {
+    "stand_in_complete_gis": true,
+    "inventory_pool_status": "YES",
+    "os_pool_status": "CONFIRMED",
+    "os_pool_area_m2": 22.54,
+    "os_pool_aspect": 2.766,
+    "os_building_status": "CONFIRMED",
+    "os_building_area_m2": 429.66,
+    "parcel_corner": "NO",
+    "parcel_corner_reason": "single_road_frontage_not_corner",
+    "parcel_roads": ["BUFFALO THORN DRIVE"],
+    "township": "SUMMERSET EXT.6",
+    "area_sqm": 919.0,
+    "street_address": "6 BUFFALO THORN DRIVE",
+    "proof": "data/investigations/blind_115503057_complete_estate/panels/forensic_listing_401_top5.jpg"
+  },
+  "inferred_from_pie_rank": false,
+  "ground_truth_applied_to_ranking": false,
+  "freeze_modified": false
+}
