@@ -1,0 +1,310 @@
+{
+  "id": "stand_411",
+  "source_image": {
+    "kind": "os_v1_pool.contour",
+    "crop": "data/visual_index/carlswald_north_corrected_002/_imagery_cache_native15/411_ags_aerial.jpg",
+    "os_json": "data/investigations/object_segmentation_v1/carlswald_north/json/411.json",
+    "os_mask": "data/investigations/object_segmentation_v1/carlswald_north/masks/411_pool.png"
+  },
+  "extractor": [
+    "low_pool_evidence"
+  ],
+  "contour_image_01": [
+    [
+      0.3739,
+      0.4349
+    ],
+    [
+      0.3722,
+      0.4365
+    ],
+    [
+      0.3688,
+      0.4365
+    ],
+    [
+      0.3636,
+      0.4414
+    ],
+    [
+      0.3636,
+      0.443
+    ],
+    [
+      0.3619,
+      0.4446
+    ],
+    [
+      0.3619,
+      0.4463
+    ],
+    [
+      0.3602,
+      0.4479
+    ],
+    [
+      0.3602,
+      0.4511
+    ],
+    [
+      0.3585,
+      0.4528
+    ],
+    [
+      0.3585,
+      0.4707
+    ],
+    [
+      0.3602,
+      0.4707
+    ],
+    [
+      0.3619,
+      0.4723
+    ],
+    [
+      0.3671,
+      0.4723
+    ],
+    [
+      0.3688,
+      0.4739
+    ],
+    [
+      0.3808,
+      0.4739
+    ],
+    [
+      0.3825,
+      0.4756
+    ],
+    [
+      0.3842,
+      0.4756
+    ],
+    [
+      0.3894,
+      0.4805
+    ],
+    [
+      0.3928,
+      0.4805
+    ],
+    [
+      0.3945,
+      0.4821
+    ],
+    [
+      0.3979,
+      0.4821
+    ],
+    [
+      0.3997,
+      0.4837
+    ],
+    [
+      0.4014,
+      0.4837
+    ],
+    [
+      0.4048,
+      0.487
+    ],
+    [
+      0.4048,
+      0.4886
+    ],
+    [
+      0.4185,
+      0.4886
+    ],
+    [
+      0.4202,
+      0.487
+    ],
+    [
+      0.4202,
+      0.4853
+    ],
+    [
+      0.4254,
+      0.4805
+    ],
+    [
+      0.4254,
+      0.4756
+    ],
+    [
+      0.4271,
+      0.4739
+    ],
+    [
+      0.4271,
+      0.4658
+    ],
+    [
+      0.4374,
+      0.456
+    ],
+    [
+      0.4374,
+      0.4414
+    ],
+    [
+      0.4322,
+      0.4414
+    ],
+    [
+      0.4305,
+      0.443
+    ],
+    [
+      0.4254,
+      0.4381
+    ],
+    [
+      0.4254,
+      0.4365
+    ],
+    [
+      0.4237,
+      0.4349
+    ]
+  ],
+  "contour_point_count": 40,
+  "raw_bbox_norm": {
+    "x_min": 0.3585,
+    "y_min": 0.4349,
+    "x_max": 0.4374,
+    "y_max": 0.4886
+  },
+  "width_norm": 0.07890000000000003,
+  "height_norm": 0.05369999999999997,
+  "aspect_ratio_aabb": 1.469273743016761,
+  "shape_v2_descriptors": {
+    "circularity": 0.719,
+    "solidity": 0.9301,
+    "elongation": 1.4643,
+    "n_corners": 7,
+    "n_major_indents": 2,
+    "max_indent": 0.0941,
+    "sharp_frac": 0.375,
+    "turn_std": 0.7645,
+    "radial_cv": 0.2682,
+    "symmetry": 0.3874,
+    "hu_log": [
+      -0.7399,
+      -2.2828,
+      -3.4086,
+      -5.1815
+    ]
+  },
+  "scaled_geometry_400px": {
+    "point_count": 40,
+    "bbox": [
+      10.0,
+      10.0,
+      390.0,
+      268.6312
+    ],
+    "width": 380.0,
+    "height": 258.631,
+    "aspect_ratio": 1.4693,
+    "area": 73978.0,
+    "perimeter": 1138.08,
+    "solidity": 0.9292,
+    "convexity": 0.9292,
+    "circularity": 0.7177,
+    "rectangularity": 0.7517,
+    "orientation_deg": -90.0,
+    "elongation": 1.4672,
+    "min_rect_wh": [
+      259.0,
+      380.0
+    ],
+    "n_corners": 7,
+    "n_major_indents": 2,
+    "max_indent": 0.0941,
+    "sharp_frac": 0.375,
+    "radial_cv": 0.2682,
+    "symmetry": 0.3874,
+    "hu_log": [
+      -0.7399,
+      -2.2828,
+      -3.4086,
+      -5.1815
+    ],
+    "curved_edge_fraction": 0.625,
+    "angle_entropy": 0.4488,
+    "n_angle_peaks": 4
+  },
+  "pca_normalisation": {
+    "applied": true,
+    "steps": [
+      "center",
+      "pca_align_major_axis",
+      "flip_heavier_half_to_+x",
+      "scale_unit_max_radius"
+    ],
+    "rotation_normalisation": true,
+    "scale_normalisation": true,
+    "resampling_before_comparison": "contour_descriptors resamples turning angles at 32 pts; Hybrid listing contour is already 64-pt; OS contour uses native vertices then pca_normalize",
+    "chamfer_flips": [
+      "identity",
+      "x",
+      "y",
+      "xy"
+    ],
+    "convexification": false
+  },
+  "simplification": "OS contour as stored (image-normalised 0\u20131); Shape v2 pca_normalize; no convex hull substitution",
+  "os_status_native": "REJECTED",
+  "os_status_after_pov_overlay": "CONFIRMED",
+  "frozen_os_pool_status": "REJECTED",
+  "os_shape_class_native": "kidney_or_curved",
+  "os_area_m2": 25.71,
+  "os_rectangularity": 0.754,
+  "os_reject_notes": [
+    "low_pool_evidence"
+  ],
+  "pov_changes_contour": false,
+  "metrics_alias": {
+    "point_count": 40,
+    "bbox": [
+      10.0,
+      10.0,
+      390.0,
+      268.6312
+    ],
+    "width": 380.0,
+    "height": 258.631,
+    "aspect_ratio": 1.4693,
+    "area": 73978.0,
+    "perimeter": 1138.08,
+    "solidity": 0.9292,
+    "convexity": 0.9292,
+    "circularity": 0.7177,
+    "rectangularity": 0.7517,
+    "orientation_deg": -90.0,
+    "elongation": 1.4672,
+    "min_rect_wh": [
+      259.0,
+      380.0
+    ],
+    "n_corners": 7,
+    "n_major_indents": 2,
+    "max_indent": 0.0941,
+    "sharp_frac": 0.375,
+    "radial_cv": 0.2682,
+    "symmetry": 0.3874,
+    "hu_log": [
+      -0.7399,
+      -2.2828,
+      -3.4086,
+      -5.1815
+    ],
+    "curved_edge_fraction": 0.625,
+    "angle_entropy": 0.4488,
+    "n_angle_peaks": 4
+  }
+}
