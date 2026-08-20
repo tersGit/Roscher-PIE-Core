@@ -1,0 +1,1405 @@
+{
+  "experiment": "blind_115503057_rank5_forensic",
+  "not_a_rerank": true,
+  "pie_modified": false,
+  "production_scoring_modified": false,
+  "freeze_integrity": {
+    "pr": 30,
+    "branch": "cursor/blind-115503057-complete-estate-dc1a",
+    "freeze_commit": "5aa42ec266a0c515a75e9b7f4da623b0be84dc66",
+    "sha256": "a6465002f681268391d4a87f3039532f47fd97e76d9a43217a8a45c841604ff6",
+    "sha256_verified": true,
+    "401_frozen_rank": 5,
+    "frozen_top5": [
+      "868",
+      "624",
+      "648",
+      "545",
+      "401"
+    ],
+    "ranking_files_modified": false,
+    "scoring_v2_weights": {
+      "pool_presence": 0.14,
+      "shape_v2": 0.36,
+      "spatial_v2": 0.22,
+      "aerial": 0.12,
+      "exterior": 0.06,
+      "gis": 0.03,
+      "stand_size": 0.07
+    },
+    "weights_modified": false,
+    "colour_used": false,
+    "ground_truth_applied_to_ranking": false
+  },
+  "listing_fingerprint": {
+    "media_id": "115503057-043",
+    "source": "yoloe_sam2",
+    "viewpoint": "pool_overview",
+    "geometry_loss": {
+      "verdict": "PARTIALLY LOST",
+      "features_lost": [
+        "spa_or_secondary_not_in_dominant_contour"
+      ],
+      "raw_vs_scoring": {
+        "n_major_indents": [
+          2,
+          1
+        ],
+        "max_indent": [
+          0.2033,
+          0.1955
+        ],
+        "solidity": [
+          0.8793,
+          0.9175
+        ],
+        "elongation": [
+          2.4593,
+          2.4825
+        ]
+      }
+    },
+    "shape_class": "irregular",
+    "hybrid_aspect": 3.752,
+    "listing_shape": {
+      "circularity": 0.3959,
+      "solidity": 0.9167,
+      "elongation": 2.4825,
+      "n_corners": 5,
+      "n_major_indents": 1,
+      "max_indent": 0.1956,
+      "sharp_frac": 0.2188,
+      "turn_std": 0.6826,
+      "radial_cv": 0.4419,
+      "symmetry": 0.57,
+      "hu_log": [
+        -0.6112,
+        -1.6593,
+        -2.1938,
+        -3.1097
+      ]
+    },
+    "pool_house_spatial": null,
+    "oblique": true
+  },
+  "profiles": [
+    {
+      "frozen_rank": 1,
+      "stand_number": "868",
+      "is_ground_truth": false,
+      "property_id": 1673945,
+      "township": "SUMMERSET EXT.3",
+      "street_address": "21 CORAL TREE DRIVE",
+      "area_sqm": 958.0,
+      "listing_erf_sqm": 897.0,
+      "listing_floor_sqm": 672.0,
+      "score": 0.7265,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.2974,
+        "spatial_v2": 0.11,
+        "aerial": 0.06,
+        "exterior": 0.0447,
+        "gis": 0.015,
+        "stand_size": 0.0594
+      },
+      "shape_v2": 0.8261,
+      "shape_v2_recomputed": 0.8262,
+      "shape_parts": {
+        "elongation": 0.9349,
+        "solidity": 0.8538,
+        "circularity": 0.7682,
+        "n_corners": 0.875,
+        "n_indents": 1.0,
+        "max_indent": 0.9656,
+        "sharp_frac": 0.7222,
+        "radial_cv": 0.9,
+        "hu": 0.6333,
+        "chamfer": 0.7137
+      },
+      "hull_shape_v2": 0.7332,
+      "hull_shape_parts": {
+        "elongation": 0.9339,
+        "solidity": 0.6718,
+        "circularity": 0.9345,
+        "n_corners": 0.625,
+        "n_indents": 0.75,
+        "max_indent": 0.6474,
+        "sharp_frac": 0.7918,
+        "radial_cv": 0.8595,
+        "hu": 0.6365,
+        "chamfer": 0.6072
+      },
+      "spatial_v2": null,
+      "coverage": 0.6667,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7451,
+      "size_score": 0.8489,
+      "neutral_components": [
+        "aerial=0.5_neutral_missing_listing_aerial",
+        "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+      ],
+      "inventory_pool_status": "YES",
+      "inventory": {
+        "pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "confidence": 0.9638,
+        "unknown_reason": null,
+        "diagnostic_flags": [
+          "in_parcel_pool_detected"
+        ],
+        "pool_area_m2": 24.73,
+        "observability": null
+      },
+      "parcel_corner": "UNKNOWN",
+      "corner_record": {
+        "classification": "UNKNOWN",
+        "confidence": 0.4,
+        "reason": "dual_frontage_nearly_parallel_not_confirmed_corner",
+        "roads": [
+          "TAMBOTIE ROAD",
+          "CORAL TREE DRIVE"
+        ],
+        "n_road_facing_sides": 2,
+        "intersection_proximity_m": 147.625
+      },
+      "candidate_pov_status": "CONFIRMED",
+      "frozen_os_pool_status": "CONFIRMED",
+      "os": {
+        "os_version": "object_segmentation_v1",
+        "pool": {
+          "status": "CONFIRMED",
+          "notes": [
+            "fastsam+clip"
+          ],
+          "clip": {
+            "pool": 0.9638,
+            "roof": 0.0265,
+            "shadow": 0.002,
+            "road": 0.0001,
+            "driveway": 0.0012,
+            "lawn": 0.0064
+          },
+          "area_m2": 24.73,
+          "aspect_ratio": 1.882,
+          "orientation_deg": 128.0,
+          "shape": "irregular",
+          "rectangularity": 0.7106,
+          "convexity": 0.8509,
+          "compactness": 0.5821,
+          "relative_area": 0.004856084908578347,
+          "centroid": [
+            0.3549,
+            0.4814
+          ],
+          "contour_n": 75
+        },
+        "building": {
+          "status": "CONFIRMED",
+          "clip_roof": 0.642514169216156,
+          "area_m2": 324.82,
+          "aspect_ratio": 2.168,
+          "orientation_deg": 91.19,
+          "shape": "irregular",
+          "rectangularity": 0.3956,
+          "compactness": 0.194,
+          "centroid": [
+            0.4362,
+            0.6066
+          ]
+        },
+        "driveway": {
+          "status": "PROBABLE",
+          "area_m2": 191.63,
+          "orientation_deg": 179.39,
+          "n_paved_components": 3,
+          "side": "north"
+        },
+        "pool_house": {
+          "direction": "NW",
+          "angle_deg": -116.93,
+          "distance_m": 10.16,
+          "parcel_dist": 0.2998
+        },
+        "cand_shape_desc": {
+          "circularity": 0.5234,
+          "solidity": 0.8509,
+          "elongation": 2.3209,
+          "n_corners": 6,
+          "n_major_indents": 1,
+          "max_indent": 0.1784,
+          "sharp_frac": 0.0938,
+          "turn_std": 0.3265,
+          "radial_cv": 0.4019,
+          "symmetry": 0.7193,
+          "hu_log": [
+            -0.5546,
+            -1.3329,
+            -2.6686,
+            -3.1121
+          ]
+        },
+        "pov": {
+          "final_status": null,
+          "confidence": null,
+          "object_role": null,
+          "reason_codes": null,
+          "signals": null,
+          "note": "POV copied from freeze row, not recomputed"
+        }
+      },
+      "spatial_record": {
+        "pool_status": "CONFIRMED",
+        "building_status": "CONFIRMED",
+        "driveway_status": "PROBABLE",
+        "direction": "NW",
+        "angle_deg": -116.93,
+        "parcel_dist": 0.2998,
+        "distance_m": 10.16,
+        "dist_over_building": 0.5637,
+        "area_ratio": 0.0761,
+        "axis_rel": 0.591,
+        "nearest_edge_norm": 0.0599,
+        "driveway_side": "north",
+        "high_conf_pool": true,
+        "high_conf_building": true,
+        "high_conf_driveway": true
+      },
+      "pool_building_area_ratio": 0.0761,
+      "building_to_listing_floor_ratio": 0.4834
+    },
+    {
+      "frozen_rank": 2,
+      "stand_number": "624",
+      "is_ground_truth": false,
+      "property_id": 1761236,
+      "township": "SUMMERSET EXT.13",
+      "street_address": "17 CAMELS FOOT DRIVE",
+      "area_sqm": 886.0,
+      "listing_erf_sqm": 897.0,
+      "listing_floor_sqm": 672.0,
+      "score": 0.72,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.28,
+        "spatial_v2": 0.11,
+        "aerial": 0.06,
+        "exterior": 0.047,
+        "gis": 0.015,
+        "stand_size": 0.0681
+      },
+      "shape_v2": 0.7777,
+      "shape_v2_recomputed": 0.7775,
+      "shape_parts": {
+        "elongation": 0.8608,
+        "solidity": 0.9556,
+        "circularity": 0.7035,
+        "n_corners": 1.0,
+        "n_indents": 1.0,
+        "max_indent": 0.9608,
+        "sharp_frac": 0.9307,
+        "radial_cv": 0.9035,
+        "hu": 0.298,
+        "chamfer": 0.7047
+      },
+      "hull_shape_v2": 0.7086,
+      "hull_shape_parts": {
+        "elongation": 0.8617,
+        "solidity": 0.8624,
+        "circularity": 0.9993,
+        "n_corners": 0.75,
+        "n_indents": 0.75,
+        "max_indent": 0.6522,
+        "sharp_frac": 0.8611,
+        "radial_cv": 0.856,
+        "hu": 0.3354,
+        "chamfer": 0.6336
+      },
+      "spatial_v2": null,
+      "coverage": 0.6667,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7827,
+      "size_score": 0.9727,
+      "neutral_components": [
+        "aerial=0.5_neutral_missing_listing_aerial",
+        "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+      ],
+      "inventory_pool_status": "YES",
+      "inventory": {
+        "pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "confidence": 0.9544,
+        "unknown_reason": null,
+        "diagnostic_flags": [
+          "in_parcel_pool_detected",
+          "reused_from_frozen_001",
+          "reused_os_v1_json"
+        ],
+        "pool_area_m2": 80.66,
+        "observability": null
+      },
+      "parcel_corner": "NO",
+      "corner_record": {
+        "classification": "NO",
+        "confidence": 0.88,
+        "reason": "single_road_frontage_not_corner",
+        "roads": [
+          "CAMELS FOOT DRIVE"
+        ],
+        "n_road_facing_sides": 1,
+        "intersection_proximity_m": 79.975
+      },
+      "candidate_pov_status": "CONFIRMED",
+      "frozen_os_pool_status": "CONFIRMED",
+      "os": {
+        "os_version": "object_segmentation_v1",
+        "pool": {
+          "status": "CONFIRMED",
+          "notes": [
+            "fastsam+clip"
+          ],
+          "clip": {
+            "pool": 0.9544,
+            "roof": 0.0261,
+            "shadow": 0.0148,
+            "road": 0.0001,
+            "driveway": 0.0014,
+            "lawn": 0.0031
+          },
+          "area_m2": 80.66,
+          "aspect_ratio": 2.866,
+          "orientation_deg": 119.12,
+          "shape": "elongated_rectangular",
+          "rectangularity": 0.7874,
+          "convexity": 0.9163,
+          "compactness": 0.4976,
+          "relative_area": 0.011597775556353543,
+          "centroid": [
+            0.5364,
+            0.3853
+          ],
+          "contour_n": 67
+        },
+        "building": {
+          "status": "CONFIRMED",
+          "clip_roof": 0.9652538299560547,
+          "area_m2": 366.0,
+          "aspect_ratio": 1.056,
+          "orientation_deg": 112.62,
+          "shape": "irregular",
+          "rectangularity": 0.6474,
+          "compactness": 0.4004,
+          "centroid": [
+            0.5163,
+            0.5169
+          ]
+        },
+        "driveway": {
+          "status": "PROBABLE",
+          "area_m2": 73.38,
+          "orientation_deg": 123.93,
+          "n_paved_components": 5,
+          "side": "south"
+        },
+        "pool_house": {
+          "direction": "N",
+          "angle_deg": -82.18,
+          "distance_m": 10.99,
+          "parcel_dist": 0.2572
+        },
+        "cand_shape_desc": {
+          "circularity": 0.559,
+          "solidity": 0.9367,
+          "elongation": 2.8838,
+          "n_corners": 5,
+          "n_major_indents": 1,
+          "max_indent": 0.176,
+          "sharp_frac": 0.25,
+          "turn_std": 0.6198,
+          "radial_cv": 0.4033,
+          "symmetry": 0.8089,
+          "hu_log": [
+            -0.5471,
+            -1.2723,
+            -3.7517,
+            -4.8333
+          ]
+        },
+        "pov": {
+          "final_status": null,
+          "confidence": null,
+          "object_role": null,
+          "reason_codes": null,
+          "signals": null,
+          "note": "POV copied from freeze row, not recomputed"
+        }
+      },
+      "spatial_record": {
+        "pool_status": "CONFIRMED",
+        "building_status": "CONFIRMED",
+        "driveway_status": "PROBABLE",
+        "direction": "N",
+        "angle_deg": -82.18,
+        "parcel_dist": 0.2572,
+        "distance_m": 10.99,
+        "dist_over_building": 0.5745,
+        "area_ratio": 0.2204,
+        "axis_rel": 0.9278,
+        "nearest_edge_norm": 0.0096,
+        "driveway_side": "south",
+        "high_conf_pool": true,
+        "high_conf_building": true,
+        "high_conf_driveway": true
+      },
+      "pool_building_area_ratio": 0.2204,
+      "building_to_listing_floor_ratio": 0.5446
+    },
+    {
+      "frozen_rank": 3,
+      "stand_number": "648",
+      "is_ground_truth": false,
+      "property_id": 1665893,
+      "township": "SUMMERSET EXT.13",
+      "street_address": "4 KIAAT END",
+      "area_sqm": 920.0,
+      "listing_erf_sqm": 897.0,
+      "listing_floor_sqm": 672.0,
+      "score": 0.7184,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.2845,
+        "spatial_v2": 0.11,
+        "aerial": 0.06,
+        "exterior": 0.0429,
+        "gis": 0.015,
+        "stand_size": 0.066
+      },
+      "shape_v2": 0.7902,
+      "shape_v2_recomputed": 0.79,
+      "shape_parts": {
+        "elongation": 0.9719,
+        "solidity": 0.9869,
+        "circularity": 0.7233,
+        "n_corners": 1.0,
+        "n_indents": 1.0,
+        "max_indent": 0.791,
+        "sharp_frac": 0.9307,
+        "radial_cv": 0.8232,
+        "hu": 0.2753,
+        "chamfer": 0.7199
+      },
+      "hull_shape_v2": 0.7399,
+      "hull_shape_parts": {
+        "elongation": 0.9729,
+        "solidity": 0.8311,
+        "circularity": 0.9795,
+        "n_corners": 0.75,
+        "n_indents": 0.75,
+        "max_indent": 0.822,
+        "sharp_frac": 0.8611,
+        "radial_cv": 0.9363,
+        "hu": 0.3045,
+        "chamfer": 0.6377
+      },
+      "spatial_v2": null,
+      "coverage": 0.6667,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.715,
+      "size_score": 0.943,
+      "neutral_components": [
+        "aerial=0.5_neutral_missing_listing_aerial",
+        "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+      ],
+      "inventory_pool_status": "YES",
+      "inventory": {
+        "pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "confidence": 0.9696,
+        "unknown_reason": null,
+        "diagnostic_flags": [
+          "in_parcel_pool_detected",
+          "reused_from_frozen_001",
+          "reused_os_v1_json"
+        ],
+        "pool_area_m2": 44.8,
+        "observability": null
+      },
+      "parcel_corner": "NO",
+      "corner_record": {
+        "classification": "NO",
+        "confidence": 0.9,
+        "reason": "cul_de_sac_single_frontage_not_corner",
+        "roads": [
+          "KIAAT END"
+        ],
+        "n_road_facing_sides": 1,
+        "intersection_proximity_m": 57.077
+      },
+      "candidate_pov_status": "CONFIRMED",
+      "frozen_os_pool_status": "CONFIRMED",
+      "os": {
+        "os_version": "object_segmentation_v1",
+        "pool": {
+          "status": "CONFIRMED",
+          "notes": [
+            "fastsam+clip"
+          ],
+          "clip": {
+            "pool": 0.9696,
+            "roof": 0.0184,
+            "shadow": 0.0087,
+            "road": 0.0001,
+            "driveway": 0.0015,
+            "lawn": 0.0017
+          },
+          "area_m2": 44.8,
+          "aspect_ratio": 2.635,
+          "orientation_deg": 118.61,
+          "shape": "elongated_rectangular",
+          "rectangularity": 0.8172,
+          "convexity": 0.9228,
+          "compactness": 0.5657,
+          "relative_area": 0.009834721357794177,
+          "centroid": [
+            0.467,
+            0.6163
+          ],
+          "contour_n": 109
+        },
+        "building": {
+          "status": "CONFIRMED",
+          "clip_roof": 0.9147838354110718,
+          "area_m2": 138.1,
+          "aspect_ratio": 1.788,
+          "orientation_deg": 164.29,
+          "shape": "kidney_or_curved",
+          "rectangularity": 0.6016,
+          "compactness": 0.582,
+          "centroid": [
+            0.6886,
+            0.563
+          ]
+        },
+        "driveway": {
+          "status": "PROBABLE",
+          "area_m2": 48.84,
+          "orientation_deg": 171.09,
+          "n_paved_components": 1,
+          "side": "west"
+        },
+        "pool_house": {
+          "direction": "W",
+          "angle_deg": 162.95,
+          "distance_m": 20.77,
+          "parcel_dist": 0.3762
+        },
+        "cand_shape_desc": {
+          "circularity": 0.5481,
+          "solidity": 0.9226,
+          "elongation": 2.5544,
+          "n_corners": 5,
+          "n_major_indents": 1,
+          "max_indent": 0.0911,
+          "sharp_frac": 0.25,
+          "turn_std": 0.8116,
+          "radial_cv": 0.3712,
+          "symmetry": 0.751,
+          "hu_log": [
+            -0.5978,
+            -1.4388,
+            -4.3283,
+            -4.6339
+          ]
+        },
+        "pov": {
+          "final_status": null,
+          "confidence": null,
+          "object_role": null,
+          "reason_codes": null,
+          "signals": null,
+          "note": "POV copied from freeze row, not recomputed"
+        }
+      },
+      "spatial_record": {
+        "pool_status": "CONFIRMED",
+        "building_status": "CONFIRMED",
+        "driveway_status": "PROBABLE",
+        "direction": "W",
+        "angle_deg": 162.95,
+        "parcel_dist": 0.3762,
+        "distance_m": 20.77,
+        "dist_over_building": 1.7674,
+        "area_ratio": 0.3244,
+        "axis_rel": 0.4924,
+        "nearest_edge_norm": 0.462,
+        "driveway_side": "west",
+        "high_conf_pool": true,
+        "high_conf_building": true,
+        "high_conf_driveway": true
+      },
+      "pool_building_area_ratio": 0.3244,
+      "building_to_listing_floor_ratio": 0.2055
+    },
+    {
+      "frozen_rank": 4,
+      "stand_number": "545",
+      "is_ground_truth": false,
+      "property_id": 1450554,
+      "township": "SUMMERSET EXT.6",
+      "street_address": "15 BUFFALO THORN DRIVE",
+      "area_sqm": 918.0,
+      "listing_erf_sqm": 897.0,
+      "listing_floor_sqm": 672.0,
+      "score": 0.7163,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.2767,
+        "spatial_v2": 0.11,
+        "aerial": 0.06,
+        "exterior": 0.0483,
+        "gis": 0.015,
+        "stand_size": 0.0664
+      },
+      "shape_v2": 0.7685,
+      "shape_v2_recomputed": 0.7686,
+      "shape_parts": {
+        "elongation": 0.932,
+        "solidity": 0.9109,
+        "circularity": 0.7615,
+        "n_corners": 0.875,
+        "n_indents": 0.75,
+        "max_indent": 0.812,
+        "sharp_frac": 0.9304,
+        "radial_cv": 0.7303,
+        "hu": 0.4168,
+        "chamfer": 0.7237
+      },
+      "hull_shape_v2": 0.723,
+      "hull_shape_parts": {
+        "elongation": 0.9311,
+        "solidity": 0.7289,
+        "circularity": 0.9413,
+        "n_corners": 0.625,
+        "n_indents": 0.5,
+        "max_indent": 0.801,
+        "sharp_frac": 1.0,
+        "radial_cv": 0.9708,
+        "hu": 0.4893,
+        "chamfer": 0.6467
+      },
+      "spatial_v2": null,
+      "coverage": 0.6667,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.8046,
+      "size_score": 0.948,
+      "neutral_components": [
+        "aerial=0.5_neutral_missing_listing_aerial",
+        "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+      ],
+      "inventory_pool_status": "YES",
+      "inventory": {
+        "pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "confidence": 0.9788,
+        "unknown_reason": null,
+        "diagnostic_flags": [
+          "in_parcel_pool_detected",
+          "reused_from_frozen_001",
+          "reused_os_v1_json"
+        ],
+        "pool_area_m2": 38.81,
+        "observability": null
+      },
+      "parcel_corner": "YES",
+      "corner_record": {
+        "classification": "YES",
+        "confidence": 0.96,
+        "reason": "two_distinct_road_facing_sides_at_intersection",
+        "roads": [
+          "BLACK MONKEY THORN DRIVE",
+          "BUFFALO THORN DRIVE"
+        ],
+        "n_road_facing_sides": 2,
+        "intersection_proximity_m": 22.895
+      },
+      "candidate_pov_status": "CONFIRMED",
+      "frozen_os_pool_status": "CONFIRMED",
+      "os": {
+        "os_version": "object_segmentation_v1",
+        "pool": {
+          "status": "CONFIRMED",
+          "notes": [
+            "fastsam+clip"
+          ],
+          "clip": {
+            "pool": 0.9788,
+            "roof": 0.0148,
+            "shadow": 0.0028,
+            "road": 0.0003,
+            "driveway": 0.0021,
+            "lawn": 0.0011
+          },
+          "area_m2": 38.81,
+          "aspect_ratio": 2.34,
+          "orientation_deg": 144.29,
+          "shape": "elongated_rectangular",
+          "rectangularity": 0.7362,
+          "convexity": 0.875,
+          "compactness": 0.5243,
+          "relative_area": 0.005330375103903689,
+          "centroid": [
+            0.3136,
+            0.4
+          ],
+          "contour_n": 87
+        },
+        "building": {
+          "status": "CONFIRMED",
+          "clip_roof": 0.750732421875,
+          "area_m2": 485.61,
+          "aspect_ratio": 1.426,
+          "orientation_deg": 171.44,
+          "shape": "kidney_or_curved",
+          "rectangularity": 0.6039,
+          "compactness": 0.4741,
+          "centroid": [
+            0.4367,
+            0.5514
+          ]
+        },
+        "driveway": {
+          "status": "UNKNOWN",
+          "area_m2": 16.73,
+          "orientation_deg": 174.81,
+          "n_paved_components": 8,
+          "side": null
+        },
+        "pool_house": {
+          "direction": "NW",
+          "angle_deg": -127.76,
+          "distance_m": 16.69,
+          "parcel_dist": 0.3537
+        },
+        "cand_shape_desc": {
+          "circularity": 0.5271,
+          "solidity": 0.8766,
+          "elongation": 2.3138,
+          "n_corners": 6,
+          "n_major_indents": 2,
+          "max_indent": 0.1016,
+          "sharp_frac": 0.1875,
+          "turn_std": 0.3944,
+          "radial_cv": 0.334,
+          "symmetry": 0.745,
+          "hu_log": [
+            -0.6136,
+            -1.5075,
+            -3.2544,
+            -4.0101
+          ]
+        },
+        "pov": {
+          "final_status": null,
+          "confidence": null,
+          "object_role": null,
+          "reason_codes": null,
+          "signals": null,
+          "note": "POV copied from freeze row, not recomputed"
+        }
+      },
+      "spatial_record": {
+        "pool_status": "CONFIRMED",
+        "building_status": "CONFIRMED",
+        "driveway_status": "UNKNOWN",
+        "direction": "NW",
+        "angle_deg": -127.76,
+        "parcel_dist": 0.3537,
+        "distance_m": 16.69,
+        "dist_over_building": 0.7574,
+        "area_ratio": 0.0799,
+        "axis_rel": 0.6983,
+        "nearest_edge_norm": 0.0073,
+        "driveway_side": null,
+        "high_conf_pool": true,
+        "high_conf_building": true,
+        "high_conf_driveway": false
+      },
+      "pool_building_area_ratio": 0.0799,
+      "building_to_listing_floor_ratio": 0.7226
+    },
+    {
+      "frozen_rank": 5,
+      "stand_number": "401",
+      "is_ground_truth": true,
+      "property_id": 1490051,
+      "township": "SUMMERSET EXT.6",
+      "street_address": "6 BUFFALO THORN DRIVE",
+      "area_sqm": 919.0,
+      "listing_erf_sqm": 897.0,
+      "listing_floor_sqm": 672.0,
+      "score": 0.7152,
+      "contrib": {
+        "pool_presence": 0.14,
+        "shape_v2": 0.2776,
+        "spatial_v2": 0.11,
+        "aerial": 0.06,
+        "exterior": 0.0463,
+        "gis": 0.015,
+        "stand_size": 0.0662
+      },
+      "shape_v2": 0.7712,
+      "shape_v2_recomputed": 0.7714,
+      "shape_parts": {
+        "elongation": 0.957,
+        "solidity": 0.6684,
+        "circularity": 0.9693,
+        "n_corners": 0.875,
+        "n_indents": 0.5,
+        "max_indent": 0.9242,
+        "sharp_frac": 0.5836,
+        "radial_cv": 0.9367,
+        "hu": 0.5719,
+        "chamfer": 0.7435
+      },
+      "hull_shape_v2": 0.633,
+      "hull_shape_parts": {
+        "elongation": 0.958,
+        "solidity": 0.4864,
+        "circularity": 0.672,
+        "n_corners": 0.625,
+        "n_indents": 0.25,
+        "max_indent": 0.5372,
+        "sharp_frac": 0.514,
+        "radial_cv": 0.8227,
+        "hu": 0.4731,
+        "chamfer": 0.6637
+      },
+      "spatial_v2": null,
+      "coverage": 0.6667,
+      "aerial_similarity": null,
+      "exterior_similarity": 0.7724,
+      "size_score": 0.9455,
+      "neutral_components": [
+        "aerial=0.5_neutral_missing_listing_aerial",
+        "spatial_v2=0.5_neutral_hybrid_omits_pool_house"
+      ],
+      "inventory_pool_status": "YES",
+      "inventory": {
+        "pool_status": "YES",
+        "os_pool_status": "CONFIRMED",
+        "confidence": 0.9803,
+        "unknown_reason": null,
+        "diagnostic_flags": [
+          "in_parcel_pool_detected",
+          "reused_from_frozen_001",
+          "reused_os_v1_json"
+        ],
+        "pool_area_m2": 22.54,
+        "observability": null
+      },
+      "parcel_corner": "NO",
+      "corner_record": {
+        "classification": "NO",
+        "confidence": 0.88,
+        "reason": "single_road_frontage_not_corner",
+        "roads": [
+          "BUFFALO THORN DRIVE"
+        ],
+        "n_road_facing_sides": 1,
+        "intersection_proximity_m": 60.441
+      },
+      "candidate_pov_status": "CONFIRMED",
+      "frozen_os_pool_status": "CONFIRMED",
+      "os": {
+        "os_version": "object_segmentation_v1",
+        "pool": {
+          "status": "CONFIRMED",
+          "notes": [
+            "fastsam+clip"
+          ],
+          "clip": {
+            "pool": 0.9803,
+            "roof": 0.0073,
+            "shadow": 0.0071,
+            "road": 0.0002,
+            "driveway": 0.0023,
+            "lawn": 0.0028
+          },
+          "area_m2": 22.54,
+          "aspect_ratio": 2.766,
+          "orientation_deg": 108.43,
+          "shape": "irregular",
+          "rectangularity": 0.6109,
+          "convexity": 0.7699,
+          "compactness": 0.3724,
+          "relative_area": 0.0032468479328077457,
+          "centroid": [
+            0.5094,
+            0.3517
+          ],
+          "contour_n": 81
+        },
+        "building": {
+          "status": "CONFIRMED",
+          "clip_roof": 0.801647424697876,
+          "area_m2": 429.66,
+          "aspect_ratio": 1.21,
+          "orientation_deg": 118.19,
+          "shape": "irregular",
+          "rectangularity": 0.6934,
+          "compactness": 0.3654,
+          "centroid": [
+            0.5107,
+            0.5107
+          ]
+        },
+        "driveway": {
+          "status": "PROBABLE",
+          "area_m2": 52.44,
+          "orientation_deg": 129.96,
+          "n_paved_components": 9,
+          "side": "south"
+        },
+        "pool_house": {
+          "direction": "N",
+          "angle_deg": -90.4,
+          "distance_m": 12.69,
+          "parcel_dist": 0.318
+        },
+        "cand_shape_desc": {
+          "circularity": 0.379,
+          "solidity": 0.7675,
+          "elongation": 2.594,
+          "n_corners": 6,
+          "n_major_indents": 3,
+          "max_indent": 0.2335,
+          "sharp_frac": 0.4062,
+          "turn_std": 0.5766,
+          "radial_cv": 0.4166,
+          "symmetry": 0.7735,
+          "hu_log": [
+            -0.5505,
+            -1.3611,
+            -2.1102,
+            -2.4309
+          ]
+        },
+        "pov": {
+          "final_status": null,
+          "confidence": null,
+          "object_role": null,
+          "reason_codes": null,
+          "signals": null,
+          "note": "POV copied from freeze row, not recomputed"
+        }
+      },
+      "spatial_record": {
+        "pool_status": "CONFIRMED",
+        "building_status": "CONFIRMED",
+        "driveway_status": "PROBABLE",
+        "direction": "N",
+        "angle_deg": -90.4,
+        "parcel_dist": 0.318,
+        "distance_m": 12.69,
+        "dist_over_building": 0.6122,
+        "area_ratio": 0.0525,
+        "axis_rel": 0.8916,
+        "nearest_edge_norm": 0.0302,
+        "driveway_side": "south",
+        "high_conf_pool": true,
+        "high_conf_building": true,
+        "high_conf_driveway": true
+      },
+      "pool_building_area_ratio": 0.0525,
+      "building_to_listing_floor_ratio": 0.6394
+    }
+  ],
+  "counterfactuals": [
+    {
+      "id": "reproduce_frozen",
+      "title": "Reproduce freeze with stored components (sanity)",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 5,
+      "401_diagnostic_score": 0.7152,
+      "improves_401": false,
+      "damages_401": false,
+      "diagnostic_top5": [
+        "868",
+        "624",
+        "648",
+        "545",
+        "401"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": null,
+          "note": "scoring-only CF not reapplied; 338 has no high-conf pool so pool-geometry CFs do not change its frozen 0.5847 unless missing-data treatment changes",
+          "improves": false,
+          "damages": false
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "remove_clip",
+      "title": "Remove CLIP aerial+exterior contribution (renormalize remaining weights)",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 5,
+      "401_diagnostic_score": 0.7425,
+      "improves_401": false,
+      "damages_401": false,
+      "diagnostic_top5": [
+        "868",
+        "648",
+        "624",
+        "901",
+        "401"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": 121,
+          "delta": -1,
+          "improves": true,
+          "damages": false
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "remove_stand_size",
+      "title": "Remove stand-size contribution (renormalize remaining weights)",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 11,
+      "401_diagnostic_score": 0.6978,
+      "improves_401": false,
+      "damages_401": true,
+      "diagnostic_top5": [
+        "444",
+        "868",
+        "572",
+        "482",
+        "568"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": 182,
+          "delta": 60,
+          "improves": false,
+          "damages": true
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "omit_missing_pad",
+      "title": "Correct UNKNOWN treatment: omit null spatial/aerial instead of 0.5-pad, renormalize",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 5,
+      "401_diagnostic_score": 0.826,
+      "improves_401": false,
+      "damages_401": false,
+      "diagnostic_top5": [
+        "868",
+        "624",
+        "648",
+        "545",
+        "401"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": 8,
+          "delta": -114,
+          "improves": true,
+          "damages": false
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "missing_as_zero",
+      "title": "Treat missing spatial/aerial as 0 instead of 0.5 (does not distinguish equal-missing candidates)",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 5,
+      "401_diagnostic_score": 0.5452,
+      "improves_401": false,
+      "damages_401": false,
+      "diagnostic_top5": [
+        "868",
+        "624",
+        "648",
+        "545",
+        "401"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": 124,
+          "delta": 2,
+          "improves": false,
+          "damages": true
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "stronger_validated_pool",
+      "title": "Stronger validated-pool: only POV/OS CONFIRMED keep pool_presence+shape; else missing",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 5,
+      "401_diagnostic_score": 0.7152,
+      "improves_401": false,
+      "damages_401": false,
+      "diagnostic_top5": [
+        "868",
+        "624",
+        "648",
+        "545",
+        "401"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": null,
+          "note": "scoring-only CF not reapplied; 338 has no high-conf pool so pool-geometry CFs do not change its frozen 0.5847 unless missing-data treatment changes",
+          "improves": false,
+          "damages": false
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "listing_lap_pool_upper_bound",
+      "title": "Listing-visual lap-pool upper bound: down-weight shape_v2 if candidate pool > 55 m\u00b2",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 4,
+      "401_diagnostic_score": 0.7152,
+      "improves_401": true,
+      "damages_401": false,
+      "diagnostic_top5": [
+        "868",
+        "648",
+        "545",
+        "401",
+        "444"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": null,
+          "note": "scoring-only CF not reapplied; 338 has no high-conf pool so pool-geometry CFs do not change its frozen 0.5847 unless missing-data treatment changes",
+          "improves": false,
+          "damages": false
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "building_vs_listing_floor",
+      "title": "Listing floor 672 m\u00b2 / two-storey copy: penalise OS building footprint < 30% of floor",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 4,
+      "401_diagnostic_score": 0.7252,
+      "improves_401": true,
+      "damages_401": false,
+      "diagnostic_top5": [
+        "868",
+        "624",
+        "545",
+        "401",
+        "444"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": null,
+          "note": "scoring-only CF not reapplied; 338 has no high-conf pool so pool-geometry CFs do not change its frozen 0.5847 unless missing-data treatment changes",
+          "improves": false,
+          "damages": false
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "enforce_pool_house_adjacency",
+      "title": "Listing-photo adjacency prior: fill spatial_v2 from candidate nearest-edge (not GT 401 vector)",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 4,
+      "401_diagnostic_score": 0.8252,
+      "improves_401": true,
+      "damages_401": false,
+      "diagnostic_top5": [
+        "868",
+        "624",
+        "545",
+        "401",
+        "444"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": null,
+          "note": "scoring-only CF not reapplied; 338 has no high-conf pool so pool-geometry CFs do not change its frozen 0.5847 unless missing-data treatment changes",
+          "improves": false,
+          "damages": false
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "corrected_listing_contour_convex_hull",
+      "title": "Corrected listing pool object: replace PARTIALLY LOST indented contour with its convex hull",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 39,
+      "401_diagnostic_score": 0.6654,
+      "improves_401": false,
+      "damages_401": true,
+      "diagnostic_top5": [
+        "665",
+        "648",
+        "461",
+        "545",
+        "351"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": null,
+          "note": "scoring-only CF not reapplied; 338 has no high-conf pool so pool-geometry CFs do not change its frozen 0.5847 unless missing-data treatment changes",
+          "improves": false,
+          "damages": false
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    },
+    {
+      "id": "enforce_driveway_context",
+      "title": "Listing double-garage/driveway views: small bonus for high-conf driveway, not a hard gate",
+      "401_frozen_rank": 5,
+      "401_diagnostic_rank": 4,
+      "401_diagnostic_score": 0.724,
+      "improves_401": true,
+      "damages_401": false,
+      "diagnostic_top5": [
+        "868",
+        "624",
+        "648",
+        "401",
+        "444"
+      ],
+      "labeled_cases": [
+        {
+          "case": "117262832 / stand 338",
+          "frozen_rank": 122,
+          "diagnostic_rank": null,
+          "note": "scoring-only CF not reapplied; 338 has no high-conf pool so pool-geometry CFs do not change its frozen 0.5847 unless missing-data treatment changes",
+          "improves": false,
+          "damages": false
+        },
+        {
+          "case": "117170887 / stand 641",
+          "frozen_rank": null,
+          "diagnostic_rank": null,
+          "note": "never ranked (inventory NO / Pool Gate). Scoring counterfactuals cannot move 641.",
+          "improves": false,
+          "damages": false
+        }
+      ],
+      "select_because_401_moves": false
+    }
+  ],
+  "panel": "data/investigations/blind_115503057_complete_estate/panels/rank5_top5_forensic_proof.jpg"
+}
