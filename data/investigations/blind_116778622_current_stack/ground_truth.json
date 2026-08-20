@@ -1,0 +1,88 @@
+{
+  "listing_id": "116778622",
+  "freeze_sha256": "dce17f82162920ceeb6d39c2aa2b456a5bcdb16399ecfeb853e7892a0b694a29",
+  "freeze_commit": "60b85359aa509b3664c096b7d752c993b496d7e0",
+  "confirmed_stand": null,
+  "confidence": "UNAVAILABLE",
+  "determinable": false,
+  "run_class": "UNLABELLED REGRESSION TEST",
+  "decision_vs_pr20": "INCONCLUSIVE",
+  "top1_not_declared_ground_truth": true,
+  "inferred_from_pie_rank": false,
+  "identity": {
+    "title": "5 Bedroom House for sale in Carlswald North Estate - P24-116778622",
+    "stand_mentions": [],
+    "street": null,
+    "street_withheld_contact_agent": true,
+    "address_locality": "Carlswald North Estate",
+    "coordinates_present": false,
+    "price": "R 4 550 000",
+    "agency": "RE/MAX Infoglobe",
+    "agent": "Henk Humphries",
+    "youtube": "https://www.youtube.com/watch?v=LmCgdfz0iXY"
+  },
+  "syndicated_copies_checked": [
+    {
+      "source": "property24",
+      "url": "https://www.property24.com/for-sale/carlswald-north-estate/midrand/gauteng/12743/116778622",
+      "street": null,
+      "note": "Contact agent for street address. No stand or coordinates."
+    },
+    {
+      "source": "youtube_listing_video",
+      "url": "https://www.youtube.com/watch?v=LmCgdfz0iXY",
+      "street": null,
+      "note": "Family Home for Sale in Carlswald North Lifestyle Estate. No street in page metadata."
+    },
+    {
+      "source": "remax_infoglobe_agent_henk_humphries",
+      "url": "https://www.remaxinfo.co.za/real-estate-agents/henk-humphries-891136/",
+      "street": null,
+      "note": "Public agent cards did not expose a Carlswald street slug for this listing."
+    },
+    {
+      "source": "privateproperty_search",
+      "query": "Carlswald North 1226 5 Bedroom",
+      "street": null,
+      "note": "No duplicate with a published street was found."
+    }
+  ],
+  "rejected_size_only_hypotheses": [
+    {
+      "accepted_as_ground_truth": false,
+      "stand": "604",
+      "street_address": "3 ESSENHOUT CLOSE",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1226.0,
+      "current_stack_rank": null,
+      "dropped_by": "listing_corner_gate_v1",
+      "parcel_corner": "NO",
+      "inventory_pool_status": "YES"
+    },
+    {
+      "accepted_as_ground_truth": false,
+      "stand": "690",
+      "street_address": "15 KAREE DRIVE",
+      "township": "SUMMERSET EXT.13",
+      "area_sqm": 1226.0,
+      "current_stack_rank": null,
+      "dropped_by": "listing_corner_gate_v1",
+      "parcel_corner": "NO",
+      "inventory_pool_status": "YES"
+    }
+  ],
+  "evidence": [
+    {
+      "type": "public_listing_identity_withheld",
+      "street_withheld_contact_agent": true,
+      "coordinates_present": false
+    },
+    {
+      "type": "cadastral_size_not_unique",
+      "listing_erf_sqm": 1226,
+      "gis_exact_1226_count": 2,
+      "gis_within_5_sqm_count": 7,
+      "note": "Exact GIS 1226 m2 is stands 604 and 690. Size is not identity. Rank was not used as truth."
+    }
+  ]
+}

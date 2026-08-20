@@ -1,0 +1,31 @@
+{
+  "old_pr": 20,
+  "old_freeze_sha256": "3eb8f54dc03f804cff519b65d7f452444ff91e7c4133a9ec7b9b638a3337875f",
+  "new_freeze_sha256": "dce17f82162920ceeb6d39c2aa2b456a5bcdb16399ecfeb853e7892a0b694a29",
+  "new_freeze_commit": "60b85359aa509b3664c096b7d752c993b496d7e0",
+  "old_official_fingerprint": {
+    "media_id": "116778622-051",
+    "source": "yoloe_sam2",
+    "viewpoint": "elevated_exterior",
+    "aspect_ratio": 7.756
+  },
+  "new_official_fingerprint": {
+    "media_id": "116778622-005",
+    "source": "yoloe_sam2",
+    "viewpoint": "pool_overview",
+    "aspect_ratio": 1.79,
+    "pov_status": "CONFIRMED",
+    "fastsam_used": false
+  },
+  "old_n_ranked": 332,
+  "new_n_ranked": 111,
+  "old_pool_gate_survivors": 332,
+  "new_pool_gate_survivors": 367,
+  "new_corner_gate_survivors": 111,
+  "old_top20": ["605", "444", "572", "382", "573", "446", "583", "568", "678", "567", "401", "690", "624", "868", "582", "604", "470", "688", "482", "428"],
+  "new_top20": ["540", "411", "591", "897", "871", "640", "382", "898", "644", "1/373", "673", "629", "502", "672", "4/870", "350", "572", "545", "1105", "523"],
+  "top5_overlap": [],
+  "top20_overlap": ["382", "572"],
+  "decision_vs_pr20": "INCONCLUSIVE",
+  "run_class": "UNLABELLED REGRESSION TEST"
+}

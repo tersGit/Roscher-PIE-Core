@@ -5,6 +5,7 @@
 Accuracy test on Hybrid extraction + FastSAM adapter + Corner Gate v1 + Pool Object Validation v1 + **Pool Inventory NO/UNKNOWN safety v1.1.0**. Scoring v2 weights unchanged. Water colour is not used. PR #31 recommendations (omit-null pad, pool-scale, building-footprint scoring) are **not** implemented.
 
 - **Freeze path:** `data/investigations/blind_116778622_current_stack/freeze.json`
+- **Freeze commit:** `60b85359aa509b3664c096b7d752c993b496d7e0`
 - **On-disk SHA256** (matches `freeze.sha256`, verified after write): `dce17f82162920ceeb6d39c2aa2b456a5bcdb16399ecfeb853e7892a0b694a29`
 - **Official score:** `hybrid_v2`
 - **Universe:** 400 unique erven
@@ -170,6 +171,8 @@ Class: **STRONG** (SMALL_SUBSET).
 - **#4** stand `897` score=0.719 shape_v2=0.7683 spatial_v2=None pool=YES corner=UNKNOWN panel=`data/investigations/blind_116778622_current_stack/panels/top4_897.jpg`
 - **#5** stand `871` score=0.7118 shape_v2=0.7653 spatial_v2=None pool=YES corner=YES panel=`data/investigations/blind_116778622_current_stack/panels/top5_871.jpg`
 
-## H. STOP
+## H. STOP (freeze)
 
-Freeze is committed. Manual Top-5 assessment, PR #20 comparison, and ground-truth recovery come next. Do not recover ground truth, rerank, retune Scoring v2, or implement PR #31 recommendations from this report.
+Freeze was committed as `60b85359aa509b3664c096b7d752c993b496d7e0` before evaluation. SHA256 was not rewritten.
+
+Post-freeze evaluation (Top-5 read-out, PR #20 comparison, independent GT) is in `EVALUATION.md`. Decision vs PR #20: **INCONCLUSIVE**. Ground truth: **UNAVAILABLE**. Run class: **UNLABELLED REGRESSION TEST**. Production Scoring v2 was not modified.
