@@ -1,0 +1,1082 @@
+{
+  "experiment": "shape_v2_forensic_116778622",
+  "production_weights_unchanged": true,
+  "production_weights": {
+    "pool_presence": 0.14,
+    "shape_v2": 0.36,
+    "spatial_v2": 0.22,
+    "aerial": 0.12,
+    "exterior": 0.06,
+    "gis": 0.03,
+    "stand_size": 0.07
+  },
+  "freeze_sha256": "dce17f82162920ceeb6d39c2aa2b456a5bcdb16399ecfeb853e7892a0b694a29",
+  "freeze_files_untouched": true,
+  "listing_family": {
+    "family": "KIDNEY_CURVED",
+    "confidence": 0.531,
+    "reason": "high_angle_entropy_low_sharp_fraction",
+    "features": {
+      "polygonal": false,
+      "curved": true,
+      "elongation": 1.324,
+      "rectangularity": 0.6985,
+      "solidity": 0.9572,
+      "circularity": 0.7244,
+      "sharp_frac": 0.1562,
+      "angle_entropy": 0.6787,
+      "n_major_indents": 1,
+      "max_indent": 0.1005
+    }
+  },
+  "recomputed_listing_descriptors_match_freeze": true,
+  "top5": [
+    {
+      "id": "116778622-005",
+      "label": "listing 116778622-005",
+      "family": "KIDNEY_CURVED",
+      "confidence": 0.531,
+      "reason": "high_angle_entropy_low_sharp_fraction",
+      "features": {
+        "polygonal": false,
+        "curved": true,
+        "elongation": 1.324,
+        "rectangularity": 0.6985,
+        "solidity": 0.9572,
+        "circularity": 0.7244,
+        "sharp_frac": 0.1562,
+        "angle_entropy": 0.6787,
+        "n_major_indents": 1,
+        "max_indent": 0.1005
+      },
+      "compatibility_vs_listing": "self",
+      "hard_reject": false,
+      "penalty_multiplier": 1.0,
+      "frozen_shape_v2": null,
+      "frozen_score_v2": null,
+      "adj_shape_v2": null,
+      "adj_score_v2": null
+    },
+    {
+      "id": "540",
+      "label": "stand 540",
+      "family": "RECTANGULAR",
+      "confidence": 0.673,
+      "reason": "low_angle_entropy_high_sharp_fraction",
+      "features": {
+        "polygonal": true,
+        "curved": false,
+        "elongation": 1.5016,
+        "rectangularity": 0.6447,
+        "solidity": 0.9324,
+        "circularity": 0.6011,
+        "sharp_frac": 0.375,
+        "angle_entropy": 0.4533,
+        "n_major_indents": 0,
+        "max_indent": 0.0623
+      },
+      "compatibility_vs_listing": "incompatible",
+      "hard_reject": true,
+      "penalty_multiplier": 0.2,
+      "frozen_shape_v2": 0.8161,
+      "frozen_score_v2": 0.7404,
+      "adj_shape_v2": 0.1632,
+      "adj_score_v2": 0.5054
+    },
+    {
+      "id": "411",
+      "label": "stand 411",
+      "family": "RECTANGULAR",
+      "confidence": 0.675,
+      "reason": "low_angle_entropy_high_sharp_fraction",
+      "features": {
+        "polygonal": true,
+        "curved": false,
+        "elongation": 1.4672,
+        "rectangularity": 0.7517,
+        "solidity": 0.9292,
+        "circularity": 0.7177,
+        "sharp_frac": 0.375,
+        "angle_entropy": 0.4488,
+        "n_major_indents": 2,
+        "max_indent": 0.0941
+      },
+      "compatibility_vs_listing": "incompatible",
+      "hard_reject": true,
+      "penalty_multiplier": 0.2,
+      "frozen_shape_v2": 0.7519,
+      "frozen_score_v2": 0.7276,
+      "adj_shape_v2": 0.1504,
+      "adj_score_v2": 0.5111
+    },
+    {
+      "id": "591",
+      "label": "stand 591",
+      "family": "RECTANGULAR",
+      "confidence": 0.642,
+      "reason": "low_angle_entropy_high_sharp_fraction",
+      "features": {
+        "polygonal": true,
+        "curved": false,
+        "elongation": 1.4227,
+        "rectangularity": 0.8214,
+        "solidity": 0.9322,
+        "circularity": 0.7144,
+        "sharp_frac": 0.3125,
+        "angle_entropy": 0.4728,
+        "n_major_indents": 0,
+        "max_indent": 0.076
+      },
+      "compatibility_vs_listing": "incompatible",
+      "hard_reject": true,
+      "penalty_multiplier": 0.2,
+      "frozen_shape_v2": 0.775,
+      "frozen_score_v2": 0.7274,
+      "adj_shape_v2": 0.155,
+      "adj_score_v2": 0.5042
+    },
+    {
+      "id": "897",
+      "label": "stand 897",
+      "family": "RECTANGULAR",
+      "confidence": 0.663,
+      "reason": "low_angle_entropy_high_sharp_fraction",
+      "features": {
+        "polygonal": true,
+        "curved": false,
+        "elongation": 2.0042,
+        "rectangularity": 0.7965,
+        "solidity": 0.9278,
+        "circularity": 0.6525,
+        "sharp_frac": 0.3438,
+        "angle_entropy": 0.4467,
+        "n_major_indents": 1,
+        "max_indent": 0.1039
+      },
+      "compatibility_vs_listing": "incompatible",
+      "hard_reject": true,
+      "penalty_multiplier": 0.2,
+      "frozen_shape_v2": 0.7683,
+      "frozen_score_v2": 0.719,
+      "adj_shape_v2": 0.1537,
+      "adj_score_v2": 0.4977
+    },
+    {
+      "id": "871",
+      "label": "stand 871",
+      "family": "COMPOUND_IRREGULAR",
+      "confidence": 0.873,
+      "reason": "multiple_indents_or_low_solidity",
+      "features": {
+        "polygonal": true,
+        "curved": false,
+        "elongation": 1.2746,
+        "rectangularity": 0.6997,
+        "solidity": 0.8573,
+        "circularity": 0.6001,
+        "sharp_frac": 0.3125,
+        "angle_entropy": 0.4652,
+        "n_major_indents": 3,
+        "max_indent": 0.1248
+      },
+      "compatibility_vs_listing": "partial",
+      "hard_reject": false,
+      "penalty_multiplier": 0.55,
+      "frozen_shape_v2": 0.7653,
+      "frozen_score_v2": 0.7118,
+      "adj_shape_v2": 0.4209,
+      "adj_score_v2": 0.5878
+    }
+  ],
+  "top20": [
+    {
+      "stand_id": "540",
+      "frozen_rank": 1,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.673,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.8161,
+      "frozen_score_v2": 0.7404,
+      "adj_shape_v2": 0.1632,
+      "adj_score_v2": 0.5054,
+      "diag_rank_among_top20_penalty": 11,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "411",
+      "frozen_rank": 2,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.675,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.7519,
+      "frozen_score_v2": 0.7276,
+      "adj_shape_v2": 0.1504,
+      "adj_score_v2": 0.5111,
+      "diag_rank_among_top20_penalty": 9,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "591",
+      "frozen_rank": 3,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.642,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.775,
+      "frozen_score_v2": 0.7274,
+      "adj_shape_v2": 0.155,
+      "adj_score_v2": 0.5042,
+      "diag_rank_among_top20_penalty": 12,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "897",
+      "frozen_rank": 4,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.663,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.7683,
+      "frozen_score_v2": 0.719,
+      "adj_shape_v2": 0.1537,
+      "adj_score_v2": 0.4977,
+      "diag_rank_among_top20_penalty": 14,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "871",
+      "frozen_rank": 5,
+      "candidate_family": "COMPOUND_IRREGULAR",
+      "candidate_confidence": 0.873,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "partial",
+      "hard_reject": false,
+      "frozen_shape_v2": 0.7653,
+      "frozen_score_v2": 0.7118,
+      "adj_shape_v2": 0.4209,
+      "adj_score_v2": 0.5878,
+      "diag_rank_among_top20_penalty": 5,
+      "diag_rank_among_top20_hard": 1
+    },
+    {
+      "stand_id": "640",
+      "frozen_rank": 6,
+      "candidate_family": "UNKNOWN",
+      "candidate_confidence": 0.35,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "no_decision",
+      "hard_reject": false,
+      "frozen_shape_v2": 0.7702,
+      "frozen_score_v2": 0.7078,
+      "adj_shape_v2": 0.7702,
+      "adj_score_v2": 0.7078,
+      "diag_rank_among_top20_penalty": 1,
+      "diag_rank_among_top20_hard": 2
+    },
+    {
+      "stand_id": "382",
+      "frozen_rank": 7,
+      "candidate_family": "COMPOUND_IRREGULAR",
+      "candidate_confidence": 0.861,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "partial",
+      "hard_reject": false,
+      "frozen_shape_v2": 0.6685,
+      "frozen_score_v2": 0.706,
+      "adj_shape_v2": 0.3677,
+      "adj_score_v2": 0.5977,
+      "diag_rank_among_top20_penalty": 4,
+      "diag_rank_among_top20_hard": 3
+    },
+    {
+      "stand_id": "898",
+      "frozen_rank": 8,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.65,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.6892,
+      "frozen_score_v2": 0.7054,
+      "adj_shape_v2": 0.1378,
+      "adj_score_v2": 0.5069,
+      "diag_rank_among_top20_penalty": 10,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "644",
+      "frozen_rank": 9,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.676,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.7325,
+      "frozen_score_v2": 0.704,
+      "adj_shape_v2": 0.1465,
+      "adj_score_v2": 0.493,
+      "diag_rank_among_top20_penalty": 15,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "1/373",
+      "frozen_rank": 10,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.697,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.8285,
+      "frozen_score_v2": 0.703,
+      "adj_shape_v2": 0.1657,
+      "adj_score_v2": 0.4644,
+      "diag_rank_among_top20_penalty": 20,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "673",
+      "frozen_rank": 11,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.631,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.7277,
+      "frozen_score_v2": 0.7014,
+      "adj_shape_v2": 0.1455,
+      "adj_score_v2": 0.4918,
+      "diag_rank_among_top20_penalty": 16,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "629",
+      "frozen_rank": 12,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.639,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.6746,
+      "frozen_score_v2": 0.6939,
+      "adj_shape_v2": 0.1349,
+      "adj_score_v2": 0.4996,
+      "diag_rank_among_top20_penalty": 13,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "502",
+      "frozen_rank": 13,
+      "candidate_family": "ROUND_OVAL",
+      "candidate_confidence": 0.79,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "partial",
+      "hard_reject": false,
+      "frozen_shape_v2": 0.712,
+      "frozen_score_v2": 0.6926,
+      "adj_shape_v2": 0.3916,
+      "adj_score_v2": 0.5773,
+      "diag_rank_among_top20_penalty": 6,
+      "diag_rank_among_top20_hard": 4
+    },
+    {
+      "stand_id": "672",
+      "frozen_rank": 14,
+      "candidate_family": "COMPOUND_IRREGULAR",
+      "candidate_confidence": 0.753,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "partial",
+      "hard_reject": false,
+      "frozen_shape_v2": 0.7002,
+      "frozen_score_v2": 0.6905,
+      "adj_shape_v2": 0.3851,
+      "adj_score_v2": 0.5771,
+      "diag_rank_among_top20_penalty": 7,
+      "diag_rank_among_top20_hard": 5
+    },
+    {
+      "stand_id": "4/870",
+      "frozen_rank": 15,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.641,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.76,
+      "frozen_score_v2": 0.6894,
+      "adj_shape_v2": 0.152,
+      "adj_score_v2": 0.4705,
+      "diag_rank_among_top20_penalty": 19,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "350",
+      "frozen_rank": 16,
+      "candidate_family": "RECTANGULAR",
+      "candidate_confidence": 0.633,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.7058,
+      "frozen_score_v2": 0.6883,
+      "adj_shape_v2": 0.1412,
+      "adj_score_v2": 0.485,
+      "diag_rank_among_top20_penalty": 18,
+      "diag_rank_among_top20_hard": null
+    },
+    {
+      "stand_id": "572",
+      "frozen_rank": 17,
+      "candidate_family": "KIDNEY_CURVED",
+      "candidate_confidence": 0.55,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "compatible",
+      "hard_reject": false,
+      "frozen_shape_v2": 0.6572,
+      "frozen_score_v2": 0.687,
+      "adj_shape_v2": 0.6572,
+      "adj_score_v2": 0.687,
+      "diag_rank_among_top20_penalty": 2,
+      "diag_rank_among_top20_hard": 6
+    },
+    {
+      "stand_id": "545",
+      "frozen_rank": 18,
+      "candidate_family": "COMPOUND_IRREGULAR",
+      "candidate_confidence": 0.755,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "partial",
+      "hard_reject": false,
+      "frozen_shape_v2": 0.6959,
+      "frozen_score_v2": 0.6825,
+      "adj_shape_v2": 0.3827,
+      "adj_score_v2": 0.5697,
+      "diag_rank_among_top20_penalty": 8,
+      "diag_rank_among_top20_hard": 7
+    },
+    {
+      "stand_id": "1105",
+      "frozen_rank": 19,
+      "candidate_family": "KIDNEY_CURVED",
+      "candidate_confidence": 0.55,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "compatible",
+      "hard_reject": false,
+      "frozen_shape_v2": 0.7786,
+      "frozen_score_v2": 0.6818,
+      "adj_shape_v2": 0.7786,
+      "adj_score_v2": 0.6818,
+      "diag_rank_among_top20_penalty": 3,
+      "diag_rank_among_top20_hard": 8
+    },
+    {
+      "stand_id": "523",
+      "frozen_rank": 20,
+      "candidate_family": "LAP_ELONGATED",
+      "candidate_confidence": 0.72,
+      "listing_family": "KIDNEY_CURVED",
+      "compatibility": "incompatible",
+      "hard_reject": true,
+      "frozen_shape_v2": 0.6605,
+      "frozen_score_v2": 0.6798,
+      "adj_shape_v2": 0.1321,
+      "adj_score_v2": 0.4896,
+      "diag_rank_among_top20_penalty": 17,
+      "diag_rank_among_top20_hard": null
+    }
+  ],
+  "decomposition": [
+    {
+      "shape_v2": 0.8161,
+      "combined": 0.8161,
+      "parts": {
+        "elongation": 0.8787,
+        "solidity": 0.9498,
+        "circularity": 0.7711,
+        "n_corners": 0.875,
+        "n_indents": 0.75,
+        "max_indent": 0.9236,
+        "sharp_frac": 0.5138,
+        "radial_cv": 0.9043,
+        "hu": 0.6973,
+        "chamfer": 0.7794
+      },
+      "terms": {
+        "elongation": 0.8787,
+        "solidity": 0.9498,
+        "circularity": 0.7711,
+        "n_corners": 0.875,
+        "n_indents": 0.75,
+        "max_indent": 0.9236,
+        "sharp_frac": 0.5138,
+        "radial_cv": 0.9043,
+        "hu": 0.6973,
+        "chamfer": 0.7794
+      },
+      "weights": {
+        "elongation": 0.22,
+        "chamfer": 0.18,
+        "hu": 0.16,
+        "solidity": 0.1,
+        "n_indents": 0.08,
+        "max_indent": 0.08,
+        "n_corners": 0.08,
+        "circularity": 0.05,
+        "sharp_frac": 0.03,
+        "radial_cv": 0.02
+      },
+      "weighted_contrib": {
+        "elongation": 0.1933,
+        "solidity": 0.095,
+        "circularity": 0.0386,
+        "n_corners": 0.07,
+        "n_indents": 0.06,
+        "max_indent": 0.0739,
+        "sharp_frac": 0.0154,
+        "radial_cv": 0.0181,
+        "hu": 0.1116,
+        "chamfer": 0.1403
+      },
+      "contributions": {
+        "elongation": 0.1933,
+        "solidity": 0.095,
+        "circularity": 0.0386,
+        "n_corners": 0.07,
+        "n_indents": 0.06,
+        "max_indent": 0.0739,
+        "sharp_frac": 0.0154,
+        "radial_cv": 0.0181,
+        "hu": 0.1116,
+        "chamfer": 0.1403
+      },
+      "dominant_terms": [
+        [
+          "elongation",
+          0.1933
+        ],
+        [
+          "chamfer",
+          0.1403
+        ],
+        [
+          "hu",
+          0.1116
+        ],
+        [
+          "solidity",
+          0.095
+        ]
+      ],
+      "stand_id": "540",
+      "frozen_shape_v2": 0.8161
+    },
+    {
+      "shape_v2": 0.7519,
+      "combined": 0.7519,
+      "parts": {
+        "elongation": 0.9005,
+        "solidity": 0.9436,
+        "circularity": 0.9856,
+        "n_corners": 0.625,
+        "n_indents": 0.75,
+        "max_indent": 0.9872,
+        "sharp_frac": 0.5138,
+        "radial_cv": 0.877,
+        "hu": 0.4297,
+        "chamfer": 0.6639
+      },
+      "terms": {
+        "elongation": 0.9005,
+        "solidity": 0.9436,
+        "circularity": 0.9856,
+        "n_corners": 0.625,
+        "n_indents": 0.75,
+        "max_indent": 0.9872,
+        "sharp_frac": 0.5138,
+        "radial_cv": 0.877,
+        "hu": 0.4297,
+        "chamfer": 0.6639
+      },
+      "weights": {
+        "elongation": 0.22,
+        "chamfer": 0.18,
+        "hu": 0.16,
+        "solidity": 0.1,
+        "n_indents": 0.08,
+        "max_indent": 0.08,
+        "n_corners": 0.08,
+        "circularity": 0.05,
+        "sharp_frac": 0.03,
+        "radial_cv": 0.02
+      },
+      "weighted_contrib": {
+        "elongation": 0.1981,
+        "solidity": 0.0944,
+        "circularity": 0.0493,
+        "n_corners": 0.05,
+        "n_indents": 0.06,
+        "max_indent": 0.079,
+        "sharp_frac": 0.0154,
+        "radial_cv": 0.0175,
+        "hu": 0.0688,
+        "chamfer": 0.1195
+      },
+      "contributions": {
+        "elongation": 0.1981,
+        "solidity": 0.0944,
+        "circularity": 0.0493,
+        "n_corners": 0.05,
+        "n_indents": 0.06,
+        "max_indent": 0.079,
+        "sharp_frac": 0.0154,
+        "radial_cv": 0.0175,
+        "hu": 0.0688,
+        "chamfer": 0.1195
+      },
+      "dominant_terms": [
+        [
+          "elongation",
+          0.1981
+        ],
+        [
+          "chamfer",
+          0.1195
+        ],
+        [
+          "solidity",
+          0.0944
+        ],
+        [
+          "max_indent",
+          0.079
+        ]
+      ],
+      "stand_id": "411",
+      "frozen_shape_v2": 0.7519
+    },
+    {
+      "shape_v2": 0.775,
+      "combined": 0.775,
+      "parts": {
+        "elongation": 0.927,
+        "solidity": 0.9456,
+        "circularity": 0.9693,
+        "n_corners": 1.0,
+        "n_indents": 0.75,
+        "max_indent": 0.951,
+        "sharp_frac": 0.6527,
+        "radial_cv": 0.8667,
+        "hu": 0.3066,
+        "chamfer": 0.7
+      },
+      "terms": {
+        "elongation": 0.927,
+        "solidity": 0.9456,
+        "circularity": 0.9693,
+        "n_corners": 1.0,
+        "n_indents": 0.75,
+        "max_indent": 0.951,
+        "sharp_frac": 0.6527,
+        "radial_cv": 0.8667,
+        "hu": 0.3066,
+        "chamfer": 0.7
+      },
+      "weights": {
+        "elongation": 0.22,
+        "chamfer": 0.18,
+        "hu": 0.16,
+        "solidity": 0.1,
+        "n_indents": 0.08,
+        "max_indent": 0.08,
+        "n_corners": 0.08,
+        "circularity": 0.05,
+        "sharp_frac": 0.03,
+        "radial_cv": 0.02
+      },
+      "weighted_contrib": {
+        "elongation": 0.2039,
+        "solidity": 0.0946,
+        "circularity": 0.0485,
+        "n_corners": 0.08,
+        "n_indents": 0.06,
+        "max_indent": 0.0761,
+        "sharp_frac": 0.0196,
+        "radial_cv": 0.0173,
+        "hu": 0.0491,
+        "chamfer": 0.126
+      },
+      "contributions": {
+        "elongation": 0.2039,
+        "solidity": 0.0946,
+        "circularity": 0.0485,
+        "n_corners": 0.08,
+        "n_indents": 0.06,
+        "max_indent": 0.0761,
+        "sharp_frac": 0.0196,
+        "radial_cv": 0.0173,
+        "hu": 0.0491,
+        "chamfer": 0.126
+      },
+      "dominant_terms": [
+        [
+          "elongation",
+          0.2039
+        ],
+        [
+          "chamfer",
+          0.126
+        ],
+        [
+          "solidity",
+          0.0946
+        ],
+        [
+          "n_corners",
+          0.08
+        ]
+      ],
+      "stand_id": "591",
+      "frozen_shape_v2": 0.775
+    },
+    {
+      "shape_v2": 0.7683,
+      "combined": 0.7683,
+      "parts": {
+        "elongation": 0.6574,
+        "solidity": 0.9364,
+        "circularity": 0.8653,
+        "n_corners": 1.0,
+        "n_indents": 1.0,
+        "max_indent": 0.9932,
+        "sharp_frac": 0.5831,
+        "radial_cv": 0.887,
+        "hu": 0.5077,
+        "chamfer": 0.7271
+      },
+      "terms": {
+        "elongation": 0.6574,
+        "solidity": 0.9364,
+        "circularity": 0.8653,
+        "n_corners": 1.0,
+        "n_indents": 1.0,
+        "max_indent": 0.9932,
+        "sharp_frac": 0.5831,
+        "radial_cv": 0.887,
+        "hu": 0.5077,
+        "chamfer": 0.7271
+      },
+      "weights": {
+        "elongation": 0.22,
+        "chamfer": 0.18,
+        "hu": 0.16,
+        "solidity": 0.1,
+        "n_indents": 0.08,
+        "max_indent": 0.08,
+        "n_corners": 0.08,
+        "circularity": 0.05,
+        "sharp_frac": 0.03,
+        "radial_cv": 0.02
+      },
+      "weighted_contrib": {
+        "elongation": 0.1446,
+        "solidity": 0.0936,
+        "circularity": 0.0433,
+        "n_corners": 0.08,
+        "n_indents": 0.08,
+        "max_indent": 0.0795,
+        "sharp_frac": 0.0175,
+        "radial_cv": 0.0177,
+        "hu": 0.0812,
+        "chamfer": 0.1309
+      },
+      "contributions": {
+        "elongation": 0.1446,
+        "solidity": 0.0936,
+        "circularity": 0.0433,
+        "n_corners": 0.08,
+        "n_indents": 0.08,
+        "max_indent": 0.0795,
+        "sharp_frac": 0.0175,
+        "radial_cv": 0.0177,
+        "hu": 0.0812,
+        "chamfer": 0.1309
+      },
+      "dominant_terms": [
+        [
+          "elongation",
+          0.1446
+        ],
+        [
+          "chamfer",
+          0.1309
+        ],
+        [
+          "solidity",
+          0.0936
+        ],
+        [
+          "hu",
+          0.0812
+        ]
+      ],
+      "stand_id": "897",
+      "frozen_shape_v2": 0.7683
+    },
+    {
+      "shape_v2": 0.7653,
+      "combined": 0.7653,
+      "parts": {
+        "elongation": 0.9604,
+        "solidity": 0.7844,
+        "circularity": 0.7733,
+        "n_corners": 1.0,
+        "n_indents": 0.5,
+        "max_indent": 0.9514,
+        "sharp_frac": 0.6527,
+        "radial_cv": 0.9527,
+        "hu": 0.4382,
+        "chamfer": 0.7338
+      },
+      "terms": {
+        "elongation": 0.9604,
+        "solidity": 0.7844,
+        "circularity": 0.7733,
+        "n_corners": 1.0,
+        "n_indents": 0.5,
+        "max_indent": 0.9514,
+        "sharp_frac": 0.6527,
+        "radial_cv": 0.9527,
+        "hu": 0.4382,
+        "chamfer": 0.7338
+      },
+      "weights": {
+        "elongation": 0.22,
+        "chamfer": 0.18,
+        "hu": 0.16,
+        "solidity": 0.1,
+        "n_indents": 0.08,
+        "max_indent": 0.08,
+        "n_corners": 0.08,
+        "circularity": 0.05,
+        "sharp_frac": 0.03,
+        "radial_cv": 0.02
+      },
+      "weighted_contrib": {
+        "elongation": 0.2113,
+        "solidity": 0.0784,
+        "circularity": 0.0387,
+        "n_corners": 0.08,
+        "n_indents": 0.04,
+        "max_indent": 0.0761,
+        "sharp_frac": 0.0196,
+        "radial_cv": 0.0191,
+        "hu": 0.0701,
+        "chamfer": 0.1321
+      },
+      "contributions": {
+        "elongation": 0.2113,
+        "solidity": 0.0784,
+        "circularity": 0.0387,
+        "n_corners": 0.08,
+        "n_indents": 0.04,
+        "max_indent": 0.0761,
+        "sharp_frac": 0.0196,
+        "radial_cv": 0.0191,
+        "hu": 0.0701,
+        "chamfer": 0.1321
+      },
+      "dominant_terms": [
+        [
+          "elongation",
+          0.2113
+        ],
+        [
+          "chamfer",
+          0.1321
+        ],
+        [
+          "n_corners",
+          0.08
+        ],
+        [
+          "solidity",
+          0.0784
+        ]
+      ],
+      "stand_id": "871",
+      "frozen_shape_v2": 0.7653
+    }
+  ],
+  "normalisation_ablation": {
+    "540": {
+      "chamfer_after_each_stage": {
+        "raw": 0.7424,
+        "translated": 0.7424,
+        "scale": 0.7424,
+        "rotation": 0.7794,
+        "resampled": 0.7465,
+        "final": 0.7794
+      },
+      "listing_stage_point_counts": {
+        "raw": 64,
+        "translated": 64,
+        "scale": 64,
+        "rotation": 64,
+        "resampled": 64,
+        "final": 64
+      },
+      "candidate_stage_point_counts": {
+        "raw": 57,
+        "translated": 57,
+        "scale": 57,
+        "rotation": 57,
+        "resampled": 64,
+        "final": 57
+      }
+    },
+    "411": {
+      "chamfer_after_each_stage": {
+        "raw": 0.6293,
+        "translated": 0.6293,
+        "scale": 0.6293,
+        "rotation": 0.6639,
+        "resampled": 0.6261,
+        "final": 0.6639
+      },
+      "listing_stage_point_counts": {
+        "raw": 64,
+        "translated": 64,
+        "scale": 64,
+        "rotation": 64,
+        "resampled": 64,
+        "final": 64
+      },
+      "candidate_stage_point_counts": {
+        "raw": 40,
+        "translated": 40,
+        "scale": 40,
+        "rotation": 40,
+        "resampled": 64,
+        "final": 40
+      }
+    }
+  },
+  "compatibility_matrix_policy": {
+    "hard_reject": "incompatible families dropped from diagnostic ranking A",
+    "penalty": "shape_v2 contribution multiplied by 0.20 incompatible / 0.55 partial; not tuned to a stand"
+  },
+  "historical": [
+    {
+      "listing": "115503057",
+      "label": "Stand 401 labelled (rank-5 forensic)",
+      "ground_truth": {
+        "stand": "401",
+        "in_candidates": true,
+        "old_rank": 5,
+        "diag_rank_penalty": 252,
+        "hard_rejected": true,
+        "diag_rank_hard": null,
+        "family": "LAP_ELONGATED",
+        "listing_family": "KIDNEY_CURVED",
+        "compatibility": "incompatible",
+        "shape_v2": 0.7712,
+        "wrongly_hard_rejected": true
+      },
+      "listing_family": {
+        "family": "KIDNEY_CURVED",
+        "confidence": 0.55,
+        "reason": "high_angle_entropy_low_sharp_fraction"
+      },
+      "n_hard_rejected": 154,
+      "n_candidates": 367
+    },
+    {
+      "listing": "117262832",
+      "label": "Stand 338 forensic",
+      "ground_truth": {
+        "stand": "338",
+        "in_candidates": true,
+        "old_rank": 122,
+        "diag_rank_penalty": 31,
+        "hard_rejected": true,
+        "diag_rank_hard": null,
+        "family": "RECTANGULAR",
+        "listing_family": "KIDNEY_CURVED",
+        "compatibility": "incompatible",
+        "shape_v2": null,
+        "wrongly_hard_rejected": true
+      },
+      "listing_family": {
+        "family": "KIDNEY_CURVED",
+        "confidence": 0.615,
+        "reason": "high_angle_entropy_low_sharp_fraction"
+      },
+      "n_hard_rejected": 154,
+      "n_candidates": 332
+    },
+    {
+      "listing": "117170887",
+      "label": "Stand 641 labelled (inventory miss)",
+      "ground_truth": {
+        "stand": "641",
+        "in_candidates": false
+      },
+      "listing_family": {
+        "family": "KIDNEY_CURVED",
+        "confidence": 0.55,
+        "reason": "high_angle_entropy_low_sharp_fraction"
+      },
+      "n_hard_rejected": 49,
+      "n_candidates": 98
+    },
+    {
+      "listing": "116978058",
+      "label": "unlabelled 116978058",
+      "ground_truth": null,
+      "listing_family": {
+        "family": "FREEFORM",
+        "confidence": 0.61,
+        "reason": "high_angle_entropy_low_sharp_fraction"
+      },
+      "n_hard_rejected": 158,
+      "n_candidates": 332
+    },
+    {
+      "listing": "116889694",
+      "label": "unlabelled 116889694",
+      "ground_truth": null,
+      "listing_family": null,
+      "n_hard_rejected": 0,
+      "n_candidates": 332
+    },
+    {
+      "listing": "116223230",
+      "label": "unlabelled 116223230",
+      "ground_truth": null,
+      "listing_family": {
+        "family": "COMPOUND_IRREGULAR",
+        "confidence": 0.889,
+        "reason": "multiple_indents_or_low_solidity"
+      },
+      "n_hard_rejected": 158,
+      "n_candidates": 332
+    },
+    {
+      "listing": "116778622",
+      "label": "PR #20 complete-estate freeze (same listing, different stack)",
+      "ground_truth": null,
+      "listing_family": {
+        "family": "FREEFORM",
+        "confidence": 0.53,
+        "reason": "high_angle_entropy_low_sharp_fraction"
+      },
+      "n_hard_rejected": 158,
+      "n_candidates": 332
+    }
+  ]
+}

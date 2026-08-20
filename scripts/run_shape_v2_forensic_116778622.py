@@ -721,19 +721,23 @@ def _write_forensic_md(
         decision_body = (
             "1. **Not a wrong-pool swap on Stand 540.** The scored OS contour is the in-parcel "
             "blob on the rectangular pool (native15 crop + OS mask/contour). The neighbouring "
-            "freeform pool in the padded crop is **not** the contour that entered Shape v2.\n"
+            "freeform pool in the padded crop is **not** the contour that entered Shape v2. "
+            "FastSAM is leaky (jagged edges; OS class `kidney_or_curved`) but Family v1 still "
+            "labels 540 RECTANGULAR.\n"
             "2. **Stand 411 is a POV-promoted REJECTED blob.** Native OS status is `REJECTED`; "
-            "ranking overlay flipped status without changing the contour. The contour is still a "
-            "compact rectangle (plus mask defects), not the listing freeform.\n"
-            "3. **Listing segmentation of the object is correct** (photo-005 traces the actual pool) "
-            "**but the scoring contour is lossy**: Hybrid qualitative class "
-            f"`{fp.shape_class}`, resampled to 64 points, and Shape v2 PCA-normalises away pose. "
-            "Scaled geometry still shows a **curved** signature that Shape v2 almost ignores "
+            "ranking overlay flipped status without changing the contour. The contour is a leaky "
+            "compact rectangle (plus pond/paving), not the listing curve.\n"
+            "3. **Listing segmentation of the object is correct** (photo-005 traces the water) "
+            "**but the scoring contour is lossy**: the frame cuts the pool (fake straight edge), "
+            f"Hybrid class is `{fp.shape_class}`, 64-pt resample, PCA. Family v1 still recovers "
+            "KIDNEY_CURVED from angle-entropy/sharp_frac. Shape v2 almost ignores that signal "
             "(`sharp_frac` weight **0.03**).\n"
             "4. **Shape v2 descriptor failure is the dominant reason 540 scores 0.8161.** "
             "Elongation + chamfer + Hu + solidity treat two compact blobs as similar after "
-            "rotation/scale normalisation. The rectangle-versus-freeform mismatch lives in unused "
-            "or near-unused terms (angle entropy is not a Shape v2 input)."
+            "rotation/scale normalisation. The rectangle-versus-curved mismatch lives in unused "
+            "or near-unused terms (angle entropy is not a Shape v2 input).\n"
+            "5. **A hard family gate is not safe.** On labelled listing 115503057, stand 401 "
+            "would be wrongly hard-rejected (rank 5 → 252; LAP_ELONGATED vs listing KIDNEY_CURVED)."
         )
     elif not listing_is_curved:
         decision = "CONTOUR NORMALISATION FAILURE"
@@ -774,11 +778,11 @@ def _write_forensic_md(
         "",
         "**Is PIE scoring the visually obvious square pool on 540 and 411, or a different extracted shape?**",
         "",
-        "- **540: the in-parcel rectangular pool.** FastSAM mask can be leaky (OS class `kidney_or_curved`) but the blob sits on the rectangular pool, not the neighbour freeform. Visual: `panels/shape_v2_pipeline/stand_540.jpg`.",
-        "- **411: a rectangular OS blob that OS itself rejected.** POV overlay only changed `pool.status`. Visual: `panels/shape_v2_pipeline/stand_411.jpg`.",
-        "- **Listing 005: the real freeform/waist pool in the photo.** Segmentation of the *object* is OK. The *descriptor* after 64-pt resample + PCA looks compact (`n_corners=4` in freeze listing_shape).",
+        "- **540: the in-parcel rectangular pool, not the neighbour freeform.** The native15 crop contains two pools; the OS mask sits on the **upper/in-parcel rectangle**. FastSAM is leaky (staircase edges, OS class `kidney_or_curved`, rectangularity 0.65) but Family v1 still recovers RECTANGULAR from low angle-entropy / high sharp_frac. Visual: `panels/shape_v2_pipeline/stand_540.jpg`.",
+        "- **411: a rectangular OS blob that OS itself rejected.** Aerial shows a small rectangle next to a circular pond; the mask leaks into the pond/paving. Native status `REJECTED` / `low_pool_evidence`; POV overlay only changed `pool.status`. Visual: `panels/shape_v2_pipeline/stand_411.jpg`.",
+        "- **Listing 005: the real curved/waist pool in the night photo.** The mask traces the water, but the **bottom of the photo cuts the pool**, so the raw contour has a fake straight edge. Hybrid qualitative class is already `rectangular`. After 64-pt resample + PCA the scoring polyline looks like a compact 4-corner blob (`n_corners=4` in freeze listing_shape). Family v1 still calls it **KIDNEY_CURVED** (1 indent, high angle-entropy, low sharp_frac) — the curved family, not a rectangle.",
         "",
-        "Because the 540 contour is the rectangle, **this is not a stop-at-segmentation-only case.** Segmentation of 540 is imperfect (leaky mask / wrong OS class) but the scored object is the square pool. Shape v2 then over-matches it to the listing.",
+        "Because the 540 contour is the in-parcel rectangle, **this is not a stop-at-segmentation-only case.** Segmentation of 540 is leaky (jagged FastSAM; OS class `kidney_or_curved`) but the scored object is still the square pool. Shape v2 then over-matches it to the listing.",
         "",
         "Exact JSON dumps: `shape_v2_exact_contours/`. Pipeline panels: `panels/shape_v2_pipeline/`.",
         "",
@@ -890,7 +894,14 @@ def _write_forensic_md(
         "",
         "Validation panel: `panels/shape_family_validation.jpg`.",
         "",
-        "Failure/limitation cases to inspect on the panel: OS leaky masks can add fake indents (411 may still be RECTANGULAR via the polygonal override); 871 COMPOUND from multiple indents may be mask noise; Hybrid listing contour can be FREEFORM on scaled curvature even though Hybrid qualitative class said rectangular.",
+        "Confusion / limitation cases:",
+        "",
+        "- Listing 005 is **KIDNEY_CURVED** (conf 0.53) rather than FREEFORM: one major indent + solidity 0.96. Visually it is still the curved/asymmetric pool; the important split vs 540/411 is curved vs polygonal, which the classifier gets right.",
+        "- 540/411 leaky masks look jagged in the pipeline panel, but angle-entropy still marks them polygonal → RECTANGULAR. That is the intended coarse split.",
+        "- 871 COMPOUND_IRREGULAR matches the aerial L/boot pool (not a rectangle).",
+        "- 401 (labelled GT for 115503057) is LAP_ELONGATED — correct on the OS contour.",
+        "- 338 OS REJECTED blob is RECTANGULAR — a gating risk if REJECTED contours are allowed into a hard family gate.",
+        "- 868 is KIDNEY_CURVED (single indent). 624/648/401 are LAP_ELONGATED.",
         "",
         "## Phase 6 — Diagnostic compatibility (not production)",
         "",
@@ -926,7 +937,23 @@ def _write_forensic_md(
         )
     lines += [
         "",
-        "If 540/411 stayed high **without** the family layer, that is exactly the Shape v2 failure. **With** the diagnostic penalty they fall if FREEFORM vs RECTANGULAR is incompatible. That is evidence the family layer addresses this *class* of error; it is **not** a claim that the true stand is now rank 1 (listing remains unlabelled).",
+        "If 540/411 stayed high **without** the family layer, that is exactly the Shape v2 failure. **With** the diagnostic penalty they fall (frozen 1–4 → diagnostic 9–14 among Top 20) because KIDNEY_CURVED vs RECTANGULAR is incompatible.",
+        "",
+        "Caveat: diagnostic Top-20 #1 under the penalty is stand **640 UNKNOWN** (`no_decision` passthrough, shape_v2 kept). Compatible KIDNEY_CURVED candidates 572 and 1105 rise to #2/#3. That is **not** a claim that 640 or 572 is the true stand (listing remains unlabelled). UNKNOWN passthrough is why a hard gate must not be shipped yet.",
+        "",
+        "## Phase 7 — Historical regression (summary)",
+        "",
+        "Full tables: `SHAPE_FAMILY_REGRESSION.md`. Ground-truth stand numbers are report labels only.",
+        "",
+        "| Listing | GT | frozen rank → penalty rank | hard-rejected? |",
+        "| --- | --- | --- | --- |",
+        "| 115503057 | 401 | 5 → 252 | **YES (wrongly)** |",
+        "| 117262832 | 338 | 122 → 31 | YES on REJECTED blob family; `shape_v2` was already null |",
+        "| 117170887 | 641 | n/a | GT absent from candidates |",
+        "",
+        "Stand 401 is a **lap-elongated** OS contour against a listing contour that Family v1 called KIDNEY_CURVED. A hard family gate would have dropped the labelled true stand from rank 5 to 252. That is the generalisation bar: **do not promote hard reject**.",
+        "",
+        "Stand 338 never entered Shape v2 (`shape_v2=null`, OS REJECTED). Penalty rank rose only because other candidates lost shape contribution; the REJECTED blob was still classified RECTANGULAR and would be hard-dropped. A shape-family gate cannot be described as fixing 338.",
         "",
         "## Recommendation",
         "",
@@ -1012,9 +1039,13 @@ def _write_regression_md(hist: list[dict[str, Any]], listing_family: dict[str, A
         "",
         "The family layer must not be judged by whether 116778622 'looks better' (that listing is unlabelled). The bar is: do not hard-reject known true stands; do not invent listing-specific rules.",
         "",
-        "Stand 338 (`shape_v2=null`, OS REJECTED) is **out of Shape v2** already; a shape-family gate cannot be blamed for rank 122 and must not be described as fixing that case. If diagnostic A hard-rejects its REJECTED blob, report that as a gating risk.",
+        "**Hard-reject failed that bar on listing 115503057:** labelled stand 401 went 5 → 252 and was marked incompatible (listing KIDNEY_CURVED vs candidate LAP_ELONGATED). Penalty-only also tanks 401. Family v1 is therefore **diagnostic-only**.",
+        "",
+        "Stand 338 (`shape_v2=null`, OS REJECTED) is **out of Shape v2** already; a shape-family gate cannot be blamed for rank 122 and must not be described as fixing that case. Diagnostic A still hard-rejects its REJECTED blob (classified RECTANGULAR vs listing KIDNEY_CURVED) — gating risk on non-scoring contours. Penalty rank 122 → 31 is an artefact: null `shape_v2` is not penalised while incompatible high-shape candidates are.",
         "",
         "Stand 641 is missing from OS/inventory; scoring-side family logic cannot surface it.",
+        "",
+        "Listing 116889694 has **no scoring-ready Hybrid frame** (`n_scoring_ready=0`); family is UNKNOWN/None and every candidate is `no_decision`.",
         "",
     ]
     (OUT / "SHAPE_FAMILY_REGRESSION.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

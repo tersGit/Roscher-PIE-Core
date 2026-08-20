@@ -1,0 +1,434 @@
+{
+  "id": "stand_871",
+  "source_image": {
+    "kind": "os_v1_pool.contour",
+    "crop": "data/visual_index/carlswald_north_corrected_002/_imagery_cache_native15/871_ags_aerial.jpg",
+    "os_json": "data/investigations/object_segmentation_v1/carlswald_north_complete/json/871.json",
+    "os_mask": null
+  },
+  "extractor": [
+    "fastsam+clip"
+  ],
+  "contour_image_01": [
+    [
+      0.636,
+      0.3002
+    ],
+    [
+      0.6344,
+      0.3018
+    ],
+    [
+      0.6344,
+      0.3035
+    ],
+    [
+      0.6314,
+      0.3068
+    ],
+    [
+      0.6314,
+      0.3234
+    ],
+    [
+      0.6284,
+      0.3267
+    ],
+    [
+      0.6284,
+      0.3317
+    ],
+    [
+      0.6269,
+      0.3333
+    ],
+    [
+      0.6269,
+      0.335
+    ],
+    [
+      0.6254,
+      0.3367
+    ],
+    [
+      0.6239,
+      0.3367
+    ],
+    [
+      0.6239,
+      0.3383
+    ],
+    [
+      0.6224,
+      0.34
+    ],
+    [
+      0.6224,
+      0.3416
+    ],
+    [
+      0.6208,
+      0.3433
+    ],
+    [
+      0.6208,
+      0.3449
+    ],
+    [
+      0.6193,
+      0.3466
+    ],
+    [
+      0.6193,
+      0.3483
+    ],
+    [
+      0.6148,
+      0.3532
+    ],
+    [
+      0.6133,
+      0.3532
+    ],
+    [
+      0.6118,
+      0.3549
+    ],
+    [
+      0.6118,
+      0.3599
+    ],
+    [
+      0.6163,
+      0.3648
+    ],
+    [
+      0.6163,
+      0.3665
+    ],
+    [
+      0.6193,
+      0.3698
+    ],
+    [
+      0.6208,
+      0.3698
+    ],
+    [
+      0.6224,
+      0.3715
+    ],
+    [
+      0.6239,
+      0.3715
+    ],
+    [
+      0.6284,
+      0.3765
+    ],
+    [
+      0.6284,
+      0.3781
+    ],
+    [
+      0.6299,
+      0.3798
+    ],
+    [
+      0.6314,
+      0.3798
+    ],
+    [
+      0.639,
+      0.3881
+    ],
+    [
+      0.642,
+      0.3881
+    ],
+    [
+      0.6435,
+      0.3864
+    ],
+    [
+      0.645,
+      0.3864
+    ],
+    [
+      0.645,
+      0.3847
+    ],
+    [
+      0.6495,
+      0.3798
+    ],
+    [
+      0.6495,
+      0.3765
+    ],
+    [
+      0.6556,
+      0.3698
+    ],
+    [
+      0.6556,
+      0.3682
+    ],
+    [
+      0.6571,
+      0.3665
+    ],
+    [
+      0.6571,
+      0.3615
+    ],
+    [
+      0.6586,
+      0.3599
+    ],
+    [
+      0.6586,
+      0.3582
+    ],
+    [
+      0.6692,
+      0.3466
+    ],
+    [
+      0.6707,
+      0.3466
+    ],
+    [
+      0.6722,
+      0.3449
+    ],
+    [
+      0.6737,
+      0.3449
+    ],
+    [
+      0.6737,
+      0.3433
+    ],
+    [
+      0.6752,
+      0.3416
+    ],
+    [
+      0.6752,
+      0.3317
+    ],
+    [
+      0.6722,
+      0.3284
+    ],
+    [
+      0.6692,
+      0.3284
+    ],
+    [
+      0.6677,
+      0.3267
+    ],
+    [
+      0.6662,
+      0.3267
+    ],
+    [
+      0.6647,
+      0.325
+    ],
+    [
+      0.6647,
+      0.3234
+    ],
+    [
+      0.6631,
+      0.3217
+    ],
+    [
+      0.6631,
+      0.3201
+    ],
+    [
+      0.6616,
+      0.3184
+    ],
+    [
+      0.6601,
+      0.3184
+    ],
+    [
+      0.6586,
+      0.3167
+    ],
+    [
+      0.6495,
+      0.3167
+    ],
+    [
+      0.6435,
+      0.3101
+    ],
+    [
+      0.6435,
+      0.3085
+    ],
+    [
+      0.642,
+      0.3068
+    ],
+    [
+      0.642,
+      0.3051
+    ],
+    [
+      0.6405,
+      0.3035
+    ],
+    [
+      0.6405,
+      0.3018
+    ],
+    [
+      0.639,
+      0.3002
+    ]
+  ],
+  "contour_point_count": 71,
+  "raw_bbox_norm": {
+    "x_min": 0.6118,
+    "y_min": 0.3002,
+    "x_max": 0.6752,
+    "y_max": 0.3881
+  },
+  "width_norm": 0.06340000000000001,
+  "height_norm": 0.08789999999999998,
+  "aspect_ratio_aabb": 0.7212741751990902,
+  "shape_v2_descriptors": {
+    "circularity": 0.6022,
+    "solidity": 0.8585,
+    "elongation": 1.2664,
+    "n_corners": 4,
+    "n_major_indents": 3,
+    "max_indent": 0.1248,
+    "sharp_frac": 0.3125,
+    "turn_std": 0.7308,
+    "radial_cv": 0.2379,
+    "symmetry": 0.5842,
+    "hu_log": [
+      -0.7199,
+      -2.2267,
+      -3.5509,
+      -5.065
+    ]
+  },
+  "scaled_geometry_400px": {
+    "point_count": 71,
+    "bbox": [
+      10.0,
+      10.0,
+      284.0842,
+      390.0
+    ],
+    "width": 274.084,
+    "height": 380.0,
+    "aspect_ratio": 0.7213,
+    "area": 53757.5,
+    "perimeter": 1060.97,
+    "solidity": 0.8573,
+    "convexity": 0.8573,
+    "circularity": 0.6001,
+    "rectangularity": 0.6997,
+    "orientation_deg": -55.44,
+    "elongation": 1.2746,
+    "min_rect_wh": [
+      312.93,
+      245.52
+    ],
+    "n_corners": 4,
+    "n_major_indents": 3,
+    "max_indent": 0.1248,
+    "sharp_frac": 0.3125,
+    "radial_cv": 0.2379,
+    "symmetry": 0.5842,
+    "hu_log": [
+      -0.7199,
+      -2.2267,
+      -3.5509,
+      -5.065
+    ],
+    "curved_edge_fraction": 0.6875,
+    "angle_entropy": 0.4652,
+    "n_angle_peaks": 4
+  },
+  "pca_normalisation": {
+    "applied": true,
+    "steps": [
+      "center",
+      "pca_align_major_axis",
+      "flip_heavier_half_to_+x",
+      "scale_unit_max_radius"
+    ],
+    "rotation_normalisation": true,
+    "scale_normalisation": true,
+    "resampling_before_comparison": "contour_descriptors resamples turning angles at 32 pts; Hybrid listing contour is already 64-pt; OS contour uses native vertices then pca_normalize",
+    "chamfer_flips": [
+      "identity",
+      "x",
+      "y",
+      "xy"
+    ],
+    "convexification": false
+  },
+  "simplification": "OS contour as stored (image-normalised 0\u20131); Shape v2 pca_normalize; no convex hull substitution",
+  "os_status_native": "CONFIRMED",
+  "os_status_after_pov_overlay": "CONFIRMED",
+  "frozen_os_pool_status": "CONFIRMED",
+  "os_shape_class_native": "irregular",
+  "os_area_m2": 25.83,
+  "os_rectangularity": 0.7412,
+  "os_reject_notes": [
+    "fastsam+clip"
+  ],
+  "pov_changes_contour": false,
+  "metrics_alias": {
+    "point_count": 71,
+    "bbox": [
+      10.0,
+      10.0,
+      284.0842,
+      390.0
+    ],
+    "width": 274.084,
+    "height": 380.0,
+    "aspect_ratio": 0.7213,
+    "area": 53757.5,
+    "perimeter": 1060.97,
+    "solidity": 0.8573,
+    "convexity": 0.8573,
+    "circularity": 0.6001,
+    "rectangularity": 0.6997,
+    "orientation_deg": -55.44,
+    "elongation": 1.2746,
+    "min_rect_wh": [
+      312.93,
+      245.52
+    ],
+    "n_corners": 4,
+    "n_major_indents": 3,
+    "max_indent": 0.1248,
+    "sharp_frac": 0.3125,
+    "radial_cv": 0.2379,
+    "symmetry": 0.5842,
+    "hu_log": [
+      -0.7199,
+      -2.2267,
+      -3.5509,
+      -5.065
+    ],
+    "curved_edge_fraction": 0.6875,
+    "angle_entropy": 0.4652,
+    "n_angle_peaks": 4
+  }
+}

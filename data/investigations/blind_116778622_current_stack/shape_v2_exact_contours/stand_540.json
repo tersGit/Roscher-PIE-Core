@@ -1,0 +1,378 @@
+{
+  "id": "stand_540",
+  "source_image": {
+    "kind": "os_v1_pool.contour",
+    "crop": "data/visual_index/carlswald_north_corrected_002/_imagery_cache_native15/540_ags_aerial.jpg",
+    "os_json": "data/investigations/object_segmentation_v1/carlswald_north/json/540.json",
+    "os_mask": "data/investigations/object_segmentation_v1/carlswald_north/masks/540_pool.png"
+  },
+  "extractor": [
+    "fastsam+clip"
+  ],
+  "contour_image_01": [
+    [
+      0.4871,
+      0.2303
+    ],
+    [
+      0.4851,
+      0.2334
+    ],
+    [
+      0.4832,
+      0.2334
+    ],
+    [
+      0.4812,
+      0.2366
+    ],
+    [
+      0.4752,
+      0.2366
+    ],
+    [
+      0.4733,
+      0.2397
+    ],
+    [
+      0.4693,
+      0.2397
+    ],
+    [
+      0.4673,
+      0.2429
+    ],
+    [
+      0.4614,
+      0.2429
+    ],
+    [
+      0.4594,
+      0.2461
+    ],
+    [
+      0.4535,
+      0.2461
+    ],
+    [
+      0.4515,
+      0.2492
+    ],
+    [
+      0.4475,
+      0.2492
+    ],
+    [
+      0.4455,
+      0.2524
+    ],
+    [
+      0.4396,
+      0.2524
+    ],
+    [
+      0.4376,
+      0.2555
+    ],
+    [
+      0.4337,
+      0.2555
+    ],
+    [
+      0.4317,
+      0.2587
+    ],
+    [
+      0.4257,
+      0.2587
+    ],
+    [
+      0.4238,
+      0.2618
+    ],
+    [
+      0.4238,
+      0.2713
+    ],
+    [
+      0.4317,
+      0.2839
+    ],
+    [
+      0.4317,
+      0.2871
+    ],
+    [
+      0.4337,
+      0.2902
+    ],
+    [
+      0.4337,
+      0.2934
+    ],
+    [
+      0.4356,
+      0.2965
+    ],
+    [
+      0.4356,
+      0.2997
+    ],
+    [
+      0.4455,
+      0.3155
+    ],
+    [
+      0.4554,
+      0.3155
+    ],
+    [
+      0.4574,
+      0.3123
+    ],
+    [
+      0.4594,
+      0.3123
+    ],
+    [
+      0.4634,
+      0.306
+    ],
+    [
+      0.4634,
+      0.3028
+    ],
+    [
+      0.4653,
+      0.2997
+    ],
+    [
+      0.4693,
+      0.2997
+    ],
+    [
+      0.4713,
+      0.2965
+    ],
+    [
+      0.4733,
+      0.2965
+    ],
+    [
+      0.4733,
+      0.2934
+    ],
+    [
+      0.4752,
+      0.2902
+    ],
+    [
+      0.4772,
+      0.2902
+    ],
+    [
+      0.4792,
+      0.2871
+    ],
+    [
+      0.4812,
+      0.2871
+    ],
+    [
+      0.4812,
+      0.2839
+    ],
+    [
+      0.4871,
+      0.2744
+    ],
+    [
+      0.4891,
+      0.2744
+    ],
+    [
+      0.4911,
+      0.2713
+    ],
+    [
+      0.4931,
+      0.2713
+    ],
+    [
+      0.501,
+      0.2587
+    ],
+    [
+      0.503,
+      0.2587
+    ],
+    [
+      0.505,
+      0.2555
+    ],
+    [
+      0.505,
+      0.2524
+    ],
+    [
+      0.5069,
+      0.2492
+    ],
+    [
+      0.5089,
+      0.2492
+    ],
+    [
+      0.5109,
+      0.2461
+    ],
+    [
+      0.5109,
+      0.2334
+    ],
+    [
+      0.497,
+      0.2334
+    ],
+    [
+      0.495,
+      0.2303
+    ]
+  ],
+  "contour_point_count": 57,
+  "raw_bbox_norm": {
+    "x_min": 0.4238,
+    "y_min": 0.2303,
+    "x_max": 0.5109,
+    "y_max": 0.3155
+  },
+  "width_norm": 0.08710000000000001,
+  "height_norm": 0.0852,
+  "aspect_ratio_aabb": 1.0223004694835682,
+  "shape_v2_descriptors": {
+    "circularity": 0.601,
+    "solidity": 0.9329,
+    "elongation": 1.5006,
+    "n_corners": 5,
+    "n_major_indents": 0,
+    "max_indent": 0.0623,
+    "sharp_frac": 0.375,
+    "turn_std": 0.8383,
+    "radial_cv": 0.2573,
+    "symmetry": 0.6524,
+    "hu_log": [
+      -0.6804,
+      -1.8885,
+      -2.688,
+      -3.8111
+    ]
+  },
+  "scaled_geometry_400px": {
+    "point_count": 57,
+    "bbox": [
+      10.0,
+      10.0,
+      390.0,
+      381.7107
+    ],
+    "width": 380.0,
+    "height": 371.711,
+    "aspect_ratio": 1.0223,
+    "area": 75712.5,
+    "perimeter": 1258.14,
+    "solidity": 0.9324,
+    "convexity": 0.9324,
+    "circularity": 0.6011,
+    "rectangularity": 0.6447,
+    "orientation_deg": -24.83,
+    "elongation": 1.5016,
+    "min_rect_wh": [
+      419.94,
+      279.66
+    ],
+    "n_corners": 5,
+    "n_major_indents": 0,
+    "max_indent": 0.0623,
+    "sharp_frac": 0.375,
+    "radial_cv": 0.2573,
+    "symmetry": 0.6524,
+    "hu_log": [
+      -0.6804,
+      -1.8885,
+      -2.688,
+      -3.8111
+    ],
+    "curved_edge_fraction": 0.625,
+    "angle_entropy": 0.4533,
+    "n_angle_peaks": 4
+  },
+  "pca_normalisation": {
+    "applied": true,
+    "steps": [
+      "center",
+      "pca_align_major_axis",
+      "flip_heavier_half_to_+x",
+      "scale_unit_max_radius"
+    ],
+    "rotation_normalisation": true,
+    "scale_normalisation": true,
+    "resampling_before_comparison": "contour_descriptors resamples turning angles at 32 pts; Hybrid listing contour is already 64-pt; OS contour uses native vertices then pca_normalize",
+    "chamfer_flips": [
+      "identity",
+      "x",
+      "y",
+      "xy"
+    ],
+    "convexification": false
+  },
+  "simplification": "OS contour as stored (image-normalised 0\u20131); Shape v2 pca_normalize; no convex hull substitution",
+  "os_status_native": "CONFIRMED",
+  "os_status_after_pov_overlay": "CONFIRMED",
+  "frozen_os_pool_status": "CONFIRMED",
+  "os_shape_class_native": "kidney_or_curved",
+  "os_area_m2": 14.31,
+  "os_rectangularity": 0.6497,
+  "os_reject_notes": [
+    "fastsam+clip"
+  ],
+  "pov_changes_contour": false,
+  "metrics_alias": {
+    "point_count": 57,
+    "bbox": [
+      10.0,
+      10.0,
+      390.0,
+      381.7107
+    ],
+    "width": 380.0,
+    "height": 371.711,
+    "aspect_ratio": 1.0223,
+    "area": 75712.5,
+    "perimeter": 1258.14,
+    "solidity": 0.9324,
+    "convexity": 0.9324,
+    "circularity": 0.6011,
+    "rectangularity": 0.6447,
+    "orientation_deg": -24.83,
+    "elongation": 1.5016,
+    "min_rect_wh": [
+      419.94,
+      279.66
+    ],
+    "n_corners": 5,
+    "n_major_indents": 0,
+    "max_indent": 0.0623,
+    "sharp_frac": 0.375,
+    "radial_cv": 0.2573,
+    "symmetry": 0.6524,
+    "hu_log": [
+      -0.6804,
+      -1.8885,
+      -2.688,
+      -3.8111
+    ],
+    "curved_edge_fraction": 0.625,
+    "angle_entropy": 0.4533,
+    "n_angle_peaks": 4
+  }
+}
