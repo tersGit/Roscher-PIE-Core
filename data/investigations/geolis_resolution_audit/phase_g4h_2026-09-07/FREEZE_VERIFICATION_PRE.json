@@ -1,0 +1,34 @@
+{
+  "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\results.json": {
+    "sha256": "bd1a52f140113e7f5d0affdcfe588d9c7eb115fa8b65fff755b008564ecc48fd",
+    "bytes": 10739001
+  },
+  "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\PHASE_G3_DETECTOR_AB.csv": {
+    "sha256": "1cb87575261682ab541e5c82b80be5f36d110553634de2414aa767c002de096f",
+    "bytes": 59380
+  },
+  "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\PHASE_G3_TRANSITIONS.csv": {
+    "sha256": "6c811d97eed395e568e5b3ca9f82b6f4758e5db6583b29b82bacba70258beddb",
+    "bytes": 283
+  },
+  "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\PHASE_G3_GEOMETRY_CHANGES.csv": {
+    "sha256": "817ab1d7a9a60369df60643a6a88391e909f812f24ce9fea2e8b339683e264de",
+    "bytes": 29730
+  },
+  "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\DETECTOR_FREEZE_MANIFEST_POST.json": {
+    "sha256": "1850b31b561bceb091e86f7252cd6e9b4306762fce25b9246795702bef128ba0",
+    "bytes": 3535
+  },
+  "data\\investigations\\geolis_resolution_audit\\phase_g4_2026-09-07\\PHASE_G4_TRANSITION_VALIDATION.csv": {
+    "sha256": "16fb066a483da0cf33353055df0a29a121b6f62869b3bd63229b198462f603b2",
+    "bytes": 10266
+  },
+  "data\\investigations\\geolis_resolution_audit\\phase_g4_2026-09-07\\evidence_manifest.json": {
+    "sha256": "33a121c0931142427b1cc3b3be24d55256953846eb845c41ca30a7182e917c8a",
+    "bytes": 66484
+  },
+  "data\\investigations\\geolis_resolution_audit\\phase_g4_2026-09-07\\FREEZE_VERIFICATION_POST.json": {
+    "sha256": "87153996564c50d10d43bdbc8fe5c11706ef10039979974d9fcf94fa6dc6ea7b",
+    "bytes": 4779
+  }
+}

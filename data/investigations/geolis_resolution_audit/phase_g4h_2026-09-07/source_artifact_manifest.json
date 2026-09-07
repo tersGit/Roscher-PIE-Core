@@ -1,0 +1,906 @@
+{
+  "source_hashes_pre": {
+    "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\results.json": {
+      "sha256": "bd1a52f140113e7f5d0affdcfe588d9c7eb115fa8b65fff755b008564ecc48fd",
+      "bytes": 10739001
+    },
+    "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\PHASE_G3_DETECTOR_AB.csv": {
+      "sha256": "1cb87575261682ab541e5c82b80be5f36d110553634de2414aa767c002de096f",
+      "bytes": 59380
+    },
+    "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\PHASE_G3_TRANSITIONS.csv": {
+      "sha256": "6c811d97eed395e568e5b3ca9f82b6f4758e5db6583b29b82bacba70258beddb",
+      "bytes": 283
+    },
+    "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\PHASE_G3_GEOMETRY_CHANGES.csv": {
+      "sha256": "817ab1d7a9a60369df60643a6a88391e909f812f24ce9fea2e8b339683e264de",
+      "bytes": 29730
+    },
+    "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\DETECTOR_FREEZE_MANIFEST_POST.json": {
+      "sha256": "1850b31b561bceb091e86f7252cd6e9b4306762fce25b9246795702bef128ba0",
+      "bytes": 3535
+    },
+    "data\\investigations\\geolis_resolution_audit\\phase_g4_2026-09-07\\PHASE_G4_TRANSITION_VALIDATION.csv": {
+      "sha256": "16fb066a483da0cf33353055df0a29a121b6f62869b3bd63229b198462f603b2",
+      "bytes": 10266
+    },
+    "data\\investigations\\geolis_resolution_audit\\phase_g4_2026-09-07\\evidence_manifest.json": {
+      "sha256": "33a121c0931142427b1cc3b3be24d55256953846eb845c41ca30a7182e917c8a",
+      "bytes": 66484
+    },
+    "data\\investigations\\geolis_resolution_audit\\phase_g4_2026-09-07\\FREEZE_VERIFICATION_POST.json": {
+      "sha256": "87153996564c50d10d43bdbc8fe5c11706ef10039979974d9fcf94fa6dc6ea7b",
+      "bytes": 4779
+    }
+  },
+  "case_count": 48,
+  "contact_sheet_count": 5,
+  "artifacts": [
+    {
+      "case_id": "CASE-001",
+      "stand": "362",
+      "panel": "first_pass_panels\\case_001.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\003_362_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\003_362_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          380,
+          361
+        ],
+        "image_b": [
+          568,
+          541
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-002",
+      "stand": "499",
+      "panel": "first_pass_panels\\case_002.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\012_499_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\012_499_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          415,
+          369
+        ],
+        "image_b": [
+          623,
+          554
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-003",
+      "stand": "378",
+      "panel": "first_pass_panels\\case_003.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\021_378_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\021_378_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          387,
+          378
+        ],
+        "image_b": [
+          581,
+          567
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-004",
+      "stand": "1/373",
+      "panel": "first_pass_panels\\case_004.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\023_1_373_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\023_1_373_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          369,
+          268
+        ],
+        "image_b": [
+          555,
+          401
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-005",
+      "stand": "1/379",
+      "panel": "first_pass_panels\\case_005.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\026_1_379_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\026_1_379_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          305,
+          319
+        ],
+        "image_b": [
+          458,
+          479
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-006",
+      "stand": "1/541",
+      "panel": "first_pass_panels\\case_006.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\035_1_541_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\035_1_541_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          330,
+          366
+        ],
+        "image_b": [
+          495,
+          549
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-007",
+      "stand": "387",
+      "panel": "first_pass_panels\\case_007.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\044_387_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\044_387_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          361,
+          368
+        ],
+        "image_b": [
+          543,
+          553
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-008",
+      "stand": "395",
+      "panel": "first_pass_panels\\case_008.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\055_395_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\055_395_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          482,
+          314
+        ],
+        "image_b": [
+          725,
+          471
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-009",
+      "stand": "396",
+      "panel": "first_pass_panels\\case_009.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\056_396_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\056_396_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          398,
+          318
+        ],
+        "image_b": [
+          597,
+          478
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-010",
+      "stand": "405",
+      "panel": "first_pass_panels\\case_010.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\066_405_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\066_405_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          367,
+          334
+        ],
+        "image_b": [
+          551,
+          502
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-011",
+      "stand": "415",
+      "panel": "first_pass_panels\\case_011.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\067_415_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\067_415_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          366,
+          324
+        ],
+        "image_b": [
+          548,
+          485
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-012",
+      "stand": "1/403",
+      "panel": "first_pass_panels\\case_012.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\071_1_403_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\071_1_403_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          357,
+          271
+        ],
+        "image_b": [
+          534,
+          407
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-013",
+      "stand": "1/474",
+      "panel": "first_pass_panels\\case_013.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\087_1_474_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\087_1_474_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          351,
+          231
+        ],
+        "image_b": [
+          527,
+          346
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-014",
+      "stand": "467",
+      "panel": "first_pass_panels\\case_014.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\088_467_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\088_467_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          363,
+          324
+        ],
+        "image_b": [
+          544,
+          486
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-015",
+      "stand": "462",
+      "panel": "first_pass_panels\\case_015.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\089_462_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\089_462_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          387,
+          341
+        ],
+        "image_b": [
+          582,
+          511
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-016",
+      "stand": "418",
+      "panel": "first_pass_panels\\case_016.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\095_418_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\095_418_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          395,
+          344
+        ],
+        "image_b": [
+          592,
+          517
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-017",
+      "stand": "458",
+      "panel": "first_pass_panels\\case_017.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\097_458_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\097_458_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          402,
+          349
+        ],
+        "image_b": [
+          603,
+          525
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-018",
+      "stand": "1/478",
+      "panel": "first_pass_panels\\case_018.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\111_1_478_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\111_1_478_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          355,
+          350
+        ],
+        "image_b": [
+          533,
+          526
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-019",
+      "stand": "1/513",
+      "panel": "first_pass_panels\\case_019.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\115_1_513_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\115_1_513_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          303,
+          287
+        ],
+        "image_b": [
+          455,
+          432
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-020",
+      "stand": "492",
+      "panel": "first_pass_panels\\case_020.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\124_492_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\124_492_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          358,
+          367
+        ],
+        "image_b": [
+          537,
+          551
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-021",
+      "stand": "1/515",
+      "panel": "first_pass_panels\\case_021.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\129_1_515_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\129_1_515_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          325,
+          300
+        ],
+        "image_b": [
+          488,
+          450
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-022",
+      "stand": "486",
+      "panel": "first_pass_panels\\case_022.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\133_486_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\133_486_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          364,
+          345
+        ],
+        "image_b": [
+          546,
+          517
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-023",
+      "stand": "495",
+      "panel": "first_pass_panels\\case_023.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\137_495_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\137_495_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          350,
+          358
+        ],
+        "image_b": [
+          526,
+          536
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-024",
+      "stand": "350",
+      "panel": "first_pass_panels\\case_024.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\141_350_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\141_350_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          391,
+          348
+        ],
+        "image_b": [
+          587,
+          522
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-025",
+      "stand": "351",
+      "panel": "first_pass_panels\\case_025.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\142_351_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\142_351_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          389,
+          355
+        ],
+        "image_b": [
+          583,
+          532
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-026",
+      "stand": "346",
+      "panel": "first_pass_panels\\case_026.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\144_346_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\144_346_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          388,
+          357
+        ],
+        "image_b": [
+          582,
+          535
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-027",
+      "stand": "340",
+      "panel": "first_pass_panels\\case_027.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\146_340_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\146_340_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          403,
+          369
+        ],
+        "image_b": [
+          604,
+          555
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-028",
+      "stand": "1/343",
+      "panel": "first_pass_panels\\case_028.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\148_1_343_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\148_1_343_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          326,
+          321
+        ],
+        "image_b": [
+          489,
+          481
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-029",
+      "stand": "1/335",
+      "panel": "first_pass_panels\\case_029.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\151_1_335_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\151_1_335_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          307,
+          329
+        ],
+        "image_b": [
+          460,
+          494
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-030",
+      "stand": "345",
+      "panel": "first_pass_panels\\case_030.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\162_345_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\162_345_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          351,
+          367
+        ],
+        "image_b": [
+          527,
+          551
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-031",
+      "stand": "1/437",
+      "panel": "first_pass_panels\\case_031.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\169_1_437_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\169_1_437_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          322,
+          321
+        ],
+        "image_b": [
+          483,
+          482
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-032",
+      "stand": "442",
+      "panel": "first_pass_panels\\case_032.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\173_442_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\173_442_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          353,
+          382
+        ],
+        "image_b": [
+          529,
+          574
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-033",
+      "stand": "425",
+      "panel": "first_pass_panels\\case_033.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\184_425_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\184_425_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          386,
+          341
+        ],
+        "image_b": [
+          579,
+          511
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-034",
+      "stand": "427",
+      "panel": "first_pass_panels\\case_034.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\186_427_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\186_427_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          384,
+          331
+        ],
+        "image_b": [
+          575,
+          497
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-035",
+      "stand": "433",
+      "panel": "first_pass_panels\\case_035.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\195_433_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\195_433_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          479,
+          354
+        ],
+        "image_b": [
+          719,
+          531
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-036",
+      "stand": "431",
+      "panel": "first_pass_panels\\case_036.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\198_431_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\198_431_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          380,
+          347
+        ],
+        "image_b": [
+          570,
+          521
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-037",
+      "stand": "692",
+      "panel": "first_pass_panels\\case_037.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\215_692_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\215_692_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          428,
+          398
+        ],
+        "image_b": [
+          642,
+          597
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-038",
+      "stand": "670",
+      "panel": "first_pass_panels\\case_038.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\223_670_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\223_670_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          406,
+          379
+        ],
+        "image_b": [
+          609,
+          568
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-039",
+      "stand": "668",
+      "panel": "first_pass_panels\\case_039.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\224_668_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\224_668_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          354,
+          427
+        ],
+        "image_b": [
+          532,
+          641
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-040",
+      "stand": "681",
+      "panel": "first_pass_panels\\case_040.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\246_681_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\246_681_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          378,
+          368
+        ],
+        "image_b": [
+          567,
+          553
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-041",
+      "stand": "683",
+      "panel": "first_pass_panels\\case_041.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\248_683_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\248_683_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          396,
+          381
+        ],
+        "image_b": [
+          593,
+          572
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-042",
+      "stand": "589",
+      "panel": "first_pass_panels\\case_042.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\254_589_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\254_589_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          410,
+          385
+        ],
+        "image_b": [
+          616,
+          578
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-043",
+      "stand": "621",
+      "panel": "first_pass_panels\\case_043.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\273_621_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\273_621_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          405,
+          342
+        ],
+        "image_b": [
+          608,
+          514
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-044",
+      "stand": "652",
+      "panel": "first_pass_panels\\case_044.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\278_652_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\278_652_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          390,
+          361
+        ],
+        "image_b": [
+          584,
+          542
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-045",
+      "stand": "1/616",
+      "panel": "first_pass_panels\\case_045.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\291_1_616_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\291_1_616_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          315,
+          334
+        ],
+        "image_b": [
+          474,
+          501
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-046",
+      "stand": "638",
+      "panel": "first_pass_panels\\case_046.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\301_638_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\301_638_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          431,
+          360
+        ],
+        "image_b": [
+          647,
+          541
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-047",
+      "stand": "605",
+      "panel": "first_pass_panels\\case_047.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\309_605_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\309_605_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          386,
+          388
+        ],
+        "image_b": [
+          580,
+          584
+        ]
+      }
+    },
+    {
+      "case_id": "CASE-048",
+      "stand": "649",
+      "panel": "first_pass_panels\\case_048.jpg",
+      "image_a_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\328_649_legacy_0225.jpg",
+      "image_b_source": "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\inputs\\328_649_native15.jpg",
+      "context": "G3 retained padded parcel detector-input crop only; no larger 450 m raw response was committed, so no broader context is recreated or fetched.",
+      "source_dimensions": {
+        "image_a": [
+          442,
+          361
+        ],
+        "image_b": [
+          663,
+          542
+        ]
+      }
+    }
+  ],
+  "historical_evidence_count": 48,
+  "generation": "committed G3/G4 evidence only; no detector run, network acquisition, or source modification"
+}
