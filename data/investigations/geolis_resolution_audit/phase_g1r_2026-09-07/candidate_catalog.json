@@ -1,0 +1,118 @@
+{
+  "phase": "G1R",
+  "generated_at": "2026-09-07T12:36:42.284+02:00",
+  "catalog_rule": "Catalogued candidates are image files in permitted PIE locations whose names and provenance make them plausible historical control imagery. Masks and labelled panels are excluded except for the explicitly catalogued composite A/B panels.",
+  "legacy_input_requirement": {
+    "dataset": "carlswald_north_corrected_001",
+    "profile": "native15",
+    "expected_path_pattern": "data/visual_index/carlswald_north_corrected_001/_imagery_cache_native15/<stand>_ags_aerial.jpg",
+    "required_stands": ["677", "420", "408", "365", "491"]
+  },
+  "original_cache_filename_matches": [],
+  "candidates": [
+    {
+      "stand": "677",
+      "absolute_source_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\estate_property_inventory_v1\\unknown_diagnostic\\ags_raw_proof\\677_ags_native15_raw_crop.jpg",
+      "filename": "677_ags_native15_raw_crop.jpg",
+      "size_bytes": 74389,
+      "sha256": "93b931a4529886baac63bb5d7896f1e7d27104a5c0bda833e67ff28bd4e613e8",
+      "decoded": {"format": "JPEG", "dimensions_px": [605, 402], "mode": "RGB"},
+      "last_write_utc": "2026-09-07T10:09:22.9493587Z",
+      "classification": "high-confidence historical cache",
+      "provenance": "Tracked at commit e83c22425f54f4133f31f80756ee1a8efe5675c7. Its metadata records native15, OS v1 crop dimensions [605,402], and an integer extract from the AGS tile. The original cache path is absent, so byte identity to that missing path cannot be proven.",
+      "exact_duplicates_known": [
+        "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\estate_property_inventory_v1\\fastsam_miss\\crops\\677_native15.jpg"
+      ]
+    },
+    {
+      "stand": "408",
+      "absolute_source_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\estate_property_inventory_v1\\fastsam_miss\\crops\\408_native15.jpg",
+      "filename": "408_native15.jpg",
+      "size_bytes": 56592,
+      "sha256": "25e8d74dfc00f3f061cb2cdfb442c457f509a7e831fcec3476b82f3d539af625",
+      "decoded": {"format": "JPEG", "dimensions_px": [318, 569], "mode": "RGB"},
+      "last_write_utc": "2026-09-07T10:09:22.8605081Z",
+      "classification": "high-confidence historical cache",
+      "provenance": "Tracked at commit e83c22425f54f4133f31f80756ee1a8efe5675c7. Its paired diagnostic states crop_matches_os_v1_wh=true and records the native15 source tile. The original cache path is absent, so byte identity to that missing path cannot be proven.",
+      "exact_duplicates_known": []
+    },
+    {
+      "stand": "677",
+      "absolute_source_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\ags_native15\\carlswald_north_116978058\\ab_stand_677.jpg",
+      "filename": "ab_stand_677.jpg",
+      "size_bytes": 163500,
+      "sha256": "70ac26048b5fb1e12e4cc5a75159fca08132f741cdab7983a4725d8157ca345b",
+      "decoded": {"format": "JPEG", "dimensions_px": [1076, 616], "mode": "RGB"},
+      "last_write_utc": "2026-09-07T10:09:21.4076685Z",
+      "classification": "related derived artifact",
+      "provenance": "Tracked at commit a3acfab1075c97e931843903ab86044ee891651a. The native15 A/B report identifies this as a comparison panel, not detector input.",
+      "exact_duplicates_known": []
+    },
+    {
+      "stand": "420",
+      "absolute_source_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\ags_native15\\carlswald_north_116978058\\ab_stand_420.jpg",
+      "filename": "ab_stand_420.jpg",
+      "size_bytes": 138600,
+      "sha256": "b96933a0efe28d41afa30d2c0307a1e1bda0304211e51dc89997d293e80adc37",
+      "decoded": {"format": "JPEG", "dimensions_px": [1076, 616], "mode": "RGB"},
+      "last_write_utc": "2026-09-07T10:09:21.3946506Z",
+      "classification": "related derived artifact",
+      "provenance": "Tracked A/B comparison panel; not detector input.",
+      "exact_duplicates_known": []
+    },
+    {
+      "stand": "408",
+      "absolute_source_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\ags_native15\\carlswald_north_116978058\\ab_stand_408.jpg",
+      "filename": "ab_stand_408.jpg",
+      "size_bytes": 146052,
+      "sha256": "eaac76ddf508bf5751e71a30a8ede8b573d92b0135eb5b8518f66e69ee8f1c6f",
+      "decoded": {"format": "JPEG", "dimensions_px": [1076, 616], "mode": "RGB"},
+      "last_write_utc": "2026-09-07T10:09:21.3916517Z",
+      "classification": "related derived artifact",
+      "provenance": "Tracked A/B comparison panel; not detector input.",
+      "exact_duplicates_known": []
+    },
+    {
+      "stand": "365",
+      "absolute_source_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\ags_native15\\carlswald_north_116978058\\ab_stand_365.jpg",
+      "filename": "ab_stand_365.jpg",
+      "size_bytes": 142276,
+      "sha256": "644dd3442e9ef92b7bef337b67ce05f22c80cb5b86280ef20fa8f5c578f761b4",
+      "decoded": {"format": "JPEG", "dimensions_px": [1076, 616], "mode": "RGB"},
+      "last_write_utc": "2026-09-07T10:09:21.3885728Z",
+      "classification": "related derived artifact",
+      "provenance": "Tracked A/B comparison panel; not detector input.",
+      "exact_duplicates_known": []
+    },
+    {
+      "stand": "491",
+      "absolute_source_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\ags_native15\\carlswald_north_116978058\\ab_stand_491.jpg",
+      "filename": "ab_stand_491.jpg",
+      "size_bytes": 158078,
+      "sha256": "b662fa157934d51d5152d94a5caa7159408fdb7e4441d510d186117ed5658c14",
+      "decoded": {"format": "JPEG", "dimensions_px": [1076, 616], "mode": "RGB"},
+      "last_write_utc": "2026-09-07T10:09:21.3966636Z",
+      "classification": "related derived artifact",
+      "provenance": "Tracked A/B comparison panel; not detector input.",
+      "exact_duplicates_known": []
+    },
+    {
+      "stand": "677",
+      "absolute_source_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-crispy-train\\data\\investigations\\geolis_resolution_audit\\phase_e_2026-09-07\\raw\\stand_677_A_estate_450m_2000px.jpg",
+      "filename": "stand_677_A_estate_450m_2000px.jpg",
+      "size_bytes": 831005,
+      "sha256": "a09bc6cab3035c30558716002643ce656d903acde0f097ae8b1c61710c840d7e",
+      "decoded": {"format": "JPEG", "dimensions_px": [2000, 2000], "mode": "RGB"},
+      "last_write_utc": "2026-09-07T09:53:08.6651668Z",
+      "classification": "not suitable",
+      "provenance": "Tracked later Phase E live AGS capture, commit 4a59a54d1891dc6a21c7c08729e769705ab0a836; raw estate tile, not the historical parcel crop.",
+      "exact_duplicates_known": []
+    }
+  ],
+  "excluded_known_non_candidates": {
+    "reason": "Phase E raw A/B/C imagery was deliberately not catalogued as a candidate: its report establishes it was newly live-retrieved on 2026-09-07 and its extent/resolution differs from the required historical cached parcel input. Using it would violate the no-substitution rule.",
+    "source_directory": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-crispy-train\\data\\investigations\\geolis_resolution_audit\\phase_e_2026-09-07\\raw"
+  },
+  "reproduction_authorized": false,
+  "reproduction_executed": false
+}
