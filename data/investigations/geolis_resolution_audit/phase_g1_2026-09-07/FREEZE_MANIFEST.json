@@ -1,0 +1,63 @@
+{
+  "phase": "G1",
+  "generated_at": "2026-09-07T12:17:04.925+02:00",
+  "freeze_commit": "6c53661e15d1bda968318cbac7cc244ed7497789",
+  "head_commit": "6c53661e15d1bda968318cbac7cc244ed7497789",
+  "freeze_relationship": {
+    "head_equals_freeze": true,
+    "freeze_is_head_ancestor": true,
+    "working_tree_clean_before_evidence": true
+  },
+  "legacy_detector": {
+    "identifier": "backend.gis.estate_ags_matching.pool_geometry.extract_pool_geometry",
+    "source": "backend/gis/estate_ags_matching/pool_geometry.py",
+    "source_blob": "230f74e8b4a01e939ff939900531638af9e13080",
+    "version": "1.0.0",
+    "configuration_embedded_in_source": {
+      "normalised_points": 64,
+      "min_pool_area_fraction": 0.002,
+      "max_pool_area_fraction": 0.45,
+      "cyan_hsv_lower": [72, 40, 55],
+      "cyan_hsv_upper": [145, 255, 255],
+      "deep_hsv_lower": [90, 25, 40],
+      "deep_hsv_upper": [140, 255, 230]
+    },
+    "external_model_or_weight": null
+  },
+  "immutable_blobs": {
+    "detector": {
+      "backend/gis/estate_ags_matching/pool_geometry.py": "230f74e8b4a01e939ff939900531638af9e13080"
+    },
+    "scoring_and_ranking": {
+      "backend/gis/estate_ags_matching/os_scoring_v2.py": "30f14f765e3a58e7831e7d0f47fbfbebd03a0a35",
+      "backend/gis/estate_ags_matching/final_candidates.py": "49f577987cc1c1514650609f4230298a18c86289",
+      "scripts/run_carlswald_north_corrected.py": "61eeedb57053075dfc506934367e2130fc84bebc"
+    },
+    "gates": {
+      "backend/gis/estate_ags_matching/listing_pool_gate_v1.py": "c5fd575037ec0c9e71ae0646238801d667a80a21",
+      "backend/gis/estate_ags_matching/listing_corner_gate_v1.py": "3df53df05456c34e3989245f81c5851496a5953e"
+    },
+    "inventory": {
+      "backend/gis/estate_ags_matching/estate_property_inventory_v1.py": "8fb59ae8376c149439ac487e94eebbff4fae7911",
+      "data/estate_inventory/carlswald_north_corrected_001/manifest.json": "6bebb21fd52aa20a7a0f284841347591a8599dc6"
+    },
+    "gis_universe": {
+      "data/gis/carlswald_north_corrected_001.json": "7a7cc67953ffd7248c86620453012613e711e12a",
+      "data/gis/registry.json": "ef65a245af5d3ebee555e80034c90b368cd2c64a"
+    },
+    "frozen_results": {
+      "data/investigations/object_segmentation_v1/carlswald_north/diagnostic_summary.json": "07cc602826af61e13ead4fc1e8eaa6825d6aade6",
+      "data/investigations/object_segmentation_v1/carlswald_north/estate_summary.json": "d80760b24be3d1c3c0c16c789e182c1a5615de9d",
+      "data/investigations/carlswald_north_complete/freeze_report.json": "07a31b3200959131eae1b95ba6ffc7dc9c233115",
+      "data/investigations/os_scoring_v2/carlswald_north_116978058/latest.json": "6b2d2fae72e4b082e7b35e0f96732fcd1e404deb"
+    }
+  },
+  "historical_invocation": {
+    "control_source": "data/visual_index/carlswald_north_corrected_001/_imagery_cache_native15/<stand>_ags_aerial.jpg",
+    "parcel_mask_source": "data/gis/carlswald_north_corrected_001.json",
+    "detector_call": "extract_pool_geometry(crop_path.read_bytes(), parcel_mask=parcel_mask)",
+    "stored_control_baseline_source": "data/investigations/object_segmentation_v1/carlswald_north/json/<stand>.json.old_extractor",
+    "estate_runner": "scripts/run_carlswald_north_corrected.py",
+    "network_or_recreation_allowed": false
+  }
+}

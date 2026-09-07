@@ -1,0 +1,128 @@
+{
+  "phase": "G1",
+  "verdict": "PARTIALLY REPRODUCED",
+  "detector": "backend.gis.estate_ags_matching.pool_geometry.extract_pool_geometry",
+  "imagery_source": "carlswald_north_corrected_001 native15 cached parcel crops",
+  "run_status": "blocked_before_detector_invocation",
+  "blocker": {
+    "kind": "required_historical_input_unavailable",
+    "path": "data/visual_index/carlswald_north_corrected_001/_imagery_cache_native15",
+    "gitignore_rule": ".gitignore:219:data/visual_index/",
+    "resolution": "No crop was fetched, regenerated, substituted, or otherwise recreated."
+  },
+  "comparison_contract": {
+    "requested_controls": ["677", "420", "408", "365", "491"],
+    "available_stored_fields": [
+      "old_pool_present",
+      "old_pool_shape",
+      "old_pool_aspect",
+      "old_pool_rectangularity",
+      "old_pool_compactness",
+      "old_pool_centroid",
+      "old_pool_to_house_dist"
+    ],
+    "not_stored": ["status", "score_or_confidence", "contour_points", "area", "geometry"],
+    "comparison_result": "not_executed: no historical detector input bytes are available"
+  },
+  "controls": [
+    {
+      "stand": "677",
+      "required_crop": "data/visual_index/carlswald_north_corrected_001/_imagery_cache_native15/677_ags_aerial.jpg",
+      "crop_available": false,
+      "stored_baseline": {
+        "old_pool_present": true,
+        "old_pool_shape": "irregular",
+        "old_pool_aspect": 1.945,
+        "old_pool_rectangularity": 0.4329,
+        "old_pool_compactness": 0.3347,
+        "old_pool_centroid": [0.3856, 0.5882],
+        "old_pool_to_house_dist": 0.085
+      },
+      "reproduction": null,
+      "match": null
+    },
+    {
+      "stand": "420",
+      "required_crop": "data/visual_index/carlswald_north_corrected_001/_imagery_cache_native15/420_ags_aerial.jpg",
+      "crop_available": false,
+      "stored_baseline": {
+        "old_pool_present": true,
+        "old_pool_shape": "irregular",
+        "old_pool_aspect": 1.96,
+        "old_pool_rectangularity": 0.5226,
+        "old_pool_compactness": 0.3725,
+        "old_pool_centroid": [0.4214, 0.3167],
+        "old_pool_to_house_dist": 0.1884
+      },
+      "reproduction": null,
+      "match": null
+    },
+    {
+      "stand": "408",
+      "required_crop": "data/visual_index/carlswald_north_corrected_001/_imagery_cache_native15/408_ags_aerial.jpg",
+      "crop_available": false,
+      "stored_baseline": {
+        "old_pool_present": true,
+        "old_pool_shape": "irregular",
+        "old_pool_aspect": 2.513,
+        "old_pool_rectangularity": 0.4975,
+        "old_pool_compactness": 0.3498,
+        "old_pool_centroid": [0.6036, 0.547],
+        "old_pool_to_house_dist": 0.0841
+      },
+      "reproduction": null,
+      "match": null
+    },
+    {
+      "stand": "365",
+      "required_crop": "data/visual_index/carlswald_north_corrected_001/_imagery_cache_native15/365_ags_aerial.jpg",
+      "crop_available": false,
+      "stored_baseline": {
+        "old_pool_present": true,
+        "old_pool_shape": "kidney_or_curved",
+        "old_pool_aspect": 1.872,
+        "old_pool_rectangularity": 0.6705,
+        "old_pool_compactness": 0.5357,
+        "old_pool_centroid": [0.6173, 0.5851],
+        "old_pool_to_house_dist": 0.1763
+      },
+      "reproduction": null,
+      "match": null
+    },
+    {
+      "stand": "491",
+      "required_crop": "data/visual_index/carlswald_north_corrected_001/_imagery_cache_native15/491_ags_aerial.jpg",
+      "crop_available": false,
+      "stored_baseline": {
+        "old_pool_present": true,
+        "old_pool_shape": "irregular",
+        "old_pool_aspect": 1.414,
+        "old_pool_rectangularity": 0.4689,
+        "old_pool_compactness": 0.3774,
+        "old_pool_centroid": [0.6397, 0.4539],
+        "old_pool_to_house_dist": 0.146
+      },
+      "reproduction": null,
+      "match": null
+    }
+  ],
+  "estate_detector_only_reproduction": {
+    "runner": "scripts/run_carlswald_north_corrected.py",
+    "executed": false,
+    "reason": "The runner would build/recreate missing crop inputs and potentially acquire imagery; that violates the G1 existing-assets-only protocol.",
+    "historical_stored_summary": {
+      "source": "data/investigations/object_segmentation_v1/carlswald_north/estate_summary.json",
+      "n": 330,
+      "old_pool_present_count": 199
+    },
+    "exact_matches": null,
+    "differences": null,
+    "nondeterminism": "Not assessable without historical inputs."
+  },
+  "diagnostic_panels": {
+    "produced": false,
+    "reason": "No unchanged detector invocation occurred, so no panel can truthfully be produced."
+  },
+  "ground_truth_used": false,
+  "ranking_or_selection_changed": false
+}
