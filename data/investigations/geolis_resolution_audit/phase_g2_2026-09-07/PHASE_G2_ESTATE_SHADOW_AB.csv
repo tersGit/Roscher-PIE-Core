@@ -1,0 +1,2 @@
+status,reason
+NOT_RUN,The frozen historical record contains 337 GIS candidates and 330 unique crop filenames, not an immutable 400-member universe; constructing one is prohibited.

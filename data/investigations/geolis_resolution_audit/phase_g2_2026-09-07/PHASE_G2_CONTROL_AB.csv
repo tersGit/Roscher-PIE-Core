@@ -1,0 +1,11 @@
+stand,profile,status,relative_area,centroid_x,centroid_y,shape_class,contour_point_count,runs_stable
+677,legacy_0225,PRESENT,0.0058,0.3931,0.4967,irregular,64,True
+677,native15,PRESENT,0.0073,0.393,0.4954,irregular,64,True
+420,legacy_0225,PRESENT,0.0036,0.4245,0.3102,irregular,64,True
+420,native15,PRESENT,0.0048,0.4177,0.3038,irregular,64,True
+408,legacy_0225,PRESENT,0.0084,0.6882,0.4719,irregular,64,True
+408,native15,PRESENT,0.0088,0.6872,0.4726,irregular,64,True
+365,legacy_0225,PRESENT,0.0027,0.6421,0.3634,kidney_or_curved,64,True
+365,native15,PRESENT,0.0049,0.4464,0.5225,irregular,64,True
+491,legacy_0225,PRESENT,0.0041,0.6357,0.4109,irregular,64,True
+491,native15,PRESENT,0.0051,0.6368,0.4128,irregular,64,True

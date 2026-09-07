@@ -1,0 +1,39 @@
+{
+  "purpose": "G1R recovered-image reference comparison only; these inputs did not feed either primary direct A/B pair.",
+  "comparisons": [
+    {
+      "stand": "677",
+      "reference": {
+        "path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\estate_property_inventory_v1\\unknown_diagnostic\\ags_raw_proof\\677_ags_native15_raw_crop.jpg",
+        "sha256": "93b931a4529886baac63bb5d7896f1e7d27104a5c0bda833e67ff28bd4e613e8",
+        "dimensions_px": [605, 402],
+        "stored_legacy_output": {"present": true, "shape": "irregular", "centroid": [0.3856, 0.5882], "relative_area": null}
+      },
+      "live_pair": {
+        "legacy_0225_crop_dimensions_px": [404, 329],
+        "native15_crop_dimensions_px": [605, 494],
+        "both_status": "PRESENT",
+        "both_shape": "irregular"
+      },
+      "classification": "inconclusive",
+      "reason": "The recovered reference and both live detector crops have different dimensions, demonstrating non-identical crop realization. The shared PRESENT/irregular classification is insufficient to establish identical pixels or geometry."
+    },
+    {
+      "stand": "408",
+      "reference": {
+        "path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-fluffy-waffle\\data\\investigations\\estate_property_inventory_v1\\fastsam_miss\\crops\\408_native15.jpg",
+        "sha256": "25e8d74dfc00f3f061cb2cdfb442c457f509a7e831fcec3476b82f3d539af625",
+        "dimensions_px": [318, 569],
+        "stored_legacy_output": {"present": true, "shape": "irregular", "centroid": [0.6036, 0.547], "relative_area": null}
+      },
+      "live_pair": {
+        "legacy_0225_crop_dimensions_px": [348, 362],
+        "native15_crop_dimensions_px": [522, 543],
+        "both_status": "PRESENT",
+        "both_shape": "irregular"
+      },
+      "classification": "inconclusive",
+      "reason": "The recovered reference and both live detector crops have different dimensions, demonstrating non-identical crop realization. The shared PRESENT/irregular classification is insufficient to establish identical pixels or geometry."
+    }
+  ]
+}

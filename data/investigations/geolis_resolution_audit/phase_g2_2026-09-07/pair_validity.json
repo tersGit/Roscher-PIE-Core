@@ -1,0 +1,95 @@
+{
+  "clean": true,
+  "controls": {
+    "677": {
+      "valid": true,
+      "same": [
+        "service",
+        "bbox",
+        "bboxSR",
+        "imageSR",
+        "format",
+        "interpolation",
+        "returnSquarePixels",
+        "detector_source_and_preprocessing"
+      ],
+      "different": [
+        "size",
+        "effective_gsd_m_per_px"
+      ],
+      "contamination": []
+    },
+    "420": {
+      "valid": true,
+      "same": [
+        "service",
+        "bbox",
+        "bboxSR",
+        "imageSR",
+        "format",
+        "interpolation",
+        "returnSquarePixels",
+        "detector_source_and_preprocessing"
+      ],
+      "different": [
+        "size",
+        "effective_gsd_m_per_px"
+      ],
+      "contamination": []
+    },
+    "408": {
+      "valid": true,
+      "same": [
+        "service",
+        "bbox",
+        "bboxSR",
+        "imageSR",
+        "format",
+        "interpolation",
+        "returnSquarePixels",
+        "detector_source_and_preprocessing"
+      ],
+      "different": [
+        "size",
+        "effective_gsd_m_per_px"
+      ],
+      "contamination": []
+    },
+    "365": {
+      "valid": true,
+      "same": [
+        "service",
+        "bbox",
+        "bboxSR",
+        "imageSR",
+        "format",
+        "interpolation",
+        "returnSquarePixels",
+        "detector_source_and_preprocessing"
+      ],
+      "different": [
+        "size",
+        "effective_gsd_m_per_px"
+      ],
+      "contamination": []
+    },
+    "491": {
+      "valid": true,
+      "same": [
+        "service",
+        "bbox",
+        "bboxSR",
+        "imageSR",
+        "format",
+        "interpolation",
+        "returnSquarePixels",
+        "detector_source_and_preprocessing"
+      ],
+      "different": [
+        "size",
+        "effective_gsd_m_per_px"
+      ],
+      "contamination": []
+    }
+  }
+}

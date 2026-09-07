@@ -1,0 +1,2 @@
+status,reason
+NOT_RUN,No estate shadow ran because no immutable 400-member universe exists in the freeze; transition data would be fabricated.

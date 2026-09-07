@@ -1,0 +1,272 @@
+{
+  "currentVersion": 10.91,
+  "serviceDescription": "CoJ Aerial Photography 2023",
+  "name": "AerialPhotography/2023",
+  "description": "CoJ Aerial Photography 2023",
+  "extent": {
+    "xmin": 3079554.6444000006,
+    "ymin": -3070035.722999785,
+    "xmax": 3146345.894399837,
+    "ymax": -2981527.023000002,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+    }
+  },
+  "initialExtent": {
+    "xmin": 3079554.6444000006,
+    "ymin": -3070035.722999785,
+    "xmax": 3146345.894399837,
+    "ymax": -2981527.023000002,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+    }
+  },
+  "fullExtent": {
+    "xmin": 3079554.6444000006,
+    "ymin": -3070035.722999785,
+    "xmax": 3146345.894399837,
+    "ymax": -2981527.023000002,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+    }
+  },
+  "pixelSizeX": 0.14999999999963293,
+  "pixelSizeY": 0.14999999999963257,
+  "bandCount": 3,
+  "pixelType": "U8",
+  "minPixelSize": 0,
+  "maxPixelSize": 0,
+  "copyrightText": "CoJ Aerial Photography 2023",
+  "serviceDataType": "esriImageServiceDataTypeRGB",
+  "minValues": [
+    1,
+    20,
+    26
+  ],
+  "maxValues": [
+    255,
+    255,
+    255
+  ],
+  "meanValues": [
+    110.60333254301091,
+    101.86437284787725,
+    82.34854782208522
+  ],
+  "stdvValues": [
+    32.65987365742471,
+    31.522913252232723,
+    34.12062312410649
+  ],
+  "objectIdField": "OBJECTID",
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID",
+      "domain": null
+    },
+    {
+      "name": "Shape",
+      "type": "esriFieldTypeGeometry",
+      "alias": "Shape",
+      "domain": null
+    },
+    {
+      "name": "Name",
+      "type": "esriFieldTypeString",
+      "alias": "Name",
+      "domain": null,
+      "length": 200
+    },
+    {
+      "name": "MinPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "MinPS",
+      "domain": null
+    },
+    {
+      "name": "MaxPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "MaxPS",
+      "domain": null
+    },
+    {
+      "name": "LowPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "LowPS",
+      "domain": null
+    },
+    {
+      "name": "HighPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "HighPS",
+      "domain": null
+    },
+    {
+      "name": "Category",
+      "type": "esriFieldTypeInteger",
+      "alias": "Category",
+      "domain": {
+        "type": "codedValue",
+        "name": "MosaicCatalogItemCategoryDomain",
+        "description": "Catalog item categories.",
+        "codedValues": [
+          {
+            "name": "Unknown",
+            "code": 0
+          },
+          {
+            "name": "Primary",
+            "code": 1
+          },
+          {
+            "name": "Overview",
+            "code": 2
+          },
+          {
+            "name": "Unprocessed Overview",
+            "code": 3
+          },
+          {
+            "name": "Partial Overview",
+            "code": 4
+          },
+          {
+            "name": "Inactive",
+            "code": 5
+          },
+          {
+            "name": "Uploaded",
+            "code": 253
+          },
+          {
+            "name": "Incomplete",
+            "code": 254
+          },
+          {
+            "name": "Custom",
+            "code": 255
+          }
+        ],
+        "mergePolicy": "esriMPTDefaultValue",
+        "splitPolicy": "esriSPTDefaultValue"
+      }
+    },
+    {
+      "name": "Tag",
+      "type": "esriFieldTypeString",
+      "alias": "Tag",
+      "domain": null,
+      "length": 100
+    },
+    {
+      "name": "GroupName",
+      "type": "esriFieldTypeString",
+      "alias": "GroupName",
+      "domain": null,
+      "length": 100
+    },
+    {
+      "name": "ProductName",
+      "type": "esriFieldTypeString",
+      "alias": "ProductName",
+      "domain": null,
+      "length": 100
+    },
+    {
+      "name": "CenterX",
+      "type": "esriFieldTypeDouble",
+      "alias": "CenterX",
+      "domain": null
+    },
+    {
+      "name": "CenterY",
+      "type": "esriFieldTypeDouble",
+      "alias": "CenterY",
+      "domain": null
+    },
+    {
+      "name": "ZOrder",
+      "type": "esriFieldTypeInteger",
+      "alias": "ZOrder",
+      "domain": null
+    },
+    {
+      "name": "Shape_Length",
+      "type": "esriFieldTypeDouble",
+      "alias": "Shape_Length",
+      "domain": null
+    },
+    {
+      "name": "Shape_Area",
+      "type": "esriFieldTypeDouble",
+      "alias": "Shape_Area",
+      "domain": null
+    },
+    {
+      "name": "Thumbnail",
+      "type": "esriFieldTypeBlob",
+      "alias": "Thumbnail",
+      "domain": null
+    }
+  ],
+  "capabilities": "Catalog,Mensuration,Image,Metadata",
+  "defaultMosaicMethod": "Northwest",
+  "allowedMosaicMethods": "NorthWest,Center,LockRaster,ByAttribute,Nadir,Viewpoint,Seamline,None",
+  "sortField": "",
+  "sortValue": null,
+  "sortAscending": true,
+  "mosaicOperator": "First",
+  "maxDownloadSizeLimit": 2048,
+  "defaultCompressionQuality": 75,
+  "defaultResamplingMethod": "Bilinear",
+  "maxImageHeight": 4100,
+  "maxImageWidth": 15000,
+  "maxRecordCount": 1000,
+  "maxDownloadImageCount": 20,
+  "maxMosaicImageCount": 20,
+  "allowRasterFunction": true,
+  "rasterFunctionInfos": [
+    {
+      "name": "None",
+      "description": "A No-Op Function.",
+      "help": ""
+    }
+  ],
+  "rasterTypeInfos": [
+    {
+      "name": "Raster Dataset",
+      "description": "Supports all ArcGIS Raster Datasets",
+      "help": ""
+    }
+  ],
+  "mensurationCapabilities": "Basic",
+  "hasHistograms": true,
+  "hasColormap": false,
+  "hasRasterAttributeTable": false,
+  "minScale": 0,
+  "maxScale": 0,
+  "exportTilesAllowed": false,
+  "hasMultidimensions": false,
+  "supportsStatistics": true,
+  "supportsAdvancedQueries": true,
+  "editFieldsInfo": null,
+  "ownershipBasedAccessControlForRasters": null,
+  "allowComputeTiePoints": false,
+  "useStandardizedQueries": true,
+  "advancedQueryCapabilities": {
+    "useStandardizedQueries": true,
+    "supportsStatistics": true,
+    "supportsOrderBy": true,
+    "supportsDistinct": true,
+    "supportsPagination": true
+  },
+  "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+  }
+}
