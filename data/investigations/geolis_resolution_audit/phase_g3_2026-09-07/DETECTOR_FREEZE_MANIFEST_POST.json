@@ -1,0 +1,48 @@
+{
+  "freeze_commit": "6c53661e15d1bda968318cbac7cc244ed7497789",
+  "head_before": "535bb439162e2dc11dd45debcbc0f79290d1f67f",
+  "criteria_recorded_before_output_inspection": {
+    "centroid_displacement_gt": 0.15,
+    "relative_area_ratio_outside": [
+      0.67,
+      1.5
+    ],
+    "aspect_ratio_relative_change_gt": 0.33,
+    "orientation_delta_deg_gt": 30.0,
+    "geometry_family_change": true
+  },
+  "blobs": {
+    "backend/gis/estate_ags_matching/pool_geometry.py": "230f74e8b4a01e939ff939900531638af9e13080",
+    "backend/gis/estate_ags_matching/aerial_geometric.py": "a17462e382c99625ba70c09a7effe6288d958244",
+    "backend/gis/estate_ags_matching/pool_object_validation_v1.py": "032690307476dcfb2bb5d06e469cb66892b87398",
+    "backend/gis/estate_ags_matching/os_scoring_v2.py": "30f14f765e3a58e7831e7d0f47fbfbebd03a0a35",
+    "backend/gis/estate_ags_matching/os_scoring_v2_multi_image.py": "f52b763e7339b2c2d069ae2b453f5179ca068943",
+    "backend/gis/estate_ags_matching/final_candidates.py": "49f577987cc1c1514650609f4230298a18c86289",
+    "backend/gis/estate_ags_matching/listing_pool_gate_v1.py": "c5fd575037ec0c9e71ae0646238801d667a80a21",
+    "backend/gis/estate_ags_matching/listing_corner_gate_v1.py": "3df53df05456c34e3989245f81c5851496a5953e",
+    "backend/gis/estate_ags_matching/estate_property_inventory_v1.py": "8fb59ae8376c149439ac487e94eebbff4fae7911",
+    "backend/gis/dataset_registry.py": "94a2c8b68da3d575ac32b4db69dfc66d03b73f5d",
+    "data/gis/carlswald_north_corrected_001.json": "7a7cc67953ffd7248c86620453012613e711e12a",
+    "data/gis/registry.json": "ef65a245af5d3ebee555e80034c90b368cd2c64a",
+    "data/investigations/object_segmentation_v1/carlswald_north/diagnostic_summary.json": "07cc602826af61e13ead4fc1e8eaa6825d6aade6",
+    "data/investigations/object_segmentation_v1/carlswald_north/estate_summary.json": "d80760b24be3d1c3c0c16c789e182c1a5615de9d"
+  },
+  "head_after": "535bb439162e2dc11dd45debcbc0f79290d1f67f",
+  "blobs_after": {
+    "backend/gis/estate_ags_matching/pool_geometry.py": "230f74e8b4a01e939ff939900531638af9e13080",
+    "backend/gis/estate_ags_matching/aerial_geometric.py": "a17462e382c99625ba70c09a7effe6288d958244",
+    "backend/gis/estate_ags_matching/pool_object_validation_v1.py": "032690307476dcfb2bb5d06e469cb66892b87398",
+    "backend/gis/estate_ags_matching/os_scoring_v2.py": "30f14f765e3a58e7831e7d0f47fbfbebd03a0a35",
+    "backend/gis/estate_ags_matching/os_scoring_v2_multi_image.py": "f52b763e7339b2c2d069ae2b453f5179ca068943",
+    "backend/gis/estate_ags_matching/final_candidates.py": "49f577987cc1c1514650609f4230298a18c86289",
+    "backend/gis/estate_ags_matching/listing_pool_gate_v1.py": "c5fd575037ec0c9e71ae0646238801d667a80a21",
+    "backend/gis/estate_ags_matching/listing_corner_gate_v1.py": "3df53df05456c34e3989245f81c5851496a5953e",
+    "backend/gis/estate_ags_matching/estate_property_inventory_v1.py": "8fb59ae8376c149439ac487e94eebbff4fae7911",
+    "backend/gis/dataset_registry.py": "94a2c8b68da3d575ac32b4db69dfc66d03b73f5d",
+    "data/gis/carlswald_north_corrected_001.json": "7a7cc67953ffd7248c86620453012613e711e12a",
+    "data/gis/registry.json": "ef65a245af5d3ebee555e80034c90b368cd2c64a",
+    "data/investigations/object_segmentation_v1/carlswald_north/diagnostic_summary.json": "07cc602826af61e13ead4fc1e8eaa6825d6aade6",
+    "data/investigations/object_segmentation_v1/carlswald_north/estate_summary.json": "d80760b24be3d1c3c0c16c789e182c1a5615de9d"
+  },
+  "all_blobs_unchanged": true
+}
