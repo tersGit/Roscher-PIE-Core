@@ -1,0 +1,1069 @@
+{
+  "g3_commit": "bc434935a6316acf0c333b15d0a8b0787cfb33fd",
+  "g3_hashes_pre": {
+    "PHASE_G3_DETECTOR_AB.csv": {
+      "sha256": "1cb87575261682ab541e5c82b80be5f36d110553634de2414aa767c002de096f",
+      "bytes": 59380
+    },
+    "PHASE_G3_TRANSITIONS.csv": {
+      "sha256": "6c811d97eed395e568e5b3ca9f82b6f4758e5db6583b29b82bacba70258beddb",
+      "bytes": 283
+    },
+    "PHASE_G3_GEOMETRY_CHANGES.csv": {
+      "sha256": "817ab1d7a9a60369df60643a6a88391e909f812f24ce9fea2e8b339683e264de",
+      "bytes": 29730
+    },
+    "request_source_manifest.csv": {
+      "sha256": "086c4bb9a03172924f1db1172025f3560b25b3fcedeeac87b46903f6824fb6ee",
+      "bytes": 565496
+    },
+    "DETECTOR_FREEZE_MANIFEST_PRE.json": {
+      "sha256": "15ddd4c7b8ad675a8267784404ce9ad71e149f8c84d0ab75ae6a54ef80cda3f7",
+      "bytes": 1926
+    },
+    "DETECTOR_FREEZE_MANIFEST_POST.json": {
+      "sha256": "1850b31b561bceb091e86f7252cd6e9b4306762fce25b9246795702bef128ba0",
+      "bytes": 3535
+    },
+    "results.json": {
+      "sha256": "bd1a52f140113e7f5d0affdcfe588d9c7eb115fa8b65fff755b008564ecc48fd",
+      "bytes": 10739001
+    }
+  },
+  "g3_panel_count": 336,
+  "sources": [
+    {
+      "path": "G3 inputs and panels",
+      "priority": 3,
+      "independence": "Current parcel-aligned aerial context; source imagery is the tested paired input, but blinded review hides detector outcome."
+    },
+    {
+      "path": "G1R recovered 677/408 images",
+      "priority": 2,
+      "independence": "Historical-derived imagery, not used to resolve changed transitions or infer equality with live AGS."
+    },
+    {
+      "path": "Object Segmentation v1 frozen reports",
+      "priority": 1,
+      "independence": "Historical PIE forensic context, not used to force transition classifications."
+    }
+  ],
+  "first_review_question": "Is there a swimming pool inside this parcel?",
+  "permitted_initial_answers": [
+    "YES \u2014 CLEAR",
+    "YES \u2014 PROBABLE",
+    "NO \u2014 CLEAR",
+    "NO \u2014 PROBABLE",
+    "UNCERTAIN"
+  ],
+  "review_panels": [
+    {
+      "review_id": "transition_001",
+      "stand": "362",
+      "property_id": 1245283,
+      "blinded_panel": "blinded_review_panels/transition_001.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_001_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_001_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_002",
+      "stand": "499",
+      "property_id": 1229421,
+      "blinded_panel": "blinded_review_panels/transition_002.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_002_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_002_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_003",
+      "stand": "378",
+      "property_id": 1492341,
+      "blinded_panel": "blinded_review_panels/transition_003.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_003_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_003_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_004",
+      "stand": "1/373",
+      "property_id": 1230388,
+      "blinded_panel": "blinded_review_panels/transition_004.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_004_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_004_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_005",
+      "stand": "1/379",
+      "property_id": 4011212,
+      "blinded_panel": "blinded_review_panels/transition_005.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_005_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_005_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_006",
+      "stand": "1/541",
+      "property_id": 2014557,
+      "blinded_panel": "blinded_review_panels/transition_006.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_006_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_006_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_007",
+      "stand": "387",
+      "property_id": 1727563,
+      "blinded_panel": "blinded_review_panels/transition_007.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_007_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_007_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_008",
+      "stand": "395",
+      "property_id": 1754013,
+      "blinded_panel": "blinded_review_panels/transition_008.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_008_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_008_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_009",
+      "stand": "396",
+      "property_id": 1263058,
+      "blinded_panel": "blinded_review_panels/transition_009.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_009_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_009_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_010",
+      "stand": "405",
+      "property_id": 1516538,
+      "blinded_panel": "blinded_review_panels/transition_010.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_010_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_010_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_011",
+      "stand": "415",
+      "property_id": 1614462,
+      "blinded_panel": "blinded_review_panels/transition_011.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_011_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_011_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_012",
+      "stand": "1/403",
+      "property_id": 1890239,
+      "blinded_panel": "blinded_review_panels/transition_012.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_012_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_012_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_013",
+      "stand": "1/474",
+      "property_id": 4007044,
+      "blinded_panel": "blinded_review_panels/transition_013.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_013_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_013_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_014",
+      "stand": "467",
+      "property_id": 1412958,
+      "blinded_panel": "blinded_review_panels/transition_014.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_014_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_014_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_015",
+      "stand": "462",
+      "property_id": 1386451,
+      "blinded_panel": "blinded_review_panels/transition_015.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_015_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_015_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_016",
+      "stand": "418",
+      "property_id": 1461368,
+      "blinded_panel": "blinded_review_panels/transition_016.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_016_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_016_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_017",
+      "stand": "458",
+      "property_id": 1494326,
+      "blinded_panel": "blinded_review_panels/transition_017.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_017_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_017_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_018",
+      "stand": "1/478",
+      "property_id": 4016221,
+      "blinded_panel": "blinded_review_panels/transition_018.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_018_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_018_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_019",
+      "stand": "1/513",
+      "property_id": 1247741,
+      "blinded_panel": "blinded_review_panels/transition_019.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_019_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_019_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_020",
+      "stand": "492",
+      "property_id": 1398599,
+      "blinded_panel": "blinded_review_panels/transition_020.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_020_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_020_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_021",
+      "stand": "1/515",
+      "property_id": 2000032,
+      "blinded_panel": "blinded_review_panels/transition_021.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_021_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_021_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_022",
+      "stand": "486",
+      "property_id": 1453368,
+      "blinded_panel": "blinded_review_panels/transition_022.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_022_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_022_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_023",
+      "stand": "495",
+      "property_id": 1263353,
+      "blinded_panel": "blinded_review_panels/transition_023.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_023_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_023_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_024",
+      "stand": "350",
+      "property_id": 1435479,
+      "blinded_panel": "blinded_review_panels/transition_024.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_024_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_024_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_025",
+      "stand": "351",
+      "property_id": 1612168,
+      "blinded_panel": "blinded_review_panels/transition_025.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_025_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_025_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_026",
+      "stand": "346",
+      "property_id": 1405665,
+      "blinded_panel": "blinded_review_panels/transition_026.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_026_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_026_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_027",
+      "stand": "340",
+      "property_id": 1827934,
+      "blinded_panel": "blinded_review_panels/transition_027.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_027_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_027_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_028",
+      "stand": "1/343",
+      "property_id": 2088410,
+      "blinded_panel": "blinded_review_panels/transition_028.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_028_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_028_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_029",
+      "stand": "1/335",
+      "property_id": 1745497,
+      "blinded_panel": "blinded_review_panels/transition_029.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_029_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_029_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_030",
+      "stand": "345",
+      "property_id": 1228756,
+      "blinded_panel": "blinded_review_panels/transition_030.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_030_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_030_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_031",
+      "stand": "1/437",
+      "property_id": 1369724,
+      "blinded_panel": "blinded_review_panels/transition_031.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_031_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_031_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_032",
+      "stand": "442",
+      "property_id": 1296294,
+      "blinded_panel": "blinded_review_panels/transition_032.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_032_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_032_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_033",
+      "stand": "425",
+      "property_id": 1355974,
+      "blinded_panel": "blinded_review_panels/transition_033.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_033_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_033_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_034",
+      "stand": "427",
+      "property_id": 1379794,
+      "blinded_panel": "blinded_review_panels/transition_034.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_034_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_034_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_035",
+      "stand": "433",
+      "property_id": 1765272,
+      "blinded_panel": "blinded_review_panels/transition_035.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_035_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_035_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_036",
+      "stand": "431",
+      "property_id": 1427261,
+      "blinded_panel": "blinded_review_panels/transition_036.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_036_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_036_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_037",
+      "stand": "692",
+      "property_id": 1694082,
+      "blinded_panel": "blinded_review_panels/transition_037.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_037_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_037_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_038",
+      "stand": "670",
+      "property_id": 1516890,
+      "blinded_panel": "blinded_review_panels/transition_038.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_038_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_038_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_039",
+      "stand": "668",
+      "property_id": 1779654,
+      "blinded_panel": "blinded_review_panels/transition_039.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_039_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_039_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_040",
+      "stand": "681",
+      "property_id": 1646005,
+      "blinded_panel": "blinded_review_panels/transition_040.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_040_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_040_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_041",
+      "stand": "683",
+      "property_id": 1323657,
+      "blinded_panel": "blinded_review_panels/transition_041.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_041_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_041_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_042",
+      "stand": "589",
+      "property_id": 1410665,
+      "blinded_panel": "blinded_review_panels/transition_042.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_042_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_042_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_043",
+      "stand": "621",
+      "property_id": 1489509,
+      "blinded_panel": "blinded_review_panels/transition_043.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_043_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_043_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_044",
+      "stand": "652",
+      "property_id": 1628797,
+      "blinded_panel": "blinded_review_panels/transition_044.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_044_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_044_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_045",
+      "stand": "1/616",
+      "property_id": 2009129,
+      "blinded_panel": "blinded_review_panels/transition_045.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_045_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_045_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_046",
+      "stand": "638",
+      "property_id": 1325068,
+      "blinded_panel": "blinded_review_panels/transition_046.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_046_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_046_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_047",
+      "stand": "605",
+      "property_id": 1260637,
+      "blinded_panel": "blinded_review_panels/transition_047.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_047_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_047_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "transition_048",
+      "stand": "649",
+      "property_id": 1486475,
+      "blinded_panel": "blinded_review_panels/transition_048.jpg",
+      "reveal_a": "post_reveal_detector_panels/transition_048_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/transition_048_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_001",
+      "stand": "363",
+      "property_id": 1427477,
+      "blinded_panel": "blinded_review_panels/geometry_001.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_001_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_001_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_002",
+      "stand": "364",
+      "property_id": 1604128,
+      "blinded_panel": "blinded_review_panels/geometry_002.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_002_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_002_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_003",
+      "stand": "365",
+      "property_id": 1765153,
+      "blinded_panel": "blinded_review_panels/geometry_003.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_003_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_003_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_004",
+      "stand": "500",
+      "property_id": 1409152,
+      "blinded_panel": "blinded_review_panels/geometry_004.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_004_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_004_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_005",
+      "stand": "1105",
+      "property_id": 1895089,
+      "blinded_panel": "blinded_review_panels/geometry_005.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_005_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_005_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_006",
+      "stand": "380",
+      "property_id": 1596372,
+      "blinded_panel": "blinded_review_panels/geometry_006.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_006_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_006_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_007",
+      "stand": "385",
+      "property_id": 1643948,
+      "blinded_panel": "blinded_review_panels/geometry_007.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_007_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_007_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_008",
+      "stand": "1/510",
+      "property_id": 1438490,
+      "blinded_panel": "blinded_review_panels/geometry_008.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_008_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_008_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_009",
+      "stand": "548",
+      "property_id": 1318293,
+      "blinded_panel": "blinded_review_panels/geometry_009.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_009_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_009_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_010",
+      "stand": "543",
+      "property_id": 1782596,
+      "blinded_panel": "blinded_review_panels/geometry_010.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_010_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_010_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_011",
+      "stand": "1/389",
+      "property_id": 1379538,
+      "blinded_panel": "blinded_review_panels/geometry_011.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_011_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_011_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_012",
+      "stand": "544",
+      "property_id": 1291736,
+      "blinded_panel": "blinded_review_panels/geometry_012.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_012_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_012_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_013",
+      "stand": "409",
+      "property_id": 1228496,
+      "blinded_panel": "blinded_review_panels/geometry_013.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_013_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_013_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_014",
+      "stand": "408",
+      "property_id": 1719922,
+      "blinded_panel": "blinded_review_panels/geometry_014.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_014_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_014_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_015",
+      "stand": "398",
+      "property_id": 1622113,
+      "blinded_panel": "blinded_review_panels/geometry_015.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_015_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_015_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_016",
+      "stand": "535",
+      "property_id": 1326232,
+      "blinded_panel": "blinded_review_panels/geometry_016.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_016_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_016_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_017",
+      "stand": "1/417",
+      "property_id": 1884644,
+      "blinded_panel": "blinded_review_panels/geometry_017.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_017_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_017_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_018",
+      "stand": "1/402",
+      "property_id": 1890534,
+      "blinded_panel": "blinded_review_panels/geometry_018.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_018_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_018_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_019",
+      "stand": "528",
+      "property_id": 1666376,
+      "blinded_panel": "blinded_review_panels/geometry_019.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_019_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_019_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_020",
+      "stand": "451",
+      "property_id": 1573647,
+      "blinded_panel": "blinded_review_panels/geometry_020.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_020_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_020_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_021",
+      "stand": "457",
+      "property_id": 1314779,
+      "blinded_panel": "blinded_review_panels/geometry_021.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_021_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_021_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_022",
+      "stand": "444",
+      "property_id": 1834528,
+      "blinded_panel": "blinded_review_panels/geometry_022.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_022_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_022_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_023",
+      "stand": "455",
+      "property_id": 1467813,
+      "blinded_panel": "blinded_review_panels/geometry_023.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_023_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_023_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_024",
+      "stand": "1/476",
+      "property_id": 1823582,
+      "blinded_panel": "blinded_review_panels/geometry_024.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_024_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_024_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_025",
+      "stand": "1/477",
+      "property_id": 1635394,
+      "blinded_panel": "blinded_review_panels/geometry_025.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_025_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_025_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_026",
+      "stand": "508",
+      "property_id": 1663158,
+      "blinded_panel": "blinded_review_panels/geometry_026.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_026_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_026_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_027",
+      "stand": "504",
+      "property_id": 1457191,
+      "blinded_panel": "blinded_review_panels/geometry_027.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_027_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_027_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_028",
+      "stand": "491",
+      "property_id": 1345388,
+      "blinded_panel": "blinded_review_panels/geometry_028.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_028_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_028_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_029",
+      "stand": "505",
+      "property_id": 1636669,
+      "blinded_panel": "blinded_review_panels/geometry_029.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_029_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_029_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_030",
+      "stand": "1/516",
+      "property_id": 1460587,
+      "blinded_panel": "blinded_review_panels/geometry_030.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_030_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_030_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_031",
+      "stand": "338",
+      "property_id": 1490365,
+      "blinded_panel": "blinded_review_panels/geometry_031.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_031_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_031_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_032",
+      "stand": "348",
+      "property_id": 1743394,
+      "blinded_panel": "blinded_review_panels/geometry_032.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_032_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_032_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_033",
+      "stand": "352",
+      "property_id": 1794050,
+      "blinded_panel": "blinded_review_panels/geometry_033.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_033_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_033_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_034",
+      "stand": "347",
+      "property_id": 1566617,
+      "blinded_panel": "blinded_review_panels/geometry_034.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_034_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_034_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_035",
+      "stand": "341",
+      "property_id": 1334179,
+      "blinded_panel": "blinded_review_panels/geometry_035.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_035_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_035_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_036",
+      "stand": "1/481",
+      "property_id": 2001199,
+      "blinded_panel": "blinded_review_panels/geometry_036.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_036_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_036_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_037",
+      "stand": "1/355",
+      "property_id": 1441501,
+      "blinded_panel": "blinded_review_panels/geometry_037.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_037_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_037_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_038",
+      "stand": "354",
+      "property_id": 1461367,
+      "blinded_panel": "blinded_review_panels/geometry_038.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_038_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_038_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_039",
+      "stand": "521",
+      "property_id": 1551294,
+      "blinded_panel": "blinded_review_panels/geometry_039.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_039_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_039_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_040",
+      "stand": "447",
+      "property_id": 1681546,
+      "blinded_panel": "blinded_review_panels/geometry_040.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_040_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_040_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_041",
+      "stand": "1/450",
+      "property_id": 1797371,
+      "blinded_panel": "blinded_review_panels/geometry_041.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_041_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_041_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_042",
+      "stand": "1/520",
+      "property_id": 4012712,
+      "blinded_panel": "blinded_review_panels/geometry_042.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_042_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_042_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_043",
+      "stand": "436",
+      "property_id": 1633094,
+      "blinded_panel": "blinded_review_panels/geometry_043.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_043_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_043_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_044",
+      "stand": "434",
+      "property_id": 1274007,
+      "blinded_panel": "blinded_review_panels/geometry_044.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_044_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_044_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_045",
+      "stand": "430",
+      "property_id": 1247386,
+      "blinded_panel": "blinded_review_panels/geometry_045.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_045_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_045_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_046",
+      "stand": "428",
+      "property_id": 1559038,
+      "blinded_panel": "blinded_review_panels/geometry_046.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_046_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_046_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_047",
+      "stand": "423",
+      "property_id": 1688484,
+      "blinded_panel": "blinded_review_panels/geometry_047.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_047_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_047_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_048",
+      "stand": "413",
+      "property_id": 1255379,
+      "blinded_panel": "blinded_review_panels/geometry_048.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_048_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_048_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_049",
+      "stand": "412",
+      "property_id": 1746339,
+      "blinded_panel": "blinded_review_panels/geometry_049.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_049_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_049_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_050",
+      "stand": "411",
+      "property_id": 1566719,
+      "blinded_panel": "blinded_review_panels/geometry_050.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_050_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_050_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_051",
+      "stand": "569",
+      "property_id": 1807774,
+      "blinded_panel": "blinded_review_panels/geometry_051.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_051_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_051_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_052",
+      "stand": "682",
+      "property_id": 1817579,
+      "blinded_panel": "blinded_review_panels/geometry_052.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_052_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_052_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_053",
+      "stand": "594",
+      "property_id": 1280514,
+      "blinded_panel": "blinded_review_panels/geometry_053.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_053_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_053_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_054",
+      "stand": "593",
+      "property_id": 1457563,
+      "blinded_panel": "blinded_review_panels/geometry_054.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_054_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_054_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_055",
+      "stand": "622",
+      "property_id": 1438974,
+      "blinded_panel": "blinded_review_panels/geometry_055.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_055_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_055_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_056",
+      "stand": "584",
+      "property_id": 1701508,
+      "blinded_panel": "blinded_review_panels/geometry_056.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_056_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_056_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_057",
+      "stand": "581",
+      "property_id": 1478189,
+      "blinded_panel": "blinded_review_panels/geometry_057.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_057_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_057_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_058",
+      "stand": "617",
+      "property_id": 1274902,
+      "blinded_panel": "blinded_review_panels/geometry_058.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_058_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_058_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_059",
+      "stand": "618",
+      "property_id": 1771381,
+      "blinded_panel": "blinded_review_panels/geometry_059.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_059_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_059_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_060",
+      "stand": "628",
+      "property_id": 1567697,
+      "blinded_panel": "blinded_review_panels/geometry_060.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_060_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_060_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_061",
+      "stand": "1/631",
+      "property_id": 1897849,
+      "blinded_panel": "blinded_review_panels/geometry_061.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_061_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_061_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_062",
+      "stand": "633",
+      "property_id": 1864315,
+      "blinded_panel": "blinded_review_panels/geometry_062.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_062_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_062_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_063",
+      "stand": "688",
+      "property_id": 1540220,
+      "blinded_panel": "blinded_review_panels/geometry_063.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_063_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_063_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    },
+    {
+      "review_id": "geometry_064",
+      "stand": "636",
+      "property_id": 1336095,
+      "blinded_panel": "blinded_review_panels/geometry_064.jpg",
+      "reveal_a": "post_reveal_detector_panels/geometry_064_A_reveal.jpg",
+      "reveal_b": "post_reveal_detector_panels/geometry_064_B_reveal.jpg",
+      "independence": "First-pass panel omits resolution, detector status, overlay, and expected answer. Its paired imagery is current G3 source imagery, so it is independent of detector output presentation but not an independent imagery source."
+    }
+  ]
+}

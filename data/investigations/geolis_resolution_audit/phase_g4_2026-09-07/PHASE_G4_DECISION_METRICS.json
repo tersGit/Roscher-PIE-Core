@@ -1,0 +1,60 @@
+{
+  "decision": "E",
+  "decision_text": "Do not adopt any resolution-driven detector behavior change: independently resolved validation count is zero.",
+  "transition_counts": {
+    "absent_to_present": 46,
+    "present_to_absent": 2,
+    "independently_resolved": 0,
+    "unresolved": 48
+  },
+  "addition_classes": {
+    "TRUE_RECOVERY": 0,
+    "PROBABLE_RECOVERY": 0,
+    "FALSE_POSITIVE": 0,
+    "PROBABLE_FALSE_POSITIVE": 0,
+    "UNRESOLVED": 46
+  },
+  "removal_classes": {
+    "LEGACY_FALSE_POSITIVE_REMOVED": 0,
+    "PROBABLE_LEGACY_FALSE_POSITIVE_REMOVED": 0,
+    "TRUE_POOL_LOST": 0,
+    "PROBABLE_TRUE_POOL_LOST": 0,
+    "UNRESOLVED": 2
+  },
+  "strict_recovery_rate": null,
+  "broader_recovery_rate": null,
+  "false_positive_rate": null,
+  "rate_denominator": 0,
+  "confidence_intervals": null,
+  "geometry": {
+    "material_cases": 64,
+    "independently_grounded_cases": 0,
+    "AMBIGUOUS": 64
+  },
+  "specified_control_observations_unweighted": {
+    "408": {
+      "legacy_0225": {"status": "PRESENT", "family": "irregular", "relative_area": 0.0084, "centroid": [0.6882, 0.4719], "orientation_deg": 90.0},
+      "native15": {"status": "PRESENT", "family": "irregular", "relative_area": 0.0088, "centroid": [0.6872, 0.4726], "orientation_deg": 175.6},
+      "g3_geometry_classification": "MATERIAL",
+      "g4_validation": "AMBIGUOUS"
+    },
+    "420": {
+      "legacy_0225": {"status": "PRESENT", "family": "irregular", "relative_area": 0.0036, "centroid": [0.4245, 0.3102], "orientation_deg": 118.89},
+      "native15": {"status": "PRESENT", "family": "irregular", "relative_area": 0.0048, "centroid": [0.4177, 0.3038], "orientation_deg": 121.68},
+      "g3_geometry_classification": "MINOR",
+      "g4_validation": "not in material-geometry review set"
+    },
+    "677": {
+      "legacy_0225": {"status": "PRESENT", "family": "irregular", "relative_area": 0.0058, "centroid": [0.3931, 0.4967], "orientation_deg": 152.4},
+      "native15": {"status": "PRESENT", "family": "irregular", "relative_area": 0.0073, "centroid": [0.393, 0.4954], "orientation_deg": 152.93},
+      "g3_geometry_classification": "MINOR",
+      "g4_validation": "not in material-geometry review set"
+    },
+    "365": {
+      "legacy_0225": {"status": "PRESENT", "family": "kidney_or_curved", "relative_area": 0.0027, "centroid": [0.6421, 0.3634], "orientation_deg": 118.3},
+      "native15": {"status": "PRESENT", "family": "irregular", "relative_area": 0.0049, "centroid": [0.4464, 0.5225], "orientation_deg": 158.34},
+      "g3_geometry_classification": "MATERIAL",
+      "g4_validation": "AMBIGUOUS"
+    }
+  }
+}

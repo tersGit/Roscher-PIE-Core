@@ -1,0 +1,30 @@
+{
+  "PHASE_G3_DETECTOR_AB.csv": {
+    "sha256": "1cb87575261682ab541e5c82b80be5f36d110553634de2414aa767c002de096f",
+    "bytes": 59380
+  },
+  "PHASE_G3_TRANSITIONS.csv": {
+    "sha256": "6c811d97eed395e568e5b3ca9f82b6f4758e5db6583b29b82bacba70258beddb",
+    "bytes": 283
+  },
+  "PHASE_G3_GEOMETRY_CHANGES.csv": {
+    "sha256": "817ab1d7a9a60369df60643a6a88391e909f812f24ce9fea2e8b339683e264de",
+    "bytes": 29730
+  },
+  "request_source_manifest.csv": {
+    "sha256": "086c4bb9a03172924f1db1172025f3560b25b3fcedeeac87b46903f6824fb6ee",
+    "bytes": 565496
+  },
+  "DETECTOR_FREEZE_MANIFEST_PRE.json": {
+    "sha256": "15ddd4c7b8ad675a8267784404ce9ad71e149f8c84d0ab75ae6a54ef80cda3f7",
+    "bytes": 1926
+  },
+  "DETECTOR_FREEZE_MANIFEST_POST.json": {
+    "sha256": "1850b31b561bceb091e86f7252cd6e9b4306762fce25b9246795702bef128ba0",
+    "bytes": 3535
+  },
+  "results.json": {
+    "sha256": "bd1a52f140113e7f5d0affdcfe588d9c7eb115fa8b65fff755b008564ecc48fd",
+    "bytes": 10739001
+  }
+}
