@@ -1,7 +1,7 @@
 listing_id,failure_type,status,reason
-117255083,ROOF_GEOMETRY_UNRESOLVED,FAIL,"No reliable roof pitch, shape, or material extraction from the retained still-blind media set."
-117255083,POOL_GEOMETRY_UNRESOLVED,FAIL,"Pool contour, boundary and adjacency to the house remain unknown."
-117255083,NEIGHBOUR_RELATIONSHIP_UNRESOLVED,FAIL,Neighbour positions and relative geometry were not extracted with defect-free confidence.
-117539389,ROOF_GEOMETRY_UNRESOLVED,FAIL,"No reliable roof pitch, shape, or material extraction from the retained still-blind media set."
-117539389,POOL_GEOMETRY_UNRESOLVED,FAIL,"Pool contour, boundary and adjacency to the house remain unknown."
-117539389,NEIGHBOUR_RELATIONSHIP_UNRESOLVED,FAIL,Neighbour positions and relative geometry were not extracted with defect-free confidence.
+117255083,ROOF_GEOMETRY_UNRESOLVED,FAIL,"Locked G9H review states that roof colour/material/pitch remained raw media observed, not structured or comparable."
+117255083,POOL_GEOMETRY_UNRESOLVED,PARTIAL,"Pool/garden media were retained, but contour, aspect ratio, and house relation remained unresolved."
+117255083,NEIGHBOUR_RELATIONSHIP_UNRESOLVED,FAIL,"Neighbour roof and road/driveway context were retained as raw evidence but not extracted as a first-class comparison feature."
+117539389,ROOF_GEOMETRY_UNRESOLVED,FAIL,"Locked G9H review states that roof colour/material/pitch remained raw media observed, not structured or comparable."
+117539389,POOL_GEOMETRY_UNRESOLVED,PARTIAL,"Pool/garden media were retained, but contour, aspect ratio, and house relation remained unresolved."
+117539389,NEIGHBOUR_RELATIONSHIP_UNRESOLVED,FAIL,"Neighbour roof and road/driveway context were retained as raw evidence but not extracted as a first-class comparison feature."
