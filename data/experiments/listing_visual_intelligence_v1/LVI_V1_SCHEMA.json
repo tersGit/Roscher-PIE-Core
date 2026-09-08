@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Listing Visual Intelligence v1",
+  "type": "object",
+  "required": ["schema_version", "listing", "text_evidence", "frames", "target_property", "neighbours", "relationships", "unknowns", "provenance"],
+  "properties": {
+    "schema_version": {"const": "LVI_V1"},
+    "listing": {"type": "object", "required": ["listing_id", "url", "media_count", "video_count"]},
+    "text_evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "frames": {"type": "array", "items": {"$ref": "#/$defs/frame"}},
+    "target_property": {
+      "type": "object",
+      "required": ["house", "roof", "pool", "driveway", "garage", "road_relationship", "solar"],
+      "properties": {
+        "house": {"type": "object"},
+        "roof": {"type": "object"},
+        "pool": {"type": "object"},
+        "driveway": {"type": "object"},
+        "garage": {"type": "object"},
+        "road_relationship": {"type": "object"},
+        "solar": {"type": "object"}
+      }
+    },
+    "neighbours": {"type": "array", "items": {"type": "object", "required": ["neighbour_id", "classification", "confidence"]}},
+    "relationships": {"type": "array", "items": {"type": "object"}},
+    "observations": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "distinctive_features": {"type": "array"},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "provenance": {"type": "object"}
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": ["confidence", "provenance"],
+      "properties": {
+        "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+        "provenance": {"type": "string"},
+        "frame_ids": {"type": "string"}
+      }
+    },
+    "frame": {
+      "type": "object",
+      "required": ["listing_id", "frame_id", "media_type", "sha256", "scene_labels", "structure_labels", "confidence"],
+      "properties": {
+        "media_type": {"enum": ["PHOTO", "VIDEO_FRAME"]},
+        "scene_labels": {"type": "string"},
+        "structure_labels": {"type": "string"},
+        "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]}
+      }
+    }
+  }
+}
