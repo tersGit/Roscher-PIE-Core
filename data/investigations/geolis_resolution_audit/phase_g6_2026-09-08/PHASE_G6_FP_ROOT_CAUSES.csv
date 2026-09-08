@@ -1,0 +1,24 @@
+stand,case,outcome,root_cause_label,secondary_label,physical_identity,panel_inspected,boundary_contour_context_inspected,context_building_relationship_inspected,segmentation_object_evidence_inspected,basis,do_not_infer_from_water_color
+499,CASE-002,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,Committed panel/boundary evidence does not establish physical identity; legacy object record is not independent ground truth.,yes
+378,CASE-003,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+1/379,CASE-005,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+1/541,CASE-006,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+395,CASE-008,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+1/403,CASE-012,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+1/474,CASE-013,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+467,CASE-014,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+418,CASE-016,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+1/513,CASE-019,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+492,CASE-020,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+1/515,CASE-021,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+486,CASE-022,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+495,CASE-023,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+346,CASE-026,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+1/335,CASE-029,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+345,CASE-030,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+425,CASE-033,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+427,CASE-034,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+433,CASE-035,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+668,CASE-039,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+681,CASE-040,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes
+638,CASE-046,FALSE_POSITIVE,UNKNOWN,,Not established by committed evidence,yes,yes,yes,yes,No defensible physical cause can be assigned from committed evidence.,yes

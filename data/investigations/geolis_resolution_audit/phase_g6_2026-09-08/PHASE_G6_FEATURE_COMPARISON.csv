@@ -1,0 +1,18 @@
+feature,TP_n,FP_n,TP_missing,FP_missing,TP_median,FP_median,TP_range,FP_range,median_difference,rank_biserial_note,interpretation
+relative_parcel_area,21,23,0,0,0.0025,0.0025,0.002..0.006,0.002..0.0039,0,Not computed: no threshold or optimization permitted; distributions visibly overlap.,Small-area native15 blobs overlap strongly; not a safe separator.
+compactness,21,23,0,0,0.3262,0.2977,0.105..0.7301,0.0938..0.6615,0.0285,Not computed: no threshold or optimization permitted; distributions visibly overlap.,TP/FP ranges overlap; geometry alone does not identify water.
+solidity_or_convexity,21,23,0,0,0.7157,0.6901,0.3668..0.9435,0.3808..0.9004,0.0256,Not computed: no threshold or optimization permitted; distributions visibly overlap.,Ranges overlap; no threshold is selected.
+rectangularity,21,23,0,0,0.5645,0.4668,0.2962..0.8043,0.2652..0.7731,0.0977,Not computed: no threshold or optimization permitted; distributions visibly overlap.,Ranges overlap; rectangularity is not a standalone discriminator.
+aspect_ratio,21,23,0,0,2.763,2.049,1.045..8.68,1.034..5.609,0.714,Not computed: no threshold or optimization permitted; distributions visibly overlap.,Both groups include compact and elongated objects.
+perimeter_normalized,21,23,0,0,0.321594,0.31123,0.187098..0.636722,0.20761..0.546877,0.010364,Not computed: no threshold or optimization permitted; distributions visibly overlap.,Available contour perimeter is diagnostic only and scale-normalized.
+contour_point_count,21,23,0,0,64,64,64..64,64..64,0,Not computed: no threshold or optimization permitted; distributions visibly overlap.,"Point count is an extraction property, not physical identity."
+curvature_angle_entropy,21,23,0,0,1.82128,1.8195,1.36852..2.47703,1.42274..2.23036,0.001773,Not computed: no threshold or optimization permitted; distributions visibly overlap.,Irregularity overlaps and is not sufficient for object identity.
+distance_to_building,21,23,0,0,0.1527,0.1518,0.0524..0.2439,0.0871..0.2331,0.0009,Not computed: no threshold or optimization permitted; distributions visibly overlap.,Building distance overlaps; no building-mask overlap is emitted.
+overlap_with_building_mask,0,0,21,23,,,,,,Not estimable: feature absent from committed G3/G5 evidence.,Missingness is the result; no value is invented.
+distance_to_parcel_boundary,0,0,21,23,,,,,,Not estimable: feature absent from committed G3/G5 evidence.,Missingness is the result; no value is invented.
+parcel_boundary_intersection,0,0,21,23,,,,,,Not estimable: feature absent from committed G3/G5 evidence.,Missingness is the result; no value is invented.
+neighbour_object_relationship,0,0,21,23,,,,,,Not estimable: feature absent from committed G3/G5 evidence.,Missingness is the result; no value is invented.
+fastsam_semantic_score,0,0,21,23,,,,,,Not estimable: feature absent from committed G3/G5 evidence.,Missingness is the result; no value is invented.
+clip_pool_score,0,0,21,23,,,,,,Not estimable: feature absent from committed G3/G5 evidence.,Missingness is the result; no value is invented.
+competing_object_scores,0,0,21,23,,,,,,Not estimable: feature absent from committed G3/G5 evidence.,Missingness is the result; no value is invented.
+candidate_rank,0,0,21,23,,,,,,Not estimable: feature absent from committed G3/G5 evidence.,Missingness is the result; no value is invented.

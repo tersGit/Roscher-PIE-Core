@@ -1,0 +1,39 @@
+{
+  "phase": "G6",
+  "date": "2026-09-08",
+  "mode": "diagnostic_only",
+  "primary_set": "23 G5 FALSE_POSITIVE native15 additions",
+  "control_set": "21 G5 TRUE_RECOVERY native15 additions",
+  "detector_rerun": false,
+  "imagery_fetch": false,
+  "source_artifacts": [
+    "data/investigations/geolis_resolution_audit/phase_g5_2026-09-08/PHASE_G5_JOINED_RESULTS.csv",
+    "data/investigations/geolis_resolution_audit/phase_g5_2026-09-08/PHASE_G5_ERROR_ANALYSIS.csv",
+    "data/investigations/geolis_resolution_audit/phase_g5_2026-09-08/PHASE_G5_FREEZE_VERIFICATION.md",
+    "data/investigations/geolis_resolution_audit/phase_g3_2026-09-07/results.json",
+    "data/investigations/geolis_resolution_audit/phase_g4h_2026-09-07/first_pass_panels/case_001.jpg through case_048.jpg",
+    "data/investigations/object_segmentation_v1/carlswald_north/json/*.json",
+    "data/investigations/pool_object_validation_v1/REPORT.md"
+  ],
+  "authoritative_commits": {
+    "g5": "bd46a6fda2b8879dd7b0f5247665551ebd33eaf3",
+    "g4h": "5dd93d99405806211bcf2e2c6cc9af2feefb6fa5",
+    "g4": "c7ae71883a8233d9fb113b70a76ddf9a441c68b9",
+    "g3": "bc434935a6316acf0c333b15d0a8b0787cfb33fd",
+    "detector_freeze": "6c53661e15d1bda968318cbac7cc244ed7497789"
+  },
+  "outputs": {
+    "PHASE_G6_REPORT.md": "bac0ec60906ccbba2d968823588260244f824aeed81fbc1aa169f8f78fd99b06",
+    "PHASE_G6_FP_ROOT_CAUSES.csv": "fe0591aba45b8fb4f914f84865c64ee7fb5b9b3060e1acbe8e42cdfd71d99f7b",
+    "PHASE_G6_TP_FP_FEATURES.csv": "2edad90bdb658ec74851c6166671bed561b338ebb9f437a3bf5fc9039b722756",
+    "PHASE_G6_FEATURE_COMPARISON.csv": "f1ceb97447fec862837e49f56229077c3ba9f4f9d1939efca33d5ebc4043073d",
+    "PHASE_G6_PR27_DIAGNOSTIC.csv": "af371a21522bde8d72ba35b896d5cd7df634ec9bebdd4d4218cb59f87cec04a4",
+    "PHASE_G6_HISTORICAL_REGRESSION.md": "53f665b120628b5e65478013f9dcde0fbc61f173d402c523a0249cf1a81f61ea",
+    "PHASE_G6_FREEZE_VERIFICATION.md": "a0743ca945d924fccedd6dbfc80eb7625b5f9856fe613a5730215a739084f356"
+  },
+  "limitations": [
+    "Committed G3/G5 records do not emit building-mask overlap, parcel-boundary distance/intersection, neighbour relationship, semantic score, CLIP scores, competing-object scores, or candidate rank.",
+    "The root-cause label UNKNOWN is used rather than inferring from water colour or unsupported visual assumptions.",
+    "PR27 is reviewed diagnostically and is not enabled or replayed."
+  ]
+}
