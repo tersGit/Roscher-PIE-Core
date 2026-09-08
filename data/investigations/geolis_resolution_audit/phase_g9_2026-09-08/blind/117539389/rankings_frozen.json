@@ -1,0 +1,15 @@
+{
+  "freeze_path": "data\\investigations\\geolis_resolution_audit\\phase_g9_2026-09-08\\blind\\117539389\\freeze.json",
+  "sha256": "f9bf7cc020f2bed15aca4eb9cd7db39ff212442e49839fa62520cbe7c8e937ad",
+  "ground_truth_applied": false,
+  "panels": [],
+  "n_candidates": 332,
+  "listing_pool_status": "YES",
+  "final_survivor_count": 332,
+  "pool_gate_survivors": 332,
+  "corner_gate_survivors": null,
+  "listing_corner": null,
+  "apply_corner_gate": false,
+  "apply_candidate_pov": false,
+  "runtime_s_freeze": 402.35
+}

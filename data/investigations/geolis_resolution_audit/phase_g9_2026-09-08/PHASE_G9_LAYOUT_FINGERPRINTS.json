@@ -1,0 +1,86 @@
+{
+  "117255083": {
+    "backup_power_system": {
+      "confidence": "HIGH",
+      "evidence": "no direct structured evidence",
+      "status": "UNKNOWN"
+    },
+    "candidate_count": 332,
+    "driveway_garage": {
+      "confidence": "MEDIUM",
+      "evidence": "4 driveway/garage scene candidates from normal parser",
+      "status": "PRESENT_UNCONFIRMED"
+    },
+    "house_roof": {
+      "confidence": "LOW",
+      "evidence": "exterior media retained; no roof material/orientation interpretation asserted",
+      "status": "UNKNOWN"
+    },
+    "identity_recovery_performed": false,
+    "listing_id": "117255083",
+    "other_relationships": {
+      "confidence": "LOW",
+      "evidence": "no identity or historical mapping performed",
+      "status": "UNKNOWN"
+    },
+    "parcel_layout": {
+      "confidence": "HIGH",
+      "evidence": "GIS parcel geometry used only for candidate comparison",
+      "ranking_influence": "NONE",
+      "status": "OBSERVED"
+    },
+    "pool": {
+      "confidence": "HIGH",
+      "evidence": "listing text and pool-garden media; water colour not used",
+      "status": "PRESENT"
+    },
+    "solar_panels": {
+      "confidence": "HIGH",
+      "evidence": "no direct panel confirmation; inverter/backup does not imply solar",
+      "status": "UNKNOWN"
+    },
+    "stand_size_supporting_only": true
+  },
+  "117539389": {
+    "backup_power_system": {
+      "confidence": "HIGH",
+      "evidence": "no direct structured evidence",
+      "status": "UNKNOWN"
+    },
+    "candidate_count": 332,
+    "driveway_garage": {
+      "confidence": "MEDIUM",
+      "evidence": "8 driveway/garage scene candidates from normal parser",
+      "status": "PRESENT_UNCONFIRMED"
+    },
+    "house_roof": {
+      "confidence": "LOW",
+      "evidence": "exterior media retained; no roof material/orientation interpretation asserted",
+      "status": "UNKNOWN"
+    },
+    "identity_recovery_performed": false,
+    "listing_id": "117539389",
+    "other_relationships": {
+      "confidence": "LOW",
+      "evidence": "no identity or historical mapping performed",
+      "status": "UNKNOWN"
+    },
+    "parcel_layout": {
+      "confidence": "HIGH",
+      "evidence": "GIS parcel geometry used only for candidate comparison",
+      "ranking_influence": "NONE",
+      "status": "OBSERVED"
+    },
+    "pool": {
+      "confidence": "HIGH",
+      "evidence": "listing text and pool-garden media; water colour not used",
+      "status": "PRESENT"
+    },
+    "solar_panels": {
+      "confidence": "HIGH",
+      "evidence": "no direct panel confirmation; inverter/backup does not imply solar",
+      "status": "UNKNOWN"
+    },
+    "stand_size_supporting_only": true
+  }
+}
