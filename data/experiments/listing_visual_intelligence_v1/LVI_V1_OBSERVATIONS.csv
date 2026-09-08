@@ -1,0 +1,75 @@
+listing_id,observation_id,subject,feature,value,confidence,provenance,frame_ids,notes
+117539389,117539389-003-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-003,117539389-003,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-004-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-004,117539389-004,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-008-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-008,117539389-008,Generic brightness cue; retain for review.
+117539389,117539389-011-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-011,117539389-011,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-012-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-012,117539389-012,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-013-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-013,117539389-013,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-014-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-014,117539389-014,Generic brightness cue; retain for review.
+117539389,117539389-024-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-024,117539389-024,Generic brightness cue; retain for review.
+117539389,117539389-025-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-025,117539389-025,Generic brightness cue; retain for review.
+117539389,117539389-026-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-026,117539389-026,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-026-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-026,117539389-026,Generic brightness cue; retain for review.
+117539389,117539389-027-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-027,117539389-027,Generic brightness cue; retain for review.
+117539389,117539389-028-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-028,117539389-028,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-028-roof,UNKNOWN_STRUCTURE,roof.visible,YES,LOW,PHOTO_117539389-028,117539389-028,Structure ownership is unresolved.
+117539389,117539389-030-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-030,117539389-030,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-032-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-032,117539389-032,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-033-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-033,117539389-033,Generic brightness cue; retain for review.
+117539389,117539389-034-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-034,117539389-034,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-036-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-036,117539389-036,Generic brightness cue; retain for review.
+117539389,117539389-037-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-037,117539389-037,Generic brightness cue; retain for review.
+117539389,117539389-038-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-038,117539389-038,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-039-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-039,117539389-039,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-039-roof,UNKNOWN_STRUCTURE,roof.visible,YES,LOW,PHOTO_117539389-039,117539389-039,Structure ownership is unresolved.
+117539389,117539389-040-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-040,117539389-040,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-041-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-041,117539389-041,Generic brightness cue; retain for review.
+117539389,117539389-042-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-042,117539389-042,Generic brightness cue; retain for review.
+117539389,117539389-047-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-047,117539389-047,Generic brightness cue; retain for review.
+117539389,117539389-048-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-048,117539389-048,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-049-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-049,117539389-049,Generic brightness cue; retain for review.
+117539389,117539389-050-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-050,117539389-050,Generic brightness cue; retain for review.
+117539389,117539389-053-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-053,117539389-053,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-054-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-054,117539389-054,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-054-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117539389-054,117539389-054,Generic brightness cue; retain for review.
+117539389,117539389-055-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-055,117539389-055,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-056-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-056,117539389-056,RGB layout cue; geometry requires human confirmation.
+117539389,117539389-057-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117539389-057,117539389-057,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-003-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-003,117255083-003,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-003-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-003,117255083-003,Generic brightness cue; retain for review.
+117255083,117255083-004-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-004,117255083-004,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-005-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-005,117255083-005,Generic brightness cue; retain for review.
+117255083,117255083-006-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-006,117255083-006,Generic brightness cue; retain for review.
+117255083,117255083-008-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-008,117255083-008,Generic brightness cue; retain for review.
+117255083,117255083-009-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-009,117255083-009,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-009-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-009,117255083-009,Generic brightness cue; retain for review.
+117255083,117255083-010-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-010,117255083-010,Generic brightness cue; retain for review.
+117255083,117255083-011-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-011,117255083-011,Generic brightness cue; retain for review.
+117255083,117255083-012-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-012,117255083-012,Generic brightness cue; retain for review.
+117255083,117255083-013-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-013,117255083-013,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-013-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-013,117255083-013,Generic brightness cue; retain for review.
+117255083,117255083-014-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-014,117255083-014,Generic brightness cue; retain for review.
+117255083,117255083-015-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-015,117255083-015,Generic brightness cue; retain for review.
+117255083,117255083-016-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-016,117255083-016,Generic brightness cue; retain for review.
+117255083,117255083-017-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-017,117255083-017,Generic brightness cue; retain for review.
+117255083,117255083-018-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-018,117255083-018,Generic brightness cue; retain for review.
+117255083,117255083-019-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-019,117255083-019,Generic brightness cue; retain for review.
+117255083,117255083-020-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-020,117255083-020,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-021-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-021,117255083-021,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-021-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-021,117255083-021,Generic brightness cue; retain for review.
+117255083,117255083-022-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-022,117255083-022,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-022-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-022,117255083-022,Generic brightness cue; retain for review.
+117255083,117255083-023-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-023,117255083-023,Generic brightness cue; retain for review.
+117255083,117255083-026-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-026,117255083-026,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-026-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-026,117255083-026,Generic brightness cue; retain for review.
+117255083,117255083-027-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-027,117255083-027,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-028-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-028,117255083-028,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-028-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-028,117255083-028,Generic brightness cue; retain for review.
+117255083,117255083-029-interior,UNKNOWN_STRUCTURE,interior_with_exterior_view,POSSIBLE,LOW,PHOTO_117255083-029,117255083-029,Generic brightness cue; retain for review.
+117255083,117255083-030-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-030,117255083-030,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-031-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-031,117255083-031,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-032-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-032,117255083-032,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-033-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-033,117255083-033,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-034-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-034,117255083-034,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-035-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-035,117255083-035,RGB layout cue; geometry requires human confirmation.
+117255083,117255083-036-pool,TARGET_PROPERTY,pool.presence,YES,LOW,PHOTO_117255083-036,117255083-036,RGB layout cue; geometry requires human confirmation.

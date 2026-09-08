@@ -1,0 +1,11 @@
+{
+  "listings": [
+    "117539389",
+    "117255083"
+  ],
+  "extractor": "scripts/lvi_v1.py",
+  "fingerprint_ids": [
+    "117539389",
+    "117255083"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "LVI_V1_FREEZE",
+  "status": "FINGERPRINTS_FROZEN_BEFORE_SUBSTANTIVE_G9H_COMPARISON",
+  "listing_ids": [
+    "117539389",
+    "117255083"
+  ],
+  "lineage_verification": {
+    "g9_freeze_commit": "17e161ab3ce25c81003c2aa510ec5ab8e1ba2b88",
+    "g8_authority": "4381c1a10698003d9037e65a7039ab394e8959fd",
+    "g7_authority": "85fce4069aa3102bfd946e24d5eb263f078bf63e",
+    "source_file_sha256": {
+      "data/investigations/geolis_resolution_audit/phase_g9_2026-09-08/PHASE_G9_PROTOCOL.md": "b1a13020d60473fabd758e864f67a54e4abe7a171ddacd57c297e8fe5249f00e",
+      "data/investigations/geolis_resolution_audit/phase_g9_2026-09-08/PHASE_G9_FREEZE_VERIFICATION.md": "7babd2bf22871808896491fe52b6de62d29e2c1249054a044d647bf57beed21c",
+      "data/investigations/geolis_resolution_audit/phase_g9_2026-09-08/PHASE_G9_COMPONENT_FREEZE.md": "522c887f6418c57cea58aea60f5942d90a09a5180a46d2cd04d5206d26b19c37",
+      "data/investigations/geolis_resolution_audit/phase_g9_2026-09-08/human_blind_review/PHASE_G9H_FREEZE_VERIFICATION.md": "510bc9e3d9a1fcea62940d98d0626385e9879fa94e9abdf95d1404a4eb9bedb2",
+      "data/investigations/geolis_resolution_audit/phase_g9_2026-09-08/human_blind_review/PHASE_G9H_HUMAN_BLIND_REVIEW.md": "f89aad55d127b97af1749e1670cdebd55ab6551360d0c563bac0f154f070fdf5"
+    }
+  },
+  "blindness_attestation": {
+    "g9h_content_used_as_input": false,
+    "prompts_or_labels_seeded_from_g9h": false,
+    "code_contains_g9h_references": false,
+    "candidate_gis_ranking_data_used": false,
+    "procedural_deviation": {
+      "occurred": true,
+      "exact_file_accessed": "data/investigations/geolis_resolution_audit/phase_g9_2026-09-08/human_blind_review/PHASE_G9H_HUMAN_BLIND_REVIEW.md",
+      "purpose": "source-package inspection while locating the attachment/frozen files",
+      "content_transcribed_or_used": false,
+      "extraction_restarted_after_access": true
+    }
+  },
+  "precomparison_outputs": [
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117255083/EVIDENCE_CONTACT_SHEETS/CONTACT_SHEET_01.jpg",
+      "sha256": "34e6119821b159f7097538f45eebc7756953611bdd1a6b940c6305d9ee6f1456"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117255083/EVIDENCE_CONTACT_SHEETS/CONTACT_SHEET_02.jpg",
+      "sha256": "18d120ecaec0791ab92bb17347936c93a0baf7a0d96e53a90ac4a1e34edcda03"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117255083/EVIDENCE_CONTACT_SHEETS/CONTACT_SHEET_03.jpg",
+      "sha256": "e762ede68b92e3499955665b68071fc64a04f39794af0330c343a2decce9e14d"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117255083/SCENE_FINGERPRINT.json",
+      "sha256": "dbb3f1a04910d3a6eac66cc15d12b34ea9204a7873ab4398edb86b61a6cad6fa"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117255083/SCENE_REPORT.md",
+      "sha256": "eedc139e45932dc02fd828afb37e4f0d94ecbbfc958be1f9fa508ed63808a761"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117539389/EVIDENCE_CONTACT_SHEETS/CONTACT_SHEET_01.jpg",
+      "sha256": "cf01e1ebd1324df8af3175bf164189171dfbd69f3596ea0b201ec86c503016d3"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117539389/EVIDENCE_CONTACT_SHEETS/CONTACT_SHEET_02.jpg",
+      "sha256": "5b03dbf77071184398abc0990ded425e13851b4178b358fa991578d1e30f752b"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117539389/EVIDENCE_CONTACT_SHEETS/CONTACT_SHEET_03.jpg",
+      "sha256": "1bdcb608bc162c32616b7594a555ad3d8fd927c231b3745e443ae0d68c4423c2"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117539389/EVIDENCE_CONTACT_SHEETS/CONTACT_SHEET_04.jpg",
+      "sha256": "64d7cf6302e30bf22a39f5fe96049a9fc19e25d8804ff91634876e61dae757fa"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117539389/EVIDENCE_CONTACT_SHEETS/CONTACT_SHEET_05.jpg",
+      "sha256": "0447b15b43fde78f532f87551b8a7000c4b57c63d28bced690a66dd32312b9ab"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117539389/SCENE_FINGERPRINT.json",
+      "sha256": "aa60ac0432f0258f0002518d74a0456a6f34c344a7d493c7cfc4dd9cb9900f77"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/117539389/SCENE_REPORT.md",
+      "sha256": "3aa236f957030326482c0fc4530e39349e9d4056736c77b3214ca8397bcccf59"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/LVI_V1_DESIGN.md",
+      "sha256": "fcb19c00f9d2a4828c6c05b0dbb75605fac527acfea2ab69674a47f8e6ec1328"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/LVI_V1_FRAME_INVENTORY.csv",
+      "sha256": "7e6031577d1de00ada3c00a3979e9791e2b548a335de02dc82de3e909ff3ad10"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/LVI_V1_OBSERVATIONS.csv",
+      "sha256": "7273cb2a5b0393bb1ac0661d48bcb8b3f7ac2882601c31df8ed07ab848dc7b5b"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/LVI_V1_RELATIONSHIPS.csv",
+      "sha256": "cb5155e24574c0456968819f16c38610614ef0b496965158883c0b6f3e49314e"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/LVI_V1_RUN_METADATA.json",
+      "sha256": "e840cb1be0c4e9d4925ef2b897f0ec564ae9ab079424166850eb7fc89bc54680"
+    },
+    {
+      "path": "data/experiments/listing_visual_intelligence_v1/LVI_V1_SCHEMA.json",
+      "sha256": "d0f81fa870313db0ed85f5d658393faf77570863764e01d8458a903f62510943"
+    }
+  ],
+  "comparison_allowed_after": "this manifest and the fingerprint-freeze commit"
+}
