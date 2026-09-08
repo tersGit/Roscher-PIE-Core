@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-09-08T11:18:51.046112+00:00",
+  "authoritative_commits": {
+    "g5": "bd46a6fda2b8879dd7b0f5247665551ebd33eaf3",
+    "g6": "313ef89b89077902aed6526bdc65da4a06c2f9c8",
+    "g4h": "5dd93d99405806211bcf2e2c6cc9af2feefb6fa5",
+    "g3": "bc434935a6316acf0c333b15d0a8b0787cfb33fd",
+    "detector_freeze": "6c53661e15d1bda968318cbac7cc244ed7497789",
+    "pr27": "9e5e727fa28749e90b95730084ec97cb98dfbddf"
+  },
+  "pr27": {
+    "url": "https://github.com/tersGit/Roscher-PIE-Core/pull/27",
+    "source_ref": "cursor/pool-object-validation-v1-b313",
+    "source_commit": "9e5e727fa28749e90b95730084ec97cb98dfbddf",
+    "source_commit_date": "2026-08-18T08:55:03Z",
+    "predates_g5_commit": true,
+    "historical_source_hashes": {
+      "backend/gis/estate_ags_matching/pool_object_validation_v1.py": "032690307476dcfb2bb5d06e469cb66892b87398",
+      "scripts/run_pool_object_validation_v1.py": "bad59981cb95d7c40fdcc67e3c61f03e15124501"
+    }
+  },
+  "artifact_sha256": {
+    "data\\investigations\\geolis_resolution_audit\\phase_g5_2026-09-08\\PHASE_G5_HUMAN_LOCKED.csv": "c57e81aac17d44cca5b1ae8a0f7d8ead1e291ac952aa92ba9d6a3ad57f4c6a58",
+    "data\\investigations\\geolis_resolution_audit\\phase_g5_2026-09-08\\PHASE_G5_JOINED_RESULTS.csv": "c29c095d6b934716e02c4a4b401bbc299c8fa7e94c5ac81ca7c189ef187b5a8d",
+    "data\\investigations\\geolis_resolution_audit\\phase_g5_2026-09-08\\PHASE_G5_METRICS.json": "a169ee46d3a81151633747a71f3c06e6b487e7898ce3460bd2c63361f4cfa09c",
+    "data\\investigations\\geolis_resolution_audit\\phase_g6_2026-09-08\\PHASE_G6_REPORT.md": "bac0ec60906ccbba2d968823588260244f824aeed81fbc1aa169f8f78fd99b06",
+    "data\\investigations\\geolis_resolution_audit\\phase_g6_2026-09-08\\PHASE_G6_PROVENANCE.json": "0c2c771d7cf1508f94fcad300ccbb230e4f61385eb43a516d5450d7123c5a41b",
+    "data\\investigations\\geolis_resolution_audit\\phase_g6_2026-09-08\\PHASE_G6_FP_ROOT_CAUSES.csv": "fe0591aba45b8fb4f914f84865c64ee7fb5b9b3060e1acbe8e42cdfd71d99f7b",
+    "data\\investigations\\geolis_resolution_audit\\phase_g6_2026-09-08\\PHASE_G6_TP_FP_FEATURES.csv": "2edad90bdb658ec74851c6166671bed561b338ebb9f437a3bf5fc9039b722756",
+    "data\\investigations\\geolis_resolution_audit\\phase_g6_2026-09-08\\PHASE_G6_FEATURE_COMPARISON.csv": "f1ceb97447fec862837e49f56229077c3ba9f4f9d1939efca33d5ebc4043073d",
+    "data\\investigations\\geolis_resolution_audit\\phase_g6_2026-09-08\\PHASE_G6_PR27_DIAGNOSTIC.csv": "af371a21522bde8d72ba35b896d5cd7df634ec9bebdd4d4218cb59f87cec04a4",
+    "data\\investigations\\geolis_resolution_audit\\phase_g6_2026-09-08\\PHASE_G6_HISTORICAL_REGRESSION.md": "53f665b120628b5e65478013f9dcde0fbc61f173d402c523a0249cf1a81f61ea",
+    "data\\investigations\\geolis_resolution_audit\\phase_g6_2026-09-08\\PHASE_G6_FREEZE_VERIFICATION.md": "a0743ca945d924fccedd6dbfc80eb7625b5f9856fe613a5730215a739084f356",
+    "data\\investigations\\geolis_resolution_audit\\phase_g3_2026-09-07\\DETECTOR_FREEZE_MANIFEST_POST.json": "1850b31b561bceb091e86f7252cd6e9b4306762fce25b9246795702bef128ba0",
+    "backend\\gis\\estate_ags_matching\\pool_object_validation_v1.py": "614338bf8db43a57b521995864fe53c0967d53438c5494980017c5004c211d76"
+  },
+  "method": "Unchanged PR27 validate_os_payload applied only to stored labelled OS controls; no detector rerun, imagery fetch, threshold tuning, or prior-artifact mutation."
+}

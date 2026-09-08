@@ -1,0 +1,50 @@
+{
+  "phase": "G7",
+  "scope": "44 resolved native15 additions only; transition-case metrics, not estate-wide",
+  "counts": {
+    "resolved_cases": 44,
+    "true_recovery": 21,
+    "false_positive": 23,
+    "unresolved_separate": 1,
+    "excluded_separate": 1,
+    "pr27_runnable_transition_cases": 0,
+    "pr27_not_runnable_transition_cases": 44,
+    "historical_controls": 6,
+    "historical_controls_runnable": 6,
+    "historical_controls_retained": 6,
+    "historical_controls_rejected": 0,
+    "historical_controls_not_runnable": 0
+  },
+  "transition_metrics": {
+    "before_precision": 0.4772727272727273,
+    "after_precision": null,
+    "fp_rejected": null,
+    "fp_retained": null,
+    "tp_retained": null,
+    "tp_wrongly_rejected": null,
+    "fp_rejection_rate": null,
+    "tp_retention_rate": null,
+    "post_validation_precision": null,
+    "absolute_fp_reduction": null,
+    "percentage_fp_reduction": null,
+    "true_pool_cost": null,
+    "precision_improvement": null,
+    "interpretation": "N/A: no valid native15 PR27 counterfactual is runnable from frozen inputs."
+  },
+  "separate_cases": {
+    "unresolved": [
+      {
+        "stand": "1/478",
+        "case": "CASE-018"
+      }
+    ],
+    "excluded": [
+      {
+        "stand": "692",
+        "case": "CASE-037"
+      }
+    ]
+  },
+  "verdict": "E",
+  "recommendation": "4"
+}

@@ -1,0 +1,4 @@
+failure_class,count,scope,reason
+transition_not_runnable,44,native15_additions,missing_pr27_inputs
+unresolved_separate,1,g5_additions,excluded_from_scoring
+excluded_separate,1,g5_additions,excluded_from_scoring
