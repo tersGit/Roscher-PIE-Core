@@ -1,0 +1,27 @@
+listing_id,feature,status,evidence_quality,human_verification_needed,notes
+117255083,roof.pitch,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,roof.colour,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,roof.material,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,roof.geometry,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,pool.geometry,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,pool.house_relation,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,driveway.geometry,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,garage.orientation,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,road.frontage_geometry,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,neighbour.characteristics,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,solar.detected,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,backup_power.detected,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117255083,interior.exterior_evidence,PARTIAL,INTERIOR_CUES_PRESENT,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,roof.pitch,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,roof.colour,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,roof.material,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,roof.geometry,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,pool.geometry,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,pool.house_relation,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,driveway.geometry,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,garage.orientation,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,road.frontage_geometry,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,neighbour.characteristics,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,solar.detected,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,backup_power.detected,NOT_VISIBLE,UNKNOWN,YES,No final extraction claim is made without a validated view or direct measurement.
+117539389,interior.exterior_evidence,PARTIAL,INTERIOR_CUES_PRESENT,YES,No final extraction claim is made without a validated view or direct measurement.

@@ -1,0 +1,97 @@
+{
+  "listings": [
+    {
+      "listing_id": "117255083",
+      "relationships": [
+        {
+          "confidence": "UNKNOWN",
+          "frame_ids": "117255083-003|117255083-004|117255083-009|117255083-013|117255083-020|117255083-021|117255083-022|117255083-026|117255083-027|117255083-028|117255083-030|117255083-031",
+          "from_observation": "117255083-pool.geometry",
+          "notes": "Pool contour, size, and house adjacency are not validated from still-blind media.",
+          "provenance": "GENERIC_FRAME_SET",
+          "relation": "HAS_UNCERTAIN_RELATIONSHIP_WITH",
+          "relationship_id": "117255083-pool-house-relationship",
+          "to_observation": "117255083-pool.house_relation"
+        },
+        {
+          "confidence": "UNKNOWN",
+          "frame_ids": "117255083-003|117255083-004|117255083-009|117255083-013|117255083-020|117255083-021|117255083-022|117255083-026|117255083-027|117255083-028|117255083-030|117255083-031",
+          "from_observation": "117255083-driveway.geometry",
+          "notes": "Driveway and garage orientation were not robustly observed from the retained corpus.",
+          "provenance": "GENERIC_FRAME_SET",
+          "relation": "HAS_UNCERTAIN_RELATIONSHIP_WITH",
+          "relationship_id": "117255083-driveway-garage-relationship",
+          "to_observation": "117255083-garage.orientation"
+        },
+        {
+          "confidence": "UNKNOWN",
+          "frame_ids": "117255083-003|117255083-004|117255083-009|117255083-013|117255083-020|117255083-021|117255083-022|117255083-026|117255083-027|117255083-028|117255083-030|117255083-031",
+          "from_observation": "117255083-road.frontage_geometry",
+          "notes": "Road geometry and neighbouring structure relationship remain unresolved.",
+          "provenance": "GENERIC_FRAME_SET",
+          "relation": "HAS_UNCERTAIN_RELATIONSHIP_WITH",
+          "relationship_id": "117255083-road-neighbour-relationship",
+          "to_observation": "117255083-neighbour.characteristics"
+        },
+        {
+          "confidence": "MEDIUM",
+          "frame_ids": "117255083-003|117255083-004|117255083-009|117255083-013|117255083-020|117255083-021|117255083-022|117255083-026|117255083-027|117255083-028|117255083-030|117255083-031",
+          "from_observation": "117255083-interior.exterior_evidence",
+          "notes": "Interior views may show exterior evidence, but the exact geometry remains unverified.",
+          "provenance": "INTERIOR_WITH_EXTERIOR_CUE",
+          "relation": "MAY_CONTRIBUTE_TO",
+          "relationship_id": "117255083-interior-exterior-evidence",
+          "to_observation": "117255083-roof.geometry"
+        }
+      ],
+      "schema_version": "LVI_V2_SCENE_RELATIONSHIPS"
+    },
+    {
+      "listing_id": "117539389",
+      "relationships": [
+        {
+          "confidence": "UNKNOWN",
+          "frame_ids": "117539389-028|117539389-039|117539389-003|117539389-004|117539389-011|117539389-012|117539389-013|117539389-026|117539389-030|117539389-032|117539389-034|117539389-038",
+          "from_observation": "117539389-pool.geometry",
+          "notes": "Pool contour, size, and house adjacency are not validated from still-blind media.",
+          "provenance": "GENERIC_FRAME_SET",
+          "relation": "HAS_UNCERTAIN_RELATIONSHIP_WITH",
+          "relationship_id": "117539389-pool-house-relationship",
+          "to_observation": "117539389-pool.house_relation"
+        },
+        {
+          "confidence": "UNKNOWN",
+          "frame_ids": "117539389-028|117539389-039|117539389-003|117539389-004|117539389-011|117539389-012|117539389-013|117539389-026|117539389-030|117539389-032|117539389-034|117539389-038",
+          "from_observation": "117539389-driveway.geometry",
+          "notes": "Driveway and garage orientation were not robustly observed from the retained corpus.",
+          "provenance": "GENERIC_FRAME_SET",
+          "relation": "HAS_UNCERTAIN_RELATIONSHIP_WITH",
+          "relationship_id": "117539389-driveway-garage-relationship",
+          "to_observation": "117539389-garage.orientation"
+        },
+        {
+          "confidence": "UNKNOWN",
+          "frame_ids": "117539389-028|117539389-039|117539389-003|117539389-004|117539389-011|117539389-012|117539389-013|117539389-026|117539389-030|117539389-032|117539389-034|117539389-038",
+          "from_observation": "117539389-road.frontage_geometry",
+          "notes": "Road geometry and neighbouring structure relationship remain unresolved.",
+          "provenance": "GENERIC_FRAME_SET",
+          "relation": "HAS_UNCERTAIN_RELATIONSHIP_WITH",
+          "relationship_id": "117539389-road-neighbour-relationship",
+          "to_observation": "117539389-neighbour.characteristics"
+        },
+        {
+          "confidence": "MEDIUM",
+          "frame_ids": "117539389-028|117539389-039|117539389-003|117539389-004|117539389-011|117539389-012|117539389-013|117539389-026|117539389-030|117539389-032|117539389-034|117539389-038",
+          "from_observation": "117539389-interior.exterior_evidence",
+          "notes": "Interior views may show exterior evidence, but the exact geometry remains unverified.",
+          "provenance": "INTERIOR_WITH_EXTERIOR_CUE",
+          "relation": "MAY_CONTRIBUTE_TO",
+          "relationship_id": "117539389-interior-exterior-evidence",
+          "to_observation": "117539389-roof.geometry"
+        }
+      ],
+      "schema_version": "LVI_V2_SCENE_RELATIONSHIPS"
+    }
+  ],
+  "schema_version": "LVI_V2_SCENE_RELATIONSHIPS"
+}

@@ -1,0 +1,7 @@
+listing_id,failure_type,status,reason
+117255083,ROOF_GEOMETRY_UNRESOLVED,FAIL,"No reliable roof pitch, shape, or material extraction from the retained still-blind media set."
+117255083,POOL_GEOMETRY_UNRESOLVED,FAIL,"Pool contour, boundary and adjacency to the house remain unknown."
+117255083,NEIGHBOUR_RELATIONSHIP_UNRESOLVED,FAIL,Neighbour positions and relative geometry were not extracted with defect-free confidence.
+117539389,ROOF_GEOMETRY_UNRESOLVED,FAIL,"No reliable roof pitch, shape, or material extraction from the retained still-blind media set."
+117539389,POOL_GEOMETRY_UNRESOLVED,FAIL,"Pool contour, boundary and adjacency to the house remain unknown."
+117539389,NEIGHBOUR_RELATIONSHIP_UNRESOLVED,FAIL,Neighbour positions and relative geometry were not extracted with defect-free confidence.

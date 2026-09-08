@@ -1,0 +1,57 @@
+{
+  "frozen_outputs": [
+    {
+      "path": "LVI_V2_METHOD_AUDIT.md",
+      "sha256": "a1a96a712da03ec2897e6bfd3d9c6b661aebe5c77e54ea9c652eccc8288f0196"
+    },
+    {
+      "path": "LVI_V2_MEDIA_INVENTORY.csv",
+      "sha256": "71bc1f3dcab593deaa172f1c43a9a8af783526aa973e562f08175d5f35ecf707"
+    },
+    {
+      "path": "LVI_V2_VIDEO_INVENTORY.csv",
+      "sha256": "9e4fdaac99c34c4ac6248055d7a9b9d43b60bc4c4da251a7d82e3e8a39d1d3fd"
+    },
+    {
+      "path": "LVI_V2_SELECTED_FRAMES.csv",
+      "sha256": "ba7c456c19279215472b8e1f32fe88215befa22abfec278d88021f5c15bda34a"
+    },
+    {
+      "path": "LVI_V2_FRAME_OBSERVATIONS.jsonl",
+      "sha256": "0dd0ee1bd76fdc2bae3253709e7ef54ada352a317ddd702f76cdd5e8f733ef5e"
+    },
+    {
+      "path": "LVI_V2_VIDEO_RELATIONSHIPS.json",
+      "sha256": "8b4e19ee97aa2916f306497107f64f350713e0c2a26f291f8503e875ba1b99ec"
+    },
+    {
+      "path": "LVI_V2_SCENE_RELATIONSHIPS.json",
+      "sha256": "bf16d2c39bb3f3079a20c0834067ef84ce73c1fc832dd375ee941cfb850e42ef"
+    },
+    {
+      "path": "LVI_V2_FEATURE_EVALUATION.csv",
+      "sha256": "41b53d44cc8c8bf0b7cad8036eb0ca6de98c7da8369f89840bca3d9524169e40"
+    },
+    {
+      "path": "LVI_V2_FAILURE_ANALYSIS.csv",
+      "sha256": "528ad586da6e019296e728653544a931c99d5c4b30e967de59431974116a39db"
+    },
+    {
+      "path": "LVI_V2_ACCEPTANCE_REPORT.md",
+      "sha256": "30c7956eb732608e73ecf9249262f3b22ef736183ce093099e7fbdf98ba31fe6"
+    }
+  ],
+  "listing_ids": [
+    "117255083",
+    "117539389"
+  ],
+  "protocol": "PHASE_LVI_V2_FRAME_VIDEO_VISUAL_OBSERVATION_EXTRACTION",
+  "schema_version": "LVI_V2_PRE_FREEZE_MANIFEST",
+  "source_hashes": {
+    "g9_freeze_verification": "7babd2bf22871808896491fe52b6de62d29e2c1249054a044d647bf57beed21c",
+    "g9_protocol": "b1a13020d60473fabd758e864f67a54e4abe7a171ddacd57c297e8fe5249f00e",
+    "g9h_freeze_verification": "510bc9e3d9a1fcea62940d98d0626385e9879fa94e9abdf95d1404a4eb9bedb2",
+    "g9h_human_blind_review": "f89aad55d127b97af1749e1670cdebd55ab6551360d0c563bac0f154f070fdf5"
+  },
+  "status": "OBSERVATIONS_GENERATED_BUT_G9H_COMPARISON_PENDING"
+}

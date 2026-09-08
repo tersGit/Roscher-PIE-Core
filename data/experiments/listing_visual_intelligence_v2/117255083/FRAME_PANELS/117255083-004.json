@@ -1,0 +1,9 @@
+{
+  "confidence": "MEDIUM",
+  "frame_id": "117255083-004",
+  "listing_id": "117255083",
+  "notes": "Blind generic selection only; no claim beyond retained evidence provenance.",
+  "selection_rank": 2,
+  "selection_reason": "pool,aerial",
+  "source_record": "LVI_V1_FRAME_INVENTORY.csv"
+}
