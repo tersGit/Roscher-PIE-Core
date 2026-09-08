@@ -1,0 +1,49 @@
+stand,case,human_raw,normalized_truth,normalized_confidence,notes_raw,normalization_rationale
+362,CASE-001,yes 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+499,CASE-002,Vacant stand,NO_POOL,LOW,,"Vacant stand recorded; conservatively treated as no established pool, with raw wording retained."
+378,CASE-003,no 100%,NO_POOL,HIGH,,NO percentage preserved; 100% maps to HIGH.
+1/373,CASE-004,yes 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+1/379,CASE-005,no 100%,NO_POOL,HIGH,,NO percentage preserved; 100% maps to HIGH.
+1/541,CASE-006,no 100%,NO_POOL,HIGH,,NO percentage preserved; 100% maps to HIGH.
+387,CASE-007,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+395,CASE-008,NO 100%,NO_POOL,HIGH,,NO percentage preserved; 100% maps to HIGH.
+396,CASE-009,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+405,CASE-010,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+415,CASE-011,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+1/403,CASE-012,NO 100%,NO_POOL,HIGH,,NO percentage preserved; 100% maps to HIGH.
+1/474,CASE-013,NO 90%,NO_POOL,HIGH,,NO percentage preserved; 90% maps to HIGH.
+467,CASE-014,NO 90%,NO_POOL,HIGH,,NO percentage preserved; 90% maps to HIGH.
+462,CASE-015,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+418,CASE-016,NO 100%,NO_POOL,HIGH,,NO percentage preserved; 100% maps to HIGH.
+458,CASE-017,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+1/478,CASE-018,,UNRESOLVED,LOW,,Blank review; no judgment supplied.
+1/513,CASE-019,NO 100%,NO_POOL,HIGH,,NO percentage preserved; 100% maps to HIGH.
+492,CASE-020,NO 90%,NO_POOL,HIGH,,NO percentage preserved; 90% maps to HIGH.
+1/515,CASE-021,NO 90%,NO_POOL,HIGH,,NO percentage preserved; 90% maps to HIGH.
+486,CASE-022,NO 100%,NO_POOL,HIGH,,NO percentage preserved; 100% maps to HIGH.
+495,CASE-023,NO 90%,NO_POOL,HIGH,,NO percentage preserved; 90% maps to HIGH.
+350,CASE-024,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+351,CASE-025,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+346,CASE-026,NO 100%,NO_POOL,HIGH,,NO percentage preserved; 100% maps to HIGH.
+340,CASE-027,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+1/343,CASE-028,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+1/335,CASE-029,NO 80%,NO_POOL,HIGH,,NO percentage preserved; 80% maps to HIGH.
+345,CASE-030,NO 60%,NO_POOL,MEDIUM,,NO percentage preserved; 60% maps to MEDIUM.
+1/437,CASE-031,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+442,CASE-032,NO 60%,NO_POOL,MEDIUM,,NO percentage preserved; 60% maps to MEDIUM.
+425,CASE-033,NO 80%,NO_POOL,HIGH,,NO percentage preserved; 80% maps to HIGH.
+427,CASE-034,NO 90%,NO_POOL,HIGH,,NO percentage preserved; 90% maps to HIGH.
+433,CASE-035,NO 90%,NO_POOL,HIGH,,NO percentage preserved; 90% maps to HIGH.
+431,CASE-036,YES 60%,POOL,MEDIUM,,YES percentage preserved; 60% maps to MEDIUM.
+692,CASE-037,NO ERF,EXCLUDE,LOW,,NO ERF preserved verbatim and excluded as invalid parcel.
+670,CASE-038,UNFINISHED HOUSE,UNRESOLVED,LOW,,UNFINISHED HOUSE is explicitly unresolved/excluded from pool truth.
+668,CASE-039,NO 90%,NO_POOL,HIGH,,NO percentage preserved; 90% maps to HIGH.
+681,CASE-040,NO 90%,NO_POOL,HIGH,,NO percentage preserved; 90% maps to HIGH.
+683,CASE-041,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+589,CASE-042,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+621,CASE-043,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+652,CASE-044,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+1/616,CASE-045,YES 90%,POOL,HIGH,,YES percentage preserved; 90% maps to HIGH.
+638,CASE-046,NO 80%,NO_POOL,HIGH,,NO percentage preserved; 80% maps to HIGH.
+605,CASE-047,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
+649,CASE-048,YES 100%,POOL,HIGH,,YES percentage preserved; 100% maps to HIGH.
