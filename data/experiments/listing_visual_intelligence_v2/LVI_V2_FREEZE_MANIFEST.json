@@ -53,5 +53,6 @@
     "g9h_freeze_verification": "510bc9e3d9a1fcea62940d98d0626385e9879fa94e9abdf95d1404a4eb9bedb2",
     "g9h_human_blind_review": "f89aad55d127b97af1749e1670cdebd55ab6551360d0c563bac0f154f070fdf5"
   },
-  "status": "OBSERVATIONS_GENERATED_BUT_G9H_COMPARISON_PENDING"
+  "status": "OBSERVATIONS_FROZEN_BEFORE_G9H_READ",
+  "frozen_at": "2026-09-08T16:21:40+02:00"
 }
