@@ -1,0 +1,60 @@
+{
+  "listing_id": "117539389",
+  "observations": [
+    {
+      "listing_id": "117539389",
+      "feature": "house.storeys",
+      "value": "TWO_STOREYS_VISIBLE",
+      "confidence": "HIGH",
+      "source_frames": "117539389-004|117539389-012|117539389-039|117539389-040",
+      "source_type": "still",
+      "directness": "DIRECT",
+      "visibility": "visible",
+      "supporting_observation": "Multiple exterior views show lower and upper facade levels."
+    },
+    {
+      "listing_id": "117539389",
+      "feature": "roof",
+      "value": "DARK_RED_BROWN_TILED_LOW_PITCH_HIPPED_SECTIONS_VISIBLE",
+      "confidence": "MEDIUM",
+      "source_frames": "117539389-039|117539389-040",
+      "source_type": "still",
+      "directness": "DIRECT",
+      "visibility": "partially_visible",
+      "supporting_observation": "Exterior facade views show tiled eaves and hip-like roof sections; full roof plan is occluded."
+    },
+    {
+      "listing_id": "117539389",
+      "feature": "pool",
+      "value": "POOL_PRESENT_CURVILINEAR_FAMILY_VISIBLE_ADJACENT_TO_REAR_FACADE",
+      "confidence": "HIGH",
+      "source_frames": "117539389-004|117539389-011|117539389-012",
+      "source_type": "still",
+      "directness": "DIRECT_AND_MULTI_VIEW",
+      "visibility": "visible",
+      "supporting_observation": "Pool edge is visible in multiple exterior views, with patio/rear facade on one side."
+    },
+    {
+      "listing_id": "117539389",
+      "feature": "garage",
+      "value": "DOUBLE_GARAGE_DOOR_ON_FRONT_FACADE_VISIBLE",
+      "confidence": "HIGH",
+      "source_frames": "117539389-039",
+      "source_type": "still",
+      "directness": "DIRECT",
+      "visibility": "visible",
+      "supporting_observation": "Front elevation directly shows a wide two-car garage door below the upper level."
+    },
+    {
+      "listing_id": "117539389",
+      "feature": "driveway_road_frontage_solar_neighbours",
+      "value": "UNKNOWN_OR_NOT_SUFFICIENTLY_VISIBLE",
+      "confidence": "HIGH",
+      "source_frames": "117539389-004|117539389-039|117539389-040",
+      "source_type": "still",
+      "directness": "UNKNOWN",
+      "visibility": "occluded_or_out_of_frame",
+      "supporting_observation": "Exterior frames do not establish a road connection, boundary geometry, a neighbour signature, or solar panels."
+    }
+  ]
+}

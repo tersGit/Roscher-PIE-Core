@@ -1,0 +1,3 @@
+listing_id,embed_urls,video_status,attempt,result_detail,original_media_path,sha256,duration_seconds,resolution,fps,keyframe_count,drone_keyframes
+117539389,,NO_EMBED_DISCOVERED,normal parser fetch_listing() then python -m yt_dlp --dump-single-json,The Property24 HTML parser found no YouTube embed.,,,,,,0,0
+117255083,https://www.youtube.com/embed/bGvUiiWGuSE,SOURCE_EMBED_DISCOVERED_BUT_UNAVAILABLE,normal parser fetch_listing() then python -m yt_dlp --dump-single-json,ERROR: [youtube] bGvUiiWGuSE: This video is not available,,,,,,0,0

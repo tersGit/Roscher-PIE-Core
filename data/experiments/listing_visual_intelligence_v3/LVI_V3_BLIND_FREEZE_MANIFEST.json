@@ -1,0 +1,442 @@
+{
+  "files": [
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-001.jpg",
+      "sha256": "155516f335b4eb297171b47b6bdf5a2944f3d344dc3f93d94e7156a1d497d581"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-002.jpg",
+      "sha256": "fe1c94b95a459d67c1d8736193a5e263d142ef8dd959eefd41419caf86c74583"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-003.jpg",
+      "sha256": "0892e80b3fcc87588ec228dc429e3d15f08e67b5ccd6aeb9734cc1341a13c92f"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-004.jpg",
+      "sha256": "3f98ed6595e53397e2c23a4e3fb830356a7ea67ed70a68f48c3fbed3d6189ef9"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-005.jpg",
+      "sha256": "82e654060c076dfd653ce04ac94fabb46a0dad374fac9b3f1c8a0eb86427582a"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-006.jpg",
+      "sha256": "a0a1f5b3825b1c4dc61cf26c2718640473610be9078074488b01e629e9b39668"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-007.jpg",
+      "sha256": "6362d1429324fb199f8dbd98649c75ff30511603b5586e9f0b0ad2279e06a2a4"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-008.jpg",
+      "sha256": "ebf28bf2d84815154edb78e4c3d2f01fc353d36917669c1c5eaa44f3211ecabe"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-009.jpg",
+      "sha256": "36cfaa214daa7988cf5a74642bb01b7b12b20d54db3e67c76622af3c77535942"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-010.jpg",
+      "sha256": "34bd04814b3ecda5b8d56e943d0b547dbee8f143b2ffa893260dc91b1c14ccff"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-011.jpg",
+      "sha256": "3b13c60a60db3cdb07346001d398ee11ce710446e0e10d41100af4d307a0299b"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-012.jpg",
+      "sha256": "d74919e1301cc089d4e82405fbf3e443cff29a84209e8bfff4b03a158fa4ca6a"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-013.jpg",
+      "sha256": "738c7c6afb86369bc2e0054561780acbc932f13e24939b1990674bf4762f7257"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-014.jpg",
+      "sha256": "ca918f6016b48fea7806581b8782baa5c5798c68256e5753ca99f7e543d38ba4"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-015.jpg",
+      "sha256": "b7eb4136f7c88ef35eef06909b372ffcb981324c74cfec5d3184b8c393532801"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-016.jpg",
+      "sha256": "b43336d5d9a68375d1405c409e2b5f56554207f968a2578f3c04888fc04ac2f5"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-017.jpg",
+      "sha256": "e96e83faf81839d58b0e54e52dfbd846310e465027e641f645989a72b8e8b792"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-018.jpg",
+      "sha256": "8ed325f2810b7561fc01a14ca14405faf6f0aac2c41792268cb462e2c6c4c9a3"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-019.jpg",
+      "sha256": "aacb824fef85d2fc7979de9d6ca9d824065cee74e2917157416f1e6ba6977d8a"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-020.jpg",
+      "sha256": "1cb8b7fa1d82c778a2c3866ce272b8f4161dce80d8363c6e4834f6dfc48e34fe"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-021.jpg",
+      "sha256": "f72815243c1c4382cef56c564405f962fc1477a9b7e985fb0b394eea192596f9"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-022.jpg",
+      "sha256": "c332d2c223462d359afa2eea365c599ba345dd8b104c6317308690149f59ae35"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-023.jpg",
+      "sha256": "f40fd123614e036b432cf5e667f76bd918bdf9648fed10168750f836df610f19"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-024.jpg",
+      "sha256": "93b18784ed153656b2b55522f71bf25237c4ac0dbe3bb8a0872e888f0429da79"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-025.jpg",
+      "sha256": "e69668bd9109aa6bad324534d6af9320676d6378ca0c6c00edcf693514aaa1f0"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-026.jpg",
+      "sha256": "2295ea36c80309a1aa5b298b05da15c7f8cf115a57081155e9a19bd29879fcda"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-027.jpg",
+      "sha256": "de820f9e51585082d123b6dacf4d0d635be4ce9f1ec93281ae28cc8f37f22648"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-028.jpg",
+      "sha256": "f0f9b74a41a2a21f51e469f12d16509d1c9d9b45c1a92e23f80dcd07d19a5ca1"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-029.jpg",
+      "sha256": "f8d0b7447511cde48937fd7d8a75709cca7904a033c3864ae82cd3b51a7ce8da"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-030.jpg",
+      "sha256": "7209cc7257a3ad32f625a2b095b52b3d5c70c8bb795a639df904cb4fa35f985f"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-031.jpg",
+      "sha256": "8c76157ad2cac0572ca551fff1162c77ef52e30323246882cbfb12ff6de7fad9"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-032.jpg",
+      "sha256": "a1641486b78704a812e3b3ea713571425501c8aafc1ca8124427e3616f002477"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-033.jpg",
+      "sha256": "dc93d29be47dab8ecdad08046952318024ff75edcf422e804872c408911b7c18"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-034.jpg",
+      "sha256": "9686211f19cc0ed52f45a8d88e900e4797fb56993265ade5d9f6016a05badd1c"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-035.jpg",
+      "sha256": "b562853fd38d3f71bec548c336d2b363a9f04d86ee7c2a4b1743257cf9cd9781"
+    },
+    {
+      "path": "117255083/ORIGINAL_STILLS/117255083-036.jpg",
+      "sha256": "48664a3e024e26c41c5a60be05f02c5a7f429d9fe2d366311515947722a28e43"
+    },
+    {
+      "path": "117255083/VISUAL_FINGERPRINT.json",
+      "sha256": "087aee40287deabfbe14b0c7c2b25c45e0616752339c7fc5947e9729e806c35e"
+    },
+    {
+      "path": "117255083/VISUAL_REPORT.md",
+      "sha256": "2f0e37bdb3f7951a3024139d1552a0d092b42e5996c1a2e289252db9a568ba6e"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-001.jpg",
+      "sha256": "729d55bbe9d1ec6a9c7e7011209d358696efe4320f77676ee43964c6878b82b6"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-002.jpg",
+      "sha256": "aab456cc45052824738d4e44200f021a2ff8906d99c58f43f3a054cb11032bb2"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-003.jpg",
+      "sha256": "a8b3a94d4ea8318228172fd0badabb6d55c989fdbde8983cbc143681b4439be5"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-004.jpg",
+      "sha256": "f340fc8f6a43984817fa37833802871a5af2f55f7ef27a018c8e5f22a8c35dd4"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-005.jpg",
+      "sha256": "060887d3d36106daaddc300110d5351eea58ffc212096c1c59ac32e95e402e24"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-006.jpg",
+      "sha256": "f556a395bc7f3629abfb98ebe55dd08d8b51cea5069ffc5daf3e1d003eb0ca35"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-007.jpg",
+      "sha256": "9919084e6f7a89d85ad81f309d06d70b87bea0c91d54746900cf5cea690466d5"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-008.jpg",
+      "sha256": "f90f2430d2e98514ecdb3974a84bf51908af812c57a69d127f204597331d2a31"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-009.jpg",
+      "sha256": "5821b97f28162cc444515cca2f15dfd0263baa92710d001e43cde62b5390c220"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-010.jpg",
+      "sha256": "0ef7d2cf34e647e461ca7eeef6bc6c57a57f9a0d710f1548075ced5ed011cfa1"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-011.jpg",
+      "sha256": "70d55a4cd66a282fa08cc764c3e9d7a0ec60818ca04bc4ad4be48a9540374c18"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-012.jpg",
+      "sha256": "bf6d3f2247e46f015b07c3f0e262ba0ebb76035a479c53d688442f0f0d18e17d"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-013.jpg",
+      "sha256": "30bee8677e3a6bef7cc0a8d49fda9485d2aba833062c20de604def6f4f51a0a4"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-014.jpg",
+      "sha256": "ba7de33ec51c7860d4f6eafb4842cd2af1f4445eb5cad97f5310a5a45fefc98e"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-015.jpg",
+      "sha256": "0b5ccefdd4f0d2e4ebe3b12b9dce042fd4704f393b66d692bb095ad4f8c89b54"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-016.jpg",
+      "sha256": "01448820e25d513a9da71c9be7464c7a65951590b909a03ddd83f1c56d61476d"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-017.jpg",
+      "sha256": "69ba01e8ffede6839909d8aa6892e088efb8ae21c0e590b24ce52a603c98473f"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-018.jpg",
+      "sha256": "17fd47f47fa6f9bf32f78bd6f1e58c761ad08fd356be6063d5a09b806ba174c9"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-019.jpg",
+      "sha256": "2f3081dde6e8ef22f5c8e5cdb27b236afe2cfecbf533924587db5e426e30f465"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-020.jpg",
+      "sha256": "f2f783bc0868eaeed3f778285a5665bf7787065489991702b0ba94788b49754e"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-021.jpg",
+      "sha256": "7b0ee676ac557c8e2c2108730cd3fc38306dcdbfab7946ae58dd150fec6da283"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-022.jpg",
+      "sha256": "6b029964eaeb900def867e1aaa625791784f5e840cca330dd741d498d8a6b340"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-023.jpg",
+      "sha256": "741166fd660b1e615338d130f404fdb50bfcf81fb125874293a47e406758cc84"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-024.jpg",
+      "sha256": "73c06671bd5e3b7df131c105704512781f6baa7fff4b027d42a9b808924af368"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-025.jpg",
+      "sha256": "2623305e91c16fb43200bd9dc41a7bd9918739c205e2f2aaab0af96668c06be6"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-026.jpg",
+      "sha256": "0fca7efa237ebc92cc4fd67ad60c42b09b1a37b254a1dc3dc027afd23bf7d5c3"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-027.jpg",
+      "sha256": "862a616baedfcf3c2fc774d71a2810003876383da19ae000666cfa8cf825afc7"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-028.jpg",
+      "sha256": "d8dffd5ead89b6620a4ac47f8ee38cfca8a797b1e333988b620cce7db9525796"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-029.jpg",
+      "sha256": "58722a4746af8a3ccb92153337fc37dac84f19c5d1c59f0ad24f24c0c9f1c769"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-030.jpg",
+      "sha256": "8a5364de5cfb84538d64ef58b90dccfb21325d7a846b3f2619953d233a6451f6"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-031.jpg",
+      "sha256": "6e97f8ae0b552d640282b93299c163f188c8f4be18276309efabc539cae37bbc"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-032.jpg",
+      "sha256": "74246debb088a416bd7870ec757ad52fb52f141d2c4917618756c6f94db23889"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-033.jpg",
+      "sha256": "f1a3b9f9a9d163d76b74529d6c205ad72e477cbb780b7717d1c67e42a8fd08b7"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-034.jpg",
+      "sha256": "a7c5195317605560b558a5def9cbb077dcc23085bd8b8cfc0d1dffc6484122cf"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-035.jpg",
+      "sha256": "e985e3e87f982676660d98f0ac245e628038ef6d3fe0bdfb013687b4b53ceecd"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-036.jpg",
+      "sha256": "776d5808ec8a135c5c74935f335ca00b731cd9cb3102fd8fde5af567d0915388"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-037.jpg",
+      "sha256": "d6399f503c04da3b4bbfc5d2890c387bb46b9a3ecdae0d5b04c6c68370581e10"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-038.jpg",
+      "sha256": "bd34e91e1d076a5d103c473eb8aee8b4c036bd43208d187d12c05473563d1bb5"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-039.jpg",
+      "sha256": "b081b1e97180034b417ff1687124fb4f01670effc7b753e615cd6f3574404884"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-040.jpg",
+      "sha256": "f2a9202656acac85346e4c04cd908769d7acb2e839823f8f767a8f31e796f526"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-041.jpg",
+      "sha256": "bd72e364cd0d7279c4d747c436dd6681c0f5ac607672429fbb19a52988c7d7f5"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-042.jpg",
+      "sha256": "1a7dddef494dd8ea1d28b7765c6cdff914e42d99d99466289429ac951a8ad42a"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-043.jpg",
+      "sha256": "19d3aaa9e5c271744d5ac3035876c7cf688005184c01e41383ed39a75930fb7d"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-044.jpg",
+      "sha256": "cb027f61bb5272114a6dd99cb249888c16e0569332f9c935056b7306f8a3d8d6"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-045.jpg",
+      "sha256": "128041d2922d9be1192f6318fab7baa5f596292e10f5b56c033ac873272f8964"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-046.jpg",
+      "sha256": "0c1649536daf05b32b38db6e53c41314e8d29bfd6883bb61eeabe7a87ced54fd"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-047.jpg",
+      "sha256": "1fc14e853232bd7968142cb618763cfcb64ef0eb4fbf4b840f2369738e51715d"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-048.jpg",
+      "sha256": "1ff645e03851e1db6f0d331b1dbe433a04f920130edc7cc427c121de33bb3c19"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-049.jpg",
+      "sha256": "3106bab9edb31c66cc27b18c38496aad2a91b2eb80eb85dce4fb6eefb308bead"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-050.jpg",
+      "sha256": "9b364de48ad0b13b38def933fd4129be35bcfcb51be7aa27ba15dc8dc2ea0aea"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-051.jpg",
+      "sha256": "d1d9b11e31ab2539ff4eb72619e218815a16c1c51f1b4a0deb955c20ea1c4940"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-052.jpg",
+      "sha256": "6a774e39f39ab8d42c74810d2bb6208686d8398264ebc5aa45fa8f36a4dc805d"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-053.jpg",
+      "sha256": "e3c5568702d7ebf7c556b95ef5ce53c23bbb99142630a09fec91110970e556bb"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-054.jpg",
+      "sha256": "c14ba4490648527894683a814e47cf149193a4b49f089ba188829ac469ca8041"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-055.jpg",
+      "sha256": "d352a33cdf5945b07dc764b7f0cfce0a7048a313af0c02cf68b72a8e306d1c93"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-056.jpg",
+      "sha256": "1f0598e74a7179c803ae9201c85655a353fe07e80a927dfce2afc389ec7a71bf"
+    },
+    {
+      "path": "117539389/ORIGINAL_STILLS/117539389-057.jpg",
+      "sha256": "9c5b90225965d43551cbd03bc704cc79138337ed3daaf2bf47f08ef06f43d73a"
+    },
+    {
+      "path": "117539389/VISUAL_FINGERPRINT.json",
+      "sha256": "551c895d237029b1a91de27ee8667c779b667698c6ea857b31cebaab02a65e6c"
+    },
+    {
+      "path": "117539389/VISUAL_REPORT.md",
+      "sha256": "291c476f80ac230c162867c3527f27736f103ff083f96180eb65982e0b897730"
+    },
+    {
+      "path": "LVI_V3_ACCEPTANCE_REPORT.md",
+      "sha256": "6c618dfeb84e10f15e2afb940e650747e194851bd8a5478302c89bd82057f609"
+    },
+    {
+      "path": "LVI_V3_CAPABILITY_AND_METHOD_AUDIT.md",
+      "sha256": "2daa2b4980ff3e5b4eb3ed1d7e4340d432d6c8eba3719e30d64ccfcf7217c393"
+    },
+    {
+      "path": "LVI_V3_CONTOURS.csv",
+      "sha256": "64c0b1fcf1486f34eed137571e6686f82536f8513cad10f19d028f5e727f14b8"
+    },
+    {
+      "path": "LVI_V3_FRAME_DETECTIONS.csv",
+      "sha256": "b03eb15ee7de7b73f184ac065973dc503fcc5e0e2b98056450d6c57daeceb8c9"
+    },
+    {
+      "path": "LVI_V3_FRAME_OBSERVATIONS.csv",
+      "sha256": "da4c87793549f5f00ade20a54ccb37f3e623643d9de108f62b4f1a30b3fed932"
+    },
+    {
+      "path": "LVI_V3_MEDIA_INVENTORY.csv",
+      "sha256": "6e0ac3e7f23375a5aefe5df106d74e3e201f44917a09de0571b5b30b1a92061a"
+    },
+    {
+      "path": "LVI_V3_SCENE_AND_VIDEO_RELATIONSHIPS.json",
+      "sha256": "ca0fda0c9278c276e58c31aed1fea72c6ed19d3f03e3a6b26404cfbdd750fcfe"
+    },
+    {
+      "path": "LVI_V3_VIDEO_INVENTORY.csv",
+      "sha256": "d2db20822f4e0e58e0c758e9d175c5c12472efe65f3f3c2dc7421bd4599c1ecb"
+    }
+  ],
+  "prohibitions_observed": [
+    "identity",
+    "address",
+    "erf",
+    "GIS",
+    "candidate generation",
+    "G9 Top5/Top20",
+    "ranking",
+    "scoring",
+    "Native15",
+    "pool detector",
+    "PR27",
+    "production",
+    "known ground truth",
+    "G9H input"
+  ],
+  "schema_version": "LVI_V3_BLIND_FREEZE",
+  "status": "BLIND_OBSERVATIONS_FROZEN_BEFORE_G9H_READ"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "LVI_V3_BLIND_RELATIONSHIPS",
+  "relationships": [
+    {
+      "listing_id": "117539389",
+      "feature": "pool",
+      "value": "POOL_PRESENT_CURVILINEAR_FAMILY_VISIBLE_ADJACENT_TO_REAR_FACADE",
+      "confidence": "HIGH",
+      "source_frames": "117539389-004|117539389-011|117539389-012",
+      "source_type": "still",
+      "directness": "DIRECT_AND_MULTI_VIEW",
+      "visibility": "visible",
+      "supporting_observation": "Pool edge is visible in multiple exterior views, with patio/rear facade on one side."
+    },
+    {
+      "listing_id": "117255083",
+      "feature": "pool",
+      "value": "POOL_PRESENT_RECTILINEAR_FAMILY_VISIBLE_ADJACENT_TO_POOL_FACING_FACADE",
+      "confidence": "HIGH",
+      "source_frames": "117255083-027|117255083-030",
+      "source_type": "still",
+      "directness": "DIRECT_AND_MULTI_VIEW",
+      "visibility": "visible",
+      "supporting_observation": "Straight pool edges and the pool-facing facade are repeatedly visible."
+    },
+    {
+      "listing_id": "117255083",
+      "feature": "garden_outbuilding",
+      "value": "MATURE_TREES_OPEN_LAWN_AND_SMALL_GARDEN_OUTBUILDING_VISIBLE",
+      "confidence": "HIGH",
+      "source_frames": "117255083-031|117255083-032|117255083-035|117255083-036",
+      "source_type": "still",
+      "directness": "DIRECT_AND_MULTI_VIEW",
+      "visibility": "visible",
+      "supporting_observation": "Garden frames directly show lawn, mature trees, and a small separate building; boundary relation remains unknown."
+    }
+  ],
+  "video_relationships": "NONE: the only discovered public embed was unavailable to yt-dlp at retrieval time."
+}
