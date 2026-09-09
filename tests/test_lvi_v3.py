@@ -26,3 +26,11 @@ def test_observations_separate_unknowns_and_direct_visual_evidence():
         rows = list(csv.DictReader(handle))
     assert any(row["directness"] == "DIRECT_AND_MULTI_VIEW" for row in rows)
     assert any(row["value"] == "UNKNOWN_OR_NOT_SUFFICIENTLY_VISIBLE" for row in rows)
+
+
+def test_post_freeze_evaluation_does_not_change_manifested_outputs():
+    manifest = json.loads((OUT / "LVI_V3_BLIND_FREEZE_MANIFEST.json").read_text(encoding="utf-8"))
+    for record in manifest["files"]:
+        path = OUT / record["path"]
+        import hashlib
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == record["sha256"]
