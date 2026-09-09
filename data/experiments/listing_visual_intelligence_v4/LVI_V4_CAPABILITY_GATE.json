@@ -1,0 +1,111 @@
+{
+  "discovered_cached_models": [
+    {
+      "architectures": [
+        "OwlViTForObjectDetection"
+      ],
+      "cache_root": "C:\\Users\\ters\\.cache\\huggingface\\hub",
+      "caption_capable": false,
+      "config_sha256": "b5934e0d2933194b8a85f93674e577feaa1a1ba2dc1d143b2d5e5305ff7a9d7c",
+      "configuration": "PRESENT",
+      "exists": true,
+      "model_type": "owlvit",
+      "path": "C:\\Users\\ters\\.cache\\huggingface\\hub\\models--google--owlvit-base-patch32\\snapshots\\cbc355fb364588351c5d51c7f74465e8e7ec6f72",
+      "text_config_present": true,
+      "vision_config_present": true
+    },
+    {
+      "cache_root": "C:\\Users\\ters\\.cache\\huggingface\\hub",
+      "configuration": "MISSING_CONFIG",
+      "exists": true,
+      "path": "C:\\Users\\ters\\.cache\\huggingface\\hub\\models--timm--vit_base_patch32_clip_224.openai\\snapshots\\a6f597a30f7b82c51704746581f9a4e41421e878"
+    },
+    {
+      "architectures": [
+        "OwlViTForObjectDetection"
+      ],
+      "cache_root": "C:\\Users\\ters\\.cache\\roscher-pie\\vision",
+      "caption_capable": false,
+      "config_sha256": "b5934e0d2933194b8a85f93674e577feaa1a1ba2dc1d143b2d5e5305ff7a9d7c",
+      "configuration": "PRESENT",
+      "exists": true,
+      "model_type": "owlvit",
+      "path": "C:\\Users\\ters\\.cache\\roscher-pie\\vision\\models--google--owlvit-base-patch32\\snapshots\\cbc355fb364588351c5d51c7f74465e8e7ec6f72",
+      "text_config_present": true,
+      "vision_config_present": true
+    },
+    {
+      "cache_root": "C:\\Users\\ters\\.cache\\roscher-pie\\vision",
+      "configuration": "MISSING_CONFIG",
+      "exists": true,
+      "path": "C:\\Users\\ters\\.cache\\roscher-pie\\vision\\models--timm--vit_base_patch32_clip_224.openai\\snapshots\\a6f597a30f7b82c51704746581f9a4e41421e878"
+    }
+  ],
+  "local_runtime_discovery": {
+    "local_openai_compatible_endpoints": [
+      {
+        "error": "[WinError 10061] No connection could be made because the target machine actively refused it",
+        "reachable": false,
+        "url": "http://127.0.0.1:11434/v1/models"
+      },
+      {
+        "error": "[WinError 10061] No connection could be made because the target machine actively refused it",
+        "reachable": false,
+        "url": "http://127.0.0.1:1234/v1/models"
+      },
+      {
+        "error": "[WinError 10061] No connection could be made because the target machine actively refused it",
+        "reachable": false,
+        "url": "http://127.0.0.1:8080/v1/models"
+      },
+      {
+        "error": "[WinError 10061] No connection could be made because the target machine actively refused it",
+        "reachable": false,
+        "url": "http://127.0.0.1:8000/v1/models"
+      }
+    ],
+    "standard_model_locations": [
+      {
+        "exists": false,
+        "path": "C:\\Users\\ters\\.ollama\\models"
+      },
+      {
+        "exists": false,
+        "path": "C:\\Users\\ters\\.lmstudio\\models"
+      },
+      {
+        "exists": false,
+        "path": "C:\\Users\\ters\\AppData\\Local\\LM-Studio\\models"
+      },
+      {
+        "exists": false,
+        "path": "C:\\Users\\ters\\AppData\\Roaming\\LM Studio\\models"
+      }
+    ]
+  },
+  "prohibitions_observed": [
+    "listing media and video access",
+    "G9H input",
+    "identity, address, erf, and stand",
+    "GIS and candidates",
+    "G9 Top5/Top20 and rankings",
+    "ground truth",
+    "production changes",
+    "detector, Native15, and PR27 changes"
+  ],
+  "result": "FAIL_CAPTION_VLM_UNAVAILABLE_STOPPED",
+  "run_started_at": "2026-09-09T09:19:47.808736+00:00",
+  "runtime": {
+    "device": "cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.6",
+    "torch": "2.13.0+cpu",
+    "transformers": "5.14.1"
+  },
+  "schema_version": "LVI_V4_CAPABILITY_GATE_V1",
+  "selected_model": {
+    "detail": "No explicit local model directory was supplied for the selected caption VLM.",
+    "required_environment_variable": "LVI_V4_VLM_MODEL_DIR",
+    "selection_status": "NOT_CONFIGURED"
+  }
+}
