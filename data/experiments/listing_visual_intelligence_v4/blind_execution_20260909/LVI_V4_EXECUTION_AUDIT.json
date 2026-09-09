@@ -1,0 +1,41 @@
+{
+  "average_inference_seconds": 33.50359842499938,
+  "blind_input_rule": "Only original listing media and minimal listing provenance were given to the VLM.",
+  "deterministic_generation": {
+    "do_sample": false,
+    "max_new_tokens": 500,
+    "num_beams": 1
+  },
+  "drone_aerial_calls": 0,
+  "errors": [],
+  "input_preprocessing": "Idefics3ImageProcessor {\n  \"do_convert_rgb\": true,\n  \"do_image_splitting\": true,\n  \"do_normalize\": true,\n  \"do_pad\": true,\n  \"do_rescale\": true,\n  \"do_resize\": true,\n  \"image_mean\": [\n    0.5,\n    0.5,\n    0.5\n  ],\n  \"image_processor_type\": \"Idefics3ImageProcessor\",\n  \"image_std\": [\n    0.5,\n    0.5,\n    0.5\n  ],\n  \"max_image_size\": {\n    \"longest_edge\": 512\n  },\n  \"resample\": 1,\n  \"rescale_factor\": 0.00392156862745098,\n  \"size\": {\n    \"longest_edge\": 2048\n  }\n}\n",
+  "model_id": "HuggingFaceTB/SmolVLM-256M-Instruct",
+  "multi_frame_calls": 8,
+  "revision": "7e3e67edbbed1bf9888184d9df282b700a323964",
+  "runtime": {
+    "device": "cpu",
+    "dtype": "float32",
+    "torch": "2.13.0+cpu"
+  },
+  "single_frame_calls": 32,
+  "stills_available": 93,
+  "stills_selected_and_analyzed": 32,
+  "total_elapsed_seconds": 1409.749787599998,
+  "total_inference_seconds": 1340.1439369999753,
+  "video_records": [
+    {
+      "keyframes": 0,
+      "listing_id": "117539389",
+      "source_urls": "",
+      "status": "NO_EMBED_DISCOVERED",
+      "technical_provenance": "Property24 HTML embed scan found no YouTube embed."
+    },
+    {
+      "keyframes": 0,
+      "listing_id": "117255083",
+      "source_urls": "https://www.youtube.com/embed/bGvUiiWGuSE",
+      "status": "VIDEO PRESENT AT SOURCE / RETRIEVAL FAILED",
+      "technical_provenance": "ERROR: [youtube] bGvUiiWGuSE: This video is not available"
+    }
+  ]
+}

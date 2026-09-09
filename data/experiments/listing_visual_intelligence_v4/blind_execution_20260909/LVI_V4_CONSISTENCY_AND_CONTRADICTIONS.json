@@ -1,0 +1,4 @@
+{
+  "normalization_policy": "No semantic repair; only parseable single-frame objects normalized.",
+  "status": "RAW_MULTI_FRAME_OUTPUTS_PRESERVED_SEPARATELY"
+}
