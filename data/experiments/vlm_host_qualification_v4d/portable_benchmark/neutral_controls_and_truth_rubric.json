@@ -1,0 +1,35 @@
+[
+  {
+    "id": "coloured_shapes",
+    "path": "controls/coloured_shapes.png",
+    "truth": [
+      "red rectangle",
+      "blue circle right of red rectangle",
+      "yellow triangle below red rectangle",
+      "green rectangle below blue circle"
+    ]
+  },
+  {
+    "id": "property_schematic",
+    "path": "controls/unlabelled_property_schematic.png",
+    "truth": [
+      "road at bottom",
+      "driveway connects road to house",
+      "house with red roof",
+      "pool right of house",
+      "neighbour building left of house",
+      "tree above pool",
+      "boundary surrounds scene"
+    ]
+  },
+  {
+    "id": "neutral_multiview",
+    "path": "controls/neutral_multiview_a.png|controls/neutral_multiview_b.png",
+    "truth": [
+      "both views show house with red roof",
+      "pool is visible only in first view",
+      "driveway is visible only in second view",
+      "road is at bottom in both views"
+    ]
+  }
+]

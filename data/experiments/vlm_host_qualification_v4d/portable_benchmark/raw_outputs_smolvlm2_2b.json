@@ -1,0 +1,178 @@
+[
+  {
+    "control_id": "coloured_shapes",
+    "generated_tokens": 24,
+    "image_paths": [
+      "controls/coloured_shapes.png"
+    ],
+    "inference_seconds": 103.98272709999583,
+    "message_image_bindings": 1,
+    "model_key": "smolvlm2_2b",
+    "prompt": "Describe only what is visibly present in this image. Do not infer hidden details.",
+    "prompt_id": "natural_caption",
+    "raw_decoded_response": " The image contains four shapes: a red square, a blue circle, a yellow triangle, and a green rectangle.",
+    "rss_after_bytes": 8087597056,
+    "rss_before_bytes": 474935296,
+    "score": {
+      "factual_score": 1,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [
+        "red rectangle"
+      ],
+      "truth_count": 4,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "coloured_shapes",
+    "generated_tokens": 12,
+    "image_paths": [
+      "controls/coloured_shapes.png"
+    ],
+    "inference_seconds": 76.53589320000174,
+    "message_image_bindings": 1,
+    "model_key": "smolvlm2_2b",
+    "prompt": "Describe visible objects and their spatial relationships. State UNKNOWN when a requested relationship is not visible. Do not infer hidden details.",
+    "prompt_id": "spatial_inspection",
+    "raw_decoded_response": " red square, blue circle, yellow triangle, green rectangle",
+    "rss_after_bytes": 8631623680,
+    "rss_before_bytes": 7803027456,
+    "score": {
+      "factual_score": 1,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [
+        "red rectangle"
+      ],
+      "truth_count": 4,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "coloured_shapes",
+    "generated_tokens": 4,
+    "image_paths": [
+      "controls/coloured_shapes.png"
+    ],
+    "inference_seconds": 80.52667350000411,
+    "message_image_bindings": 1,
+    "model_key": "smolvlm2_2b",
+    "prompt": "Inspect this diagram as a neutral scene. Say whether a road, driveway, house, pool, neighbour building, roof, tree, or boundary is visibly present, and describe only visible spatial relations. Use UNKNOWN for anything not visible.",
+    "prompt_id": "targeted_architecture",
+    "raw_decoded_response": " UNKNOWN",
+    "rss_after_bytes": 8741109760,
+    "rss_before_bytes": 8340590592,
+    "score": {
+      "factual_score": 0,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [],
+      "truth_count": 4,
+      "unknown_used": true
+    }
+  },
+  {
+    "control_id": "property_schematic",
+    "generated_tokens": 70,
+    "image_paths": [
+      "controls/unlabelled_property_schematic.png"
+    ],
+    "inference_seconds": 111.53595589999895,
+    "message_image_bindings": 1,
+    "model_key": "smolvlm2_2b",
+    "prompt": "Describe only what is visibly present in this image. Do not infer hidden details.",
+    "prompt_id": "natural_caption",
+    "raw_decoded_response": " The image is a simple illustration of a house and a tree. The house is depicted with a gray roof and a brown body. The tree is shown with a green top and a brown trunk. The house and tree are placed within a square frame, which is colored in light green. The background of the image is a darker shade of green.",
+    "rss_after_bytes": 8659173376,
+    "rss_before_bytes": 8577499136,
+    "score": {
+      "factual_score": 1,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [
+        "house with red roof"
+      ],
+      "truth_count": 7,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "property_schematic",
+    "generated_tokens": 180,
+    "image_paths": [
+      "controls/unlabelled_property_schematic.png"
+    ],
+    "inference_seconds": 185.9267256000021,
+    "message_image_bindings": 1,
+    "model_key": "smolvlm2_2b",
+    "prompt": "Describe visible objects and their spatial relationships. State UNKNOWN when a requested relationship is not visible. Do not infer hidden details.",
+    "prompt_id": "spatial_inspection",
+    "raw_decoded_response": " The house has a red roof. The house has a brown floor. The house has a blue door. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green circle. The house has a blue circle. The house has a green",
+    "rss_after_bytes": 7738855424,
+    "rss_before_bytes": 8360058880,
+    "score": {
+      "factual_score": 1,
+      "hallucination_count": 1,
+      "hallucination_terms": [
+        "door"
+      ],
+      "matched_truth": [
+        "house with red roof"
+      ],
+      "truth_count": 7,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "property_schematic",
+    "generated_tokens": 19,
+    "image_paths": [
+      "controls/unlabelled_property_schematic.png"
+    ],
+    "inference_seconds": 85.80920559999504,
+    "message_image_bindings": 1,
+    "model_key": "smolvlm2_2b",
+    "prompt": "Inspect this diagram as a neutral scene. Say whether a road, driveway, house, pool, neighbour building, roof, tree, or boundary is visibly present, and describe only visible spatial relations. Use UNKNOWN for anything not visible.",
+    "prompt_id": "targeted_architecture",
+    "raw_decoded_response": " Neighbour building, road, tree, pool, driveway, roof, boundary, house",
+    "rss_after_bytes": 8668987392,
+    "rss_before_bytes": 7510970368,
+    "score": {
+      "factual_score": 3,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [
+        "driveway connects road to house",
+        "tree above pool",
+        "boundary surrounds scene"
+      ],
+      "truth_count": 7,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "neutral_multiview",
+    "generated_tokens": 8,
+    "image_paths": [
+      "controls/neutral_multiview_a.png",
+      "controls/neutral_multiview_b.png"
+    ],
+    "inference_seconds": 134.93530470000405,
+    "message_image_bindings": 2,
+    "model_key": "smolvlm2_2b",
+    "prompt": "Describe visible objects and their spatial relationships. State UNKNOWN when a requested relationship is not visible. Do not infer hidden details.",
+    "prompt_id": "spatial_inspection",
+    "raw_decoded_response": " The house is on the ground.",
+    "rss_after_bytes": 9260847104,
+    "rss_before_bytes": 8581439488,
+    "score": {
+      "factual_score": 0,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [],
+      "truth_count": 4,
+      "unknown_used": false
+    }
+  }
+]

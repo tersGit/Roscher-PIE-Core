@@ -1,0 +1,18 @@
+{
+  "benchmark_version": "V4C-portable-neutral-unchanged",
+  "controls": [
+    "controls/coloured_shapes.png",
+    "controls/neutral_multiview_a.png",
+    "controls/neutral_multiview_b.png",
+    "controls/unlabelled_property_schematic.png"
+  ],
+  "prompts": {
+    "natural_caption": "Describe only what is visibly present in this image. Do not infer hidden details.",
+    "spatial_inspection": "Describe visible objects and their spatial relationships. State UNKNOWN when a requested relationship is not visible. Do not infer hidden details.",
+    "targeted_architecture": "Inspect this diagram as a neutral scene. Say whether a road, driveway, house, pool, neighbour building, roof, tree, or boundary is visibly present, and describe only visible spatial relations. Use UNKNOWN for anything not visible."
+  },
+  "acceptance": {
+    "threshold": "Correct E-L relationships, no material hallucination, and materially better image-dependent spatial behavior than the 256M baseline.",
+    "required_preservation": ["raw response", "wall-clock inference seconds", "RSS before and after", "model identifier", "model revision or artifact digest", "runtime and device"]
+  }
+}
