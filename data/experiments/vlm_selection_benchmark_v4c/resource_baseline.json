@@ -1,0 +1,23 @@
+{
+  "available_ram_gib_at_initial_capture": 4.48,
+  "capture_scope": "CPU-only neutral V4C environment baseline",
+  "cpu": "AMD Ryzen 7 7730U with Radeon Graphics",
+  "cuda_available": false,
+  "dependency_installations": [
+    "accelerate 1.14.0",
+    "qwen-vl-utils 0.0.14",
+    "sentencepiece 0.2.2",
+    "num2words 0.5.14"
+  ],
+  "free_disk_gib_after_models": 42.79,
+  "free_disk_gib_at_initial_capture": 57.71,
+  "llama_cpp_python": "unavailable: no CPython 3.14 Windows binary wheel",
+  "logical_processors": 16,
+  "ollama": "unavailable",
+  "physical_cores": 8,
+  "python": "3.14.6",
+  "selected_runtime": "Transformers CPU; model dtype is recorded per model",
+  "torch": "2.13.0+cpu",
+  "total_ram_gib": 15.31,
+  "transformers": "5.14.1"
+}

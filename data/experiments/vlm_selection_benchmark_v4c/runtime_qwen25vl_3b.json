@@ -1,0 +1,32 @@
+{
+  "device": "cpu",
+  "dtype": "bfloat16",
+  "free_disk_bytes_after": 45949128704,
+  "model_files": [
+    {
+      "path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-glowing-enigma\\data\\experiments\\vlm_selection_benchmark_v4c\\controls\\coloured_shapes.png",
+      "sha256": "4e3677decfac16ee0453d99f44dbe818060afddeb9f01ba9f4515ca071b64bde"
+    },
+    {
+      "path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-glowing-enigma\\data\\experiments\\vlm_selection_benchmark_v4c\\controls\\neutral_multiview_a.png",
+      "sha256": "c01d3caa653cc3c2a74907b5da762f12f2b21f824fb0b039bf273140d650be95"
+    },
+    {
+      "path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-glowing-enigma\\data\\experiments\\vlm_selection_benchmark_v4c\\controls\\neutral_multiview_b.png",
+      "sha256": "8f53065c6594d4210849fae1998665c68c4ca295d418e3d24f6c78d1b6330eda"
+    },
+    {
+      "path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-glowing-enigma\\data\\experiments\\vlm_selection_benchmark_v4c\\controls\\unlabelled_property_schematic.png",
+      "sha256": "4e0cd490b03a0b071e72b5bd552a2fa71e5a10cf18e0efed1519562c0a44d5ed"
+    }
+  ],
+  "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "model_load_seconds": 2626.221733300001,
+  "multi_image_supported": true,
+  "parameters": "3.7546B",
+  "python": "3.14.6",
+  "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+  "runtime": "Transformers CPU bfloat16",
+  "torch": "2.13.0+cpu",
+  "transformers": "5.14.1"
+}

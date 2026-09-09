@@ -1,0 +1,176 @@
+[
+  {
+    "control_id": "coloured_shapes",
+    "generated_tokens": 32,
+    "image_paths": [
+      "controls/coloured_shapes.png"
+    ],
+    "inference_seconds": 119.34907509999903,
+    "message_image_bindings": 1,
+    "model_key": "qwen25vl_3b",
+    "prompt": "Describe only what is visibly present in this image. Do not infer hidden details.",
+    "prompt_id": "natural_caption",
+    "raw_decoded_response": "The image contains four geometric shapes:\n\n1. A red rectangle.\n2. A blue circle.\n3. A yellow triangle.\n4. A green rectangle.",
+    "rss_after_bytes": 7614537728,
+    "rss_before_bytes": 507125760,
+    "score": {
+      "factual_score": 1,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [
+        "red rectangle"
+      ],
+      "truth_count": 4,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "coloured_shapes",
+    "generated_tokens": 87,
+    "image_paths": [
+      "controls/coloured_shapes.png"
+    ],
+    "inference_seconds": 139.60687889999826,
+    "message_image_bindings": 1,
+    "model_key": "qwen25vl_3b",
+    "prompt": "Describe visible objects and their spatial relationships. State UNKNOWN when a requested relationship is not visible. Do not infer hidden details.",
+    "prompt_id": "spatial_inspection",
+    "raw_decoded_response": "The image contains four shapes: a red rectangle, a blue circle, a yellow triangle, and a green rectangle. The shapes are arranged in a 2x2 grid with the red rectangle on the top left, the blue circle on the top right, the yellow triangle on the bottom left, and the green rectangle on the bottom right. There are no other objects or relationships between the shapes that can be determined from the image.",
+    "rss_after_bytes": 7593754624,
+    "rss_before_bytes": 7625789440,
+    "score": {
+      "factual_score": 2,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [
+        "red rectangle",
+        "blue circle right of red rectangle"
+      ],
+      "truth_count": 4,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "coloured_shapes",
+    "generated_tokens": 46,
+    "image_paths": [
+      "controls/coloured_shapes.png"
+    ],
+    "inference_seconds": 125.3534673000031,
+    "message_image_bindings": 1,
+    "model_key": "qwen25vl_3b",
+    "prompt": "Inspect this diagram as a neutral scene. Say whether a road, driveway, house, pool, neighbour building, roof, tree, or boundary is visibly present, and describe only visible spatial relations. Use UNKNOWN for anything not visible.",
+    "prompt_id": "targeted_architecture",
+    "raw_decoded_response": "There is no road, driveway, house, pool, neighbour building, roof, tree, or boundary in the image. The objects present are a red rectangle, a blue circle, a yellow triangle, and a green rectangle.",
+    "rss_after_bytes": 7594024960,
+    "rss_before_bytes": 7595679744,
+    "score": {
+      "factual_score": 1,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [
+        "red rectangle"
+      ],
+      "truth_count": 4,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "property_schematic",
+    "generated_tokens": 81,
+    "image_paths": [
+      "controls/unlabelled_property_schematic.png"
+    ],
+    "inference_seconds": 318.7831240000014,
+    "message_image_bindings": 1,
+    "model_key": "qwen25vl_3b",
+    "prompt": "Describe only what is visibly present in this image. Do not infer hidden details.",
+    "prompt_id": "natural_caption",
+    "raw_decoded_response": "The image contains several geometric shapes placed within a rectangular frame:\n\n1. A blue circle on the right side.\n2. A green circle at the top right corner.\n3. A red triangle with a brown base and a light brown triangle on its left side, forming a house-like structure.\n4. A gray square on the left side of the image.\n\nThe background of the image is light green.",
+    "rss_after_bytes": 7623929856,
+    "rss_before_bytes": 7606996992,
+    "score": {
+      "factual_score": 0,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [],
+      "truth_count": 7,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "property_schematic",
+    "generated_tokens": 77,
+    "image_paths": [
+      "controls/unlabelled_property_schematic.png"
+    ],
+    "inference_seconds": 326.561864700001,
+    "message_image_bindings": 1,
+    "model_key": "qwen25vl_3b",
+    "prompt": "Describe visible objects and their spatial relationships. State UNKNOWN when a requested relationship is not visible. Do not infer hidden details.",
+    "prompt_id": "spatial_inspection",
+    "raw_decoded_response": "The image contains the following objects:\n\n1. A blue circle on the right side.\n2. A green circle in the top right corner.\n3. A red triangle with a brown base, located in the center of the image.\n4. A gray square on the left side.\n\nThere are no other objects or specific spatial relationships between these objects that can be determined from the image.",
+    "rss_after_bytes": 7578783744,
+    "rss_before_bytes": 7635202048,
+    "score": {
+      "factual_score": 0,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [],
+      "truth_count": 7,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "property_schematic",
+    "generated_tokens": 180,
+    "image_paths": [
+      "controls/unlabelled_property_schematic.png"
+    ],
+    "inference_seconds": 366.9199241000024,
+    "message_image_bindings": 1,
+    "model_key": "qwen25vl_3b",
+    "prompt": "Inspect this diagram as a neutral scene. Say whether a road, driveway, house, pool, neighbour building, roof, tree, or boundary is visibly present, and describe only visible spatial relations. Use UNKNOWN for anything not visible.",
+    "prompt_id": "targeted_architecture",
+    "raw_decoded_response": "The diagram shows the following elements:\n\n- **Roof**: There are two roofs in the image.\n  - One is a triangular roof on the left side.\n  - The other is a sloped roof on the right side of the brown structure.\n\n- **House**: There is a brown house with a red roof in the center-right part of the image.\n\n- **Boundary**: The entire image is enclosed within a rectangular boundary.\n\n- **Pool**: There is a blue circular object that resembles a pool located to the right of the house.\n\n- **Neighbour Building**: There is another building to the left of the house, which appears to be a separate structure.\n\n- **Tree**: There is a green circular object that resembles a tree located above the pool.\n\n- **Road/Driveway**: There is no visible road or driveway in the image.\n\n- **Boundary**: The entire image is enclosed",
+    "rss_after_bytes": 7578640384,
+    "rss_before_bytes": 7584899072,
+    "score": {
+      "factual_score": 4,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [
+        "house with red roof",
+        "pool right of house",
+        "neighbour building left of house",
+        "tree above pool"
+      ],
+      "truth_count": 7,
+      "unknown_used": false
+    }
+  },
+  {
+    "control_id": "neutral_multiview",
+    "generated_tokens": 89,
+    "image_paths": [
+      "controls/neutral_multiview_a.png",
+      "controls/neutral_multiview_b.png"
+    ],
+    "inference_seconds": 231.41873470000428,
+    "message_image_bindings": 2,
+    "model_key": "qwen25vl_3b",
+    "prompt": "Describe visible objects and their spatial relationships. State UNKNOWN when a requested relationship is not visible. Do not infer hidden details.",
+    "prompt_id": "spatial_inspection",
+    "raw_decoded_response": "The image shows a simple geometric shape composed of two distinct parts:\n\n1. **Rectangle**: This part is colored in brown and has a triangular roof on top.\n2. **Circle**: This part is colored in blue and is positioned to the right of the rectangle.\n\nThere are no other objects or relationships between these shapes that can be determined from the image. The background is light green, and the bottom part of the image is dark gray.",
+    "rss_after_bytes": 7606337536,
+    "rss_before_bytes": 7610896384,
+    "score": {
+      "factual_score": 0,
+      "hallucination_count": 0,
+      "hallucination_terms": [],
+      "matched_truth": [],
+      "truth_count": 4,
+      "unknown_used": false
+    }
+  }
+]
