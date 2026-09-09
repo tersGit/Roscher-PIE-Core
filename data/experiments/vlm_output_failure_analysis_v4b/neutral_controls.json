@@ -1,0 +1,24 @@
+[
+  {
+    "expected_visible_facts": [
+      "red rectangle",
+      "blue circle",
+      "yellow triangle",
+      "green rectangle"
+    ],
+    "id": "basic_geometric_scene",
+    "path": "controls/basic_geometric_scene.png",
+    "provenance": "Generated locally by this script; no PIE/listing source."
+  },
+  {
+    "expected_visible_facts": [
+      "road at the front/bottom",
+      "driveway connects road to house",
+      "pool beside the house",
+      "neighbour placed left of house"
+    ],
+    "id": "layout_scene",
+    "path": "controls/road_driveway_house_pool_neighbour_layout.png",
+    "provenance": "Generated locally by this script; no PIE/listing source."
+  }
+]

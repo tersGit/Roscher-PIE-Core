@@ -1,0 +1,76 @@
+[
+  {
+    "frozen_path": "data/experiments/listing_visual_intelligence_v4/blind_execution_20260909/LVI_V4_RAW_SINGLE_FRAME_OUTPUTS.jsonl",
+    "record_count": 32,
+    "representative_raw_records": [
+      {
+        "inference_seconds": 23.287265499999194,
+        "kind": "single_frame",
+        "listing_id": "117539389",
+        "prompt": "Inspect only what is visibly supported in this image. Return one JSON object with\nthe keys house_storeys, roof, pool, outbuilding_lapa, driveway, garage, road, walls_boundaries,\ngarden_trees, solar, neighbours, distinctive_features, visibility_limits. Every value must be an\nobject containing status (OBSERVED or UNKNOWN_NOT_VISIBLE), evidence, confidence (HIGH/MEDIUM/LOW),\nand occlusion. Describe roof colour/material/pitch/form, pool contour and only visible relationship\nto house/boundary, and neighbour roof form/colour/pitch only when directly visible. Do not guess,\ndo not invent directions, do not use pool water colour, and do not infer solar from electrical equipment.",
+        "raw_id": "single-117539389-001",
+        "raw_response": " Green",
+        "source_frames": "117539389-001",
+        "source_type": "still"
+      },
+      {
+        "inference_seconds": 11.873913799998263,
+        "kind": "single_frame",
+        "listing_id": "117539389",
+        "prompt": "Inspect only what is visibly supported in this image. Return one JSON object with\nthe keys house_storeys, roof, pool, outbuilding_lapa, driveway, garage, road, walls_boundaries,\ngarden_trees, solar, neighbours, distinctive_features, visibility_limits. Every value must be an\nobject containing status (OBSERVED or UNKNOWN_NOT_VISIBLE), evidence, confidence (HIGH/MEDIUM/LOW),\nand occlusion. Describe roof colour/material/pitch/form, pool contour and only visible relationship\nto house/boundary, and neighbour roof form/colour/pitch only when directly visible. Do not guess,\ndo not invent directions, do not use pool water colour, and do not infer solar from electrical equipment.",
+        "raw_id": "single-117539389-005",
+        "raw_response": " Green.",
+        "source_frames": "117539389-005",
+        "source_type": "still"
+      },
+      {
+        "inference_seconds": 17.40431829999943,
+        "kind": "single_frame",
+        "listing_id": "117539389",
+        "prompt": "Inspect only what is visibly supported in this image. Return one JSON object with\nthe keys house_storeys, roof, pool, outbuilding_lapa, driveway, garage, road, walls_boundaries,\ngarden_trees, solar, neighbours, distinctive_features, visibility_limits. Every value must be an\nobject containing status (OBSERVED or UNKNOWN_NOT_VISIBLE), evidence, confidence (HIGH/MEDIUM/LOW),\nand occlusion. Describe roof colour/material/pitch/form, pool contour and only visible relationship\nto house/boundary, and neighbour roof form/colour/pitch only when directly visible. Do not guess,\ndo not invent directions, do not use pool water colour, and do not infer solar from electrical equipment.",
+        "raw_id": "single-117539389-008",
+        "raw_response": " White",
+        "source_frames": "117539389-008",
+        "source_type": "still"
+      }
+    ],
+    "sha256": "1ea7046b4b69fee8d244107f7e336bd4e6995317820316bc3b274381a29cee74"
+  },
+  {
+    "frozen_path": "data/experiments/listing_visual_intelligence_v4/blind_execution_20260909/LVI_V4_RAW_MULTI_FRAME_OUTPUTS.jsonl",
+    "record_count": 8,
+    "representative_raw_records": [
+      {
+        "inference_seconds": 132.97746430000188,
+        "kind": "multi_frame",
+        "listing_id": "117539389",
+        "prompt": "These are multiple related listing images. Return one JSON object with keys\nrepeated_objects, relationships, contradictions, unknowns. For each relationship, use only\nOBSERVED, INFERRED, or UNKNOWN_NOT_VISIBLE and state supporting frame positions. Evaluate only\nvisibly defensible ROAD->DRIVEWAY->GARAGE->HOUSE->POOL->BOUNDARIES->NEIGHBOURS relationships,\nusing relative wording rather than compass directions. Do not guess, invent a route, use pool water\ncolour, or infer solar from electrical equipment.",
+        "raw_id": "multi-117539389-01",
+        "raw_response": " Unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_visible_relationships, unknown_not_",
+        "source_frames": "117539389-001|117539389-005|117539389-008|117539389-012",
+        "source_type": "still"
+      },
+      {
+        "inference_seconds": 70.71592210000017,
+        "kind": "multi_frame",
+        "listing_id": "117539389",
+        "prompt": "These are multiple related listing images. Return one JSON object with keys\nrepeated_objects, relationships, contradictions, unknowns. For each relationship, use only\nOBSERVED, INFERRED, or UNKNOWN_NOT_VISIBLE and state supporting frame positions. Evaluate only\nvisibly defensible ROAD->DRIVEWAY->GARAGE->HOUSE->POOL->BOUNDARIES->NEIGHBOURS relationships,\nusing relative wording rather than compass directions. Do not guess, invent a route, use pool water\ncolour, or infer solar from electrical equipment.",
+        "raw_id": "multi-117539389-02",
+        "raw_response": " Unknown_not_visible.",
+        "source_frames": "117539389-016|117539389-020|117539389-023|117539389-027",
+        "source_type": "still"
+      },
+      {
+        "inference_seconds": 70.50953220000156,
+        "kind": "multi_frame",
+        "listing_id": "117539389",
+        "prompt": "These are multiple related listing images. Return one JSON object with keys\nrepeated_objects, relationships, contradictions, unknowns. For each relationship, use only\nOBSERVED, INFERRED, or UNKNOWN_NOT_VISIBLE and state supporting frame positions. Evaluate only\nvisibly defensible ROAD->DRIVEWAY->GARAGE->HOUSE->POOL->BOUNDARIES->NEIGHBOURS relationships,\nusing relative wording rather than compass directions. Do not guess, invent a route, use pool water\ncolour, or infer solar from electrical equipment.",
+        "raw_id": "multi-117539389-03",
+        "raw_response": " Unknown_not_visible.",
+        "source_frames": "117539389-031|117539389-035|117539389-038|117539389-042",
+        "source_type": "still"
+      }
+    ],
+    "sha256": "d6d384748be70a83c1bbf26d6b8c084e982b0bc137aa229881eabd3155054474"
+  }
+]
