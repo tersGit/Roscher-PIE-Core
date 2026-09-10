@@ -1,0 +1,46 @@
+{
+  "schema_version": "waterfall-w2-vlm-comparison-v1",
+  "candidate": {
+    "official_rank": "integer",
+    "stand": "string",
+    "extension": "integer",
+    "property_id": "string"
+  },
+  "fields": [
+    "pool",
+    "house_roof",
+    "house_pool_relation",
+    "driveway_garage",
+    "parcel_context",
+    "neighbour_context"
+  ],
+  "per_field": {
+    "verdict": [
+      "MATCH",
+      "PARTIAL",
+      "CONFLICT",
+      "UNKNOWN"
+    ],
+    "confidence": "0..1",
+    "reason": "string"
+  },
+  "output": {
+    "overall_compat": "MATCH|PARTIAL|CONFLICT|UNKNOWN",
+    "supports": [
+      "string"
+    ],
+    "conflicts": [
+      "string"
+    ],
+    "unknowns": [
+      "string"
+    ]
+  },
+  "constraints": [
+    "No identity declaration or address/name metadata.",
+    "UNKNOWN cannot cause hard rejection.",
+    "Do not assume common or neighbour facilities are owned by the candidate.",
+    "Stand size is informational only (<=5%) and not a major discriminator.",
+    "Record detector/VLM disagreement without resolving it."
+  ]
+}

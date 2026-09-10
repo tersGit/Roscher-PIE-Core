@@ -1,0 +1,151 @@
+{
+  "schema_version": "waterfall-w2-listing-observations-v1-sanitized-export",
+  "source_sha256": "2e354ad931df2fdfa7dd509f73a0551ee6e3d934cb265dcbe4e47e8ef7fba2b4",
+  "listing_reference": "RL5480",
+  "ground_truth_recovery": "NOT_STARTED",
+  "observations": [
+    {
+      "feature": "pool",
+      "state": "YES",
+      "confidence": 0.99,
+      "source_images": [
+        2,
+        8,
+        9,
+        10,
+        11,
+        12,
+        34,
+        35,
+        48
+      ],
+      "expected_aerial_visibility": "HIGH",
+      "detail": "A private in-ground pool is repeatedly visible behind the house."
+    },
+    {
+      "feature": "pool_shape",
+      "state": "YES",
+      "confidence": 0.84,
+      "source_images": [
+        2,
+        8,
+        9,
+        10,
+        11,
+        12,
+        34,
+        35,
+        48
+      ],
+      "expected_aerial_visibility": "HIGH",
+      "detail": "Multiple elevated oblique views support a broad curvilinear/kidney-like pool outline; exact nadir contour remains uncertain."
+    },
+    {
+      "feature": "house_roof_structure",
+      "state": "YES",
+      "confidence": 0.78,
+      "source_images": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        34,
+        35,
+        48
+      ],
+      "expected_aerial_visibility": "MEDIUM",
+      "detail": "Large two-storey residence with multi-plane pitched tiled roof and rear covered entertainment patio."
+    },
+    {
+      "feature": "driveway_garage",
+      "state": "YES",
+      "confidence": 0.9,
+      "source_images": [
+        1,
+        6,
+        7
+      ],
+      "expected_aerial_visibility": "MEDIUM",
+      "detail": "Paved front approach leads directly to three adjacent automated garage doors; complete driveway extent is not visible."
+    },
+    {
+      "feature": "boundary_street",
+      "state": "YES",
+      "confidence": 0.7,
+      "source_images": [
+        1,
+        6,
+        7
+      ],
+      "expected_aerial_visibility": "LOW",
+      "detail": "Brick perimeter wall, mature landscaped front garden, and broad paved street-side approach are visible; full street geometry is incomplete."
+    },
+    {
+      "feature": "neighbours",
+      "state": "UNKNOWN",
+      "confidence": 0.2,
+      "source_images": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        34,
+        35,
+        48
+      ],
+      "expected_aerial_visibility": "MEDIUM",
+      "detail": "Listing views do not provide sufficient unobscured neighbouring-parcel evidence."
+    },
+    {
+      "feature": "landscape_open_space",
+      "state": "YES",
+      "confidence": 0.68,
+      "source_images": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        34,
+        35,
+        48
+      ],
+      "expected_aerial_visibility": "MEDIUM",
+      "detail": "Established garden and lawn are visible. The green-belt setting is retained as a listing claim, not identity evidence."
+    },
+    {
+      "feature": "aerial_visible_features",
+      "state": "YES",
+      "confidence": 0.7,
+      "source_images": [
+        2,
+        8,
+        9,
+        10,
+        11,
+        12,
+        34,
+        35,
+        48,
+        8,
+        9,
+        10,
+        11,
+        12,
+        34,
+        35,
+        48
+      ],
+      "expected_aerial_visibility": "HIGH",
+      "detail": "Pool, large roof mass, rear patio/deck, and substantial garden should be aerially discernible."
+    }
+  ]
+}

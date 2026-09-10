@@ -1,0 +1,35 @@
+{
+  "schema_version": "vlm-evidence-adapter-v1",
+  "diagnostic_only": true,
+  "production_integration": "PROHIBITED",
+  "observation_fields": {
+    "source_image_or_frame": "required string",
+    "feature": "required string",
+    "observation": "required string",
+    "state": [
+      "OBSERVED",
+      "INFERRED",
+      "UNKNOWN"
+    ],
+    "confidence": "number 0..1 subject to caps",
+    "aerial_relevance": [
+      "HIGH",
+      "MEDIUM",
+      "LOW",
+      "UNKNOWN"
+    ],
+    "caveat": "required string"
+  },
+  "confidence_caps": {
+    "direct_visible": 1.0,
+    "perspective_form": 0.85,
+    "cross_view_relation_unless_directly_visible": 0.8,
+    "ownership_parcel_neighbour_membership_unless_independent_gis_proves": 0.4
+  },
+  "rules": [
+    "Never convert not-visible to NO.",
+    "Compass is UNKNOWN unless independently proven.",
+    "Total garage counts are UNKNOWN unless complete frontage is visibly covered.",
+    "Observations are not hard truth, hard gates, or ranking changes."
+  ]
+}

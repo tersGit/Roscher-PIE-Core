@@ -1,0 +1,300 @@
+{
+  "schema_version": "waterfall-w2-vlm-portable-manifest-v1",
+  "created_utc": "2026-09-10T09:15:45Z",
+  "scope": "post-freeze visual diagnostic only; target identity remains UNKNOWN",
+  "ground_truth_recovery": "NOT_STARTED",
+  "frozen_inputs": {
+    "w1_geojson_sha256": "6a375bf542bcff28c6a3ee862f9e0c3c9a5395d0497b4159027c40b75cf7be3a",
+    "listing_visual_sha256": "2e354ad931df2fdfa7dd509f73a0551ee6e3d934cb265dcbe4e47e8ef7fba2b4",
+    "ranking_sha256": "93b488bef582d5a97f5dc034cca4eded86520912ac6cebec28620cbd149b4a0e"
+  },
+  "listing_image_count": 5,
+  "candidate_image_count": 20,
+  "candidates": [
+    {
+      "official_rank": 1,
+      "stand": "972",
+      "extension": 19,
+      "property_id": "2033220",
+      "official_score": 0.7878,
+      "native15_crop": "portable_package/candidates/rank_01_stand_972_ext_19_id_2033220_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_01_stand_972_ext_19_id_2033220_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    },
+    {
+      "official_rank": 2,
+      "stand": "838",
+      "extension": 19,
+      "property_id": "2032570",
+      "official_score": 0.7829,
+      "native15_crop": "portable_package/candidates/rank_02_stand_838_ext_19_id_2032570_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_02_stand_838_ext_19_id_2032570_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    },
+    {
+      "official_rank": 3,
+      "stand": "1018",
+      "extension": 19,
+      "property_id": "2033278",
+      "official_score": 0.7771,
+      "native15_crop": "portable_package/candidates/rank_03_stand_1018_ext_19_id_2033278_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_03_stand_1018_ext_19_id_2033278_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    },
+    {
+      "official_rank": 4,
+      "stand": "906",
+      "extension": 19,
+      "property_id": "2033195",
+      "official_score": 0.7763,
+      "native15_crop": "portable_package/candidates/rank_04_stand_906_ext_19_id_2033195_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_04_stand_906_ext_19_id_2033195_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    },
+    {
+      "official_rank": 5,
+      "stand": "3269",
+      "extension": 105,
+      "property_id": "2083833",
+      "official_score": 0.7751,
+      "native15_crop": "portable_package/candidates/rank_05_stand_3269_ext_105_id_2083833_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_05_stand_3269_ext_105_id_2083833_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    },
+    {
+      "official_rank": 6,
+      "stand": "1002",
+      "extension": 19,
+      "property_id": "2033255",
+      "official_score": 0.7749,
+      "native15_crop": "portable_package/candidates/rank_06_stand_1002_ext_19_id_2033255_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_06_stand_1002_ext_19_id_2033255_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    },
+    {
+      "official_rank": 7,
+      "stand": "3323",
+      "extension": 105,
+      "property_id": "2083663",
+      "official_score": 0.7739,
+      "native15_crop": "portable_package/candidates/rank_07_stand_3323_ext_105_id_2083663_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_07_stand_3323_ext_105_id_2083663_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    },
+    {
+      "official_rank": 8,
+      "stand": "1169",
+      "extension": 19,
+      "property_id": "2032908",
+      "official_score": 0.7739,
+      "native15_crop": "portable_package/candidates/rank_08_stand_1169_ext_19_id_2032908_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_08_stand_1169_ext_19_id_2032908_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    },
+    {
+      "official_rank": 9,
+      "stand": "897",
+      "extension": 19,
+      "property_id": "2033185",
+      "official_score": 0.7734,
+      "native15_crop": "portable_package/candidates/rank_09_stand_897_ext_19_id_2033185_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_09_stand_897_ext_19_id_2033185_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    },
+    {
+      "official_rank": 10,
+      "stand": "1081",
+      "extension": 19,
+      "property_id": "2033104",
+      "official_score": 0.7727,
+      "native15_crop": "portable_package/candidates/rank_10_stand_1081_ext_19_id_2033104_native15.jpg",
+      "parcel_overlay": "portable_package/candidates/rank_10_stand_1081_ext_19_id_2033104_native15_parcel_overlay.jpg",
+      "frozen_detector_pool_region": "NOT_EXPORTED_BY_FROZEN_W2",
+      "frozen_detector_pool_state": "YES"
+    }
+  ],
+  "listing_views": [
+    {
+      "role": "strong_pool_rear",
+      "path": "portable_package/listing_views/strong_pool_rear.jpg"
+    },
+    {
+      "role": "pool_house",
+      "path": "portable_package/listing_views/pool_house.jpg"
+    },
+    {
+      "role": "garage_driveway",
+      "path": "portable_package/listing_views/garage_driveway.jpg"
+    },
+    {
+      "role": "whole_house_roof",
+      "path": "portable_package/listing_views/whole_house_roof.jpg"
+    },
+    {
+      "role": "garden_open_space",
+      "path": "portable_package/listing_views/garden_open_space.jpg"
+    }
+  ],
+  "frozen_listing_observations": "portable_package/frozen_listing_visual_observations.json",
+  "files": [
+    {
+      "path": "portable_package/candidates/rank_01_stand_972_ext_19_id_2033220_native15.jpg",
+      "sha256": "e86a48f491862208136cea63e93e121774cab823f89cf6a9faa7631594f76d47",
+      "bytes": 149684
+    },
+    {
+      "path": "portable_package/candidates/rank_01_stand_972_ext_19_id_2033220_native15_parcel_overlay.jpg",
+      "sha256": "3af578bd67509171e7524954260cb159a6a2b64bf00f84f1202f55543a574d9f",
+      "bytes": 226482
+    },
+    {
+      "path": "portable_package/candidates/rank_02_stand_838_ext_19_id_2032570_native15.jpg",
+      "sha256": "783a76a0a3650311a7435d01b31d351c2da7901acb7aca7387d1a9a86ffd25e2",
+      "bytes": 124898
+    },
+    {
+      "path": "portable_package/candidates/rank_02_stand_838_ext_19_id_2032570_native15_parcel_overlay.jpg",
+      "sha256": "f2090768f6f8bd7154b8022618b98964574655163ff446eae0723b4db682753d",
+      "bytes": 189643
+    },
+    {
+      "path": "portable_package/candidates/rank_03_stand_1018_ext_19_id_2033278_native15.jpg",
+      "sha256": "eebf1449243c394d4bf59ae6aba03fadd6224c47bd21ad157bee0e418a57ee77",
+      "bytes": 149255
+    },
+    {
+      "path": "portable_package/candidates/rank_03_stand_1018_ext_19_id_2033278_native15_parcel_overlay.jpg",
+      "sha256": "58b32a19bdfbf7d78aad6b696c2c8dbac554cb50075652a0180a43b8d3469640",
+      "bytes": 224593
+    },
+    {
+      "path": "portable_package/candidates/rank_04_stand_906_ext_19_id_2033195_native15.jpg",
+      "sha256": "00d97472632c54cb6b82cdcde5b23a63c0017a4668d8e4a6c4f0fc8c79069d9f",
+      "bytes": 133547
+    },
+    {
+      "path": "portable_package/candidates/rank_04_stand_906_ext_19_id_2033195_native15_parcel_overlay.jpg",
+      "sha256": "56fc0c279d62d12d3b5eeadcff2c6cb5776b2cd9a3ad1f55a534c05aaeb1044e",
+      "bytes": 202709
+    },
+    {
+      "path": "portable_package/candidates/rank_05_stand_3269_ext_105_id_2083833_native15.jpg",
+      "sha256": "12502b6e61c8b8cc1eed32749981cee917267bf9a413ef9073f311c182b1ef08",
+      "bytes": 164273
+    },
+    {
+      "path": "portable_package/candidates/rank_05_stand_3269_ext_105_id_2083833_native15_parcel_overlay.jpg",
+      "sha256": "09be1514c8160903241691a4c918745e237f9d982489feebe6725f26b5022e92",
+      "bytes": 250436
+    },
+    {
+      "path": "portable_package/candidates/rank_06_stand_1002_ext_19_id_2033255_native15.jpg",
+      "sha256": "66a167c8b47670e99e8b6465317cdf1a4901ea7856bd0a18de63c304edc7ba40",
+      "bytes": 145145
+    },
+    {
+      "path": "portable_package/candidates/rank_06_stand_1002_ext_19_id_2033255_native15_parcel_overlay.jpg",
+      "sha256": "b67b91708cbd1e76704cf67813ba9a0fd3a0eb215628ab01507a766fdecff66a",
+      "bytes": 219194
+    },
+    {
+      "path": "portable_package/candidates/rank_07_stand_3323_ext_105_id_2083663_native15.jpg",
+      "sha256": "e976d35f3802d2d06f1a39bcf2f43e85fb6e67536db9e83fa38e3565e860d463",
+      "bytes": 158940
+    },
+    {
+      "path": "portable_package/candidates/rank_07_stand_3323_ext_105_id_2083663_native15_parcel_overlay.jpg",
+      "sha256": "3d243ee836e886eafa413aaa1ea3df23e248f2df17bca3a732a22ed12aa81084",
+      "bytes": 242377
+    },
+    {
+      "path": "portable_package/candidates/rank_08_stand_1169_ext_19_id_2032908_native15.jpg",
+      "sha256": "1dad3cddd2760063ecff58c5add6def4163fc3d87bb924aaf612c06d1199139e",
+      "bytes": 135103
+    },
+    {
+      "path": "portable_package/candidates/rank_08_stand_1169_ext_19_id_2032908_native15_parcel_overlay.jpg",
+      "sha256": "83431f8a327648d705c5ea1437d618f6bf65be625a6969bf676f189c171eb949",
+      "bytes": 203558
+    },
+    {
+      "path": "portable_package/candidates/rank_09_stand_897_ext_19_id_2033185_native15.jpg",
+      "sha256": "e374f60e5fd0375b10604e23074cef2215b86aa4967e39cbdb4821d384458c09",
+      "bytes": 146100
+    },
+    {
+      "path": "portable_package/candidates/rank_09_stand_897_ext_19_id_2033185_native15_parcel_overlay.jpg",
+      "sha256": "00c5e49fe10194497f975b4a5c741a50517a9fa9c5c724a9993a352eea9f7a68",
+      "bytes": 222734
+    },
+    {
+      "path": "portable_package/candidates/rank_10_stand_1081_ext_19_id_2033104_native15.jpg",
+      "sha256": "7e4790a710d19f06f3342b5e75b163b5d101b2441fe95427a242ea0a81f2c0e6",
+      "bytes": 141516
+    },
+    {
+      "path": "portable_package/candidates/rank_10_stand_1081_ext_19_id_2033104_native15_parcel_overlay.jpg",
+      "sha256": "3e0816c9d5bfbb08fa0b083076dc7dd27db7b0b0712cff14d7fb7bca32871253",
+      "bytes": 213210
+    },
+    {
+      "path": "portable_package/frozen_listing_visual_observations.json",
+      "sha256": "a0f54745aa2112d25d4664a3794b02eac762b7f1db3f56b29dcf123d17ba376e",
+      "bytes": 3625
+    },
+    {
+      "path": "portable_package/listing_views/garage_driveway.jpg",
+      "sha256": "f69d477f4f1e1bf0deeece52847cdabc4ec9b47349fc26967f3c8b2eb7cd770d",
+      "bytes": 3508077
+    },
+    {
+      "path": "portable_package/listing_views/garden_open_space.jpg",
+      "sha256": "fbe86f246819e19bdd53e91e9b0fef71a4dd024eef3ec48dbc5da097479b4cd1",
+      "bytes": 3660022
+    },
+    {
+      "path": "portable_package/listing_views/pool_house.jpg",
+      "sha256": "0338226aa1bef9e031b013229f6de0fd7ef65131df3d27a79085c9ffc9da2cb2",
+      "bytes": 3608689
+    },
+    {
+      "path": "portable_package/listing_views/strong_pool_rear.jpg",
+      "sha256": "8affc2d6a490f3169617726dab95f0b36402d46cba6d6f33f3cfedec461dcfb5",
+      "bytes": 3814821
+    },
+    {
+      "path": "portable_package/listing_views/whole_house_roof.jpg",
+      "sha256": "ee49565a517d275092150dd563a4e12fff983d3caa2f9173004c0b3e03cc881a",
+      "bytes": 3528224
+    },
+    {
+      "path": "vlm_comparison.schema.json",
+      "sha256": "126005393408dcd5c032d4209768fffdbaa0adaf36713ddd81233ad92b5702e7",
+      "bytes": 1081
+    },
+    {
+      "path": "vlm_evidence_adapter_v1.schema.json",
+      "sha256": "8c0152cc0097782de9e639929244846332940ee06c45dd5b5b6246f409abbfb1",
+      "bytes": 1040
+    },
+    {
+      "path": "W2_TOP10_CONTACT_SHEET.jpg",
+      "sha256": "ddb6dad2073a6db922487f57702b325c3b314a02bbab0dfa346335c842269df5",
+      "bytes": 1067990
+    },
+    {
+      "path": "W2_TOP10_MANUAL_REVIEW.md",
+      "sha256": "b5d004545cafa6d06aa3d04a0da64ab9a349a906fe744d5219fcd49434ba920c",
+      "bytes": 3432
+    }
+  ]
+}
