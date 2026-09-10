@@ -9,6 +9,8 @@ from pathlib import Path
 
 import httpx
 
+from backend.video_acquisition import AcquisitionResult, acquire_youtube_video
+
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
@@ -142,3 +144,13 @@ def download_images(urls: list[str], dest: Path, listing_id: str) -> dict[str, b
             except httpx.HTTPError:
                 continue
     return bodies
+
+
+def download_videos(
+    urls: list[str], dest: Path, *, use_chrome_cookies: bool = False
+) -> list[AcquisitionResult]:
+    """Acquire explicitly supplied listing videos without source discovery."""
+    return [
+        acquire_youtube_video(url, dest, use_chrome_cookies=use_chrome_cookies)
+        for url in urls
+    ]
