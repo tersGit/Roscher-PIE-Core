@@ -1,0 +1,3665 @@
+{
+  "top50": [
+    {
+      "property_id": "2033220",
+      "stand_number": "972",
+      "extension": 19,
+      "area_sqm": 1046.0,
+      "total_score": 0.7878,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.827,
+        "spatial_v2": 0.5,
+        "aerial": 0.9299,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9894,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 60.83,
+        "aspect_ratio": 2.352,
+        "compactness": 0.186,
+        "convexity": 0.5411
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2799
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5948
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1494
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033220_ags_aerial.jpg",
+      "rank": 1
+    },
+    {
+      "property_id": "2032570",
+      "stand_number": "838",
+      "extension": 19,
+      "area_sqm": 1185.0,
+      "total_score": 0.7829,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8268,
+        "spatial_v2": 0.5,
+        "aerial": 0.9415,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8651,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 21.8,
+        "aspect_ratio": 2.656,
+        "compactness": 0.2065,
+        "convexity": 0.5468
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2915
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7354
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.204
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032570_ags_aerial.jpg",
+      "rank": 2
+    },
+    {
+      "property_id": "2033278",
+      "stand_number": "1018",
+      "extension": 19,
+      "area_sqm": 1050.0,
+      "total_score": 0.7771,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8012,
+        "spatial_v2": 0.5,
+        "aerial": 0.9203,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9856,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 33.58,
+        "aspect_ratio": 1.742,
+        "compactness": 0.2448,
+        "convexity": 0.4641
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2703
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5561
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1785
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033278_ags_aerial.jpg",
+      "rank": 3
+    },
+    {
+      "property_id": "2033195",
+      "stand_number": "906",
+      "extension": 19,
+      "area_sqm": 1037.0,
+      "total_score": 0.7763,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8078,
+        "spatial_v2": 0.5,
+        "aerial": 0.8921,
+        "exterior": 0.8921,
+        "gis": 0.5,
+        "stand_size": 0.9981,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 98.83,
+        "aspect_ratio": 2.287,
+        "compactness": 0.2075,
+        "convexity": 0.5412
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2421
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.49
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1538
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033195_ags_aerial.jpg",
+      "rank": 4
+    },
+    {
+      "property_id": "2083833",
+      "stand_number": "3269",
+      "extension": 105,
+      "area_sqm": 1053.0,
+      "total_score": 0.7751,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.817,
+        "spatial_v2": 0.5,
+        "aerial": 0.8713,
+        "exterior": 0.8713,
+        "gis": 0.5,
+        "stand_size": 0.9828,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 44.52,
+        "aspect_ratio": 2.067,
+        "compactness": 0.1458,
+        "convexity": 0.4318
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2213
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6266
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0292
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/105_2083833_ags_aerial.jpg",
+      "rank": 5
+    },
+    {
+      "property_id": "2033255",
+      "stand_number": "1002",
+      "extension": 19,
+      "area_sqm": 1125.0,
+      "total_score": 0.7749,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8023,
+        "spatial_v2": 0.5,
+        "aerial": 0.927,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9167,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 72.33,
+        "aspect_ratio": 2.628,
+        "compactness": 0.1674,
+        "convexity": 0.5079
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.277
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5461
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1555
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033255_ags_aerial.jpg",
+      "rank": 6
+    },
+    {
+      "property_id": "2083663",
+      "stand_number": "3323",
+      "extension": 105,
+      "area_sqm": 1114.0,
+      "total_score": 0.7739,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.794,
+        "spatial_v2": 0.5,
+        "aerial": 0.9394,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9265,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 73.23,
+        "aspect_ratio": 2.353,
+        "compactness": 0.1504,
+        "convexity": 0.5621
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2894
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4791
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0547
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/105_2083663_ags_aerial.jpg",
+      "rank": 7
+    },
+    {
+      "property_id": "2032908",
+      "stand_number": "1169",
+      "extension": 19,
+      "area_sqm": 1050.0,
+      "total_score": 0.7739,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8226,
+        "spatial_v2": 0.5,
+        "aerial": 0.8529,
+        "exterior": 0.8529,
+        "gis": 0.5,
+        "stand_size": 0.9856,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 29.71,
+        "aspect_ratio": 1.903,
+        "compactness": 0.2138,
+        "convexity": 0.4787
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2029
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6738
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2375
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032908_ags_aerial.jpg",
+      "rank": 8
+    },
+    {
+      "property_id": "2033185",
+      "stand_number": "897",
+      "extension": 19,
+      "area_sqm": 1150.0,
+      "total_score": 0.7734,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8035,
+        "spatial_v2": 0.5,
+        "aerial": 0.9197,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8948,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 54.92,
+        "aspect_ratio": 1.942,
+        "compactness": 0.2623,
+        "convexity": 0.6373
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2697
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4874
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2922
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033185_ags_aerial.jpg",
+      "rank": 9
+    },
+    {
+      "property_id": "2033104",
+      "stand_number": "1081",
+      "extension": 19,
+      "area_sqm": 1014.0,
+      "total_score": 0.7727,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8322,
+        "spatial_v2": 0.5,
+        "aerial": 0.8285,
+        "exterior": 0.8285,
+        "gis": 0.5,
+        "stand_size": 0.9799,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 74.91,
+        "aspect_ratio": 2.079,
+        "compactness": 0.1618,
+        "convexity": 0.4837
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.1785
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7296
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1963
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033104_ags_aerial.jpg",
+      "rank": 10
+    },
+    {
+      "property_id": "2073661",
+      "stand_number": "3146",
+      "extension": 39,
+      "area_sqm": 1308.0,
+      "total_score": 0.7725,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8266,
+        "spatial_v2": 0.5,
+        "aerial": 0.8973,
+        "exterior": 0.8973,
+        "gis": 0.5,
+        "stand_size": 0.7682,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 73.33,
+        "aspect_ratio": 1.996,
+        "compactness": 0.2477,
+        "convexity": 0.5577
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2473
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6562
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2324
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/39_2073661_ags_aerial.jpg",
+      "rank": 11
+    },
+    {
+      "property_id": "2033281",
+      "stand_number": "1021",
+      "extension": 19,
+      "area_sqm": 1000.0,
+      "total_score": 0.7723,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.791,
+        "spatial_v2": 0.5,
+        "aerial": 0.9185,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9667,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 105.95,
+        "aspect_ratio": 2.491,
+        "compactness": 0.1793,
+        "convexity": 0.4965
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2685
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6612
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2866
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033281_ags_aerial.jpg",
+      "rank": 12
+    },
+    {
+      "property_id": "2032876",
+      "stand_number": "1154",
+      "extension": 19,
+      "area_sqm": 1218.0,
+      "total_score": 0.7717,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8113,
+        "spatial_v2": 0.5,
+        "aerial": 0.9058,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8379,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 67.06,
+        "aspect_ratio": 2.546,
+        "compactness": 0.1704,
+        "convexity": 0.5069
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2558
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7508
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2431
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032876_ags_aerial.jpg",
+      "rank": 13
+    },
+    {
+      "property_id": "2033184",
+      "stand_number": "896",
+      "extension": 19,
+      "area_sqm": 1150.0,
+      "total_score": 0.7717,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7928,
+        "spatial_v2": 0.5,
+        "aerial": 0.9378,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8948,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 126.54,
+        "aspect_ratio": 1.724,
+        "compactness": 0.2067,
+        "convexity": 0.4618
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2878
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4716
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2102
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033184_ags_aerial.jpg",
+      "rank": 14
+    },
+    {
+      "property_id": "2033352",
+      "stand_number": "964",
+      "extension": 19,
+      "area_sqm": 1158.0,
+      "total_score": 0.7709,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7991,
+        "spatial_v2": 0.5,
+        "aerial": 0.9154,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8879,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 37.96,
+        "aspect_ratio": 2.457,
+        "compactness": 0.2875,
+        "convexity": 0.6974
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2654
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6637
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1508
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033352_ags_aerial.jpg",
+      "rank": 15
+    },
+    {
+      "property_id": "2033089",
+      "stand_number": "1072",
+      "extension": 19,
+      "area_sqm": 1023.0,
+      "total_score": 0.7701,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8002,
+        "spatial_v2": 0.5,
+        "aerial": 0.8753,
+        "exterior": 0.8753,
+        "gis": 0.5,
+        "stand_size": 0.9885,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 82.46,
+        "aspect_ratio": 2.015,
+        "compactness": 0.2114,
+        "convexity": 0.5724
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2253
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4837
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1966
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033089_ags_aerial.jpg",
+      "rank": 16
+    },
+    {
+      "property_id": "2033305",
+      "stand_number": "1027",
+      "extension": 19,
+      "area_sqm": 1102.0,
+      "total_score": 0.7692,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7895,
+        "spatial_v2": 0.5,
+        "aerial": 0.9091,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9373,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 25.63,
+        "aspect_ratio": 3.039,
+        "compactness": 0.1748,
+        "convexity": 0.6182
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2591
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6225
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2541
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033305_ags_aerial.jpg",
+      "rank": 17
+    },
+    {
+      "property_id": "2033232",
+      "stand_number": "982",
+      "extension": 19,
+      "area_sqm": 1125.0,
+      "total_score": 0.7689,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7825,
+        "spatial_v2": 0.5,
+        "aerial": 0.9361,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9167,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 94.41,
+        "aspect_ratio": 2.108,
+        "compactness": 0.142,
+        "convexity": 0.5693
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2861
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5393
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.3078
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033232_ags_aerial.jpg",
+      "rank": 18
+    },
+    {
+      "property_id": "2033028",
+      "stand_number": "1110",
+      "extension": 19,
+      "area_sqm": 1175.0,
+      "total_score": 0.7679,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8121,
+        "spatial_v2": 0.5,
+        "aerial": 0.8716,
+        "exterior": 0.8716,
+        "gis": 0.5,
+        "stand_size": 0.8735,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 109.08,
+        "aspect_ratio": 2.397,
+        "compactness": 0.2028,
+        "convexity": 0.5785
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2216
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6165
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2303
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033028_ags_aerial.jpg",
+      "rank": 19
+    },
+    {
+      "property_id": "2084527",
+      "stand_number": "4071",
+      "extension": 40,
+      "area_sqm": 1289.0,
+      "total_score": 0.7674,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7996,
+        "spatial_v2": 0.5,
+        "aerial": 0.9284,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.7824,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 92.59,
+        "aspect_ratio": 2.347,
+        "compactness": 0.3041,
+        "convexity": 0.6077
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2784
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5595
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1812
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/40_2084527_ags_aerial.jpg",
+      "rank": 20
+    },
+    {
+      "property_id": "2073580",
+      "stand_number": "3137",
+      "extension": 39,
+      "area_sqm": 1207.0,
+      "total_score": 0.767,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7795,
+        "spatial_v2": 0.5,
+        "aerial": 0.9589,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8469,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 82.29,
+        "aspect_ratio": 1.951,
+        "compactness": 0.225,
+        "convexity": 0.5231
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.3089
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.3884
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.052
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/39_2073580_ags_aerial.jpg",
+      "rank": 21
+    },
+    {
+      "property_id": "2084446",
+      "stand_number": "4131",
+      "extension": 40,
+      "area_sqm": 1235.0,
+      "total_score": 0.7664,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.796,
+        "spatial_v2": 0.5,
+        "aerial": 0.9133,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8243,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 100.59,
+        "aspect_ratio": 2.867,
+        "compactness": 0.1723,
+        "convexity": 0.5262
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2633
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5955
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1668
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/40_2084446_ags_aerial.jpg",
+      "rank": 22
+    },
+    {
+      "property_id": "2032907",
+      "stand_number": "1168",
+      "extension": 19,
+      "area_sqm": 1072.0,
+      "total_score": 0.766,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7868,
+        "spatial_v2": 0.5,
+        "aerial": 0.8864,
+        "exterior": 0.8864,
+        "gis": 0.5,
+        "stand_size": 0.9649,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 46.24,
+        "aspect_ratio": 2.072,
+        "compactness": 0.2633,
+        "convexity": 0.6503
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2364
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5789
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2987
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032907_ags_aerial.jpg",
+      "rank": 23
+    },
+    {
+      "property_id": "2033044",
+      "stand_number": "914",
+      "extension": 19,
+      "area_sqm": 1091.0,
+      "total_score": 0.765,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7839,
+        "spatial_v2": 0.5,
+        "aerial": 0.8914,
+        "exterior": 0.8914,
+        "gis": 0.5,
+        "stand_size": 0.9473,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 122.2,
+        "aspect_ratio": 2.428,
+        "compactness": 0.1591,
+        "convexity": 0.5618
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2414
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6283
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1666
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033044_ags_aerial.jpg",
+      "rank": 24
+    },
+    {
+      "property_id": "2033268",
+      "stand_number": "1010",
+      "extension": 19,
+      "area_sqm": 1102.0,
+      "total_score": 0.7646,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7778,
+        "spatial_v2": 0.5,
+        "aerial": 0.9061,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9373,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 30.07,
+        "aspect_ratio": 2.391,
+        "compactness": 0.256,
+        "convexity": 0.61
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2561
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5398
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0672
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033268_ags_aerial.jpg",
+      "rank": 25
+    },
+    {
+      "property_id": "2091326",
+      "stand_number": "4232",
+      "extension": 43,
+      "area_sqm": 844.0,
+      "total_score": 0.7638,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7764,
+        "spatial_v2": 0.5,
+        "aerial": 0.9476,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8315,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 35.53,
+        "aspect_ratio": 1.741,
+        "compactness": 0.2209,
+        "convexity": 0.4763
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2976
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4986
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1758
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/43_2091326_ags_aerial.jpg",
+      "rank": 26
+    },
+    {
+      "property_id": "2033329",
+      "stand_number": "943",
+      "extension": 19,
+      "area_sqm": 1150.0,
+      "total_score": 0.7631,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7607,
+        "spatial_v2": 0.5,
+        "aerial": 0.9622,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8948,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 26.65,
+        "aspect_ratio": 2.574,
+        "compactness": 0.2332,
+        "convexity": 0.6601
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.3122
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6128
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1935
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033329_ags_aerial.jpg",
+      "rank": 27
+    },
+    {
+      "property_id": "2033047",
+      "stand_number": "1087",
+      "extension": 19,
+      "area_sqm": 1077.0,
+      "total_score": 0.762,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7587,
+        "spatial_v2": 0.5,
+        "aerial": 0.9325,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9602,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 54.45,
+        "aspect_ratio": 2.469,
+        "compactness": 0.1328,
+        "convexity": 0.4291
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2825
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6608
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1353
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033047_ags_aerial.jpg",
+      "rank": 28
+    },
+    {
+      "property_id": "2042870",
+      "stand_number": "3016",
+      "extension": 38,
+      "area_sqm": 1280.0,
+      "total_score": 0.761,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.772,
+        "spatial_v2": 0.5,
+        "aerial": 0.9548,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.7892,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 33.69,
+        "aspect_ratio": 2.482,
+        "compactness": 0.1907,
+        "convexity": 0.6015
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.3048
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4099
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2781
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/38_2042870_ags_aerial.jpg",
+      "rank": 29
+    },
+    {
+      "property_id": "2084442",
+      "stand_number": "4129",
+      "extension": 40,
+      "area_sqm": 1235.0,
+      "total_score": 0.7603,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7913,
+        "spatial_v2": 0.5,
+        "aerial": 0.8844,
+        "exterior": 0.8844,
+        "gis": 0.5,
+        "stand_size": 0.8243,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 20.2,
+        "aspect_ratio": 2.352,
+        "compactness": 0.2337,
+        "convexity": 0.5102
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2344
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6856
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1094
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/40_2084442_ags_aerial.jpg",
+      "rank": 30
+    },
+    {
+      "property_id": "2033254",
+      "stand_number": "1001",
+      "extension": 19,
+      "area_sqm": 1125.0,
+      "total_score": 0.7598,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7949,
+        "spatial_v2": 0.5,
+        "aerial": 0.8489,
+        "exterior": 0.8489,
+        "gis": 0.5,
+        "stand_size": 0.9167,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 111.83,
+        "aspect_ratio": 1.961,
+        "compactness": 0.1533,
+        "convexity": 0.4552
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.1989
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4971
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2297
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033254_ags_aerial.jpg",
+      "rank": 31
+    },
+    {
+      "property_id": "2083613",
+      "stand_number": "3309",
+      "extension": 105,
+      "area_sqm": 1121.0,
+      "total_score": 0.7596,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7755,
+        "spatial_v2": 0.5,
+        "aerial": 0.8858,
+        "exterior": 0.8858,
+        "gis": 0.5,
+        "stand_size": 0.9203,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 104.66,
+        "aspect_ratio": 1.89,
+        "compactness": 0.1333,
+        "convexity": 0.4804
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2358
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.3307
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0512
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/105_2083613_ags_aerial.jpg",
+      "rank": 32
+    },
+    {
+      "property_id": "2073520",
+      "stand_number": "3122",
+      "extension": 39,
+      "area_sqm": 1101.0,
+      "total_score": 0.759,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7763,
+        "spatial_v2": 0.5,
+        "aerial": 0.8759,
+        "exterior": 0.8759,
+        "gis": 0.5,
+        "stand_size": 0.9382,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 46.08,
+        "aspect_ratio": 2.372,
+        "compactness": 0.1257,
+        "convexity": 0.3901
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2259
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.586
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1134
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/39_2073520_ags_aerial.jpg",
+      "rank": 33
+    },
+    {
+      "property_id": "2033224",
+      "stand_number": "975",
+      "extension": 19,
+      "area_sqm": 1125.0,
+      "total_score": 0.7589,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7658,
+        "spatial_v2": 0.5,
+        "aerial": 0.9031,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9167,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 45.55,
+        "aspect_ratio": 2.625,
+        "compactness": 0.2052,
+        "convexity": 0.5586
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2531
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5238
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.097
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033224_ags_aerial.jpg",
+      "rank": 34
+    },
+    {
+      "property_id": "2073938",
+      "stand_number": "3202",
+      "extension": 39,
+      "area_sqm": 1311.0,
+      "total_score": 0.7588,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7824,
+        "spatial_v2": 0.5,
+        "aerial": 0.9153,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.7659,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 57.06,
+        "aspect_ratio": 1.945,
+        "compactness": 0.2858,
+        "convexity": 0.6131
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2653
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5146
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1608
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/39_2073938_ags_aerial.jpg",
+      "rank": 35
+    },
+    {
+      "property_id": "2033337",
+      "stand_number": "950",
+      "extension": 19,
+      "area_sqm": 1150.0,
+      "total_score": 0.7587,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7903,
+        "spatial_v2": 0.5,
+        "aerial": 0.8583,
+        "exterior": 0.8583,
+        "gis": 0.5,
+        "stand_size": 0.8948,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 35.32,
+        "aspect_ratio": 2.03,
+        "compactness": 0.2095,
+        "convexity": 0.6051
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2083
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6176
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2174
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033337_ags_aerial.jpg",
+      "rank": 36
+    },
+    {
+      "property_id": "2033110",
+      "stand_number": "1041",
+      "extension": 19,
+      "area_sqm": 1023.0,
+      "total_score": 0.7585,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7638,
+        "spatial_v2": 0.5,
+        "aerial": 0.8838,
+        "exterior": 0.8838,
+        "gis": 0.5,
+        "stand_size": 0.9885,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 52.86,
+        "aspect_ratio": 2.458,
+        "compactness": 0.1592,
+        "convexity": 0.4607
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2338
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6106
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.3156
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033110_ags_aerial.jpg",
+      "rank": 37
+    },
+    {
+      "property_id": "2033109",
+      "stand_number": "1086",
+      "extension": 19,
+      "area_sqm": 1034.0,
+      "total_score": 0.758,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7692,
+        "spatial_v2": 0.5,
+        "aerial": 0.8677,
+        "exterior": 0.8677,
+        "gis": 0.5,
+        "stand_size": 0.999,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 69.13,
+        "aspect_ratio": 2.431,
+        "compactness": 0.1278,
+        "convexity": 0.4308
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2177
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5517
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1919
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033109_ags_aerial.jpg",
+      "rank": 38
+    },
+    {
+      "property_id": "2032884",
+      "stand_number": "1158",
+      "extension": 19,
+      "area_sqm": 1063.0,
+      "total_score": 0.7578,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7769,
+        "spatial_v2": 0.5,
+        "aerial": 0.858,
+        "exterior": 0.858,
+        "gis": 0.5,
+        "stand_size": 0.9733,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 38.74,
+        "aspect_ratio": 2.548,
+        "compactness": 0.2653,
+        "convexity": 0.6564
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.208
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6937
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0871
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032884_ags_aerial.jpg",
+      "rank": 39
+    },
+    {
+      "property_id": "2084569",
+      "stand_number": "4086",
+      "extension": 40,
+      "area_sqm": 1152.0,
+      "total_score": 0.7574,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7493,
+        "spatial_v2": 0.5,
+        "aerial": 0.9497,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8931,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 30.17,
+        "aspect_ratio": 2.806,
+        "compactness": 0.1498,
+        "convexity": 0.4246
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2997
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5374
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1379
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/40_2084569_ags_aerial.jpg",
+      "rank": 40
+    },
+    {
+      "property_id": "2033208",
+      "stand_number": "926",
+      "extension": 19,
+      "area_sqm": 1150.0,
+      "total_score": 0.7573,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7661,
+        "spatial_v2": 0.5,
+        "aerial": 0.8987,
+        "exterior": 0.8987,
+        "gis": 0.5,
+        "stand_size": 0.8948,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 43.57,
+        "aspect_ratio": 2.265,
+        "compactness": 0.2509,
+        "convexity": 0.566
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2487
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5952
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2309
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033208_ags_aerial.jpg",
+      "rank": 41
+    },
+    {
+      "property_id": "2084130",
+      "stand_number": "4036",
+      "extension": 40,
+      "area_sqm": 1017.0,
+      "total_score": 0.7567,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7644,
+        "spatial_v2": 0.5,
+        "aerial": 0.8743,
+        "exterior": 0.8743,
+        "gis": 0.5,
+        "stand_size": 0.9828,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 47.78,
+        "aspect_ratio": 1.581,
+        "compactness": 0.302,
+        "convexity": 0.612
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2243
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5758
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1251
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/40_2084130_ags_aerial.jpg",
+      "rank": 42
+    },
+    {
+      "property_id": "2091328",
+      "stand_number": "4230",
+      "extension": 43,
+      "area_sqm": 669.0,
+      "total_score": 0.7556,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7711,
+        "spatial_v2": 0.5,
+        "aerial": 0.949,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.7021,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 48.95,
+        "aspect_ratio": 2.301,
+        "compactness": 0.1381,
+        "convexity": 0.3899
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.299
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5711
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1873
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/43_2091328_ags_aerial.jpg",
+      "rank": 43
+    },
+    {
+      "property_id": "2042695",
+      "stand_number": "3045",
+      "extension": 38,
+      "area_sqm": 1196.0,
+      "total_score": 0.7555,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.76,
+        "spatial_v2": 0.5,
+        "aerial": 0.9176,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8559,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 88.62,
+        "aspect_ratio": 2.024,
+        "compactness": 0.1119,
+        "convexity": 0.4668
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2676
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6273
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.4314
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/38_2042695_ags_aerial.jpg",
+      "rank": 44
+    },
+    {
+      "property_id": "2032924",
+      "stand_number": "1128",
+      "extension": 19,
+      "area_sqm": 1347.0,
+      "total_score": 0.7554,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7891,
+        "spatial_v2": 0.5,
+        "aerial": 0.8854,
+        "exterior": 0.8854,
+        "gis": 0.5,
+        "stand_size": 0.7397,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 125.58,
+        "aspect_ratio": 2.219,
+        "compactness": 0.2096,
+        "convexity": 0.68
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2354
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7363
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2528
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032924_ags_aerial.jpg",
+      "rank": 45
+    },
+    {
+      "property_id": "2073679",
+      "stand_number": "3179",
+      "extension": 39,
+      "area_sqm": 1252.0,
+      "total_score": 0.7546,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7568,
+        "spatial_v2": 0.5,
+        "aerial": 0.9408,
+        "exterior": 0.8946,
+        "gis": 0.5,
+        "stand_size": 0.8109,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 17.47,
+        "aspect_ratio": 2.694,
+        "compactness": 0.2217,
+        "convexity": 0.5255
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2908
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.1946
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1155
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/39_2073679_ags_aerial.jpg",
+      "rank": 46
+    },
+    {
+      "property_id": "2033025",
+      "stand_number": "1108",
+      "extension": 19,
+      "area_sqm": 1116.0,
+      "total_score": 0.7545,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7762,
+        "spatial_v2": 0.5,
+        "aerial": 0.8549,
+        "exterior": 0.8549,
+        "gis": 0.5,
+        "stand_size": 0.9247,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 50.24,
+        "aspect_ratio": 2.674,
+        "compactness": 0.259,
+        "convexity": 0.6029
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2049
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6864
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.4097
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033025_ags_aerial.jpg",
+      "rank": 47
+    },
+    {
+      "property_id": "2073460",
+      "stand_number": "3085",
+      "extension": 39,
+      "area_sqm": 1007.0,
+      "total_score": 0.7545,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7675,
+        "spatial_v2": 0.5,
+        "aerial": 0.8584,
+        "exterior": 0.8584,
+        "gis": 0.5,
+        "stand_size": 0.9733,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 14.1,
+        "aspect_ratio": 2.84,
+        "compactness": 0.2417,
+        "convexity": 0.6083
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2084
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4493
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.3511
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/39_2073460_ags_aerial.jpg",
+      "rank": 48
+    },
+    {
+      "property_id": "2033331",
+      "stand_number": "945",
+      "extension": 19,
+      "area_sqm": 1120.0,
+      "total_score": 0.7542,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.738,
+        "spatial_v2": 0.5,
+        "aerial": 0.9456,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9212,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 89.34,
+        "aspect_ratio": 2.694,
+        "compactness": 0.2665,
+        "convexity": 0.6542
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2956
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5468
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1735
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033331_ags_aerial.jpg",
+      "rank": 49
+    },
+    {
+      "property_id": "2032873",
+      "stand_number": "1152",
+      "extension": 19,
+      "area_sqm": 1190.0,
+      "total_score": 0.7539,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7609,
+        "spatial_v2": 0.5,
+        "aerial": 0.8994,
+        "exterior": 0.8994,
+        "gis": 0.5,
+        "stand_size": 0.8609,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 104.2,
+        "aspect_ratio": 2.517,
+        "compactness": 0.1682,
+        "convexity": 0.456
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2494
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5768
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1373
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032873_ags_aerial.jpg",
+      "rank": 50
+    }
+  ],
+  "top20": [
+    {
+      "property_id": "2033220",
+      "stand_number": "972",
+      "extension": 19,
+      "area_sqm": 1046.0,
+      "total_score": 0.7878,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.827,
+        "spatial_v2": 0.5,
+        "aerial": 0.9299,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9894,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 60.83,
+        "aspect_ratio": 2.352,
+        "compactness": 0.186,
+        "convexity": 0.5411
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2799
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5948
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1494
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033220_ags_aerial.jpg",
+      "rank": 1
+    },
+    {
+      "property_id": "2032570",
+      "stand_number": "838",
+      "extension": 19,
+      "area_sqm": 1185.0,
+      "total_score": 0.7829,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8268,
+        "spatial_v2": 0.5,
+        "aerial": 0.9415,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8651,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 21.8,
+        "aspect_ratio": 2.656,
+        "compactness": 0.2065,
+        "convexity": 0.5468
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2915
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7354
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.204
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032570_ags_aerial.jpg",
+      "rank": 2
+    },
+    {
+      "property_id": "2033278",
+      "stand_number": "1018",
+      "extension": 19,
+      "area_sqm": 1050.0,
+      "total_score": 0.7771,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8012,
+        "spatial_v2": 0.5,
+        "aerial": 0.9203,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9856,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 33.58,
+        "aspect_ratio": 1.742,
+        "compactness": 0.2448,
+        "convexity": 0.4641
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2703
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5561
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1785
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033278_ags_aerial.jpg",
+      "rank": 3
+    },
+    {
+      "property_id": "2033195",
+      "stand_number": "906",
+      "extension": 19,
+      "area_sqm": 1037.0,
+      "total_score": 0.7763,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8078,
+        "spatial_v2": 0.5,
+        "aerial": 0.8921,
+        "exterior": 0.8921,
+        "gis": 0.5,
+        "stand_size": 0.9981,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 98.83,
+        "aspect_ratio": 2.287,
+        "compactness": 0.2075,
+        "convexity": 0.5412
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2421
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.49
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1538
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033195_ags_aerial.jpg",
+      "rank": 4
+    },
+    {
+      "property_id": "2083833",
+      "stand_number": "3269",
+      "extension": 105,
+      "area_sqm": 1053.0,
+      "total_score": 0.7751,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.817,
+        "spatial_v2": 0.5,
+        "aerial": 0.8713,
+        "exterior": 0.8713,
+        "gis": 0.5,
+        "stand_size": 0.9828,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 44.52,
+        "aspect_ratio": 2.067,
+        "compactness": 0.1458,
+        "convexity": 0.4318
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2213
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6266
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0292
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/105_2083833_ags_aerial.jpg",
+      "rank": 5
+    },
+    {
+      "property_id": "2033255",
+      "stand_number": "1002",
+      "extension": 19,
+      "area_sqm": 1125.0,
+      "total_score": 0.7749,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8023,
+        "spatial_v2": 0.5,
+        "aerial": 0.927,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9167,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 72.33,
+        "aspect_ratio": 2.628,
+        "compactness": 0.1674,
+        "convexity": 0.5079
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.277
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5461
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1555
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033255_ags_aerial.jpg",
+      "rank": 6
+    },
+    {
+      "property_id": "2083663",
+      "stand_number": "3323",
+      "extension": 105,
+      "area_sqm": 1114.0,
+      "total_score": 0.7739,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.794,
+        "spatial_v2": 0.5,
+        "aerial": 0.9394,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9265,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 73.23,
+        "aspect_ratio": 2.353,
+        "compactness": 0.1504,
+        "convexity": 0.5621
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2894
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4791
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0547
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/105_2083663_ags_aerial.jpg",
+      "rank": 7
+    },
+    {
+      "property_id": "2032908",
+      "stand_number": "1169",
+      "extension": 19,
+      "area_sqm": 1050.0,
+      "total_score": 0.7739,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8226,
+        "spatial_v2": 0.5,
+        "aerial": 0.8529,
+        "exterior": 0.8529,
+        "gis": 0.5,
+        "stand_size": 0.9856,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 29.71,
+        "aspect_ratio": 1.903,
+        "compactness": 0.2138,
+        "convexity": 0.4787
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2029
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6738
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2375
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032908_ags_aerial.jpg",
+      "rank": 8
+    },
+    {
+      "property_id": "2033185",
+      "stand_number": "897",
+      "extension": 19,
+      "area_sqm": 1150.0,
+      "total_score": 0.7734,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8035,
+        "spatial_v2": 0.5,
+        "aerial": 0.9197,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8948,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 54.92,
+        "aspect_ratio": 1.942,
+        "compactness": 0.2623,
+        "convexity": 0.6373
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2697
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4874
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2922
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033185_ags_aerial.jpg",
+      "rank": 9
+    },
+    {
+      "property_id": "2033104",
+      "stand_number": "1081",
+      "extension": 19,
+      "area_sqm": 1014.0,
+      "total_score": 0.7727,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8322,
+        "spatial_v2": 0.5,
+        "aerial": 0.8285,
+        "exterior": 0.8285,
+        "gis": 0.5,
+        "stand_size": 0.9799,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 74.91,
+        "aspect_ratio": 2.079,
+        "compactness": 0.1618,
+        "convexity": 0.4837
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.1785
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7296
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1963
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033104_ags_aerial.jpg",
+      "rank": 10
+    },
+    {
+      "property_id": "2073661",
+      "stand_number": "3146",
+      "extension": 39,
+      "area_sqm": 1308.0,
+      "total_score": 0.7725,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8266,
+        "spatial_v2": 0.5,
+        "aerial": 0.8973,
+        "exterior": 0.8973,
+        "gis": 0.5,
+        "stand_size": 0.7682,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 73.33,
+        "aspect_ratio": 1.996,
+        "compactness": 0.2477,
+        "convexity": 0.5577
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2473
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6562
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2324
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/39_2073661_ags_aerial.jpg",
+      "rank": 11
+    },
+    {
+      "property_id": "2033281",
+      "stand_number": "1021",
+      "extension": 19,
+      "area_sqm": 1000.0,
+      "total_score": 0.7723,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.791,
+        "spatial_v2": 0.5,
+        "aerial": 0.9185,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9667,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 105.95,
+        "aspect_ratio": 2.491,
+        "compactness": 0.1793,
+        "convexity": 0.4965
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2685
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6612
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2866
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033281_ags_aerial.jpg",
+      "rank": 12
+    },
+    {
+      "property_id": "2032876",
+      "stand_number": "1154",
+      "extension": 19,
+      "area_sqm": 1218.0,
+      "total_score": 0.7717,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8113,
+        "spatial_v2": 0.5,
+        "aerial": 0.9058,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8379,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 67.06,
+        "aspect_ratio": 2.546,
+        "compactness": 0.1704,
+        "convexity": 0.5069
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2558
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7508
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2431
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032876_ags_aerial.jpg",
+      "rank": 13
+    },
+    {
+      "property_id": "2033184",
+      "stand_number": "896",
+      "extension": 19,
+      "area_sqm": 1150.0,
+      "total_score": 0.7717,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7928,
+        "spatial_v2": 0.5,
+        "aerial": 0.9378,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8948,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 126.54,
+        "aspect_ratio": 1.724,
+        "compactness": 0.2067,
+        "convexity": 0.4618
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2878
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4716
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2102
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033184_ags_aerial.jpg",
+      "rank": 14
+    },
+    {
+      "property_id": "2033352",
+      "stand_number": "964",
+      "extension": 19,
+      "area_sqm": 1158.0,
+      "total_score": 0.7709,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7991,
+        "spatial_v2": 0.5,
+        "aerial": 0.9154,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8879,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 37.96,
+        "aspect_ratio": 2.457,
+        "compactness": 0.2875,
+        "convexity": 0.6974
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2654
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6637
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1508
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033352_ags_aerial.jpg",
+      "rank": 15
+    },
+    {
+      "property_id": "2033089",
+      "stand_number": "1072",
+      "extension": 19,
+      "area_sqm": 1023.0,
+      "total_score": 0.7701,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8002,
+        "spatial_v2": 0.5,
+        "aerial": 0.8753,
+        "exterior": 0.8753,
+        "gis": 0.5,
+        "stand_size": 0.9885,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 82.46,
+        "aspect_ratio": 2.015,
+        "compactness": 0.2114,
+        "convexity": 0.5724
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2253
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4837
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1966
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033089_ags_aerial.jpg",
+      "rank": 16
+    },
+    {
+      "property_id": "2033305",
+      "stand_number": "1027",
+      "extension": 19,
+      "area_sqm": 1102.0,
+      "total_score": 0.7692,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7895,
+        "spatial_v2": 0.5,
+        "aerial": 0.9091,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9373,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 25.63,
+        "aspect_ratio": 3.039,
+        "compactness": 0.1748,
+        "convexity": 0.6182
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2591
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6225
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2541
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033305_ags_aerial.jpg",
+      "rank": 17
+    },
+    {
+      "property_id": "2033232",
+      "stand_number": "982",
+      "extension": 19,
+      "area_sqm": 1125.0,
+      "total_score": 0.7689,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7825,
+        "spatial_v2": 0.5,
+        "aerial": 0.9361,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9167,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 94.41,
+        "aspect_ratio": 2.108,
+        "compactness": 0.142,
+        "convexity": 0.5693
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2861
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5393
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.3078
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033232_ags_aerial.jpg",
+      "rank": 18
+    },
+    {
+      "property_id": "2033028",
+      "stand_number": "1110",
+      "extension": 19,
+      "area_sqm": 1175.0,
+      "total_score": 0.7679,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8121,
+        "spatial_v2": 0.5,
+        "aerial": 0.8716,
+        "exterior": 0.8716,
+        "gis": 0.5,
+        "stand_size": 0.8735,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 109.08,
+        "aspect_ratio": 2.397,
+        "compactness": 0.2028,
+        "convexity": 0.5785
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2216
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6165
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2303
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033028_ags_aerial.jpg",
+      "rank": 19
+    },
+    {
+      "property_id": "2084527",
+      "stand_number": "4071",
+      "extension": 40,
+      "area_sqm": 1289.0,
+      "total_score": 0.7674,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.7996,
+        "spatial_v2": 0.5,
+        "aerial": 0.9284,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.7824,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 92.59,
+        "aspect_ratio": 2.347,
+        "compactness": 0.3041,
+        "convexity": 0.6077
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2784
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5595
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1812
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/40_2084527_ags_aerial.jpg",
+      "rank": 20
+    }
+  ],
+  "top10": [
+    {
+      "property_id": "2033220",
+      "stand_number": "972",
+      "extension": 19,
+      "area_sqm": 1046.0,
+      "total_score": 0.7878,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.827,
+        "spatial_v2": 0.5,
+        "aerial": 0.9299,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9894,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 60.83,
+        "aspect_ratio": 2.352,
+        "compactness": 0.186,
+        "convexity": 0.5411
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2799
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5948
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1494
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033220_ags_aerial.jpg",
+      "rank": 1
+    },
+    {
+      "property_id": "2032570",
+      "stand_number": "838",
+      "extension": 19,
+      "area_sqm": 1185.0,
+      "total_score": 0.7829,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8268,
+        "spatial_v2": 0.5,
+        "aerial": 0.9415,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8651,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 21.8,
+        "aspect_ratio": 2.656,
+        "compactness": 0.2065,
+        "convexity": 0.5468
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2915
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7354
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.204
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032570_ags_aerial.jpg",
+      "rank": 2
+    },
+    {
+      "property_id": "2033278",
+      "stand_number": "1018",
+      "extension": 19,
+      "area_sqm": 1050.0,
+      "total_score": 0.7771,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8012,
+        "spatial_v2": 0.5,
+        "aerial": 0.9203,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9856,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 33.58,
+        "aspect_ratio": 1.742,
+        "compactness": 0.2448,
+        "convexity": 0.4641
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2703
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5561
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1785
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033278_ags_aerial.jpg",
+      "rank": 3
+    },
+    {
+      "property_id": "2033195",
+      "stand_number": "906",
+      "extension": 19,
+      "area_sqm": 1037.0,
+      "total_score": 0.7763,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8078,
+        "spatial_v2": 0.5,
+        "aerial": 0.8921,
+        "exterior": 0.8921,
+        "gis": 0.5,
+        "stand_size": 0.9981,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 98.83,
+        "aspect_ratio": 2.287,
+        "compactness": 0.2075,
+        "convexity": 0.5412
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2421
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.49
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1538
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033195_ags_aerial.jpg",
+      "rank": 4
+    },
+    {
+      "property_id": "2083833",
+      "stand_number": "3269",
+      "extension": 105,
+      "area_sqm": 1053.0,
+      "total_score": 0.7751,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.817,
+        "spatial_v2": 0.5,
+        "aerial": 0.8713,
+        "exterior": 0.8713,
+        "gis": 0.5,
+        "stand_size": 0.9828,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 44.52,
+        "aspect_ratio": 2.067,
+        "compactness": 0.1458,
+        "convexity": 0.4318
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2213
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6266
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0292
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/105_2083833_ags_aerial.jpg",
+      "rank": 5
+    },
+    {
+      "property_id": "2033255",
+      "stand_number": "1002",
+      "extension": 19,
+      "area_sqm": 1125.0,
+      "total_score": 0.7749,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8023,
+        "spatial_v2": 0.5,
+        "aerial": 0.927,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9167,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 72.33,
+        "aspect_ratio": 2.628,
+        "compactness": 0.1674,
+        "convexity": 0.5079
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.277
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5461
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1555
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033255_ags_aerial.jpg",
+      "rank": 6
+    },
+    {
+      "property_id": "2083663",
+      "stand_number": "3323",
+      "extension": 105,
+      "area_sqm": 1114.0,
+      "total_score": 0.7739,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.794,
+        "spatial_v2": 0.5,
+        "aerial": 0.9394,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9265,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 73.23,
+        "aspect_ratio": 2.353,
+        "compactness": 0.1504,
+        "convexity": 0.5621
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2894
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4791
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0547
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/105_2083663_ags_aerial.jpg",
+      "rank": 7
+    },
+    {
+      "property_id": "2032908",
+      "stand_number": "1169",
+      "extension": 19,
+      "area_sqm": 1050.0,
+      "total_score": 0.7739,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8226,
+        "spatial_v2": 0.5,
+        "aerial": 0.8529,
+        "exterior": 0.8529,
+        "gis": 0.5,
+        "stand_size": 0.9856,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 29.71,
+        "aspect_ratio": 1.903,
+        "compactness": 0.2138,
+        "convexity": 0.4787
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2029
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6738
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2375
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032908_ags_aerial.jpg",
+      "rank": 8
+    },
+    {
+      "property_id": "2033185",
+      "stand_number": "897",
+      "extension": 19,
+      "area_sqm": 1150.0,
+      "total_score": 0.7734,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8035,
+        "spatial_v2": 0.5,
+        "aerial": 0.9197,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8948,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 54.92,
+        "aspect_ratio": 1.942,
+        "compactness": 0.2623,
+        "convexity": 0.6373
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2697
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.4874
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.2922
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033185_ags_aerial.jpg",
+      "rank": 9
+    },
+    {
+      "property_id": "2033104",
+      "stand_number": "1081",
+      "extension": 19,
+      "area_sqm": 1014.0,
+      "total_score": 0.7727,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8322,
+        "spatial_v2": 0.5,
+        "aerial": 0.8285,
+        "exterior": 0.8285,
+        "gis": 0.5,
+        "stand_size": 0.9799,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 74.91,
+        "aspect_ratio": 2.079,
+        "compactness": 0.1618,
+        "convexity": 0.4837
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.1785
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7296
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1963
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033104_ags_aerial.jpg",
+      "rank": 10
+    }
+  ],
+  "top5": [
+    {
+      "property_id": "2033220",
+      "stand_number": "972",
+      "extension": 19,
+      "area_sqm": 1046.0,
+      "total_score": 0.7878,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.827,
+        "spatial_v2": 0.5,
+        "aerial": 0.9299,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9894,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 60.83,
+        "aspect_ratio": 2.352,
+        "compactness": 0.186,
+        "convexity": 0.5411
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2799
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5948
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1494
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033220_ags_aerial.jpg",
+      "rank": 1
+    },
+    {
+      "property_id": "2032570",
+      "stand_number": "838",
+      "extension": 19,
+      "area_sqm": 1185.0,
+      "total_score": 0.7829,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8268,
+        "spatial_v2": 0.5,
+        "aerial": 0.9415,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.8651,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 21.8,
+        "aspect_ratio": 2.656,
+        "compactness": 0.2065,
+        "convexity": 0.5468
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2915
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.7354
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.204
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2032570_ags_aerial.jpg",
+      "rank": 2
+    },
+    {
+      "property_id": "2033278",
+      "stand_number": "1018",
+      "extension": 19,
+      "area_sqm": 1050.0,
+      "total_score": 0.7771,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8012,
+        "spatial_v2": 0.5,
+        "aerial": 0.9203,
+        "exterior": 0.9,
+        "gis": 0.5,
+        "stand_size": 0.9856,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 33.58,
+        "aspect_ratio": 1.742,
+        "compactness": 0.2448,
+        "convexity": 0.4641
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2703
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.5561
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1785
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033278_ags_aerial.jpg",
+      "rank": 3
+    },
+    {
+      "property_id": "2033195",
+      "stand_number": "906",
+      "extension": 19,
+      "area_sqm": 1037.0,
+      "total_score": 0.7763,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.8078,
+        "spatial_v2": 0.5,
+        "aerial": 0.8921,
+        "exterior": 0.8921,
+        "gis": 0.5,
+        "stand_size": 0.9981,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 98.83,
+        "aspect_ratio": 2.287,
+        "compactness": 0.2075,
+        "convexity": 0.5412
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2421
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.49
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.1538
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/19_2033195_ags_aerial.jpg",
+      "rank": 4
+    },
+    {
+      "property_id": "2083833",
+      "stand_number": "3269",
+      "extension": 105,
+      "area_sqm": 1053.0,
+      "total_score": 0.7751,
+      "components": {
+        "pool_presence": 1.0,
+        "shape_v2": 0.817,
+        "spatial_v2": 0.5,
+        "aerial": 0.8713,
+        "exterior": 0.8713,
+        "gis": 0.5,
+        "stand_size": 0.9828,
+        "greenbelt_context": 0.5
+      },
+      "pool_state": "YES",
+      "pool_geometry": {
+        "shape": "irregular",
+        "area_m2": 44.52,
+        "aspect_ratio": 2.067,
+        "compactness": 0.1458,
+        "convexity": 0.4318
+      },
+      "house_roof": {
+        "state": "YES",
+        "roof_fraction": 0.2213
+      },
+      "driveway": {
+        "state": "YES",
+        "paved_fraction": 0.6266
+      },
+      "greenbelt": {
+        "state": "unknown",
+        "aerial_vegetation_ring_fraction": 0.0292
+      },
+      "neighbour_context": "UNKNOWN",
+      "missing_or_unknown": [
+        "neighbour"
+      ],
+      "crop_path": "data/visual_index/waterfall_w2_blind/_imagery_cache_native15/105_2083833_ags_aerial.jpg",
+      "rank": 5
+    }
+  ]
+}

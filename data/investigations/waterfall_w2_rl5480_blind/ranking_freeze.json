@@ -1,0 +1,39 @@
+{
+  "schema_version": "waterfall-w2-ranking-freeze-v1",
+  "created_utc": "2026-09-10T08:56:21Z",
+  "base_w1_commit": "e86b156b3f8ac099cd386b9de2b3b2ba609c0635",
+  "base_w1_geojson_sha256": "6a375bf542bcff28c6a3ee862f9e0c3c9a5395d0497b4159027c40b75cf7be3a",
+  "candidate_count": 1010,
+  "listing_visual_freeze_commit": "6b440905c55d3b725351ee9a90a83d51aee3338c",
+  "ranking_algorithm": "generic_existing_pie_object_segmentation_seed_roof_contour_plus_scoring_v2_derived_experimental_weights",
+  "weights": {
+    "pool_presence": 0.14,
+    "shape_v2": 0.36,
+    "spatial_v2": 0.22,
+    "aerial": 0.12,
+    "exterior": 0.06,
+    "gis": 0.03,
+    "stand_size": 0.05,
+    "greenbelt_context": 0.02
+  },
+  "stand_size_weight_constraint": "0.05",
+  "ground_truth_recovery": "NOT_STARTED",
+  "artifacts": {
+    "ranking_full.json": {
+      "path": "data/investigations/waterfall_w2_rl5480_blind/ranking_full.json",
+      "sha256": "42bad89411f3cfaa2835ea0abbed5140461f4c2e070e497720683ea172c01dd7"
+    },
+    "ranking_full.csv": {
+      "path": "data/investigations/waterfall_w2_rl5480_blind/ranking_full.csv",
+      "sha256": "766fba8bdf4139aa42df2d244c8c3e52049cbae2498acd2f3d95e4187a7f6940"
+    },
+    "ranking_review.json": {
+      "path": "data/investigations/waterfall_w2_rl5480_blind/ranking_review.json",
+      "sha256": "819d06873b974bc9d989ffd4cbba31b6b1e983cff25e162a4597152e7e1a7bf8"
+    },
+    "top5_contact_sheet.jpg": {
+      "path": "data/investigations/waterfall_w2_rl5480_blind/top5_contact_sheet.jpg",
+      "sha256": "eb9bc3a5ff478b930b9ae3c9efe4f5543c3c855e1d329ea1d85f6a01c400a4e1"
+    }
+  }
+}
