@@ -1,0 +1,50 @@
+{
+  "schema_version": "waterfall-w3v-media-manifest-v1",
+  "source_url": "https://youtu.be/P6UEdM5xy8M",
+  "video_id": "P6UEdM5xy8M",
+  "video_content_validated": "YES",
+  "content_validation": "Five visual-only temporal samples and 114 coarse samples indicate a continuous tour of the same target property; black lead-in retained; no unrelated material identified.",
+  "video": {
+    "audio_codec": "opus",
+    "bytes": 554802719,
+    "container": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration_seconds": 1703.034,
+    "format_ids": [
+      "616+251-13"
+    ],
+    "fps": 29.970041702044703,
+    "height": 1080,
+    "path": "P6UEdM5xy8M.mp4",
+    "sha256": "0ad61741b9bf82698defbe046542adb706d52771cc80c271317fbcc9ea1a1a81",
+    "video_codec": "vp9",
+    "width": 1920
+  },
+  "local_original_path": "video_original/P6UEdM5xy8M.mp4",
+  "coarse_sample_count": 114,
+  "useful_temporal_ranges_seconds": [
+    [
+      15,
+      135
+    ],
+    [
+      420,
+      615
+    ],
+    [
+      1095,
+      1140
+    ],
+    [
+      1335,
+      1350
+    ],
+    [
+      1665,
+      1703.034
+    ]
+  ],
+  "fine_sample_count": 142,
+  "final_exterior_count": 21,
+  "w3s_still_count": 4,
+  "no_candidate_imagery_accessed_before_freeze": true
+}

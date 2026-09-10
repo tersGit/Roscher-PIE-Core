@@ -1,0 +1,151 @@
+{
+  "schema_version": "waterfall-w3v-listing-observations-v1",
+  "scope": "listing stills and the validated authorized target video only; no candidate imagery accessed",
+  "states": [
+    "OBSERVED",
+    "INFERRED",
+    "UNKNOWN"
+  ],
+  "observations": [
+    {
+      "feature": "pool",
+      "state": "OBSERVED",
+      "source_video_seconds": [
+        450,
+        480,
+        510,
+        540,
+        570,
+        600,
+        1665,
+        1680,
+        1695
+      ],
+      "source_stills": [
+        2
+      ],
+      "detail": "A private rectilinear in-ground pool, surrounding deck, and adjacent lawn are directly visible. Complete nadir outline is UNKNOWN."
+    },
+    {
+      "feature": "house_roof_and_mass",
+      "state": "OBSERVED",
+      "source_video_seconds": [
+        15,
+        30,
+        45,
+        1095,
+        1125,
+        1335
+      ],
+      "source_stills": [
+        1,
+        3
+      ],
+      "detail": "A large two-storey, mostly flat/parapet-roof residence with a tall glazed entry volume and roof-terrace elements is directly visible."
+    },
+    {
+      "feature": "front_driveway_garage",
+      "state": "OBSERVED",
+      "source_video_seconds": [
+        15,
+        30,
+        45,
+        60,
+        90,
+        120
+      ],
+      "source_stills": [
+        1,
+        3
+      ],
+      "detail": "The front entry, paved approach, stone-clad walling, and garage-side facade are visible. Garage capacity and full driveway extent are UNKNOWN."
+    },
+    {
+      "feature": "rear_house_pool_garden",
+      "state": "OBSERVED",
+      "source_video_seconds": [
+        420,
+        450,
+        480,
+        510,
+        540,
+        570,
+        600,
+        1665,
+        1680,
+        1695
+      ],
+      "source_stills": [
+        2
+      ],
+      "detail": "The rear facade opens through folding doors toward the pool, deck, lawn, planted boundary, and covered patio."
+    },
+    {
+      "feature": "boundary_and_neighbours",
+      "state": "OBSERVED",
+      "source_video_seconds": [
+        60,
+        570,
+        1095,
+        1110,
+        1125,
+        1335,
+        1350
+      ],
+      "source_stills": [
+        3
+      ],
+      "detail": "Boundary walls, landscaping, and nearby built context are visible. Parcel lines, ownership, orientation, street geometry, and location are UNKNOWN."
+    },
+    {
+      "feature": "elevated_context_fingerprint",
+      "state": "OBSERVED",
+      "source_video_seconds": [
+        1095,
+        1110,
+        1125,
+        1335,
+        1350
+      ],
+      "source_stills": [
+        3
+      ],
+      "detail": "Elevated terrace/roof-level views show immediate roof and neighbour context. This is visual context only; it is not geolocation evidence."
+    },
+    {
+      "feature": "aerial_drone_fingerprint",
+      "state": "UNKNOWN",
+      "source_video_seconds": [],
+      "source_stills": [
+        3
+      ],
+      "detail": "No target aerial/drone view was confirmed from the selected video frames."
+    }
+  ],
+  "inferences": [
+    {
+      "feature": "candidate_aerial_visibility",
+      "state": "INFERRED",
+      "detail": "Pool, roof mass, paved front approach, rear deck, and immediate built context may be distinguishable in aerial candidate imagery; occlusion and exact geometry remain UNKNOWN."
+    }
+  ],
+  "unknowns": [
+    "identity",
+    "address",
+    "location",
+    "compass orientation",
+    "parcel ownership",
+    "parcel boundaries",
+    "street geometry",
+    "land size",
+    "complete driveway extent",
+    "garage capacity",
+    "complete pool geometry",
+    "aerial/drone target view",
+    "ground truth",
+    "Street View"
+  ],
+  "ground_truth": "NOT_STARTED",
+  "street_view": "NOT_STARTED",
+  "identity_resolution": "NOT_STARTED"
+}

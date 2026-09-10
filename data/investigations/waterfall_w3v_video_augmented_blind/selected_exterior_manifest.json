@@ -1,0 +1,230 @@
+{
+  "schema_version": "waterfall-w3v-selected-exterior-v2",
+  "selection_scope": "listing-only target video visual evidence; no candidate imagery accessed",
+  "fine_sample_count": 142,
+  "deduplicated_final_count": 21,
+  "selected_frames": [
+    {
+      "selection_order": 1,
+      "purpose": "front_entry",
+      "timestamp_seconds": 15,
+      "source_fine_path": "fine_exterior_3s/fine_001_0015s.jpg",
+      "path": "selected_exterior/01_front_entry_0015s.jpg",
+      "sha256": "6b761ec083cc1064037c6dd2e015e16b3d7e9762b1bbc7c151aea65e4ee093e5",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 2,
+      "purpose": "front_glazed_entry",
+      "timestamp_seconds": 30,
+      "source_fine_path": "fine_exterior_3s/fine_006_0030s.jpg",
+      "path": "selected_exterior/02_front_glazed_entry_0030s.jpg",
+      "sha256": "530cbea98b190e11b24bd11256c6232f41998f4b3c99fed8106b76d98582cad7",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 3,
+      "purpose": "front_facade",
+      "timestamp_seconds": 45,
+      "source_fine_path": "fine_exterior_3s/fine_011_0045s.jpg",
+      "path": "selected_exterior/03_front_facade_0045s.jpg",
+      "sha256": "ea583e3c3a52237b574cd8cee6b4a39b14d1288b71b48db651c1d4838e3698fe",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 4,
+      "purpose": "front_boundary_garden",
+      "timestamp_seconds": 60,
+      "source_fine_path": "fine_exterior_3s/fine_016_0060s.jpg",
+      "path": "selected_exterior/04_front_boundary_garden_0060s.jpg",
+      "sha256": "ba9f0b01bf1d5add4d196734ae44f9ac5b6e265fdf79e5277c7cd6ccb7cd75b5",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 5,
+      "purpose": "front_approach",
+      "timestamp_seconds": 90,
+      "source_fine_path": "fine_exterior_3s/fine_026_0090s.jpg",
+      "path": "selected_exterior/05_front_approach_0090s.jpg",
+      "sha256": "e852186abe3fd857c05087301b4e234adfc6de846cff35b74c8d541a81c59fe3",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 6,
+      "purpose": "front_entry_context",
+      "timestamp_seconds": 120,
+      "source_fine_path": "fine_exterior_3s/fine_036_0120s.jpg",
+      "path": "selected_exterior/06_front_entry_context_0120s.jpg",
+      "sha256": "23ac04c7527641e98746f209c2bf1ee930c0cffd3b7cfbe57e2928074287b184",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 7,
+      "purpose": "rear_patio",
+      "timestamp_seconds": 420,
+      "source_fine_path": "fine_exterior_3s/fine_042_0420s.jpg",
+      "path": "selected_exterior/07_rear_patio_0420s.jpg",
+      "sha256": "9c201ed4cbc59c3e875f748807c83b44df31768f24395b17e555326378b35ff9",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 8,
+      "purpose": "rear_house_pool",
+      "timestamp_seconds": 450,
+      "source_fine_path": "fine_exterior_3s/fine_052_0450s.jpg",
+      "path": "selected_exterior/08_rear_house_pool_0450s.jpg",
+      "sha256": "4e14d6d2612ce97842923b8195bfb5562fa391aab0a203eac10393fe3cba5a0e",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 9,
+      "purpose": "pool_long_side",
+      "timestamp_seconds": 480,
+      "source_fine_path": "fine_exterior_3s/fine_062_0480s.jpg",
+      "path": "selected_exterior/09_pool_long_side_0480s.jpg",
+      "sha256": "f568f7155f3dd9ef035d336479c7b91bb7a3cadf68fd795ea68d1bc0bf186e92",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 10,
+      "purpose": "pool_garden_side",
+      "timestamp_seconds": 510,
+      "source_fine_path": "fine_exterior_3s/fine_072_0510s.jpg",
+      "path": "selected_exterior/10_pool_garden_side_0510s.jpg",
+      "sha256": "318e3f117505201e29bdc730903bee79a6433daf22f87f21dcb3d5a9ca54f7b1",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 11,
+      "purpose": "pool_patio",
+      "timestamp_seconds": 540,
+      "source_fine_path": "fine_exterior_3s/fine_082_0540s.jpg",
+      "path": "selected_exterior/11_pool_patio_0540s.jpg",
+      "sha256": "76e715bfd6418fcf8e26b6c979539a210cb415de0a1ec0f5690d9e752d293cea",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 12,
+      "purpose": "pool_boundary_garden",
+      "timestamp_seconds": 570,
+      "source_fine_path": "fine_exterior_3s/fine_092_0570s.jpg",
+      "path": "selected_exterior/12_pool_boundary_garden_0570s.jpg",
+      "sha256": "0fa8168ac4e688c89a70c0479034544238303226f823a212371fb3cf658d2d5c",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 13,
+      "purpose": "pool_house_context",
+      "timestamp_seconds": 600,
+      "source_fine_path": "fine_exterior_3s/fine_102_0600s.jpg",
+      "path": "selected_exterior/13_pool_house_context_0600s.jpg",
+      "sha256": "de52ce9864d8b3da81d1ed91ec827dc246044f9da5f00dbef13b0494bc6cba60",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 14,
+      "purpose": "elevated_terrace_context",
+      "timestamp_seconds": 1095,
+      "source_fine_path": "fine_exterior_3s/fine_108_1095s.jpg",
+      "path": "selected_exterior/14_elevated_terrace_context_1095s.jpg",
+      "sha256": "220e716a3019b5e1702724bd3ebbe7f9db55d15c09d97a7a89696188543e6853",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 15,
+      "purpose": "elevated_neighbour_context",
+      "timestamp_seconds": 1110,
+      "source_fine_path": "fine_exterior_3s/fine_113_1110s.jpg",
+      "path": "selected_exterior/15_elevated_neighbour_context_1110s.jpg",
+      "sha256": "0445b7f9ab296be89c2b6d729996e3fb7b6556fd3c0cefcd5a1eeeccd71c5bc7",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 16,
+      "purpose": "elevated_terrace_roofline",
+      "timestamp_seconds": 1125,
+      "source_fine_path": "fine_exterior_3s/fine_118_1125s.jpg",
+      "path": "selected_exterior/16_elevated_terrace_roofline_1125s.jpg",
+      "sha256": "930275b1a900a06c32c64fbdf8cf29a690ec4ea20ef80514e56c829af9eb84b5",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 17,
+      "purpose": "roof_terrace",
+      "timestamp_seconds": 1335,
+      "source_fine_path": "fine_exterior_3s/fine_124_1335s.jpg",
+      "path": "selected_exterior/17_roof_terrace_1335s.jpg",
+      "sha256": "9a0cedb02531781b5607ca82ff512ef26b8207dd1fbff338971e3ba58acbfa23",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 18,
+      "purpose": "roof_terrace_context",
+      "timestamp_seconds": 1350,
+      "source_fine_path": "fine_exterior_3s/fine_129_1350s.jpg",
+      "path": "selected_exterior/18_roof_terrace_context_1350s.jpg",
+      "sha256": "93dacaaa50c124640a777dffff0885b667a75530595407c1b51b5abdae70ca63",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 19,
+      "purpose": "late_pool_house",
+      "timestamp_seconds": 1665,
+      "source_fine_path": "fine_exterior_3s/fine_130_1665s.jpg",
+      "path": "selected_exterior/19_late_pool_house_1665s.jpg",
+      "sha256": "b7cebafc0ed08b0b6c231821af00dfebefbfdfdfc8a5eb88220a4fb2826229c1",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 20,
+      "purpose": "late_pool_garden",
+      "timestamp_seconds": 1680,
+      "source_fine_path": "fine_exterior_3s/fine_135_1680s.jpg",
+      "path": "selected_exterior/20_late_pool_garden_1680s.jpg",
+      "sha256": "822f49e1ba61459ecc69b3130113c8f67bd144bc55cf39e8b24abdf5fa160ebd",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    },
+    {
+      "selection_order": 21,
+      "purpose": "late_pool_rear",
+      "timestamp_seconds": 1695,
+      "source_fine_path": "fine_exterior_3s/fine_140_1695s.jpg",
+      "path": "selected_exterior/21_late_pool_rear_1695s.jpg",
+      "sha256": "1da6856fa410d95c5e9650e8216640fba406040388a26ab8ebd2742aae3dc74b",
+      "selection_basis": "temporal and visual diversity; exterior target evidence; nonduplicate composition"
+    }
+  ],
+  "preserved_w3s_stills": [
+    {
+      "source_order": 1,
+      "path": "data/investigations/waterfall_w3_2150462_blind/listing_media/user_supplied_originals/01.webp",
+      "sha256": "e21c24e858995c4aee7e82ef67b3a550cc60ceef71d2f927c9533d138866a54b"
+    },
+    {
+      "source_order": 2,
+      "path": "data/investigations/waterfall_w3_2150462_blind/listing_media/user_supplied_originals/02.webp",
+      "sha256": "c4bcf4ddb80833a8949a0a92b437a8c9682c9a259a78cefab0263650de5b6d88"
+    },
+    {
+      "source_order": 3,
+      "path": "data/investigations/waterfall_w3_2150462_blind/listing_media/user_supplied_originals/03.webp",
+      "sha256": "037608e486410edd6634a87f80252cdc7b289c9d434d14a5a027e5a36862a5b3"
+    },
+    {
+      "source_order": 4,
+      "path": "data/investigations/waterfall_w3_2150462_blind/listing_media/user_supplied_originals/04.webp",
+      "sha256": "b1ed2132809189c089db83303303078c53659240924a642b9ac9ff57ef66c745"
+    }
+  ],
+  "excluded_media": {
+    "interior_frames": "retained in original video but excluded from exterior fingerprint",
+    "coarse_black_leadin": "retained in source; excluded as non-property visual evidence",
+    "fine_near_duplicates": 121,
+    "aerial_or_drone_target_view": "UNKNOWN; no aerial/drone target view selected"
+  },
+  "raw_retention": {
+    "coarse_manifest": "coarse_15s/coarse_manifest.json",
+    "fine_manifest": "fine_exterior_3s/fine_manifest.json",
+    "local_original": "video_original/P6UEdM5xy8M.mp4"
+  }
+}

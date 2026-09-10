@@ -1,0 +1,11 @@
+{
+  "schema_version": "waterfall-w3v-pre-freeze-firewall-v1",
+  "candidate_imagery_accessed": false,
+  "candidate_sources_read_for_freeze": false,
+  "w1_universe_path": "data/estates/waterfall_country_estate/waterfall_country_estate_w1.geojson",
+  "w1_universe_sha256": "6a375bf542bcff28c6a3ee862f9e0c3c9a5395d0497b4159027c40b75cf7be3a",
+  "w3s_ranking_path": "data/investigations/waterfall_w3_2150462_blind/ranking_run/ranking_full.csv",
+  "w3s_ranking_sha256": "563deb6079e3469ccea30ea48a1d44dc5c59e200881dbc0092165949ad76a729",
+  "w3s_ranking_checksum_expected": "c1b9c8488d0e3a6873d4298e1edfa8e5fb96afb4659bd6c381194bc65ad3587d",
+  "result": "W3-S and W1 immutable evidence unchanged before W3-V listing freeze"
+}

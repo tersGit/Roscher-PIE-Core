@@ -1,0 +1,20 @@
+{
+  "schema_version": "waterfall-w3v-listing-freeze-v1",
+  "firewall": "Candidate imagery was not accessed before this freeze. W3-S was neither modified nor replaced.",
+  "ground_truth": "NOT_STARTED",
+  "artifacts": {
+    "video_original/P6UEdM5xy8M.acquisition.json": "3e93b894e2fb5a67afd39adb392fed991702b3d4bfcfa99e59fc8f4dabfba3d9",
+    "content_validation_manifest.json": "1f4eb66ca5435f80b3c225bf3a7915ab5a459cafbe6ef29c6a84271bc38ba4a5",
+    "coarse_15s/coarse_manifest.json": "f49edb3be1b24f3b3cab6ab7b1842c310c2279224a2d3216ce55e43f34474fef",
+    "fine_exterior_3s/fine_manifest.json": "c0e9326adb64b0c52aeee505edf4218c51d46d4de19e735456f77781a774a6bf",
+    "selected_exterior_manifest.json": "ed68a859a90f3fa426a31eb9c8ab3cddeb3db9a3bf5489b72092b77ebdc8c12b",
+    "listing_visual_observations.json": "930c864d8bd55a1da0eade7a228055d6eff74eff1135919d31a4c8f31f001868",
+    "listing_media_manifest.json": "2422869b68150552cf63fde42d12131db631d1d2666a315c4aa71104c8791065",
+    "pre_freeze_firewall.json": "8a5b36261215934f1b10ab94f5c9106a647364c8991c71590ed7a08a1bfbfe9c"
+  },
+  "raw_media_local_retention": {
+    "path": "video_original/P6UEdM5xy8M.mp4",
+    "sha256": "0ad61741b9bf82698defbe046542adb706d52771cc80c271317fbcc9ea1a1a81",
+    "bytes": 554802719
+  }
+}

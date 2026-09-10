@@ -1,0 +1,28 @@
+{
+  "schema_version": "waterfall-w3v-content-validation-v1",
+  "method": "visual-only samples at beginning, approximately 25%, 50%, 75%, and near-end; no YouTube page metadata read",
+  "samples": [
+    {
+      "path": "content_validation_samples/01_beginning_0.000s.jpg",
+      "sha256": "bae51799e7e9a12284e7ea5f0c0d13c9cb830a655b43dadd1f744994579e673f"
+    },
+    {
+      "path": "content_validation_samples/02_quarter_425.759s.jpg",
+      "sha256": "ef4b4c8ad4f8434855a9da6f231cf2da429735459e611ebf0bfc1066c5994e8b"
+    },
+    {
+      "path": "content_validation_samples/03_half_851.517s.jpg",
+      "sha256": "768e77ef036ea87c7b326c02b1623354c1d927194f7f0d213af7323f495c2f57"
+    },
+    {
+      "path": "content_validation_samples/04_three_quarters_1277.276s.jpg",
+      "sha256": "7fba15141a3f8ac00723b9cd381ccf63445f8f955503b7de0d3b3da9edbe0f69"
+    },
+    {
+      "path": "content_validation_samples/05_near_end_1698.034s.jpg",
+      "sha256": "5f2259b778ce9ec613774b19e58572263fe0ba8d51bef0c2e7897ee7416022f6"
+    }
+  ],
+  "result": "VIDEO_CONTENT_VALIDATED=YES",
+  "finding": "The samples and coarse contact sheet support one continuous target-property tour; the initial black lead-in is retained and no unrelated material was identified."
+}

@@ -1,0 +1,1153 @@
+{
+  "schema_version": "waterfall-w3v-coarse-sampling-v1",
+  "source_video": "video_original/P6UEdM5xy8M.mp4",
+  "cadence_seconds": 15,
+  "frame_count": 114,
+  "heuristics": [
+    "HSV blue/green fractions",
+    "mean brightness",
+    "adjacent HSV histogram correlation"
+  ],
+  "frames": [
+    {
+      "index": 1,
+      "timestamp_seconds": 0,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_001_0000s.jpg",
+      "sha256": "f35c5de4115087e347cb7edffd14a734ad5f6fe45e69c2cb0373733ed232b1d8",
+      "brightness": 0.0,
+      "blue_fraction": 0.0,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": null
+    },
+    {
+      "index": 2,
+      "timestamp_seconds": 15,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_002_0015s.jpg",
+      "sha256": "3802477aacb4279b759817daf9be2a698b5b85be2030432da6b5983b5d34e9bf",
+      "brightness": 124.48,
+      "blue_fraction": 0.0955,
+      "green_fraction": 0.0037,
+      "histogram_similarity_previous": 0.1344
+    },
+    {
+      "index": 3,
+      "timestamp_seconds": 30,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_003_0030s.jpg",
+      "sha256": "ad0acd750de69653a801f6bdc59a374d161890a0b1ac183e75489f648a9d5626",
+      "brightness": 143.09,
+      "blue_fraction": 0.0517,
+      "green_fraction": 0.0904,
+      "histogram_similarity_previous": 0.7577
+    },
+    {
+      "index": 4,
+      "timestamp_seconds": 45,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_004_0045s.jpg",
+      "sha256": "6f4db05da3b181a91b8b5ff6cdd1511b3e973b6b19c1e35be89243eecab97166",
+      "brightness": 146.86,
+      "blue_fraction": 0.0857,
+      "green_fraction": 0.0426,
+      "histogram_similarity_previous": 0.7191
+    },
+    {
+      "index": 5,
+      "timestamp_seconds": 60,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_005_0060s.jpg",
+      "sha256": "c807d5c1ee3125b1d200b411e056684b63630152195d2f1bc2a08d665e14696a",
+      "brightness": 146.72,
+      "blue_fraction": 0.0861,
+      "green_fraction": 0.0427,
+      "histogram_similarity_previous": 0.9975
+    },
+    {
+      "index": 6,
+      "timestamp_seconds": 75,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_006_0075s.jpg",
+      "sha256": "d30e9febcc1676976371057fdd46d85a05e6a9de88e19a38b3907608a81096ad",
+      "brightness": 148.75,
+      "blue_fraction": 0.0846,
+      "green_fraction": 0.0403,
+      "histogram_similarity_previous": 0.9929
+    },
+    {
+      "index": 7,
+      "timestamp_seconds": 90,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_007_0090s.jpg",
+      "sha256": "e7a489affe16d4e728759894de97549553d8630a9a72a2d755b24c53b8eca605",
+      "brightness": 144.85,
+      "blue_fraction": 0.078,
+      "green_fraction": 0.057,
+      "histogram_similarity_previous": 0.8218
+    },
+    {
+      "index": 8,
+      "timestamp_seconds": 105,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_008_0105s.jpg",
+      "sha256": "dee300c4ea975297d2b3fa92ff366eb9dc4a838666623878d41a5b4b3a8f1a8f",
+      "brightness": 149.01,
+      "blue_fraction": 0.1193,
+      "green_fraction": 0.0188,
+      "histogram_similarity_previous": 0.6169
+    },
+    {
+      "index": 9,
+      "timestamp_seconds": 120,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_009_0120s.jpg",
+      "sha256": "6fb0af2db87dac9b91322f2a59778fdb6b994be707309f6e52868fe5d8b4a128",
+      "brightness": 143.65,
+      "blue_fraction": 0.7335,
+      "green_fraction": 0.0036,
+      "histogram_similarity_previous": 0.2504
+    },
+    {
+      "index": 10,
+      "timestamp_seconds": 135,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_010_0135s.jpg",
+      "sha256": "d8ea51b9a66f2a5e1108ff91f1b962df3f21211aa1e2d03aaf35272d21a14d20",
+      "brightness": 140.1,
+      "blue_fraction": 0.6555,
+      "green_fraction": 0.0022,
+      "histogram_similarity_previous": 0.6315
+    },
+    {
+      "index": 11,
+      "timestamp_seconds": 150,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_011_0150s.jpg",
+      "sha256": "6b1398bc36d92ea0aaa4633bb045c4916f79703b920d24dde58fd5aba989b6d4",
+      "brightness": 161.42,
+      "blue_fraction": 0.0466,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.2781
+    },
+    {
+      "index": 12,
+      "timestamp_seconds": 165,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_012_0165s.jpg",
+      "sha256": "2b448a07389d848ba607baecdae347ea08d5c0760e4f0db0b527eeebf041c4c9",
+      "brightness": 150.1,
+      "blue_fraction": 0.0166,
+      "green_fraction": 0.024,
+      "histogram_similarity_previous": 0.5682
+    },
+    {
+      "index": 13,
+      "timestamp_seconds": 180,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_013_0180s.jpg",
+      "sha256": "354a0bc930b1968ddacbad62cb949d4185bb1586b70d68dc2bf0b3a915c505ea",
+      "brightness": 164.17,
+      "blue_fraction": 0.4428,
+      "green_fraction": 0.0459,
+      "histogram_similarity_previous": 0.4362
+    },
+    {
+      "index": 14,
+      "timestamp_seconds": 195,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_014_0195s.jpg",
+      "sha256": "7c676ce904de9c720d80421be751356d4ab9fa4c9e60d4b9653ee18823fd86e0",
+      "brightness": 139.45,
+      "blue_fraction": 0.275,
+      "green_fraction": 0.0127,
+      "histogram_similarity_previous": 0.903
+    },
+    {
+      "index": 15,
+      "timestamp_seconds": 210,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_015_0210s.jpg",
+      "sha256": "daf952a6e88eac4316030b22ff24d9b668faaf9be44371b7aed0cf49fa20bc9a",
+      "brightness": 130.22,
+      "blue_fraction": 0.1682,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.3652
+    },
+    {
+      "index": 16,
+      "timestamp_seconds": 225,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_016_0225s.jpg",
+      "sha256": "0db4d027409908856739b494df0646497a17efc37929ed130e612e1d5e5e6912",
+      "brightness": 148.55,
+      "blue_fraction": 0.0262,
+      "green_fraction": 0.0005,
+      "histogram_similarity_previous": 0.6416
+    },
+    {
+      "index": 17,
+      "timestamp_seconds": 240,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_017_0240s.jpg",
+      "sha256": "55224c09b198074f29007d083e42fa8fa9eb6432e5196f7df98dcf5a69dfb5b9",
+      "brightness": 141.57,
+      "blue_fraction": 0.1343,
+      "green_fraction": 0.001,
+      "histogram_similarity_previous": 0.3148
+    },
+    {
+      "index": 18,
+      "timestamp_seconds": 255,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_018_0255s.jpg",
+      "sha256": "e046d23517cc7873d00cdb4d82f17d94cae5f2a9be6617cfc4fd9856096acfba",
+      "brightness": 126.65,
+      "blue_fraction": 0.145,
+      "green_fraction": 0.0037,
+      "histogram_similarity_previous": 0.7967
+    },
+    {
+      "index": 19,
+      "timestamp_seconds": 270,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_019_0270s.jpg",
+      "sha256": "786592b47d84412e48d1a3b930f6e01bb86174f6444bf80572c37f56993fe397",
+      "brightness": 128.36,
+      "blue_fraction": 0.12,
+      "green_fraction": 0.0002,
+      "histogram_similarity_previous": 0.3291
+    },
+    {
+      "index": 20,
+      "timestamp_seconds": 285,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_020_0285s.jpg",
+      "sha256": "50aa783fafd92198a98709c21a384c369a8a18de2b36df68d25d8f0f8a501b10",
+      "brightness": 132.12,
+      "blue_fraction": 0.0955,
+      "green_fraction": 0.0022,
+      "histogram_similarity_previous": 0.7065
+    },
+    {
+      "index": 21,
+      "timestamp_seconds": 300,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_021_0300s.jpg",
+      "sha256": "f8ee831e957c6fb5b58ee55e79a5a8e78a6e29914193b733ab03f4d5639eab8b",
+      "brightness": 131.48,
+      "blue_fraction": 0.0974,
+      "green_fraction": 0.0022,
+      "histogram_similarity_previous": 0.8843
+    },
+    {
+      "index": 22,
+      "timestamp_seconds": 315,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_022_0315s.jpg",
+      "sha256": "e867d21ad792a974831a03cfe69da30161a48fe7eef00099eca830751cd8a47f",
+      "brightness": 131.82,
+      "blue_fraction": 0.0843,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.9161
+    },
+    {
+      "index": 23,
+      "timestamp_seconds": 330,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_023_0330s.jpg",
+      "sha256": "2f0beb0c743a4abe0ee574d3890699acb4453535f20219db5aad6f8565ca2402",
+      "brightness": 131.34,
+      "blue_fraction": 0.1745,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.6803
+    },
+    {
+      "index": 24,
+      "timestamp_seconds": 345,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_024_0345s.jpg",
+      "sha256": "e26d1639100f2eb9c8168ca580a2da9a82fd82d09946cbf903a5bb2e9bf73798",
+      "brightness": 139.28,
+      "blue_fraction": 0.1778,
+      "green_fraction": 0.0004,
+      "histogram_similarity_previous": 0.6903
+    },
+    {
+      "index": 25,
+      "timestamp_seconds": 360,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_025_0360s.jpg",
+      "sha256": "61182b417a71ed5ca03951dbc494ef1fe4edf23f163a39565562170531216336",
+      "brightness": 140.52,
+      "blue_fraction": 0.0488,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.4445
+    },
+    {
+      "index": 26,
+      "timestamp_seconds": 375,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_026_0375s.jpg",
+      "sha256": "9a863f5af17eea63b6047cc39588f4abaab28ed556e86760e62415e530edd698",
+      "brightness": 142.7,
+      "blue_fraction": 0.0151,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.2679
+    },
+    {
+      "index": 27,
+      "timestamp_seconds": 390,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_027_0390s.jpg",
+      "sha256": "a89321634b56818ed6f14b6bf33e2f93d96a34fd80e2f14493058db58240e8e2",
+      "brightness": 129.44,
+      "blue_fraction": 0.0637,
+      "green_fraction": 0.0006,
+      "histogram_similarity_previous": 0.7235
+    },
+    {
+      "index": 28,
+      "timestamp_seconds": 405,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_028_0405s.jpg",
+      "sha256": "75e7f4d02b8761f7f47b38271ef24e22b86f0cb78da0d4b6f0d5bf916d505327",
+      "brightness": 144.31,
+      "blue_fraction": 0.0179,
+      "green_fraction": 0.0003,
+      "histogram_similarity_previous": 0.6298
+    },
+    {
+      "index": 29,
+      "timestamp_seconds": 420,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_029_0420s.jpg",
+      "sha256": "e2df01232bc26e397bc924fa622d29138aa276abbc083b97b9ca379dbcf6c9ba",
+      "brightness": 144.68,
+      "blue_fraction": 0.1725,
+      "green_fraction": 0.0049,
+      "histogram_similarity_previous": 0.1826
+    },
+    {
+      "index": 30,
+      "timestamp_seconds": 435,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_030_0435s.jpg",
+      "sha256": "e9bc2b389710f9106410b489639eafb9a3da98f9d40df8019680f4490e633cc5",
+      "brightness": 138.24,
+      "blue_fraction": 0.1571,
+      "green_fraction": 0.0038,
+      "histogram_similarity_previous": 0.684
+    },
+    {
+      "index": 31,
+      "timestamp_seconds": 450,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_031_0450s.jpg",
+      "sha256": "fab051397d4a32637e32947885f78f436d880be6bc97c8a30fdfa33a73197d04",
+      "brightness": 134.81,
+      "blue_fraction": 0.0581,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.1773
+    },
+    {
+      "index": 32,
+      "timestamp_seconds": 465,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_032_0465s.jpg",
+      "sha256": "37438908d84d4c8877fa007ef495e192a1107943294ec508107f8376775bd474",
+      "brightness": 133.6,
+      "blue_fraction": 0.0348,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.9156
+    },
+    {
+      "index": 33,
+      "timestamp_seconds": 480,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_033_0480s.jpg",
+      "sha256": "01094d048ce4ae751f9f581c2b3b916513aafd8499c32a0ec77d787b0818fbef",
+      "brightness": 138.32,
+      "blue_fraction": 0.0892,
+      "green_fraction": 0.0015,
+      "histogram_similarity_previous": 0.5381
+    },
+    {
+      "index": 34,
+      "timestamp_seconds": 495,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_034_0495s.jpg",
+      "sha256": "3ebd04f5bf30b2cd1ad723c0887c1036bd8949f327f4dda7d895607be17b1b32",
+      "brightness": 138.04,
+      "blue_fraction": 0.108,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.4333
+    },
+    {
+      "index": 35,
+      "timestamp_seconds": 510,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_035_0510s.jpg",
+      "sha256": "0134700a837a297a0e502b6eef024ef4f6314b5326652069d93e6cf4cdac6823",
+      "brightness": 151.12,
+      "blue_fraction": 0.0679,
+      "green_fraction": 0.035,
+      "histogram_similarity_previous": 0.3196
+    },
+    {
+      "index": 36,
+      "timestamp_seconds": 525,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_036_0525s.jpg",
+      "sha256": "26878239d9ab099c2b5700f23f36ffb33f63e8c72b73c03c951a5973eb29c49d",
+      "brightness": 148.2,
+      "blue_fraction": 0.0237,
+      "green_fraction": 0.0708,
+      "histogram_similarity_previous": 0.8612
+    },
+    {
+      "index": 37,
+      "timestamp_seconds": 540,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_037_0540s.jpg",
+      "sha256": "fb9a6c32050d4f0918fa3d3b040a17834f9193c8dd3cbdc9c68e225e5958a802",
+      "brightness": 162.49,
+      "blue_fraction": 0.0146,
+      "green_fraction": 0.1624,
+      "histogram_similarity_previous": 0.6132
+    },
+    {
+      "index": 38,
+      "timestamp_seconds": 555,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_038_0555s.jpg",
+      "sha256": "2d3245d468e71b7b61fa6aa49f21e8f97dc94a06565ea060dcf37226c173cf53",
+      "brightness": 165.35,
+      "blue_fraction": 0.3449,
+      "green_fraction": 0.0798,
+      "histogram_similarity_previous": 0.4419
+    },
+    {
+      "index": 39,
+      "timestamp_seconds": 570,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_039_0570s.jpg",
+      "sha256": "97a4031591107fb2ab813a283603fa88e84eebd5a4e09fe236d78465d2d8dc60",
+      "brightness": 155.97,
+      "blue_fraction": 0.1082,
+      "green_fraction": 0.3025,
+      "histogram_similarity_previous": 0.8711
+    },
+    {
+      "index": 40,
+      "timestamp_seconds": 585,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_040_0585s.jpg",
+      "sha256": "5600ee9bc61902d3daaffacbfe3754b3b8e4f63f52d52a882e979b5a0c49aa15",
+      "brightness": 172.7,
+      "blue_fraction": 0.3114,
+      "green_fraction": 0.1093,
+      "histogram_similarity_previous": 0.9176
+    },
+    {
+      "index": 41,
+      "timestamp_seconds": 600,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_041_0600s.jpg",
+      "sha256": "caae3335c1b574643254c3f68ecdbb2c4bedb66bda356e2f8ce0159f3a74c604",
+      "brightness": 161.37,
+      "blue_fraction": 0.1391,
+      "green_fraction": 0.061,
+      "histogram_similarity_previous": 0.7601
+    },
+    {
+      "index": 42,
+      "timestamp_seconds": 615,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_042_0615s.jpg",
+      "sha256": "ed47e18480e443ebe66d71a7058c6ddff68388142bc33a9737e48cdbab4bb7f5",
+      "brightness": 155.28,
+      "blue_fraction": 0.1284,
+      "green_fraction": 0.0018,
+      "histogram_similarity_previous": 0.635
+    },
+    {
+      "index": 43,
+      "timestamp_seconds": 630,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_043_0630s.jpg",
+      "sha256": "4dfbc308c15be90c299881a27c96cf7d39735bccb656d14ef4f68cbf10eeb2a8",
+      "brightness": 137.83,
+      "blue_fraction": 0.1575,
+      "green_fraction": 0.001,
+      "histogram_similarity_previous": 0.5594
+    },
+    {
+      "index": 44,
+      "timestamp_seconds": 645,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_044_0645s.jpg",
+      "sha256": "ab4d621c8d16259486aceb919be51c5eb9dcf7f275a65eb2c6041c2b2b4e96a9",
+      "brightness": 146.66,
+      "blue_fraction": 0.1481,
+      "green_fraction": 0.0006,
+      "histogram_similarity_previous": 0.3297
+    },
+    {
+      "index": 45,
+      "timestamp_seconds": 660,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_045_0660s.jpg",
+      "sha256": "c9484188beae51379d0db2ae4fc57452569cb0646a0ba6d2a62f8fc29ecadff5",
+      "brightness": 170.26,
+      "blue_fraction": 0.0216,
+      "green_fraction": 0.0002,
+      "histogram_similarity_previous": 0.8041
+    },
+    {
+      "index": 46,
+      "timestamp_seconds": 675,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_046_0675s.jpg",
+      "sha256": "edb5393196b86dfe2f2157eeadbad732c35052edb9ed9996b89a69839b4f6dcf",
+      "brightness": 162.56,
+      "blue_fraction": 0.0284,
+      "green_fraction": 0.0002,
+      "histogram_similarity_previous": 0.7266
+    },
+    {
+      "index": 47,
+      "timestamp_seconds": 690,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_047_0690s.jpg",
+      "sha256": "ea7abb694b26b6e01a44a0f4a6f75544cf5f0aaf445e7f11eb6e857347d9247b",
+      "brightness": 148.25,
+      "blue_fraction": 0.0718,
+      "green_fraction": 0.0003,
+      "histogram_similarity_previous": 0.7852
+    },
+    {
+      "index": 48,
+      "timestamp_seconds": 705,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_048_0705s.jpg",
+      "sha256": "7c23eaeaa130dd4b00d716878c3470b81f20c45413e3b4e3270da5aa38b60a91",
+      "brightness": 164.68,
+      "blue_fraction": 0.0006,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.6462
+    },
+    {
+      "index": 49,
+      "timestamp_seconds": 720,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_049_0720s.jpg",
+      "sha256": "f7bae55034466e9a998a07d5b568ee944fb272007d824feaeda1dcad8849f784",
+      "brightness": 164.47,
+      "blue_fraction": 0.0,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.2186
+    },
+    {
+      "index": 50,
+      "timestamp_seconds": 735,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_050_0735s.jpg",
+      "sha256": "15b811fba61fd95b9ab49e156cb8d96a896db1a69e7e1d47f4aca33df6e82b58",
+      "brightness": 143.77,
+      "blue_fraction": 0.1272,
+      "green_fraction": 0.0002,
+      "histogram_similarity_previous": 0.3567
+    },
+    {
+      "index": 51,
+      "timestamp_seconds": 750,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_051_0750s.jpg",
+      "sha256": "e8ca389a2e5c2d55a43664e2cb6da1e0857dfc032bd299d0851f6bdf816546b6",
+      "brightness": 148.19,
+      "blue_fraction": 0.147,
+      "green_fraction": 0.0072,
+      "histogram_similarity_previous": 0.5286
+    },
+    {
+      "index": 52,
+      "timestamp_seconds": 765,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_052_0765s.jpg",
+      "sha256": "4461ec308aaeea2d624e14757d9b5e3a90bd683f5a06416995f817d3e890b8cf",
+      "brightness": 147.35,
+      "blue_fraction": 0.0977,
+      "green_fraction": 0.0251,
+      "histogram_similarity_previous": 0.8521
+    },
+    {
+      "index": 53,
+      "timestamp_seconds": 780,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_053_0780s.jpg",
+      "sha256": "8fb914b2cc204b98d49a0f8cf6817cef0e78cdeaaa01d620d0b00413f9b20824",
+      "brightness": 152.67,
+      "blue_fraction": 0.1549,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.5621
+    },
+    {
+      "index": 54,
+      "timestamp_seconds": 795,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_054_0795s.jpg",
+      "sha256": "98289c4443de0d8cfb60a40063a366e36d8fcd5d1dc6a35f7360728be8528623",
+      "brightness": 187.94,
+      "blue_fraction": 0.099,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.483
+    },
+    {
+      "index": 55,
+      "timestamp_seconds": 810,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_055_0810s.jpg",
+      "sha256": "66b4c31b6683e4fc2ef527f428e37d178e4802c78bf6364d06aae281efeb6e12",
+      "brightness": 148.31,
+      "blue_fraction": 0.1177,
+      "green_fraction": 0.0005,
+      "histogram_similarity_previous": 0.0211
+    },
+    {
+      "index": 56,
+      "timestamp_seconds": 825,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_056_0825s.jpg",
+      "sha256": "90831a00e994c985eedb0d2a0132c2ce9247918812cece0c726156ab52fedf3f",
+      "brightness": 147.62,
+      "blue_fraction": 0.2002,
+      "green_fraction": 0.0071,
+      "histogram_similarity_previous": 0.4505
+    },
+    {
+      "index": 57,
+      "timestamp_seconds": 840,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_057_0840s.jpg",
+      "sha256": "ece93ff777497fd5352300cebcf70ef1233f383963542b315a89d0138dd68022",
+      "brightness": 166.6,
+      "blue_fraction": 0.0307,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.4391
+    },
+    {
+      "index": 58,
+      "timestamp_seconds": 855,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_058_0855s.jpg",
+      "sha256": "597fbe4dde34a0808efabb26f16f6cfa083adac389b7e65722f27a1febabbd43",
+      "brightness": 156.83,
+      "blue_fraction": 0.1016,
+      "green_fraction": 0.0018,
+      "histogram_similarity_previous": 0.7921
+    },
+    {
+      "index": 59,
+      "timestamp_seconds": 870,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_059_0870s.jpg",
+      "sha256": "8c61c0b563a734f778a0799f2437b317047ca3035cc3d97f8bfa54b511ab5646",
+      "brightness": 174.31,
+      "blue_fraction": 0.0446,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.5242
+    },
+    {
+      "index": 60,
+      "timestamp_seconds": 885,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_060_0885s.jpg",
+      "sha256": "bbaed2e6f728f111b4cacd37ad008e5f92d00a966982dfac729a30c861552fe7",
+      "brightness": 147.69,
+      "blue_fraction": 0.0536,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.2605
+    },
+    {
+      "index": 61,
+      "timestamp_seconds": 900,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_061_0900s.jpg",
+      "sha256": "2f1024ce659e75db1b01f85282399928d463bf168ca5200488acde0eb0535b6e",
+      "brightness": 171.63,
+      "blue_fraction": 0.0061,
+      "green_fraction": 0.0013,
+      "histogram_similarity_previous": 0.3099
+    },
+    {
+      "index": 62,
+      "timestamp_seconds": 915,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_062_0915s.jpg",
+      "sha256": "8507715f27956815d28b31776f0cd218fddecd8a30d93cbee0dc70924342dc5c",
+      "brightness": 159.13,
+      "blue_fraction": 0.0627,
+      "green_fraction": 0.004,
+      "histogram_similarity_previous": 0.4063
+    },
+    {
+      "index": 63,
+      "timestamp_seconds": 930,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_063_0930s.jpg",
+      "sha256": "1b2f048dd8c11e6ea52ff8817437e209415b779c09d26dedf2ec524396cdac16",
+      "brightness": 113.96,
+      "blue_fraction": 0.0,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.5623
+    },
+    {
+      "index": 64,
+      "timestamp_seconds": 945,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_064_0945s.jpg",
+      "sha256": "b37cf40ca0ab1ed3b2ee2ea8711591389cbb11670ce41ada22827f65d64d1261",
+      "brightness": 136.58,
+      "blue_fraction": 0.0143,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.8793
+    },
+    {
+      "index": 65,
+      "timestamp_seconds": 960,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_065_0960s.jpg",
+      "sha256": "d1e2fd8682268cc514b0b10e5621c38cca62fa0e1641c17c357a808d538bb2f5",
+      "brightness": 150.36,
+      "blue_fraction": 0.0142,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.9573
+    },
+    {
+      "index": 66,
+      "timestamp_seconds": 975,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_066_0975s.jpg",
+      "sha256": "c745863c3226bf088d100bfaf99bc3f2c381962860d4058d8b20cf6f2c37f995",
+      "brightness": 158.18,
+      "blue_fraction": 0.1159,
+      "green_fraction": 0.0003,
+      "histogram_similarity_previous": 0.553
+    },
+    {
+      "index": 67,
+      "timestamp_seconds": 990,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_067_0990s.jpg",
+      "sha256": "fc5ab5bf2a21f1f3144143cd3cd10b3f8a2704c2a87b0ad493496f2883023e9d",
+      "brightness": 151.79,
+      "blue_fraction": 0.1277,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.4505
+    },
+    {
+      "index": 68,
+      "timestamp_seconds": 1005,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_068_1005s.jpg",
+      "sha256": "c5ab30d5cf0767f0ea4e23f99be0ac816cca47d272f24efe362bec272bad5d0a",
+      "brightness": 156.67,
+      "blue_fraction": 0.1204,
+      "green_fraction": 0.0054,
+      "histogram_similarity_previous": 0.55
+    },
+    {
+      "index": 69,
+      "timestamp_seconds": 1020,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_069_1020s.jpg",
+      "sha256": "afb2fd6f49d311f2c80da6cbd73f8382e42b16ad93cddbe46004eabc224acf8b",
+      "brightness": 155.66,
+      "blue_fraction": 0.0239,
+      "green_fraction": 0.0008,
+      "histogram_similarity_previous": 0.6526
+    },
+    {
+      "index": 70,
+      "timestamp_seconds": 1035,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_070_1035s.jpg",
+      "sha256": "44b858c116644e691b9827a3da0b5163cb016a9108aa57b3ed39d28c9f1922d4",
+      "brightness": 179.2,
+      "blue_fraction": 0.0025,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.5078
+    },
+    {
+      "index": 71,
+      "timestamp_seconds": 1050,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_071_1050s.jpg",
+      "sha256": "f906c1cd597a436901ab7422840fb720c2c6c8756b6ae7f49be7814c0c948dc8",
+      "brightness": 137.84,
+      "blue_fraction": 0.0124,
+      "green_fraction": 0.0006,
+      "histogram_similarity_previous": 0.0401
+    },
+    {
+      "index": 72,
+      "timestamp_seconds": 1065,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_072_1065s.jpg",
+      "sha256": "642d8f5fffe661277b01da5911ff7a6a159efa23766e7eee59dd88e6e1d2780d",
+      "brightness": 156.68,
+      "blue_fraction": 0.0902,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.0256
+    },
+    {
+      "index": 73,
+      "timestamp_seconds": 1080,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_073_1080s.jpg",
+      "sha256": "d93498fb83aeeb3fa9f8d44a777840d647dc8265d180d89f70c716a263593bbe",
+      "brightness": 154.48,
+      "blue_fraction": 0.0686,
+      "green_fraction": 0.0032,
+      "histogram_similarity_previous": 0.8782
+    },
+    {
+      "index": 74,
+      "timestamp_seconds": 1095,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_074_1095s.jpg",
+      "sha256": "828ba896fc2544613fcca3e738857557b6fdea1d00b9fdd193ab6d576cbf1968",
+      "brightness": 165.65,
+      "blue_fraction": 0.588,
+      "green_fraction": 0.0178,
+      "histogram_similarity_previous": 0.1943
+    },
+    {
+      "index": 75,
+      "timestamp_seconds": 1110,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_075_1110s.jpg",
+      "sha256": "92a1441c0a755e959d5baf17c0dd8b9b3ec3a289e9c0847e0bd085e1c8ecb3c8",
+      "brightness": 166.88,
+      "blue_fraction": 0.6471,
+      "green_fraction": 0.0233,
+      "histogram_similarity_previous": 0.5325
+    },
+    {
+      "index": 76,
+      "timestamp_seconds": 1125,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_076_1125s.jpg",
+      "sha256": "6037c1483d32dd092d8e45f0a7ec2d8b0ea5389eab811cec81ed32d859459e8c",
+      "brightness": 161.01,
+      "blue_fraction": 0.6052,
+      "green_fraction": 0.0431,
+      "histogram_similarity_previous": 0.996
+    },
+    {
+      "index": 77,
+      "timestamp_seconds": 1140,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_077_1140s.jpg",
+      "sha256": "b4f54d616736e4b0d55013280d422ea2829f0f73b8af5ea81d4f26a0fa94817a",
+      "brightness": 171.17,
+      "blue_fraction": 0.2388,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.1557
+    },
+    {
+      "index": 78,
+      "timestamp_seconds": 1155,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_078_1155s.jpg",
+      "sha256": "720a2fcbda473be68276752671bed11ff0ac237124c634a661cb1f00e3fc444f",
+      "brightness": 160.88,
+      "blue_fraction": 0.0625,
+      "green_fraction": 0.0003,
+      "histogram_similarity_previous": 0.6672
+    },
+    {
+      "index": 79,
+      "timestamp_seconds": 1170,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_079_1170s.jpg",
+      "sha256": "78ae7a28f213d540dd7e1ca046387497f51599b68732db197c1d765e8b0be9fe",
+      "brightness": 148.75,
+      "blue_fraction": 0.0202,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.6819
+    },
+    {
+      "index": 80,
+      "timestamp_seconds": 1185,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_080_1185s.jpg",
+      "sha256": "a2e0e9fc93725b232bbfeb1136e3a99aecf496c36d7653e74d1e2bbbe747c705",
+      "brightness": 145.12,
+      "blue_fraction": 0.1024,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.4199
+    },
+    {
+      "index": 81,
+      "timestamp_seconds": 1200,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_081_1200s.jpg",
+      "sha256": "9c532cf33fc4e4ac848c923fdd3ebaaf3f47e637734c4698972ab5d3c1777a72",
+      "brightness": 146.86,
+      "blue_fraction": 0.1205,
+      "green_fraction": 0.0002,
+      "histogram_similarity_previous": 0.8141
+    },
+    {
+      "index": 82,
+      "timestamp_seconds": 1215,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_082_1215s.jpg",
+      "sha256": "6ab49e771318b9c0eb12ad093e5ab238e4cd4bf1e6db5d7f9c3640782f63f92b",
+      "brightness": 144.7,
+      "blue_fraction": 0.0734,
+      "green_fraction": 0.0012,
+      "histogram_similarity_previous": 0.7495
+    },
+    {
+      "index": 83,
+      "timestamp_seconds": 1230,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_083_1230s.jpg",
+      "sha256": "b8a411b9ef948963033336f530a63f82b8831d8c6787df11b0fd06032784932c",
+      "brightness": 154.35,
+      "blue_fraction": 0.1054,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.7798
+    },
+    {
+      "index": 84,
+      "timestamp_seconds": 1245,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_084_1245s.jpg",
+      "sha256": "9b8cea9b0dbc483a37d6f605c5643dc6832fa637dc46f6fa223e761290ea3c46",
+      "brightness": 148.36,
+      "blue_fraction": 0.1338,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.8166
+    },
+    {
+      "index": 85,
+      "timestamp_seconds": 1260,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_085_1260s.jpg",
+      "sha256": "e6ef1f9b4873f0e8715749fbbaf84b3750eaf3fa04b6325a376ce757911e2a81",
+      "brightness": 140.8,
+      "blue_fraction": 0.0861,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.8121
+    },
+    {
+      "index": 86,
+      "timestamp_seconds": 1275,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_086_1275s.jpg",
+      "sha256": "4cf331601da4ce6c7f676f085a7c35ef20953ea38ccffb3f21d7be19333ed655",
+      "brightness": 155.57,
+      "blue_fraction": 0.0128,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.7771
+    },
+    {
+      "index": 87,
+      "timestamp_seconds": 1290,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_087_1290s.jpg",
+      "sha256": "af4f5cbc5531d5d4765b7268bcb7cb426f9c4e7b5654cab7c743eee79109a206",
+      "brightness": 145.73,
+      "blue_fraction": 0.0,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.1506
+    },
+    {
+      "index": 88,
+      "timestamp_seconds": 1305,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_088_1305s.jpg",
+      "sha256": "9b5d365cb74c7dc43adcfa3176ffe034edacddd8c3f69777f8a1b55449fbd536",
+      "brightness": 169.48,
+      "blue_fraction": 0.0,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.2595
+    },
+    {
+      "index": 89,
+      "timestamp_seconds": 1320,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_089_1320s.jpg",
+      "sha256": "63d92891cc186ab1c4320e137b1caf06846084bed4c34ff8493f5ff1522d58d8",
+      "brightness": 121.11,
+      "blue_fraction": 0.0646,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.5904
+    },
+    {
+      "index": 90,
+      "timestamp_seconds": 1335,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_090_1335s.jpg",
+      "sha256": "14ca851ea5d924a57561fb5950b93e75d06d9adfd1fa0115dbefb6b5405f58ac",
+      "brightness": 147.47,
+      "blue_fraction": 0.045,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.385
+    },
+    {
+      "index": 91,
+      "timestamp_seconds": 1350,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_091_1350s.jpg",
+      "sha256": "f9954569cdf5778519ae5511dc85e1e346077216284260b6bb7bc9b4d3707e5c",
+      "brightness": 158.71,
+      "blue_fraction": 0.1026,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.7996
+    },
+    {
+      "index": 92,
+      "timestamp_seconds": 1365,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_092_1365s.jpg",
+      "sha256": "8d9da5c128072d503962f5703fe1235427b57b7e42e5f837d7e3b092c45d1073",
+      "brightness": 160.4,
+      "blue_fraction": 0.0725,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.5467
+    },
+    {
+      "index": 93,
+      "timestamp_seconds": 1380,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_093_1380s.jpg",
+      "sha256": "33880e179ee6d552c86c0f9f58013d752f7e0e83271de032d73c4b5760d2a744",
+      "brightness": 172.18,
+      "blue_fraction": 0.0267,
+      "green_fraction": 0.0013,
+      "histogram_similarity_previous": 0.4458
+    },
+    {
+      "index": 94,
+      "timestamp_seconds": 1395,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_094_1395s.jpg",
+      "sha256": "aa9c7c941ef04f3bee7935f8f1180c311077010dec81a7fad13926036ebe1af7",
+      "brightness": 165.16,
+      "blue_fraction": 0.1141,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.1824
+    },
+    {
+      "index": 95,
+      "timestamp_seconds": 1410,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_095_1410s.jpg",
+      "sha256": "94e861cd8abbae965d946e6fc991d6cd1b46d8272f79b4b28e61f9938a10671c",
+      "brightness": 167.39,
+      "blue_fraction": 0.0396,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.1614
+    },
+    {
+      "index": 96,
+      "timestamp_seconds": 1425,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_096_1425s.jpg",
+      "sha256": "a78693199369a23a6e016d7df514798d348670a7300daf0c02d077cbf2409fac",
+      "brightness": 182.22,
+      "blue_fraction": 0.4491,
+      "green_fraction": 0.004,
+      "histogram_similarity_previous": 0.2851
+    },
+    {
+      "index": 97,
+      "timestamp_seconds": 1440,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_097_1440s.jpg",
+      "sha256": "3796b9bdc8be0697ab2020e4e6f3309791ea80ac6788ab22660781c29e9af822",
+      "brightness": 156.49,
+      "blue_fraction": 0.5053,
+      "green_fraction": 0.0308,
+      "histogram_similarity_previous": 0.3679
+    },
+    {
+      "index": 98,
+      "timestamp_seconds": 1455,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_098_1455s.jpg",
+      "sha256": "05767aecc36f59fb0a1e3d10401f9dbfb64c066493ac0b084f7a30ffd0af5d39",
+      "brightness": 170.61,
+      "blue_fraction": 0.0163,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.1642
+    },
+    {
+      "index": 99,
+      "timestamp_seconds": 1470,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_099_1470s.jpg",
+      "sha256": "15456168c4d6b0ec11cc6e44247867b7c56de4cd7e442a2f3cec1d67e180c630",
+      "brightness": 170.91,
+      "blue_fraction": 0.0612,
+      "green_fraction": 0.0007,
+      "histogram_similarity_previous": 0.8775
+    },
+    {
+      "index": 100,
+      "timestamp_seconds": 1485,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_100_1485s.jpg",
+      "sha256": "cd5fd2c8a3abccf0d7149c21b568e8aad8813fc469b937bcf9eae595f983f7e5",
+      "brightness": 173.71,
+      "blue_fraction": 0.1085,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.9468
+    },
+    {
+      "index": 101,
+      "timestamp_seconds": 1500,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_101_1500s.jpg",
+      "sha256": "646cb2b770aeaad282a3df3dc7fe7de92f86ac7fcf1a0f7873a014effb7f9eb9",
+      "brightness": 166.29,
+      "blue_fraction": 0.0114,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.8945
+    },
+    {
+      "index": 102,
+      "timestamp_seconds": 1515,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_102_1515s.jpg",
+      "sha256": "e55b3551fc35bb2241757d2c08fb1bdfd9889c36252050a4de398abdf11b0aa5",
+      "brightness": 180.68,
+      "blue_fraction": 0.0276,
+      "green_fraction": 0.0004,
+      "histogram_similarity_previous": 0.8636
+    },
+    {
+      "index": 103,
+      "timestamp_seconds": 1530,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_103_1530s.jpg",
+      "sha256": "0e40091bd77cf67b54b35ef4b22aa9d49328b91980d1ec23c9fea62537b626c2",
+      "brightness": 152.88,
+      "blue_fraction": 0.1002,
+      "green_fraction": 0.0,
+      "histogram_similarity_previous": 0.8842
+    },
+    {
+      "index": 104,
+      "timestamp_seconds": 1545,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_104_1545s.jpg",
+      "sha256": "580c8e0e934613a2f2919b9d92fdb7482687b96de47ca4e0927512331b765378",
+      "brightness": 156.22,
+      "blue_fraction": 0.101,
+      "green_fraction": 0.0007,
+      "histogram_similarity_previous": 0.8023
+    },
+    {
+      "index": 105,
+      "timestamp_seconds": 1560,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_105_1560s.jpg",
+      "sha256": "b6b7efb7661bf7fcd62ac31158273300bde2b151091bef32269359050a645874",
+      "brightness": 132.36,
+      "blue_fraction": 0.008,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.3078
+    },
+    {
+      "index": 106,
+      "timestamp_seconds": 1575,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_106_1575s.jpg",
+      "sha256": "967e59edeaf3573bf3ea565901ae8e5737b8cfde074d652f733533ea74397938",
+      "brightness": 176.0,
+      "blue_fraction": 0.0011,
+      "green_fraction": 0.0001,
+      "histogram_similarity_previous": 0.1557
+    },
+    {
+      "index": 107,
+      "timestamp_seconds": 1590,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_107_1590s.jpg",
+      "sha256": "961233fc700a08cfa56427a2416334017ba91b5663f429f61fce5ae98b9f9023",
+      "brightness": 140.39,
+      "blue_fraction": 0.0824,
+      "green_fraction": 0.0009,
+      "histogram_similarity_previous": 0.3627
+    },
+    {
+      "index": 108,
+      "timestamp_seconds": 1605,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_108_1605s.jpg",
+      "sha256": "4f8aac94a1d25db50f3ec82b16bc1a0b808f490eb5648577b4c68c74911f018f",
+      "brightness": 149.29,
+      "blue_fraction": 0.1105,
+      "green_fraction": 0.0002,
+      "histogram_similarity_previous": 0.9521
+    },
+    {
+      "index": 109,
+      "timestamp_seconds": 1620,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_109_1620s.jpg",
+      "sha256": "e22195ce30540be18d6bc8e2c9e403367824608f0f5eb6e62795040553f5b522",
+      "brightness": 152.75,
+      "blue_fraction": 0.1333,
+      "green_fraction": 0.0005,
+      "histogram_similarity_previous": 0.9391
+    },
+    {
+      "index": 110,
+      "timestamp_seconds": 1635,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_110_1635s.jpg",
+      "sha256": "bb08c5b14229564b6a79a0894f320be8fe21e442a0cf5c763cf8569642ef6853",
+      "brightness": 153.22,
+      "blue_fraction": 0.1775,
+      "green_fraction": 0.0191,
+      "histogram_similarity_previous": 0.2561
+    },
+    {
+      "index": 111,
+      "timestamp_seconds": 1650,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_111_1650s.jpg",
+      "sha256": "720df71b0c3ae30f5acd1653e0a45d7674bf3fb418143cf3ecc9ab9033f77940",
+      "brightness": 164.02,
+      "blue_fraction": 0.0263,
+      "green_fraction": 0.007,
+      "histogram_similarity_previous": 0.5576
+    },
+    {
+      "index": 112,
+      "timestamp_seconds": 1665,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_112_1665s.jpg",
+      "sha256": "7a91446d268220bb4cf465b21f7733ef4d11c716a1686d46a7dc1018feedb51a",
+      "brightness": 166.38,
+      "blue_fraction": 0.0633,
+      "green_fraction": 0.0109,
+      "histogram_similarity_previous": 0.838
+    },
+    {
+      "index": 113,
+      "timestamp_seconds": 1680,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_113_1680s.jpg",
+      "sha256": "114894fd0809271ea32b06fc81ee5e27e81cacc1bef3700f9fb4efdb2cd92497",
+      "brightness": 165.09,
+      "blue_fraction": 0.2094,
+      "green_fraction": 0.112,
+      "histogram_similarity_previous": 0.7363
+    },
+    {
+      "index": 114,
+      "timestamp_seconds": 1695,
+      "path": "data/investigations/waterfall_w3v_video_augmented_blind/coarse_15s/coarse_114_1695s.jpg",
+      "sha256": "b0d168922c7dfbbb4d437ff2b5fdc88dcdf746fdd8356ed8cb36abf2ff1b5ae3",
+      "brightness": 168.82,
+      "blue_fraction": 0.2256,
+      "green_fraction": 0.0779,
+      "histogram_similarity_previous": 0.9015
+    }
+  ]
+}
