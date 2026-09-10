@@ -1,0 +1,86 @@
+{
+  "schema_version": "waterfall-w3-listing-observations-v2-user-authorized",
+  "created_utc": "2026-09-10T10:49:45Z",
+  "supersedes": "listing_visual_observations.json",
+  "media_source": "Only user-authorized stills 01.webp through 04.webp; observations use exterior/aerial stills 01, 02, and 03. No candidate imagery was accessed.",
+  "observations": [
+    {
+      "feature": "pool",
+      "state": "OBSERVED",
+      "confidence": 0.98,
+      "source_media": [
+        2
+      ],
+      "expected_aerial_visibility": "HIGH",
+      "detail": "A private in-ground blue pool is directly visible at the rear. The visible portion appears rectilinear; its complete nadir outline is UNKNOWN."
+    },
+    {
+      "feature": "house_roof",
+      "state": "OBSERVED",
+      "confidence": 0.86,
+      "source_media": [
+        1,
+        3
+      ],
+      "expected_aerial_visibility": "HIGH",
+      "detail": "The residence has a large, symmetric two-wing mass around a central taller glazed entry volume, with predominantly flat/parapet roof planes and roof-edge detail visible from the supplied aerial."
+    },
+    {
+      "feature": "driveway_garage",
+      "state": "OBSERVED",
+      "confidence": 0.94,
+      "source_media": [
+        1,
+        3
+      ],
+      "expected_aerial_visibility": "HIGH",
+      "detail": "A broad paved front approach and two large adjacent garage-door bays are directly visible. The internal garage capacity is UNKNOWN."
+    },
+    {
+      "feature": "parcel_open_space_neighbours",
+      "state": "OBSERVED",
+      "confidence": 0.78,
+      "source_media": [
+        3
+      ],
+      "expected_aerial_visibility": "HIGH",
+      "detail": "Immediate built neighbours are visible on both sides and behind. No ownership, parcel boundary, orientation, or wider-location inference is made from this view."
+    },
+    {
+      "feature": "distinctive_features",
+      "state": "OBSERVED",
+      "confidence": 0.85,
+      "source_media": [
+        1,
+        3
+      ],
+      "expected_aerial_visibility": "MEDIUM",
+      "detail": "Distinctive visible elements include a centered tall glazed entry, balanced stone-clad garage-front panels, upper glass balustrades, and a central landscaped island between paired paved approaches."
+    },
+    {
+      "feature": "listing_aerial_fingerprint",
+      "state": "OBSERVED",
+      "confidence": 0.82,
+      "source_media": [
+        3
+      ],
+      "expected_aerial_visibility": "HIGH",
+      "detail": "The supplied oblique aerial shows the complete front roof mass and dense immediate context; the rear pool is not clearly visible from this angle. This is target visual evidence only and is not used to geolocate."
+    }
+  ],
+  "unknowns": [
+    "land size",
+    "video",
+    "complete pool geometry",
+    "rear parcel extent",
+    "street geometry",
+    "parcel ownership",
+    "compass orientation",
+    "identity and location"
+  ],
+  "scoring_constraints": {
+    "land_size_weight_maximum": 0.05,
+    "land_size_used": false,
+    "detector_no_hard_elimination": true
+  }
+}

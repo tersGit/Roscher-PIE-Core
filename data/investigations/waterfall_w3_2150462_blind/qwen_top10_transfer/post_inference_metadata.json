@@ -1,0 +1,212 @@
+[
+  {
+    "opaque_candidate_label": "candidate_01",
+    "official_rank": 1,
+    "stand_number": "916",
+    "extension": 19,
+    "property_id": "2034520",
+    "official_score": 0.7558,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.8167,
+      "spatial_v2": 0.5,
+      "aerial": 0.899,
+      "exterior": 0.899,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  },
+  {
+    "opaque_candidate_label": "candidate_02",
+    "official_rank": 2,
+    "stand_number": "3112",
+    "extension": 39,
+    "property_id": "2073501",
+    "official_score": 0.7525,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.8128,
+      "spatial_v2": 0.5,
+      "aerial": 0.8883,
+      "exterior": 0.8883,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  },
+  {
+    "opaque_candidate_label": "candidate_03",
+    "official_rank": 3,
+    "stand_number": "1057",
+    "extension": 19,
+    "property_id": "2033130",
+    "official_score": 0.7524,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.7985,
+      "spatial_v2": 0.5,
+      "aerial": 0.9245,
+      "exterior": 0.9,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  },
+  {
+    "opaque_candidate_label": "candidate_04",
+    "official_rank": 4,
+    "stand_number": "3036",
+    "extension": 38,
+    "property_id": "2042706",
+    "official_score": 0.7497,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.7925,
+      "spatial_v2": 0.5,
+      "aerial": 0.92,
+      "exterior": 0.9,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  },
+  {
+    "opaque_candidate_label": "candidate_05",
+    "official_rank": 5,
+    "stand_number": "1022",
+    "extension": 19,
+    "property_id": "2033300",
+    "official_score": 0.7494,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.8057,
+      "spatial_v2": 0.5,
+      "aerial": 0.8854,
+      "exterior": 0.8854,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  },
+  {
+    "opaque_candidate_label": "candidate_06",
+    "official_rank": 6,
+    "stand_number": "917",
+    "extension": 19,
+    "property_id": "2033199",
+    "official_score": 0.7466,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.806,
+      "spatial_v2": 0.5,
+      "aerial": 0.8771,
+      "exterior": 0.8531,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  },
+  {
+    "opaque_candidate_label": "candidate_07",
+    "official_rank": 7,
+    "stand_number": "1059",
+    "extension": 19,
+    "property_id": "2033133",
+    "official_score": 0.7455,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.7893,
+      "spatial_v2": 0.5,
+      "aerial": 0.8962,
+      "exterior": 0.8962,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  },
+  {
+    "opaque_candidate_label": "candidate_08",
+    "official_rank": 8,
+    "stand_number": "3241",
+    "extension": 39,
+    "property_id": "2073867",
+    "official_score": 0.7428,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.7636,
+      "spatial_v2": 0.5,
+      "aerial": 0.9488,
+      "exterior": 0.9,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  },
+  {
+    "opaque_candidate_label": "candidate_09",
+    "official_rank": 9,
+    "stand_number": "873",
+    "extension": 19,
+    "property_id": "2033155",
+    "official_score": 0.7405,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.7982,
+      "spatial_v2": 0.5,
+      "aerial": 0.8509,
+      "exterior": 0.8509,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  },
+  {
+    "opaque_candidate_label": "candidate_10",
+    "official_rank": 10,
+    "stand_number": "3035",
+    "extension": 38,
+    "property_id": "2042708",
+    "official_score": 0.7402,
+    "support": {
+      "pool_presence": 1.0,
+      "shape_v2": 0.7654,
+      "spatial_v2": 0.5,
+      "aerial": 0.9218,
+      "exterior": 0.9,
+      "gis": 0.5,
+      "stand_size": 0.5,
+      "greenbelt_context": 0.5
+    },
+    "conflicts_or_unknown": [
+      "neighbour"
+    ]
+  }
+]
