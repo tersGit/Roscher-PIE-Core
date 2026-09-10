@@ -1,3 +1,5 @@
 data/investigations/waterfall_w3_2150462_blind/listing_response_headers.txt -text
 data/investigations/waterfall_w3_2150462_blind/listing_response_429.html -text
 data/investigations/waterfall_w3_2150462_blind/listing_media/user_supplied_originals/* -text
+data/investigations/waterfall_w3_2150462_blind/ranking_run/ranking_freeze.json -text
+data/investigations/waterfall_w3_2150462_blind/ranking_run/ranking_freeze.sha256 -text
