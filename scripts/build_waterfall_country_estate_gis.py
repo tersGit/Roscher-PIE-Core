@@ -240,7 +240,14 @@ def main() -> int:
         imagery = {"profile": DEFAULT_PROFILE_ID, "status": "COMPLETE" if stats.tiles_failed == 0 else "PARTIAL", "cache_version": "w1", "service": "AerialPhotography/2023", "source_year": 2023, "tile_stats": stats.__dict__, "crop_status_counts": dict(Counter(row["status"] for row in crop_statuses)), "crop_dimensions": [900, 900], "requested_effective_gsd_m": 0.15}
         qc = build_qc_panels(features, crop_dir)
     qa_counts = Counter(flag for feature in features for flag in feature["properties"]["qa_flags"])
-    manifest = {"schema_version": "waterfall-country-estate-w1", "created_utc": SOURCE_DATE, "estate_id": ESTATE_ID, "scope": {"authoritative_townships": [official_name(ext) for ext in EXTENSIONS], "normalized_townships": [normalized_name(ext) for ext in EXTENSIONS], "membership": "Exact CoJ Property/MapServer layer 8 TOWN_NAME_DESC only; no proximity inference; no adjacent extensions."}, "source": {"mapserver": PROPERTY_MAPSERVER, "layer": REGISTERED_STANDS, "layer_name": "REGISTERED_STANDS", "retrieved_utc": SOURCE_DATE}, "townships": township_reports, "total_erven": len(features), "extent": extent, "duplicates": duplicates, "qa_flag_counts": dict(qa_counts), "imagery": imagery, "qc_sample": qc, "principal_artifacts": {"geojson": {"path": str(GIS_OUTPUT.relative_to(ROOT)), "sha256": _sha256(GIS_OUTPUT)}}, "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(), "listing_independent": True, "production_scoring_changed": False}
+    principal_artifacts = {"geojson": {"path": str(GIS_OUTPUT.relative_to(ROOT)), "sha256": _sha256(GIS_OUTPUT)}}
+    cache_manifest = ROOT / "data" / "cache" / "ags_native15" / ESTATE_ID / "manifest.json"
+    if cache_manifest.is_file():
+        principal_artifacts["native15_cache_manifest"] = {
+            "path": str(cache_manifest.relative_to(ROOT)),
+            "sha256": _sha256(cache_manifest),
+        }
+    manifest = {"schema_version": "waterfall-country-estate-w1", "created_utc": SOURCE_DATE, "estate_id": ESTATE_ID, "scope": {"authoritative_townships": [official_name(ext) for ext in EXTENSIONS], "normalized_townships": [normalized_name(ext) for ext in EXTENSIONS], "membership": "Exact CoJ Property/MapServer layer 8 TOWN_NAME_DESC only; no proximity inference; no adjacent extensions."}, "source": {"mapserver": PROPERTY_MAPSERVER, "layer": REGISTERED_STANDS, "layer_name": "REGISTERED_STANDS", "retrieved_utc": SOURCE_DATE}, "townships": township_reports, "total_erven": len(features), "extent": extent, "duplicates": duplicates, "qa_flag_counts": dict(qa_counts), "imagery": imagery, "qc_sample": qc, "principal_artifacts": principal_artifacts, "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(), "listing_independent": True, "production_scoring_changed": False}
     MANIFEST_OUTPUT.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     counts = {report["extension"]: report["source_erven_count"] for report in township_reports}
     readiness = "READY" if imagery["status"] == "COMPLETE" and len(qc) == 12 and all(row["status"] == "READY" for row in qc) else "NOT READY"
@@ -260,8 +267,11 @@ Membership is an exact `TOWN_NAME_DESC` query for only the six CoJ names below. 
 ## C. Scope QA
 Duplicate extension-plus-stand groups: {len(duplicates)}. Missing stands: {qa_counts['missing_stand']}; missing geometry: {qa_counts['missing_geometry']}; invalid centroids: {qa_counts['invalid_centroid']}. Tiny-area flags: {qa_counts['suspicious_tiny_area']}; large-area flags: {qa_counts['suspicious_large_area']}; non-residential/common-property flags: {qa_counts['non_residential_or_common_property']}. Flags are retained for review.
 
-## D/E. Aerial imagery
+## D. Native15 source acquisition
 Profile: `{DEFAULT_PROFILE_ID}` (`{CACHE_PROFILES[DEFAULT_PROFILE_ID].tile_metres:g} m` tiles at `{CACHE_PROFILES[DEFAULT_PROFILE_ID].pixels}px`, target `{CACHE_PROFILES[DEFAULT_PROFILE_ID].metres_per_pixel:.2f} m/px`). Legacy caches are not reused or overwritten. Status: **{imagery['status']}**.
+
+## E. Parcel-centred crops
+All requested parcel-centred crops are `{imagery.get('crop_dimensions', [])}` pixels at an actual effective GSD of `{imagery.get('requested_effective_gsd_m', 'N/A')} m/px`; crop status counts are preserved in the manifest.
 
 ## F. Visual inventory
 No detector or scoring run was started. Pool/visual-inventory statuses were not inferred, changed, or used to eliminate parcels.
@@ -272,7 +282,25 @@ Deterministic random sample size: {len(qc)}. Ready panels: {sum(row['status'] ==
 ## H. Freeze
 Machine-readable freeze: `{MANIFEST_OUTPUT.relative_to(ROOT)}`. GIS feature collection: `{GIS_OUTPUT.relative_to(ROOT)}`. SHA256 is recorded in the manifest.
 
-## I–O. Final readiness
+## I. Source identifiers
+The GeoJSON retains PIE property ID, CoJ object ID, SG ID, stand, source and normalized township, area, geometry, centroid, and GIS street fields.
+
+## J. Duplicate controls
+Duplicate extension-plus-stand keys are explicitly flagged and retained, preserving unambiguous source identifiers for review.
+
+## K. Address provenance
+Street address, number, and name are copied only from CoJ layer 8 fields; no listing address data was consulted.
+
+## L. Area and geometry coverage
+The source-layer area and full CoJ polygon geometry are frozen per record; anomalies are flagged rather than removed.
+
+## M. Cache provenance
+The manifest records AGS service/year, cache profile/version, tile status, crop status, requested and effective GSD, and principal SHA256 values.
+
+## N. Readiness conditions
+Readiness requires exact scope, complete GIS geometry/centroids, complete native15 crop coverage, and every deterministic QC panel available.
+
+## O. Final readiness
 **{readiness}** — requires complete native15 tile/crop coverage and all 12 QC panels. No listing testing began.
 """, encoding="utf-8")
     print(json.dumps({"counts": counts, "total": len(features), "imagery": imagery["status"], "readiness": readiness}, indent=2))
