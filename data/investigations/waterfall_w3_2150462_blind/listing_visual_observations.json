@@ -1,0 +1,70 @@
+{
+  "schema_version": "waterfall-w3-listing-observations-v1",
+  "created_utc": "2026-09-10T10:35:10Z",
+  "listing_reference": "2150462",
+  "evidence_state": "NO_TARGET_MEDIA_RETRIEVED",
+  "blind_scope": {
+    "candidate_imagery_accessed_before_freeze": false,
+    "w1_universe_commit": "e86b156b3f8ac099cd386b9de2b3b2ba609c0635",
+    "w1_geojson_sha256": "6a375bf542bcff28c6a3ee862f9e0c3c9a5395d0497b4159027c40b75cf7be3a",
+    "w2_ranks_or_evidence_used": false,
+    "identity_or_ground_truth_activity": "NOT_STARTED"
+  },
+  "listing_facts": {
+    "land_sqm": null,
+    "land_size_role": "UNKNOWN; if later supplied by the listing, weak experimental contribution at most 0.05 and never a gate",
+    "aerial_or_drone_present": "UNKNOWN",
+    "video_presence": "UNKNOWN"
+  },
+  "observations": [
+    {
+      "feature": "pool",
+      "state": "UNKNOWN",
+      "confidence": 0.0,
+      "source_media": [],
+      "expected_aerial_visibility": "UNKNOWN",
+      "visibility_or_occlusion": "No target still or video was retrievable."
+    },
+    {
+      "feature": "house_roof",
+      "state": "UNKNOWN",
+      "confidence": 0.0,
+      "source_media": [],
+      "expected_aerial_visibility": "UNKNOWN",
+      "visibility_or_occlusion": "No target still or video was retrievable."
+    },
+    {
+      "feature": "driveway_garage",
+      "state": "UNKNOWN",
+      "confidence": 0.0,
+      "source_media": [],
+      "expected_aerial_visibility": "UNKNOWN",
+      "visibility_or_occlusion": "No target still or video was retrievable."
+    },
+    {
+      "feature": "parcel_open_space_neighbours",
+      "state": "UNKNOWN",
+      "confidence": 0.0,
+      "source_media": [],
+      "expected_aerial_visibility": "UNKNOWN",
+      "visibility_or_occlusion": "No target still or video was retrievable."
+    },
+    {
+      "feature": "distinctive_features",
+      "state": "UNKNOWN",
+      "confidence": 0.0,
+      "source_media": [],
+      "expected_aerial_visibility": "UNKNOWN",
+      "visibility_or_occlusion": "No target still or video was retrievable."
+    },
+    {
+      "feature": "listing_aerial_fingerprint",
+      "state": "UNKNOWN",
+      "confidence": 0.0,
+      "source_media": [],
+      "expected_aerial_visibility": "UNKNOWN",
+      "visibility_or_occlusion": "No target aerial or drone media was retrievable."
+    }
+  ],
+  "inference_policy": "No absence is recorded as NO without sufficient visible evidence. No target assumption or candidate-derived target feature is permitted."
+}

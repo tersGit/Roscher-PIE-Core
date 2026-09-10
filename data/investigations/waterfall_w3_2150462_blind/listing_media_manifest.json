@@ -1,0 +1,45 @@
+{
+  "schema_version": "waterfall-w3-listing-media-v1",
+  "created_utc": "2026-09-10T10:35:10Z",
+  "listing_reference": "2150462",
+  "listing_url": "https://www.myproperty.co.za/en-za/for-sale/house/gauteng/midrand/waterfall-country-estate/5-bedroom/2150462",
+  "acquisition_scope": "normal public rendered listing media only; no identity, address, erf, coordinates, metadata, maps, Street View, reverse-image, duplicates, historical-sales, or ground-truth lookup",
+  "attempts": [
+    {
+      "method": "normal HTTPS GET with browser User-Agent",
+      "retrieved_utc": "2026-09-10T10:35:10Z",
+      "http_status": 429,
+      "result": "LISTING_MEDIA_NOT_RETRIEVED_PORTAL_CHALLENGE",
+      "evidence": {
+        "response_headers_path": "listing_response_headers.txt",
+        "response_headers_sha256": "ade5ae8382de6c865023259d3df5409ced2b2b78a1ac06a1fc2c5202ea2fa54b",
+        "response_body_path": "listing_response_429.html",
+        "response_body_sha256": "2aaa4718e80370fb73a13dc13a785b5b1e8499238cf8266a28ecae18cc879e7d"
+      }
+    },
+    {
+      "method": "public rendered-page retrieval",
+      "retrieved_utc": "2026-09-10T10:34:32Z",
+      "http_status": 429,
+      "result": "LISTING_MEDIA_NOT_RETRIEVED_PORTAL_CHALLENGE"
+    }
+  ],
+  "original_stills": [],
+  "original_videos": [],
+  "video_check": {
+    "method": "normal rendered listing page, exposed embeds, and public video/virtual-tour assets",
+    "result": "NOT_ASSESSABLE_LISTING_PAGE_NOT_RETRIEVED",
+    "video_count": 0,
+    "required_status_if_later_exposed": "VIDEO_PRESENT_BUT_NOT_RETRIEVED unless the original public video is preserved unchanged"
+  },
+  "frame_extraction": {
+    "status": "NOT_STARTED_NO_RETRIEVED_VIDEO",
+    "interval_seconds": 2,
+    "frames": []
+  },
+  "exterior_frame_selection": {
+    "status": "NOT_STARTED_NO_RETRIEVED_MEDIA",
+    "selected_count": 0,
+    "selection": []
+  }
+}
