@@ -1,0 +1,14 @@
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+Content-Length: 374
+Connection: keep-alive
+Date: Thu, 10 Sep 2026 10:49:45 GMT
+x-amzn-RequestId: 5e51c2ae-ffca-468d-b195-69b38d424c43
+x-amz-apigw-id: DeqzhELLjoEEqbA=
+X-Amzn-Trace-Id: Root=1-6aa28b49-49020ed45b6d9eb85fe53267
+X-Cache: Error from cloudfront
+Via: 1.1 04419f796b1ba1a3e3119eb6cf4c3564.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: JNB51-P4
+X-Amz-Cf-Id: pno0Lz9UiBCWgLgpJC1jnR_ZGthzd-e1lIJgXef08RGT4gNFm8dsXA==
+Vary: Origin
+

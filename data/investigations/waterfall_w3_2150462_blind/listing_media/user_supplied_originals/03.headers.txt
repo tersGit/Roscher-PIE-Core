@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Content-Type: image/jpeg
+Content-Length: 215268
+Connection: keep-alive
+Date: Fri, 28 Aug 2026 08:40:14 GMT
+x-amzn-RequestId: 538de578-6d88-4caf-b290-641e349ea8b0
+Last-Modified: Mon, 24 Aug 2026 12:59:46 GMT
+x-amz-apigw-id: CzhpUF_bDoEEDUg=
+Cache-Control: max-age=31536000,public
+X-Amzn-Trace-Id: Root=1-6a91496e-74eb603a44d0a08074001ba2
+X-Cache: Hit from cloudfront
+Via: 1.1 5034f668e0b8ad1a0a93c0c18ed4839c.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: JNB51-P4
+X-Amz-Cf-Id: 1gcPKOlN9zGgbNfh8HeUSDz2_7v3AzYJPUZ4n-gvJRJZiK1m5ImM1Q==
+Age: 1130970
+Vary: Origin
+
