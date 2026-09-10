@@ -1,0 +1,494 @@
+{
+  "schema_version": "waterfall-w2-listing-media-v1",
+  "created_utc": "2026-09-10T08:44:33Z",
+  "listing_reference": "RL5480",
+  "listing_url": "https://www.myproperty.co.za/en-za/for-sale/house/gauteng/midrand/waterfall-country-estate/5-bedroom/rl5480",
+  "normal_gallery_photo_count": 48,
+  "video_check": {
+    "method": "normal_rendered_listing_embeds_and_assets",
+    "result": "NO_VIDEO_FOUND",
+    "video_count": 0
+  },
+  "images": [
+    {
+      "source_order": 1,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-25.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/01_25.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "f69d477f4f1e1bf0deeece52847cdabc4ec9b47349fc26967f3c8b2eb7cd770d"
+    },
+    {
+      "source_order": 2,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-1.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/02_01.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "8affc2d6a490f3169617726dab95f0b36402d46cba6d6f33f3cfedec461dcfb5"
+    },
+    {
+      "source_order": 3,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-4.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/03_04.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "53e2646180b95e562f06b021e6b9a3e4834ccbce6268a48566e4359d7e70c81a"
+    },
+    {
+      "source_order": 4,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-20.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/04_20.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "694bc9703ee6d8e983fc1cb68315a0e86e4d2b236bd154ef80513ea0fc5df160"
+    },
+    {
+      "source_order": 5,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-39.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/05_39.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "c8348680bbbebfa60f8b7d7a7c7a9258e9cd0b82f38906639a01b825e1dc8c5e"
+    },
+    {
+      "source_order": 6,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-26.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/06_26.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "526891cf3f6916206b8bcab764aa2925a7df7103e92d6810f761f96b952dd731"
+    },
+    {
+      "source_order": 7,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-23.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/07_23.jpg",
+      "dimensions": [
+        3802,
+        2533
+      ],
+      "sha256": "c6513e2bfe62443ae02d3ad1840bb93e1c9def9546a1273aa691c51e55a0e503"
+    },
+    {
+      "source_order": 8,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-2.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/08_02.jpg",
+      "dimensions": [
+        3866,
+        2570
+      ],
+      "sha256": "0338226aa1bef9e031b013229f6de0fd7ef65131df3d27a79085c9ffc9da2cb2"
+    },
+    {
+      "source_order": 9,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-3.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/09_03.jpg",
+      "dimensions": [
+        3871,
+        2587
+      ],
+      "sha256": "11e7affac72880243a4112e957e7856117db3de7395021877790b03e87d92301"
+    },
+    {
+      "source_order": 10,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-24.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/10_24.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "9c7b73fc17ea71bdda43e4398884a490d683b3cc5955c7ea985e1667ea0b3bc2"
+    },
+    {
+      "source_order": 11,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-7.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/11_07.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "ee49565a517d275092150dd563a4e12fff983d3caa2f9173004c0b3e03cc881a"
+    },
+    {
+      "source_order": 12,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-44.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/12_44.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "19592cf5fa3f3cfb68d70cb63c05f78a61667c24f81b17905e7f24da2bd0f482"
+    },
+    {
+      "source_order": 13,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-46.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/13_46.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "1a55086ba4760dc52b6e85bb9a291812ea10ce376b73e0976a033f5d3c5785ba"
+    },
+    {
+      "source_order": 14,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-43.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/14_43.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "4c8198e929b26aa1ee1c0a9ce4690d33c77b56efae5b170714bf745215f5a4f6"
+    },
+    {
+      "source_order": 15,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-15.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/15_15.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "378122912a73b1f5ff60599533551a5e4e6c71e675bba84a51589d236c0dfe71"
+    },
+    {
+      "source_order": 16,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-16.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/16_16.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "b3dd79814cd2f0f22c6e91ff72f8decad60712f660d0a044e9267b8241df1932"
+    },
+    {
+      "source_order": 17,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-13.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/17_13.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "87be06f2cb81db607680306764de6522e51b5360da3d4b1dd3f965a0539e4a0d"
+    },
+    {
+      "source_order": 18,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-18.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/18_18.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "23a05b55c48379560efb794df66d4dcb15c1f858c6885d28f58ea34f33d5a83d"
+    },
+    {
+      "source_order": 19,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-41.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/19_41.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "a1f2cb81e1e0e1c616b2b2fff871947733074ec440aa5d942954eff88b8d30f9"
+    },
+    {
+      "source_order": 20,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-36.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/20_36.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "6cdcadee98d7288854318066b3fe9d71526f870b38a8e43cc8b5c34e58b1fe48"
+    },
+    {
+      "source_order": 21,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-33.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/21_33.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "181fc53dabd5a2608a2ca28f612098682cd497f0c68e8641b24d1c3d71f5cd3f"
+    },
+    {
+      "source_order": 22,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-32.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/22_32.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "eb0712df606118d6c2533f8e1bebf3ded0003d730a3749819403f23440f5ba84"
+    },
+    {
+      "source_order": 23,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-28.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/23_28.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "fa4006fda0095af3e54984147a0f09f3561f87f5500d47c463a73ddcd33183ea"
+    },
+    {
+      "source_order": 24,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-30.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/24_30.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "b0a8cbe06e433f5afb580cfc8dc4ebd3366dbb274e719480da3465c0041f3c91"
+    },
+    {
+      "source_order": 25,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-5.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/25_05.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "98c8d988de8eceb447569d5af4e1ecb2945d0c21c4c144a15637a6b9e201032e"
+    },
+    {
+      "source_order": 26,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-42.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/26_42.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "085ae15794f173c8ae6c854c9e7da4e89344d2e4b038045d8ef2ee8bd81d4787"
+    },
+    {
+      "source_order": 27,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-40.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/27_40.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "c4faddbd5f954bc765fab1d55ca4f9b609ec7f9806b036ab87dda61b328d4fa1"
+    },
+    {
+      "source_order": 28,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-38.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/28_38.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "ee6c8cf8d94a6c30802fb06744c8035b2b60113e9992752fe6665e716da75e46"
+    },
+    {
+      "source_order": 29,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-31.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/29_31.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "8521dd4fce41aca839741882a6888ef87ddda2d12bd411f4665c4e055d366613"
+    },
+    {
+      "source_order": 30,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-29.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/30_29.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "5f55bd0695a6c6597a72762ca49524a96ec084ea07d7cbf5e4ae6becfb8aa4e8"
+    },
+    {
+      "source_order": 31,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-48.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/31_48.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "d1e4cc0033ce1f83ac5e9e8d53f2bd0a542e41428823eb798847a5aaf4ea6aef"
+    },
+    {
+      "source_order": 32,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-47.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/32_47.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "81816ce44de44cdf35a7fbc0a581fdfffa84f80be72839aee010fc72f815e73a"
+    },
+    {
+      "source_order": 33,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-45.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/33_45.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "563348e5f7d8a4c60b782e66eeb3a3f131f2b962254584cf68f57ac00416374b"
+    },
+    {
+      "source_order": 34,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-37.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/34_37.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "fbe86f246819e19bdd53e91e9b0fef71a4dd024eef3ec48dbc5da097479b4cd1"
+    },
+    {
+      "source_order": 35,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-34.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/35_34.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "93ab202a884427897f55e5636f14965f80d8ccb82dd922ffc8ca1621b48b50fc"
+    },
+    {
+      "source_order": 36,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-35.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/36_35.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "3d477bb12704310694281fe0d79fbd6fe5f0390a16e61918bcef65420987528c"
+    },
+    {
+      "source_order": 37,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-27.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/37_27.jpg",
+      "dimensions": [
+        3880,
+        2568
+      ],
+      "sha256": "ca761c78c076ff253485a9be45a9e5974e764aacc969e570e07d83d6e0c03211"
+    },
+    {
+      "source_order": 38,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-14.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/38_14.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "cce0462c19b7682d8b12deb993947a0e3e06a30a2d641b66a840edf92cfc4245"
+    },
+    {
+      "source_order": 39,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-12.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/39_12.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "de61ec065bf2d29213d233ad1e53677c1bbc576aaac2455a8bd299a7d47f023a"
+    },
+    {
+      "source_order": 40,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-8.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/40_08.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "0629651f53bb817542f90ab769808c850750783e0bd5af84901a3aa4d145530b"
+    },
+    {
+      "source_order": 41,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-9.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/41_09.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "d14ea3222ee1a9440df45b1c48e29ff2aef821cf7653555e0176d943f24a9e2c"
+    },
+    {
+      "source_order": 42,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-22.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/42_22.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "783e35ae287da79e355499c854b231205299544f5919206133fa6dfe88867752"
+    },
+    {
+      "source_order": 43,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-21.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/43_21.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "77e7e609b931ec80118bf7d08e1386577923bcd8aec26069f468ea7fada30249"
+    },
+    {
+      "source_order": 44,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-19.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/44_19.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "c0e97b1be159e54a772abbccdcf12113bc86d3b903b8140395cc492e93c72af0"
+    },
+    {
+      "source_order": 45,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-11.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/45_11.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "ecbeb5ffba480f4c6475e77685e7ed39782c9bd524eadab3e175fd43235edcc8"
+    },
+    {
+      "source_order": 46,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-10.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/46_10.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "5cb885f1b89570a9e1d8113c61a68e7cd1204a906ee59821e942afcca2664f02"
+    },
+    {
+      "source_order": 47,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-17.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/47_17.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "f3744902aea73358ec424fce7d673b73bb0fa3c4d5c7eb1ae909348d20d7584d"
+    },
+    {
+      "source_order": 48,
+      "source_url": "https://s3.entegral.net/flex/property/24/RL5480/1785563963239-6.jpg",
+      "path": "data/investigations/waterfall_w2_rl5480_blind/listing_media/48_06.jpg",
+      "dimensions": [
+        3887,
+        2591
+      ],
+      "sha256": "1cd788dfc2b0fc49994bd646235d1375e4e85d2251827ba5f433eda65462605f"
+    }
+  ]
+}
