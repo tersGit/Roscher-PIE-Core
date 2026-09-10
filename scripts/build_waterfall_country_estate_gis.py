@@ -200,11 +200,25 @@ def build_qc_panels(features: list[dict[str, Any]], crop_dir: Path) -> list[dict
             with Image.open(crop) as image:
                 image = image.convert("RGB")
                 draw = ImageDraw.Draw(image)
+                lat, lon = props["centroid_latitude"], props["centroid_longitude"]
+                cx, cy = _mercator(lat, lon)
+                polygon_points = []
+                for ring in feature["geometry"].get("rings", []):
+                    points = []
+                    for point_lon, point_lat in ring:
+                        x, y = _mercator(point_lat, point_lon)
+                        points.append((round((x - (cx - 67.5)) / 135 * image.width), round(((cy + 67.5) - y) / 135 * image.height)))
+                    if len(points) >= 3:
+                        draw.line(points, fill=(0, 255, 0), width=3)
+                        polygon_points.extend(points)
                 draw.rectangle((0, 0, image.width - 1, image.height - 1), outline=(255, 255, 0), width=3)
                 draw.text((12, 12), f"Stand {props['stand_number']} | {props['township_normalized']} | {props['area_sqm']} sqm", fill=(255, 255, 0))
                 output = panel_dir / f"qc_{index:02d}_{props['extension']}_{props['pie_property_id']}.jpg"
                 image.save(output, quality=92)
-            status = "READY"
+            if polygon_points and any(0 <= x < 900 and 0 <= y < 900 for x, y in polygon_points):
+                status = "READY"
+            else:
+                status = "POLYGON_ALIGNMENT_FAILED"
         results.append({"pie_property_id": props["pie_property_id"], "extension": props["extension"], "stand_number": props["stand_number"], "status": status})
     return results
 
