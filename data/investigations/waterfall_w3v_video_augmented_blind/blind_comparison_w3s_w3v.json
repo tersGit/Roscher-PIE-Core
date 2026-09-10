@@ -1,0 +1,180 @@
+{
+  "schema_version": "waterfall-w3v-w3s-blind-comparison-v1",
+  "w3v_top10": [
+    {
+      "w3v_rank": 1,
+      "stand_number": "1022",
+      "extension": 19,
+      "property_id": "2033300",
+      "w3v_score": 0.7738,
+      "w3s_rank": 5,
+      "movement": 4,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 2,
+      "stand_number": "3112",
+      "extension": 39,
+      "property_id": "2073501",
+      "w3v_score": 0.7733,
+      "w3s_rank": 2,
+      "movement": 0,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 3,
+      "stand_number": "1057",
+      "extension": 19,
+      "property_id": "2033130",
+      "w3v_score": 0.7725,
+      "w3s_rank": 3,
+      "movement": 0,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 4,
+      "stand_number": "3036",
+      "extension": 38,
+      "property_id": "2042706",
+      "w3v_score": 0.7694,
+      "w3s_rank": 4,
+      "movement": 0,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 5,
+      "stand_number": "1059",
+      "extension": 19,
+      "property_id": "2033133",
+      "w3v_score": 0.7678,
+      "w3s_rank": 7,
+      "movement": 2,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 6,
+      "stand_number": "917",
+      "extension": 19,
+      "property_id": "2033199",
+      "w3v_score": 0.7672,
+      "w3s_rank": 6,
+      "movement": 0,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 7,
+      "stand_number": "3968",
+      "extension": 40,
+      "property_id": "2083988",
+      "w3v_score": 0.7631,
+      "w3s_rank": 11,
+      "movement": 4,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 8,
+      "stand_number": "3060",
+      "extension": 39,
+      "property_id": "2073427",
+      "w3v_score": 0.7621,
+      "w3s_rank": 12,
+      "movement": 4,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 9,
+      "stand_number": "3241",
+      "extension": 39,
+      "property_id": "2073867",
+      "w3v_score": 0.7604,
+      "w3s_rank": 8,
+      "movement": -1,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 10,
+      "stand_number": "873",
+      "extension": 19,
+      "property_id": "2033155",
+      "w3v_score": 0.7603,
+      "w3s_rank": 9,
+      "movement": -1,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    }
+  ],
+  "w3s_number_1": {
+    "stand_number": "916",
+    "w3v_rank": 1
+  },
+  "top5_overlap_count": 4,
+  "top5_overlap_property_ids": [
+    "2033130",
+    "2033300",
+    "2042706",
+    "2073501"
+  ],
+  "top10_overlap_count": 8,
+  "top10_overlap_property_ids": [
+    "2033130",
+    "2033133",
+    "2033155",
+    "2033199",
+    "2033300",
+    "2042706",
+    "2073501",
+    "2073867"
+  ],
+  "largest_movers": [
+    {
+      "w3v_rank": 1,
+      "stand_number": "1022",
+      "extension": 19,
+      "property_id": "2033300",
+      "w3v_score": 0.7738,
+      "w3s_rank": 5,
+      "movement": 4,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 7,
+      "stand_number": "3968",
+      "extension": 40,
+      "property_id": "2083988",
+      "w3v_score": 0.7631,
+      "w3s_rank": 11,
+      "movement": 4,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 8,
+      "stand_number": "3060",
+      "extension": 39,
+      "property_id": "2073427",
+      "w3v_score": 0.7621,
+      "w3s_rank": 12,
+      "movement": 4,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 5,
+      "stand_number": "1059",
+      "extension": 19,
+      "property_id": "2033133",
+      "w3v_score": 0.7678,
+      "w3s_rank": 7,
+      "movement": 2,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    },
+    {
+      "w3v_rank": 9,
+      "stand_number": "3241",
+      "extension": 39,
+      "property_id": "2073867",
+      "w3v_score": 0.7604,
+      "w3s_rank": 8,
+      "movement": -1,
+      "video_evidence": "rectilinear pool and rear house/pool exterior views; elevated context retained as non-geolocating context"
+    }
+  ],
+  "correctness_inference": "NOT_MADE"
+}
