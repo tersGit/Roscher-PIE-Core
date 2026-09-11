@@ -1,0 +1,22 @@
+{
+  "experiment": "hierarchical_retrieval_funnel_v1",
+  "status": "policy_tests_passed",
+  "test_file": "tests/test_retrieval_funnel.py",
+  "historical_validation": {
+    "eligible_independently_labelled_non_w3_cases": 0,
+    "reason": "Available blind PIE reports do not contain independently established parcel-level ground truth. W3/W3V is excluded.",
+    "case_results_fabricated": false
+  },
+  "synthetic_regression_diagnostic": {
+    "universe": 5,
+    "tier_counts": {
+      "T1": 3,
+      "T2": 1,
+      "T3": 1
+    },
+    "expensive_queue": 4,
+    "expensive_processing_reduction": 0.2,
+    "runtime_measured": false
+  },
+  "recommendation": "PROMOTE FOR FURTHER BLIND TESTING"
+}
