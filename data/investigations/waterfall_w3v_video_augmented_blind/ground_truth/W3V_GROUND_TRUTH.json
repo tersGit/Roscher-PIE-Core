@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "investigation": "W3-V independent ground-truth recovery",
+  "target": {
+    "listing_id": "2150462",
+    "listing_url": "https://www.myproperty.co.za/en-za/for-sale/house/gauteng/midrand/waterfall-country-estate/5-bedroom/2150462",
+    "video_url": "https://youtu.be/P6UEdM5xy8M"
+  },
+  "blind_boundary": {
+    "ground_truth_created_before_ranking_access": true,
+    "ranking_files_first_accessed": null,
+    "w1_gis_extension_universe_accessed": false,
+    "frozen_artifacts_used_for_identity": false
+  },
+  "recovery_result": {
+    "status": "UNAVAILABLE",
+    "confidence": "UNAVAILABLE",
+    "stand": null,
+    "extension": null,
+    "address": null,
+    "coj_parcel": null,
+    "property_id": null,
+    "area_m2": null,
+    "geometry": null,
+    "reason": "No independently supported property-specific address, stand, cadastral reference, coordinate, or parcel geometry was public in the captured target and duplicate listing records."
+  },
+  "identity_evidence": [
+    {
+      "url": "https://www.luxlivproperty.com/waterfall-country-estate-house-for-sale-2150462",
+      "kind": "agency_duplicate",
+      "facts": [
+        "property reference 2150462",
+        "video P6UEdM5xy8M",
+        "5 bedrooms, 5.5 bathrooms, 4 garages",
+        "780 m2 floor area, 1,010 m2 land area",
+        "estate-level map only"
+      ]
+    },
+    {
+      "url": "https://www.privateproperty.co.za/for-sale/gauteng/johannesburg/midrand/waterfall/waterfall-country-estate/T4199338",
+      "kind": "independent_marketplace_duplicate",
+      "facts": [
+        "matching R17,890,000 advert and description",
+        "estate-only locality",
+        "street address is requested from agent rather than published"
+      ]
+    },
+    {
+      "url": "https://www.property24.com/for-sale/waterfall-country-estate/midrand/gauteng/15697/117413007",
+      "kind": "independent_marketplace_duplicate",
+      "facts": [
+        "5 bedrooms, 5.5 bathrooms, 780 m2 floor area",
+        "R17,890,000",
+        "JSON-LD publishes estate locality only"
+      ]
+    },
+    {
+      "url": "https://www.findmy.co.za/property/details/Unveiling-Serenity-Luxurious-Living-at-Its-Finest-in-Waterfall-Country-Estate/5904",
+      "kind": "syndicated_duplicate",
+      "facts": [
+        "matching 5-bedroom, 780 m2 marketing record",
+        "video P6UEdM5xy8M",
+        "streetAddress field is estate locality only"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=P6UEdM5xy8M&format=json",
+      "kind": "video_metadata",
+      "facts": [
+        "title names Waterfall Country Estate",
+        "author is LuxLiv Property Group"
+      ]
+    }
+  ],
+  "visual_cross_check": {
+    "parcel_available": false,
+    "rectilinear_pool_vs_house": "UNKNOWN",
+    "patio_deck_lawn": "OBSERVED in listing description; parcel comparison UNKNOWN",
+    "house_massing": "UNKNOWN",
+    "front_glazed_entry": "UNKNOWN",
+    "garages_driveway": "four-car garage OBSERVED in listing metadata; parcel comparison UNKNOWN",
+    "stone_clad_element": "UNKNOWN",
+    "neighbours_context_parcel_open_space": "UNKNOWN"
+  },
+  "captured_on": "2026-09-11"
+}
