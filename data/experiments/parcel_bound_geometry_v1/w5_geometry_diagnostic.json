@@ -1,0 +1,39 @@
+{
+  "schema_version": "PARCEL_BOUND_GEOMETRY_V1_W5_DIAGNOSTIC",
+  "diagnostic_only": true,
+  "reranked": false,
+  "claims": "No recall, identity, or accuracy claim.",
+  "source": "data/investigations/waterfall_w5_funnel_v1_1_blind_117413344/FULL_EXPERIMENTAL_SCORES.csv",
+  "normal_count": 637,
+  "priority_a_count": 272,
+  "priority_b_count": 365,
+  "processed_b": true,
+  "b_reason": "A had no credible geometry evidence; B was expanded under the preregistered rule.",
+  "geometry": {
+    "pool": 0,
+    "building": 0,
+    "relation": 0,
+    "multiple_water": 0
+  },
+  "quality_distribution": {
+    "UNKNOWN": 637
+  },
+  "lane": {
+    "entrants": 0,
+    "recovery": 637,
+    "promotions": 0,
+    "demotions": 0,
+    "fine_candidates": 0
+  },
+  "failure_modes": {
+    "source_unavailable": 637,
+    "detector": 0,
+    "mask": 0,
+    "binding": 0,
+    "resolution": 0,
+    "occlusion": 0,
+    "small_object": 0,
+    "relational_unreliable": 0
+  },
+  "note": "Recovered W1 native15 imagery is absent locally and was not fetched or rebuilt; UNKNOWN is preserved."
+}
