@@ -1,0 +1,35 @@
+{
+  "status": "BLOCKED",
+  "mapping_bijection": {
+    "properties": 1010,
+    "crops": 1010,
+    "unmatched": 0
+  },
+  "artifacts": {
+    "mapping_sha256": "73f2e69fc4fe3400da506739103a0073ddc37e4ecfe0194cc55759de899d541c",
+    "georeference_sha256": "af382db208e3435ba7444b3305dc73a793facde32e08b22c52451e40cc331a68",
+    "mask_manifest_sha256": "062428a2f23dee9cf43cb24934f3447e93a12e9e22e5946f80bb65e8f27d7e9e"
+  },
+  "crop_root": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-probable-winner\\data\\visual_index\\waterfall_country_estate_w1\\_imagery_cache_native15",
+  "mask_storage": "on-demand only; no raster mask images committed",
+  "blocked_property_ids": [
+    "2033377",
+    "2033388",
+    "2033393",
+    "2042925",
+    "2043059",
+    "2049332",
+    "2073972",
+    "2073976",
+    "2083525",
+    "2083579",
+    "2083580",
+    "2083839",
+    "2083846",
+    "2084283",
+    "2084397",
+    "2084586",
+    "2091268",
+    "2091331"
+  ]
+}

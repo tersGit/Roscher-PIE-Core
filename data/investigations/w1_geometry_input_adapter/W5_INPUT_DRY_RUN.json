@@ -1,0 +1,16 @@
+{
+  "input_only": true,
+  "status": "BLOCKED",
+  "normal_total": 637,
+  "priority_a": {
+    "count": 272,
+    "image_missing": 0,
+    "mask_missing": 2
+  },
+  "priority_b": {
+    "count": 365,
+    "image_missing": 0,
+    "mask_missing": 3
+  },
+  "rescue_373_scheduled": false
+}
