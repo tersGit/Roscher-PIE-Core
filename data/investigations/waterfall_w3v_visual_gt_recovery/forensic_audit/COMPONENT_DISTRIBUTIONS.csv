@@ -1,0 +1,11 @@
+component,source_columns,universe_rows,observed_match,partial,conflict,unknown,missing,measured_unclassified,notes
+pool_state,water_state,1010,2,0,1008,0,0,0,"Detector state only; CONFLICT is the residual branch, not verified absence."
+pool_geometry,water_component_count;water_fraction;water_rectangularity;water_aspect,1010,2,16,0,0,0,992,"18 retained water-like components; only 2 satisfy the >=0.46 observed threshold; 992 rows have no retained component."
+visibility,visibility;vegetation_fraction;shadow_fraction;uncertainty,1010,0,0,0,0,0,1010,"All continuous measures are present; no semantic visibility state exists and uncertainty is NONE for every row."
+house,building_raw;building_normalized,1010,0,0,0,0,0,1010,"Continuous massing proxy only; no house semantic classification."
+housepool_relation,relation_raw;relation_normalized,1010,0,0,0,0,0,1010,"Continuous proxy only; normalized value is 0.5 for all 1010 rows, hence no discrimination."
+open_space,outdoor_raw;outdoor_normalized,1010,0,0,0,0,0,1010,"Continuous vegetation/hardscape proxy only; no lawn or patio semantic classification."
+driveway,access_raw;access_normalized,1010,0,0,0,0,0,1010,"Continuous hardscape/edge proxy only; no driveway detection or continuity state."
+parcel,none,1010,0,0,0,0,1010,0,"No parcel metric or parcel classification is written to the frozen CSV."
+final,retrieval_score,1010,0,0,0,0,0,1010,"Continuous ordering score only; no final observed/partial/conflict/unknown class."
+counterfactual_sample,BLINDED_SAMPLE_AUDIT.csv,32,0,0,0,32,0,0,"No candidate binding is present in the permitted W1 crop source; all sampled detector conflicts reclassify as unknown."
