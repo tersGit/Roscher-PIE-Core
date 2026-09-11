@@ -1,0 +1,6 @@
+# W3-V Qwen32B blind-result checksum ledger
+# The canonical hash below applies exclusively to the absent original external RunPod JSON.
+canonical_external_runpod_original_json_sha256  96b5287f1d3fe26a20b27e47d93f7b55ebd6a69e09d680e7b72e6a09266f643f
+# The local hash below applies exclusively to the faithful reconstructed local artifact.
+local_reconstructed_W3V_QWEN32B_BLIND_TOP10.json_sha256  932593e5ec80b935973bafb83c03b0430dd2f5df5de2945b75ee22d8406b4544
+local_SUMMARY.md_sha256  73b09533e664f09935d8fcca588af1d29e03a2a2e1966b62a4a2130d4b6811d5

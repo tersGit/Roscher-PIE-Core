@@ -1,0 +1,114 @@
+{
+  "schema_version": "waterfall-w3v-qwen32b-blind-top10-reconstructed-v1",
+  "record_type": "faithful_local_reconstruction_from_supplied_external_ranking_and_metadata",
+  "external_source": {
+    "platform": "RunPod",
+    "original_json_status": "ABSENT_LOCALLY_AWAITING_ARCHIVAL",
+    "canonical_original_json_sha256": "96b5287f1d3fe26a20b27e47d93f7b55ebd6a69e09d680e7b72e6a09266f643f",
+    "canonical_hash_applies_to": "original external RunPod JSON only"
+  },
+  "inference": {
+    "model": "Qwen2.5-VL-32B-Instruct-Q4_K_M",
+    "context_tokens": 32768,
+    "slots": 1,
+    "image_min_tokens": 1024,
+    "temperature": 0,
+    "target_view_count": 6,
+    "candidate_inputs": "candidate crop plus parcel overlay each",
+    "pre_inference_exported_image_hashes": {
+      "count": 26,
+      "verified": true
+    },
+    "blindness": {
+      "candidate_inference": "anonymous",
+      "identity_disclosure": "only post-response"
+    },
+    "ranking": {
+      "pie_blending": false,
+      "tie_break": "deterministic frozen-PIE-rank"
+    }
+  },
+  "ground_truth": "NOT_STARTED",
+  "top10": [
+    {
+      "vlm_rank": 1,
+      "anonymous_candidate": "stand3060",
+      "external_id": 39,
+      "vlm_score": 0.750,
+      "pie_rank": 8,
+      "pie_score": 0.7621
+    },
+    {
+      "vlm_rank": 2,
+      "anonymous_candidate": "stand1022",
+      "external_id": 19,
+      "vlm_score": 0.700,
+      "pie_rank": 1,
+      "pie_score": 0.7738
+    },
+    {
+      "vlm_rank": 3,
+      "anonymous_candidate": "stand3112",
+      "external_id": 39,
+      "vlm_score": 0.700,
+      "pie_rank": 2,
+      "pie_score": 0.7733
+    },
+    {
+      "vlm_rank": 4,
+      "anonymous_candidate": "stand1057",
+      "external_id": 19,
+      "vlm_score": 0.700,
+      "pie_rank": 3,
+      "pie_score": 0.7725
+    },
+    {
+      "vlm_rank": 5,
+      "anonymous_candidate": "stand1059",
+      "external_id": 19,
+      "vlm_score": 0.700,
+      "pie_rank": 5,
+      "pie_score": 0.7678
+    },
+    {
+      "vlm_rank": 6,
+      "anonymous_candidate": "stand873",
+      "external_id": 19,
+      "vlm_score": 0.700,
+      "pie_rank": 10,
+      "pie_score": 0.7603
+    },
+    {
+      "vlm_rank": 7,
+      "anonymous_candidate": "stand3036",
+      "external_id": 38,
+      "vlm_score": 0.550,
+      "pie_rank": 4,
+      "pie_score": 0.7694
+    },
+    {
+      "vlm_rank": 8,
+      "anonymous_candidate": "stand3968",
+      "external_id": 40,
+      "vlm_score": 0.500,
+      "pie_rank": 7,
+      "pie_score": 0.7631
+    },
+    {
+      "vlm_rank": 9,
+      "anonymous_candidate": "stand3241",
+      "external_id": 39,
+      "vlm_score": 0.500,
+      "pie_rank": 9,
+      "pie_score": 0.7604
+    },
+    {
+      "vlm_rank": 10,
+      "anonymous_candidate": "stand917",
+      "external_id": 19,
+      "vlm_score": 0.300,
+      "pie_rank": 6,
+      "pie_score": 0.7672
+    }
+  ]
+}
