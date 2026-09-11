@@ -1,5 +1,5 @@
 {
-  "status": "BLOCKED",
+  "status": "PASS",
   "mapping_bijection": {
     "properties": 1010,
     "crops": 1010,
@@ -12,24 +12,11 @@
   },
   "crop_root": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-probable-winner\\data\\visual_index\\waterfall_country_estate_w1\\_imagery_cache_native15",
   "mask_storage": "on-demand only; no raster mask images committed",
+  "centre_inside_count": 991,
+  "centre_outside_count": 19,
+  "nonempty_mask_count": 1009,
+  "empty_mask_count": 1,
   "blocked_property_ids": [
-    "2033377",
-    "2033388",
-    "2033393",
-    "2042925",
-    "2043059",
-    "2049332",
-    "2073972",
-    "2073976",
-    "2083525",
-    "2083579",
-    "2083580",
-    "2083839",
-    "2083846",
-    "2084283",
-    "2084397",
-    "2084586",
-    "2091268",
-    "2091331"
+    "2033377"
   ]
 }

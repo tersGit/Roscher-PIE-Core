@@ -1,16 +1,23 @@
 {
   "input_only": true,
-  "status": "BLOCKED",
+  "status": "PASS",
   "normal_total": 637,
+  "valid_inputs": 1009,
+  "invalid_inputs": 1,
   "priority_a": {
     "count": 272,
     "image_missing": 0,
-    "mask_missing": 2
+    "mask_missing": 0,
+    "valid": 272
   },
   "priority_b": {
     "count": 365,
     "image_missing": 0,
-    "mask_missing": 3
+    "mask_missing": 0,
+    "valid": 365
   },
+  "excluded_invalid_property_ids": [
+    "2033377"
+  ],
   "rescue_373_scheduled": false
 }

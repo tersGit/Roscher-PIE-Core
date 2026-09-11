@@ -83,6 +83,20 @@ def _ring_pixels(ring: list[list[float]], georef: CropGeoreference) -> np.ndarra
     return np.rint(np.asarray(points, dtype=np.float64)).astype(np.int32)
 
 
+def stored_centre_inside_polygon(geometry: dict[str, Any], longitude: float, latitude: float) -> bool:
+    """Apply the polygon's even-odd rule at the unrounded stored centre."""
+    inside = False
+    for ring in _rings(geometry):
+        for start, end in zip(ring, ring[1:] + ring[:1]):
+            x1, y1 = map(float, start)
+            x2, y2 = map(float, end)
+            if (y1 > latitude) != (y2 > latitude):
+                intersection_x = (x2 - x1) * (latitude - y1) / (y2 - y1) + x1
+                if longitude < intersection_x:
+                    inside = not inside
+    return inside
+
+
 def rasterize_parcel(geometry: dict[str, Any], georef: CropGeoreference) -> np.ndarray:
     """Rasterize polygon rings at source resolution, preserving holes.
 
@@ -118,6 +132,27 @@ def georeference_for(feature: dict[str, Any], crop_path: str) -> CropGeoreferenc
     )
 
 
+def validate_georeference(georef: CropGeoreference) -> None:
+    """Reject anything other than the frozen W1 crop transform."""
+    values = (
+        georef.centroid_x_3857, georef.centroid_y_3857, georef.xmin_3857,
+        georef.ymin_3857, georef.xmax_3857, georef.ymax_3857,
+    )
+    if not all(math.isfinite(value) for value in values):
+        raise W1InputError(f"Non-finite W1 crop georeference for {georef.property_id}.")
+    if not (
+        math.isclose(georef.xmax_3857 - georef.xmin_3857, CROP_SIZE_METRES)
+        and math.isclose(georef.ymax_3857 - georef.ymin_3857, CROP_SIZE_METRES)
+        and math.isclose(georef.centroid_x_3857, (georef.xmin_3857 + georef.xmax_3857) / 2)
+        and math.isclose(georef.centroid_y_3857, (georef.ymin_3857 + georef.ymax_3857) / 2)
+    ):
+        raise W1InputError(f"Invalid frozen W1 crop bounds for {georef.property_id}.")
+    if georef.affine != (
+        METRES_PER_PIXEL, 0.0, georef.xmin_3857, 0.0, -METRES_PER_PIXEL, georef.ymax_3857
+    ):
+        raise W1InputError(f"Invalid frozen W1 crop affine for {georef.property_id}.")
+
+
 def load_authoritative_inputs(repo_root: Path, crop_root: Path) -> list[tuple[dict[str, Any], CropGeoreference]]:
     geojson = repo_root / "data/estates/waterfall_country_estate/waterfall_country_estate_w1.geojson"
     if sha256(geojson) != W1_GEOJSON_SHA256:
@@ -139,6 +174,10 @@ def load_authoritative_inputs(repo_root: Path, crop_root: Path) -> list[tuple[di
         if not crop.is_file():
             raise W1InputError(f"Missing original W1 crop for property {property_id}: {crop}")
         georef = georeference_for(feature, str(crop))
+        validate_georeference(georef)
+        image = cv2.imread(str(crop), cv2.IMREAD_COLOR)
+        if image is None or image.shape[:2] != (CROP_SIZE_PX, CROP_SIZE_PX):
+            raise W1InputError(f"Invalid original W1 crop dimensions for property {property_id}: {crop}")
         rows.append((feature, georef))
     ids = [row[1].property_id for row in rows]
     names = [row[1].crop_path for row in rows]
