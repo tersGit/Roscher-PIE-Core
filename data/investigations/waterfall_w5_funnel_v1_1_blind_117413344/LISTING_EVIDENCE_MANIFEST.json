@@ -1,0 +1,366 @@
+{
+  "schema_version": "PIE_LISTING_EVIDENCE_MANIFEST_V1",
+  "acquisition_mode": "automatic_listing_ingestion_only",
+  "listing_url": "https://www.property24.com/for-sale/waterfall-country-estate/midrand/gauteng/15697/117413344",
+  "listing_id": "117413344",
+  "response": {
+    "path": "listing_response.html",
+    "bytes": 218925,
+    "sha256": "69f464c7c7f6133773886c89d16e7f10b2e30337f3be0def33e93cda313c849c"
+  },
+  "headers": {
+    "path": "listing_response_headers.txt",
+    "bytes": 759,
+    "sha256": "a2d685ca7bf7e977417a09480cdcc24f78fca36302a22bb161a14f70e12662ee"
+  },
+  "stills": [
+    {
+      "index": 1,
+      "source_url": "https://images.prop24.com/383030549",
+      "path": "listing_media/stills/01.jpg",
+      "bytes": 351169,
+      "sha256": "da199a134f1620e7ed50f2b7364103298803c63d7c9bfe351f6963b702de79b6"
+    },
+    {
+      "index": 2,
+      "source_url": "https://images.prop24.com/383030551",
+      "path": "listing_media/stills/02.jpg",
+      "bytes": 269580,
+      "sha256": "307fd728e538db13130337bdb80c2ec8c5045f2e3234efc0f41102ff00fe06da"
+    },
+    {
+      "index": 3,
+      "source_url": "https://images.prop24.com/383030554",
+      "path": "listing_media/stills/03.jpg",
+      "bytes": 184934,
+      "sha256": "94a0a977cf795aa3a5f50ee4e7e79c9dc75a852e99c0e30cd06c7183ff31a01a"
+    },
+    {
+      "index": 4,
+      "source_url": "https://images.prop24.com/383030557",
+      "path": "listing_media/stills/04.jpg",
+      "bytes": 217323,
+      "sha256": "78f8ac484c7025306b966da74676efd1f339c69ec7d35628c0ad9c9513f4eb1a"
+    },
+    {
+      "index": 5,
+      "source_url": "https://images.prop24.com/383030559",
+      "path": "listing_media/stills/05.jpg",
+      "bytes": 230196,
+      "sha256": "260ff5f067b6b56331728cd1b6a50adeb6e2e3f29082e9ecfe130e2c34510a14"
+    },
+    {
+      "index": 6,
+      "source_url": "https://images.prop24.com/383030561",
+      "path": "listing_media/stills/06.jpg",
+      "bytes": 227479,
+      "sha256": "29cafd066d54b475b591d8c0ba4f15d2ed38f5849c34ab50c7fc554efa748a37"
+    },
+    {
+      "index": 7,
+      "source_url": "https://images.prop24.com/383030562",
+      "path": "listing_media/stills/07.jpg",
+      "bytes": 190113,
+      "sha256": "a23f36af804cb394b39318a6ae0e39e7a9f472588c043243b1f69c13a7a14aee"
+    },
+    {
+      "index": 8,
+      "source_url": "https://images.prop24.com/383030563",
+      "path": "listing_media/stills/08.jpg",
+      "bytes": 293088,
+      "sha256": "c9ba3f2068b99dcf12a919ef617bade3f5bf3948d57d56220c3d1be56b6a26fe"
+    },
+    {
+      "index": 9,
+      "source_url": "https://images.prop24.com/383030564",
+      "path": "listing_media/stills/09.jpg",
+      "bytes": 245196,
+      "sha256": "07ce2b2d0a78950b68ce0c8fc168e3eed65417de47fb1106af1fbee437795a12"
+    },
+    {
+      "index": 10,
+      "source_url": "https://images.prop24.com/383030565",
+      "path": "listing_media/stills/10.jpg",
+      "bytes": 159304,
+      "sha256": "71d12b507d43548f63e364cf32e264f7e9ed6eb8f4ba7ef1e07efff4ec138d62"
+    },
+    {
+      "index": 11,
+      "source_url": "https://images.prop24.com/383030566",
+      "path": "listing_media/stills/11.jpg",
+      "bytes": 248281,
+      "sha256": "77f8c3eaae37c816f343f8a9faaa72e8a8c84e7791516914fc060c8378b429b1"
+    },
+    {
+      "index": 12,
+      "source_url": "https://images.prop24.com/383030567",
+      "path": "listing_media/stills/12.jpg",
+      "bytes": 184420,
+      "sha256": "b63c1ff60b8d45c2409a6f56071433863caf8202aa13e85b34a1efc4fb6996bd"
+    },
+    {
+      "index": 13,
+      "source_url": "https://images.prop24.com/383030568",
+      "path": "listing_media/stills/13.jpg",
+      "bytes": 225639,
+      "sha256": "044dbccc0b23d3a29d9d6ded6b65af6fbfc2288d00b17b0f1ce58758229a0910"
+    },
+    {
+      "index": 14,
+      "source_url": "https://images.prop24.com/383030569",
+      "path": "listing_media/stills/14.jpg",
+      "bytes": 405819,
+      "sha256": "ced3e3d4bb52122981e44cb011157ad87c2990c0d8d3572295652e045c49652b"
+    },
+    {
+      "index": 15,
+      "source_url": "https://images.prop24.com/383030571",
+      "path": "listing_media/stills/15.jpg",
+      "bytes": 311391,
+      "sha256": "768d24b14d5e198c573c46b8baa0cabac0f3907ab17f2607f9d3de6b25846b8b"
+    },
+    {
+      "index": 16,
+      "source_url": "https://images.prop24.com/383030573",
+      "path": "listing_media/stills/16.jpg",
+      "bytes": 316066,
+      "sha256": "7cd86134c5c0046c24db780697333b36815b0d6b42f91040281449c41fa1f383"
+    },
+    {
+      "index": 17,
+      "source_url": "https://images.prop24.com/383030576",
+      "path": "listing_media/stills/17.jpg",
+      "bytes": 163070,
+      "sha256": "7cfccd158895c9f879a7b98968220d127e0b5aef39d4927e7d2f68ce197c0b39"
+    },
+    {
+      "index": 18,
+      "source_url": "https://images.prop24.com/383030578",
+      "path": "listing_media/stills/18.jpg",
+      "bytes": 385645,
+      "sha256": "5fa48755ff670b9be4bb83e02fd1eee56d0acf7122bc01a227cfb4b963ad54dd"
+    },
+    {
+      "index": 19,
+      "source_url": "https://images.prop24.com/383030580",
+      "path": "listing_media/stills/19.jpg",
+      "bytes": 436359,
+      "sha256": "36e267941e0c7a82cd0c138c648ba148b095db6b4887b4c9f1813cb8ac114d8d"
+    },
+    {
+      "index": 20,
+      "source_url": "https://images.prop24.com/383030583",
+      "path": "listing_media/stills/20.jpg",
+      "bytes": 345234,
+      "sha256": "13ceb817cc507e821b2ec45c21a3829563ebe7c7731afcfb7839637c17e7a9f7"
+    },
+    {
+      "index": 21,
+      "source_url": "https://images.prop24.com/383030585",
+      "path": "listing_media/stills/21.jpg",
+      "bytes": 268950,
+      "sha256": "9ac753ac5ea3a3859bf6d481499c5ea1826c7e4041f9d1c036f0e8750ef3a648"
+    },
+    {
+      "index": 22,
+      "source_url": "https://images.prop24.com/383030587",
+      "path": "listing_media/stills/22.jpg",
+      "bytes": 161574,
+      "sha256": "b5d802884150d9171a79a87f453a64cf4b936a75d4fdce3732b10161e084d8f8"
+    },
+    {
+      "index": 23,
+      "source_url": "https://images.prop24.com/383030589",
+      "path": "listing_media/stills/23.jpg",
+      "bytes": 200541,
+      "sha256": "c8789cf22c7880a6ad55fcd0faee8ebd34f65ea51f0f0596819329b104503cc7"
+    },
+    {
+      "index": 24,
+      "source_url": "https://images.prop24.com/383030591",
+      "path": "listing_media/stills/24.jpg",
+      "bytes": 113554,
+      "sha256": "cef90495922f0dd0b1e78077e26151a01cde2b61ca91d6dea67bd1dfdba3085c"
+    },
+    {
+      "index": 25,
+      "source_url": "https://images.prop24.com/383030593",
+      "path": "listing_media/stills/25.jpg",
+      "bytes": 149546,
+      "sha256": "d66ed55b87f86254ea295ebc5c469e8097d51a82f5075ac8b98a2f63b6ad1861"
+    },
+    {
+      "index": 26,
+      "source_url": "https://images.prop24.com/383030594",
+      "path": "listing_media/stills/26.jpg",
+      "bytes": 233462,
+      "sha256": "7135b348defcde7f08cc8e7a0b35cf2221848848b2781e7df14261a2889acc4b"
+    },
+    {
+      "index": 27,
+      "source_url": "https://images.prop24.com/383030595",
+      "path": "listing_media/stills/27.jpg",
+      "bytes": 230988,
+      "sha256": "285baf26fd67c7cf7c9e21c60889040908ff4dc989f88797edb8af9d3b13e715"
+    },
+    {
+      "index": 28,
+      "source_url": "https://images.prop24.com/383030596",
+      "path": "listing_media/stills/28.jpg",
+      "bytes": 198865,
+      "sha256": "1553a5bf13c6b4a8f91d4b6b95d27a40a205b06a89d599fa88f27aec1935e7bd"
+    },
+    {
+      "index": 29,
+      "source_url": "https://images.prop24.com/383030597",
+      "path": "listing_media/stills/29.jpg",
+      "bytes": 260638,
+      "sha256": "ca0448f1df6bedb911b01999823556563d7018ec23faa7d46dd17701e6956540"
+    },
+    {
+      "index": 30,
+      "source_url": "https://images.prop24.com/383030598",
+      "path": "listing_media/stills/30.jpg",
+      "bytes": 225128,
+      "sha256": "b455d8456b1571d6ba2884fefcb485e4b4352901c1d3c94e81478d35f4000f7e"
+    },
+    {
+      "index": 31,
+      "source_url": "https://images.prop24.com/383030599",
+      "path": "listing_media/stills/31.jpg",
+      "bytes": 208515,
+      "sha256": "a108c3ed78c44c54be0d859f7210467b313e481fba823e3cf508e78bbe2214d0"
+    },
+    {
+      "index": 32,
+      "source_url": "https://images.prop24.com/383030600",
+      "path": "listing_media/stills/32.jpg",
+      "bytes": 166739,
+      "sha256": "241b46fcba42aaa9767d15d893b93f7bb96d4c1dc37afbcb66d1f69115e29f08"
+    },
+    {
+      "index": 33,
+      "source_url": "https://images.prop24.com/383030601",
+      "path": "listing_media/stills/33.jpg",
+      "bytes": 177220,
+      "sha256": "901fe5a3d525b0f164d42788f31aee110d1e9f1d4948772ec252ab683ed06001"
+    },
+    {
+      "index": 34,
+      "source_url": "https://images.prop24.com/383030602",
+      "path": "listing_media/stills/34.jpg",
+      "bytes": 194243,
+      "sha256": "477728809aa4fc3bc47b1e24a9d132aae45340683b840a255ed6a5c150102041"
+    },
+    {
+      "index": 35,
+      "source_url": "https://images.prop24.com/383030603",
+      "path": "listing_media/stills/35.jpg",
+      "bytes": 215792,
+      "sha256": "931e07c53085d4bb229c12ae62581df5f36e81e765dc15648650e96aec2e4662"
+    },
+    {
+      "index": 36,
+      "source_url": "https://images.prop24.com/383030604",
+      "path": "listing_media/stills/36.jpg",
+      "bytes": 169897,
+      "sha256": "52d6cf07444e145a2ca2c139e2c2e3beaa5aa9dba81225678fad5e84a733b30e"
+    },
+    {
+      "index": 37,
+      "source_url": "https://images.prop24.com/383030605",
+      "path": "listing_media/stills/37.jpg",
+      "bytes": 142517,
+      "sha256": "23bae50197bb37591b1adf3971e1b381a995de35d4fe31a02138f8a1bc93d38d"
+    },
+    {
+      "index": 38,
+      "source_url": "https://images.prop24.com/383030606",
+      "path": "listing_media/stills/38.jpg",
+      "bytes": 124385,
+      "sha256": "43a1fc2f2b33abfabcc1ced2611d82671755018fe972f97a81fb1375218ab0a1"
+    },
+    {
+      "index": 39,
+      "source_url": "https://images.prop24.com/383030607",
+      "path": "listing_media/stills/39.jpg",
+      "bytes": 229001,
+      "sha256": "01188d22da243d2dabdc08229d376ddb47409ffc8de5ec0774ecc0bd71013cb5"
+    },
+    {
+      "index": 40,
+      "source_url": "https://images.prop24.com/383030608",
+      "path": "listing_media/stills/40.jpg",
+      "bytes": 164973,
+      "sha256": "2a35c727e932107f600c591b482ae0aa5fe1b38837d165865a08f4a9747d273d"
+    },
+    {
+      "index": 41,
+      "source_url": "https://images.prop24.com/383030609",
+      "path": "listing_media/stills/41.jpg",
+      "bytes": 214896,
+      "sha256": "6a24dd25507ce7ade8a65d6c37b60a102f73379339ad0939c31fb7c324179f3d"
+    },
+    {
+      "index": 42,
+      "source_url": "https://images.prop24.com/383030610",
+      "path": "listing_media/stills/42.jpg",
+      "bytes": 193452,
+      "sha256": "eef4208215c5d7aac68ff3c68eba6688ede3c09c8333e0171a5881e7785d8fe9"
+    },
+    {
+      "index": 43,
+      "source_url": "https://images.prop24.com/383030611",
+      "path": "listing_media/stills/43.jpg",
+      "bytes": 220172,
+      "sha256": "cedb789257263c2a3e110e411623d4d41a3e6b5ee0d02487eda642611f8681a6"
+    },
+    {
+      "index": 44,
+      "source_url": "https://images.prop24.com/383030612",
+      "path": "listing_media/stills/44.jpg",
+      "bytes": 144495,
+      "sha256": "e08ad623e21d1501dfdde172389287141eef49b3de1fa5c18673d0a08881345e"
+    },
+    {
+      "index": 45,
+      "source_url": "https://images.prop24.com/383030613",
+      "path": "listing_media/stills/45.jpg",
+      "bytes": 189919,
+      "sha256": "48512d5388dea62167935b40879e632ca515aa90f10745fb71cf479bf9f10d70"
+    },
+    {
+      "index": 46,
+      "source_url": "https://images.prop24.com/383030614",
+      "path": "listing_media/stills/46.jpg",
+      "bytes": 110681,
+      "sha256": "87b3950ac332ff674095bfbbcde309954c3efc635194703647d67f1ca6c1b1fb"
+    },
+    {
+      "index": 47,
+      "source_url": "https://images.prop24.com/383030615",
+      "path": "listing_media/stills/47.jpg",
+      "bytes": 114509,
+      "sha256": "c7619e7a9006fdd659b2d5c0a1395e55ee36470ada5e7405e201b343c18e7b5f"
+    },
+    {
+      "index": 48,
+      "source_url": "https://images.prop24.com/383030616",
+      "path": "listing_media/stills/48.jpg",
+      "bytes": 87790,
+      "sha256": "4745782d0a33af01fbaaa90f578c99c0eaa0cab5092fb7a80412c010d9083296"
+    },
+    {
+      "index": 49,
+      "source_url": "https://images.prop24.com/383030617",
+      "path": "listing_media/stills/49.jpg",
+      "bytes": 270712,
+      "sha256": "5c12786aefcdcb67a4904112ab38748ae1c7a8e18f79f760099ac0eb46884311"
+    }
+  ],
+  "video": {
+    "exposed_supported_video_found": false,
+    "reason": "listing response has 49-photo media tab and no supported listing-video embed"
+  },
+  "blindness": "Listing URL and automatically exposed response/media only; no candidate, GIS, identity, or ground-truth sources accessed."
+}
