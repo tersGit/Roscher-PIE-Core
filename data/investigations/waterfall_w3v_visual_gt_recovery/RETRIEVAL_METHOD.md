@@ -2,10 +2,10 @@
 
 ## Status
 
-**NOT EXECUTED.** This document defines the precommitted, identity-blind
-procedure that would have been applied to every frozen W1 crop. Execution was
-stopped before crop access because the required frozen corpus is unavailable in
-this worktree (see `VISUAL_GT_VERDICT.md`). No substitute imagery was fetched.
+**EXECUTED — `w3v-geometry-retrieval-v1`.** The authorized recovered corpus was
+made available read-only after the initial unavailability record. The profile
+hash was verified before candidate access and the procedure ran once across all
+1,010 crops. No substitute imagery was fetched.
 
 ## Inputs and scope
 
@@ -15,6 +15,15 @@ this worktree (see `VISUAL_GT_VERDICT.md`). No substitute imagery was fetched.
 - Required imagery: one 900 x 900, 135 m-context, 0.15 m/px W1 native15 crop
   per feature, referenced by that manifest.
 - Parcel context: only each W1 feature's geometry and source properties.
+
+Recovered source provenance (read-only, never copied, regenerated, modified,
+or committed):
+
+- `C:\Users\ters\copilot-worktrees\Roscher-PIE-Core\tersgit-probable-winner\data\visual_index\waterfall_country_estate_w1\_imagery_cache_native15`
+  — 1,010 JPEGs, 223,719,172 bytes.
+- `C:\Users\ters\copilot-worktrees\Roscher-PIE-Core\tersgit-probable-winner\data\cache\ags_native15\waterfall_country_estate_w1\manifest.json`
+  — SHA256
+  `b732dd96eddb3104cc69c7716d6e80498b39de08ec0b59b3f89f90aed99b377e`.
 
 The procedure never reads an existing ranking, prediction, Top10 directory,
 candidate score, stand identifier as a model feature, target identity, address,
@@ -74,3 +83,12 @@ contradictions, visibility/occlusion, and confidence without forcing a winner.
 External GIS/current/historical aerial/Street View/public-building confirmation
 would be required for a `HIGH` verdict. Existing rankings could be opened only
 after an independent identity freeze; otherwise accuracy remains `UNLABELLED`.
+
+## Execution record
+
+The profile SHA256 was verified as
+`56aca3c5d9d680a1a69dd19680d885fe38793c45900133f762267332d16d04bc`
+immediately before candidate access. The 1,010-crop pass produced 2
+`OBSERVED`, 1,008 `CONFLICT`, and 0 `UNKNOWN` water-geometry states. These
+states diagnose the narrowly defined colour/shape component only; every row,
+including every `CONFLICT`, remains ranked by the complete conjunction score.
