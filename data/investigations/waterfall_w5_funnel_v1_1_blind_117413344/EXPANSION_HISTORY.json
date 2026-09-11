@@ -1,0 +1,82 @@
+{
+  "schema_version": "HIERARCHICAL_RETRIEVAL_FUNNEL_V1_1_EXPANSION_HISTORY",
+  "high_unknown_pool_rate_is_expansion_trigger": false,
+  "history": [
+    {
+      "after_priority": "A",
+      "processed_total": 272,
+      "serious_candidate_count": 272,
+      "top_candidate_id": "2084526",
+      "top_candidate_coverage": 0.0,
+      "top_candidate_support_count": 1,
+      "top_candidate_visible_conflicts": 0,
+      "combined_support": 0.42500000000000004,
+      "non_unique_top_set_size": 30,
+      "triggers": [
+        "LOW_TOP_CANDIDATE_COVERAGE",
+        "NON_UNIQUE_TOP_SET",
+        "INSUFFICIENT_COMBINED_SUPPORT"
+      ],
+      "expanded": true,
+      "from": "A",
+      "to": "B"
+    },
+    {
+      "after_priority": "B",
+      "processed_total": 637,
+      "serious_candidate_count": 636,
+      "top_candidate_id": "2084526",
+      "top_candidate_coverage": 0.0,
+      "top_candidate_support_count": 1,
+      "top_candidate_visible_conflicts": 0,
+      "combined_support": 0.42500000000000004,
+      "non_unique_top_set_size": 60,
+      "triggers": [
+        "LOW_TOP_CANDIDATE_COVERAGE",
+        "NON_UNIQUE_TOP_SET",
+        "INSUFFICIENT_COMBINED_SUPPORT"
+      ],
+      "expanded": true,
+      "from": "B",
+      "to": "C"
+    },
+    {
+      "after_priority": "C",
+      "processed_total": 888,
+      "serious_candidate_count": 886,
+      "top_candidate_id": "2084526",
+      "top_candidate_coverage": 0.0,
+      "top_candidate_support_count": 1,
+      "top_candidate_visible_conflicts": 0,
+      "combined_support": 0.42500000000000004,
+      "non_unique_top_set_size": 60,
+      "triggers": [
+        "LOW_TOP_CANDIDATE_COVERAGE",
+        "NON_UNIQUE_TOP_SET",
+        "INSUFFICIENT_COMBINED_SUPPORT"
+      ],
+      "expanded": true,
+      "from": "C",
+      "to": "D"
+    },
+    {
+      "after_priority": "D",
+      "processed_total": 1010,
+      "serious_candidate_count": 1000,
+      "top_candidate_id": "2084526",
+      "top_candidate_coverage": 0.0,
+      "top_candidate_support_count": 1,
+      "top_candidate_visible_conflicts": 0,
+      "combined_support": 0.42500000000000004,
+      "non_unique_top_set_size": 60,
+      "triggers": [
+        "LOW_TOP_CANDIDATE_COVERAGE",
+        "NON_UNIQUE_TOP_SET",
+        "INSUFFICIENT_COMBINED_SUPPORT"
+      ],
+      "expanded": false,
+      "from": "D",
+      "to": null
+    }
+  ]
+}
