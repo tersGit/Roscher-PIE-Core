@@ -1,0 +1,20 @@
+{
+  "schema_version": "W5_FASTSAM_GEOMETRY_V1_FAILURES",
+  "A": {
+    "status": "STOPPED",
+    "failure_enum": "UNAUTHORIZED_OPENCLIP_OUTBOUND_INITIALIZATION",
+    "count": 272,
+    "executed_candidates": 0
+  },
+  "B": {
+    "status": "NOT_STARTED",
+    "failure_enum": "UPSTREAM_A_STOPPED",
+    "count": 365,
+    "executed_candidates": 0
+  },
+  "rescue": {
+    "status": "NOT_SCHEDULED",
+    "failure_enum": "NONE",
+    "count": 0
+  }
+}

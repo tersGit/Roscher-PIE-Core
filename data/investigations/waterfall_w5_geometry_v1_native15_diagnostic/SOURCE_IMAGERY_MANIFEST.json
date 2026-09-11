@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED_READ_ONLY",
+  "external_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-probable-winner\\data\\visual_index\\waterfall_country_estate_w1\\_imagery_cache_native15",
+  "source_type": "recovered_native15_w1_crops",
+  "crop_count": 1010,
+  "read_only_use": true,
+  "refetched": false,
+  "recropped": false,
+  "rebuild_performed": false,
+  "lineage_manifest": "data/investigations/w1_geometry_input_adapter/W1_CROP_MAPPING.csv"
+}

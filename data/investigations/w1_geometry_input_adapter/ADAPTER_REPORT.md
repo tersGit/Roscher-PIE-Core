@@ -4,4 +4,4 @@ The authoritative source is frozen W1 GeoJSON from e86b156, SHA256 `6a375bf542bc
 
 The reported 81/637 discrepancy is not present in the frozen W5 artifact: its A/B candidate IDs map 272/272 and 365/365 to frozen W1 properties. The prior diagnostic instead marked all 637 inputs source-unavailable, so its partial join cannot be used as W1 mapping evidence.
 
-Masks are deterministically rasterized on demand from frozen polygons and affine georeferences, including rings and clipping. No manual, imagery, or FastSAM boundaries are used.
+Masks are deterministically rasterized on demand from frozen polygons and affine georeferences, including rings and clipping. A nonempty complete frozen-polygon mask is required. The historical stored crop centre's inside/outside result is retained as diagnostic metadata only, because the source producer used a ring-vertex mean with no interior guarantee. No manual, imagery, or FastSAM boundaries are used.
