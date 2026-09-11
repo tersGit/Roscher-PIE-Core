@@ -1,0 +1,43 @@
+{
+  "schema_version": "W4_FUNNEL_V1_STAGE_COUNTS",
+  "funnel_implementation_commit": "0e92a524ce4f9f01b9c1573576376e4de8c747b7",
+  "w1_universe_commit": "e86b156b3f8ac099cd386b9de2b3b2ba609c0635",
+  "w1_geojson_sha256": "6a375bf542bcff28c6a3ee862f9e0c3c9a5395d0497b4159027c40b75cf7be3a",
+  "input": {
+    "listing_area_m2": 1251.0,
+    "listing_area_reliable": true,
+    "listing_has_pool": true
+  },
+  "stage_counts": {
+    "T1": 428,
+    "T2": 468,
+    "T3": 114,
+    "NORMAL": 0,
+    "expensive_queue": 896,
+    "universe": 1010
+  },
+  "t1_pool_states": {
+    "OBSERVED_POOL": 72,
+    "UNKNOWN": 356
+  },
+  "expansion": {
+    "tier2_expanded": true,
+    "triggers": [
+      "high_unknown_pool_observability"
+    ],
+    "tier2_count_added": 468,
+    "tier3_recoverable_count": 114
+  },
+  "progressive_component_order": [
+    "pool_geometry",
+    "building",
+    "roof",
+    "house_pool",
+    "solar",
+    "driveway_garage",
+    "open_space",
+    "neighbour_context"
+  ],
+  "estimated_expensive_work_reduction": 0.1129,
+  "identity_attachment": "NOT_PERFORMED_AT_BLIND_RANKING_FREEZE"
+}
