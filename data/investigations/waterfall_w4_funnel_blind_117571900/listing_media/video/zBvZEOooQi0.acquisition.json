@@ -1,0 +1,38 @@
+{
+  "acquisition_utc": "2026-09-11T09:45:25.708745+00:00",
+  "attempts": [
+    {
+      "number": 1,
+      "player_client": "default",
+      "returncode": 0
+    }
+  ],
+  "cookies_used": false,
+  "js_runtime": {
+    "name": "deno",
+    "version": "deno 2.9.6 (stable, release, x86_64-pc-windows-msvc)"
+  },
+  "media": {
+    "audio_codec": "opus",
+    "bytes": 833854732,
+    "container": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration_seconds": 854.774,
+    "format_ids": [
+      "401+251"
+    ],
+    "fps": 25.0,
+    "height": 2160,
+    "path": "zBvZEOooQi0.mp4",
+    "sha256": "6adeb97637a844189e98d5e194673cba2310ee6ee7b938a014dcdc338bb906d9",
+    "video_codec": "av1",
+    "width": 3840
+  },
+  "player_client": "default",
+  "po_token_provider_used": false,
+  "source_url": "https://www.youtube.com/embed/zBvZEOooQi0",
+  "status": "DOWNLOAD_SUCCESS",
+  "successful_attempt": 1,
+  "video_id": "zBvZEOooQi0",
+  "yt_dlp_ejs_version": "0.8.0",
+  "yt_dlp_version": "2026.08.19"
+}
