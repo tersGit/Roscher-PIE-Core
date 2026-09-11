@@ -24,6 +24,17 @@ from .hierarchical_v1_1 import (
     StageInstrumentation,
     SufficiencyTrigger,
 )
+from .hierarchical_v1_2 import (
+    BandResult,
+    Compatibility,
+    EvidenceLaneConfig,
+    ExpansionTrigger as V12ExpansionTrigger,
+    HierarchicalRetrievalFunnelV12,
+    Lane,
+    LaneAssessment,
+    LaneCandidate,
+    ObservableEvidence,
+)
 
 __all__ = [
     "Candidate",
@@ -43,4 +54,13 @@ __all__ = [
     "Priority",
     "StageInstrumentation",
     "SufficiencyTrigger",
+    "BandResult",
+    "Compatibility",
+    "EvidenceLaneConfig",
+    "V12ExpansionTrigger",
+    "HierarchicalRetrievalFunnelV12",
+    "Lane",
+    "LaneAssessment",
+    "LaneCandidate",
+    "ObservableEvidence",
 ]

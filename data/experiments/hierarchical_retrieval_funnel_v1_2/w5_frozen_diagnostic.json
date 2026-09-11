@@ -1,0 +1,26 @@
+{
+  "schema_version": "HIERARCHICAL_RETRIEVAL_FUNNEL_V1_2_W5_FROZEN_DIAGNOSTIC",
+  "diagnostic_only": true,
+  "source": "data/investigations/waterfall_w5_funnel_v1_1_blind_117413344/FULL_EXPERIMENTAL_SCORES.csv",
+  "source_access": "frozen_candidate_output_only",
+  "claims": "No recall, identity, accuracy, or blind reranking claim.",
+  "area_band": "A",
+  "candidate_count": 272,
+  "observed_pool_count": 51,
+  "pool_evidence_lane_count": 0,
+  "pool_recovery_lane_count": 221,
+  "building_promotions": 0,
+  "remaining_after_direct_conflicts": 272,
+  "final_expensive_fine_count": 0,
+  "would_stop_in_a": false,
+  "expansion_triggers": [
+    "NO_STRONG_EVIDENCE_LANE",
+    "RECOVERY_LANE_PROMOTIONS_INSUFFICIENT"
+  ],
+  "workload": {
+    "v1_1_immediate_expensive": 272,
+    "v1_2_expensive": 0,
+    "reduction_vs_v1_1_immediate": 1.0
+  },
+  "caveat": "Frozen source has legacy compatibility labels but no reliable aspect, shape, orientation, relation, or strong building-footprint fields; legacy MATCH is retained as MATCH rather than upgraded to STRONG_MATCH."
+}
