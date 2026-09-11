@@ -1,0 +1,39 @@
+{
+  "schema_version": "HIERARCHICAL_RETRIEVAL_FUNNEL_V1_3_FROZEN_WORKLOAD_REGRESSION",
+  "diagnostic_only": true,
+  "source_access": "frozen_listing_facts_and_w1_cadastral_areas_only",
+  "provenance": {
+    "w1_universe_commit": "e86b156b3f8ac099cd386b9de2b3b2ba609c0635",
+    "w1_geojson": "data/estates/waterfall_country_estate/waterfall_country_estate_w1.geojson",
+    "w1_geojson_sha256": "6a375bf542bcff28c6a3ee862f9e0c3c9a5395d0497b4159027c40b75cf7be3a",
+    "candidate_count": 1010
+  },
+  "workloads": [
+    {
+      "listing": "W4 Property24 117571900",
+      "listing_area_m2": 1251.0,
+      "listing_area_confidence": "HIGH_CONFIDENCE",
+      "plus_minus_10_lower_m2": 1125.9,
+      "plus_minus_10_upper_m2": 1376.1000000000001,
+      "priority_a_count": 270,
+      "priority_b_count": 158,
+      "normal_count": 428,
+      "deferred_exceptional_rescue_count": 582,
+      "deferred_percent_of_full_before_visual": 57.624,
+      "claims": "No recall, identity, accuracy, scoring, or candidate visual-work claim."
+    },
+    {
+      "listing": "W5 Property24 117413344",
+      "listing_area_m2": 1205.0,
+      "listing_area_confidence": "HIGH_CONFIDENCE",
+      "plus_minus_10_lower_m2": 1084.5,
+      "plus_minus_10_upper_m2": 1325.5,
+      "priority_a_count": 272,
+      "priority_b_count": 365,
+      "normal_count": 637,
+      "deferred_exceptional_rescue_count": 373,
+      "deferred_percent_of_full_before_visual": 36.931,
+      "claims": "No recall, identity, accuracy, scoring, or candidate visual-work claim."
+    }
+  ]
+}
