@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "w1_input_validation": {
+    "total": 1010,
+    "valid": 1009,
+    "invalid": 1,
+    "invalid_property_ids": ["2033377"],
+    "stored_centre_inside_frozen_polygon": 991,
+    "stored_centre_outside_frozen_polygon": 19,
+    "nonempty_complete_frozen_polygon_masks": 1009,
+    "empty_clipped_masks": 1
+  },
+  "normal_queue": {
+    "A": {"total": 272, "valid_image_and_mask": 272},
+    "B": {"total": 365, "valid_image_and_mask": 365},
+    "normal": {"total": 637, "valid_image_and_mask": 637},
+    "rescue_scheduled": 0
+  },
+  "excluded_D_candidate": {
+    "property_id": "2033377",
+    "stored_vertex_mean_distance_outside_m_approx": 217.84,
+    "polygon_crop_intersection": "ZERO",
+    "clipped_mask": "EMPTY"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "VERIFIED_EXTERNAL_MODEL_ONLY",
+  "model": "FastSAM-s.pt",
+  "external_path": "C:\\Users\\ters\\copilot-worktrees\\Roscher-PIE-Core\\tersgit-probable-couscous\\data\\cache\\models\\FastSAM-s.pt",
+  "sha256": "c9f78716a81c7aff0d608ccc73e1b82ab3aaad86005049f6a92106a0be6d0844",
+  "copied_into_repository": false,
+  "downloaded_or_updated": false,
+  "probe": {
+    "candidate_id": "2083525",
+    "masks": 121,
+    "mask_shape_px": [900, 900]
+  }
+}
