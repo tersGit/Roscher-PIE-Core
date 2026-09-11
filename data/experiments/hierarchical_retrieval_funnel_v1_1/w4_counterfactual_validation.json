@@ -1,0 +1,60 @@
+{
+  "schema_version": "HIERARCHICAL_RETRIEVAL_FUNNEL_V1_1_W4_COUNTERFACTUAL",
+  "status": "frozen_geometry_workload_regression",
+  "provenance": {
+    "funnel_v1_commit": "0e92a524ce4f9f01b9c1573576376e4de8c747b7",
+    "w4_efficiency_audit_commit": "7901577e113842d34e0904a4f31f1c0405507ab6",
+    "w1_geojson_sha256": "6a375bf542bcff28c6a3ee862f9e0c3c9a5395d0497b4159027c40b75cf7be3a",
+    "source": "Frozen W4 audit area distribution; no imagery fetched and no ground-truth or identity work performed."
+  },
+  "input": {
+    "listing_area_m2": 1251.0,
+    "listing_area_reliable": true,
+    "w1_universe": 1010
+  },
+  "priority_counts": {
+    "A": 270,
+    "B_incremental": 158,
+    "C_incremental": 468,
+    "D": 114,
+    "A_plus_B": 428,
+    "A_plus_B_plus_C": 896
+  },
+  "instrumentation_schema": {
+    "per_processed_priority": [
+      "priority",
+      "candidate_count",
+      "pool_observed_count",
+      "pool_unknown_count",
+      "building_observable_count",
+      "average_coverage",
+      "serious_candidate_count"
+    ],
+    "per_expansion": [
+      "expanded",
+      "from_priority",
+      "to_priority",
+      "triggers"
+    ],
+    "workloads": [
+      "IMMEDIATE_EXPENSIVE_WORKLOAD",
+      "TOTAL_EXPENSIVE_WORKLOAD"
+    ],
+    "w4_evidence_stage_values": "Not generated: this regression uses frozen geometry counts only and intentionally does not open imagery."
+  },
+  "workloads": {
+    "V1_FROZEN_EXPENSIVE_WORKLOAD": 896,
+    "IMMEDIATE_EXPENSIVE_WORKLOAD": 270,
+    "DEFERRED_FROM_V1": 626,
+    "IMMEDIATE_REDUCTION_VS_V1_PERCENT": 69.866,
+    "AB_FALLBACK_EXPENSIVE_WORKLOAD": 428,
+    "AB_FALLBACK_DEFERRED_FROM_V1": 468,
+    "AB_FALLBACK_REDUCTION_VS_V1_PERCENT": 52.232,
+    "TOTAL_RECOVERABLE_UNIVERSE": 1010
+  },
+  "claims": {
+    "reranking_performed": false,
+    "accuracy_or_recall_claimed": false,
+    "production_changed": false
+  }
+}

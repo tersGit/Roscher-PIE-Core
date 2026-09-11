@@ -14,6 +14,16 @@ from .funnel import (
     RetrievalFunnel,
     Tier,
 )
+from .hierarchical_v1_1 import (
+    EvidenceSufficiencyAssessment,
+    EvidenceSufficiencyConfig,
+    ExpansionRecord,
+    HierarchicalFunnelResult,
+    HierarchicalRetrievalFunnelV11,
+    Priority,
+    StageInstrumentation,
+    SufficiencyTrigger,
+)
 
 __all__ = [
     "Candidate",
@@ -25,4 +35,12 @@ __all__ = [
     "PoolState",
     "RetrievalFunnel",
     "Tier",
+    "EvidenceSufficiencyAssessment",
+    "EvidenceSufficiencyConfig",
+    "ExpansionRecord",
+    "HierarchicalFunnelResult",
+    "HierarchicalRetrievalFunnelV11",
+    "Priority",
+    "StageInstrumentation",
+    "SufficiencyTrigger",
 ]
