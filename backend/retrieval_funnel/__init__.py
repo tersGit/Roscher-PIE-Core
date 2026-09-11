@@ -35,6 +35,20 @@ from .hierarchical_v1_2 import (
     LaneCandidate,
     ObservableEvidence,
 )
+from .hierarchical_v1_3 import (
+    AreaConfidence,
+    AreaQualifier,
+    HighConfidenceStandSizeGate,
+    ListingAreaAssessment,
+    ListingAreaClassifier,
+    ListingAreaFact,
+    ListingAreaSource,
+    RescueActivation,
+    RescueTrigger,
+    StandSizeCandidate,
+    StandSizeGateResult,
+    StandSizePriority,
+)
 
 __all__ = [
     "Candidate",
@@ -63,4 +77,16 @@ __all__ = [
     "LaneAssessment",
     "LaneCandidate",
     "ObservableEvidence",
+    "AreaConfidence",
+    "AreaQualifier",
+    "HighConfidenceStandSizeGate",
+    "ListingAreaAssessment",
+    "ListingAreaClassifier",
+    "ListingAreaFact",
+    "ListingAreaSource",
+    "RescueActivation",
+    "RescueTrigger",
+    "StandSizeCandidate",
+    "StandSizeGateResult",
+    "StandSizePriority",
 ]
