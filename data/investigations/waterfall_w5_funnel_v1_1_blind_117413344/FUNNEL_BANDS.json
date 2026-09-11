@@ -1,0 +1,30 @@
+{
+  "schema_version": "HIERARCHICAL_RETRIEVAL_FUNNEL_V1_1_BANDS",
+  "listing_area_m2": 1205.0,
+  "listing_area_reliable": true,
+  "bands": [
+    {
+      "band": "A",
+      "definition": "<=5%",
+      "candidate_count": 272
+    },
+    {
+      "band": "B",
+      "definition": ">5% to <=10%",
+      "candidate_count": 365
+    },
+    {
+      "band": "C",
+      "definition": ">10% to <=20%",
+      "candidate_count": 251
+    },
+    {
+      "band": "D",
+      "definition": ">20%",
+      "candidate_count": 122
+    }
+  ],
+  "normal_count": 0,
+  "universe_count": 1010,
+  "recoverability": "All 1,010 candidates remain recoverable; bands order work only."
+}

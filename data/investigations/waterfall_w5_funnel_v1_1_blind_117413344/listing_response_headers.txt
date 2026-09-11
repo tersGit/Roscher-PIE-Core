@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Date: Fri, 11 Sep 2026 10:37:41 GMT
+Cache-Control: private
+Pragma: no-cache
+Transfer-Encoding: chunked
+Request-Context: appId=cid-v1:f9163f9a-ba0a-4b0b-8e66-863fa1a682d9
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Frame-Options: SAMEORIGIN
+X-TD-Connected: Connected
+X-TD-Result: Allowed
+Content-Security-Policy: object-src none
+Content-Security-Policy: frame-ancestors 'self'
+Referrer-Policy: strict-origin-when-cross-origin
+X-RequestId: b8287d90a31836a4cff6b274053625eb
+X-Content-Type-Options: nosniff
+X-Proxied-By: P24HB:10.26.29.24>10.26.29.5
+X-Proxied-By: P24HB:10.24.144.84>20.87.178.51
+X-Proxied-By: P24HB:10.24.148.30>10.24.144.84
+X-Cache: MISS
+

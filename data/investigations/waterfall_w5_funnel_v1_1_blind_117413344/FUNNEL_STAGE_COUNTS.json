@@ -1,0 +1,63 @@
+{
+  "schema_version": "HIERARCHICAL_RETRIEVAL_FUNNEL_V1_1_STAGE_COUNTS",
+  "funnel_implementation_commit": "2f92687",
+  "w1_universe_commit": "e86b156b3f8ac099cd386b9de2b3b2ba609c0635",
+  "w1_geojson_sha256": "6a375bf542bcff28c6a3ee862f9e0c3c9a5395d0497b4159027c40b75cf7be3a",
+  "input": {
+    "listing_area_m2": 1205.0,
+    "listing_area_reliable": true,
+    "listing_has_pool": true
+  },
+  "priority_counts": {
+    "A": 272,
+    "B": 365,
+    "C": 251,
+    "D": 122,
+    "NORMAL": 0,
+    "universe": 1010
+  },
+  "stage_instrumentation": [
+    {
+      "priority": "A",
+      "candidate_count": 272,
+      "pool_observed_count": 51,
+      "pool_unknown_count": 221,
+      "building_observable_count": 271,
+      "average_coverage": 0.3761,
+      "serious_candidate_count": 272
+    },
+    {
+      "priority": "B",
+      "candidate_count": 365,
+      "pool_observed_count": 50,
+      "pool_unknown_count": 315,
+      "building_observable_count": 363,
+      "average_coverage": 0.3656,
+      "serious_candidate_count": 364
+    },
+    {
+      "priority": "C",
+      "candidate_count": 251,
+      "pool_observed_count": 35,
+      "pool_unknown_count": 216,
+      "building_observable_count": 250,
+      "average_coverage": 0.3625,
+      "serious_candidate_count": 250
+    },
+    {
+      "priority": "D",
+      "candidate_count": 122,
+      "pool_observed_count": 20,
+      "pool_unknown_count": 102,
+      "building_observable_count": 109,
+      "average_coverage": 0.3478,
+      "serious_candidate_count": 114
+    }
+  ],
+  "immediate_expensive_workload": 272,
+  "total_expensive_workload": 1010,
+  "immediate_work_reduction_vs_1010": 0.7307,
+  "total_work_reduction_vs_1010": 0.0,
+  "recoverable_unprocessed_count": 0,
+  "identity_attachment": "NOT_PERFORMED_AT_BLIND_RANKING_FREEZE"
+}
